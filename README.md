@@ -35,7 +35,7 @@ Nothing here has a submit API. `submit` is `no`. A portal needs the account owne
 
 No named award list for the 2026 Vinnova round exists yet. The decision date is 23 March 2027. The last named cohort is Vinnova's own October 2025 note: 103 companies, more than SEK 50 million. That sits outside this six-month window.
 
-Almi is named in the skill description and has no door in the code.
+Almi is named, and the map says it has no coded call. Fetch Almi’s own page before quoting an amount.
 
 ## GPU by country
 
