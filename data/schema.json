@@ -89,7 +89,7 @@
         "field": {
           "enum": [
             "country", "legal_form", "age_years", "employees",
-            "revenue_msek", "balance_msek", "revenue_meur", "funding_raised_usd",
+            "revenue_msek", "balance_msek", "revenue_meur", "balance_meur", "funding_raised_usd",
             "stage", "vc_backed", "vc_partner", "stack", "sector",
             "has_vat", "has_employment", "has_work_email", "has_website",
             "has_developer", "workload_defined", "profit_distributed"

@@ -106,9 +106,10 @@ def test_legal_form_and_country_aliases() -> None:
 
 
 def test_numeric_string_is_coerced() -> None:
-    profile, warnings = match.normalize_profile({"revenue_msek": "5", "employees": "4"})
+    profile, warnings = match.normalize_profile({"revenue_msek": "5", "employees": "4", "balance_meur": "12,5"})
     assert profile["revenue_msek"] == 5.0
     assert profile["employees"] == 4
+    assert profile["balance_meur"] == 12.5
     assert warnings == []
 
 

@@ -39,7 +39,7 @@ EU_ASSOCIATED = EU_MEMBERS | {
     "GE", "AM", "IL", "TN", "FO", "NZ",
 }
 
-NUMERIC_FIELDS = {"age_years", "employees", "revenue_msek", "balance_msek", "revenue_meur", "funding_raised_usd"}
+NUMERIC_FIELDS = {"age_years", "employees", "revenue_msek", "balance_msek", "revenue_meur", "balance_meur", "funding_raised_usd"}
 INTEGER_FIELDS = {"employees"}
 BOOLEAN_FIELDS = {"vc_backed", "has_vat", "has_employment", "has_work_email", "has_website", "has_developer", "workload_defined", "profit_distributed"}
 LIST_FIELDS = {"stack", "sector", "vc_partner", "need"}
