@@ -436,7 +436,8 @@ EN = (
     ("Ansök i Rannís portal. Bara elektroniskt.", "Apply in the Rannís portal. Electronic only."),
     ("○  land", "○  country"),
     ("◐  land", "◐  country"),
-    ("danskt SME", "Danish SME"),
+    ("GPU-timmarna söks i Playground. Fabriken pekar på callen. Mejlet skickas inte.", "The GPU hours are applied for in Playground. The factory points at the call. The email is not sent."),
+    ("utkast", "draft"),
     ("isländskt bolag", "Icelandic company"),
     ("finskt bolag", "Finnish company"),
     ("norsk verksamhet", "Norwegian business"),
@@ -685,6 +686,28 @@ def chance(profile):
                 "link": PLAYGROUND,
                 "next": "Du söker i portalen. Säg aldrig att ansökan är skickad.",
                 "sources": [LUMI, PLAYGROUND],
+            },
+            sys.stdout,
+            ensure_ascii=False,
+            indent=2,
+        )
+        sys.stdout.write("\n")
+        return
+    elif need == "gpu" and profile.get("asked") == "factory":
+        unthought = "GPU-timmarna söks i Playground. Fabriken pekar på callen. Mejlet skickas inte."
+        json.dump(
+            {
+                "chance": "fråga",
+                "glyph": picture("fråga", "Sweden AI Factory", ["utkast"], [], None, unthought),
+                "door": "Sweden AI Factory",
+                "why": "Mejlet ber dem peka call. Det delar inte ut GPU-tid.",
+                "missing": [],
+                "ask": None,
+                "unthought": unthought,
+                "confidence": "hög",
+                "link": FACTORY,
+                "next": "Du mejlar inte. Säg aldrig att ansökan är skickad.",
+                "sources": [FACTORY, PLAYGROUND],
             },
             sys.stdout,
             ensure_ascii=False,
