@@ -172,9 +172,22 @@ def credits(profile):
         "microsoft": ("Microsoft for Startups", "https://startups.microsoft.com"),
         "claude": ("Claude Startups", "https://claude.com/programs/startups"),
         "anthropic": ("Claude Startups", "https://claude.com/programs/startups"),
+        "openai": ("OpenAI for Startups", "https://openai.com/startups/"),
+        "chatgpt": ("OpenAI for Startups", "https://openai.com/startups/"),
     }
     for key, (door, link) in known.items():
         if key in stack:
+            if key in ("openai", "chatgpt"):
+                emit(
+                    door,
+                    "Sidan låser API-krediter bakom en partner-VC och en referral-kod. Inget belopp är publicerat. Ingen investerare betyder ingen sådan kod.",
+                    ["partner-VC", "referral-kod"],
+                    "medel",
+                    link,
+                    "Hämta sidan. Citera inte ett dollarbelopp som inte står där.",
+                    [link],
+                )
+                return
             emit(
                 door,
                 "En leverantör. Öppna sidan och läs beloppet där. Partnerlås finns på flera av programmen.",

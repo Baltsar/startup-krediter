@@ -4,7 +4,7 @@ description: >-
   Use when a builder in Sweden or the Nordics asks if their startup has a
   chance at funding, cloud credits, or GPU hours, or mentions Vinnova, Almi,
   EuroHPC, Sweden AI Factory, Mimer, RISE, LUMI, Sigma2, KI-fabrikken, NVIDIA
-  Inception, Claude Startups, Anthropic, Nordic AI Factory Summit, AWS Activate,
+  Inception, Claude Startups, Anthropic, OpenAI, Nordic AI Factory Summit, AWS Activate,
   Playground, Fast Lane, startup-krediter, GPU-timmar, or "har vi en chans". Also use when they ask
   which grant or compute program fits a startup in Sweden, Finland, Norway,
   Denmark, or Iceland. Invoke as /startup-krediter.
