@@ -59,12 +59,15 @@ national door is a guess and the matcher will return all of them.
 ## Step 2: Run the matcher
 
 ```bash
-python3 scripts/match.py --live <<'EOF'
+python3 ~/.claude/skills/startup-krediter/scripts/match.py --live <<'EOF'
 {"country":"SE","legal_form":"company","age_years":2,"employees":4,"need":["compute","credits"],"stack":["anthropic","aws"],"lang":"sv"}
 EOF
 ```
 
-The script lives next to this file. Flags: `--live` asks the Vinnova API for the
+The script lives in this skill's directory, next to this file; through
+`bootstrap.sh` that is `~/.claude/skills/startup-krediter` (also linked under
+`~/.cursor`, `~/.codex` and `~/.agents`). Your working directory is usually the
+founder's project, so call it by its full path. Flags: `--live` asks the Vinnova API for the
 current round and its closing date (only Vinnova has a usable API); `--all` also
 returns blocked doors, for a founder who wants to see what they do not qualify
 for; `--today YYYY-MM-DD` pins the date for reproducible runs.
@@ -169,7 +172,7 @@ To add a program: append a record to `data/programs.json` (shape in
 `data/schema.json`, examples in `tests/fixtures/programs_small.json`), add an
 entry with the matching `{#id}` anchor to the right `references/*.md`, set
 `last_verified` to the day you read the page and `availability` to what the
-page said, then run:
+page said, then run from the skill directory:
 
 ```bash
 python3 scripts/validate.py && python3 scripts/check_links.py && uv run --with pytest pytest tests/ -q
