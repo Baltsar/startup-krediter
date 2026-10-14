@@ -272,3 +272,27 @@ def test_cli_round_trip(capsys: pytest.CaptureFixture[str]) -> None:
 def test_cli_rejects_non_object_profile(capsys: pytest.CaptureFixture[str]) -> None:
     code = match.main(["--programs", str(FIXTURE_PATH)], stdin=io.StringIO("[1, 2]"))
     assert code == 2
+
+
+# --- availability -----------------------------------------------------------
+
+
+def test_closed_door_ranks_last_even_when_eligible() -> None:
+    closed = dict(CREDIT, availability="closed")
+    out = match.run({"country": "SE", "legal_form": "company", "stack": ["anthropic"]}, [closed, EU_COMPUTE], TODAY)
+    assert [door["id"] for door in out["doors"]] == ["test-eu-compute", "test-global-credit"]
+    assert out["doors"][1]["availability"] == "closed"
+
+
+def test_closed_glyph_names_the_date_and_points_at_the_page() -> None:
+    closed = dict(CREDIT, availability="closed")
+    out = match.run({"country": "SE", "legal_form": "company", "stack": ["anthropic"], "funding_raised_usd": 0}, [closed], TODAY)
+    glyph = out["doors"][0]["glyph"]
+    assert glyph.startswith("●  Test global credit")
+    assert "→  Closed when verified 2026-07-01; read the status page for the next round" in glyph
+
+
+def test_availability_defaults_to_unknown() -> None:
+    door = doors({"country": "SE", "legal_form": "company", "need": ["compute"]})["test-eu-compute"]
+    assert door["availability"] == "unknown"
+    assert "Closed when verified" not in door["glyph"]

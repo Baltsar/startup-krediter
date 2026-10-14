@@ -104,3 +104,15 @@ def test_reference_anchor_missing_inside_existing_file(tmp_path: Path) -> None:
     found = validate.validate(FIXTURE, SCHEMA, TODAY, references_dir=refs)
     assert len(found) == 3
     assert all("anchor" in e for e in found)
+
+
+def test_rejects_bad_availability() -> None:
+    bad = copy.deepcopy(FIXTURE)
+    bad["programs"][0]["availability"] = "maybe"
+    assert any("availability" in e for e in errors(bad))
+
+
+def test_accepts_known_availability() -> None:
+    good = copy.deepcopy(FIXTURE)
+    good["programs"][0]["availability"] = "closed"
+    assert errors(good) == []

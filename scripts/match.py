@@ -92,6 +92,7 @@ class Door:
     last_verified: str
     stale: bool
     notes: str
+    availability: str = "unknown"
     live: dict | None = None
     glyph: str = ""
 
@@ -242,11 +243,12 @@ def evaluate(program: dict, profile: dict, today: date) -> Door:
         last_verified=program["last_verified"],
         stale=(today - verified).days > STALE_DAYS,
         notes=program.get("notes", ""),
+        availability=str(program.get("availability", "unknown")),
     )
 
 
 def render_glyph(door: Door) -> str:
-    """The compact status block the skill shows verbatim: head, met, failed, unknown, first question, amount, live date, staleness."""
+    """The compact status block the skill shows verbatim: head, met, failed, unknown, first question, amount, live date, closed note, staleness."""
     lines = [f"{HEAD[door.status]}  {door.name}"]
     lines += [f"●  {label}" for label in door.met]
     lines += [f"×  {label}" for label in door.failed]
@@ -257,14 +259,16 @@ def render_glyph(door: Door) -> str:
     lines.append(f"→  {door.amount['text']}")
     if door.live and door.live.get("closes"):
         lines.append(f"→  Round closes {str(door.live['closes'])[:16].replace('T', ' ')}")
+    if door.availability == "closed":
+        lines.append(f"→  Closed when verified {door.last_verified}; read the status page for the next round")
     if door.stale:
         lines.append(f"→  Last verified {door.last_verified}, read the status page before quoting")
     return "\n".join(lines)
 
 
 def rank(doors: list[Door]) -> list[Door]:
-    """Eligible first, then unknown with the fewest open questions, then blocked. Ties keep data-file order."""
-    return sorted(doors, key=lambda door: (RANK[door.status], len(door.unknown)))
+    """Open doors first: eligible, then unknown with the fewest open questions, then blocked. Closed doors last. Ties keep data-file order."""
+    return sorted(doors, key=lambda door: (door.availability == "closed", RANK[door.status], len(door.unknown)))
 
 
 def run(

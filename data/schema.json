@@ -61,7 +61,11 @@
           "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
           "description": "The date the status page was actually read. Records older than 90 days are flagged stale."
         },
-        "notes": {"type": "string"}
+        "notes": {"type": "string"},
+        "availability": {
+          "enum": ["open", "closed", "unknown"],
+          "description": "Whether applications were being accepted on last_verified. Closed doors rank last and carry a glyph line that points at the status page."
+        }
       }
     },
     "amount": {
