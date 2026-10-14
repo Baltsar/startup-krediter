@@ -296,3 +296,69 @@ def test_availability_defaults_to_unknown() -> None:
     door = doors({"country": "SE", "legal_form": "company", "need": ["compute"]})["test-eu-compute"]
     assert door["availability"] == "unknown"
     assert "Closed when verified" not in door["glyph"]
+
+
+# --- review fix pass --------------------------------------------------------
+
+
+def test_eu_door_without_country_asks_for_country_first() -> None:
+    profile = {"legal_form": "company", "has_employment": True, "has_vat": True, "has_work_email": True, "workload_defined": True}
+    door = doors(profile)["test-eu-compute"]
+    assert door["status"] == "unknown"
+    assert door["unknown"][0]["label"] == "eligible country"
+    assert "country" in door["unknown"][0]["question"].lower()
+
+
+def test_global_door_without_country_is_not_asked_for_country() -> None:
+    door = doors({"legal_form": "company", "stack": ["anthropic"], "funding_raised_usd": 0})["test-global-credit"]
+    assert door["status"] == "eligible"
+
+
+def test_country_name_is_mapped_or_dropped_with_warning() -> None:
+    assert match.normalize_profile({"country": "Sweden"})[0]["country"] == "SE"
+    assert match.normalize_profile({"country": "norge"})[0]["country"] == "NO"
+    profile, warnings = match.normalize_profile({"country": "Atlantis"})
+    assert "country" not in profile
+    assert any("country" in warning for warning in warnings)
+
+
+def test_stage_variants_normalized_or_warned() -> None:
+    assert match.normalize_profile({"stage": "Series A"})[0]["stage"] == "series_a"
+    assert match.normalize_profile({"stage": "pre-seed"})[0]["stage"] == "pre_seed"
+    assert match.normalize_profile({"stage": "Series B"})[0]["stage"] == "later"
+    profile, warnings = match.normalize_profile({"stage": "unicorn"})
+    assert "stage" not in profile
+    assert any("stage" in warning for warning in warnings)
+
+
+def test_legal_form_with_parenthetical_abbreviation_or_warned() -> None:
+    assert match.normalize_profile({"legal_form": "Aktiebolag (AB)"})[0]["legal_form"] == "company"
+    assert match.normalize_profile({"legal_form": "ideell förening"})[0]["legal_form"] == "nonprofit"
+    profile, warnings = match.normalize_profile({"legal_form": "kommanditbolag"})
+    assert "legal_form" not in profile
+    assert any("legal_form" in warning for warning in warnings)
+
+
+def test_unknown_need_words_dropped_with_warning() -> None:
+    profile, warnings = match.normalize_profile({"need": ["funding", "cloud credits", "foo"]})
+    assert profile["need"] == ["money", "credits"]
+    assert any("foo" in warning for warning in warnings)
+
+
+def test_comma_separated_stack_string_is_split_and_aliased() -> None:
+    assert match.normalize_profile({"stack": "aws, Anthropic, Google Cloud"})[0]["stack"] == ["aws", "anthropic", "gcp"]
+
+
+def test_none_inside_list_is_skipped() -> None:
+    assert match.normalize_profile({"stack": [None, "aws"]})[0]["stack"] == ["aws"]
+
+
+def test_sector_aliases_normalized() -> None:
+    assert match.normalize_profile({"sector": ["Deep Tech", "climate tech"]})[0]["sector"] == ["deeptech", "climate"]
+
+
+def test_integer_booleans_coerced() -> None:
+    profile, warnings = match.normalize_profile({"has_vat": 1, "has_website": 0})
+    assert profile["has_vat"] is True
+    assert profile["has_website"] is False
+    assert warnings == []

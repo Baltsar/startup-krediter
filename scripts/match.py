@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from collections.abc import Callable
 from dataclasses import asdict, dataclass
@@ -45,22 +46,44 @@ BOOLEAN_FIELDS = {"vc_backed", "has_vat", "has_employment", "has_work_email", "h
 LIST_FIELDS = {"stack", "sector", "vc_partner", "need"}
 TRUE_WORDS = {"true", "yes", "ja", "y", "1"}
 FALSE_WORDS = {"false", "no", "nej", "n", "0"}
+NEEDS = {"money", "compute", "credits"}
+STAGES = {"idea", "pre_seed", "seed", "series_a", "later"}
+LEGAL_FORMS = {"company", "nonprofit", "academia", "public", "sole_trader", "none"}
+# Alias tables are keyed by slug(): lowercase, spaces and hyphens as underscores.
+COUNTRY_ALIASES = {
+    "sweden": "SE", "sverige": "SE", "finland": "FI", "suomi": "FI", "norway": "NO", "norge": "NO",
+    "denmark": "DK", "danmark": "DK", "iceland": "IS", "island": "IS", "ísland": "IS",
+}
 STACK_ALIASES = {
-    "claude": "anthropic", "chatgpt": "openai", "google": "gcp", "google cloud": "gcp", "gcloud": "gcp",
-    "microsoft": "azure", "hf": "huggingface", "hugging face": "huggingface", "amazon": "aws",
+    "claude": "anthropic", "chatgpt": "openai", "google": "gcp", "google_cloud": "gcp", "gcloud": "gcp",
+    "microsoft": "azure", "hf": "huggingface", "hugging_face": "huggingface", "amazon": "aws",
+}
+SECTOR_ALIASES = {
+    "deep_tech": "deeptech", "ml": "ai", "ai_ml": "ai", "cleantech": "climate", "climatetech": "climate",
+    "climate_tech": "climate", "klimat": "climate", "healthtech": "health", "medtech": "health",
+    "life_science": "health", "lifescience": "health", "hälsa": "health", "energi": "energy", "fin_tech": "fintech",
 }
 NEED_ALIASES = {
-    "gpu": "compute", "hpc": "compute", "gpu-timmar": "compute", "pengar": "money", "grant": "money",
-    "bidrag": "money", "krediter": "credits", "credit": "credits",
+    "gpu": "compute", "hpc": "compute", "gpu_hours": "compute", "gpu_timmar": "compute", "compute_hours": "compute",
+    "beräkning": "compute", "funding": "money", "grant": "money", "grants": "money", "loan": "money", "loans": "money",
+    "bidrag": "money", "pengar": "money", "lån": "money", "investment": "money", "credit": "credits",
+    "krediter": "credits", "cloud_credits": "credits", "api_credits": "credits",
+}
+STAGE_ALIASES = {
+    "preseed": "pre_seed", "pre": "pre_seed", "angel": "pre_seed", "mvp": "pre_seed", "prototype": "pre_seed",
+    "concept": "idea", "a": "series_a", "series_b": "later", "series_c": "later", "series_d": "later",
+    "growth": "later", "scaleup": "later", "late": "later",
 }
 LEGAL_FORM_ALIASES = {
     "ab": "company", "as": "company", "oy": "company", "aps": "company", "a/s": "company", "ehf": "company",
     "ltd": "company", "gmbh": "company", "inc": "company", "llc": "company", "aktiebolag": "company",
-    "bolag": "company", "startup": "company", "sme": "company",
-    "ideell_forening": "nonprofit", "ideell förening": "nonprofit", "förening": "nonprofit", "forening": "nonprofit",
-    "stiftelse": "nonprofit", "university": "academia", "universitet": "academia", "research": "academia",
-    "academic": "academia", "public_sector": "public", "offentlig": "public",
-    "enskild_firma": "sole_trader", "sole trader": "sole_trader",
+    "bolag": "company", "startup": "company", "sme": "company", "osakeyhtiö": "company",
+    "ideell_forening": "nonprofit", "ideell_förening": "nonprofit", "förening": "nonprofit", "forening": "nonprofit",
+    "stiftelse": "nonprofit", "foundation": "nonprofit", "ngo": "nonprofit",
+    "university": "academia", "universitet": "academia", "research": "academia", "academic": "academia", "institute": "academia",
+    "public_sector": "public", "offentlig": "public", "municipality": "public", "kommun": "public",
+    "enskild_firma": "sole_trader", "sole": "sole_trader", "enk": "sole_trader",
+    "individual": "none", "person": "none", "no_company": "none",
 }
 HEAD = {"eligible": "●", "unknown": "◐", "blocked": "×"}
 RANK = {"eligible": 0, "unknown": 1, "blocked": 2}
@@ -97,6 +120,11 @@ class Door:
     glyph: str = ""
 
 
+def slug(value: object) -> str:
+    """Lowercase, trimmed, spaces and hyphens as underscores: the key form every alias table uses."""
+    return re.sub(r"[\s\-]+", "_", str(value).strip().lower())
+
+
 def to_number(value: object) -> float | None:
     if isinstance(value, bool):
         return None
@@ -113,6 +141,8 @@ def to_number(value: object) -> float | None:
 def to_bool(value: object) -> bool | None:
     if isinstance(value, bool):
         return value
+    if isinstance(value, int) and value in (0, 1):
+        return bool(value)
     if isinstance(value, str):
         word = value.strip().lower()
         if word in TRUE_WORDS:
@@ -122,8 +152,33 @@ def to_bool(value: object) -> bool | None:
     return None
 
 
+def split_list(value: object) -> list[str]:
+    """A list, or a string split on commas, semicolons and slashes; empty and None items dropped."""
+    items = value if isinstance(value, list) else re.split(r"[,;/]", str(value))
+    return [str(item).strip() for item in items if item is not None and str(item).strip()]
+
+
+def normalize_legal_form(value: object) -> str | None:
+    """Accept the enum, an alias, or an abbreviation in parentheses such as 'Aktiebolag (AB)'."""
+    word = slug(value)
+    inside = re.findall(r"\(([^)]*)\)", word)
+    outside = re.sub(r"\([^)]*\)", "", word)
+    for candidate in [word, *inside, *re.split(r"[_/]+", outside)]:
+        candidate = candidate.strip("_")
+        if candidate in LEGAL_FORMS:
+            return candidate
+        if candidate in LEGAL_FORM_ALIASES:
+            return LEGAL_FORM_ALIASES[candidate]
+    return None
+
+
 def normalize_profile(raw: dict) -> tuple[dict, list[str]]:
-    """Lowercase and alias the free-text fields; coerce numbers and booleans; drop what cannot be read."""
+    """Alias and coerce every field; drop what cannot be read and say so in warnings.
+
+    A value that is dropped becomes unknown, which makes the matcher ask the
+    founder. A value that is silently kept in the wrong shape would instead
+    fail every rule and hide the door, so every drop carries a warning.
+    """
     profile: dict = {}
     warnings: list[str] = []
     for key, value in raw.items():
@@ -141,20 +196,43 @@ def normalize_profile(raw: dict) -> tuple[dict, list[str]]:
                 warnings.append(f"{key} is not yes or no, treated as unknown")
                 continue
             profile[key] = flag
+        elif key == "need":
+            words: list[str] = []
+            for item in split_list(value):
+                word = NEED_ALIASES.get(slug(item), slug(item))
+                if word in NEEDS:
+                    words.append(word)
+                else:
+                    warnings.append(f"need {item!r} is not money, compute or credits, ignored")
+            if words:
+                profile[key] = list(dict.fromkeys(words))
         elif key in LIST_FIELDS:
-            items = value if isinstance(value, list) else [value]
-            words = [str(item).strip().lower() for item in items if str(item).strip()]
+            words = [slug(item) for item in split_list(value)]
             if key == "stack":
                 words = [STACK_ALIASES.get(word, word) for word in words]
-            if key == "need":
-                words = [NEED_ALIASES.get(word, word) for word in words]
+            if key == "sector":
+                words = [SECTOR_ALIASES.get(word, word) for word in words]
             profile[key] = list(dict.fromkeys(words))
         elif key == "country":
-            profile[key] = str(value).strip().upper()
+            code = str(value).strip()
+            code = COUNTRY_ALIASES.get(code.lower(), code.upper())
+            if re.fullmatch(r"[A-Z]{2}", code):
+                profile[key] = code
+            else:
+                warnings.append(f"country {value!r} is not an ISO-2 code, treated as unknown")
         elif key == "legal_form":
-            word = str(value).strip().lower()
-            profile[key] = LEGAL_FORM_ALIASES.get(word, word)
-        elif key in ("stage", "lang"):
+            form = normalize_legal_form(value)
+            if form is None:
+                warnings.append(f"legal_form {value!r} is not recognised, treated as unknown")
+            else:
+                profile[key] = form
+        elif key == "stage":
+            word = STAGE_ALIASES.get(slug(value), slug(value))
+            if word in STAGES:
+                profile[key] = word
+            else:
+                warnings.append(f"stage {value!r} is not idea, pre_seed, seed, series_a or later, treated as unknown")
+        elif key == "lang":
             profile[key] = str(value).strip().lower()
         else:
             profile[key] = value
@@ -218,8 +296,20 @@ def is_relevant(program: dict, profile: dict) -> bool:
     return scope == country
 
 
+def mentions_country(program: dict) -> bool:
+    for gate in program["eligibility"]:
+        members = gate["any"] if "any" in gate else [gate]
+        if any(member.get("field") == "country" for member in members):
+            return True
+    return False
+
+
 def evaluate(program: dict, profile: dict, today: date) -> Door:
     results = [evaluate_rule(rule, profile) for rule in program["eligibility"]]
+    if program["country"] != "global" and profile.get("country") is None and not mentions_country(program):
+        # An EU door has no country rule because relevance handles the set; with no
+        # country at all it must still ask rather than read as eligible.
+        results.insert(0, RuleResult("unknown", "eligible country", "In which country is the company registered?"))
     met = [result.label for result in results if result.status == "met"]
     failed = [result.label for result in results if result.status == "failed"]
     unknown = [{"label": result.label, "question": result.question} for result in results if result.status == "unknown"]
