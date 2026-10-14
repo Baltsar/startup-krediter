@@ -11,6 +11,7 @@ def test_classify_codes() -> None:
     assert check_links.classify(403) == "blocks-bot"
     assert check_links.classify(429) == "blocks-bot"
     assert check_links.classify(455) == "blocks-bot"
+    assert check_links.classify(454) == "blocks-bot"
     assert check_links.classify(404) == "dead"
     assert check_links.classify(410) == "dead"
     assert check_links.classify(503) == "dead"

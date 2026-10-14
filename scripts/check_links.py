@@ -4,7 +4,7 @@
     python3 scripts/check_links.py [path/to/programs.json]
 
 Prints one line per URL: <status> <code> <id> <url>. Exit 1 when any link is
-dead (connection failure, 404, 410, 5xx). A 401, 403, 429 or 455 is reported as
+dead (connection failure, 404, 410, 5xx). A 401, 403, 429, 454 or 455 is reported as
 blocks-bot and does not fail the run: those sites refuse automated clients and
 were read in a browser when the record was verified. mailto: links are skipped.
 """
@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PROGRAMS_PATH = ROOT / "data" / "programs.json"
 USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
 TIMEOUT_SECONDS = 15
-BOT_BLOCK_CODES = {401, 403, 429, 455}
+BOT_BLOCK_CODES = {401, 403, 429, 454, 455}
 
 
 @dataclass(frozen=True)
