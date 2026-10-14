@@ -2,7 +2,7 @@
 
 A skill for a builder in Sweden or the Nordics who asks if they have a chance. It checks one door. It does not quote a percentage. It does not submit the application.
 
-`/startup-krediter` loads it. So does Sweden AI Factory, EuroHPC, Playground, Fast Lane, Vinnova, NVIDIA Inception, Claude Startups, AWS Activate, GPU hours, or "do we have a chance".
+`/startup-krediter` loads it. So does Sweden AI Factory, EuroHPC, Playground, Fast Lane, Vinnova, NVIDIA Inception, Claude Startups, AWS Activate, GPU hours, or "do we have a chance". The same question in the other languages is startup-krediitit, startup-kreditter, "har vi en sjanse", and "har vi en chance". The id stays startup-krediter.
 
 ## Sweden AI Factory
 
