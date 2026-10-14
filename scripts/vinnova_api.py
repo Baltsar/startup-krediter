@@ -16,12 +16,17 @@ import sys
 import urllib.request
 from collections.abc import Callable
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timezone, tzinfo
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 CALL_URL = "https://data.vinnova.se/api/utlysningar/{}"
 ROUND_URL = "https://data.vinnova.se/api/ansokningsomgangar/{}"
 USER_AGENT = "opensverige-startup-krediter"
 TIMEOUT_SECONDS = 30
+try:
+    STOCKHOLM: tzinfo = ZoneInfo("Europe/Stockholm")
+except ZoneInfoNotFoundError:  # no tz database on this machine; dates then read as UTC, at most two hours off
+    STOCKHOLM = timezone.utc
 
 
 @dataclass(frozen=True)
@@ -29,6 +34,7 @@ class Round:
     dnr: str
     title: str
     closes: datetime
+    opens: datetime | None
     apply_url: str | None
     open_now: bool
 
@@ -37,6 +43,7 @@ class Round:
             "dnr": self.dnr,
             "title": self.title,
             "closes": self.closes.isoformat(),
+            "opens": self.opens.isoformat() if self.opens else None,
             "open_now": self.open_now,
             "apply_url": self.apply_url,
         }
@@ -50,10 +57,10 @@ def fetch_json(url: str) -> dict:
     return data[0] if isinstance(data, list) else data
 
 
-def parse_close(raw: str) -> datetime:
-    """The API gives Swedish wall-clock time without a zone; it is labelled UTC here, so the hour may be off by one or two."""
+def parse_stamp(raw: str) -> datetime:
+    """The API gives Swedish wall-clock time without a zone; read it as Europe/Stockholm."""
     stamp = datetime.fromisoformat(raw)
-    return stamp if stamp.tzinfo else stamp.replace(tzinfo=timezone.utc)
+    return stamp if stamp.tzinfo else stamp.replace(tzinfo=STOCKHOLM)
 
 
 def first_link(row: dict) -> str | None:
@@ -64,28 +71,32 @@ def first_link(row: dict) -> str | None:
 
 
 def open_round(call_id: str, now: datetime, fetch: Callable[[str], dict] = fetch_json) -> Round | None:
-    """The round closing at or after now, else the newest closed round, else None.
+    """The newest round that has not closed (open now, or announced), else the newest closed round, else None.
 
-    Rounds are listed oldest first, so iteration runs from the newest. Each round
-    is one request, and the loop stops at the first open one.
+    Round numbers are YYYY-NNNNN, so sorting them descending walks from the
+    newest regardless of the order the API lists them. Each round is one
+    request; the loop stops at the first round that has not closed.
     """
     call = fetch(CALL_URL.format(call_id))
-    ids = [row["DiarienummerAnsokningsomgang"] for row in call.get("AnsokningsomgangDnrLista") or []]
+    ids = sorted((row["DiarienummerAnsokningsomgang"] for row in call.get("AnsokningsomgangDnrLista") or []), reverse=True)
     newest_closed: Round | None = None
-    for dnr in reversed(ids):
+    for dnr in ids:
         row = fetch(ROUND_URL.format(dnr))
         close = row.get("Stangningsdatum")
         if not close:
             continue
-        closes = parse_close(close)
+        closes = parse_stamp(close)
+        opening = row.get("Oppningsdatum")
+        opens = parse_stamp(opening) if opening else None
         found = Round(
             dnr=str(row.get("Diarienummer") or dnr),
             title=str(row.get("Titel") or ""),
             closes=closes,
+            opens=opens,
             apply_url=first_link(row),
-            open_now=closes >= now,
+            open_now=(opens is None or opens <= now) and now <= closes,
         )
-        if found.open_now:
+        if closes >= now:
             return found
         if newest_closed is None:
             newest_closed = found

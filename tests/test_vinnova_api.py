@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 from datetime import datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import vinnova_api
 
@@ -36,7 +37,8 @@ def test_picks_round_closing_after_now() -> None:
     found = vinnova_api.open_round(CALL_ID, now, fetch=fake_fetch)
     assert found is not None
     assert found.dnr == LATEST_DNR
-    assert found.closes == datetime(2027, 1, 12, 14, 0, tzinfo=timezone.utc)
+    assert found.closes == datetime(2027, 1, 12, 14, 0, tzinfo=ZoneInfo("Europe/Stockholm"))
+    assert found.open_now is True
     assert "Innovativa Startups" in found.title
     assert found.apply_url is not None and found.apply_url.startswith("https://ansok.vinnova.se")
 
@@ -82,6 +84,30 @@ def test_round_to_dict_is_json_ready() -> None:
     assert found is not None
     payload = found.to_dict()
     assert payload["dnr"] == LATEST_DNR
-    assert payload["closes"] == "2027-01-12T14:00:00+00:00"
+    assert payload["closes"] == "2027-01-12T14:00:00+01:00"
+    assert payload["opens"] == "2026-10-12T00:00:00+02:00"
     assert payload["open_now"] is True
     json.dumps(payload)
+
+
+def test_round_announced_but_not_yet_open_is_not_open_now() -> None:
+    now = datetime(2026, 10, 1, tzinfo=timezone.utc)
+    found = vinnova_api.open_round(CALL_ID, now, fetch=fake_fetch)
+    assert found is not None
+    assert found.dnr == LATEST_DNR
+    assert found.open_now is False
+
+
+def test_newest_round_found_even_when_api_lists_newest_first() -> None:
+    def fetch(url: str) -> dict:
+        if url == vinnova_api.CALL_URL.format(CALL_ID):
+            return {"Diarienummer": CALL_ID, "AnsokningsomgangDnrLista": [
+                {"DiarienummerAnsokningsomgang": LATEST_DNR},
+                {"DiarienummerAnsokningsomgang": "2016-04743"},
+            ]}
+        return fake_fetch(url)
+
+    now = datetime(2030, 1, 1, tzinfo=timezone.utc)
+    found = vinnova_api.open_round(CALL_ID, now, fetch=fetch)
+    assert found is not None
+    assert found.dnr == LATEST_DNR
