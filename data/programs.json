@@ -1115,6 +1115,42 @@
       "reference": "references/compute.md#nvidia-inception",
       "last_verified": "2026-10-15",
       "notes": "No application fees, membership fees, equity, deadlines or cohorts; apply regardless of funding stage; NVIDIA reaches out after reviewing the application, no timeline stated. Cloud credits and DLI credits are described without amounts; preferred pricing is a rebate deducted from the standard supplier price on a subset of enterprise GPUs; Capital Connect is based on eligibility. The FAQ does not state a work-email-on-own-domain requirement; the form on the startups page asks for a Business Email Address. The application page is JavaScript-rendered with a captcha, so the single-field form could not be verified today. Cloud credits do not pay an LLM API invoice."
+    },
+    {
+      "id": "openai-for-startups",
+      "name": "OpenAI for Startups",
+      "country": "global",
+      "kind": "ai_api_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "Startups backed by a VC in OpenAI's partner network (the page names Thrive Capital, Sequoia, a16z, Kleiner Perkins and Conviction Partners). Other founders get events, Build Hours and code repositories, not credits.",
+      "what": "Free API credits, rate-limit upgrades and time with OpenAI's solutions engineers, issued through the partner VC with a unique referral code.",
+      "amount": {
+        "text": "Amount not published on the page; credits are issued through the partner VC"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "openai",
+          "label": "builds on OpenAI",
+          "question": "Do you build on OpenAI's API?"
+        },
+        {
+          "field": "vc_backed",
+          "op": "eq",
+          "value": true,
+          "label": "backed by a partner-network VC",
+          "question": "Is the company backed by a VC in OpenAI's partner network? Your investor knows."
+        }
+      ],
+      "apply_url": "https://openai.com/startups/",
+      "status_url": "https://openai.com/startups/",
+      "next_step": "Ask your investor whether they are in OpenAI's partner network and for the unique referral code. Then apply with the code, a description of the product and how it uses the API, the company name and a business email, and basic funding details. The founder clicks submit.",
+      "reference": "references/ai-api-credits.md#openai-for-startups",
+      "last_verified": "2026-10-15",
+      "notes": "Read in a browser on 2026-10-15; the site returns 403 to automated fetch and redirected to the sv-SE locale. FAQ: credits are obtained via the VC; the application asks for a unique referral code from the VC, a product description, company name and contacts with a valid business email, and basic funding details. No dollar amount, no deadline, no cohort. When credits run out, billing switches to standard automatically."
     }
   ]
 }

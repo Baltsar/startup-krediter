@@ -16,15 +16,15 @@ Credits from model providers (Anthropic, OpenAI, Mistral) and GPU-cloud vendors 
 
 ## OpenAI for Startups {#openai-for-startups}
 
-- **Who:** Unknown; page not readable.
-- **What:** Unknown; page not readable.
-- **Amount:** Unknown.
-- **Requirements:** Unknown.
-- **How to apply:** Unknown.
+- **Who:** Startups backed by a VC in OpenAI's partner network; the FAQ names Thrive Capital, Sequoia, a16z, Kleiner Perkins and Conviction Partners. Founders without a partner VC get events, Build Hours and code repositories, not credits.
+- **What:** Free API credits, rate-limit upgrades, time with solutions engineers, invitations to events and a direct line to the Startup team, all unlocked through the partner VC.
+- **Amount:** Not published on the page.
+- **Requirements:** A unique referral code from the partner VC; a description of the product and how it uses the API; company name and contacts with a valid business email; basic funding details.
+- **How to apply:** Ask the investor whether they are in the network and for the referral code, then submit the credit application with the items above. The founder clicks submit.
 - **Status page:** https://openai.com/startups/
-- **Verified:** Not verified on 2026-10-15: site blocks automated fetch (HTTP 403 from both WebFetch and curl with a browser user agent).
-- **Evidence:** None; no page content was retrieved.
-- **Gotchas:** No record in the JSON. Needs a browser check: open https://openai.com/startups/ and look for program name(s), eligibility (funding cap, partner VC or accelerator requirement), credit amounts in USD, which products the credits apply to, whether applications are open, and the apply URL.
+- **Verified:** 2026-10-15, read in a browser (the site returns 403 to automated fetch and redirects to the visitor's locale, here sv-SE).
+- **Evidence:** "Kontakta ditt riskkapitalbolag för att få veta hur du kan få tillgång till OpenAI API-krediter."
+- **Gotchas:** Entirely partner-locked; the page lists no amount, deadline or cohort. When credits run out, the account switches to standard billing automatically. The FAQ also offers zero data retention on paid plans on request.
 
 ## Mistral AI {#mistral-ai}
 
