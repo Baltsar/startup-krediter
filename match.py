@@ -416,6 +416,47 @@ SHORT = {
     "kräver bolag, SME eller startup": "bolag",
 }
 
+LANG = "sv"
+
+EN = (
+    ("Finns ett anställningsavtal som gäller minst tre månader efter att GPU-tiden tar slut?", "Is there an employment contract that lasts at least three months after the GPU time ends?"),
+    ("Har bolaget momsnummer?", "Does the company have a VAT number?"),
+    ("Vilken adress på er egen domän ska stå som kontakt?", "Which address on your own domain is the contact?"),
+    ("Vilken kod, vilket enda system, och hur många GPU-timmar?", "Which code, which single system, and how many GPU hours?"),
+    ("Vilket land är bolaget registrerat i?", "Which country is the company registered in?"),
+    ("Dörren beror på landet. Utan land blir ett nej en gissning.", "The door depends on the country. Without a country, a no is a guess."),
+    ("GPU-tid betalar inte API-fakturan. Vinnova kan lotta två ansökningar som båda är starka.", "GPU time does not pay the API invoice. Vinnova can draw lots between two applications that are both strong."),
+    ("Business Finland är finskt statligt stöd, tak 300 000 euro på tre år. Ett svenskt bolag tar EuroHPC, inte det här.", "Business Finland is Finnish state aid, capped at 300,000 euro over three years. A Swedish company takes EuroHPC, not this."),
+    ("Är bolaget registrerat i Finland?", "Is the company registered in Finland?"),
+    ("Är verksamheten norsk?", "Is the business Norwegian?"),
+    ("Är bolaget ett danskt SME?", "Is the company a Danish SME?"),
+    ("Är bolaget isländskt och ett SME?", "Is the company Icelandic and an SME?"),
+    ("Våren stängde 17 februari 2026. Hösten stängde 25 augusti 2026 kl 12. Slutbesked väntas i mitten av december 2026.", "Spring closed 17 February 2026. Autumn closed 25 August 2026 at noon. A final answer is expected in mid-December 2026."),
+    ("17 februari 2026 och 25 augusti 2026", "17 February 2026 and 25 August 2026"),
+    ("Ansök i Rannís portal. Bara elektroniskt.", "Apply in the Rannís portal. Electronic only."),
+    ("○  land", "○  country"),
+    ("◐  land", "◐  country"),
+    ("danskt SME", "Danish SME"),
+    ("isländskt bolag", "Icelandic company"),
+    ("finskt bolag", "Finnish company"),
+    ("norsk verksamhet", "Norwegian business"),
+    ("arbetsbeskrivning", "workload"),
+    ("yrkesmejl", "work email"),
+    ("anställning", "employment"),
+    ("aktiebolag", "limited company"),
+    ("personer", "people"),
+    (" år", " years"),
+    ("moms", "VAT"),
+)
+
+
+def localize(text):
+    if LANG != "en":
+        return text
+    for src, dst in EN:
+        text = text.replace(src, dst)
+    return text
+
 
 def glyph_block(state, door, gaps, unthought):
     head = {"stängd": "○", "osäker": "◐", "kan söka": "●", "fråga": "●"}.get(state, "○")
@@ -424,7 +465,7 @@ def glyph_block(state, door, gaps, unthought):
         lines.append(f"○  {SHORT.get(gap, gap)}")
     if unthought:
         lines.append(f"→  {unthought}")
-    return "\n".join(lines)
+    return localize("\n".join(lines))
 
 
 def picture(state, door, known, holes, ask, unthought, failed=None):
@@ -440,7 +481,7 @@ def picture(state, door, known, holes, ask, unthought, failed=None):
         lines.append(f"?  {ask}")
     if unthought:
         lines.append(f"→  {unthought}")
-    return "\n".join(lines)
+    return localize("\n".join(lines))
 
 
 def checks_for(known, holes, failed=None):
@@ -484,6 +525,8 @@ def facts(profile):
 
 
 def chance(profile):
+    global LANG
+    LANG = "en" if str(profile.get("lang") or "").lower() == "en" else "sv"
     need = profile.get("need") or "unsure"
     form = profile.get("legal_form") or "unknown"
     v_blocks, v_missing = vinnova_gates(profile)

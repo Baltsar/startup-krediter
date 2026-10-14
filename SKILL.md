@@ -26,7 +26,7 @@ Ber de om compute och pengar: `"need":"both"`. Två glyfer. Inget extra förhör
 
 Ta bara det chatten redan säger. Utelämna okända fält. Gissa inte ålder, anställda, omsättning, moms eller anställning.
 
-`need` är `money`, `gpu` eller `credits`. `legal_form` är `ab`, `ideell_forening`, `academia` eller `unknown`. `country` är `SE`, `FI`, `NO`, `DK` eller `IS`. Sätt det bara om chatten säger landet. Gissa inte Sverige.
+`need` är `money`, `gpu` eller `credits`. `legal_form` är `ab`, `ideell_forening`, `academia` eller `unknown`. `country` är `SE`, `FI`, `NO`, `DK` eller `IS`. Sätt det bara om chatten säger landet. Gissa inte Sverige. Skriver de på engelska: `"lang":"en"`. Glyfen kommer då på engelska.
 
 Pengar följer landet. Sverige är Vinnova. Norge är Oppstartstilskudd 1. Finland är Business Finland. Island är Fræ. Danmark: vårens Innofounder stängde 17 februari 2026. Höstomgången stängde 25 augusti 2026. Besked väntas i mitten av december 2026. GPU följer landet. Sverige är Playground. Finland är LUMI. Norge är KI-fabrikken. RISE, Hyperight och montrar är inte dörrar. Almi är namngiven och har ingen kodad dörr. Fast Lane är syskonet till Playground, inte en poängrunda.
 
