@@ -1850,6 +1850,574 @@
       "reference": "references/nordic-grants.md#rannis-frae",
       "last_verified": "2026-10-15",
       "notes": "Open on 2026-10-15: 'Open for applications / Always open'; 'Applications may be made at any time. Submitted applications are evaluated and grant awards are announced at least twice a year.' Rules and instructions for Fræ and Thróunarfræ are in Icelandic. Contact taeknithrounarsjodur@rannis.is. The fund's other categories (Sprout, Growth, Market grants) had the window 04.08.2026-15.09.2026 and were closed on the fund page; Patent grants are also always open. www.rannis.is redirects (301) to island.is/redirects/www.rannis.is/."
+    },
+    {
+      "id": "sting-core",
+      "name": "Sting Core",
+      "country": "SE",
+      "kind": "accelerator",
+      "need": [
+        "money"
+      ],
+      "who": "Tech startups in climate, health, AI or deep tech at MVP/prototype stage (TRL 3-6), before commercial launch or recurring revenue, with at least two committed co-founders working 50-100% and the operational team owning 75% or more of the company.",
+      "what": "Sting's flagship program of up to 18 months in three 6-month blocks (5 months of active support plus 1 month wrap-up per block); stay 6, 12 or 18 months. All-inclusive support: coaching and business development, go-to-market and sales, recruitment, product development and IP, impact assessment, marketing and PR, partner perks, office space at A House, financing and investor relations, and a pitch at the invite-only Sting Demo Day (200+ handpicked investors). Possible 600 000 SEK investment (400 000 + 200 000) via Propel Capital, usually a standardized convertible debt instrument. Success fee: up to 2% Sting warrant per 6-month block.",
+      "amount": {
+        "text": "Possible 600 000 SEK (400 + 200K) via Propel Capital; success fee up to 2% Sting warrant per 6-month block",
+        "max": 600000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "pre_seed",
+            "seed"
+          ],
+          "label": "MVP/prototype stage, before commercial launch",
+          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+        },
+        {
+          "any": [
+            {
+              "field": "sector",
+              "op": "contains",
+              "value": "climate",
+              "label": "climate",
+              "question": "Which sectors does the company work in?"
+            },
+            {
+              "field": "sector",
+              "op": "contains",
+              "value": "health",
+              "label": "health",
+              "question": "Which sectors does the company work in?"
+            },
+            {
+              "field": "sector",
+              "op": "contains",
+              "value": "ai",
+              "label": "AI",
+              "question": "Which sectors does the company work in?"
+            },
+            {
+              "field": "sector",
+              "op": "contains",
+              "value": "deeptech",
+              "label": "deep tech",
+              "question": "Which sectors does the company work in?"
+            }
+          ],
+          "label": "climate, health, AI or deep tech"
+        }
+      ],
+      "apply_url": "https://share.hsforms.com/2gw10xJqxRF--BnigBjZ_HQ50drh",
+      "status_url": "https://www.sting.co/sting-core",
+      "next_step": "Fill in the Sting Core application form (the HubSpot form behind 'Apply for Sting Core') with team, stage, sector and traction. The founder clicks submit.",
+      "reference": "references/accelerators-se.md#sting-core",
+      "last_verified": "2026-10-15",
+      "notes": "Stockholm (office space at A House). Two cohorts per year; the page lists the blocks as Oct-Mar and Mar-Sept, 12-16 startups per cohort, and says 'Our next program kicks off in early 2027'. No application deadline is stated; the apply button was live on 2026-10-15 but the page does not say whether applications are open. Investment comes from Propel Capital, which invests exclusively in Sting companies (400 000 SEK upfront plus a 200 000 SEK follow-on per the Propel page). Mixed-gender, international, complementary teams are a stated preference, not a rule. Figures on sting.co are inconsistent: other pages still say 'up to 500,000 SEK from Propel Capital'."
+    },
+    {
+      "id": "sting-science-to-business",
+      "name": "Sting Science to Business",
+      "country": "SE",
+      "kind": "accelerator",
+      "need": [
+        "money"
+      ],
+      "who": "Researchers who want to turn groundbreaking research into a scalable startup. Researchers who have not yet started a company are pointed to the free Pre-Sting offers first (Startup Academy online course, Open Coaching, Test Drive).",
+      "what": "Research-founder track into Sting Core: up to 18 months of business development support, team-building help to find co-founders or key personnel, access to the Turbine Capital VC network, and financing offers through convertible loans of up to 100 000 SEK for patent applications and 250 000 SEK for salary/compensation for key personnel, plus the chance to secure 600 000 SEK from Propel Capital.",
+      "amount": {
+        "text": "Convertible loans of up to 100 000 SEK for patents and 250 000 SEK for key-personnel salary, plus possible 600 000 SEK from Propel Capital",
+        "max": 600000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "idea",
+            "pre_seed",
+            "seed"
+          ],
+          "label": "early research spinout",
+          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+        }
+      ],
+      "apply_url": "https://share.hsforms.com/2gw10xJqxRF--BnigBjZ_HQ50drh",
+      "status_url": "https://www.sting.co/science-to-business",
+      "next_step": "Use 'Apply to the Sting Core Program' on the Science to Business page, which opens the Sting Core application form; describe the research, team and IP position. Pre-company researchers can instead enroll in the Startup Academy form. The founder clicks submit.",
+      "reference": "references/accelerators-se.md#sting-science-to-business",
+      "last_verified": "2026-10-15",
+      "notes": "No deadline or open/closed status on the page. Startup Academy enrollment form: https://share.hsforms.com/1HWrh3OfhSRGFeTkH81WnPw50drh (free, self-paced, deep tech modules). Equity terms of the convertible loans are not published. The Propel figure is inconsistent across sting.co (500 000 vs 600 000 SEK); the Propel Capital page says 600 000 SEK for Sting Core companies and 500 000 SEK for other Sting startups, 'usually made via a standardized convertible debt instrument', with a 4-6 week decision timeline."
+    },
+    {
+      "id": "sting-test-drive",
+      "name": "Sting Test Drive",
+      "country": "SE",
+      "kind": "accelerator",
+      "need": [
+        "money"
+      ],
+      "who": "Super-early-stage teams or individuals (at least two people per team recommended) with a deep tech, health and life science, or climate and energy idea. The DeepTech track targets researchers, students and entrepreneurs and prioritises semiconductor, quantum, photonics and 2D-materials concepts.",
+      "what": "No cash. A free six-week workshop series: three evening workshops and one pitch session (17:00-20:30, one session every two weeks) with expert coaches, individual coaching and peer support; the DeepTech track is run with Kista Science City, RISE and KTH. Free of charge and no equity; 10-15 teams per track.",
+      "amount": {
+        "text": "No cash, free program: free of charge and no equity"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "idea",
+            "pre_seed"
+          ],
+          "label": "just getting started",
+          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+        },
+        {
+          "any": [
+            {
+              "field": "sector",
+              "op": "contains",
+              "value": "deeptech",
+              "label": "deep tech",
+              "question": "Which sectors does the company work in?"
+            },
+            {
+              "field": "sector",
+              "op": "contains",
+              "value": "health",
+              "label": "health and life science",
+              "question": "Which sectors does the company work in?"
+            },
+            {
+              "field": "sector",
+              "op": "contains",
+              "value": "climate",
+              "label": "climate",
+              "question": "Which sectors does the company work in?"
+            },
+            {
+              "field": "sector",
+              "op": "contains",
+              "value": "energy",
+              "label": "energy",
+              "question": "Which sectors does the company work in?"
+            }
+          ],
+          "label": "deep tech, health or climate and energy track"
+        }
+      ],
+      "apply_url": "https://www.sting.co/pre-sting/test-drive",
+      "status_url": "https://www.sting.co/pre-sting/test-drive",
+      "next_step": "When a round is open, use the application button on the relevant track page (DeepTech, Health & Life Science or Climate & Energy) and describe the team and idea. The founder clicks submit.",
+      "reference": "references/accelerators-se.md#sting-test-drive",
+      "last_verified": "2026-10-15",
+      "notes": "Closed on 2026-10-15: every track shows 'Application closed'. Spring 2026 round: application deadline March 29 2026, program period 14 April - 26 May 2026; no next round date is published. In person in Stockholm (A House Ark and Kista Science City for DeepTech). Co-funded by EU/ERDF and Region Stockholm (DeepTech, Climate) and KI Innovations (Health). All participants sign a confidentiality agreement at the first workshop. Track contacts: Raoul Stubbe (DeepTech), Olof Berglund (Health), Ulrika Tornerefelt (Climate)."
+    },
+    {
+      "id": "norrsken-evolve",
+      "name": "Norrsken Evolve (formerly Norrsken Accelerator)",
+      "country": "EU",
+      "kind": "accelerator",
+      "need": [
+        "money"
+      ],
+      "who": "Early-stage (pre-seed and early seed) founders building for sustainability (carbon-free economy: energy, mobility, built environment, industrial decarbonisation, food and agriculture), resilience (infrastructure, resource and material security, health tech, cyber security, water security) or Europe's future. Primarily founders from Europe (EU27, EU candidate countries and the UK), with a handful of companies outside Europe.",
+      "what": "EUR 250 000 - 500 000 equity investment. Norrsken Evolve can invest at any time, is happy to lead and typically targets 5% ownership when it leads; it also co-invests with other VCs on different terms. Transparent follow-on: raise the valuation by 50% in a material round led by a recognised investor and Norrsken takes its pro-rata. Every founder joins the in-person sprint program and pitches at the annual Norrsken Impact/Week demo day in Barcelona.",
+      "amount": {
+        "text": "EUR 250 000 - 500 000 equity investment, typically 5% ownership when leading",
+        "min": 250000,
+        "max": 500000,
+        "currency": "EUR"
+      },
+      "eligibility": [
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "pre_seed",
+            "seed"
+          ],
+          "label": "pre-seed or early seed",
+          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+        }
+      ],
+      "apply_url": "https://airtable.com/app7bGSveZe9qXGM5/pag01no0ldy3Ae7Br/form",
+      "status_url": "https://www.norrskenevolve.vc/",
+      "next_step": "Open the Airtable 'Apply now' form on norrskenevolve.vc and fill in company, team, impact thesis and round details. The founder clicks submit.",
+      "reference": "references/accelerators-se.md#norrsken-evolve",
+      "last_verified": "2026-10-15",
+      "notes": "norrsken.org/accelerator and accelerator.norrsken.org both 301-redirected to norrskenevolve.vc on 2026-10-15, so this is the successor of the Norrsken Accelerator. Program length and cohort dates are not on the page; investment appears rolling ('We can invest at any time'). Scope is Europe, so the record is country EU with no Swedish rule; Norrsken is Stockholm-based but the page states no country requirement and the demo day is in Barcelona. The sector themes are broad and not encoded as a rule. Page claims 80 companies invested and 75% raised follow-on. Contact hello@norrskenevolve.vc."
+    },
+    {
+      "id": "antler-stockholm",
+      "name": "Antler Stockholm (Antler Nordics)",
+      "country": "SE",
+      "kind": "accelerator",
+      "need": [
+        "money"
+      ],
+      "who": "Individuals and early teams at idea to pre-seed stage. You do not need a co-founder, an incorporated company or a finished product; solo founders can be matched with a co-founder or backed as they are. Most founders come in before raising anything, with a team and an early product; an MVP or early customers is a plus. Hubs in Stockholm, Oslo, Copenhagen and Helsinki on the same terms.",
+      "what": "Standard deal EUR 500 000: EUR 200 000 upfront (EUR 100 000 for 8.5% equity plus EUR 100 000 on an uncapped convertible with MFN) and up to EUR 300 000 in the next round, equal to one-third of what you raise from professional investors, on the same terms as your lead, within nine months of the first investment. Antler says it commits EUR 500K-1M and can keep backing companies through Series C. Free office space, USD 4M+ in perks, no course, curriculum or graduation, support for as long as you need it; rolling intake in the Nordics.",
+      "amount": {
+        "text": "EUR 500 000 standard deal: EUR 200 000 upfront (EUR 100 000 for 8.5% equity + EUR 100 000 uncapped convertible with MFN) plus up to EUR 300 000 follow-on in the next round",
+        "max": 500000,
+        "currency": "EUR"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "idea",
+            "pre_seed"
+          ],
+          "label": "idea to pre-seed, before raising",
+          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+        }
+      ],
+      "apply_url": "https://www.antler.co/apply",
+      "status_url": "https://www.antler.co/nordics",
+      "next_step": "Fill in the 'Get investment from Antler' form at antler.co/apply: name, email, LinkedIn, stage 'Idea to Pre-Seed', region Europe and city Stockholm. The founder clicks submit.",
+      "reference": "references/accelerators-se.md#antler-stockholm",
+      "last_verified": "2026-10-15",
+      "notes": "The cohort start dates page lists Sweden/Stockholm as 'Rolling intake': 'These locations work with founders and teams year-round instead of running fixed residency programs. Applications are reviewed on an ongoing basis.' No deadline. Page example: raise EUR 600K and Antler adds EUR 300K, EUR 900K total. If you already have a priced pre-seed at a materially higher valuation you 'might be past us - but talk to us anyway'. Alternative entry: the HubSpot 'Pitch Us' form https://2di5gu.share-eu1.hsforms.com/2KydTi8fpRE6aVqGUBw19NA. The country rule is SE because this record is the Stockholm hub; Oslo, Copenhagen and Helsinki have identical terms. No incorporated company is required, so no legal_form rule."
+    },
+    {
+      "id": "kth-innovation-access",
+      "name": "KTH Innovation idea support (pre-incubator)",
+      "country": "SE",
+      "kind": "accelerator",
+      "need": [
+        "money"
+      ],
+      "who": "Current students, researchers and employees at KTH with a tech-based idea; the funding options are for teams founded by KTH students or researchers. No company is needed. KTH Innovation says it is particularly skilled at research-driven deep tech, but takes all tech-based ideas.",
+      "what": "Free support: a dedicated business development coach, help with patents and IPR, team building and attracting funding, workspace at Teknikringen 1 (makerspace, production studio, co-working), events and workshops; join at any time and stay as long as needed. KTH Innovation manages the Vinnova program VFT-1, where KTH teams can apply for funding of up to 300 000 SEK (for example a market-research consultant or prototype design); applications are handled every other week. Access to the EarlyBird investor network and to KTH Ventures.",
+      "amount": {
+        "text": "Free support; VFT-1 funding of up to 300 000 SEK (Vinnova, managed by KTH Innovation)",
+        "max": 300000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "idea",
+            "pre_seed"
+          ],
+          "label": "idea or earliest stage",
+          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+        }
+      ],
+      "apply_url": "https://kthinnovation.lime-forms.se/forms/awGkjUiUUAkAFlwC0BVn",
+      "status_url": "https://www.kth.se/en/om/innovation",
+      "next_step": "Fill in the idea form at kthinnovation.lime-forms.se with a short description of yourself and the idea; KTH Innovation then books a meeting with a business development coach. The founder clicks submit.",
+      "reference": "references/accelerators-se.md#kth-innovation-access",
+      "last_verified": "2026-10-15",
+      "notes": "Affiliation gate not expressible as a rule: 'KTH Innovation's support is open to current students, researchers and employees at KTH.' Alumni are not listed. kthinnovation.se did not resolve (DNS) on 2026-10-15; the content lives at kth.se/en/om/innovation. 'We welcome new ideas all year round.' The programs page calls this KTH Innovation Access ('Join at any time, and stay for as long as you need'). Other KTH Innovation programs without published amounts or deadlines: Pioneer (deep tech research teams matched with venture builders), Discovery (researchers, PhD to professor), Mentor, Brighter, and partner programs Relativity Collective, Ideate and AI Launchpad. Slush ticket for KTH PhD students: apply by 18 October at kth-science-to-startup.lovable.app. Contact innovation@kth.se."
+    },
+    {
+      "id": "kth-innovation-launch",
+      "name": "KTH Innovation Launch",
+      "country": "SE",
+      "kind": "accelerator",
+      "need": [
+        "money"
+      ],
+      "who": "Teams founded by KTH students and researchers where at least 30% of the members are KTH students, researchers or employees (external members allowed), with an early prototype, an initial team and the ambition to launch a product or service within the program period. No company is needed.",
+      "what": "No cash. A free 16-18-week (one semester) program starting in January or August: weekly in-person workshops on Wednesdays 12:00-13:00 at Teknikringen 1, sprints and coaching, free office space, makerspace and production studio, perks from companies such as Anthropic, HubSpot and Stripe, operational support with contracts and agreements, investor exposure and introductions, international startup-hub and industry networks, then optional continued access to co-working, events and mentorship the following semester. Free of charge and no ownership taken.",
+      "amount": {
+        "text": "No cash, free program: free of charge and no ownership taken"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "pre_seed",
+            "seed"
+          ],
+          "label": "prototype and initial team in place",
+          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+        }
+      ],
+      "apply_url": "https://apply-kth-innovation-launch.lovable.app/",
+      "status_url": "https://www.kth.se/en/om/innovation/program-extra-stod/launch",
+      "next_step": "Apply at apply-kth-innovation-launch.lovable.app before the deadline with team, share of KTH-affiliated members, prototype status and launch ambition. The founder clicks submit.",
+      "reference": "references/accelerators-se.md#kth-innovation-launch",
+      "last_verified": "2026-10-15",
+      "notes": "'Apply by 4 November!' on the program page; the KTH Innovation front page says 'Apply by 23.59, 4 November, 2026!'. Batch 24 kicks off in January; application periods are April/May and October/November; around 15-20 startups accepted twice a year. Affiliation gate (30% KTH members) is in who/notes, not a rule. The Mentor Program page refers to this as the KTH Innovation pre-incubator program."
+    },
+    {
+      "id": "chalmers-ventures-startup-camp",
+      "name": "Chalmers Ventures Startup Camp Deep Tech 2026",
+      "country": "SE",
+      "kind": "accelerator",
+      "need": [
+        "money"
+      ],
+      "who": "Research teams with a deep tech idea based on research from universities in western Sweden, with clear ownership rights to the idea, a connection to the Vastra Gotaland region, at least one person with the drive to explore the commercial potential, the ability to attend every session, and a solution targeting a global market.",
+      "what": "No cash. Four evening sessions (16:00-19:00) of hands-on workshops with real assignments and expert guidance from the Chalmers Ventures team: lean canvas and value proposition, roles in startups, financing and pitching, and a final pitch evening with invited guests; a path into Chalmers Ventures' other offers (Tech Transfer, Tech Matching for Encubation, Venture Building Program).",
+      "amount": {
+        "text": "No cash; four workshop evenings. Fee not stated on the page"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "idea",
+            "pre_seed"
+          ],
+          "label": "research idea, lab to market",
+          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+        },
+        {
+          "field": "sector",
+          "op": "contains",
+          "value": "deeptech",
+          "label": "deep tech based on university research",
+          "question": "Which sectors does the company work in?"
+        }
+      ],
+      "apply_url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ZXoUKW1T-UO4AuChtc-dv0iVaT60b5JNsELIevUlG_pUMFVKQ0lXQUhRWFhGOFBTV1JYUzNaRExSNiQlQCN0PWcu",
+      "status_url": "https://chalmersventures.com/startup-camp-deep-tech-2026/",
+      "next_step": "Fill in the Microsoft Forms application behind 'Apply here!' with the research idea, team and regional connection before October 28. The founder clicks submit.",
+      "reference": "references/accelerators-se.md#chalmers-ventures-startup-camp",
+      "last_verified": "2026-10-15",
+      "notes": "'Application for Startup Camp Deep Tech 2026 is now open! Last day to apply is October 28.' (year not printed; presumably 2026). Sessions as printed: December 1 2026, December 15 2026, 'January 15 - 2025' and 'February 2 - 2026' (the last two look like typos for 2027). Gothenburg (Vera Sandbergs Alle 8). The Vastra Gotaland connection is a stated requirement but there is no region field, so it lives here. Contact evelina@chalmersventures.com."
+    },
+    {
+      "id": "chalmers-ventures-venture-building",
+      "name": "Chalmers Ventures Venture Building Program",
+      "country": "SE",
+      "kind": "accelerator",
+      "need": [
+        "money"
+      ],
+      "who": "Research-based tech companies, primarily deep tech and university spin-outs, with global commercial and impact potential. Entry is normally through the Tech Transfer, Tech Matching for Encubation or Startup Camp tracks; Chalmers Ventures invests and makes the startup a portfolio company 'if the correct criterias are met'.",
+      "what": "Portfolio program with a dedicated Chalmers Ventures contact and business guidance (value proposition, problem/solution fit, strategic board work, goals and KPIs), support through the financing process and access to the investor network with a possible total investment of 15 Mkr (15 MSEK), PR and communication, community and peer-to-peer learning, an office space partner, partner deals and discounts.",
+      "amount": {
+        "text": "Possible total investment of 15 Mkr (15 MSEK) over the journey; per-stage amounts and equity not published",
+        "max": 15000000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "sector",
+          "op": "contains",
+          "value": "deeptech",
+          "label": "deep tech or university spin-out",
+          "question": "Which sectors does the company work in?"
+        }
+      ],
+      "apply_url": "https://outlook.office365.com/owa/calendar/Bookings.OpenCoaching1@Chalmers.onmicrosoft.com/bookings/",
+      "status_url": "https://chalmersventures.com/program/",
+      "next_step": "The page's 'APPLY NOW' link was broken on 2026-10-15, so book a 15-minute Open Coaching slot (Tuesdays 15:00-16:00, Zoom) through the Bookings page and describe the idea, or email info@chalmersventures.com. The founder clicks book.",
+      "reference": "references/accelerators-se.md#chalmers-ventures-venture-building",
+      "last_verified": "2026-10-15",
+      "notes": "Both 'APPLY NOW' buttons link to chalmersventures.com/game-changer-challenge/, which returned HTTP 404 on 2026-10-15. Open Coaching is for 'Individuals and teams located in the VGR-region' with a connection to Swedish projects or companies. Tracks: Tech Transfer (for Chalmers researchers; patent financing and commercialisation support, contact david@chalmersventures.com), Tech Matching for Encubation ('Application period is now closed and scheduled re-open in march 2027'; tech owners are matched with Chalmers School of Entrepreneurship students for a project year, then investment if validation succeeds), Startup Camp Deep Tech 2026 (own record). No equity terms, stage split or deadlines published. Gothenburg."
+    },
+    {
+      "id": "minc-incubator",
+      "name": "Minc Incubator",
+      "country": "SE",
+      "kind": "accelerator",
+      "need": [
+        "money"
+      ],
+      "who": "Registered Swedish AB based in Malmo or Skane, building a scalable tech-driven company with a validated MVP and a dedicated team.",
+      "what": "One-year incubator program (the page also says up to 36 months of tailored support) with expert coaching in tech, funding and startup development, Tech Lab access for prototype and hardware development, grants for specialised expertise, events including pitching to invited investors at Minc Capital Day, a community of 40+ nationalities, partner perks worth 2 500 000 SEK (AWS, Notion, IBM, Google), the possibility of a 300 000 SEK investment from Fast Track Capital III and the chance to pitch for a 500K SEK investment from Skane Ventures.",
+      "amount": {
+        "text": "Possibility of a 300 000 SEK investment from Fast Track Capital III; pitch for a 500K SEK investment from Skane Ventures",
+        "max": 500000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "registered AB",
+          "question": "Is it a registered limited company (AB)?"
+        },
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "pre_seed",
+            "seed"
+          ],
+          "label": "validated MVP and team",
+          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+        }
+      ],
+      "apply_url": "https://minc.typeform.com/to/UJtc0HVO",
+      "status_url": "https://minc.se/startup-programs/the-incubator",
+      "next_step": "Fill in the Minc application Typeform (shared by Minc's startup programs) with company, MVP status and team; Minc books a 20-minute chat and places you in a track. The founder clicks submit.",
+      "reference": "references/accelerators-se.md#minc-incubator",
+      "last_verified": "2026-10-15",
+      "notes": "'Ongoing applications.' Malmo or Skane is a stated requirement but there is no region field. Fee and equity are not stated on the incubator page; Minc's /startup page describes the same Typeform as 'One Application. Two Tracks': Reality Check (first 4 weeks free) and Traction ('a monthly fee of 1,650 SEK'), and it is unclear how those map to the incubator page (see minc-reality-check). The EUR 50 000 convertible note and Nordic Demo Day text further down the page sit in the Fast Track Malmo batch section. Contact dennis@minc.se."
+    },
+    {
+      "id": "minc-reality-check",
+      "name": "Minc startup program (Reality Check and Traction tracks)",
+      "country": "SE",
+      "kind": "accelerator",
+      "need": [
+        "money"
+      ],
+      "who": "Solo founders or teams with a scalable idea, from just starting to having a product and wanting to grow; no business plan required, 'grit and a problem worth solving'. The work happens in person at the Minc workspace in Malmo.",
+      "what": "No cash. One application, two tracks. Reality Check: an intense 4-week sprint (sessions Tuesdays and Thursdays 15:00-17:00, full workspace access for a month) combining building days and outreach days to prove market interest and decide pivot, proceed or pause. Traction: for founders who have validated the problem and are ready to sell, with go-to-market coaching, peer accountability and 1-on-1 support, progress reviewed quarterly. Tech coaches help build prototypes with AI and no-code tools. The first 4 weeks are free; the Traction track costs 1 650 SEK a month.",
+      "amount": {
+        "text": "No cash; Reality Check is free for 4 weeks, Traction costs 1 650 SEK per month"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "idea",
+            "pre_seed"
+          ],
+          "label": "idea to early product",
+          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+        }
+      ],
+      "apply_url": "https://minc.typeform.com/to/UJtc0HVO",
+      "status_url": "https://minc.se/startup",
+      "next_step": "Fill in the Minc Typeform behind 'Apply now' on minc.se/startup describing the problem and idea; Minc books a 20-minute chat and places you in Reality Check or Traction. The founder clicks submit.",
+      "reference": "references/accelerators-se.md#minc-reality-check",
+      "last_verified": "2026-10-15",
+      "notes": "Location is not written as a requirement but sessions are at the Minc workspace in Malmo. Expected proof of traction: B2B booked meetings or LOIs; B2C waitlist signups or active user feedback. The Minc homepage advertises a Startup Perks package 'worth over EUR 150,000 in services and credits'. Minc's homepage says 'Three programs' while /startup details two tracks; the older 'Startup Labs' name does not appear on the pages read."
+    },
+    {
+      "id": "fast-track-malmo",
+      "name": "Fast Track Malmo Accelerator (Minc)",
+      "country": "EU",
+      "kind": "accelerator",
+      "need": [
+        "money"
+      ],
+      "who": "Tech startups in Southern Sweden and the Copenhagen area with potential for global expansion that want to raise venture capital.",
+      "what": "Free Malmo-based accelerator designed to help you secure EUR 1-3 million in funding: personal coaching, milestone planning, pitch deck and financial plan work, legal document guidance, negotiation training, warm introductions and meetings with Nordic VCs, intensive weekly workshops on marketing, sales, fundraising and growth, co-working access at Minc, over EUR 250 000 in services and credits, and a pitch to more than 100 investors at the Nordic Demo Day finale. Selected startups may pitch for a 500K SEK convertible investment from Skane Ventures.",
+      "amount": {
+        "text": "Free; option to pitch for a 500K SEK convertible investment from Skane Ventures",
+        "max": 500000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "any": [
+            {
+              "field": "country",
+              "op": "eq",
+              "value": "SE",
+              "label": "Swedish company",
+              "question": "Is the company registered in Sweden?"
+            },
+            {
+              "field": "country",
+              "op": "eq",
+              "value": "DK",
+              "label": "Danish company (Copenhagen area)",
+              "question": "Is the company registered in Denmark?"
+            }
+          ],
+          "label": "Southern Sweden or the Copenhagen area"
+        },
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "pre_seed",
+            "seed"
+          ],
+          "label": "raising venture capital",
+          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+        }
+      ],
+      "apply_url": "https://minc.typeform.com/to/SuWd4mOq",
+      "status_url": "https://minc.se/startup-programs/minc-acceleratorfast-track-malmo",
+      "next_step": "Join the waitlist for the next batch through the Typeform behind 'Apply here' with company, traction and fundraising plans. The founder clicks submit.",
+      "reference": "references/accelerators-se.md#fast-track-malmo",
+      "last_verified": "2026-10-15",
+      "notes": "'Join our waitlist for our upcoming batch': no batch dates or deadline on the page; the Nordic Demo Day finale is listed as 18 May without a year. The page is inconsistent on the Skane Ventures instrument ('500k SEK equity investment' in one list, '500k SEK convertible investment' in another). An older section mentions 'A convertible note of EUR 50,000 ... issued to all startups on the batch'. Program length not stated. Southern Sweden is a stated requirement but there is no region field. fasttrackmalmo.com (read 2026-10-15) describes a free four-day VC fundraising bootcamp 2-5 June 2026 at Minc, deadline May 24, apply via minc.typeform.com/to/WxJDNumm. Record country is SE, so Danish founders are filtered before the rule runs. Contact nino@fasttrackmalmo.com."
     }
   ]
 }
