@@ -74,9 +74,11 @@ The output is JSON. For each door: `status` is `eligible` (every rule met),
 failed); `met`, `failed` and `unknown` list the rule labels, each unknown with
 the question to ask; `glyph` is the compact status block to show; `what`,
 `amount`, `next_step`, `apply_url`, `status_url`, `reference` and `notes` carry
-the program facts; `stale` is true when the record is older than 90 days; `live`
-holds the Vinnova round when `--live` was used. Doors come sorted: eligible
-first, then unknown with the fewest open questions, then blocked. Top-level
+the program facts; `availability` says whether applications were accepted on
+`last_verified` (`open`, `closed`, `unknown`); `stale` is true when the record is
+older than 90 days; `live` holds the Vinnova round when `--live` was used. Doors
+come sorted: eligible first, then unknown with the fewest open questions, then
+blocked, with closed doors last whatever their rules say. Top-level
 `warnings` names profile values that could not be read, and `stale` lists the
 stale door ids.
 
@@ -113,7 +115,8 @@ For each door you present, in the matcher's order:
 3. The exact next step from `next_step` and the link.
 
 The glyph symbols: `●` met, `×` failed, `○` unknown, `?` the one question to
-ask next, `→` the amount, the live closing date, or a staleness note. The head
+ask next, `→` the amount, the live closing date, a closed-when-verified note,
+or a staleness note. The head
 symbol is `●` eligible, `◐` unknown, `×` blocked.
 
 Answer in the founder's language. Lead with eligible doors. When several credit
@@ -165,7 +168,8 @@ is the whole update; do not restart the explanation.
 To add a program: append a record to `data/programs.json` (shape in
 `data/schema.json`, examples in `tests/fixtures/programs_small.json`), add an
 entry with the matching `{#id}` anchor to the right `references/*.md`, set
-`last_verified` to the day you read the page, then run:
+`last_verified` to the day you read the page and `availability` to what the
+page said, then run:
 
 ```bash
 python3 scripts/validate.py && python3 scripts/check_links.py && uv run --with pytest pytest tests/ -q
