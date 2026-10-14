@@ -1151,6 +1151,705 @@
       "reference": "references/ai-api-credits.md#openai-for-startups",
       "last_verified": "2026-10-15",
       "notes": "Read in a browser on 2026-10-15; the site returns 403 to automated fetch and redirected to the sv-SE locale. FAQ: credits are obtained via the VC; the application asks for a unique referral code from the VC, a product description, company name and contacts with a valid business email, and basic funding details. No dollar amount, no deadline, no cohort. When credits run out, billing switches to standard automatically."
+    },
+    {
+      "id": "vinnova-innovativa-startups",
+      "name": "Vinnova Innovativa Startups 2026",
+      "country": "SE",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Small Swedish limited companies (aktiebolag) at most 10 years old at the decision date, with at most 10 employees, net revenue or balance sheet of at most 10 MSEK, no dividend in the last fiscal year and not listed on a stock exchange.",
+      "what": "Grant of up to 500 000 SEK for a project of at most nine months that tests and confirms the market potential of an innovative idea with an international market and a sustainable business model.",
+      "amount": {
+        "text": "Up to 500 000 SEK",
+        "max": 500000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "limited company",
+          "question": "Is it a limited company?"
+        },
+        {
+          "field": "age_years",
+          "op": "lte",
+          "value": 10,
+          "label": "at most 10 years",
+          "question": "How old is the company?"
+        },
+        {
+          "field": "employees",
+          "op": "lte",
+          "value": 10,
+          "label": "at most 10 employees",
+          "question": "How many employees (full-time equivalents)?"
+        },
+        {
+          "any": [
+            {
+              "field": "revenue_msek",
+              "op": "lte",
+              "value": 10,
+              "label": "net revenue at most 10 MSEK",
+              "question": "Net revenue last fiscal year, in MSEK?"
+            },
+            {
+              "field": "balance_msek",
+              "op": "lte",
+              "value": 10,
+              "label": "balance sheet at most 10 MSEK",
+              "question": "Balance sheet total last fiscal year, in MSEK?"
+            }
+          ],
+          "label": "net revenue or balance sheet at most 10 MSEK"
+        },
+        {
+          "field": "profit_distributed",
+          "op": "eq",
+          "value": false,
+          "label": "no dividend last fiscal year",
+          "question": "Did the company pay a dividend in the last fiscal year?"
+        }
+      ],
+      "apply_url": "https://ansok.vinnova.se/utlysning/0382e83b-4c96-404d-bed1-08deab387617?opencall=true&lang=sv",
+      "status_url": "https://www.vinnova.se/e/innovativa-startups/innovativa-startups-2026",
+      "live": {
+        "source": "vinnova",
+        "call_id": "2016-04714"
+      },
+      "next_step": "Read the call text on the status page, log in to Vinnova's e-service for applications (ansok.vinnova.se) with the company's account, fill in the form about the project, project parties and budget, and submit before 12 January 2027 at 14:00. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#vinnova-innovativa-startups",
+      "last_verified": "2026-10-15",
+      "notes": "Round open on 2026-10-15. Page: 'Stänger den 12 januari 2027 kl 14:00'. Dates on the page: 12 okt. 2026 opens; info meetings 2 nov. 2026 kl 09:00 and 9 nov. 2026 kl 09:00; 12 jan. 2027 kl 14:00 last day; 23 mars 2027 decision and earliest project start; 30 mars 2027 latest project start; project at most nine months. Selection: complete applications are scored by three expert assessors, and among those judged to meet the criteria 'i hög och likvärdig grad' the grants are decided by lottery ('lottning, så kallad randomisering'), introduced from 2026. Company age is counted at the decision date 2027-03-23. One of net revenue or balance sheet may exceed 10 MSEK, but not both. Companies granted funding in Innovativa Startups 2025 may not apply. The whole group must be unlisted if the company belongs to a group. The page footer shows diarienummer 2025-04831; in Vinnova's open-data API 2016-04714 is the parent call 'Innovativa Startups' and 2025-04831 is this application round (open 2026-10-12, closes 2027-01-12T14:00, decision 2027-03-23)."
+    },
+    {
+      "id": "vinnova-ffi-asp-accelerated-startup-partnership",
+      "name": "Vinnova FFI ASP - Accelerated Startup Partnership (autumn 2026)",
+      "country": "SE",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Knowledge-intensive startups, Swedish or foreign, registered at most 10 years and meeting the EU small-enterprise definition, applying together with at least one established need owner in road transport; only the startup receives funding.",
+      "what": "Grant for an innovation collaboration that accelerates sustainable road transport: up to 500 000 SEK for a validation project (TRL/BRL 2-4) or 750 000 SEK for an implementation project (TRL/BRL 5-8). Vinnova can finance up to 100 percent of the startup's project costs; co-financing of at least 25 percent of the total project budget is required.",
+      "amount": {
+        "text": "Up to 500 000 SEK (validation project) or 750 000 SEK (implementation project)",
+        "max": 750000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "limited company",
+          "question": "Is it a limited company?"
+        },
+        {
+          "field": "age_years",
+          "op": "lte",
+          "value": 10,
+          "label": "registered at most 10 years",
+          "question": "How many years since the company was registered?"
+        },
+        {
+          "field": "employees",
+          "op": "lt",
+          "value": 50,
+          "label": "fewer than 50 employees",
+          "question": "How many employees?"
+        }
+      ],
+      "apply_url": "https://ansok.vinnova.se/utlysning/26bdd234-db2b-4fa2-1fab-08dec63ac2d3?opencall=true&lang=en",
+      "status_url": "https://www.vinnova.se/en/calls-for-proposals/accelerate-swedish-partnership/ffi-asp-accelerated-startup-2026-01767/",
+      "next_step": "Find a need owner (a private or public road-transport organisation) willing to partner, agree the project type and which FFI sub-programme the innovation connects to, then log in to Vinnova's e-service and complete the form with CVs for the project team and a GANTT chart before 29 October 2026 at 14:00. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#vinnova-ffi-asp-accelerated-startup-partnership",
+      "last_verified": "2026-10-15",
+      "notes": "Reference number 2026-01767. Open on 2026-10-15: 'Closes on 29 October 2026 at 2PM'. Opened 15 Jun 2026; earlier assessment date 16 Sep 2026 14:00 with decision planned 16 Oct; final decision 24 Nov 2026. Total budget 22 MSEK across the year's application opportunities. The innovation must connect to at least one FFI sub-programme: Circularity, Transport and mobility solutions, Traffic-safe automation, Zero emissions. Projects need at least two participants, at least one need owner and at least one startup; only the startup can be beneficiary. Aid basis: startups under five years (fewer than 50 employees, not listed, no profit distributed, not formed by merger or takeover) get start-up aid; older small companies get de minimis aid, at most 300 000 EUR over three years. No country rule is encoded because the page says foreign startups without Swedish presence may apply (they attach a home-country registration certificate). The English page is machine-translated and the Swedish text takes precedence: https://www.vinnova.se/e/accelerera-svenskt-partnerskap/ffi-asp-accelerated-startup-2026-01767/. The sibling spring round 2026-00299 closed 2 June 2026."
+    },
+    {
+      "id": "almi-innovationslan",
+      "name": "Almi Innovationslån",
+      "country": "SE",
+      "kind": "loan",
+      "need": [
+        "money"
+      ],
+      "who": "Companies registered in Sweden with up to 249 employees, new or established, with an innovation project of large potential whose development phase is still ongoing.",
+      "what": "Loan of 50 000 to 500 000 SEK covering at most 50 percent of the estimated project cost, to take an idea from concept to market. Interest is set individually; repayment usually 3-5 years, at most 96 months.",
+      "amount": {
+        "text": "50 000 to 500 000 SEK, at most 50 percent of the project cost",
+        "min": 50000,
+        "max": 500000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "employees",
+          "op": "lte",
+          "value": 249,
+          "label": "at most 249 employees",
+          "question": "How many employees?"
+        }
+      ],
+      "apply_url": "https://etjanster.almi.se/oversikt/flow/1006",
+      "status_url": "https://www.almi.se/lan-finansiering/innovationslan/",
+      "next_step": "Prepare a budget (mandatory), the latest annual accounts, current interim figures and a liquidity forecast, then open Almi's e-service with BankID and fill in the loan application; your regional Almi company reviews it and contacts you. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#almi-innovationslan",
+      "last_verified": "2026-10-15",
+      "notes": "Continuous, no deadline. Co-financing is required: 'Almi kan finansiera upp till 50 procent av den beräknade projektkostnaden'; for loans above 300 000 SEK at least half of the co-financing must be capital, for smaller loans part of it may be own work. Typical loan around 300 000 SEK. Security usually a combination of a floating charge (företagsinteckning) and a limited personal guarantee. Interest may be somewhat higher than for other Almi loans because of project risk. Almi is regional: 'Alla ansökningar hanteras av ditt regionala Almi-bolag' and every loan is an individual assessment, so terms vary by case and region."
+    },
+    {
+      "id": "almi-mikrolan",
+      "name": "Almi Mikrolån",
+      "country": "SE",
+      "kind": "loan",
+      "need": [
+        "money"
+      ],
+      "who": "Micro companies and sole traders in Sweden with at most nine employees and annual revenue or balance sheet below 2 MEUR; you must have or be about to start a company, private individuals cannot apply.",
+      "what": "Loan of up to 250 000 SEK for a forward-looking investment that develops the company (equipment, marketing, product development, digitalisation, recruitment, liquidity). Normally no co-financing required; repayment 4 to 72 months.",
+      "amount": {
+        "text": "Up to 250 000 SEK",
+        "max": 250000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "legal_form",
+          "op": "in",
+          "value": [
+            "company",
+            "sole_trader"
+          ],
+          "label": "company or sole trader",
+          "question": "Is the applicant a company or a sole trader (not a private individual)?"
+        },
+        {
+          "field": "employees",
+          "op": "lte",
+          "value": 9,
+          "label": "at most 9 employees",
+          "question": "How many employees?"
+        },
+        {
+          "any": [
+            {
+              "field": "revenue_meur",
+              "op": "lt",
+              "value": 2,
+              "label": "turnover under 2 MEUR",
+              "question": "Annual turnover last fiscal year, in MEUR?"
+            },
+            {
+              "field": "balance_meur",
+              "op": "lt",
+              "value": 2,
+              "label": "balance sheet under 2 MEUR",
+              "question": "Balance sheet total, in MEUR?"
+            }
+          ],
+          "label": "turnover or balance sheet under 2 MEUR"
+        }
+      ],
+      "apply_url": "https://etjanster.almi.se/oversikt/flow/1006",
+      "status_url": "https://www.almi.se/lan-finansiering/mikrolan/",
+      "next_step": "Prepare a budget (mandatory; for a company being formed, budgets for the current and next fiscal year), then open Almi's e-service with BankID and fill in the loan application; your regional Almi company handles it. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#almi-mikrolan",
+      "last_verified": "2026-10-15",
+      "notes": "Continuous, no deadline. The micro-company limit is 'max nio anställda och en årsomsättning eller balansomslutning som understiger två miljoner euro'; a company over 2 MEUR revenue but under 2 MEUR balance sheet may still qualify. 'Nej, Mikrolån kräver normalt ingen medfinansiering.' Interest set individually; Almi's rates are normally about 2-3 percentage points above bank rates, but Mikrolån can have longer term, initial amortisation-free period and lower rate than Almi's other loans. Handled by the regional Almi company."
+    },
+    {
+      "id": "almi-tillvaxtlan",
+      "name": "Almi Tillväxtlån",
+      "country": "SE",
+      "kind": "loan",
+      "need": [
+        "money"
+      ],
+      "who": "Innovative, established small and medium-sized limited companies registered in Sweden with up to 250 employees that want to grow faster than their own finances allow.",
+      "what": "Loan of up to 10 MSEK backed by a European Investment Fund guarantee under InvestEU; Almi normally finances 30 to 50 percent of the capital need. Repayment 12 to 84 months with longer term, initial amortisation-free period and lower interest than Almi's standard loans.",
+      "amount": {
+        "text": "Up to 10 000 000 SEK",
+        "max": 10000000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "limited company",
+          "question": "Is it a limited company?"
+        },
+        {
+          "field": "employees",
+          "op": "lte",
+          "value": 250,
+          "label": "at most 250 employees",
+          "question": "How many employees?"
+        }
+      ],
+      "apply_url": "https://etjanster.almi.se/oversikt/flow/1006",
+      "status_url": "https://www.almi.se/lan-finansiering/tillvaxtlan/",
+      "next_step": "Prepare a budget, the latest annual accounts, interim figures and a liquidity forecast, then open Almi's e-service with BankID and fill in the loan application; your regional Almi company reviews it. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#almi-tillvaxtlan",
+      "last_verified": "2026-10-15",
+      "notes": "Continuous, no deadline. 'Tillväxtlån är ett lån för innovativa små och medelstora aktiebolag' and 'Ett lån för etablerade och innovativa företag', so very early startups without revenue history may not fit. Almi's rates are normally about 2-3 percentage points above bank rates. Handled by the regional Almi company; each loan is an individual assessment."
+    },
+    {
+      "id": "energimyndigheten-konceptutveckling",
+      "name": "Energimyndigheten - Konceptutveckling av innovationer med affärsfokus",
+      "country": "SE",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Registered small and medium-sized companies (legal entities) and universities in Sweden developing an energy-relevant innovation at TRL 2-4 with a clear business focus; there is no age limit and newly started companies may apply.",
+      "what": "Grant of up to 100 percent of eligible costs, at most 500 000 SEK, with no co-financing requirement, for concept development: assessing energy relevance, developing and verifying a prototype or MVP, clarifying commercial potential and an IP strategy. Projects run at most 12 months.",
+      "amount": {
+        "text": "Up to 500 000 SEK, up to 100 percent of eligible costs",
+        "max": 500000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "legal_form",
+          "op": "in",
+          "value": [
+            "company",
+            "academia"
+          ],
+          "label": "company or university",
+          "question": "Is the applicant a company or a university?"
+        }
+      ],
+      "apply_url": "https://minasidor.energimyndigheten.se/",
+      "status_url": "https://www.energimyndigheten.se/utlysningar/konceptutveckling-av-innovationer-med-affarsfokus/",
+      "next_step": "Check the status page for the current round and read the call text and the mandatory 'Ytterligare ansökningsfrågor' document, then log in to Energimyndigheten's e-service Mina sidor, fill in the application with the attachment and submit before the round's deadline. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#energimyndigheten-konceptutveckling",
+      "last_verified": "2026-10-15",
+      "notes": "Not open on 2026-10-15. The call page (Senast uppdaterad 2026-04-08) still shows the spring round: 'Sista dag för ansökan 2026-06-02 23:59', decisions 'löpande under september till november 2026', project start between 15 October and 1 December 2026, at most 12 months, pool 'Cirka 10 miljoner kronor'. The programme page says the call opens twice a year, 'planerat april samt oktober', and the kommande-utlysningar page lists the next opening as October 2026 without a day. The 500 000 SEK and 100 percent figures come from the programme page utveckla-en-affarside; the spring call page gives only the total pool. One application per company per round; the applicant must own or control the solution. Almi and five other innovation environments give advice before applying but do not write the application. Re-read the status page before quoting any date."
+    },
+    {
+      "id": "energimyndigheten-verifiering-med-kund",
+      "name": "Energimyndigheten - Verifiering av innovationer med kund",
+      "country": "SE",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Small and medium-sized companies in Sweden with an energy-relevant innovation at TRL 4-7, a clear business focus and at least one customer willing to sign a letter of intent; no age limit.",
+      "what": "Grant of at most 3 MSEK for developing and verifying the innovation together with a customer plus business development (business plan, financing plan, IP strategy). Co-financing is required (the programme page states at least 55 percent of total project cost), while business-development activities can be funded up to 100 percent. Projects up to 24 months.",
+      "amount": {
+        "text": "Up to 3 000 000 SEK",
+        "max": 3000000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "limited company",
+          "question": "Is it a limited company?"
+        }
+      ],
+      "apply_url": "https://minasidor.energimyndigheten.se/",
+      "status_url": "https://www.energimyndigheten.se/utlysningar/verifiering-av-innovationer-med-kund/",
+      "next_step": "Check the status page for the current round, secure a dated and signed letter of intent from at least one customer using Energimyndigheten's template, fill in 'Ytterligare ansökningsfrågor', then log in to Mina sidor and submit before the deadline. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#energimyndigheten-verifiering-med-kund",
+      "last_verified": "2026-10-15",
+      "notes": "Not open on 2026-10-15. The call page (Senast uppdaterad 2026-04-08) shows the spring round: 'Sista dag för ansökan 2026-06-02 23:59', decisions September to November 2026, project start 15 August to 1 December 2026 (recommended no earlier than 15 October), at most 24 months, pool 'Cirka 30 miljoner kronor'. Next opening planned October 2026 per the kommande-utlysningar page ('planerat april samt oktober' on the programme page), no day given. Maximum one application per company; the applicant must own or control the solution. The 55 percent co-financing figure is from the programme page verifiering-med-kund; the call page says co-financing is required without a general percentage. Re-read the status page before quoting any date."
+    },
+    {
+      "id": "innovasjon-norge-oppstartstilskudd-1",
+      "name": "Innovasjon Norge Startup grant 1 (Oppstartstilskudd 1)",
+      "country": "NO",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Norwegian private limited companies (AS) less than five years old that are genuinely new businesses with growth ambitions and have completed the idea phase; sole proprietorships (ENK), general partnerships (ANS) and DA are not accepted.",
+      "what": "Grant of up to NOK 150 000 covering up to 100 percent of invoiced costs for buying services from external suppliers that give insight from customers and the market. Project period 9 months, extendable by 3.",
+      "amount": {
+        "text": "Up to NOK 150 000",
+        "max": 150000,
+        "currency": "NOK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "NO",
+          "label": "Norwegian company",
+          "question": "Is the company registered in Norway?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "limited company",
+          "question": "Is it a limited company?"
+        },
+        {
+          "field": "age_years",
+          "op": "lt",
+          "value": 5,
+          "label": "less than five years old",
+          "question": "How old is the company?"
+        }
+      ],
+      "apply_url": "https://www.innovasjonnorge.no/en/tjeneste/oppstartstilskudd-1",
+      "status_url": "https://www.innovasjonnorge.no/en/tjeneste/oppstartstilskudd-1",
+      "next_step": "Optionally get quick feedback on the idea at raskavklaring.innovasjonnorge.no, then log in to Innovation Norway's 'My page' (start.innovasjonnorge.no, the portal linked from the Startup grant 2 page), choose application type Startup and submit the application; applications are accepted on an ongoing basis. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#innovasjon-norge-oppstartstilskudd-1",
+      "last_verified": "2026-10-15",
+      "notes": "Application deadline 'Ongoing'. Payment: 'You can receive up to 50% of the grant when the project starts', the rest when the project ends; 'At least 50% of the project costs must be paid upfront'. Not covered: own staff costs, related-party costs, VAT, costs before the application. Subsidiaries 50 percent or more owned by an established business are not eligible; companies with outstanding payment defaults cannot apply. The application must state other public funding sought. The page itself has no apply button; it refers to 'My page' only for reporting. Site returns 403 to curl; read via WebFetch on 2026-10-15."
+    },
+    {
+      "id": "innovasjon-norge-oppstartstilskudd-2",
+      "name": "Innovasjon Norge Startup grant 2 (Oppstartstilskudd 2)",
+      "country": "NO",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Limited companies incorporated less than five years ago that are genuinely new businesses with own funding at least matching the grant; foreign applicants must establish a Norwegian AS or NUF before first payment.",
+      "what": "Grant of up to NOK 1 million covering up to 50 percent of approved project costs to clarify technical and commercial aspects, such as testing a minimum viable solution with customers and developing an IP strategy. Project period 12 months, extendable by six.",
+      "amount": {
+        "text": "Up to NOK 1 000 000, at most 50 percent of approved project costs",
+        "max": 1000000,
+        "currency": "NOK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "NO",
+          "label": "Norwegian company",
+          "question": "Is the company registered in Norway?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "limited company",
+          "question": "Is it a limited company?"
+        },
+        {
+          "field": "age_years",
+          "op": "lt",
+          "value": 5,
+          "label": "incorporated less than five years ago",
+          "question": "How many years since the company was incorporated?"
+        }
+      ],
+      "apply_url": "https://start.innovasjonnorge.no/",
+      "status_url": "https://www.innovasjonnorge.no/en/tjeneste/oppstartstilskudd-2",
+      "next_step": "Secure own funding at least matching the grant, then go to 'My page' at start.innovasjonnorge.no, start a Startup application and submit it; applications are accepted on an ongoing basis. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#innovasjon-norge-oppstartstilskudd-2",
+      "last_verified": "2026-10-15",
+      "notes": "Application deadline 'Ongoing'. 'In 2026, the funding available for Startup Grant 2 has been reduced by 60%.' Costs incurred before the application is submitted are not funded. The startup may be owned by a holding company older than five years; subsidiaries 50 percent or more owned by an established business are not eligible; a shareholder owning 25-50 percent must run a separate business; outstanding payment defaults disqualify. The page does not require Startup grant 1 to have been completed first. Extension of six months, at most 18 in total. Site returns 403 to curl; read via WebFetch on 2026-10-15."
+    },
+    {
+      "id": "business-finland-sprint",
+      "name": "Business Finland Sprint Grant",
+      "country": "FI",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Finnish limited liability companies with a Finnish Business ID, fewer than 50 employees and turnover or balance sheet at most 10 MEUR, a committed team of at least two people working in Finland and at least 50 000 EUR of equity financing on the balance sheet, developing innovative solutions for international markets.",
+      "what": "De minimis grant covering 75 percent of a project with estimated cost 100 000-133 334 EUR, i.e. 75 000-100 000 EUR, for a project where at least two thirds of the cost is research and development.",
+      "amount": {
+        "text": "75 000 to 100 000 EUR (75 percent of a 100 000-133 334 EUR project)",
+        "min": 75000,
+        "max": 100000,
+        "currency": "EUR"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "FI",
+          "label": "Finnish company",
+          "question": "Is the company registered in Finland?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "limited company",
+          "question": "Is it a limited company?"
+        },
+        {
+          "field": "employees",
+          "op": "lt",
+          "value": 50,
+          "label": "fewer than 50 employees",
+          "question": "How many employees?"
+        },
+        {
+          "any": [
+            {
+              "field": "revenue_meur",
+              "op": "lte",
+              "value": 10,
+              "label": "turnover at most 10 MEUR",
+              "question": "Annual turnover last fiscal year, in MEUR?"
+            },
+            {
+              "field": "balance_meur",
+              "op": "lte",
+              "value": 10,
+              "label": "balance sheet at most 10 MEUR",
+              "question": "Balance sheet total, in MEUR?"
+            }
+          ],
+          "label": "turnover or balance sheet at most 10 MEUR"
+        }
+      ],
+      "apply_url": "https://www.businessfinland.fi/en/services/funding/funding-e-service/",
+      "status_url": "https://www.businessfinland.fi/en/services/funding/calls/2026/ongoing-sprint-grant-funding/",
+      "next_step": "Register in My Business Finland, book a meeting with a Business Finland expert, and only after that meeting submit the Sprint application in the Funding e-service. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#business-finland-sprint",
+      "last_verified": "2026-10-15",
+      "notes": "Open on 2026-10-15: status 'Ongoing', 'Continuous call from September 1, 2026', page updated 21.8.2026, decisions made continuously. Aimed at companies under five years that have not previously received Business Finland funding; companies five years or older must show 'a significant change in direction in their business based on innovation', so age is not encoded as a hard rule. Operational, sales and marketing activities and production investments are excluded. The balance-sheet alternative to the 10 MEUR turnover limit and the 50 000 EUR equity requirement are not encoded (no matching schema fields). Tempo no longer appears on the Startup funding page; Sprint, R&D funding and the Deep Tech Accelerator are listed instead."
+    },
+    {
+      "id": "business-finland-rd-funding",
+      "name": "Business Finland Research, development and piloting funding",
+      "country": "FI",
+      "kind": "loan",
+      "need": [
+        "money"
+      ],
+      "who": "Companies registered in Finland regardless of legal form (not natural persons, sole traders or companies in difficulty) with a permanent place of business, a Finnish business ID, a committed team of at least two people working in Finland and the means to cover costs before payment.",
+      "what": "Loans for development and pilot projects at 50 percent of eligible costs, up to 70 percent for SMEs and mid-caps where justified; grants for research projects of up to 50 percent for SMEs. Listed on the Startup funding page as one of three products for companies under five years.",
+      "amount": {
+        "text": "Amount not published on the page; loan at 50 percent of eligible costs, up to 70 percent for SMEs where justified"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "FI",
+          "label": "Finnish company",
+          "question": "Is the company registered in Finland?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "limited company",
+          "question": "Is it a limited company?"
+        }
+      ],
+      "apply_url": "https://www.businessfinland.fi/en/services/funding/funding-e-service/",
+      "status_url": "https://www.businessfinland.fi/en/services/funding/calls/2026/research-development-and-piloting/",
+      "next_step": "Review the call page, then have a person who may represent the company alone (per the Trade Register) or who holds the Suomi.fi authorisation 'Applying for corporate financing' create and submit the application in the Funding e-service. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#business-finland-rd-funding",
+      "last_verified": "2026-10-15",
+      "notes": "Open on 2026-10-15: status 'Ongoing', 'Applications are processed continuously', updated 22.9.2026. 'The amount of funding to be granted is set in the Government's annual budget.' Kind is set to loan because development and pilot projects, the typical startup case, are funded with loans; research projects get grants (SMEs up to 50 percent, mid-cap and large companies up to 40 percent). Business Finland funding is 'competitive and discretionary'."
+    },
+    {
+      "id": "business-finland-deep-tech-accelerator",
+      "name": "Business Finland Deep Tech Accelerator (DTA)",
+      "country": "FI",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Finnish limited liability companies less than five years old at the first-phase decision, with fewer than 50 employees and net sales or balance sheet at most 10 MEUR, at least one full financial year, at least 10 percent of total costs spent on R&D in one of the previous three years, and self-financing for the whole phase.",
+      "what": "Three phases of EUR 400 000 each (the first two grants, the third a loan), Business Finland covering 75 percent of approved costs; each phase 12-18 months; at most six deep-tech startups selected per call.",
+      "amount": {
+        "text": "EUR 400 000 per phase (three phases; the 2026 call funds phase 1 against estimated costs of EUR 533 334), 75 percent of approved costs",
+        "max": 400000,
+        "currency": "EUR"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "FI",
+          "label": "Finnish company",
+          "question": "Is the company registered in Finland?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "limited company",
+          "question": "Is it a limited company?"
+        },
+        {
+          "field": "age_years",
+          "op": "lt",
+          "value": 5,
+          "label": "less than five years old",
+          "question": "How old is the company?"
+        },
+        {
+          "field": "employees",
+          "op": "lt",
+          "value": 50,
+          "label": "fewer than 50 employees",
+          "question": "How many employees?"
+        },
+        {
+          "any": [
+            {
+              "field": "revenue_meur",
+              "op": "lte",
+              "value": 10,
+              "label": "turnover at most 10 MEUR",
+              "question": "Annual turnover last fiscal year, in MEUR?"
+            },
+            {
+              "field": "balance_meur",
+              "op": "lte",
+              "value": 10,
+              "label": "balance sheet at most 10 MEUR",
+              "question": "Balance sheet total, in MEUR?"
+            }
+          ],
+          "label": "turnover or balance sheet at most 10 MEUR"
+        }
+      ],
+      "apply_url": "https://www.businessfinland.fi/en/services/funding/funding-e-service/",
+      "status_url": "https://www.businessfinland.fi/en/services/funding/calls/2026/dta-funding-call-2026/",
+      "next_step": "Wait for the next DTA call to be announced on the DTA page, secure the company's total financing for phase 1, then submit the application on the Young Innovative Company template with appendices in the Funding e-service well before the announced deadline. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#business-finland-deep-tech-accelerator",
+      "last_verified": "2026-10-15",
+      "notes": "Closed on 2026-10-15: the 2026 call page shows status 'Ended' and application period '11.5.-16.8.2026' ('by 16 August 2026 at 11:59 PM'); the money for phase 1 had to be in the account by 2 September 2026. The DTA page says 'In 2026, one call for applications will be organised and upcoming calls will be announced on this page'; no next date is published. The company must belong to the prepayment and employer registers; costs are accepted until the company turns eight. Phase 3 loan has a 30 percent advance. The balance-sheet alternative to the 10 MEUR net-sales limit is not encoded."
+    },
+    {
+      "id": "innovationsfonden-innofounder",
+      "name": "Innovationsfonden InnoFounder",
+      "country": "DK",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Founders, individually or in teams of up to three, who have completed at least 120 ECTS of higher education, own at least 12.5 percent of the company, work at least 37 hours a week in it during the programme and have at most 10 hours a week of other study or paid work; the company needs a Danish CVR number before the programme begins.",
+      "what": "12-month full-time programme with a monthly grant of DKK 27 500 per founder, a development grant of up to DKK 100 000, and guidance from mentors and other entrepreneurs.",
+      "amount": {
+        "text": "DKK 27 500 per founder per month for 12 months, plus up to DKK 100 000 development grant",
+        "currency": "DKK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "DK",
+          "label": "Danish company",
+          "question": "Is the company registered in Denmark?"
+        }
+      ],
+      "apply_url": "https://www.e-grant.dk/",
+      "status_url": "https://danmarksinnovationsfond.dk/en/programmes/innofounder/",
+      "next_step": "Watch the status page for the next call; when it opens, write the application in Danish or English in the e-grant system (www.e-grant.dk) and submit before the deadline, since no changes are possible afterwards. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#innovationsfonden-innofounder",
+      "last_verified": "2026-10-15",
+      "notes": "No call open on 2026-10-15: 'There are currently no calls available'; no next call date on the page. 'You do not need to have a CVR number when applying' but the company must be established with a Danish CVR number before the programme begins, so no legal_form rule is encoded. The education, ownership and working-time requirements have no schema fields and are hard requirements to check manually. The old URL innovationsfonden.dk/en/p/innofounder redirects (301) to danmarksinnovationsfond.dk; curl returns HTTP 454, read via WebFetch."
+    },
+    {
+      "id": "rannis-frae",
+      "name": "Rannís Technology Development Fund - Fræ seed grant",
+      "country": "IS",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Companies under five years old, and individuals, in Iceland with a project in the planning stage (Fræ) or a cooperative development project (Thróunarfræ).",
+      "what": "Seed grant of up to ISK 2 million with no matching funds required; a report on the project's results is due within 12 months of project start.",
+      "amount": {
+        "text": "Up to ISK 2 000 000",
+        "max": 2000000,
+        "currency": "ISK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "IS",
+          "label": "Icelandic applicant",
+          "question": "Is the company or applicant based in Iceland?"
+        },
+        {
+          "any": [
+            {
+              "field": "legal_form",
+              "op": "eq",
+              "value": "none",
+              "label": "individual applicant",
+              "question": "Are you applying as an individual without a company?"
+            },
+            {
+              "field": "age_years",
+              "op": "lt",
+              "value": 5,
+              "label": "company under five years",
+              "question": "How old is the company?"
+            }
+          ],
+          "label": "individual, or company under five years old"
+        }
+      ],
+      "apply_url": "https://island.is/en/grants-plaza/grant/1-42",
+      "status_url": "https://island.is/en/grants-plaza/grant/1-42",
+      "next_step": "Open the grant page on Ísland.is, click Apply to log in to the Rannís online application portal, fill in the Fræ application and submit; applications are accepted at any time. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#rannis-frae",
+      "last_verified": "2026-10-15",
+      "notes": "Open on 2026-10-15: 'Open for applications / Always open'; 'Applications may be made at any time. Submitted applications are evaluated and grant awards are announced at least twice a year.' Rules and instructions for Fræ and Thróunarfræ are in Icelandic. Contact taeknithrounarsjodur@rannis.is. The fund's other categories (Sprout, Growth, Market grants) had the window 04.08.2026-15.09.2026 and were closed on the fund page; Patent grants are also always open. www.rannis.is redirects (301) to island.is/redirects/www.rannis.is/."
     }
   ]
 }
