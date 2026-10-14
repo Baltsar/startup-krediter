@@ -44,3 +44,21 @@ def test_exit_code_is_one_only_for_dead_links() -> None:
     assert check_links.exit_code(fine) == 0
     dead = fine + [check_links.Result("dead", 404, "c", "https://z")]
     assert check_links.exit_code(dead) == 1
+
+
+def test_probe_with_fallback_uses_secondary_only_when_primary_gets_no_response() -> None:
+    calls: list[str] = []
+
+    def primary(url: str) -> int:
+        calls.append("primary")
+        return 0
+
+    def secondary(url: str) -> int:
+        calls.append("secondary")
+        return 200
+
+    assert check_links.probe_with_fallback("https://x", primary, secondary) == 200
+    assert calls == ["primary", "secondary"]
+    calls.clear()
+    assert check_links.probe_with_fallback("https://x", lambda url: 404, secondary) == 404
+    assert calls == []

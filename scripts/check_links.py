@@ -12,6 +12,8 @@ were read in a browser when the record was verified. mailto: links are skipped.
 from __future__ import annotations
 
 import json
+import shutil
+import subprocess
 import sys
 import urllib.error
 import urllib.request
@@ -58,6 +60,28 @@ def probe(url: str) -> int:
     return 0
 
 
+def probe_curl(url: str) -> int:
+    """Second opinion through curl. Some CDNs refuse Python's TLS client outright but answer curl."""
+    if shutil.which("curl") is None:
+        return 0
+    done = subprocess.run(
+        ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", "-L", "--max-time", str(TIMEOUT_SECONDS), "-A", USER_AGENT, url],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    try:
+        return int(done.stdout.strip() or "0")
+    except ValueError:
+        return 0
+
+
+def probe_with_fallback(url: str, primary: Callable[[str], int], secondary: Callable[[str], int]) -> int:
+    """Use the secondary prober only when the primary got no HTTP response at all."""
+    code = primary(url)
+    return secondary(url) if code == 0 else code
+
+
 def check(records: list[dict], prober: Callable[[str], int]) -> list[Result]:
     """Probe each distinct http(s) URL once, in record order, status_url before apply_url."""
     results: list[Result] = []
@@ -80,7 +104,7 @@ def exit_code(results: list[Result]) -> int:
 def main(argv: list[str]) -> int:
     programs_path = Path(argv[1]) if len(argv) > 1 else PROGRAMS_PATH
     records = json.loads(programs_path.read_text(encoding="utf-8"))["programs"]
-    results = check(records, probe)
+    results = check(records, lambda url: probe_with_fallback(url, probe, probe_curl))
     for result in results:
         print(f"{result.status:10} {result.code:3} {result.id:32} {result.url}")
     dead = [result for result in results if result.status == "dead"]
