@@ -5,7 +5,8 @@ description: >-
   chance at funding, cloud credits, or GPU hours, or mentions Vinnova, Almi,
   EuroHPC, Sweden AI Factory, Mimer, RISE, LUMI, Sigma2, KI-fabrikken, NVIDIA
   Inception, Claude Startups, Anthropic, OpenAI, Nordic AI Factory Summit, AWS Activate,
-  Playground, Fast Lane, startup-krediter, GPU-timmar, or "har vi en chans". Also use when they ask
+  Playground, Fast Lane, startup-krediter, startup-krediitit, startup-kreditter,
+  GPU-timmar, "har vi en chans", "har vi en sjanse", or "har vi en chance". Also use when they ask
   which grant or compute program fits a startup in Sweden, Finland, Norway,
   Denmark, or Iceland. Invoke as /startup-krediter.
 ---
