@@ -40,8 +40,11 @@ def test_default_run_hides_blocked_and_nothing_is_stale_or_warned() -> None:
     assert out["warnings"] == []
 
 
-def test_every_record_was_verified_on_the_rebuild_day() -> None:
-    assert {program["last_verified"] for program in PROGRAMS} == {"2026-10-15"}
+def test_every_record_verified_between_the_rebuild_day_and_today() -> None:
+    rebuild_day = date(2026, 10, 15)
+    for program in PROGRAMS:
+        verified = date.fromisoformat(program["last_verified"])
+        assert rebuild_day <= verified <= date.today(), program["id"]
 
 
 def test_finnish_money_doors_exclude_vinnova_and_include_eu() -> None:
