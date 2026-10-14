@@ -28,7 +28,7 @@ Ta bara det chatten redan säger. Utelämna okända fält. Gissa inte ålder, an
 
 `need` är `money`, `gpu` eller `credits`. `legal_form` är `ab`, `ideell_forening`, `academia` eller `unknown`. `country` är `SE`, `FI`, `NO`, `DK` eller `IS`. Sätt det bara om chatten säger landet. Gissa inte Sverige.
 
-Pengar följer landet. Sverige är Vinnova. Norge är Oppstartstilskudd 1. Finland är Business Finland. Island är Fræ. Danmarks Innofounder-fönster på sidan stängde 17 februari 2026. GPU följer landet. Sverige är Playground. Finland är LUMI. Norge är KI-fabrikken. RISE, Hyperight och montrar är inte dörrar.
+Pengar följer landet. Sverige är Vinnova. Norge är Oppstartstilskudd 1. Finland är Business Finland. Island är Fræ. Danmark: vårens Innofounder stängde 17 februari 2026. Höstomgången stängde 25 augusti 2026. Besked väntas i mitten av december 2026. GPU följer landet. Sverige är Playground. Finland är LUMI. Norge är KI-fabrikken. RISE, Hyperight och montrar är inte dörrar. Almi är namngiven och har ingen kodad dörr. Fast Lane är syskonet till Playground, inte en poängrunda.
 
 `?` är första steget i den aktörens egen process. En stängd omgång får ingen startknapp.
 

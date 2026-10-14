@@ -242,6 +242,24 @@ def matrix(profile):
             "auto": "nej",
         },
         {
+            "door": "EuroHPC Fast Lane",
+            "walk": p_walk,
+            "blockers": p_n,
+            "wall": p_wall,
+            "they_want": "samma industrikrav som Playground, rullande, ingen poängrunda",
+            "apply": "portal, villkoren avsnitt 5.1.1, inget skicka-API",
+            "auto": "nej",
+        },
+        {
+            "door": "Almi",
+            "walk": "osäker",
+            "blockers": 1,
+            "wall": "namngiven i beskrivningen, ingen kodad utlysning",
+            "they_want": "att du hämtar Almis sida innan du nämner ett belopp",
+            "apply": "ingen dörr i det här repot",
+            "auto": "nej",
+        },
+        {
             "door": "Vinnova Innovativa Startups",
             "walk": v_walk,
             "blockers": v_n,
@@ -717,20 +735,23 @@ def chance(profile):
         sys.stdout.write("\n")
         return
     elif need == "money" and (profile.get("country") or "SE").upper() == "DK":
-        unthought = "Fönstret på sidan stängde 17 februari 2026. Nästa öppning står inte där."
+        unthought = "Våren stängde 17 februari 2026. Hösten stängde 25 augusti 2026 kl 12. Slutbesked väntas i mitten av december 2026."
         json.dump(
             {
                 "chance": "stängd",
-                "glyph": picture("stängd", "Innofounder", [], ["fönstret 17 februari 2026"], None, unthought),
+                "glyph": picture("stängd", "Innofounder", [], ["17 februari 2026 och 25 augusti 2026"], None, unthought),
                 "door": "Innofounder",
-                "why": "Innovationsfondens sida visar en stängd omgång. Skicka inte en ansökan mot ett passerat datum.",
-                "missing": ["fönstret 17 februari 2026"],
+                "why": "Båda omgångarna 2026 är stängda. Skicka inte en ansökan mot ett passerat datum. Besked om hösten väntas i mitten av december.",
+                "missing": ["17 februari 2026", "25 augusti 2026"],
                 "ask": None,
                 "unthought": unthought,
                 "confidence": "hög",
-                "link": "https://innovationsfonden.dk/en/p/innofounder/innofounder-3",
+                "link": "https://www.innovationsfonden.dk/en/p/innofounder",
                 "next": "Vänta på nästa öppning. Säg aldrig att ansökan är skickad.",
-                "sources": ["https://innovationsfonden.dk/en/p/innofounder/innofounder-3"],
+                "sources": [
+                    "https://www.innovationsfonden.dk/en/p/innofounder",
+                    "https://innovationsfonden.dk/da/p/innofounder/innofounder-4",
+                ],
             },
             sys.stdout,
             ensure_ascii=False,
