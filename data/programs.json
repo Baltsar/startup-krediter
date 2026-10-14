@@ -123,6 +123,178 @@
       "reference": "references/eu-grants.md#eurostars",
       "last_verified": "2026-10-15",
       "notes": "No Eurostars call is open on 2026-10-15: the Eureka open-calls listing shows no Eurostars call, and Call 12 opens 17 December 2026 with deadline 4 March 2027 14:00 CET; calls are usually organised twice a year. Seven international eligibility criteria: SME lead from a Eurostars country; at least two independent entities; at least two Eurostars countries with at least one organisation from an EU or Horizon Europe associated country; SMEs from Eurostars countries carry 50% or more of the budget excluding subcontracting; no single participant or country above 70% of the budget; duration 36 months or less; exclusive focus on civil applications. Funding is decentralised: Eureka pays nothing, each partner's national funding body pays under national rules and may cap amounts. National details for Call 12 were marked as being confirmed and subject to change before the call opens. Sweden: Vinnova funds SMEs up to 50% of costs, max 5 MSEK per project; Swedish participants submit a national application to Vinnova after a positive evaluation; Vinnova checks the latest registered annual report and credit reports. Finland: Business Finland requires a parallel national application with attachments when the Eurostars application is submitted. Denmark: IFD max 300 000 EUR per participant (500 000 EUR for several Danish participants, min 50 000 EUR); upload the application to e-grant within 14 days after the deadline. Norway: the funder is the Research Council of Norway, not Innovasjon Norge. Iceland: Rannís, max 45 MISK per project. Greece, Israel, Italy and Brussels have no budget for this call."
+    },
+    {
+      "id": "claude-startups",
+      "name": "Claude Startups (Anthropic)",
+      "country": "global",
+      "kind": "ai_api_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "Early-stage founders building on Claude. Members get offers, tools and events; founders backed by a VC in Anthropic's partner network can get additional Claude API credits through that VC.",
+      "what": "Membership program: discounts and credits worth up to 45 000 USD from companies building with Claude (redeemed by code in the Claude Console), biweekly Applied AI sessions, events, hackathons and meetups. Founders backed by a partner-network VC may receive up to 100 000 USD in additional Claude API credits, claimed through the VC.",
+      "amount": {
+        "text": "Partner offers and credits worth up to 45 000 USD; up to 100 000 USD in additional Claude API credits for founders backed by a partner-network VC",
+        "max": 100000,
+        "currency": "USD"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "anthropic",
+          "label": "builds on Anthropic",
+          "question": "Do you build on Anthropic's Claude API?"
+        }
+      ],
+      "apply_url": "https://claude.com/programs/startups",
+      "status_url": "https://claude.com/programs/startups",
+      "next_step": "Applications are closed as of 2026-10-15. Subscribe to the Claude Startup newsletter on claude.com/programs/startups to hear when the next cohort opens; when it does, the founder fills in the application there and clicks submit. If the company is backed by a VC in Anthropic's partner network, the founder asks that VC about the additional API credit route.",
+      "reference": "references/ai-api-credits.md#claude-startups",
+      "last_verified": "2026-10-15",
+      "notes": "CLOSED on 2026-10-15: the page says the current cohort is full and no new applications are accepted; applications still in review were not advanced. Credits apply only to the first-party Claude API through the Claude Console and cannot be used on AWS, Google Cloud, Azure or other third-party platforms. The 100 000 USD figure is only for founders backed by a VC in Anthropic's partner network and is claimed through the VC, not on this page. Member sign-in: platform.claude.com/claude-for-startups. No tiers, funding caps or work-email requirement are published."
+    },
+    {
+      "id": "together-ai-startup-accelerator",
+      "name": "Together AI Startup Accelerator",
+      "country": "global",
+      "kind": "ai_api_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "Startups selected into Together AI's accelerator; the tier follows how much the company has raised (under 5 MUSD, 5 to 10 MUSD, over 10 MUSD).",
+      "what": "Free Together AI platform credits for serverless inference, dedicated endpoints, fine-tuning and instant clusters, plus free forward-deployed engineering hours, best-practice content, joint go-to-market, founder community and access to Together's VC network.",
+      "amount": {
+        "text": "Build tier up to 15 000 USD (under 5 MUSD raised), Scale tier up to 30 000 USD (5 to 10 MUSD raised), Grow tier up to 50 000 USD (over 10 MUSD raised) in platform credits",
+        "max": 50000,
+        "currency": "USD"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "together",
+          "label": "builds on Together AI",
+          "question": "Do you build on Together AI?"
+        }
+      ],
+      "apply_url": "https://www.together.ai/startup-accelerator",
+      "status_url": "https://www.together.ai/startup-accelerator",
+      "next_step": "Open together.ai/startup-accelerator, scroll to \"Submit your application\" and fill in the form with company details, funding raised and the workloads you run on Together; the founder clicks submit.",
+      "reference": "references/ai-api-credits.md#together-ai-startup-accelerator",
+      "last_verified": "2026-10-15",
+      "notes": "Application form was live on 2026-10-15. Selection-based program, not automatic. Tiers: Build (under 5 MUSD raised) up to 15K USD credits and 3 hours of forward-deployed engineering; Scale (5 to 10 MUSD) up to 30K USD and 6 hours; Grow (over 10 MUSD) up to 50K USD and 10 hours. Credits do not apply to Reserved GPU Clusters. Testimonials refer to an inaugural cohort, so intake may be cohort-based. No partner-VC, work-email or funding cap requirement is stated."
+    },
+    {
+      "id": "modal-for-startups",
+      "name": "Modal for Startups",
+      "country": "global",
+      "kind": "ai_api_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "VC-funded startups new to Modal. Seed to Series A: any VC funding from Modal's VC partner network, or over 1 MUSD VC funding from any fund. Scaling and Series B+: over 30 MUSD raised or post-Series B with a partner-network VC (custom package).",
+      "what": "One-time grant of free Modal compute (GPU) credits, direct access to Modal's engineering team for technical support, GTM amplification on launches and raises, and a founder community.",
+      "amount": {
+        "text": "Amount not published on the page"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "modal",
+          "label": "builds on Modal",
+          "question": "Do you build on Modal?"
+        },
+        {
+          "any": [
+            {
+              "field": "vc_backed",
+              "op": "eq",
+              "value": true,
+              "label": "backed by a partner investor",
+              "question": "Is the company backed by one of the program's partner investors?"
+            },
+            {
+              "field": "funding_raised_usd",
+              "op": "gt",
+              "value": 1000000,
+              "label": "raised over 1 MUSD in VC funding",
+              "question": "How much VC funding has the company raised, in USD?"
+            }
+          ],
+          "label": "VC funding from a Modal partner fund, or over 1 MUSD VC funding from any fund"
+        }
+      ],
+      "apply_url": "https://modal.com/startups#apply",
+      "status_url": "https://modal.com/startups",
+      "next_step": "Open modal.com/startups, click \"Apply Now\" and fill in the startup credits form (an embedded Fillout form) with company, funding and investor details; the founder clicks submit.",
+      "reference": "references/ai-api-credits.md#modal-for-startups",
+      "last_verified": "2026-10-15",
+      "notes": "Application form was live on 2026-10-15. The page only says \"thousands of free GPU credits\"; the credit size per tier is not published. Only customers new to Modal are eligible; credits are a one-time grant and you cannot reapply once you have received credits in a tier. The FAQ asks why a payment method is required, so expect to add a card. FAQ answers (credit duration, tier assignment, full VC partner list) are rendered client-side and could not be read in this fetch; check them in a browser. Partner logos shown: Y Combinator, Andreessen Horowitz, Sequoia, Khosla Ventures, Neo, HF0, Pear VC, Lux Capital. A separate Modal for Academics program exists. The 30 USD/month free compute banner is a general offer, not part of this program."
+    },
+    {
+      "id": "lambda-nvidia-inception",
+      "name": "Lambda Cloud credits for NVIDIA Inception members",
+      "country": "global",
+      "kind": "ai_api_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "Companies that are members of NVIDIA Inception, located in and paying with a credit card from one of the listed countries (including the EU except Lithuania, Iceland, Norway, Switzerland and the United Kingdom).",
+      "what": "1 000 USD in Lambda Cloud credits for on-demand GPU instances (NVIDIA B200, H100, A100 and GH200), with no ingress or egress fees; credits also cover persistent storage at 0.20 USD per GB per month.",
+      "amount": {
+        "text": "1 000 USD in Lambda Cloud credits",
+        "max": 1000,
+        "currency": "USD"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "lambda",
+          "label": "builds on Lambda",
+          "question": "Do you build on Lambda Cloud?"
+        }
+      ],
+      "apply_url": "https://lambda.ai/nvidia-inception",
+      "status_url": "https://lambda.ai/nvidia-inception",
+      "next_step": "Join NVIDIA Inception first if the company is not already a member, then fill in the form on lambda.ai/nvidia-inception with company and Inception membership details; the founder clicks submit.",
+      "reference": "references/ai-api-credits.md#lambda-nvidia-inception",
+      "last_verified": "2026-10-15",
+      "notes": "Offer was live on 2026-10-15. Hard requirement that the schema cannot express as a rule: the company must be a member of NVIDIA Inception. One grant per company. A valid credit card is required to prevent fraud and calculate tax. Credits are valid for 12 months from the date they are applied. Applications are reviewed and approved by Lambda; submitting does not guarantee credits. Eligible locations listed on the page: Australia, Canada, Chile, European Union (except Lithuania), Iceland, Israel, Japan, New Zealand, Norway, Puerto Rico, Singapore, South Africa, South Korea, Switzerland, Taiwan, Turkey, UAE, UK, US. No general Lambda startup credit program was found on lambda.ai on 2026-10-15; third-party sites quoting 7 500 USD do not match the page, which says 1 000 USD."
+    },
+    {
+      "id": "runpod-startup-program",
+      "name": "Runpod Startup Program",
+      "country": "global",
+      "kind": "ai_api_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "AI startups new to Runpod with real GPU workloads. Starter tier: pre-Series A startups with working products and near-term GPU needs. Growth tier: venture-backed Seed to Series B+ startups with production workloads that commit 50 000 USD upfront.",
+      "what": "GPU credits usable across Pods, Serverless, Clusters, Public Endpoints and Storage. Starter tier: 1 000 USD in free credits with self-serve onboarding. Growth tier: 25 000 USD bonus credits on a 50 000 USD upfront 12-month commitment, 1:1 onboarding call, SLA options and an enterprise path.",
+      "amount": {
+        "text": "Starter tier 1 000 USD in free credits; Growth tier 25 000 USD in bonus credits on a 50 000 USD upfront commitment (75 000 USD total to start)",
+        "max": 25000,
+        "currency": "USD"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "runpod",
+          "label": "builds on Runpod",
+          "question": "Do you build on Runpod?"
+        }
+      ],
+      "apply_url": "https://www.runpod.io/startup-program",
+      "status_url": "https://www.runpod.io/startup-program",
+      "next_step": "Open runpod.io/startup-program, click \"Apply now\" and fill in the form with funding status, workload type and timing; the founder clicks submit.",
+      "reference": "references/ai-api-credits.md#runpod-startup-program",
+      "last_verified": "2026-10-15",
+      "notes": "Application form was live on 2026-10-15. Selective program; venture backing is strongly preferred but the FAQ says every application is reviewed holistically, so it is not encoded as a hard rule. Primarily for new customers; existing customers below the Growth threshold are judged case by case. The Growth tier is a credit match: you deposit 50 000 USD under a 12-month agreement and Runpod adds 25 000 USD once, with no reload. Best fit stated on the page: Growth for Seed to Series B+ startups spending or ready to spend 5 000 to 25 000+ USD per month on GPUs; Starter for pre-Series A startups with working products. Separate Creator Program and academic research offer exist."
     }
   ]
 }
