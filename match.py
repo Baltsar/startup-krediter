@@ -437,6 +437,7 @@ EN = (
     ("○  land", "○  country"),
     ("◐  land", "◐  country"),
     ("GPU-timmarna söks i Playground. Fabriken pekar på callen. Mejlet skickas inte.", "The GPU hours are applied for in Playground. The factory points at the call. The email is not sent."),
+    ("Fast Lane är syskonet till Playground. Samma industrikrav, rullande, ingen poängrunda. ", "Fast Lane is Playground's sibling. Same industrial rules, rolling, no score round. "),
     ("utkast", "draft"),
     ("isländskt bolag", "Icelandic company"),
     ("finskt bolag", "Finnish company"),
@@ -716,8 +717,11 @@ def chance(profile):
         sys.stdout.write("\n")
         return
     elif need == "gpu":
-        door, link = "Playground", PLAYGROUND
+        asked_fast = profile.get("asked") == "fastlane"
+        door, link = ("Fast Lane", TOR) if asked_fast else ("Playground", PLAYGROUND)
         unthought = "GPU-tid betalar inte API-fakturan. Vinnova kan lotta två ansökningar som båda är starka."
+        if asked_fast:
+            unthought = "Fast Lane är syskonet till Playground. Samma industrikrav, rullande, ingen poängrunda. " + unthought
         base = facts(profile)
         got, holes, denied, ask = slot_rows(profile, GPU_SLOTS)
         failed = denied or p_blocks
