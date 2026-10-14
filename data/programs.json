@@ -1,6 +1,705 @@
 {
   "programs": [
     {
+      "id": "vinnova-innovativa-startups",
+      "name": "Vinnova Innovativa Startups 2026",
+      "country": "SE",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Small Swedish limited companies (aktiebolag) at most 10 years old at the decision date, with at most 10 employees, net revenue or balance sheet of at most 10 MSEK, no dividend in the last fiscal year and not listed on a stock exchange.",
+      "what": "Grant of up to 500 000 SEK for a project of at most nine months that tests and confirms the market potential of an innovative idea with an international market and a sustainable business model.",
+      "amount": {
+        "text": "Up to 500 000 SEK",
+        "max": 500000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "limited company",
+          "question": "Is it a limited company?"
+        },
+        {
+          "field": "age_years",
+          "op": "lte",
+          "value": 10,
+          "label": "at most 10 years",
+          "question": "How old is the company?"
+        },
+        {
+          "field": "employees",
+          "op": "lte",
+          "value": 10,
+          "label": "at most 10 employees",
+          "question": "How many employees (full-time equivalents)?"
+        },
+        {
+          "any": [
+            {
+              "field": "revenue_msek",
+              "op": "lte",
+              "value": 10,
+              "label": "net revenue at most 10 MSEK",
+              "question": "Net revenue last fiscal year, in MSEK?"
+            },
+            {
+              "field": "balance_msek",
+              "op": "lte",
+              "value": 10,
+              "label": "balance sheet at most 10 MSEK",
+              "question": "Balance sheet total last fiscal year, in MSEK?"
+            }
+          ],
+          "label": "net revenue or balance sheet at most 10 MSEK"
+        },
+        {
+          "field": "profit_distributed",
+          "op": "eq",
+          "value": false,
+          "label": "no dividend last fiscal year",
+          "question": "Did the company pay a dividend in the last fiscal year?"
+        }
+      ],
+      "apply_url": "https://ansok.vinnova.se/utlysning/0382e83b-4c96-404d-bed1-08deab387617?opencall=true&lang=sv",
+      "status_url": "https://www.vinnova.se/e/innovativa-startups/innovativa-startups-2026",
+      "live": {
+        "source": "vinnova",
+        "call_id": "2016-04714"
+      },
+      "next_step": "Read the call text on the status page, log in to Vinnova's e-service for applications (ansok.vinnova.se) with the company's account, fill in the form about the project, project parties and budget, and submit before 12 January 2027 at 14:00. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#vinnova-innovativa-startups",
+      "last_verified": "2026-10-15",
+      "notes": "Round open on 2026-10-15. Page: 'Stänger den 12 januari 2027 kl 14:00'. Dates on the page: 12 okt. 2026 opens; info meetings 2 nov. 2026 kl 09:00 and 9 nov. 2026 kl 09:00; 12 jan. 2027 kl 14:00 last day; 23 mars 2027 decision and earliest project start; 30 mars 2027 latest project start; project at most nine months. Selection: complete applications are scored by three expert assessors, and among those judged to meet the criteria 'i hög och likvärdig grad' the grants are decided by lottery ('lottning, så kallad randomisering'), introduced from 2026. Company age is counted at the decision date 2027-03-23. One of net revenue or balance sheet may exceed 10 MSEK, but not both. Companies granted funding in Innovativa Startups 2025 may not apply. The whole group must be unlisted if the company belongs to a group. The page footer shows diarienummer 2025-04831; in Vinnova's open-data API 2016-04714 is the parent call 'Innovativa Startups' and 2025-04831 is this application round (open 2026-10-12, closes 2027-01-12T14:00, decision 2027-03-23)."
+    },
+    {
+      "id": "vinnova-ffi-asp-accelerated-startup-partnership",
+      "name": "Vinnova FFI ASP - Accelerated Startup Partnership (autumn 2026)",
+      "country": "SE",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Knowledge-intensive startups, Swedish or foreign, registered at most 10 years and meeting the EU small-enterprise definition, applying together with at least one established need owner in road transport; only the startup receives funding.",
+      "what": "Grant for an innovation collaboration that accelerates sustainable road transport: up to 500 000 SEK for a validation project (TRL/BRL 2-4) or 750 000 SEK for an implementation project (TRL/BRL 5-8). Vinnova can finance up to 100 percent of the startup's project costs; co-financing of at least 25 percent of the total project budget is required.",
+      "amount": {
+        "text": "Up to 500 000 SEK (validation project) or 750 000 SEK (implementation project)",
+        "max": 750000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "limited company",
+          "question": "Is it a limited company?"
+        },
+        {
+          "field": "age_years",
+          "op": "lte",
+          "value": 10,
+          "label": "registered at most 10 years",
+          "question": "How many years since the company was registered?"
+        },
+        {
+          "field": "employees",
+          "op": "lt",
+          "value": 50,
+          "label": "fewer than 50 employees",
+          "question": "How many employees?"
+        }
+      ],
+      "apply_url": "https://ansok.vinnova.se/utlysning/26bdd234-db2b-4fa2-1fab-08dec63ac2d3?opencall=true&lang=en",
+      "status_url": "https://www.vinnova.se/en/calls-for-proposals/accelerate-swedish-partnership/ffi-asp-accelerated-startup-2026-01767/",
+      "next_step": "Find a need owner (a private or public road-transport organisation) willing to partner, agree the project type and which FFI sub-programme the innovation connects to, then log in to Vinnova's e-service and complete the form with CVs for the project team and a GANTT chart before 29 October 2026 at 14:00. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#vinnova-ffi-asp-accelerated-startup-partnership",
+      "last_verified": "2026-10-15",
+      "notes": "Reference number 2026-01767. Open on 2026-10-15: 'Closes on 29 October 2026 at 2PM'. Opened 15 Jun 2026; earlier assessment date 16 Sep 2026 14:00 with decision planned 16 Oct; final decision 24 Nov 2026. Total budget 22 MSEK across the year's application opportunities. The innovation must connect to at least one FFI sub-programme: Circularity, Transport and mobility solutions, Traffic-safe automation, Zero emissions. Projects need at least two participants, at least one need owner and at least one startup; only the startup can be beneficiary. Aid basis: startups under five years (fewer than 50 employees, not listed, no profit distributed, not formed by merger or takeover) get start-up aid; older small companies get de minimis aid, at most 300 000 EUR over three years. No country rule is encoded because the page says foreign startups without Swedish presence may apply (they attach a home-country registration certificate). The English page is machine-translated and the Swedish text takes precedence: https://www.vinnova.se/e/accelerera-svenskt-partnerskap/ffi-asp-accelerated-startup-2026-01767/. The sibling spring round 2026-00299 closed 2 June 2026."
+    },
+    {
+      "id": "almi-innovationslan",
+      "name": "Almi Innovationslån",
+      "country": "SE",
+      "kind": "loan",
+      "need": [
+        "money"
+      ],
+      "who": "Companies registered in Sweden with up to 249 employees, new or established, with an innovation project of large potential whose development phase is still ongoing.",
+      "what": "Loan of 50 000 to 500 000 SEK covering at most 50 percent of the estimated project cost, to take an idea from concept to market. Interest is set individually; repayment usually 3-5 years, at most 96 months.",
+      "amount": {
+        "text": "50 000 to 500 000 SEK, at most 50 percent of the project cost",
+        "min": 50000,
+        "max": 500000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "employees",
+          "op": "lte",
+          "value": 249,
+          "label": "at most 249 employees",
+          "question": "How many employees?"
+        }
+      ],
+      "apply_url": "https://etjanster.almi.se/oversikt/flow/1006",
+      "status_url": "https://www.almi.se/lan-finansiering/innovationslan/",
+      "next_step": "Prepare a budget (mandatory), the latest annual accounts, current interim figures and a liquidity forecast, then open Almi's e-service with BankID and fill in the loan application; your regional Almi company reviews it and contacts you. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#almi-innovationslan",
+      "last_verified": "2026-10-15",
+      "notes": "Continuous, no deadline. Co-financing is required: 'Almi kan finansiera upp till 50 procent av den beräknade projektkostnaden'; for loans above 300 000 SEK at least half of the co-financing must be capital, for smaller loans part of it may be own work. Typical loan around 300 000 SEK. Security usually a combination of a floating charge (företagsinteckning) and a limited personal guarantee. Interest may be somewhat higher than for other Almi loans because of project risk. Almi is regional: 'Alla ansökningar hanteras av ditt regionala Almi-bolag' and every loan is an individual assessment, so terms vary by case and region."
+    },
+    {
+      "id": "almi-mikrolan",
+      "name": "Almi Mikrolån",
+      "country": "SE",
+      "kind": "loan",
+      "need": [
+        "money"
+      ],
+      "who": "Micro companies and sole traders in Sweden with at most nine employees and annual revenue or balance sheet below 2 MEUR; you must have or be about to start a company, private individuals cannot apply.",
+      "what": "Loan of up to 250 000 SEK for a forward-looking investment that develops the company (equipment, marketing, product development, digitalisation, recruitment, liquidity). Normally no co-financing required; repayment 4 to 72 months.",
+      "amount": {
+        "text": "Up to 250 000 SEK",
+        "max": 250000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "legal_form",
+          "op": "in",
+          "value": [
+            "company",
+            "sole_trader"
+          ],
+          "label": "company or sole trader",
+          "question": "Is the applicant a company or a sole trader (not a private individual)?"
+        },
+        {
+          "field": "employees",
+          "op": "lte",
+          "value": 9,
+          "label": "at most 9 employees",
+          "question": "How many employees?"
+        },
+        {
+          "any": [
+            {
+              "field": "revenue_meur",
+              "op": "lt",
+              "value": 2,
+              "label": "turnover under 2 MEUR",
+              "question": "Annual turnover last fiscal year, in MEUR?"
+            },
+            {
+              "field": "balance_meur",
+              "op": "lt",
+              "value": 2,
+              "label": "balance sheet under 2 MEUR",
+              "question": "Balance sheet total, in MEUR?"
+            }
+          ],
+          "label": "turnover or balance sheet under 2 MEUR"
+        }
+      ],
+      "apply_url": "https://etjanster.almi.se/oversikt/flow/1006",
+      "status_url": "https://www.almi.se/lan-finansiering/mikrolan/",
+      "next_step": "Prepare a budget (mandatory; for a company being formed, budgets for the current and next fiscal year), then open Almi's e-service with BankID and fill in the loan application; your regional Almi company handles it. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#almi-mikrolan",
+      "last_verified": "2026-10-15",
+      "notes": "Continuous, no deadline. The micro-company limit is 'max nio anställda och en årsomsättning eller balansomslutning som understiger två miljoner euro'; a company over 2 MEUR revenue but under 2 MEUR balance sheet may still qualify. 'Nej, Mikrolån kräver normalt ingen medfinansiering.' Interest set individually; Almi's rates are normally about 2-3 percentage points above bank rates, but Mikrolån can have longer term, initial amortisation-free period and lower rate than Almi's other loans. Handled by the regional Almi company."
+    },
+    {
+      "id": "almi-tillvaxtlan",
+      "name": "Almi Tillväxtlån",
+      "country": "SE",
+      "kind": "loan",
+      "need": [
+        "money"
+      ],
+      "who": "Innovative, established small and medium-sized limited companies registered in Sweden with up to 250 employees that want to grow faster than their own finances allow.",
+      "what": "Loan of up to 10 MSEK backed by a European Investment Fund guarantee under InvestEU; Almi normally finances 30 to 50 percent of the capital need. Repayment 12 to 84 months with longer term, initial amortisation-free period and lower interest than Almi's standard loans.",
+      "amount": {
+        "text": "Up to 10 000 000 SEK",
+        "max": 10000000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "limited company",
+          "question": "Is it a limited company?"
+        },
+        {
+          "field": "employees",
+          "op": "lte",
+          "value": 250,
+          "label": "at most 250 employees",
+          "question": "How many employees?"
+        }
+      ],
+      "apply_url": "https://etjanster.almi.se/oversikt/flow/1006",
+      "status_url": "https://www.almi.se/lan-finansiering/tillvaxtlan/",
+      "next_step": "Prepare a budget, the latest annual accounts, interim figures and a liquidity forecast, then open Almi's e-service with BankID and fill in the loan application; your regional Almi company reviews it. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#almi-tillvaxtlan",
+      "last_verified": "2026-10-15",
+      "notes": "Continuous, no deadline. 'Tillväxtlån är ett lån för innovativa små och medelstora aktiebolag' and 'Ett lån för etablerade och innovativa företag', so very early startups without revenue history may not fit. Almi's rates are normally about 2-3 percentage points above bank rates. Handled by the regional Almi company; each loan is an individual assessment."
+    },
+    {
+      "id": "energimyndigheten-konceptutveckling",
+      "name": "Energimyndigheten - Konceptutveckling av innovationer med affärsfokus",
+      "country": "SE",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Registered small and medium-sized companies (legal entities) and universities in Sweden developing an energy-relevant innovation at TRL 2-4 with a clear business focus; there is no age limit and newly started companies may apply.",
+      "what": "Grant of up to 100 percent of eligible costs, at most 500 000 SEK, with no co-financing requirement, for concept development: assessing energy relevance, developing and verifying a prototype or MVP, clarifying commercial potential and an IP strategy. Projects run at most 12 months.",
+      "amount": {
+        "text": "Up to 500 000 SEK, up to 100 percent of eligible costs",
+        "max": 500000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "legal_form",
+          "op": "in",
+          "value": [
+            "company",
+            "academia"
+          ],
+          "label": "company or university",
+          "question": "Is the applicant a company or a university?"
+        }
+      ],
+      "apply_url": "https://minasidor.energimyndigheten.se/",
+      "status_url": "https://www.energimyndigheten.se/utlysningar/konceptutveckling-av-innovationer-med-affarsfokus/",
+      "next_step": "Check the status page for the current round and read the call text and the mandatory 'Ytterligare ansökningsfrågor' document, then log in to Energimyndigheten's e-service Mina sidor, fill in the application with the attachment and submit before the round's deadline. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#energimyndigheten-konceptutveckling",
+      "last_verified": "2026-10-15",
+      "notes": "Not open on 2026-10-15. The call page (Senast uppdaterad 2026-04-08) still shows the spring round: 'Sista dag för ansökan 2026-06-02 23:59', decisions 'löpande under september till november 2026', project start between 15 October and 1 December 2026, at most 12 months, pool 'Cirka 10 miljoner kronor'. The programme page says the call opens twice a year, 'planerat april samt oktober', and the kommande-utlysningar page lists the next opening as October 2026 without a day. The 500 000 SEK and 100 percent figures come from the programme page utveckla-en-affarside; the spring call page gives only the total pool. One application per company per round; the applicant must own or control the solution. Almi and five other innovation environments give advice before applying but do not write the application. Re-read the status page before quoting any date."
+    },
+    {
+      "id": "energimyndigheten-verifiering-med-kund",
+      "name": "Energimyndigheten - Verifiering av innovationer med kund",
+      "country": "SE",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Small and medium-sized companies in Sweden with an energy-relevant innovation at TRL 4-7, a clear business focus and at least one customer willing to sign a letter of intent; no age limit.",
+      "what": "Grant of at most 3 MSEK for developing and verifying the innovation together with a customer plus business development (business plan, financing plan, IP strategy). Co-financing is required (the programme page states at least 55 percent of total project cost), while business-development activities can be funded up to 100 percent. Projects up to 24 months.",
+      "amount": {
+        "text": "Up to 3 000 000 SEK",
+        "max": 3000000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE",
+          "label": "Swedish company",
+          "question": "Is the company registered in Sweden?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "limited company",
+          "question": "Is it a limited company?"
+        }
+      ],
+      "apply_url": "https://minasidor.energimyndigheten.se/",
+      "status_url": "https://www.energimyndigheten.se/utlysningar/verifiering-av-innovationer-med-kund/",
+      "next_step": "Check the status page for the current round, secure a dated and signed letter of intent from at least one customer using Energimyndigheten's template, fill in 'Ytterligare ansökningsfrågor', then log in to Mina sidor and submit before the deadline. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#energimyndigheten-verifiering-med-kund",
+      "last_verified": "2026-10-15",
+      "notes": "Not open on 2026-10-15. The call page (Senast uppdaterad 2026-04-08) shows the spring round: 'Sista dag för ansökan 2026-06-02 23:59', decisions September to November 2026, project start 15 August to 1 December 2026 (recommended no earlier than 15 October), at most 24 months, pool 'Cirka 30 miljoner kronor'. Next opening planned October 2026 per the kommande-utlysningar page ('planerat april samt oktober' on the programme page), no day given. Maximum one application per company; the applicant must own or control the solution. The 55 percent co-financing figure is from the programme page verifiering-med-kund; the call page says co-financing is required without a general percentage. Re-read the status page before quoting any date."
+    },
+    {
+      "id": "innovasjon-norge-oppstartstilskudd-1",
+      "name": "Innovasjon Norge Startup grant 1 (Oppstartstilskudd 1)",
+      "country": "NO",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Norwegian private limited companies (AS) less than five years old that are genuinely new businesses with growth ambitions and have completed the idea phase; sole proprietorships (ENK), general partnerships (ANS) and DA are not accepted.",
+      "what": "Grant of up to NOK 150 000 covering up to 100 percent of invoiced costs for buying services from external suppliers that give insight from customers and the market. Project period 9 months, extendable by 3.",
+      "amount": {
+        "text": "Up to NOK 150 000",
+        "max": 150000,
+        "currency": "NOK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "NO",
+          "label": "Norwegian company",
+          "question": "Is the company registered in Norway?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "limited company",
+          "question": "Is it a limited company?"
+        },
+        {
+          "field": "age_years",
+          "op": "lt",
+          "value": 5,
+          "label": "less than five years old",
+          "question": "How old is the company?"
+        }
+      ],
+      "apply_url": "https://www.innovasjonnorge.no/en/tjeneste/oppstartstilskudd-1",
+      "status_url": "https://www.innovasjonnorge.no/en/tjeneste/oppstartstilskudd-1",
+      "next_step": "Optionally get quick feedback on the idea at raskavklaring.innovasjonnorge.no, then log in to Innovation Norway's 'My page' (start.innovasjonnorge.no, the portal linked from the Startup grant 2 page), choose application type Startup and submit the application; applications are accepted on an ongoing basis. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#innovasjon-norge-oppstartstilskudd-1",
+      "last_verified": "2026-10-15",
+      "notes": "Application deadline 'Ongoing'. Payment: 'You can receive up to 50% of the grant when the project starts', the rest when the project ends; 'At least 50% of the project costs must be paid upfront'. Not covered: own staff costs, related-party costs, VAT, costs before the application. Subsidiaries 50 percent or more owned by an established business are not eligible; companies with outstanding payment defaults cannot apply. The application must state other public funding sought. The page itself has no apply button; it refers to 'My page' only for reporting. Site returns 403 to curl; read via WebFetch on 2026-10-15."
+    },
+    {
+      "id": "innovasjon-norge-oppstartstilskudd-2",
+      "name": "Innovasjon Norge Startup grant 2 (Oppstartstilskudd 2)",
+      "country": "NO",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Limited companies incorporated less than five years ago that are genuinely new businesses with own funding at least matching the grant; foreign applicants must establish a Norwegian AS or NUF before first payment.",
+      "what": "Grant of up to NOK 1 million covering up to 50 percent of approved project costs to clarify technical and commercial aspects, such as testing a minimum viable solution with customers and developing an IP strategy. Project period 12 months, extendable by six.",
+      "amount": {
+        "text": "Up to NOK 1 000 000, at most 50 percent of approved project costs",
+        "max": 1000000,
+        "currency": "NOK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "NO",
+          "label": "Norwegian company",
+          "question": "Is the company registered in Norway?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "limited company",
+          "question": "Is it a limited company?"
+        },
+        {
+          "field": "age_years",
+          "op": "lt",
+          "value": 5,
+          "label": "incorporated less than five years ago",
+          "question": "How many years since the company was incorporated?"
+        }
+      ],
+      "apply_url": "https://www.innovasjonnorge.no/en/tjeneste/oppstartstilskudd-2",
+      "status_url": "https://www.innovasjonnorge.no/en/tjeneste/oppstartstilskudd-2",
+      "next_step": "Secure own funding at least matching the grant, then go to 'My page' at start.innovasjonnorge.no, start a Startup application and submit it; applications are accepted on an ongoing basis. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#innovasjon-norge-oppstartstilskudd-2",
+      "last_verified": "2026-10-15",
+      "notes": "Application deadline 'Ongoing'. 'In 2026, the funding available for Startup Grant 2 has been reduced by 60%.' Costs incurred before the application is submitted are not funded. The startup may be owned by a holding company older than five years; subsidiaries 50 percent or more owned by an established business are not eligible; a shareholder owning 25-50 percent must run a separate business; outstanding payment defaults disqualify. The page does not require Startup grant 1 to have been completed first. Extension of six months, at most 18 in total. Site returns 403 to curl; read via WebFetch on 2026-10-15. The portal start.innovasjonnorge.no returned 404 on 2026-10-15; start from the apply button on the service page."
+    },
+    {
+      "id": "business-finland-sprint",
+      "name": "Business Finland Sprint Grant",
+      "country": "FI",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Finnish limited liability companies with a Finnish Business ID, fewer than 50 employees and turnover or balance sheet at most 10 MEUR, a committed team of at least two people working in Finland and at least 50 000 EUR of equity financing on the balance sheet, developing innovative solutions for international markets.",
+      "what": "De minimis grant covering 75 percent of a project with estimated cost 100 000-133 334 EUR, i.e. 75 000-100 000 EUR, for a project where at least two thirds of the cost is research and development.",
+      "amount": {
+        "text": "75 000 to 100 000 EUR (75 percent of a 100 000-133 334 EUR project)",
+        "min": 75000,
+        "max": 100000,
+        "currency": "EUR"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "FI",
+          "label": "Finnish company",
+          "question": "Is the company registered in Finland?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "limited company",
+          "question": "Is it a limited company?"
+        },
+        {
+          "field": "employees",
+          "op": "lt",
+          "value": 50,
+          "label": "fewer than 50 employees",
+          "question": "How many employees?"
+        },
+        {
+          "any": [
+            {
+              "field": "revenue_meur",
+              "op": "lte",
+              "value": 10,
+              "label": "turnover at most 10 MEUR",
+              "question": "Annual turnover last fiscal year, in MEUR?"
+            },
+            {
+              "field": "balance_meur",
+              "op": "lte",
+              "value": 10,
+              "label": "balance sheet at most 10 MEUR",
+              "question": "Balance sheet total, in MEUR?"
+            }
+          ],
+          "label": "turnover or balance sheet at most 10 MEUR"
+        }
+      ],
+      "apply_url": "https://www.businessfinland.fi/en/services/funding/funding-e-service/",
+      "status_url": "https://www.businessfinland.fi/en/services/funding/calls/2026/ongoing-sprint-grant-funding/",
+      "next_step": "Register in My Business Finland, book a meeting with a Business Finland expert, and only after that meeting submit the Sprint application in the Funding e-service. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#business-finland-sprint",
+      "last_verified": "2026-10-15",
+      "notes": "Open on 2026-10-15: status 'Ongoing', 'Continuous call from September 1, 2026', page updated 21.8.2026, decisions made continuously. Aimed at companies under five years that have not previously received Business Finland funding; companies five years or older must show 'a significant change in direction in their business based on innovation', so age is not encoded as a hard rule. Operational, sales and marketing activities and production investments are excluded. The balance-sheet alternative to the 10 MEUR turnover limit and the 50 000 EUR equity requirement are not encoded (no matching schema fields). Tempo no longer appears on the Startup funding page; Sprint, R&D funding and the Deep Tech Accelerator are listed instead."
+    },
+    {
+      "id": "business-finland-rd-funding",
+      "name": "Business Finland Research, development and piloting funding",
+      "country": "FI",
+      "kind": "loan",
+      "need": [
+        "money"
+      ],
+      "who": "Companies registered in Finland regardless of legal form (not natural persons, sole traders or companies in difficulty) with a permanent place of business, a Finnish business ID, a committed team of at least two people working in Finland and the means to cover costs before payment.",
+      "what": "Loans for development and pilot projects at 50 percent of eligible costs, up to 70 percent for SMEs and mid-caps where justified; grants for research projects of up to 50 percent for SMEs. Listed on the Startup funding page as one of three products for companies under five years.",
+      "amount": {
+        "text": "Amount not published on the page; loan at 50 percent of eligible costs, up to 70 percent for SMEs where justified"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "FI",
+          "label": "Finnish company",
+          "question": "Is the company registered in Finland?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "limited company",
+          "question": "Is it a limited company?"
+        }
+      ],
+      "apply_url": "https://www.businessfinland.fi/en/services/funding/funding-e-service/",
+      "status_url": "https://www.businessfinland.fi/en/services/funding/calls/2026/research-development-and-piloting/",
+      "next_step": "Review the call page, then have a person who may represent the company alone (per the Trade Register) or who holds the Suomi.fi authorisation 'Applying for corporate financing' create and submit the application in the Funding e-service. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#business-finland-rd-funding",
+      "last_verified": "2026-10-15",
+      "notes": "Open on 2026-10-15: status 'Ongoing', 'Applications are processed continuously', updated 22.9.2026. 'The amount of funding to be granted is set in the Government's annual budget.' Kind is set to loan because development and pilot projects, the typical startup case, are funded with loans; research projects get grants (SMEs up to 50 percent, mid-cap and large companies up to 40 percent). Business Finland funding is 'competitive and discretionary'."
+    },
+    {
+      "id": "business-finland-deep-tech-accelerator",
+      "name": "Business Finland Deep Tech Accelerator (DTA)",
+      "country": "FI",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Finnish limited liability companies less than five years old at the first-phase decision, with fewer than 50 employees and net sales or balance sheet at most 10 MEUR, at least one full financial year, at least 10 percent of total costs spent on R&D in one of the previous three years, and self-financing for the whole phase.",
+      "what": "Three phases of EUR 400 000 each (the first two grants, the third a loan), Business Finland covering 75 percent of approved costs; each phase 12-18 months; at most six deep-tech startups selected per call.",
+      "amount": {
+        "text": "EUR 400 000 per phase (three phases; the 2026 call funds phase 1 against estimated costs of EUR 533 334), 75 percent of approved costs",
+        "max": 400000,
+        "currency": "EUR"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "FI",
+          "label": "Finnish company",
+          "question": "Is the company registered in Finland?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "limited company",
+          "question": "Is it a limited company?"
+        },
+        {
+          "field": "age_years",
+          "op": "lt",
+          "value": 5,
+          "label": "less than five years old",
+          "question": "How old is the company?"
+        },
+        {
+          "field": "employees",
+          "op": "lt",
+          "value": 50,
+          "label": "fewer than 50 employees",
+          "question": "How many employees?"
+        },
+        {
+          "any": [
+            {
+              "field": "revenue_meur",
+              "op": "lte",
+              "value": 10,
+              "label": "turnover at most 10 MEUR",
+              "question": "Annual turnover last fiscal year, in MEUR?"
+            },
+            {
+              "field": "balance_meur",
+              "op": "lte",
+              "value": 10,
+              "label": "balance sheet at most 10 MEUR",
+              "question": "Balance sheet total, in MEUR?"
+            }
+          ],
+          "label": "turnover or balance sheet at most 10 MEUR"
+        }
+      ],
+      "apply_url": "https://www.businessfinland.fi/en/services/funding/funding-e-service/",
+      "status_url": "https://www.businessfinland.fi/en/services/funding/calls/2026/dta-funding-call-2026/",
+      "next_step": "Wait for the next DTA call to be announced on the DTA page, secure the company's total financing for phase 1, then submit the application on the Young Innovative Company template with appendices in the Funding e-service well before the announced deadline. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#business-finland-deep-tech-accelerator",
+      "last_verified": "2026-10-15",
+      "notes": "Closed on 2026-10-15: the 2026 call page shows status 'Ended' and application period '11.5.-16.8.2026' ('by 16 August 2026 at 11:59 PM'); the money for phase 1 had to be in the account by 2 September 2026. The DTA page says 'In 2026, one call for applications will be organised and upcoming calls will be announced on this page'; no next date is published. The company must belong to the prepayment and employer registers; costs are accepted until the company turns eight. Phase 3 loan has a 30 percent advance. The balance-sheet alternative to the 10 MEUR net-sales limit is not encoded."
+    },
+    {
+      "id": "innovationsfonden-innofounder",
+      "name": "Innovationsfonden InnoFounder",
+      "country": "DK",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Founders, individually or in teams of up to three, who have completed at least 120 ECTS of higher education, own at least 12.5 percent of the company, work at least 37 hours a week in it during the programme and have at most 10 hours a week of other study or paid work; the company needs a Danish CVR number before the programme begins.",
+      "what": "12-month full-time programme with a monthly grant of DKK 27 500 per founder, a development grant of up to DKK 100 000, and guidance from mentors and other entrepreneurs.",
+      "amount": {
+        "text": "DKK 27 500 per founder per month for 12 months, plus up to DKK 100 000 development grant",
+        "currency": "DKK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "DK",
+          "label": "Danish company",
+          "question": "Is the company registered in Denmark?"
+        }
+      ],
+      "apply_url": "https://www.e-grant.dk/",
+      "status_url": "https://danmarksinnovationsfond.dk/en/programmes/innofounder/",
+      "next_step": "Watch the status page for the next call; when it opens, write the application in Danish or English in the e-grant system (www.e-grant.dk) and submit before the deadline, since no changes are possible afterwards. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#innovationsfonden-innofounder",
+      "last_verified": "2026-10-15",
+      "notes": "No call open on 2026-10-15: 'There are currently no calls available'; no next call date on the page. 'You do not need to have a CVR number when applying' but the company must be established with a Danish CVR number before the programme begins, so no legal_form rule is encoded. The education, ownership and working-time requirements have no schema fields and are hard requirements to check manually. The old URL innovationsfonden.dk/en/p/innofounder redirects (301) to danmarksinnovationsfond.dk; curl returns HTTP 454, read via WebFetch."
+    },
+    {
+      "id": "rannis-frae",
+      "name": "Rannís Technology Development Fund - Fræ seed grant",
+      "country": "IS",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Companies under five years old, and individuals, in Iceland with a project in the planning stage (Fræ) or a cooperative development project (Thróunarfræ).",
+      "what": "Seed grant of up to ISK 2 million with no matching funds required; a report on the project's results is due within 12 months of project start.",
+      "amount": {
+        "text": "Up to ISK 2 000 000",
+        "max": 2000000,
+        "currency": "ISK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "IS",
+          "label": "Icelandic applicant",
+          "question": "Is the company or applicant based in Iceland?"
+        },
+        {
+          "any": [
+            {
+              "field": "legal_form",
+              "op": "eq",
+              "value": "none",
+              "label": "individual applicant",
+              "question": "Are you applying as an individual without a company?"
+            },
+            {
+              "field": "age_years",
+              "op": "lt",
+              "value": 5,
+              "label": "company under five years",
+              "question": "How old is the company?"
+            }
+          ],
+          "label": "individual, or company under five years old"
+        }
+      ],
+      "apply_url": "https://island.is/en/grants-plaza/grant/1-42",
+      "status_url": "https://island.is/en/grants-plaza/grant/1-42",
+      "next_step": "Open the grant page on Ísland.is, click Apply to log in to the Rannís online application portal, fill in the Fræ application and submit; applications are accepted at any time. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#rannis-frae",
+      "last_verified": "2026-10-15",
+      "notes": "Open on 2026-10-15: 'Open for applications / Always open'; 'Applications may be made at any time. Submitted applications are evaluated and grant awards are announced at least twice a year.' Rules and instructions for Fræ and Thróunarfræ are in Icelandic. Contact taeknithrounarsjodur@rannis.is. The fund's other categories (Sprout, Growth, Market grants) had the window 04.08.2026-15.09.2026 and were closed on the fund page; Patent grants are also always open. www.rannis.is redirects (301) to island.is/redirects/www.rannis.is/."
+    },
+    {
       "id": "eic-accelerator",
       "name": "EIC Accelerator",
       "country": "EU",
@@ -123,539 +822,6 @@
       "reference": "references/eu-grants.md#eurostars",
       "last_verified": "2026-10-15",
       "notes": "No Eurostars call is open on 2026-10-15: the Eureka open-calls listing shows no Eurostars call, and Call 12 opens 17 December 2026 with deadline 4 March 2027 14:00 CET; calls are usually organised twice a year. Seven international eligibility criteria: SME lead from a Eurostars country; at least two independent entities; at least two Eurostars countries with at least one organisation from an EU or Horizon Europe associated country; SMEs from Eurostars countries carry 50% or more of the budget excluding subcontracting; no single participant or country above 70% of the budget; duration 36 months or less; exclusive focus on civil applications. Funding is decentralised: Eureka pays nothing, each partner's national funding body pays under national rules and may cap amounts. National details for Call 12 were marked as being confirmed and subject to change before the call opens. Sweden: Vinnova funds SMEs up to 50% of costs, max 5 MSEK per project; Swedish participants submit a national application to Vinnova after a positive evaluation; Vinnova checks the latest registered annual report and credit reports. Finland: Business Finland requires a parallel national application with attachments when the Eurostars application is submitted. Denmark: IFD max 300 000 EUR per participant (500 000 EUR for several Danish participants, min 50 000 EUR); upload the application to e-grant within 14 days after the deadline. Norway: the funder is the Research Council of Norway, not Innovasjon Norge. Iceland: Rannís, max 45 MISK per project. Greece, Israel, Italy and Brussels have no budget for this call."
-    },
-    {
-      "id": "claude-startups",
-      "name": "Claude Startups (Anthropic)",
-      "country": "global",
-      "kind": "ai_api_credit",
-      "need": [
-        "credits"
-      ],
-      "who": "Early-stage founders building on Claude. Members get offers, tools and events; founders backed by a VC in Anthropic's partner network can get additional Claude API credits through that VC.",
-      "what": "Membership program: discounts and credits worth up to 45 000 USD from companies building with Claude (redeemed by code in the Claude Console), biweekly Applied AI sessions, events, hackathons and meetups. Founders backed by a partner-network VC may receive up to 100 000 USD in additional Claude API credits, claimed through the VC.",
-      "amount": {
-        "text": "Partner offers and credits worth up to 45 000 USD; up to 100 000 USD in additional Claude API credits for founders backed by a partner-network VC",
-        "max": 100000,
-        "currency": "USD"
-      },
-      "eligibility": [
-        {
-          "field": "stack",
-          "op": "contains",
-          "value": "anthropic",
-          "label": "builds on Anthropic",
-          "question": "Do you build on Anthropic's Claude API?"
-        }
-      ],
-      "apply_url": "https://claude.com/programs/startups",
-      "status_url": "https://claude.com/programs/startups",
-      "next_step": "Applications are closed as of 2026-10-15. Subscribe to the Claude Startup newsletter on claude.com/programs/startups to hear when the next cohort opens; when it does, the founder fills in the application there and clicks submit. If the company is backed by a VC in Anthropic's partner network, the founder asks that VC about the additional API credit route.",
-      "reference": "references/ai-api-credits.md#claude-startups",
-      "last_verified": "2026-10-15",
-      "notes": "CLOSED on 2026-10-15: the page says the current cohort is full and no new applications are accepted; applications still in review were not advanced. Credits apply only to the first-party Claude API through the Claude Console and cannot be used on AWS, Google Cloud, Azure or other third-party platforms. The 100 000 USD figure is only for founders backed by a VC in Anthropic's partner network and is claimed through the VC, not on this page. Member sign-in: platform.claude.com/claude-for-startups. No tiers, funding caps or work-email requirement are published."
-    },
-    {
-      "id": "together-ai-startup-accelerator",
-      "name": "Together AI Startup Accelerator",
-      "country": "global",
-      "kind": "ai_api_credit",
-      "need": [
-        "credits"
-      ],
-      "who": "Startups selected into Together AI's accelerator; the tier follows how much the company has raised (under 5 MUSD, 5 to 10 MUSD, over 10 MUSD).",
-      "what": "Free Together AI platform credits for serverless inference, dedicated endpoints, fine-tuning and instant clusters, plus free forward-deployed engineering hours, best-practice content, joint go-to-market, founder community and access to Together's VC network.",
-      "amount": {
-        "text": "Build tier up to 15 000 USD (under 5 MUSD raised), Scale tier up to 30 000 USD (5 to 10 MUSD raised), Grow tier up to 50 000 USD (over 10 MUSD raised) in platform credits",
-        "max": 50000,
-        "currency": "USD"
-      },
-      "eligibility": [
-        {
-          "field": "stack",
-          "op": "contains",
-          "value": "together",
-          "label": "builds on Together AI",
-          "question": "Do you build on Together AI?"
-        }
-      ],
-      "apply_url": "https://www.together.ai/startup-accelerator",
-      "status_url": "https://www.together.ai/startup-accelerator",
-      "next_step": "Open together.ai/startup-accelerator, scroll to \"Submit your application\" and fill in the form with company details, funding raised and the workloads you run on Together; the founder clicks submit.",
-      "reference": "references/ai-api-credits.md#together-ai-startup-accelerator",
-      "last_verified": "2026-10-15",
-      "notes": "Application form was live on 2026-10-15. Selection-based program, not automatic. Tiers: Build (under 5 MUSD raised) up to 15K USD credits and 3 hours of forward-deployed engineering; Scale (5 to 10 MUSD) up to 30K USD and 6 hours; Grow (over 10 MUSD) up to 50K USD and 10 hours. Credits do not apply to Reserved GPU Clusters. Testimonials refer to an inaugural cohort, so intake may be cohort-based. No partner-VC, work-email or funding cap requirement is stated."
-    },
-    {
-      "id": "modal-for-startups",
-      "name": "Modal for Startups",
-      "country": "global",
-      "kind": "ai_api_credit",
-      "need": [
-        "credits"
-      ],
-      "who": "VC-funded startups new to Modal. Seed to Series A: any VC funding from Modal's VC partner network, or over 1 MUSD VC funding from any fund. Scaling and Series B+: over 30 MUSD raised or post-Series B with a partner-network VC (custom package).",
-      "what": "One-time grant of free Modal compute (GPU) credits, direct access to Modal's engineering team for technical support, GTM amplification on launches and raises, and a founder community.",
-      "amount": {
-        "text": "Amount not published on the page"
-      },
-      "eligibility": [
-        {
-          "field": "stack",
-          "op": "contains",
-          "value": "modal",
-          "label": "builds on Modal",
-          "question": "Do you build on Modal?"
-        },
-        {
-          "any": [
-            {
-              "field": "vc_backed",
-              "op": "eq",
-              "value": true,
-              "label": "backed by a partner investor",
-              "question": "Is the company backed by one of the program's partner investors?"
-            },
-            {
-              "field": "funding_raised_usd",
-              "op": "gt",
-              "value": 1000000,
-              "label": "raised over 1 MUSD in VC funding",
-              "question": "How much VC funding has the company raised, in USD?"
-            }
-          ],
-          "label": "VC funding from a Modal partner fund, or over 1 MUSD VC funding from any fund"
-        }
-      ],
-      "apply_url": "https://modal.com/startups#apply",
-      "status_url": "https://modal.com/startups",
-      "next_step": "Open modal.com/startups, click \"Apply Now\" and fill in the startup credits form (an embedded Fillout form) with company, funding and investor details; the founder clicks submit.",
-      "reference": "references/ai-api-credits.md#modal-for-startups",
-      "last_verified": "2026-10-15",
-      "notes": "Application form was live on 2026-10-15. The page only says \"thousands of free GPU credits\"; the credit size per tier is not published. Only customers new to Modal are eligible; credits are a one-time grant and you cannot reapply once you have received credits in a tier. The FAQ asks why a payment method is required, so expect to add a card. FAQ answers (credit duration, tier assignment, full VC partner list) are rendered client-side and could not be read in this fetch; check them in a browser. Partner logos shown: Y Combinator, Andreessen Horowitz, Sequoia, Khosla Ventures, Neo, HF0, Pear VC, Lux Capital. A separate Modal for Academics program exists. The 30 USD/month free compute banner is a general offer, not part of this program."
-    },
-    {
-      "id": "lambda-nvidia-inception",
-      "name": "Lambda Cloud credits for NVIDIA Inception members",
-      "country": "global",
-      "kind": "ai_api_credit",
-      "need": [
-        "credits"
-      ],
-      "who": "Companies that are members of NVIDIA Inception, located in and paying with a credit card from one of the listed countries (including the EU except Lithuania, Iceland, Norway, Switzerland and the United Kingdom).",
-      "what": "1 000 USD in Lambda Cloud credits for on-demand GPU instances (NVIDIA B200, H100, A100 and GH200), with no ingress or egress fees; credits also cover persistent storage at 0.20 USD per GB per month.",
-      "amount": {
-        "text": "1 000 USD in Lambda Cloud credits",
-        "max": 1000,
-        "currency": "USD"
-      },
-      "eligibility": [
-        {
-          "field": "stack",
-          "op": "contains",
-          "value": "lambda",
-          "label": "builds on Lambda",
-          "question": "Do you build on Lambda Cloud?"
-        }
-      ],
-      "apply_url": "https://lambda.ai/nvidia-inception",
-      "status_url": "https://lambda.ai/nvidia-inception",
-      "next_step": "Join NVIDIA Inception first if the company is not already a member, then fill in the form on lambda.ai/nvidia-inception with company and Inception membership details; the founder clicks submit.",
-      "reference": "references/ai-api-credits.md#lambda-nvidia-inception",
-      "last_verified": "2026-10-15",
-      "notes": "Offer was live on 2026-10-15. Hard requirement that the schema cannot express as a rule: the company must be a member of NVIDIA Inception. One grant per company. A valid credit card is required to prevent fraud and calculate tax. Credits are valid for 12 months from the date they are applied. Applications are reviewed and approved by Lambda; submitting does not guarantee credits. Eligible locations listed on the page: Australia, Canada, Chile, European Union (except Lithuania), Iceland, Israel, Japan, New Zealand, Norway, Puerto Rico, Singapore, South Africa, South Korea, Switzerland, Taiwan, Turkey, UAE, UK, US. No general Lambda startup credit program was found on lambda.ai on 2026-10-15; third-party sites quoting 7 500 USD do not match the page, which says 1 000 USD."
-    },
-    {
-      "id": "runpod-startup-program",
-      "name": "Runpod Startup Program",
-      "country": "global",
-      "kind": "ai_api_credit",
-      "need": [
-        "credits"
-      ],
-      "who": "AI startups new to Runpod with real GPU workloads. Starter tier: pre-Series A startups with working products and near-term GPU needs. Growth tier: venture-backed Seed to Series B+ startups with production workloads that commit 50 000 USD upfront.",
-      "what": "GPU credits usable across Pods, Serverless, Clusters, Public Endpoints and Storage. Starter tier: 1 000 USD in free credits with self-serve onboarding. Growth tier: 25 000 USD bonus credits on a 50 000 USD upfront 12-month commitment, 1:1 onboarding call, SLA options and an enterprise path.",
-      "amount": {
-        "text": "Starter tier 1 000 USD in free credits; Growth tier 25 000 USD in bonus credits on a 50 000 USD upfront commitment (75 000 USD total to start)",
-        "max": 25000,
-        "currency": "USD"
-      },
-      "eligibility": [
-        {
-          "field": "stack",
-          "op": "contains",
-          "value": "runpod",
-          "label": "builds on Runpod",
-          "question": "Do you build on Runpod?"
-        }
-      ],
-      "apply_url": "https://www.runpod.io/startup-program",
-      "status_url": "https://www.runpod.io/startup-program",
-      "next_step": "Open runpod.io/startup-program, click \"Apply now\" and fill in the form with funding status, workload type and timing; the founder clicks submit.",
-      "reference": "references/ai-api-credits.md#runpod-startup-program",
-      "last_verified": "2026-10-15",
-      "notes": "Application form was live on 2026-10-15. Selective program; venture backing is strongly preferred but the FAQ says every application is reviewed holistically, so it is not encoded as a hard rule. Primarily for new customers; existing customers below the Growth threshold are judged case by case. The Growth tier is a credit match: you deposit 50 000 USD under a 12-month agreement and Runpod adds 25 000 USD once, with no reload. Best fit stated on the page: Growth for Seed to Series B+ startups spending or ready to spend 5 000 to 25 000+ USD per month on GPUs; Starter for pre-Series A startups with working products. Separate Creator Program and academic research offer exist."
-    },
-    {
-      "id": "aws-activate",
-      "name": "AWS Activate Credits",
-      "country": "global",
-      "kind": "cloud_credit",
-      "need": [
-        "credits"
-      ],
-      "who": "Startups from self-funded to pre-Series B, founded in the last 10 years, with an AWS account on a paid tier plan and either new to Activate Credits or asking for more than they received before.",
-      "what": "Promotional AWS credits in two self-applied tiers: Activate Founders for bootstrapped or self-funded startups, and Activate Portfolio for startups that hold an Organization ID from an Activate Provider (accelerator, angel investor or VC firm). An invite-only AI tier sits above Portfolio.",
-      "amount": {
-        "text": "Activate Founders (self-funded) up to 5 000 USD, starting at 1 000 USD; Activate Portfolio (pre-Series B, with an Activate Provider Org ID) up to 200 000 USD; AWS Credits for AI Startups 200 000 USD+ by invitation only",
-        "max": 200000,
-        "currency": "USD"
-      },
-      "eligibility": [
-        {
-          "field": "stack",
-          "op": "contains",
-          "value": "aws",
-          "label": "uses AWS",
-          "question": "Do you run on AWS?"
-        },
-        {
-          "field": "age_years",
-          "op": "lte",
-          "value": 10,
-          "label": "founded in the last 10 years",
-          "question": "How many years ago was the company founded?"
-        },
-        {
-          "field": "stage",
-          "op": "in",
-          "value": [
-            "idea",
-            "pre_seed",
-            "seed",
-            "series_a"
-          ],
-          "label": "pre-Series B",
-          "question": "What is the company's latest funding stage?"
-        }
-      ],
-      "apply_url": "https://aws.amazon.com/startups/join?destination=/credits/apply",
-      "status_url": "https://aws.amazon.com/startups/credits/",
-      "next_step": "Create an AWS Builder ID with a professional email at https://aws.amazon.com/startups/join?destination=/credits/apply, choose Activate Founders (self-funded) or Activate Portfolio (enter the Org ID from your accelerator, angel or VC), describe the product, funding stage and company, link an AWS account, and the founder clicks submit. AWS answers within 5-10 business days.",
-      "reference": "references/cloud-credits.md#aws-activate",
-      "last_verified": "2026-10-15",
-      "notes": "Three tiers on 2026-10-15: Activate Founders (self-funded) starts at 1 000 USD and select participants may qualify for up to 5 000 USD; Activate Portfolio (pre-Series B) up to 200 000 USD but only with an Organization ID from an Activate Provider, so the Portfolio tier is partner-locked (thousands of VC firms and accelerators are providers, e.g. Andreessen Horowitz, Sequoia, Y Combinator; list at https://aws.amazon.com/startups/providers); AWS Credits for AI Startups 200 000 USD+ is invite only after Portfolio, via the account manager. General eligibility as written: pre-Series B, founded in the last 10 years, AWS Account on Paid Tier Plan, and either new to Activate Credits or requesting more credits than previously received. Credits are in USD and subject to the AWS Promotional Credit Terms (https://aws.amazon.com/activate/terms/); the page does not state an expiry period. Kiro Startup Credits exist for eligible startups without current Activate Credits. Applications were open on 2026-10-15 (Apply now buttons live)."
-    },
-    {
-      "id": "google-cloud-startup",
-      "name": "Google for Startups Cloud Program",
-      "country": "global",
-      "kind": "cloud_credit",
-      "need": [
-        "credits"
-      ],
-      "who": "Digital-native technology startups from pre-funded to Series A, founded within the last 5 years (Start tier: last 24 months), applying with a business email on the company's own website domain. The Scale tier needs recent equity funding from an institutional investor.",
-      "what": "Google Cloud credits in two tiers: Start for pre-funded startups with a working MVP, and Scale for VC-funded startups, with an AI-first variant of Scale that adds credits for startups building their product on Gemini. Credits cover Google Cloud services including Gemini models, not third-party services or Marketplace.",
-      "amount": {
-        "text": "Start tier 2 000 USD; Scale tier up to 200 000 USD over 2 years (year 1: 100% up to 100 000 USD; year 2: 20% of spend up to a further 100 000 USD); AI-first Scale up to 350 000 USD (year 1: 100% up to 250 000 USD; year 2 as above)",
-        "max": 350000,
-        "currency": "USD"
-      },
-      "eligibility": [
-        {
-          "field": "stack",
-          "op": "contains",
-          "value": "gcp",
-          "label": "uses Google Cloud",
-          "question": "Do you run on Google Cloud?"
-        },
-        {
-          "field": "stage",
-          "op": "in",
-          "value": [
-            "idea",
-            "pre_seed",
-            "seed",
-            "series_a"
-          ],
-          "label": "pre-funded to Series A",
-          "question": "What is the company's latest funding stage?"
-        },
-        {
-          "field": "age_years",
-          "op": "lte",
-          "value": 5,
-          "label": "founded within the last 5 years (Start tier: 24 months)",
-          "question": "How many years ago was the company founded?"
-        },
-        {
-          "field": "has_website",
-          "op": "eq",
-          "value": true,
-          "label": "public website",
-          "question": "Does the company have a public website on its own domain?"
-        },
-        {
-          "field": "has_work_email",
-          "op": "eq",
-          "value": true,
-          "label": "business email matching the website domain",
-          "question": "Do you have a business email on the same domain as the website?"
-        }
-      ],
-      "apply_url": "https://cloud.google.com/startup/apply",
-      "status_url": "https://cloud.google.com/startup",
-      "next_step": "Create a Google Cloud account and copy its 18-character billing account ID, then open https://cloud.google.com/startup/apply, sign in with Google, apply with the business email that matches your website domain, let Google match you to the Start or Scale tier, and the founder clicks submit. Most answers come within a few business days; manual review can take 10 days or more.",
-      "reference": "references/cloud-credits.md#google-cloud-startup",
-      "last_verified": "2026-10-15",
-      "notes": "Start tier (https://cloud.google.com/startup/pre-funded): digital-native startups with a working MVP, a clear business model and plans to seek venture funding soon; founded within the last 24 months; no Google Cloud credits beyond the free trial; 2 000 USD plus 12 months Google Workspace Business Plus and 200 USD Google Skills credits. Scale tier (https://cloud.google.com/startup/early-stage): recent startup equity funding from pre-seed to Series A by an institutional investor or common Web3 funding sources (SAFEs count; private equity, government innovation grants, prize funding, crowdfunding, angel and friends-and-family money do not qualify for Scale but may for Start); founded within the last 5 years; not more than 5 000 USD in prior Google Cloud credits; funding verification if in stealth. Scale adds 12 000 USD Enhanced Support credits for one year, 12 months Workspace Business Plus, 600 USD per month Google Maps credit for one year and 500 USD Skills credits. AI-first variant (https://cloud.google.com/startup/ai): uses or plans to use Gemini as the foundation of the primary product; pre-seed/seed rounds within the last five years and Series A within the last 12 months. Series B+ startups get custom solutions, not program credits. FAQ exclusions: companies that have IPO'd or been acquired, educational institutions, government entities, nonprofits, personal blogs or content, dev shops. The apply page requires a Google sign-in. Applications open on 2026-10-15."
-    },
-    {
-      "id": "microsoft-for-startups",
-      "name": "Microsoft for Startups",
-      "country": "global",
-      "kind": "cloud_credit",
-      "need": [
-        "credits"
-      ],
-      "who": "Privately held, for-profit startups that own a software product, are headquartered where Azure is available, have not raised Series C or later and have received under 350 000 USD in lifetime free Azure credits. Not for educational institutions, government, consultancies, agencies or crypto mining.",
-      "what": "Azure Startup credits that unlock progressively: a small self-serve grant for any startup that applies, and a larger investor offer for startups with a referral code from a Microsoft for Startups Investor Network partner, growing with verified progress and Azure usage. Credits are valid up to two years once activated.",
-      "amount": {
-        "text": "Without an investor code: 1 000 USD for 90 days, then a further 4 000 USD for 180 days after business verification; investor offer (referral code): most startups begin with 100 000 USD; up to 150 000 USD unlocked over time, Investor Network-backed startups may unlock more",
-        "max": 150000,
-        "currency": "USD"
-      },
-      "eligibility": [
-        {
-          "field": "stack",
-          "op": "contains",
-          "value": "azure",
-          "label": "uses Azure",
-          "question": "Do you run on Azure?"
-        },
-        {
-          "field": "legal_form",
-          "op": "eq",
-          "value": "company",
-          "label": "privately held, for-profit company",
-          "question": "Is the applicant a privately held, for-profit company?"
-        }
-      ],
-      "apply_url": "https://www.microsoft.com/en-us/startups",
-      "status_url": "https://learn.microsoft.com/en-us/startups/microsoft-for-startups/overview",
-      "next_step": "Open https://www.microsoft.com/en-us/startups, click Get started now and sign in with a Microsoft account; enter your investor's 10-character referral code if you have one (or continue without a code for the 1 000 USD starter credits), verify email and phone, fill in the registered company name, industry, website and address, set up the Azure account with a payment card, and the founder clicks submit. Decisions arrive by email within about three business days.",
-      "reference": "references/cloud-credits.md#microsoft-for-startups",
-      "last_verified": "2026-10-15",
-      "notes": "Program restructured: startups that joined on or after 2026-05-29 apply and activate through the Azure portal (the Get started button on microsoft.com/en-us/startups leads to portal.azure.com); earlier members use portal.startups.microsoft.com. Eligibility as written on the Learn overview (updated 2026-08-05): software product owned by the company; privately held and for-profit; HQ in a country where Azure is available; not more than 350 000 USD in lifetime free Azure credits; not Series C or later; not an educational institution, government organization, consultancy or agency; no cryptocurrency mining. The top tier is partner-locked: the investor offer requires a referral code from an Investor Network partner (investor, accelerator, incubator, angel network, university); Microsoft does not publish the partner list, ask your VC or accelerator. Credits must be activated within 90 days of accepting the program agreement and are valid up to two years, no extensions; a credit card is required; credits cannot be transferred between Microsoft accounts. The investor offer also includes Azure Standard Support, technical experts, go-to-market support and discounts such as GitHub Enterprise, LinkedIn Premium Business and Microsoft 365 Business Premium. Applications open on 2026-10-15."
-    },
-    {
-      "id": "cloudflare-for-startups",
-      "name": "Cloudflare for Startups",
-      "country": "global",
-      "kind": "cloud_credit",
-      "need": [
-        "credits"
-      ],
-      "who": "For-profit technology startups incorporated within the last 10 years, funded up to Series B (self-funded accepted at the lowest tier), with a live public website, a public presence on LinkedIn, X or GitHub and a business email on their own domain; first-time applicants only.",
-      "what": "Cloudflare credits for one year across the developer platform (Workers, R2, D1, KV, Queues, Vectorize, Pages, Images, Stream, Workers AI and more) in three tiers set by funding raised; core security and networking features are included at no cost on every tier.",
-      "amount": {
-        "text": "Tier 3 10 000 USD (bootstrapped or self-funded, under 1 MUSD raised); Tier 2 100 000 USD (under 5 MUSD raised, funded by an affiliated partner); Tier 1 350 000 USD (5 MUSD+ raised, funded by an affiliated partner)",
-        "max": 350000,
-        "currency": "USD"
-      },
-      "eligibility": [
-        {
-          "field": "stack",
-          "op": "contains",
-          "value": "cloudflare",
-          "label": "uses Cloudflare",
-          "question": "Do you run on Cloudflare?"
-        },
-        {
-          "field": "age_years",
-          "op": "lte",
-          "value": 10,
-          "label": "incorporated within the last 10 years",
-          "question": "How many years ago was the company incorporated?"
-        },
-        {
-          "field": "legal_form",
-          "op": "eq",
-          "value": "company",
-          "label": "for-profit business",
-          "question": "Is the applicant a for-profit company?"
-        },
-        {
-          "field": "has_website",
-          "op": "eq",
-          "value": true,
-          "label": "live, publicly accessible website",
-          "question": "Does the company have a live public website?"
-        },
-        {
-          "field": "has_work_email",
-          "op": "eq",
-          "value": true,
-          "label": "business email matching the domain",
-          "question": "Do you have a business email on the company's own domain?"
-        }
-      ],
-      "apply_url": "https://www.cloudflare.com/startups/",
-      "status_url": "https://www.cloudflare.com/startups/",
-      "next_step": "Fill in the application form at https://www.cloudflare.com/lp/startups with your business email, website, social profile and funding details (name the affiliated partner for Tier 2 or Tier 1), and the founder clicks submit. Review typically takes up to 48 hours and approval comes by email.",
-      "reference": "references/cloud-credits.md#cloudflare-for-startups",
-      "last_verified": "2026-10-15",
-      "notes": "Tier 2 and Tier 1 require funding from an affiliated partner (partner list on the program page), so the top tiers are partner-locked; self-funded startups go in at Tier 3. The page lists all of these as required: founded within the last 10 years; funded up to Series B; funded within the last 12 months; actively developing a technology product; live public website; active on LinkedIn, X or GitHub; not previously approved into the program; for-profit business with a business email matching the domain. Credits are valid for one year or until consumed, whichever comes first, and extensions are not approved. Caps: R2 up to 10 000 USD; Workers AI up to 2 500 USD (Tier 3), 10 000 USD (Tier 2) or 50 000 USD (Tier 1). Not covered: AI Gateway (temporarily), registrar services, enterprise feature add-ons, Magic Transit, Enterprise Spectrum, Dedicated IPs and the China Network. Not eligible: educational institutions, personal blogs, consultancies, service agencies, MSPs, resellers and existing enterprise customers. Tiers were recently raised (Tier 3 from 5 000 to 10 000 USD, Tier 1 from 250 000 to 350 000 USD); existing members near their cap can request an upgrade evaluation. The apply page returns HTTP 403 to automated fetches; a human in a browser reaches it. Questions to startups@cloudflare.com. Applications open on 2026-10-15. The dedicated application page /lp/startups returned 404 on 2026-10-15; apply from the program page."
-    },
-    {
-      "id": "vercel-for-startups",
-      "name": "Vercel for Startups",
-      "country": "global",
-      "kind": "cloud_credit",
-      "need": [
-        "credits"
-      ],
-      "who": "Startups backed by an approved Vercel Startup Partner (an accelerator or VC on Vercel's list), that have raised a Series A or less, apply within 12 months of their latest round, have a company website and matching email, and have not received Vercel for Startups credits before.",
-      "what": "An enterprise-grade contract with a Flexible Commitment Amount usable across Vercel products (seats, data transfer, compute, AI Gateway, v0 and more), Enterprise-tier access for a year and startup-focused support.",
-      "amount": {
-        "text": "Up to 30 000 USD Flexible Commitment Amount for one year; the exact amount depends on the arrangement between Vercel and your Startup Partner",
-        "max": 30000,
-        "currency": "USD"
-      },
-      "eligibility": [
-        {
-          "field": "stack",
-          "op": "contains",
-          "value": "vercel",
-          "label": "uses Vercel",
-          "question": "Do you deploy on Vercel?"
-        },
-        {
-          "field": "vc_backed",
-          "op": "eq",
-          "value": true,
-          "label": "backed by an approved Vercel Startup Partner",
-          "question": "Is the company in an accelerator or backed by a VC that is on Vercel's Startup Partner list?"
-        },
-        {
-          "field": "stage",
-          "op": "in",
-          "value": [
-            "idea",
-            "pre_seed",
-            "seed",
-            "series_a"
-          ],
-          "label": "Series A or less",
-          "question": "What is the company's latest funding stage?"
-        },
-        {
-          "field": "has_website",
-          "op": "eq",
-          "value": true,
-          "label": "company website",
-          "question": "Does the company have a website?"
-        },
-        {
-          "field": "has_work_email",
-          "op": "eq",
-          "value": true,
-          "label": "email matching the company website",
-          "question": "Do you have an email address on the same domain as the company website?"
-        }
-      ],
-      "apply_url": "https://vercel.com/startups/credits",
-      "status_url": "https://vercel.com/startups/credits",
-      "next_step": "Open https://vercel.com/startups/credits, enter your work email, select or create the Vercel team that should hold the contract (it cannot be moved later), choose your Startup Partner from the dropdown, upload a screenshot that proves the affiliation, and the founder clicks submit. Vercel reviews in 5-7 days; on approval accept the Flexible Commitment for Startups Terms and keep a payment method on file.",
-      "reference": "references/cloud-credits.md#vercel-for-startups",
-      "last_verified": "2026-10-15",
-      "notes": "Fully partner-locked: the page calls the program an exclusive offer to companies backed by its Startup Partners; if your VC or accelerator is not in the dropdown, ask them to submit the partner form at https://vercel.com/startups/partners. Must apply within 12 months of the most recent funding round and must not have received Vercel for Startups credits before. Benefits last up to one calendar year from when the commitment is applied; unused amounts do not roll over; once used up or expired the team moves to standard Terms of Service and list rates. At most 50% of the commitment can go to AI Gateway usage. A valid payment method is required for credits to be active. These Flex Commit terms apply to startups accepted on or after 2026-08-06. The marketing page https://vercel.com/startups only has an interest form; the real application lives on /startups/credits. Applications open on 2026-10-15."
-    },
-    {
-      "id": "neon-startups",
-      "name": "Neon Credits for Startups (Databricks Startup Program)",
-      "country": "global",
-      "kind": "cloud_credit",
-      "need": [
-        "credits"
-      ],
-      "who": "Early-stage startups building a product or MVP on Neon: self-funded startups with under 1 MUSD in funding, or venture-backed startups with at least 1 MUSD raised or a place in a recognized accelerator such as Y Combinator.",
-      "what": "Neon credits (Self-Funded tier) or Neon and Databricks credits (Venture-Backed tier) valid 12 months from acceptance, with onboarding support from the Neon product team and early access to new features.",
-      "amount": {
-        "text": "Self-Funded tier up to 1 000 USD in Neon credits (under 1 MUSD raised); Venture-Backed tier up to 200 000 USD in Neon and Databricks credits (1 MUSD+ raised or recognized accelerator)",
-        "max": 200000,
-        "currency": "USD"
-      },
-      "eligibility": [
-        {
-          "field": "stack",
-          "op": "contains",
-          "value": "neon",
-          "label": "uses Neon",
-          "question": "Do you run your Postgres on Neon?"
-        }
-      ],
-      "apply_url": "https://sites.google.com/databricks.com/startup-program-apply",
-      "status_url": "https://neon.com/startups",
-      "next_step": "Open the application form at https://sites.google.com/databricks.com/startup-program-apply, describe the startup, its stage, funding raised and any investor or accelerator, and the founder clicks submit. The team replies within a few business days and adds approved credits to your existing Neon account.",
-      "reference": "references/cloud-credits.md#neon-startups",
-      "last_verified": "2026-10-15",
-      "notes": "Neon is part of Databricks and the program is branded Databricks Startup Program on neon.com/startups. Two tiers on 2026-10-15: Self-Funded (early-stage, self-funded, less than 1 MUSD in funding, building an early-stage product or MVP) gets up to 1 000 USD in Neon credits; Venture-Backed (VC-backed with at least 1 MUSD in funding, or participants in recognized accelerators such as Y Combinator) gets up to 200 000 USD in Neon and Databricks credits plus speaking and co-marketing opportunities. The top tier is therefore investor-gated, but the page also says to apply or ask your investor, so no separate partner referral is required. The exact amount depends on stage and funding. Credits are valid 12 months from the date of acceptance; afterwards the account continues on its plan and is billed normally. Existing Neon or Databricks users can apply. Applying means agreeing to Databricks' Terms of Use. Applications open on 2026-10-15."
-    },
-    {
-      "id": "mongodb-for-startups",
-      "name": "MongoDB for Startups",
-      "country": "global",
-      "kind": "cloud_credit",
-      "need": [
-        "credits"
-      ],
-      "who": "Startups less than 7 years old at Series A or earlier, focused on a single software-based product (development shops and agencies are not eligible), with an active company website and LinkedIn profile, not previously accepted into the program.",
-      "what": "MongoDB Atlas credits delivered as a promo code, plus Voyage AI tokens, technical expertise and support, in four tiers matched to stage: Inspire (bootstrapped), Grow (early-funded), Innovate (rising VC-backed) and Scale (rapidly scaling). Dollar amounts are not published.",
-      "amount": {
-        "text": "Atlas credits in four tiers (Inspire for bootstrapped, Grow for early-funded, Innovate for rising VC-backed, Scale for rapidly scaling startups); dollar amounts are not published on the program page"
-      },
-      "eligibility": [
-        {
-          "field": "stack",
-          "op": "contains",
-          "value": "mongodb",
-          "label": "uses MongoDB Atlas",
-          "question": "Do you run on MongoDB Atlas?"
-        },
-        {
-          "field": "age_years",
-          "op": "lt",
-          "value": 7,
-          "label": "less than 7 years old",
-          "question": "How many years ago was the company founded?"
-        },
-        {
-          "field": "stage",
-          "op": "in",
-          "value": [
-            "idea",
-            "pre_seed",
-            "seed",
-            "series_a"
-          ],
-          "label": "Series A or earlier",
-          "question": "What is the company's latest funding stage?"
-        },
-        {
-          "field": "has_website",
-          "op": "eq",
-          "value": true,
-          "label": "active company website",
-          "question": "Does the company have an active website?"
-        }
-      ],
-      "apply_url": "https://www.mongodb.com/solutions/startups#startups",
-      "status_url": "https://www.mongodb.com/solutions/startups",
-      "next_step": "If a VC, accelerator or incubator backs you, ask them to refer you; otherwise fill in the Apply Now form at https://www.mongodb.com/solutions/startups#startups with your company email, legal name, company URL, LinkedIn, HQ country and funding stage, and the founder clicks submit. If nothing arrives within five business days, write to startups@mongodb.com.",
-      "reference": "references/cloud-credits.md#mongodb-for-startups",
-      "last_verified": "2026-10-15",
-      "notes": "Base-tier eligibility as written: early-stage (less than 7 years old and Series A or earlier); focused on a single software-based product or service (development shops and agencies not eligible); not previously accepted; active company website and LinkedIn profile (the form accepts a personal LinkedIn if the company has none). Partner path is optional: MongoDB works with VCs, accelerators and incubators and asks them to refer founders, but founders without one apply directly on the page. Credits arrive as a promo code: 12 months to activate it, then 12 months to use the Atlas credits; extensions case by case, ideally requested three months before expiry; promo codes apply to future charges only. Activation needs the Organization Owner or Organization Billing Admin role. Existing Atlas users are eligible. The form offers funding stages Bootstrapped, Pre-seed, Seed, Series A, Series B or higher. Program terms: https://www.mongodb.com/solutions/startups/terms-conditions. Applications open on 2026-10-15."
     },
     {
       "id": "eurohpc-playground",
@@ -1117,6 +1283,539 @@
       "notes": "No application fees, membership fees, equity, deadlines or cohorts; apply regardless of funding stage; NVIDIA reaches out after reviewing the application, no timeline stated. Cloud credits and DLI credits are described without amounts; preferred pricing is a rebate deducted from the standard supplier price on a subset of enterprise GPUs; Capital Connect is based on eligibility. The FAQ does not state a work-email-on-own-domain requirement; the form on the startups page asks for a Business Email Address. The application page is JavaScript-rendered with a captcha, so the single-field form could not be verified today. Cloud credits do not pay an LLM API invoice."
     },
     {
+      "id": "aws-activate",
+      "name": "AWS Activate Credits",
+      "country": "global",
+      "kind": "cloud_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "Startups from self-funded to pre-Series B, founded in the last 10 years, with an AWS account on a paid tier plan and either new to Activate Credits or asking for more than they received before.",
+      "what": "Promotional AWS credits in two self-applied tiers: Activate Founders for bootstrapped or self-funded startups, and Activate Portfolio for startups that hold an Organization ID from an Activate Provider (accelerator, angel investor or VC firm). An invite-only AI tier sits above Portfolio.",
+      "amount": {
+        "text": "Activate Founders (self-funded) up to 5 000 USD, starting at 1 000 USD; Activate Portfolio (pre-Series B, with an Activate Provider Org ID) up to 200 000 USD; AWS Credits for AI Startups 200 000 USD+ by invitation only",
+        "max": 200000,
+        "currency": "USD"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "aws",
+          "label": "uses AWS",
+          "question": "Do you run on AWS?"
+        },
+        {
+          "field": "age_years",
+          "op": "lte",
+          "value": 10,
+          "label": "founded in the last 10 years",
+          "question": "How many years ago was the company founded?"
+        },
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "idea",
+            "pre_seed",
+            "seed",
+            "series_a"
+          ],
+          "label": "pre-Series B",
+          "question": "What is the company's latest funding stage?"
+        }
+      ],
+      "apply_url": "https://aws.amazon.com/startups/join?destination=/credits/apply",
+      "status_url": "https://aws.amazon.com/startups/credits/",
+      "next_step": "Create an AWS Builder ID with a professional email at https://aws.amazon.com/startups/join?destination=/credits/apply, choose Activate Founders (self-funded) or Activate Portfolio (enter the Org ID from your accelerator, angel or VC), describe the product, funding stage and company, link an AWS account, and the founder clicks submit. AWS answers within 5-10 business days.",
+      "reference": "references/cloud-credits.md#aws-activate",
+      "last_verified": "2026-10-15",
+      "notes": "Three tiers on 2026-10-15: Activate Founders (self-funded) starts at 1 000 USD and select participants may qualify for up to 5 000 USD; Activate Portfolio (pre-Series B) up to 200 000 USD but only with an Organization ID from an Activate Provider, so the Portfolio tier is partner-locked (thousands of VC firms and accelerators are providers, e.g. Andreessen Horowitz, Sequoia, Y Combinator; list at https://aws.amazon.com/startups/providers); AWS Credits for AI Startups 200 000 USD+ is invite only after Portfolio, via the account manager. General eligibility as written: pre-Series B, founded in the last 10 years, AWS Account on Paid Tier Plan, and either new to Activate Credits or requesting more credits than previously received. Credits are in USD and subject to the AWS Promotional Credit Terms (https://aws.amazon.com/activate/terms/); the page does not state an expiry period. Kiro Startup Credits exist for eligible startups without current Activate Credits. Applications were open on 2026-10-15 (Apply now buttons live)."
+    },
+    {
+      "id": "google-cloud-startup",
+      "name": "Google for Startups Cloud Program",
+      "country": "global",
+      "kind": "cloud_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "Digital-native technology startups from pre-funded to Series A, founded within the last 5 years (Start tier: last 24 months), applying with a business email on the company's own website domain. The Scale tier needs recent equity funding from an institutional investor.",
+      "what": "Google Cloud credits in two tiers: Start for pre-funded startups with a working MVP, and Scale for VC-funded startups, with an AI-first variant of Scale that adds credits for startups building their product on Gemini. Credits cover Google Cloud services including Gemini models, not third-party services or Marketplace.",
+      "amount": {
+        "text": "Start tier 2 000 USD; Scale tier up to 200 000 USD over 2 years (year 1: 100% up to 100 000 USD; year 2: 20% of spend up to a further 100 000 USD); AI-first Scale up to 350 000 USD (year 1: 100% up to 250 000 USD; year 2 as above)",
+        "max": 350000,
+        "currency": "USD"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "gcp",
+          "label": "uses Google Cloud",
+          "question": "Do you run on Google Cloud?"
+        },
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "idea",
+            "pre_seed",
+            "seed",
+            "series_a"
+          ],
+          "label": "pre-funded to Series A",
+          "question": "What is the company's latest funding stage?"
+        },
+        {
+          "field": "age_years",
+          "op": "lte",
+          "value": 5,
+          "label": "founded within the last 5 years (Start tier: 24 months)",
+          "question": "How many years ago was the company founded?"
+        },
+        {
+          "field": "has_website",
+          "op": "eq",
+          "value": true,
+          "label": "public website",
+          "question": "Does the company have a public website on its own domain?"
+        },
+        {
+          "field": "has_work_email",
+          "op": "eq",
+          "value": true,
+          "label": "business email matching the website domain",
+          "question": "Do you have a business email on the same domain as the website?"
+        }
+      ],
+      "apply_url": "https://cloud.google.com/startup/apply",
+      "status_url": "https://cloud.google.com/startup",
+      "next_step": "Create a Google Cloud account and copy its 18-character billing account ID, then open https://cloud.google.com/startup/apply, sign in with Google, apply with the business email that matches your website domain, let Google match you to the Start or Scale tier, and the founder clicks submit. Most answers come within a few business days; manual review can take 10 days or more.",
+      "reference": "references/cloud-credits.md#google-cloud-startup",
+      "last_verified": "2026-10-15",
+      "notes": "Start tier (https://cloud.google.com/startup/pre-funded): digital-native startups with a working MVP, a clear business model and plans to seek venture funding soon; founded within the last 24 months; no Google Cloud credits beyond the free trial; 2 000 USD plus 12 months Google Workspace Business Plus and 200 USD Google Skills credits. Scale tier (https://cloud.google.com/startup/early-stage): recent startup equity funding from pre-seed to Series A by an institutional investor or common Web3 funding sources (SAFEs count; private equity, government innovation grants, prize funding, crowdfunding, angel and friends-and-family money do not qualify for Scale but may for Start); founded within the last 5 years; not more than 5 000 USD in prior Google Cloud credits; funding verification if in stealth. Scale adds 12 000 USD Enhanced Support credits for one year, 12 months Workspace Business Plus, 600 USD per month Google Maps credit for one year and 500 USD Skills credits. AI-first variant (https://cloud.google.com/startup/ai): uses or plans to use Gemini as the foundation of the primary product; pre-seed/seed rounds within the last five years and Series A within the last 12 months. Series B+ startups get custom solutions, not program credits. FAQ exclusions: companies that have IPO'd or been acquired, educational institutions, government entities, nonprofits, personal blogs or content, dev shops. The apply page requires a Google sign-in. Applications open on 2026-10-15."
+    },
+    {
+      "id": "microsoft-for-startups",
+      "name": "Microsoft for Startups",
+      "country": "global",
+      "kind": "cloud_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "Privately held, for-profit startups that own a software product, are headquartered where Azure is available, have not raised Series C or later and have received under 350 000 USD in lifetime free Azure credits. Not for educational institutions, government, consultancies, agencies or crypto mining.",
+      "what": "Azure Startup credits that unlock progressively: a small self-serve grant for any startup that applies, and a larger investor offer for startups with a referral code from a Microsoft for Startups Investor Network partner, growing with verified progress and Azure usage. Credits are valid up to two years once activated.",
+      "amount": {
+        "text": "Without an investor code: 1 000 USD for 90 days, then a further 4 000 USD for 180 days after business verification; investor offer (referral code): most startups begin with 100 000 USD; up to 150 000 USD unlocked over time, Investor Network-backed startups may unlock more",
+        "max": 150000,
+        "currency": "USD"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "azure",
+          "label": "uses Azure",
+          "question": "Do you run on Azure?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "privately held, for-profit company",
+          "question": "Is the applicant a privately held, for-profit company?"
+        }
+      ],
+      "apply_url": "https://www.microsoft.com/en-us/startups",
+      "status_url": "https://learn.microsoft.com/en-us/startups/microsoft-for-startups/overview",
+      "next_step": "Open https://www.microsoft.com/en-us/startups, click Get started now and sign in with a Microsoft account; enter your investor's 10-character referral code if you have one (or continue without a code for the 1 000 USD starter credits), verify email and phone, fill in the registered company name, industry, website and address, set up the Azure account with a payment card, and the founder clicks submit. Decisions arrive by email within about three business days.",
+      "reference": "references/cloud-credits.md#microsoft-for-startups",
+      "last_verified": "2026-10-15",
+      "notes": "Program restructured: startups that joined on or after 2026-05-29 apply and activate through the Azure portal (the Get started button on microsoft.com/en-us/startups leads to portal.azure.com); earlier members use portal.startups.microsoft.com. Eligibility as written on the Learn overview (updated 2026-08-05): software product owned by the company; privately held and for-profit; HQ in a country where Azure is available; not more than 350 000 USD in lifetime free Azure credits; not Series C or later; not an educational institution, government organization, consultancy or agency; no cryptocurrency mining. The top tier is partner-locked: the investor offer requires a referral code from an Investor Network partner (investor, accelerator, incubator, angel network, university); Microsoft does not publish the partner list, ask your VC or accelerator. Credits must be activated within 90 days of accepting the program agreement and are valid up to two years, no extensions; a credit card is required; credits cannot be transferred between Microsoft accounts. The investor offer also includes Azure Standard Support, technical experts, go-to-market support and discounts such as GitHub Enterprise, LinkedIn Premium Business and Microsoft 365 Business Premium. Applications open on 2026-10-15."
+    },
+    {
+      "id": "cloudflare-for-startups",
+      "name": "Cloudflare for Startups",
+      "country": "global",
+      "kind": "cloud_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "For-profit technology startups incorporated within the last 10 years, funded up to Series B (self-funded accepted at the lowest tier), with a live public website, a public presence on LinkedIn, X or GitHub and a business email on their own domain; first-time applicants only.",
+      "what": "Cloudflare credits for one year across the developer platform (Workers, R2, D1, KV, Queues, Vectorize, Pages, Images, Stream, Workers AI and more) in three tiers set by funding raised; core security and networking features are included at no cost on every tier.",
+      "amount": {
+        "text": "Tier 3 10 000 USD (bootstrapped or self-funded, under 1 MUSD raised); Tier 2 100 000 USD (under 5 MUSD raised, funded by an affiliated partner); Tier 1 350 000 USD (5 MUSD+ raised, funded by an affiliated partner)",
+        "max": 350000,
+        "currency": "USD"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "cloudflare",
+          "label": "uses Cloudflare",
+          "question": "Do you run on Cloudflare?"
+        },
+        {
+          "field": "age_years",
+          "op": "lte",
+          "value": 10,
+          "label": "incorporated within the last 10 years",
+          "question": "How many years ago was the company incorporated?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "for-profit business",
+          "question": "Is the applicant a for-profit company?"
+        },
+        {
+          "field": "has_website",
+          "op": "eq",
+          "value": true,
+          "label": "live, publicly accessible website",
+          "question": "Does the company have a live public website?"
+        },
+        {
+          "field": "has_work_email",
+          "op": "eq",
+          "value": true,
+          "label": "business email matching the domain",
+          "question": "Do you have a business email on the company's own domain?"
+        }
+      ],
+      "apply_url": "https://www.cloudflare.com/startups/",
+      "status_url": "https://www.cloudflare.com/startups/",
+      "next_step": "Fill in the application form at https://www.cloudflare.com/lp/startups with your business email, website, social profile and funding details (name the affiliated partner for Tier 2 or Tier 1), and the founder clicks submit. Review typically takes up to 48 hours and approval comes by email.",
+      "reference": "references/cloud-credits.md#cloudflare-for-startups",
+      "last_verified": "2026-10-15",
+      "notes": "Tier 2 and Tier 1 require funding from an affiliated partner (partner list on the program page), so the top tiers are partner-locked; self-funded startups go in at Tier 3. The page lists all of these as required: founded within the last 10 years; funded up to Series B; funded within the last 12 months; actively developing a technology product; live public website; active on LinkedIn, X or GitHub; not previously approved into the program; for-profit business with a business email matching the domain. Credits are valid for one year or until consumed, whichever comes first, and extensions are not approved. Caps: R2 up to 10 000 USD; Workers AI up to 2 500 USD (Tier 3), 10 000 USD (Tier 2) or 50 000 USD (Tier 1). Not covered: AI Gateway (temporarily), registrar services, enterprise feature add-ons, Magic Transit, Enterprise Spectrum, Dedicated IPs and the China Network. Not eligible: educational institutions, personal blogs, consultancies, service agencies, MSPs, resellers and existing enterprise customers. Tiers were recently raised (Tier 3 from 5 000 to 10 000 USD, Tier 1 from 250 000 to 350 000 USD); existing members near their cap can request an upgrade evaluation. The apply page returns HTTP 403 to automated fetches; a human in a browser reaches it. Questions to startups@cloudflare.com. Applications open on 2026-10-15. The dedicated application page /lp/startups returned 404 on 2026-10-15; apply from the program page."
+    },
+    {
+      "id": "vercel-for-startups",
+      "name": "Vercel for Startups",
+      "country": "global",
+      "kind": "cloud_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "Startups backed by an approved Vercel Startup Partner (an accelerator or VC on Vercel's list), that have raised a Series A or less, apply within 12 months of their latest round, have a company website and matching email, and have not received Vercel for Startups credits before.",
+      "what": "An enterprise-grade contract with a Flexible Commitment Amount usable across Vercel products (seats, data transfer, compute, AI Gateway, v0 and more), Enterprise-tier access for a year and startup-focused support.",
+      "amount": {
+        "text": "Up to 30 000 USD Flexible Commitment Amount for one year; the exact amount depends on the arrangement between Vercel and your Startup Partner",
+        "max": 30000,
+        "currency": "USD"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "vercel",
+          "label": "uses Vercel",
+          "question": "Do you deploy on Vercel?"
+        },
+        {
+          "field": "vc_backed",
+          "op": "eq",
+          "value": true,
+          "label": "backed by an approved Vercel Startup Partner",
+          "question": "Is the company in an accelerator or backed by a VC that is on Vercel's Startup Partner list?"
+        },
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "idea",
+            "pre_seed",
+            "seed",
+            "series_a"
+          ],
+          "label": "Series A or less",
+          "question": "What is the company's latest funding stage?"
+        },
+        {
+          "field": "has_website",
+          "op": "eq",
+          "value": true,
+          "label": "company website",
+          "question": "Does the company have a website?"
+        },
+        {
+          "field": "has_work_email",
+          "op": "eq",
+          "value": true,
+          "label": "email matching the company website",
+          "question": "Do you have an email address on the same domain as the company website?"
+        }
+      ],
+      "apply_url": "https://vercel.com/startups/credits",
+      "status_url": "https://vercel.com/startups/credits",
+      "next_step": "Open https://vercel.com/startups/credits, enter your work email, select or create the Vercel team that should hold the contract (it cannot be moved later), choose your Startup Partner from the dropdown, upload a screenshot that proves the affiliation, and the founder clicks submit. Vercel reviews in 5-7 days; on approval accept the Flexible Commitment for Startups Terms and keep a payment method on file.",
+      "reference": "references/cloud-credits.md#vercel-for-startups",
+      "last_verified": "2026-10-15",
+      "notes": "Fully partner-locked: the page calls the program an exclusive offer to companies backed by its Startup Partners; if your VC or accelerator is not in the dropdown, ask them to submit the partner form at https://vercel.com/startups/partners. Must apply within 12 months of the most recent funding round and must not have received Vercel for Startups credits before. Benefits last up to one calendar year from when the commitment is applied; unused amounts do not roll over; once used up or expired the team moves to standard Terms of Service and list rates. At most 50% of the commitment can go to AI Gateway usage. A valid payment method is required for credits to be active. These Flex Commit terms apply to startups accepted on or after 2026-08-06. The marketing page https://vercel.com/startups only has an interest form; the real application lives on /startups/credits. Applications open on 2026-10-15."
+    },
+    {
+      "id": "neon-startups",
+      "name": "Neon Credits for Startups (Databricks Startup Program)",
+      "country": "global",
+      "kind": "cloud_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "Early-stage startups building a product or MVP on Neon: self-funded startups with under 1 MUSD in funding, or venture-backed startups with at least 1 MUSD raised or a place in a recognized accelerator such as Y Combinator.",
+      "what": "Neon credits (Self-Funded tier) or Neon and Databricks credits (Venture-Backed tier) valid 12 months from acceptance, with onboarding support from the Neon product team and early access to new features.",
+      "amount": {
+        "text": "Self-Funded tier up to 1 000 USD in Neon credits (under 1 MUSD raised); Venture-Backed tier up to 200 000 USD in Neon and Databricks credits (1 MUSD+ raised or recognized accelerator)",
+        "max": 200000,
+        "currency": "USD"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "neon",
+          "label": "uses Neon",
+          "question": "Do you run your Postgres on Neon?"
+        }
+      ],
+      "apply_url": "https://sites.google.com/databricks.com/startup-program-apply",
+      "status_url": "https://neon.com/startups",
+      "next_step": "Open the application form at https://sites.google.com/databricks.com/startup-program-apply, describe the startup, its stage, funding raised and any investor or accelerator, and the founder clicks submit. The team replies within a few business days and adds approved credits to your existing Neon account.",
+      "reference": "references/cloud-credits.md#neon-startups",
+      "last_verified": "2026-10-15",
+      "notes": "Neon is part of Databricks and the program is branded Databricks Startup Program on neon.com/startups. Two tiers on 2026-10-15: Self-Funded (early-stage, self-funded, less than 1 MUSD in funding, building an early-stage product or MVP) gets up to 1 000 USD in Neon credits; Venture-Backed (VC-backed with at least 1 MUSD in funding, or participants in recognized accelerators such as Y Combinator) gets up to 200 000 USD in Neon and Databricks credits plus speaking and co-marketing opportunities. The top tier is therefore investor-gated, but the page also says to apply or ask your investor, so no separate partner referral is required. The exact amount depends on stage and funding. Credits are valid 12 months from the date of acceptance; afterwards the account continues on its plan and is billed normally. Existing Neon or Databricks users can apply. Applying means agreeing to Databricks' Terms of Use. Applications open on 2026-10-15."
+    },
+    {
+      "id": "mongodb-for-startups",
+      "name": "MongoDB for Startups",
+      "country": "global",
+      "kind": "cloud_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "Startups less than 7 years old at Series A or earlier, focused on a single software-based product (development shops and agencies are not eligible), with an active company website and LinkedIn profile, not previously accepted into the program.",
+      "what": "MongoDB Atlas credits delivered as a promo code, plus Voyage AI tokens, technical expertise and support, in four tiers matched to stage: Inspire (bootstrapped), Grow (early-funded), Innovate (rising VC-backed) and Scale (rapidly scaling). Dollar amounts are not published.",
+      "amount": {
+        "text": "Atlas credits in four tiers (Inspire for bootstrapped, Grow for early-funded, Innovate for rising VC-backed, Scale for rapidly scaling startups); dollar amounts are not published on the program page"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "mongodb",
+          "label": "uses MongoDB Atlas",
+          "question": "Do you run on MongoDB Atlas?"
+        },
+        {
+          "field": "age_years",
+          "op": "lt",
+          "value": 7,
+          "label": "less than 7 years old",
+          "question": "How many years ago was the company founded?"
+        },
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "idea",
+            "pre_seed",
+            "seed",
+            "series_a"
+          ],
+          "label": "Series A or earlier",
+          "question": "What is the company's latest funding stage?"
+        },
+        {
+          "field": "has_website",
+          "op": "eq",
+          "value": true,
+          "label": "active company website",
+          "question": "Does the company have an active website?"
+        }
+      ],
+      "apply_url": "https://www.mongodb.com/solutions/startups#startups",
+      "status_url": "https://www.mongodb.com/solutions/startups",
+      "next_step": "If a VC, accelerator or incubator backs you, ask them to refer you; otherwise fill in the Apply Now form at https://www.mongodb.com/solutions/startups#startups with your company email, legal name, company URL, LinkedIn, HQ country and funding stage, and the founder clicks submit. If nothing arrives within five business days, write to startups@mongodb.com.",
+      "reference": "references/cloud-credits.md#mongodb-for-startups",
+      "last_verified": "2026-10-15",
+      "notes": "Base-tier eligibility as written: early-stage (less than 7 years old and Series A or earlier); focused on a single software-based product or service (development shops and agencies not eligible); not previously accepted; active company website and LinkedIn profile (the form accepts a personal LinkedIn if the company has none). Partner path is optional: MongoDB works with VCs, accelerators and incubators and asks them to refer founders, but founders without one apply directly on the page. Credits arrive as a promo code: 12 months to activate it, then 12 months to use the Atlas credits; extensions case by case, ideally requested three months before expiry; promo codes apply to future charges only. Activation needs the Organization Owner or Organization Billing Admin role. Existing Atlas users are eligible. The form offers funding stages Bootstrapped, Pre-seed, Seed, Series A, Series B or higher. Program terms: https://www.mongodb.com/solutions/startups/terms-conditions. Applications open on 2026-10-15."
+    },
+    {
+      "id": "claude-startups",
+      "name": "Claude Startups (Anthropic)",
+      "country": "global",
+      "kind": "ai_api_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "Early-stage founders building on Claude. Members get offers, tools and events; founders backed by a VC in Anthropic's partner network can get additional Claude API credits through that VC.",
+      "what": "Membership program: discounts and credits worth up to 45 000 USD from companies building with Claude (redeemed by code in the Claude Console), biweekly Applied AI sessions, events, hackathons and meetups. Founders backed by a partner-network VC may receive up to 100 000 USD in additional Claude API credits, claimed through the VC.",
+      "amount": {
+        "text": "Partner offers and credits worth up to 45 000 USD; up to 100 000 USD in additional Claude API credits for founders backed by a partner-network VC",
+        "max": 100000,
+        "currency": "USD"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "anthropic",
+          "label": "builds on Anthropic",
+          "question": "Do you build on Anthropic's Claude API?"
+        }
+      ],
+      "apply_url": "https://claude.com/programs/startups",
+      "status_url": "https://claude.com/programs/startups",
+      "next_step": "Applications are closed as of 2026-10-15. Subscribe to the Claude Startup newsletter on claude.com/programs/startups to hear when the next cohort opens; when it does, the founder fills in the application there and clicks submit. If the company is backed by a VC in Anthropic's partner network, the founder asks that VC about the additional API credit route.",
+      "reference": "references/ai-api-credits.md#claude-startups",
+      "last_verified": "2026-10-15",
+      "notes": "CLOSED on 2026-10-15: the page says the current cohort is full and no new applications are accepted; applications still in review were not advanced. Credits apply only to the first-party Claude API through the Claude Console and cannot be used on AWS, Google Cloud, Azure or other third-party platforms. The 100 000 USD figure is only for founders backed by a VC in Anthropic's partner network and is claimed through the VC, not on this page. Member sign-in: platform.claude.com/claude-for-startups. No tiers, funding caps or work-email requirement are published."
+    },
+    {
+      "id": "together-ai-startup-accelerator",
+      "name": "Together AI Startup Accelerator",
+      "country": "global",
+      "kind": "ai_api_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "Startups selected into Together AI's accelerator; the tier follows how much the company has raised (under 5 MUSD, 5 to 10 MUSD, over 10 MUSD).",
+      "what": "Free Together AI platform credits for serverless inference, dedicated endpoints, fine-tuning and instant clusters, plus free forward-deployed engineering hours, best-practice content, joint go-to-market, founder community and access to Together's VC network.",
+      "amount": {
+        "text": "Build tier up to 15 000 USD (under 5 MUSD raised), Scale tier up to 30 000 USD (5 to 10 MUSD raised), Grow tier up to 50 000 USD (over 10 MUSD raised) in platform credits",
+        "max": 50000,
+        "currency": "USD"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "together",
+          "label": "builds on Together AI",
+          "question": "Do you build on Together AI?"
+        }
+      ],
+      "apply_url": "https://www.together.ai/startup-accelerator",
+      "status_url": "https://www.together.ai/startup-accelerator",
+      "next_step": "Open together.ai/startup-accelerator, scroll to \"Submit your application\" and fill in the form with company details, funding raised and the workloads you run on Together; the founder clicks submit.",
+      "reference": "references/ai-api-credits.md#together-ai-startup-accelerator",
+      "last_verified": "2026-10-15",
+      "notes": "Application form was live on 2026-10-15. Selection-based program, not automatic. Tiers: Build (under 5 MUSD raised) up to 15K USD credits and 3 hours of forward-deployed engineering; Scale (5 to 10 MUSD) up to 30K USD and 6 hours; Grow (over 10 MUSD) up to 50K USD and 10 hours. Credits do not apply to Reserved GPU Clusters. Testimonials refer to an inaugural cohort, so intake may be cohort-based. No partner-VC, work-email or funding cap requirement is stated."
+    },
+    {
+      "id": "modal-for-startups",
+      "name": "Modal for Startups",
+      "country": "global",
+      "kind": "ai_api_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "VC-funded startups new to Modal. Seed to Series A: any VC funding from Modal's VC partner network, or over 1 MUSD VC funding from any fund. Scaling and Series B+: over 30 MUSD raised or post-Series B with a partner-network VC (custom package).",
+      "what": "One-time grant of free Modal compute (GPU) credits, direct access to Modal's engineering team for technical support, GTM amplification on launches and raises, and a founder community.",
+      "amount": {
+        "text": "Amount not published on the page"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "modal",
+          "label": "builds on Modal",
+          "question": "Do you build on Modal?"
+        },
+        {
+          "any": [
+            {
+              "field": "vc_backed",
+              "op": "eq",
+              "value": true,
+              "label": "backed by a partner investor",
+              "question": "Is the company backed by one of the program's partner investors?"
+            },
+            {
+              "field": "funding_raised_usd",
+              "op": "gt",
+              "value": 1000000,
+              "label": "raised over 1 MUSD in VC funding",
+              "question": "How much VC funding has the company raised, in USD?"
+            }
+          ],
+          "label": "VC funding from a Modal partner fund, or over 1 MUSD VC funding from any fund"
+        }
+      ],
+      "apply_url": "https://modal.com/startups#apply",
+      "status_url": "https://modal.com/startups",
+      "next_step": "Open modal.com/startups, click \"Apply Now\" and fill in the startup credits form (an embedded Fillout form) with company, funding and investor details; the founder clicks submit.",
+      "reference": "references/ai-api-credits.md#modal-for-startups",
+      "last_verified": "2026-10-15",
+      "notes": "Application form was live on 2026-10-15. The page only says \"thousands of free GPU credits\"; the credit size per tier is not published. Only customers new to Modal are eligible; credits are a one-time grant and you cannot reapply once you have received credits in a tier. The FAQ asks why a payment method is required, so expect to add a card. FAQ answers (credit duration, tier assignment, full VC partner list) are rendered client-side and could not be read in this fetch; check them in a browser. Partner logos shown: Y Combinator, Andreessen Horowitz, Sequoia, Khosla Ventures, Neo, HF0, Pear VC, Lux Capital. A separate Modal for Academics program exists. The 30 USD/month free compute banner is a general offer, not part of this program."
+    },
+    {
+      "id": "lambda-nvidia-inception",
+      "name": "Lambda Cloud credits for NVIDIA Inception members",
+      "country": "global",
+      "kind": "ai_api_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "Companies that are members of NVIDIA Inception, located in and paying with a credit card from one of the listed countries (including the EU except Lithuania, Iceland, Norway, Switzerland and the United Kingdom).",
+      "what": "1 000 USD in Lambda Cloud credits for on-demand GPU instances (NVIDIA B200, H100, A100 and GH200), with no ingress or egress fees; credits also cover persistent storage at 0.20 USD per GB per month.",
+      "amount": {
+        "text": "1 000 USD in Lambda Cloud credits",
+        "max": 1000,
+        "currency": "USD"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "lambda",
+          "label": "builds on Lambda",
+          "question": "Do you build on Lambda Cloud?"
+        }
+      ],
+      "apply_url": "https://lambda.ai/nvidia-inception",
+      "status_url": "https://lambda.ai/nvidia-inception",
+      "next_step": "Join NVIDIA Inception first if the company is not already a member, then fill in the form on lambda.ai/nvidia-inception with company and Inception membership details; the founder clicks submit.",
+      "reference": "references/ai-api-credits.md#lambda-nvidia-inception",
+      "last_verified": "2026-10-15",
+      "notes": "Offer was live on 2026-10-15. Hard requirement that the schema cannot express as a rule: the company must be a member of NVIDIA Inception. One grant per company. A valid credit card is required to prevent fraud and calculate tax. Credits are valid for 12 months from the date they are applied. Applications are reviewed and approved by Lambda; submitting does not guarantee credits. Eligible locations listed on the page: Australia, Canada, Chile, European Union (except Lithuania), Iceland, Israel, Japan, New Zealand, Norway, Puerto Rico, Singapore, South Africa, South Korea, Switzerland, Taiwan, Turkey, UAE, UK, US. No general Lambda startup credit program was found on lambda.ai on 2026-10-15; third-party sites quoting 7 500 USD do not match the page, which says 1 000 USD."
+    },
+    {
+      "id": "runpod-startup-program",
+      "name": "Runpod Startup Program",
+      "country": "global",
+      "kind": "ai_api_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "AI startups new to Runpod with real GPU workloads. Starter tier: pre-Series A startups with working products and near-term GPU needs. Growth tier: venture-backed Seed to Series B+ startups with production workloads that commit 50 000 USD upfront.",
+      "what": "GPU credits usable across Pods, Serverless, Clusters, Public Endpoints and Storage. Starter tier: 1 000 USD in free credits with self-serve onboarding. Growth tier: 25 000 USD bonus credits on a 50 000 USD upfront 12-month commitment, 1:1 onboarding call, SLA options and an enterprise path.",
+      "amount": {
+        "text": "Starter tier 1 000 USD in free credits; Growth tier 25 000 USD in bonus credits on a 50 000 USD upfront commitment (75 000 USD total to start)",
+        "max": 25000,
+        "currency": "USD"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "runpod",
+          "label": "builds on Runpod",
+          "question": "Do you build on Runpod?"
+        }
+      ],
+      "apply_url": "https://www.runpod.io/startup-program",
+      "status_url": "https://www.runpod.io/startup-program",
+      "next_step": "Open runpod.io/startup-program, click \"Apply now\" and fill in the form with funding status, workload type and timing; the founder clicks submit.",
+      "reference": "references/ai-api-credits.md#runpod-startup-program",
+      "last_verified": "2026-10-15",
+      "notes": "Application form was live on 2026-10-15. Selective program; venture backing is strongly preferred but the FAQ says every application is reviewed holistically, so it is not encoded as a hard rule. Primarily for new customers; existing customers below the Growth threshold are judged case by case. The Growth tier is a credit match: you deposit 50 000 USD under a 12-month agreement and Runpod adds 25 000 USD once, with no reload. Best fit stated on the page: Growth for Seed to Series B+ startups spending or ready to spend 5 000 to 25 000+ USD per month on GPUs; Starter for pre-Series A startups with working products. Separate Creator Program and academic research offer exist."
+    },
+    {
       "id": "openai-for-startups",
       "name": "OpenAI for Startups",
       "country": "global",
@@ -1151,705 +1850,6 @@
       "reference": "references/ai-api-credits.md#openai-for-startups",
       "last_verified": "2026-10-15",
       "notes": "Read in a browser on 2026-10-15; the site returns 403 to automated fetch and redirected to the sv-SE locale. FAQ: credits are obtained via the VC; the application asks for a unique referral code from the VC, a product description, company name and contacts with a valid business email, and basic funding details. No dollar amount, no deadline, no cohort. When credits run out, billing switches to standard automatically."
-    },
-    {
-      "id": "vinnova-innovativa-startups",
-      "name": "Vinnova Innovativa Startups 2026",
-      "country": "SE",
-      "kind": "grant",
-      "need": [
-        "money"
-      ],
-      "who": "Small Swedish limited companies (aktiebolag) at most 10 years old at the decision date, with at most 10 employees, net revenue or balance sheet of at most 10 MSEK, no dividend in the last fiscal year and not listed on a stock exchange.",
-      "what": "Grant of up to 500 000 SEK for a project of at most nine months that tests and confirms the market potential of an innovative idea with an international market and a sustainable business model.",
-      "amount": {
-        "text": "Up to 500 000 SEK",
-        "max": 500000,
-        "currency": "SEK"
-      },
-      "eligibility": [
-        {
-          "field": "country",
-          "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
-        },
-        {
-          "field": "legal_form",
-          "op": "eq",
-          "value": "company",
-          "label": "limited company",
-          "question": "Is it a limited company?"
-        },
-        {
-          "field": "age_years",
-          "op": "lte",
-          "value": 10,
-          "label": "at most 10 years",
-          "question": "How old is the company?"
-        },
-        {
-          "field": "employees",
-          "op": "lte",
-          "value": 10,
-          "label": "at most 10 employees",
-          "question": "How many employees (full-time equivalents)?"
-        },
-        {
-          "any": [
-            {
-              "field": "revenue_msek",
-              "op": "lte",
-              "value": 10,
-              "label": "net revenue at most 10 MSEK",
-              "question": "Net revenue last fiscal year, in MSEK?"
-            },
-            {
-              "field": "balance_msek",
-              "op": "lte",
-              "value": 10,
-              "label": "balance sheet at most 10 MSEK",
-              "question": "Balance sheet total last fiscal year, in MSEK?"
-            }
-          ],
-          "label": "net revenue or balance sheet at most 10 MSEK"
-        },
-        {
-          "field": "profit_distributed",
-          "op": "eq",
-          "value": false,
-          "label": "no dividend last fiscal year",
-          "question": "Did the company pay a dividend in the last fiscal year?"
-        }
-      ],
-      "apply_url": "https://ansok.vinnova.se/utlysning/0382e83b-4c96-404d-bed1-08deab387617?opencall=true&lang=sv",
-      "status_url": "https://www.vinnova.se/e/innovativa-startups/innovativa-startups-2026",
-      "live": {
-        "source": "vinnova",
-        "call_id": "2016-04714"
-      },
-      "next_step": "Read the call text on the status page, log in to Vinnova's e-service for applications (ansok.vinnova.se) with the company's account, fill in the form about the project, project parties and budget, and submit before 12 January 2027 at 14:00. The founder clicks submit.",
-      "reference": "references/nordic-grants.md#vinnova-innovativa-startups",
-      "last_verified": "2026-10-15",
-      "notes": "Round open on 2026-10-15. Page: 'Stänger den 12 januari 2027 kl 14:00'. Dates on the page: 12 okt. 2026 opens; info meetings 2 nov. 2026 kl 09:00 and 9 nov. 2026 kl 09:00; 12 jan. 2027 kl 14:00 last day; 23 mars 2027 decision and earliest project start; 30 mars 2027 latest project start; project at most nine months. Selection: complete applications are scored by three expert assessors, and among those judged to meet the criteria 'i hög och likvärdig grad' the grants are decided by lottery ('lottning, så kallad randomisering'), introduced from 2026. Company age is counted at the decision date 2027-03-23. One of net revenue or balance sheet may exceed 10 MSEK, but not both. Companies granted funding in Innovativa Startups 2025 may not apply. The whole group must be unlisted if the company belongs to a group. The page footer shows diarienummer 2025-04831; in Vinnova's open-data API 2016-04714 is the parent call 'Innovativa Startups' and 2025-04831 is this application round (open 2026-10-12, closes 2027-01-12T14:00, decision 2027-03-23)."
-    },
-    {
-      "id": "vinnova-ffi-asp-accelerated-startup-partnership",
-      "name": "Vinnova FFI ASP - Accelerated Startup Partnership (autumn 2026)",
-      "country": "SE",
-      "kind": "grant",
-      "need": [
-        "money"
-      ],
-      "who": "Knowledge-intensive startups, Swedish or foreign, registered at most 10 years and meeting the EU small-enterprise definition, applying together with at least one established need owner in road transport; only the startup receives funding.",
-      "what": "Grant for an innovation collaboration that accelerates sustainable road transport: up to 500 000 SEK for a validation project (TRL/BRL 2-4) or 750 000 SEK for an implementation project (TRL/BRL 5-8). Vinnova can finance up to 100 percent of the startup's project costs; co-financing of at least 25 percent of the total project budget is required.",
-      "amount": {
-        "text": "Up to 500 000 SEK (validation project) or 750 000 SEK (implementation project)",
-        "max": 750000,
-        "currency": "SEK"
-      },
-      "eligibility": [
-        {
-          "field": "legal_form",
-          "op": "eq",
-          "value": "company",
-          "label": "limited company",
-          "question": "Is it a limited company?"
-        },
-        {
-          "field": "age_years",
-          "op": "lte",
-          "value": 10,
-          "label": "registered at most 10 years",
-          "question": "How many years since the company was registered?"
-        },
-        {
-          "field": "employees",
-          "op": "lt",
-          "value": 50,
-          "label": "fewer than 50 employees",
-          "question": "How many employees?"
-        }
-      ],
-      "apply_url": "https://ansok.vinnova.se/utlysning/26bdd234-db2b-4fa2-1fab-08dec63ac2d3?opencall=true&lang=en",
-      "status_url": "https://www.vinnova.se/en/calls-for-proposals/accelerate-swedish-partnership/ffi-asp-accelerated-startup-2026-01767/",
-      "next_step": "Find a need owner (a private or public road-transport organisation) willing to partner, agree the project type and which FFI sub-programme the innovation connects to, then log in to Vinnova's e-service and complete the form with CVs for the project team and a GANTT chart before 29 October 2026 at 14:00. The founder clicks submit.",
-      "reference": "references/nordic-grants.md#vinnova-ffi-asp-accelerated-startup-partnership",
-      "last_verified": "2026-10-15",
-      "notes": "Reference number 2026-01767. Open on 2026-10-15: 'Closes on 29 October 2026 at 2PM'. Opened 15 Jun 2026; earlier assessment date 16 Sep 2026 14:00 with decision planned 16 Oct; final decision 24 Nov 2026. Total budget 22 MSEK across the year's application opportunities. The innovation must connect to at least one FFI sub-programme: Circularity, Transport and mobility solutions, Traffic-safe automation, Zero emissions. Projects need at least two participants, at least one need owner and at least one startup; only the startup can be beneficiary. Aid basis: startups under five years (fewer than 50 employees, not listed, no profit distributed, not formed by merger or takeover) get start-up aid; older small companies get de minimis aid, at most 300 000 EUR over three years. No country rule is encoded because the page says foreign startups without Swedish presence may apply (they attach a home-country registration certificate). The English page is machine-translated and the Swedish text takes precedence: https://www.vinnova.se/e/accelerera-svenskt-partnerskap/ffi-asp-accelerated-startup-2026-01767/. The sibling spring round 2026-00299 closed 2 June 2026."
-    },
-    {
-      "id": "almi-innovationslan",
-      "name": "Almi Innovationslån",
-      "country": "SE",
-      "kind": "loan",
-      "need": [
-        "money"
-      ],
-      "who": "Companies registered in Sweden with up to 249 employees, new or established, with an innovation project of large potential whose development phase is still ongoing.",
-      "what": "Loan of 50 000 to 500 000 SEK covering at most 50 percent of the estimated project cost, to take an idea from concept to market. Interest is set individually; repayment usually 3-5 years, at most 96 months.",
-      "amount": {
-        "text": "50 000 to 500 000 SEK, at most 50 percent of the project cost",
-        "min": 50000,
-        "max": 500000,
-        "currency": "SEK"
-      },
-      "eligibility": [
-        {
-          "field": "country",
-          "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
-        },
-        {
-          "field": "employees",
-          "op": "lte",
-          "value": 249,
-          "label": "at most 249 employees",
-          "question": "How many employees?"
-        }
-      ],
-      "apply_url": "https://etjanster.almi.se/oversikt/flow/1006",
-      "status_url": "https://www.almi.se/lan-finansiering/innovationslan/",
-      "next_step": "Prepare a budget (mandatory), the latest annual accounts, current interim figures and a liquidity forecast, then open Almi's e-service with BankID and fill in the loan application; your regional Almi company reviews it and contacts you. The founder clicks submit.",
-      "reference": "references/nordic-grants.md#almi-innovationslan",
-      "last_verified": "2026-10-15",
-      "notes": "Continuous, no deadline. Co-financing is required: 'Almi kan finansiera upp till 50 procent av den beräknade projektkostnaden'; for loans above 300 000 SEK at least half of the co-financing must be capital, for smaller loans part of it may be own work. Typical loan around 300 000 SEK. Security usually a combination of a floating charge (företagsinteckning) and a limited personal guarantee. Interest may be somewhat higher than for other Almi loans because of project risk. Almi is regional: 'Alla ansökningar hanteras av ditt regionala Almi-bolag' and every loan is an individual assessment, so terms vary by case and region."
-    },
-    {
-      "id": "almi-mikrolan",
-      "name": "Almi Mikrolån",
-      "country": "SE",
-      "kind": "loan",
-      "need": [
-        "money"
-      ],
-      "who": "Micro companies and sole traders in Sweden with at most nine employees and annual revenue or balance sheet below 2 MEUR; you must have or be about to start a company, private individuals cannot apply.",
-      "what": "Loan of up to 250 000 SEK for a forward-looking investment that develops the company (equipment, marketing, product development, digitalisation, recruitment, liquidity). Normally no co-financing required; repayment 4 to 72 months.",
-      "amount": {
-        "text": "Up to 250 000 SEK",
-        "max": 250000,
-        "currency": "SEK"
-      },
-      "eligibility": [
-        {
-          "field": "country",
-          "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
-        },
-        {
-          "field": "legal_form",
-          "op": "in",
-          "value": [
-            "company",
-            "sole_trader"
-          ],
-          "label": "company or sole trader",
-          "question": "Is the applicant a company or a sole trader (not a private individual)?"
-        },
-        {
-          "field": "employees",
-          "op": "lte",
-          "value": 9,
-          "label": "at most 9 employees",
-          "question": "How many employees?"
-        },
-        {
-          "any": [
-            {
-              "field": "revenue_meur",
-              "op": "lt",
-              "value": 2,
-              "label": "turnover under 2 MEUR",
-              "question": "Annual turnover last fiscal year, in MEUR?"
-            },
-            {
-              "field": "balance_meur",
-              "op": "lt",
-              "value": 2,
-              "label": "balance sheet under 2 MEUR",
-              "question": "Balance sheet total, in MEUR?"
-            }
-          ],
-          "label": "turnover or balance sheet under 2 MEUR"
-        }
-      ],
-      "apply_url": "https://etjanster.almi.se/oversikt/flow/1006",
-      "status_url": "https://www.almi.se/lan-finansiering/mikrolan/",
-      "next_step": "Prepare a budget (mandatory; for a company being formed, budgets for the current and next fiscal year), then open Almi's e-service with BankID and fill in the loan application; your regional Almi company handles it. The founder clicks submit.",
-      "reference": "references/nordic-grants.md#almi-mikrolan",
-      "last_verified": "2026-10-15",
-      "notes": "Continuous, no deadline. The micro-company limit is 'max nio anställda och en årsomsättning eller balansomslutning som understiger två miljoner euro'; a company over 2 MEUR revenue but under 2 MEUR balance sheet may still qualify. 'Nej, Mikrolån kräver normalt ingen medfinansiering.' Interest set individually; Almi's rates are normally about 2-3 percentage points above bank rates, but Mikrolån can have longer term, initial amortisation-free period and lower rate than Almi's other loans. Handled by the regional Almi company."
-    },
-    {
-      "id": "almi-tillvaxtlan",
-      "name": "Almi Tillväxtlån",
-      "country": "SE",
-      "kind": "loan",
-      "need": [
-        "money"
-      ],
-      "who": "Innovative, established small and medium-sized limited companies registered in Sweden with up to 250 employees that want to grow faster than their own finances allow.",
-      "what": "Loan of up to 10 MSEK backed by a European Investment Fund guarantee under InvestEU; Almi normally finances 30 to 50 percent of the capital need. Repayment 12 to 84 months with longer term, initial amortisation-free period and lower interest than Almi's standard loans.",
-      "amount": {
-        "text": "Up to 10 000 000 SEK",
-        "max": 10000000,
-        "currency": "SEK"
-      },
-      "eligibility": [
-        {
-          "field": "country",
-          "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
-        },
-        {
-          "field": "legal_form",
-          "op": "eq",
-          "value": "company",
-          "label": "limited company",
-          "question": "Is it a limited company?"
-        },
-        {
-          "field": "employees",
-          "op": "lte",
-          "value": 250,
-          "label": "at most 250 employees",
-          "question": "How many employees?"
-        }
-      ],
-      "apply_url": "https://etjanster.almi.se/oversikt/flow/1006",
-      "status_url": "https://www.almi.se/lan-finansiering/tillvaxtlan/",
-      "next_step": "Prepare a budget, the latest annual accounts, interim figures and a liquidity forecast, then open Almi's e-service with BankID and fill in the loan application; your regional Almi company reviews it. The founder clicks submit.",
-      "reference": "references/nordic-grants.md#almi-tillvaxtlan",
-      "last_verified": "2026-10-15",
-      "notes": "Continuous, no deadline. 'Tillväxtlån är ett lån för innovativa små och medelstora aktiebolag' and 'Ett lån för etablerade och innovativa företag', so very early startups without revenue history may not fit. Almi's rates are normally about 2-3 percentage points above bank rates. Handled by the regional Almi company; each loan is an individual assessment."
-    },
-    {
-      "id": "energimyndigheten-konceptutveckling",
-      "name": "Energimyndigheten - Konceptutveckling av innovationer med affärsfokus",
-      "country": "SE",
-      "kind": "grant",
-      "need": [
-        "money"
-      ],
-      "who": "Registered small and medium-sized companies (legal entities) and universities in Sweden developing an energy-relevant innovation at TRL 2-4 with a clear business focus; there is no age limit and newly started companies may apply.",
-      "what": "Grant of up to 100 percent of eligible costs, at most 500 000 SEK, with no co-financing requirement, for concept development: assessing energy relevance, developing and verifying a prototype or MVP, clarifying commercial potential and an IP strategy. Projects run at most 12 months.",
-      "amount": {
-        "text": "Up to 500 000 SEK, up to 100 percent of eligible costs",
-        "max": 500000,
-        "currency": "SEK"
-      },
-      "eligibility": [
-        {
-          "field": "country",
-          "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
-        },
-        {
-          "field": "legal_form",
-          "op": "in",
-          "value": [
-            "company",
-            "academia"
-          ],
-          "label": "company or university",
-          "question": "Is the applicant a company or a university?"
-        }
-      ],
-      "apply_url": "https://minasidor.energimyndigheten.se/",
-      "status_url": "https://www.energimyndigheten.se/utlysningar/konceptutveckling-av-innovationer-med-affarsfokus/",
-      "next_step": "Check the status page for the current round and read the call text and the mandatory 'Ytterligare ansökningsfrågor' document, then log in to Energimyndigheten's e-service Mina sidor, fill in the application with the attachment and submit before the round's deadline. The founder clicks submit.",
-      "reference": "references/nordic-grants.md#energimyndigheten-konceptutveckling",
-      "last_verified": "2026-10-15",
-      "notes": "Not open on 2026-10-15. The call page (Senast uppdaterad 2026-04-08) still shows the spring round: 'Sista dag för ansökan 2026-06-02 23:59', decisions 'löpande under september till november 2026', project start between 15 October and 1 December 2026, at most 12 months, pool 'Cirka 10 miljoner kronor'. The programme page says the call opens twice a year, 'planerat april samt oktober', and the kommande-utlysningar page lists the next opening as October 2026 without a day. The 500 000 SEK and 100 percent figures come from the programme page utveckla-en-affarside; the spring call page gives only the total pool. One application per company per round; the applicant must own or control the solution. Almi and five other innovation environments give advice before applying but do not write the application. Re-read the status page before quoting any date."
-    },
-    {
-      "id": "energimyndigheten-verifiering-med-kund",
-      "name": "Energimyndigheten - Verifiering av innovationer med kund",
-      "country": "SE",
-      "kind": "grant",
-      "need": [
-        "money"
-      ],
-      "who": "Small and medium-sized companies in Sweden with an energy-relevant innovation at TRL 4-7, a clear business focus and at least one customer willing to sign a letter of intent; no age limit.",
-      "what": "Grant of at most 3 MSEK for developing and verifying the innovation together with a customer plus business development (business plan, financing plan, IP strategy). Co-financing is required (the programme page states at least 55 percent of total project cost), while business-development activities can be funded up to 100 percent. Projects up to 24 months.",
-      "amount": {
-        "text": "Up to 3 000 000 SEK",
-        "max": 3000000,
-        "currency": "SEK"
-      },
-      "eligibility": [
-        {
-          "field": "country",
-          "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
-        },
-        {
-          "field": "legal_form",
-          "op": "eq",
-          "value": "company",
-          "label": "limited company",
-          "question": "Is it a limited company?"
-        }
-      ],
-      "apply_url": "https://minasidor.energimyndigheten.se/",
-      "status_url": "https://www.energimyndigheten.se/utlysningar/verifiering-av-innovationer-med-kund/",
-      "next_step": "Check the status page for the current round, secure a dated and signed letter of intent from at least one customer using Energimyndigheten's template, fill in 'Ytterligare ansökningsfrågor', then log in to Mina sidor and submit before the deadline. The founder clicks submit.",
-      "reference": "references/nordic-grants.md#energimyndigheten-verifiering-med-kund",
-      "last_verified": "2026-10-15",
-      "notes": "Not open on 2026-10-15. The call page (Senast uppdaterad 2026-04-08) shows the spring round: 'Sista dag för ansökan 2026-06-02 23:59', decisions September to November 2026, project start 15 August to 1 December 2026 (recommended no earlier than 15 October), at most 24 months, pool 'Cirka 30 miljoner kronor'. Next opening planned October 2026 per the kommande-utlysningar page ('planerat april samt oktober' on the programme page), no day given. Maximum one application per company; the applicant must own or control the solution. The 55 percent co-financing figure is from the programme page verifiering-med-kund; the call page says co-financing is required without a general percentage. Re-read the status page before quoting any date."
-    },
-    {
-      "id": "innovasjon-norge-oppstartstilskudd-1",
-      "name": "Innovasjon Norge Startup grant 1 (Oppstartstilskudd 1)",
-      "country": "NO",
-      "kind": "grant",
-      "need": [
-        "money"
-      ],
-      "who": "Norwegian private limited companies (AS) less than five years old that are genuinely new businesses with growth ambitions and have completed the idea phase; sole proprietorships (ENK), general partnerships (ANS) and DA are not accepted.",
-      "what": "Grant of up to NOK 150 000 covering up to 100 percent of invoiced costs for buying services from external suppliers that give insight from customers and the market. Project period 9 months, extendable by 3.",
-      "amount": {
-        "text": "Up to NOK 150 000",
-        "max": 150000,
-        "currency": "NOK"
-      },
-      "eligibility": [
-        {
-          "field": "country",
-          "op": "eq",
-          "value": "NO",
-          "label": "Norwegian company",
-          "question": "Is the company registered in Norway?"
-        },
-        {
-          "field": "legal_form",
-          "op": "eq",
-          "value": "company",
-          "label": "limited company",
-          "question": "Is it a limited company?"
-        },
-        {
-          "field": "age_years",
-          "op": "lt",
-          "value": 5,
-          "label": "less than five years old",
-          "question": "How old is the company?"
-        }
-      ],
-      "apply_url": "https://www.innovasjonnorge.no/en/tjeneste/oppstartstilskudd-1",
-      "status_url": "https://www.innovasjonnorge.no/en/tjeneste/oppstartstilskudd-1",
-      "next_step": "Optionally get quick feedback on the idea at raskavklaring.innovasjonnorge.no, then log in to Innovation Norway's 'My page' (start.innovasjonnorge.no, the portal linked from the Startup grant 2 page), choose application type Startup and submit the application; applications are accepted on an ongoing basis. The founder clicks submit.",
-      "reference": "references/nordic-grants.md#innovasjon-norge-oppstartstilskudd-1",
-      "last_verified": "2026-10-15",
-      "notes": "Application deadline 'Ongoing'. Payment: 'You can receive up to 50% of the grant when the project starts', the rest when the project ends; 'At least 50% of the project costs must be paid upfront'. Not covered: own staff costs, related-party costs, VAT, costs before the application. Subsidiaries 50 percent or more owned by an established business are not eligible; companies with outstanding payment defaults cannot apply. The application must state other public funding sought. The page itself has no apply button; it refers to 'My page' only for reporting. Site returns 403 to curl; read via WebFetch on 2026-10-15."
-    },
-    {
-      "id": "innovasjon-norge-oppstartstilskudd-2",
-      "name": "Innovasjon Norge Startup grant 2 (Oppstartstilskudd 2)",
-      "country": "NO",
-      "kind": "grant",
-      "need": [
-        "money"
-      ],
-      "who": "Limited companies incorporated less than five years ago that are genuinely new businesses with own funding at least matching the grant; foreign applicants must establish a Norwegian AS or NUF before first payment.",
-      "what": "Grant of up to NOK 1 million covering up to 50 percent of approved project costs to clarify technical and commercial aspects, such as testing a minimum viable solution with customers and developing an IP strategy. Project period 12 months, extendable by six.",
-      "amount": {
-        "text": "Up to NOK 1 000 000, at most 50 percent of approved project costs",
-        "max": 1000000,
-        "currency": "NOK"
-      },
-      "eligibility": [
-        {
-          "field": "country",
-          "op": "eq",
-          "value": "NO",
-          "label": "Norwegian company",
-          "question": "Is the company registered in Norway?"
-        },
-        {
-          "field": "legal_form",
-          "op": "eq",
-          "value": "company",
-          "label": "limited company",
-          "question": "Is it a limited company?"
-        },
-        {
-          "field": "age_years",
-          "op": "lt",
-          "value": 5,
-          "label": "incorporated less than five years ago",
-          "question": "How many years since the company was incorporated?"
-        }
-      ],
-      "apply_url": "https://start.innovasjonnorge.no/",
-      "status_url": "https://www.innovasjonnorge.no/en/tjeneste/oppstartstilskudd-2",
-      "next_step": "Secure own funding at least matching the grant, then go to 'My page' at start.innovasjonnorge.no, start a Startup application and submit it; applications are accepted on an ongoing basis. The founder clicks submit.",
-      "reference": "references/nordic-grants.md#innovasjon-norge-oppstartstilskudd-2",
-      "last_verified": "2026-10-15",
-      "notes": "Application deadline 'Ongoing'. 'In 2026, the funding available for Startup Grant 2 has been reduced by 60%.' Costs incurred before the application is submitted are not funded. The startup may be owned by a holding company older than five years; subsidiaries 50 percent or more owned by an established business are not eligible; a shareholder owning 25-50 percent must run a separate business; outstanding payment defaults disqualify. The page does not require Startup grant 1 to have been completed first. Extension of six months, at most 18 in total. Site returns 403 to curl; read via WebFetch on 2026-10-15."
-    },
-    {
-      "id": "business-finland-sprint",
-      "name": "Business Finland Sprint Grant",
-      "country": "FI",
-      "kind": "grant",
-      "need": [
-        "money"
-      ],
-      "who": "Finnish limited liability companies with a Finnish Business ID, fewer than 50 employees and turnover or balance sheet at most 10 MEUR, a committed team of at least two people working in Finland and at least 50 000 EUR of equity financing on the balance sheet, developing innovative solutions for international markets.",
-      "what": "De minimis grant covering 75 percent of a project with estimated cost 100 000-133 334 EUR, i.e. 75 000-100 000 EUR, for a project where at least two thirds of the cost is research and development.",
-      "amount": {
-        "text": "75 000 to 100 000 EUR (75 percent of a 100 000-133 334 EUR project)",
-        "min": 75000,
-        "max": 100000,
-        "currency": "EUR"
-      },
-      "eligibility": [
-        {
-          "field": "country",
-          "op": "eq",
-          "value": "FI",
-          "label": "Finnish company",
-          "question": "Is the company registered in Finland?"
-        },
-        {
-          "field": "legal_form",
-          "op": "eq",
-          "value": "company",
-          "label": "limited company",
-          "question": "Is it a limited company?"
-        },
-        {
-          "field": "employees",
-          "op": "lt",
-          "value": 50,
-          "label": "fewer than 50 employees",
-          "question": "How many employees?"
-        },
-        {
-          "any": [
-            {
-              "field": "revenue_meur",
-              "op": "lte",
-              "value": 10,
-              "label": "turnover at most 10 MEUR",
-              "question": "Annual turnover last fiscal year, in MEUR?"
-            },
-            {
-              "field": "balance_meur",
-              "op": "lte",
-              "value": 10,
-              "label": "balance sheet at most 10 MEUR",
-              "question": "Balance sheet total, in MEUR?"
-            }
-          ],
-          "label": "turnover or balance sheet at most 10 MEUR"
-        }
-      ],
-      "apply_url": "https://www.businessfinland.fi/en/services/funding/funding-e-service/",
-      "status_url": "https://www.businessfinland.fi/en/services/funding/calls/2026/ongoing-sprint-grant-funding/",
-      "next_step": "Register in My Business Finland, book a meeting with a Business Finland expert, and only after that meeting submit the Sprint application in the Funding e-service. The founder clicks submit.",
-      "reference": "references/nordic-grants.md#business-finland-sprint",
-      "last_verified": "2026-10-15",
-      "notes": "Open on 2026-10-15: status 'Ongoing', 'Continuous call from September 1, 2026', page updated 21.8.2026, decisions made continuously. Aimed at companies under five years that have not previously received Business Finland funding; companies five years or older must show 'a significant change in direction in their business based on innovation', so age is not encoded as a hard rule. Operational, sales and marketing activities and production investments are excluded. The balance-sheet alternative to the 10 MEUR turnover limit and the 50 000 EUR equity requirement are not encoded (no matching schema fields). Tempo no longer appears on the Startup funding page; Sprint, R&D funding and the Deep Tech Accelerator are listed instead."
-    },
-    {
-      "id": "business-finland-rd-funding",
-      "name": "Business Finland Research, development and piloting funding",
-      "country": "FI",
-      "kind": "loan",
-      "need": [
-        "money"
-      ],
-      "who": "Companies registered in Finland regardless of legal form (not natural persons, sole traders or companies in difficulty) with a permanent place of business, a Finnish business ID, a committed team of at least two people working in Finland and the means to cover costs before payment.",
-      "what": "Loans for development and pilot projects at 50 percent of eligible costs, up to 70 percent for SMEs and mid-caps where justified; grants for research projects of up to 50 percent for SMEs. Listed on the Startup funding page as one of three products for companies under five years.",
-      "amount": {
-        "text": "Amount not published on the page; loan at 50 percent of eligible costs, up to 70 percent for SMEs where justified"
-      },
-      "eligibility": [
-        {
-          "field": "country",
-          "op": "eq",
-          "value": "FI",
-          "label": "Finnish company",
-          "question": "Is the company registered in Finland?"
-        },
-        {
-          "field": "legal_form",
-          "op": "eq",
-          "value": "company",
-          "label": "limited company",
-          "question": "Is it a limited company?"
-        }
-      ],
-      "apply_url": "https://www.businessfinland.fi/en/services/funding/funding-e-service/",
-      "status_url": "https://www.businessfinland.fi/en/services/funding/calls/2026/research-development-and-piloting/",
-      "next_step": "Review the call page, then have a person who may represent the company alone (per the Trade Register) or who holds the Suomi.fi authorisation 'Applying for corporate financing' create and submit the application in the Funding e-service. The founder clicks submit.",
-      "reference": "references/nordic-grants.md#business-finland-rd-funding",
-      "last_verified": "2026-10-15",
-      "notes": "Open on 2026-10-15: status 'Ongoing', 'Applications are processed continuously', updated 22.9.2026. 'The amount of funding to be granted is set in the Government's annual budget.' Kind is set to loan because development and pilot projects, the typical startup case, are funded with loans; research projects get grants (SMEs up to 50 percent, mid-cap and large companies up to 40 percent). Business Finland funding is 'competitive and discretionary'."
-    },
-    {
-      "id": "business-finland-deep-tech-accelerator",
-      "name": "Business Finland Deep Tech Accelerator (DTA)",
-      "country": "FI",
-      "kind": "grant",
-      "need": [
-        "money"
-      ],
-      "who": "Finnish limited liability companies less than five years old at the first-phase decision, with fewer than 50 employees and net sales or balance sheet at most 10 MEUR, at least one full financial year, at least 10 percent of total costs spent on R&D in one of the previous three years, and self-financing for the whole phase.",
-      "what": "Three phases of EUR 400 000 each (the first two grants, the third a loan), Business Finland covering 75 percent of approved costs; each phase 12-18 months; at most six deep-tech startups selected per call.",
-      "amount": {
-        "text": "EUR 400 000 per phase (three phases; the 2026 call funds phase 1 against estimated costs of EUR 533 334), 75 percent of approved costs",
-        "max": 400000,
-        "currency": "EUR"
-      },
-      "eligibility": [
-        {
-          "field": "country",
-          "op": "eq",
-          "value": "FI",
-          "label": "Finnish company",
-          "question": "Is the company registered in Finland?"
-        },
-        {
-          "field": "legal_form",
-          "op": "eq",
-          "value": "company",
-          "label": "limited company",
-          "question": "Is it a limited company?"
-        },
-        {
-          "field": "age_years",
-          "op": "lt",
-          "value": 5,
-          "label": "less than five years old",
-          "question": "How old is the company?"
-        },
-        {
-          "field": "employees",
-          "op": "lt",
-          "value": 50,
-          "label": "fewer than 50 employees",
-          "question": "How many employees?"
-        },
-        {
-          "any": [
-            {
-              "field": "revenue_meur",
-              "op": "lte",
-              "value": 10,
-              "label": "turnover at most 10 MEUR",
-              "question": "Annual turnover last fiscal year, in MEUR?"
-            },
-            {
-              "field": "balance_meur",
-              "op": "lte",
-              "value": 10,
-              "label": "balance sheet at most 10 MEUR",
-              "question": "Balance sheet total, in MEUR?"
-            }
-          ],
-          "label": "turnover or balance sheet at most 10 MEUR"
-        }
-      ],
-      "apply_url": "https://www.businessfinland.fi/en/services/funding/funding-e-service/",
-      "status_url": "https://www.businessfinland.fi/en/services/funding/calls/2026/dta-funding-call-2026/",
-      "next_step": "Wait for the next DTA call to be announced on the DTA page, secure the company's total financing for phase 1, then submit the application on the Young Innovative Company template with appendices in the Funding e-service well before the announced deadline. The founder clicks submit.",
-      "reference": "references/nordic-grants.md#business-finland-deep-tech-accelerator",
-      "last_verified": "2026-10-15",
-      "notes": "Closed on 2026-10-15: the 2026 call page shows status 'Ended' and application period '11.5.-16.8.2026' ('by 16 August 2026 at 11:59 PM'); the money for phase 1 had to be in the account by 2 September 2026. The DTA page says 'In 2026, one call for applications will be organised and upcoming calls will be announced on this page'; no next date is published. The company must belong to the prepayment and employer registers; costs are accepted until the company turns eight. Phase 3 loan has a 30 percent advance. The balance-sheet alternative to the 10 MEUR net-sales limit is not encoded."
-    },
-    {
-      "id": "innovationsfonden-innofounder",
-      "name": "Innovationsfonden InnoFounder",
-      "country": "DK",
-      "kind": "grant",
-      "need": [
-        "money"
-      ],
-      "who": "Founders, individually or in teams of up to three, who have completed at least 120 ECTS of higher education, own at least 12.5 percent of the company, work at least 37 hours a week in it during the programme and have at most 10 hours a week of other study or paid work; the company needs a Danish CVR number before the programme begins.",
-      "what": "12-month full-time programme with a monthly grant of DKK 27 500 per founder, a development grant of up to DKK 100 000, and guidance from mentors and other entrepreneurs.",
-      "amount": {
-        "text": "DKK 27 500 per founder per month for 12 months, plus up to DKK 100 000 development grant",
-        "currency": "DKK"
-      },
-      "eligibility": [
-        {
-          "field": "country",
-          "op": "eq",
-          "value": "DK",
-          "label": "Danish company",
-          "question": "Is the company registered in Denmark?"
-        }
-      ],
-      "apply_url": "https://www.e-grant.dk/",
-      "status_url": "https://danmarksinnovationsfond.dk/en/programmes/innofounder/",
-      "next_step": "Watch the status page for the next call; when it opens, write the application in Danish or English in the e-grant system (www.e-grant.dk) and submit before the deadline, since no changes are possible afterwards. The founder clicks submit.",
-      "reference": "references/nordic-grants.md#innovationsfonden-innofounder",
-      "last_verified": "2026-10-15",
-      "notes": "No call open on 2026-10-15: 'There are currently no calls available'; no next call date on the page. 'You do not need to have a CVR number when applying' but the company must be established with a Danish CVR number before the programme begins, so no legal_form rule is encoded. The education, ownership and working-time requirements have no schema fields and are hard requirements to check manually. The old URL innovationsfonden.dk/en/p/innofounder redirects (301) to danmarksinnovationsfond.dk; curl returns HTTP 454, read via WebFetch."
-    },
-    {
-      "id": "rannis-frae",
-      "name": "Rannís Technology Development Fund - Fræ seed grant",
-      "country": "IS",
-      "kind": "grant",
-      "need": [
-        "money"
-      ],
-      "who": "Companies under five years old, and individuals, in Iceland with a project in the planning stage (Fræ) or a cooperative development project (Thróunarfræ).",
-      "what": "Seed grant of up to ISK 2 million with no matching funds required; a report on the project's results is due within 12 months of project start.",
-      "amount": {
-        "text": "Up to ISK 2 000 000",
-        "max": 2000000,
-        "currency": "ISK"
-      },
-      "eligibility": [
-        {
-          "field": "country",
-          "op": "eq",
-          "value": "IS",
-          "label": "Icelandic applicant",
-          "question": "Is the company or applicant based in Iceland?"
-        },
-        {
-          "any": [
-            {
-              "field": "legal_form",
-              "op": "eq",
-              "value": "none",
-              "label": "individual applicant",
-              "question": "Are you applying as an individual without a company?"
-            },
-            {
-              "field": "age_years",
-              "op": "lt",
-              "value": 5,
-              "label": "company under five years",
-              "question": "How old is the company?"
-            }
-          ],
-          "label": "individual, or company under five years old"
-        }
-      ],
-      "apply_url": "https://island.is/en/grants-plaza/grant/1-42",
-      "status_url": "https://island.is/en/grants-plaza/grant/1-42",
-      "next_step": "Open the grant page on Ísland.is, click Apply to log in to the Rannís online application portal, fill in the Fræ application and submit; applications are accepted at any time. The founder clicks submit.",
-      "reference": "references/nordic-grants.md#rannis-frae",
-      "last_verified": "2026-10-15",
-      "notes": "Open on 2026-10-15: 'Open for applications / Always open'; 'Applications may be made at any time. Submitted applications are evaluated and grant awards are announced at least twice a year.' Rules and instructions for Fræ and Thróunarfræ are in Icelandic. Contact taeknithrounarsjodur@rannis.is. The fund's other categories (Sprout, Growth, Market grants) had the window 04.08.2026-15.09.2026 and were closed on the fund page; Patent grants are also always open. www.rannis.is redirects (301) to island.is/redirects/www.rannis.is/."
     },
     {
       "id": "sting-core",
@@ -2272,12 +2272,12 @@
           "question": "Which sectors does the company work in?"
         }
       ],
-      "apply_url": "https://outlook.office365.com/owa/calendar/Bookings.OpenCoaching1@Chalmers.onmicrosoft.com/bookings/",
+      "apply_url": "https://chalmersventures.com/program/",
       "status_url": "https://chalmersventures.com/program/",
       "next_step": "The page's 'APPLY NOW' link was broken on 2026-10-15, so book a 15-minute Open Coaching slot (Tuesdays 15:00-16:00, Zoom) through the Bookings page and describe the idea, or email info@chalmersventures.com. The founder clicks book.",
       "reference": "references/accelerators-se.md#chalmers-ventures-venture-building",
       "last_verified": "2026-10-15",
-      "notes": "Both 'APPLY NOW' buttons link to chalmersventures.com/game-changer-challenge/, which returned HTTP 404 on 2026-10-15. Open Coaching is for 'Individuals and teams located in the VGR-region' with a connection to Swedish projects or companies. Tracks: Tech Transfer (for Chalmers researchers; patent financing and commercialisation support, contact david@chalmersventures.com), Tech Matching for Encubation ('Application period is now closed and scheduled re-open in march 2027'; tech owners are matched with Chalmers School of Entrepreneurship students for a project year, then investment if validation succeeds), Startup Camp Deep Tech 2026 (own record). No equity terms, stage split or deadlines published. Gothenburg."
+      "notes": "Both 'APPLY NOW' buttons link to chalmersventures.com/game-changer-challenge/, which returned HTTP 404 on 2026-10-15. Open Coaching is for 'Individuals and teams located in the VGR-region' with a connection to Swedish projects or companies. Tracks: Tech Transfer (for Chalmers researchers; patent financing and commercialisation support, contact david@chalmersventures.com), Tech Matching for Encubation ('Application period is now closed and scheduled re-open in march 2027'; tech owners are matched with Chalmers School of Entrepreneurship students for a project year, then investment if validation succeeds), Startup Camp Deep Tech 2026 (own record). No equity terms, stage split or deadlines published. Gothenburg. The Open Coaching booking page on outlook.office365.com refuses automated clients (417); reach it from the program page."
     },
     {
       "id": "minc-incubator",
