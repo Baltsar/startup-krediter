@@ -1,3 +1,128 @@
 {
-  "programs": []
+  "programs": [
+    {
+      "id": "eic-accelerator",
+      "name": "EIC Accelerator",
+      "country": "EU",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "A single start-up or SME (including spin-outs) from an EU Member State or a Horizon Europe associated country, or a person about to set one up; small mid-caps with up to 499 employees may apply for investment only.",
+      "what": "Blended finance for TRL 6-8 innovation: a lump-sum grant component below EUR 2.5 million (to be completed within 24 months) plus an equity or quasi-equity investment component of EUR 1-10 million, or grant only or investment only, together with EIC Business Acceleration Services (coaching, mentoring, investor and partner access).",
+      "amount": {
+        "text": "Grant component below EUR 2.5 million (lump sum); investment component EUR 1-10 million",
+        "max": 2500000,
+        "currency": "EUR"
+      },
+      "eligibility": [
+        {
+          "any": [
+            {
+              "field": "legal_form",
+              "op": "eq",
+              "value": "company",
+              "label": "a single company (start-up or SME)",
+              "question": "Is the applicant a registered company?"
+            },
+            {
+              "field": "legal_form",
+              "op": "eq",
+              "value": "none",
+              "label": "a founder about to set up a company",
+              "question": "Are you a natural person intending to set up an SME?"
+            }
+          ],
+          "label": "single company or founder about to incorporate"
+        },
+        {
+          "field": "employees",
+          "op": "lt",
+          "value": 250,
+          "label": "fewer than 250 employees (SME; mid-caps up to 499 get investment only)",
+          "question": "How many employees does the company have?"
+        },
+        {
+          "any": [
+            {
+              "field": "revenue_meur",
+              "op": "lte",
+              "value": 50,
+              "label": "turnover at most 50 MEUR",
+              "question": "Annual turnover last fiscal year, in MEUR?"
+            },
+            {
+              "field": "balance_meur",
+              "op": "lte",
+              "value": 43,
+              "label": "balance sheet at most 43 MEUR",
+              "question": "Balance sheet total, in MEUR?"
+            }
+          ],
+          "label": "turnover at most 50 MEUR or balance sheet at most 43 MEUR (EU SME definition)"
+        }
+      ],
+      "apply_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2026-ACCELERATOR-01",
+      "status_url": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en",
+      "next_step": "Step 1: write the short application (12-page form, pitch deck of up to ten slides, three-minute video pitch) on the EU Funding and Tenders portal under topic HORIZON-EIC-2026-ACCELERATOR-01; short proposals may be submitted at any time and are batched every first Tuesday of the month at 17:00 Brussels time, with feedback in about 4-6 weeks. On a GO, Step 2: prepare the full application (20-page form, pitch deck, implementation plan, financial information, letters of intent, FTO analysis, three-minute video) and submit it to a batching date; the last 2026 cut-off on the page is 4 November 2026 at 17:00 Brussels time. Step 3: pitch to the EIC Jury if invited. The founder, as the company's account holder on the portal, clicks submit.",
+      "reference": "references/eu-grants.md#eic-accelerator",
+      "last_verified": "2026-10-15",
+      "notes": "Four-step process: short application (any time, batched first Tuesday monthly), full application (2026 batching dates written on the page as 7/01/2026, 04/03/2026, 06/05/2026, 08/07/2026, 02/09/2026, 04/11/2026, all 17:00 Brussels time; remote result in 8-9 weeks), interview with the EIC Jury (an interview session is organised after each second batch; results 2-3 weeks after the interview week), then grant agreement signature and due diligence for the investment component (decided within 2-6 months). Only one application at a time; a new one only after results of the previous. Grant only is provided once per company during Horizon Europe 2021-2027. Mid-caps (up to 499 employees) can apply for investment only; UK applicants grant only; third-country applicants must relocate before Step 2. Two strands: Accelerator Open (any field of technology, EUR 414 million budget in 2026) and Accelerator Challenges (pre-defined topics, EUR 220 million in 2026). Top-ranked full proposals corresponding to 2.5 times the available grant budget are invited to interview; proposals above the 13/15 threshold that are not funded receive a Seal of Excellence. Fast Track (existing Horizon projects) and Plug-In (certified national programmes) schemes go straight to the full application stage. The page does not state an open or closed status; it lists the 2026 cut-offs and links to the portal topic. Re-read the status page before quoting any 2027 date."
+    },
+    {
+      "id": "eurostars",
+      "name": "Eurostars",
+      "country": "EU",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "A consortium of at least two independent organisations from at least two Eurostars countries, led by an innovative SME from a Eurostars country; Sweden, Norway, Denmark, Finland and Iceland all participate.",
+      "what": "A national R&D grant for an international collaborative project of up to 36 months, evaluated centrally by Eureka but paid to each partner by its own national funding body under national rules: Vinnova in Sweden, the Research Council of Norway, Business Finland, Innovation Fund Denmark and Rannís in Iceland.",
+      "amount": {
+        "text": "No central amount; each partner is funded by its national agency. Sweden (Vinnova): up to 50% of project costs for SMEs, maximum 5 million SEK per project. Norway (Research Council of Norway): up to 50% of project costs for SMEs. Finland (Business Finland): 50% of eligible costs for growth-oriented SMEs, no stated cap. Denmark (Innovation Fund Denmark): maximum 300 000 EUR per participant. Iceland (Rannís): maximum 45 million ISK per project."
+      },
+      "eligibility": [
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "company (the consortium lead must be an SME)",
+          "question": "Is the applicant a registered company?"
+        },
+        {
+          "field": "employees",
+          "op": "lt",
+          "value": 250,
+          "label": "fewer than 250 employees (SME lead)",
+          "question": "How many employees does the company have?"
+        },
+        {
+          "any": [
+            {
+              "field": "revenue_meur",
+              "op": "lte",
+              "value": 50,
+              "label": "turnover at most 50 MEUR",
+              "question": "Annual turnover last fiscal year, in MEUR?"
+            },
+            {
+              "field": "balance_meur",
+              "op": "lte",
+              "value": 43,
+              "label": "balance sheet at most 43 MEUR",
+              "question": "Balance sheet total, in MEUR?"
+            }
+          ],
+          "label": "turnover at most 50 MEUR or balance sheet at most 43 MEUR (EU SME definition)"
+        }
+      ],
+      "apply_url": "https://www.eurekanetwork.org/programmes-and-calls/eurostars/eurostars-call-12-for-projects-deadline-march-2027/",
+      "status_url": "https://www.eurekanetwork.org/programmes/eurostars",
+      "next_step": "Read the current call page and your national funding body's rules (Vinnova for Sweden, Research Council of Norway, Business Finland, Innovation Fund Denmark, Rannís for Iceland), build a consortium of at least two independent organisations from at least two Eurostars countries with your SME as leader, then register on the Eureka project platform (myeurekaproject.org) and fill in the international application while Call 12 is open, 17 December 2026 to 4 March 2027 14:00 Brussels time. Swedish, Finnish and Danish partners also file a national application with their agency. The founder, as lead applicant, clicks submit on the platform.",
+      "reference": "references/eu-grants.md#eurostars",
+      "last_verified": "2026-10-15",
+      "notes": "No Eurostars call is open on 2026-10-15: the Eureka open-calls listing shows no Eurostars call, and Call 12 opens 17 December 2026 with deadline 4 March 2027 14:00 CET; calls are usually organised twice a year. Seven international eligibility criteria: SME lead from a Eurostars country; at least two independent entities; at least two Eurostars countries with at least one organisation from an EU or Horizon Europe associated country; SMEs from Eurostars countries carry 50% or more of the budget excluding subcontracting; no single participant or country above 70% of the budget; duration 36 months or less; exclusive focus on civil applications. Funding is decentralised: Eureka pays nothing, each partner's national funding body pays under national rules and may cap amounts. National details for Call 12 were marked as being confirmed and subject to change before the call opens. Sweden: Vinnova funds SMEs up to 50% of costs, max 5 MSEK per project; Swedish participants submit a national application to Vinnova after a positive evaluation; Vinnova checks the latest registered annual report and credit reports. Finland: Business Finland requires a parallel national application with attachments when the Eurostars application is submitted. Denmark: IFD max 300 000 EUR per participant (500 000 EUR for several Danish participants, min 50 000 EUR); upload the application to e-grant within 14 days after the deadline. Norway: the funder is the Research Council of Norway, not Innovasjon Norge. Iceland: Rannís, max 45 MISK per project. Greece, Israel, Italy and Brussels have no budget for this call."
+    }
+  ]
 }
