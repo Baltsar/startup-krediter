@@ -295,6 +295,367 @@
       "reference": "references/ai-api-credits.md#runpod-startup-program",
       "last_verified": "2026-10-15",
       "notes": "Application form was live on 2026-10-15. Selective program; venture backing is strongly preferred but the FAQ says every application is reviewed holistically, so it is not encoded as a hard rule. Primarily for new customers; existing customers below the Growth threshold are judged case by case. The Growth tier is a credit match: you deposit 50 000 USD under a 12-month agreement and Runpod adds 25 000 USD once, with no reload. Best fit stated on the page: Growth for Seed to Series B+ startups spending or ready to spend 5 000 to 25 000+ USD per month on GPUs; Starter for pre-Series A startups with working products. Separate Creator Program and academic research offer exist."
+    },
+    {
+      "id": "aws-activate",
+      "name": "AWS Activate Credits",
+      "country": "global",
+      "kind": "cloud_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "Startups from self-funded to pre-Series B, founded in the last 10 years, with an AWS account on a paid tier plan and either new to Activate Credits or asking for more than they received before.",
+      "what": "Promotional AWS credits in two self-applied tiers: Activate Founders for bootstrapped or self-funded startups, and Activate Portfolio for startups that hold an Organization ID from an Activate Provider (accelerator, angel investor or VC firm). An invite-only AI tier sits above Portfolio.",
+      "amount": {
+        "text": "Activate Founders (self-funded) up to 5 000 USD, starting at 1 000 USD; Activate Portfolio (pre-Series B, with an Activate Provider Org ID) up to 200 000 USD; AWS Credits for AI Startups 200 000 USD+ by invitation only",
+        "max": 200000,
+        "currency": "USD"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "aws",
+          "label": "uses AWS",
+          "question": "Do you run on AWS?"
+        },
+        {
+          "field": "age_years",
+          "op": "lte",
+          "value": 10,
+          "label": "founded in the last 10 years",
+          "question": "How many years ago was the company founded?"
+        },
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "idea",
+            "pre_seed",
+            "seed",
+            "series_a"
+          ],
+          "label": "pre-Series B",
+          "question": "What is the company's latest funding stage?"
+        }
+      ],
+      "apply_url": "https://aws.amazon.com/startups/join?destination=/credits/apply",
+      "status_url": "https://aws.amazon.com/startups/credits/",
+      "next_step": "Create an AWS Builder ID with a professional email at https://aws.amazon.com/startups/join?destination=/credits/apply, choose Activate Founders (self-funded) or Activate Portfolio (enter the Org ID from your accelerator, angel or VC), describe the product, funding stage and company, link an AWS account, and the founder clicks submit. AWS answers within 5-10 business days.",
+      "reference": "references/cloud-credits.md#aws-activate",
+      "last_verified": "2026-10-15",
+      "notes": "Three tiers on 2026-10-15: Activate Founders (self-funded) starts at 1 000 USD and select participants may qualify for up to 5 000 USD; Activate Portfolio (pre-Series B) up to 200 000 USD but only with an Organization ID from an Activate Provider, so the Portfolio tier is partner-locked (thousands of VC firms and accelerators are providers, e.g. Andreessen Horowitz, Sequoia, Y Combinator; list at https://aws.amazon.com/startups/providers); AWS Credits for AI Startups 200 000 USD+ is invite only after Portfolio, via the account manager. General eligibility as written: pre-Series B, founded in the last 10 years, AWS Account on Paid Tier Plan, and either new to Activate Credits or requesting more credits than previously received. Credits are in USD and subject to the AWS Promotional Credit Terms (https://aws.amazon.com/activate/terms/); the page does not state an expiry period. Kiro Startup Credits exist for eligible startups without current Activate Credits. Applications were open on 2026-10-15 (Apply now buttons live)."
+    },
+    {
+      "id": "google-cloud-startup",
+      "name": "Google for Startups Cloud Program",
+      "country": "global",
+      "kind": "cloud_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "Digital-native technology startups from pre-funded to Series A, founded within the last 5 years (Start tier: last 24 months), applying with a business email on the company's own website domain. The Scale tier needs recent equity funding from an institutional investor.",
+      "what": "Google Cloud credits in two tiers: Start for pre-funded startups with a working MVP, and Scale for VC-funded startups, with an AI-first variant of Scale that adds credits for startups building their product on Gemini. Credits cover Google Cloud services including Gemini models, not third-party services or Marketplace.",
+      "amount": {
+        "text": "Start tier 2 000 USD; Scale tier up to 200 000 USD over 2 years (year 1: 100% up to 100 000 USD; year 2: 20% of spend up to a further 100 000 USD); AI-first Scale up to 350 000 USD (year 1: 100% up to 250 000 USD; year 2 as above)",
+        "max": 350000,
+        "currency": "USD"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "gcp",
+          "label": "uses Google Cloud",
+          "question": "Do you run on Google Cloud?"
+        },
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "idea",
+            "pre_seed",
+            "seed",
+            "series_a"
+          ],
+          "label": "pre-funded to Series A",
+          "question": "What is the company's latest funding stage?"
+        },
+        {
+          "field": "age_years",
+          "op": "lte",
+          "value": 5,
+          "label": "founded within the last 5 years (Start tier: 24 months)",
+          "question": "How many years ago was the company founded?"
+        },
+        {
+          "field": "has_website",
+          "op": "eq",
+          "value": true,
+          "label": "public website",
+          "question": "Does the company have a public website on its own domain?"
+        },
+        {
+          "field": "has_work_email",
+          "op": "eq",
+          "value": true,
+          "label": "business email matching the website domain",
+          "question": "Do you have a business email on the same domain as the website?"
+        }
+      ],
+      "apply_url": "https://cloud.google.com/startup/apply",
+      "status_url": "https://cloud.google.com/startup",
+      "next_step": "Create a Google Cloud account and copy its 18-character billing account ID, then open https://cloud.google.com/startup/apply, sign in with Google, apply with the business email that matches your website domain, let Google match you to the Start or Scale tier, and the founder clicks submit. Most answers come within a few business days; manual review can take 10 days or more.",
+      "reference": "references/cloud-credits.md#google-cloud-startup",
+      "last_verified": "2026-10-15",
+      "notes": "Start tier (https://cloud.google.com/startup/pre-funded): digital-native startups with a working MVP, a clear business model and plans to seek venture funding soon; founded within the last 24 months; no Google Cloud credits beyond the free trial; 2 000 USD plus 12 months Google Workspace Business Plus and 200 USD Google Skills credits. Scale tier (https://cloud.google.com/startup/early-stage): recent startup equity funding from pre-seed to Series A by an institutional investor or common Web3 funding sources (SAFEs count; private equity, government innovation grants, prize funding, crowdfunding, angel and friends-and-family money do not qualify for Scale but may for Start); founded within the last 5 years; not more than 5 000 USD in prior Google Cloud credits; funding verification if in stealth. Scale adds 12 000 USD Enhanced Support credits for one year, 12 months Workspace Business Plus, 600 USD per month Google Maps credit for one year and 500 USD Skills credits. AI-first variant (https://cloud.google.com/startup/ai): uses or plans to use Gemini as the foundation of the primary product; pre-seed/seed rounds within the last five years and Series A within the last 12 months. Series B+ startups get custom solutions, not program credits. FAQ exclusions: companies that have IPO'd or been acquired, educational institutions, government entities, nonprofits, personal blogs or content, dev shops. The apply page requires a Google sign-in. Applications open on 2026-10-15."
+    },
+    {
+      "id": "microsoft-for-startups",
+      "name": "Microsoft for Startups",
+      "country": "global",
+      "kind": "cloud_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "Privately held, for-profit startups that own a software product, are headquartered where Azure is available, have not raised Series C or later and have received under 350 000 USD in lifetime free Azure credits. Not for educational institutions, government, consultancies, agencies or crypto mining.",
+      "what": "Azure Startup credits that unlock progressively: a small self-serve grant for any startup that applies, and a larger investor offer for startups with a referral code from a Microsoft for Startups Investor Network partner, growing with verified progress and Azure usage. Credits are valid up to two years once activated.",
+      "amount": {
+        "text": "Without an investor code: 1 000 USD for 90 days, then a further 4 000 USD for 180 days after business verification; investor offer (referral code): most startups begin with 100 000 USD; up to 150 000 USD unlocked over time, Investor Network-backed startups may unlock more",
+        "max": 150000,
+        "currency": "USD"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "azure",
+          "label": "uses Azure",
+          "question": "Do you run on Azure?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "privately held, for-profit company",
+          "question": "Is the applicant a privately held, for-profit company?"
+        }
+      ],
+      "apply_url": "https://www.microsoft.com/en-us/startups",
+      "status_url": "https://learn.microsoft.com/en-us/startups/microsoft-for-startups/overview",
+      "next_step": "Open https://www.microsoft.com/en-us/startups, click Get started now and sign in with a Microsoft account; enter your investor's 10-character referral code if you have one (or continue without a code for the 1 000 USD starter credits), verify email and phone, fill in the registered company name, industry, website and address, set up the Azure account with a payment card, and the founder clicks submit. Decisions arrive by email within about three business days.",
+      "reference": "references/cloud-credits.md#microsoft-for-startups",
+      "last_verified": "2026-10-15",
+      "notes": "Program restructured: startups that joined on or after 2026-05-29 apply and activate through the Azure portal (the Get started button on microsoft.com/en-us/startups leads to portal.azure.com); earlier members use portal.startups.microsoft.com. Eligibility as written on the Learn overview (updated 2026-08-05): software product owned by the company; privately held and for-profit; HQ in a country where Azure is available; not more than 350 000 USD in lifetime free Azure credits; not Series C or later; not an educational institution, government organization, consultancy or agency; no cryptocurrency mining. The top tier is partner-locked: the investor offer requires a referral code from an Investor Network partner (investor, accelerator, incubator, angel network, university); Microsoft does not publish the partner list, ask your VC or accelerator. Credits must be activated within 90 days of accepting the program agreement and are valid up to two years, no extensions; a credit card is required; credits cannot be transferred between Microsoft accounts. The investor offer also includes Azure Standard Support, technical experts, go-to-market support and discounts such as GitHub Enterprise, LinkedIn Premium Business and Microsoft 365 Business Premium. Applications open on 2026-10-15."
+    },
+    {
+      "id": "cloudflare-for-startups",
+      "name": "Cloudflare for Startups",
+      "country": "global",
+      "kind": "cloud_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "For-profit technology startups incorporated within the last 10 years, funded up to Series B (self-funded accepted at the lowest tier), with a live public website, a public presence on LinkedIn, X or GitHub and a business email on their own domain; first-time applicants only.",
+      "what": "Cloudflare credits for one year across the developer platform (Workers, R2, D1, KV, Queues, Vectorize, Pages, Images, Stream, Workers AI and more) in three tiers set by funding raised; core security and networking features are included at no cost on every tier.",
+      "amount": {
+        "text": "Tier 3 10 000 USD (bootstrapped or self-funded, under 1 MUSD raised); Tier 2 100 000 USD (under 5 MUSD raised, funded by an affiliated partner); Tier 1 350 000 USD (5 MUSD+ raised, funded by an affiliated partner)",
+        "max": 350000,
+        "currency": "USD"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "cloudflare",
+          "label": "uses Cloudflare",
+          "question": "Do you run on Cloudflare?"
+        },
+        {
+          "field": "age_years",
+          "op": "lte",
+          "value": 10,
+          "label": "incorporated within the last 10 years",
+          "question": "How many years ago was the company incorporated?"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company",
+          "label": "for-profit business",
+          "question": "Is the applicant a for-profit company?"
+        },
+        {
+          "field": "has_website",
+          "op": "eq",
+          "value": true,
+          "label": "live, publicly accessible website",
+          "question": "Does the company have a live public website?"
+        },
+        {
+          "field": "has_work_email",
+          "op": "eq",
+          "value": true,
+          "label": "business email matching the domain",
+          "question": "Do you have a business email on the company's own domain?"
+        }
+      ],
+      "apply_url": "https://www.cloudflare.com/lp/startups",
+      "status_url": "https://www.cloudflare.com/startups/",
+      "next_step": "Fill in the application form at https://www.cloudflare.com/lp/startups with your business email, website, social profile and funding details (name the affiliated partner for Tier 2 or Tier 1), and the founder clicks submit. Review typically takes up to 48 hours and approval comes by email.",
+      "reference": "references/cloud-credits.md#cloudflare-for-startups",
+      "last_verified": "2026-10-15",
+      "notes": "Tier 2 and Tier 1 require funding from an affiliated partner (partner list on the program page), so the top tiers are partner-locked; self-funded startups go in at Tier 3. The page lists all of these as required: founded within the last 10 years; funded up to Series B; funded within the last 12 months; actively developing a technology product; live public website; active on LinkedIn, X or GitHub; not previously approved into the program; for-profit business with a business email matching the domain. Credits are valid for one year or until consumed, whichever comes first, and extensions are not approved. Caps: R2 up to 10 000 USD; Workers AI up to 2 500 USD (Tier 3), 10 000 USD (Tier 2) or 50 000 USD (Tier 1). Not covered: AI Gateway (temporarily), registrar services, enterprise feature add-ons, Magic Transit, Enterprise Spectrum, Dedicated IPs and the China Network. Not eligible: educational institutions, personal blogs, consultancies, service agencies, MSPs, resellers and existing enterprise customers. Tiers were recently raised (Tier 3 from 5 000 to 10 000 USD, Tier 1 from 250 000 to 350 000 USD); existing members near their cap can request an upgrade evaluation. The apply page returns HTTP 403 to automated fetches; a human in a browser reaches it. Questions to startups@cloudflare.com. Applications open on 2026-10-15."
+    },
+    {
+      "id": "vercel-for-startups",
+      "name": "Vercel for Startups",
+      "country": "global",
+      "kind": "cloud_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "Startups backed by an approved Vercel Startup Partner (an accelerator or VC on Vercel's list), that have raised a Series A or less, apply within 12 months of their latest round, have a company website and matching email, and have not received Vercel for Startups credits before.",
+      "what": "An enterprise-grade contract with a Flexible Commitment Amount usable across Vercel products (seats, data transfer, compute, AI Gateway, v0 and more), Enterprise-tier access for a year and startup-focused support.",
+      "amount": {
+        "text": "Up to 30 000 USD Flexible Commitment Amount for one year; the exact amount depends on the arrangement between Vercel and your Startup Partner",
+        "max": 30000,
+        "currency": "USD"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "vercel",
+          "label": "uses Vercel",
+          "question": "Do you deploy on Vercel?"
+        },
+        {
+          "field": "vc_backed",
+          "op": "eq",
+          "value": true,
+          "label": "backed by an approved Vercel Startup Partner",
+          "question": "Is the company in an accelerator or backed by a VC that is on Vercel's Startup Partner list?"
+        },
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "idea",
+            "pre_seed",
+            "seed",
+            "series_a"
+          ],
+          "label": "Series A or less",
+          "question": "What is the company's latest funding stage?"
+        },
+        {
+          "field": "has_website",
+          "op": "eq",
+          "value": true,
+          "label": "company website",
+          "question": "Does the company have a website?"
+        },
+        {
+          "field": "has_work_email",
+          "op": "eq",
+          "value": true,
+          "label": "email matching the company website",
+          "question": "Do you have an email address on the same domain as the company website?"
+        }
+      ],
+      "apply_url": "https://vercel.com/startups/credits",
+      "status_url": "https://vercel.com/startups/credits",
+      "next_step": "Open https://vercel.com/startups/credits, enter your work email, select or create the Vercel team that should hold the contract (it cannot be moved later), choose your Startup Partner from the dropdown, upload a screenshot that proves the affiliation, and the founder clicks submit. Vercel reviews in 5-7 days; on approval accept the Flexible Commitment for Startups Terms and keep a payment method on file.",
+      "reference": "references/cloud-credits.md#vercel-for-startups",
+      "last_verified": "2026-10-15",
+      "notes": "Fully partner-locked: the page calls the program an exclusive offer to companies backed by its Startup Partners; if your VC or accelerator is not in the dropdown, ask them to submit the partner form at https://vercel.com/startups/partners. Must apply within 12 months of the most recent funding round and must not have received Vercel for Startups credits before. Benefits last up to one calendar year from when the commitment is applied; unused amounts do not roll over; once used up or expired the team moves to standard Terms of Service and list rates. At most 50% of the commitment can go to AI Gateway usage. A valid payment method is required for credits to be active. These Flex Commit terms apply to startups accepted on or after 2026-08-06. The marketing page https://vercel.com/startups only has an interest form; the real application lives on /startups/credits. Applications open on 2026-10-15."
+    },
+    {
+      "id": "neon-startups",
+      "name": "Neon Credits for Startups (Databricks Startup Program)",
+      "country": "global",
+      "kind": "cloud_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "Early-stage startups building a product or MVP on Neon: self-funded startups with under 1 MUSD in funding, or venture-backed startups with at least 1 MUSD raised or a place in a recognized accelerator such as Y Combinator.",
+      "what": "Neon credits (Self-Funded tier) or Neon and Databricks credits (Venture-Backed tier) valid 12 months from acceptance, with onboarding support from the Neon product team and early access to new features.",
+      "amount": {
+        "text": "Self-Funded tier up to 1 000 USD in Neon credits (under 1 MUSD raised); Venture-Backed tier up to 200 000 USD in Neon and Databricks credits (1 MUSD+ raised or recognized accelerator)",
+        "max": 200000,
+        "currency": "USD"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "neon",
+          "label": "uses Neon",
+          "question": "Do you run your Postgres on Neon?"
+        }
+      ],
+      "apply_url": "https://sites.google.com/databricks.com/startup-program-apply",
+      "status_url": "https://neon.com/startups",
+      "next_step": "Open the application form at https://sites.google.com/databricks.com/startup-program-apply, describe the startup, its stage, funding raised and any investor or accelerator, and the founder clicks submit. The team replies within a few business days and adds approved credits to your existing Neon account.",
+      "reference": "references/cloud-credits.md#neon-startups",
+      "last_verified": "2026-10-15",
+      "notes": "Neon is part of Databricks and the program is branded Databricks Startup Program on neon.com/startups. Two tiers on 2026-10-15: Self-Funded (early-stage, self-funded, less than 1 MUSD in funding, building an early-stage product or MVP) gets up to 1 000 USD in Neon credits; Venture-Backed (VC-backed with at least 1 MUSD in funding, or participants in recognized accelerators such as Y Combinator) gets up to 200 000 USD in Neon and Databricks credits plus speaking and co-marketing opportunities. The top tier is therefore investor-gated, but the page also says to apply or ask your investor, so no separate partner referral is required. The exact amount depends on stage and funding. Credits are valid 12 months from the date of acceptance; afterwards the account continues on its plan and is billed normally. Existing Neon or Databricks users can apply. Applying means agreeing to Databricks' Terms of Use. Applications open on 2026-10-15."
+    },
+    {
+      "id": "mongodb-for-startups",
+      "name": "MongoDB for Startups",
+      "country": "global",
+      "kind": "cloud_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "Startups less than 7 years old at Series A or earlier, focused on a single software-based product (development shops and agencies are not eligible), with an active company website and LinkedIn profile, not previously accepted into the program.",
+      "what": "MongoDB Atlas credits delivered as a promo code, plus Voyage AI tokens, technical expertise and support, in four tiers matched to stage: Inspire (bootstrapped), Grow (early-funded), Innovate (rising VC-backed) and Scale (rapidly scaling). Dollar amounts are not published.",
+      "amount": {
+        "text": "Atlas credits in four tiers (Inspire for bootstrapped, Grow for early-funded, Innovate for rising VC-backed, Scale for rapidly scaling startups); dollar amounts are not published on the program page"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "mongodb",
+          "label": "uses MongoDB Atlas",
+          "question": "Do you run on MongoDB Atlas?"
+        },
+        {
+          "field": "age_years",
+          "op": "lt",
+          "value": 7,
+          "label": "less than 7 years old",
+          "question": "How many years ago was the company founded?"
+        },
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "idea",
+            "pre_seed",
+            "seed",
+            "series_a"
+          ],
+          "label": "Series A or earlier",
+          "question": "What is the company's latest funding stage?"
+        },
+        {
+          "field": "has_website",
+          "op": "eq",
+          "value": true,
+          "label": "active company website",
+          "question": "Does the company have an active website?"
+        }
+      ],
+      "apply_url": "https://www.mongodb.com/solutions/startups#startups",
+      "status_url": "https://www.mongodb.com/solutions/startups",
+      "next_step": "If a VC, accelerator or incubator backs you, ask them to refer you; otherwise fill in the Apply Now form at https://www.mongodb.com/solutions/startups#startups with your company email, legal name, company URL, LinkedIn, HQ country and funding stage, and the founder clicks submit. If nothing arrives within five business days, write to startups@mongodb.com.",
+      "reference": "references/cloud-credits.md#mongodb-for-startups",
+      "last_verified": "2026-10-15",
+      "notes": "Base-tier eligibility as written: early-stage (less than 7 years old and Series A or earlier); focused on a single software-based product or service (development shops and agencies not eligible); not previously accepted; active company website and LinkedIn profile (the form accepts a personal LinkedIn if the company has none). Partner path is optional: MongoDB works with VCs, accelerators and incubators and asks them to refer founders, but founders without one apply directly on the page. Credits arrive as a promo code: 12 months to activate it, then 12 months to use the Atlas credits; extensions case by case, ideally requested three months before expiry; promo codes apply to future charges only. Activation needs the Organization Owner or Organization Billing Admin role. Existing Atlas users are eligible. The form offers funding stages Bootstrapped, Pre-seed, Seed, Series A, Series B or higher. Program terms: https://www.mongodb.com/solutions/startups/terms-conditions. Applications open on 2026-10-15."
     }
   ]
 }
