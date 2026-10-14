@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Baltsar/startup-krediter/data/schema.json",
+  "title": "startup-krediter programs",
+  "description": "One record per funding, compute, credit or accelerator program. Eligibility is data: a list of rules the matcher evaluates against a profile.",
+  "type": "object",
+  "required": ["programs"],
+  "additionalProperties": false,
+  "properties": {
+    "programs": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/program"}
+    }
+  },
+  "$defs": {
+    "program": {
+      "type": "object",
+      "required": [
+        "id", "name", "country", "kind", "need", "who", "what", "amount",
+        "eligibility", "apply_url", "status_url", "next_step", "reference", "last_verified"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+        "name": {"type": "string", "minLength": 1},
+        "country": {
+          "type": "string",
+          "pattern": "^([A-Z]{2}|EU|global)$",
+          "description": "ISO-2 country, EU for EU plus EEA plus Horizon-associated countries, or global."
+        },
+        "kind": {"enum": ["grant", "loan", "compute", "cloud_credit", "ai_api_credit", "accelerator", "perks"]},
+        "need": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"enum": ["money", "compute", "credits"]}
+        },
+        "who": {"type": "string", "minLength": 1},
+        "what": {"type": "string", "minLength": 1},
+        "amount": {"$ref": "#/$defs/amount"},
+        "eligibility": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/gate"}
+        },
+        "apply_url": {"type": "string", "pattern": "^(https?://|mailto:)"},
+        "status_url": {
+          "type": "string",
+          "pattern": "^https?://",
+          "description": "The page to fetch before quoting a date, an amount, or whether a round is open."
+        },
+        "live": {"$ref": "#/$defs/live"},
+        "next_step": {"type": "string", "minLength": 1},
+        "reference": {
+          "type": "string",
+          "pattern": "^references/[a-z-]+\\.md#[a-z0-9-]+$",
+          "description": "Reference file and anchor with the prose entry for this program."
+        },
+        "last_verified": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "description": "The date the status page was actually read. Records older than 90 days are flagged stale."
+        },
+        "notes": {"type": "string"}
+      }
+    },
+    "amount": {
+      "type": "object",
+      "required": ["text"],
+      "additionalProperties": false,
+      "properties": {
+        "text": {"type": "string", "minLength": 1},
+        "min": {"type": "number"},
+        "max": {"type": "number"},
+        "currency": {"type": "string", "pattern": "^[A-Z]{3}$"}
+      }
+    },
+    "gate": {
+      "oneOf": [
+        {"$ref": "#/$defs/rule"},
+        {"$ref": "#/$defs/group"}
+      ]
+    },
+    "rule": {
+      "type": "object",
+      "required": ["field", "op", "value", "label", "question"],
+      "additionalProperties": false,
+      "properties": {
+        "field": {
+          "enum": [
+            "country", "legal_form", "age_years", "employees",
+            "revenue_msek", "balance_msek", "revenue_meur", "funding_raised_usd",
+            "stage", "vc_backed", "vc_partner", "stack", "sector",
+            "has_vat", "has_employment", "has_work_email", "has_website",
+            "has_developer", "workload_defined", "profit_distributed"
+          ]
+        },
+        "op": {"enum": ["eq", "neq", "in", "not_in", "lte", "gte", "lt", "gt", "contains"]},
+        "value": {},
+        "label": {"type": "string", "minLength": 1},
+        "question": {"type": "string", "minLength": 1}
+      }
+    },
+    "group": {
+      "type": "object",
+      "required": ["any", "label"],
+      "additionalProperties": false,
+      "description": "Met if any member is met. Failed only when every member is known and failed. Otherwise unknown.",
+      "properties": {
+        "any": {
+          "type": "array",
+          "minItems": 2,
+          "items": {"$ref": "#/$defs/rule"}
+        },
+        "label": {"type": "string", "minLength": 1}
+      }
+    },
+    "live": {
+      "type": "object",
+      "required": ["source", "call_id"],
+      "additionalProperties": false,
+      "properties": {
+        "source": {"enum": ["vinnova"]},
+        "call_id": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}
