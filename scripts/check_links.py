@@ -11,6 +11,7 @@ were read in a browser when the record was verified. mailto: links are skipped.
 
 from __future__ import annotations
 
+import http.client
 import json
 import shutil
 import subprocess
@@ -55,7 +56,7 @@ def probe(url: str) -> int:
             if method == "HEAD" and exc.code in (403, 405, 400):
                 continue
             return int(exc.code)
-        except (urllib.error.URLError, TimeoutError, OSError):
+        except (urllib.error.URLError, TimeoutError, OSError, http.client.HTTPException):
             return 0
     return 0
 

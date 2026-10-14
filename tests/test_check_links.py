@@ -63,3 +63,13 @@ def test_probe_with_fallback_uses_secondary_only_when_primary_gets_no_response()
     calls.clear()
     assert check_links.probe_with_fallback("https://x", lambda url: 404, secondary) == 404
     assert calls == []
+
+
+def test_probe_returns_zero_on_malformed_http_response(monkeypatch: object) -> None:
+    import http.client
+
+    def boom(request: object, timeout: float) -> object:
+        raise http.client.BadStatusLine("garbage")
+
+    monkeypatch.setattr(check_links.urllib.request, "urlopen", boom)  # type: ignore[attr-defined]
+    assert check_links.probe("https://example.org/") == 0
