@@ -1,96 +1,187 @@
 ---
 name: startup-krediter
 description: >-
-  Use when a builder in Sweden or the Nordics asks if their startup has a
-  chance at funding, cloud credits, or GPU hours, or mentions Vinnova, Almi,
-  EuroHPC, Sweden AI Factory, Mimer, RISE, LUMI, Sigma2, KI-fabrikken, NVIDIA
-  Inception, Claude Startups, Anthropic, OpenAI, Nordic AI Factory Summit, AWS Activate,
-  Playground, Fast Lane, startup-krediter, startup-krediitit, startup-kreditter,
-  GPU-timmar, "har vi en chans", "har vi en sjanse", or "har vi en chance". Also use when they ask
-  which grant or compute program fits a startup in Sweden, Finland, Norway,
-  Denmark, or Iceland. Invoke as /startup-krediter.
+  Use when a founder in Sweden or the Nordics asks whether their startup can get
+  funding, a grant, a loan, cloud credits, API credits or GPU hours, or asks which
+  program fits them. Triggers on Vinnova, Almi, Energimyndigheten, Tillväxtverket,
+  EIC Accelerator, Eurostars, EuroHPC, Playground, Fast Lane, Sweden AI Factory,
+  Mimer, LUMI, Olivia, Sigma2, KI-fabrikken, NAISS, Berzelius, NVIDIA Inception,
+  Claude Startups, Anthropic credits, OpenAI for Startups, AWS Activate, Google for
+  Startups, Microsoft for Startups, Innovasjon Norge, Business Finland,
+  Innovationsfonden, Rannís, STING, Norrsken, Antler, startup-krediter,
+  startup-kreditter, startup-krediitit, GPU-timmar, "har vi en chans", "har vi en
+  sjanse", "har vi en chance", and any question about startup money, compute or
+  credits in Sweden, Finland, Norway, Denmark or Iceland. Also use when asked to
+  add or update a program in this skill's data. Invoke as /startup-krediter.
 ---
 
 # Startup-krediter
 
-En builder frågar om chansen. Räkna behörighet. Hitta dörren de inte nämnde. Skriv ingen procent.
+A founder asks whether they have a chance. This skill turns that into a profile,
+checks the profile against a data file of programs, reads the live page for every
+door it is about to name, and answers with what is met, what is missing, and the
+exact next step. It never submits anything.
 
-## Företagschatten
+There are three kinds of door, and they do not substitute for each other:
+**money** (grants, loans, accelerator investment), **compute** (GPU or HPC hours
+on public machines), and **credits** (vendor cloud or API credits). GPU hours do
+not pay an API invoice, a grant does not come with GPU time, and credits sit with
+whichever vendor the founder already uses. Say which door you are talking about.
 
-Läs bolaget som redan finns i chatten innan du frågar. Land, form, ålder och anställda som står där är uppfyllda. Fråga inte om dem igen.
+## Step 1: Build the profile from the chat
 
-Saknas landet i chatten: fråga landet. Gissa inte Sverige.
+Read the facts already in the conversation before asking anything. A founder who
+wrote "Swedish AB, two years, four people" has given country, legal form, age and
+headcount. Asking again costs trust.
 
-Ber de om compute och pengar: `"need":"both"`. Två glyfer. Inget extra förhör.
+| field | values | notes |
+|---|---|---|
+| `country` | `SE`, `FI`, `NO`, `DK`, `IS`, any ISO-2 | **Ask for this first if it is missing.** The door depends on it. |
+| `legal_form` | `company`, `nonprofit`, `academia`, `public`, `sole_trader`, `none` | AB, AS, Oy, ApS, ehf, Ltd all normalize to `company` |
+| `age_years`, `employees` | numbers | |
+| `revenue_msek`, `balance_msek` | numbers, MSEK | Swedish caps (Vinnova) |
+| `revenue_meur`, `balance_meur` | numbers, MEUR | EU SME definition |
+| `funding_raised_usd` | number | credit programs cap on this |
+| `stage` | `idea`, `pre_seed`, `seed`, `series_a`, `later` | accelerators |
+| `vc_backed`, `vc_partner` | bool, list of names | partner-locked credit tiers |
+| `stack` | list: `aws`, `gcp`, `azure`, `cloudflare`, `vercel`, `supabase`, `neon`, `mongodb`, `anthropic`, `openai`, `mistral`, `together`, `modal`, `lambda`, `runpod`, `huggingface`, `replicate`, `nvidia` | decides the credit doors |
+| `sector` | list: `ai`, `deeptech`, `energy`, `climate`, `health`, `fintech`, `saas`, `hardware` | |
+| `has_vat`, `has_employment`, `has_work_email`, `has_website`, `has_developer`, `workload_defined`, `profit_distributed` | bool | EuroHPC and vendor gates |
+| `need` | list of `money`, `compute`, `credits` | `gpu` is accepted as an alias of `compute` |
+| `lang` | `sv`, `en`, `fi`, `no`, `da` | answer in this language |
 
-## Profil
+Leave out what the chat does not say. The matcher treats an absent field as
+unknown and produces the question to ask. A guessed value produces a confident
+wrong answer, and the founder cannot tell the difference. The one field worth
+asking for before running anything is `country`, because without it every
+national door is a guess and the matcher will return all of them.
 
-Ta bara det chatten redan säger. Utelämna okända fält. Gissa inte ålder, anställda, omsättning, moms eller anställning.
-
-`need` är `money`, `gpu` eller `credits`. `legal_form` är `ab`, `ideell_forening`, `academia` eller `unknown`. `country` är `SE`, `FI`, `NO`, `DK` eller `IS`. Sätt det bara om chatten säger landet. Gissa inte Sverige. Skriver de på engelska: `"lang":"en"`. Glyfen kommer då på engelska. Säger de Sweden AI Factory: `"asked":"factory"`. Säger de Fast Lane: `"asked":"fastlane"`.
-
-Pengar följer landet. Sverige är Vinnova. Norge är Oppstartstilskudd 1. Finland är Business Finland. Island är Fræ. Danmark: vårens Innofounder stängde 17 februari 2026. Höstomgången stängde 25 augusti 2026. Besked väntas i mitten av december 2026. GPU följer landet. Sverige är Playground. Finland är LUMI. Norge är KI-fabrikken. RISE, Hyperight och montrar är inte dörrar. Almi är namngiven och har ingen kodad dörr. Fast Lane är syskonet till Playground, inte en poängrunda.
-
-`?` är första steget i den aktörens egen process. En stängd omgång får ingen startknapp.
-
-## Kör
-
-`match.py` ligger i samma katalog som den här filen.
+## Step 2: Run the matcher
 
 ```bash
-python3 match.py <<'EOF'
-{"view":"chance","need":"gpu","legal_form":"ab","country":"SE","age_years":2,"employees":4,"profit_distributed":false}
+python3 scripts/match.py --live <<'EOF'
+{"country":"SE","legal_form":"company","age_years":2,"employees":4,"need":["compute","credits"],"stack":["anthropic","aws"],"lang":"sv"}
 EOF
 ```
 
-Kartan, när de vill se alla dörrar: samma profil med `"view":"matrix"`.
+The script lives next to this file. Flags: `--live` asks the Vinnova API for the
+current round and its closing date (only Vinnova has a usable API); `--all` also
+returns blocked doors, for a founder who wants to see what they do not qualify
+for; `--today YYYY-MM-DD` pins the date for reproducible runs.
 
-## Sidor
+The output is JSON. For each door: `status` is `eligible` (every rule met),
+`unknown` (nothing failed, something not yet known) or `blocked` (a rule
+failed); `met`, `failed` and `unknown` list the rule labels, each unknown with
+the question to ask; `glyph` is the compact status block to show; `what`,
+`amount`, `next_step`, `apply_url`, `status_url`, `reference` and `notes` carry
+the program facts; `stale` is true when the record is older than 90 days; `live`
+holds the Vinnova round when `--live` was used. Doors come sorted: eligible
+first, then unknown with the fewest open questions, then blocked. Top-level
+`warnings` names profile values that could not be read, and `stale` lists the
+stale door ids.
 
-Skriptet räknar behörighet. Sidan säger om dörren är öppen idag.
+## Step 3: Read the page before you quote it
 
-Datum, belopp, eller om en omgång tar emot ansökningar: hämta `link` innan du skriver talet. curl räcker. Värden får kalla verktyget vad den vill. Bind inte anropet till en klient.
+The data file records what was true on `last_verified`. The page says what is
+true today. Before you state a deadline, an amount, or that a round is open,
+fetch the door's `status_url` and read it. Rounds close, cohorts fill, tiers get
+renamed; a founder who misses a deadline because the skill quoted a stale date
+has been harmed by the skill.
 
-Nämner de ett program skriptet inte har: hämta programmets egen sida. Claude Startups är `https://claude.com/programs/startups`. NVIDIA Inception är `https://www.nvidia.com/en-us/startups/faq/`.
+Fetch with WebFetch, or with curl using a browser User-Agent. Some sites refuse
+automated clients (innovasjonnorge.no, innovationsfonden.dk, openai.com and the
+EU Funding and Tenders portal are known cases); use the in-app browser for those.
+If a page cannot be read at all, say so and give the founder the link instead of
+a number.
 
-Pricka av sidans krav mot profilen. Ett krav chatten redan uppfyller är `●`. De andra förblir `○`.
+Open the file named in `reference` (one of `references/*.md`) when the founder
+asks how the process works or what the catch is. Each entry has who, what,
+amount, requirements, how to apply, a quoted sentence from the page as evidence,
+and gotchas that are too long for the data file.
 
-Bråkar sidan och skriptet: visa båda. Välj inte.
+When `stale` is true, say the record is old and lead with what the page says.
+When the page and the data disagree, show both and say which is newer. Picking
+one hides the disagreement the founder needs to resolve.
 
-En stängd omgång får ingen startknapp. Du skickar inget mejl och klickar inte skicka.
+## Step 4: Answer
 
-## v2
+For each door you present, in the matcher's order:
 
-Full kontext betyder att varje krav på dörren är `●`. Kör då `"view":"packet"`.
+1. The `glyph` block verbatim, in a code block.
+2. Two to four sentences: what the door is, why it fits or what is missing, and
+   what the page says today (open, closed, next round, amount).
+3. The exact next step from `next_step` and the link.
 
-Paketet fylls i värdens browser. Claude tar sin browser, inte desktop-computer-use. Cursor tar sin. Codex tar sin. Samma skill, samma paket. Kör `actions` i den ordning de står. `stop` betyder att knappen inte klickas. `actions_inloggad` körs bara när kontot redan är inloggat.
+The glyph symbols: `●` met, `×` failed, `○` unknown, `?` the one question to
+ask next, `→` the amount, the live closing date, or a staleness note. The head
+symbol is `●` eligible, `◐` unknown, `×` blocked.
 
-Bygg inte en MCP för att skicka. Aktören har inget skicka-API. Inloggningen och sista klicket sitter hos den som äger kontot.
+Answer in the founder's language. Lead with eligible doors. When several credit
+doors are unknown only because the stack is unknown, do not print them all: say
+that credits depend on the stack, list the vendors in one line, and ask which
+they use. When the founder asked for two kinds of door, group the answer by kind.
 
-Playground i Cursor-browsern: `https://access.eurohpc-ju.europa.eu/calls/60` är öppen och har ingen ansökningsblankett. Knappen är Register to apply. Formuläret är förnamn, efternamn, yrkesmejl, lösenord och captcha. Ansökan kommer efter kontot. Captcha är ett stopp. Lös den inte. Klicka inte Register.
+Never write a percentage or a promise. Vinnova draws lots among equally strong
+applications; EuroHPC Playground is first come, first served; accelerators pick
+by judgment. Say what the process is instead.
 
-NVIDIA Inception: `https://programs.nvidia.com/phoenix/application` har ett fält, Business Email. Resten sitter bakom Sign Up / Login. Fyll mejlet. Klicka inte Sign Up / Login.
+Worked example. Founder: "Svenskt AB, två år, fyra personer. Har vi en chans på
+gratis GPU?" Profile: `{"country":"SE","legal_form":"company","age_years":2,
+"employees":4,"need":["compute"],"lang":"sv"}`. The matcher returns EuroHPC
+Playground as unknown with employment as the first question. The answer shows
+the glyph, then: Playground är EU:s AI-fabrikers öppna GPU-dörr för företag, och
+formen håller. Det som avgör är att projektledaren är anställd minst tre månader
+efter att GPU-tiden tar slut, momsnummer, yrkesmejl, och att ni kan peka på kod,
+ett system och ett antal timmar. Sidan säger idag att callen är öppen och först
+till kvarn. Nästa steg: skapa konto på access.eurohpc-ju.europa.eu; ni löser
+captchan och klickar själva. Then the link. Then one question: the employment one.
 
-Vinnova: Ansök här leder till `https://etjanster.vinnova.se/public/login`. Där finns Logga in och Skapa konto, och tvåstegsverifiering. Ingen ansökningsblankett före kontot. Klicka inte Skapa konto. `assess.questions` är sidans egna frågor. Svara på dem. Skriv inte en text som påstås bli beviljad. Hög och likvärdig grad lottas.
+## Step 5: Follow up
 
-Claude Startups: sidan säger att kohorten är full och att de inte tar emot nya ansökningar. Ingen startknapp. Hämta `https://claude.com/programs/startups` igen innan du säger att den är öppen.
+The next message usually answers the question. Put the new value into the same
+profile, run the matcher again, and show what changed. One `○` that became `●`
+is the whole update; do not restart the explanation.
 
-Sweden AI Factory kräver inget konto. Paketet skriver utkastet. Skicka inte mejlet.
+## Rules, and why they exist
 
-## Svar
+- **Never say an application is sent, and never click submit, register, or
+  solve a captcha.** The account, the legal declaration and the money belong to
+  the founder. The skill drafts, fills what it can, and stops before the button.
+  Every `next_step` in the data ends with who clicks.
+- **Never state an amount or date that is not on the page you read today.** The
+  data file is a map, not a source. If the page does not give a number, say the
+  number is not published.
+- **Never guess the country, the headcount, the revenue, or whether a dividend
+  was paid.** These are exactly the fields that close doors. Ask.
+- **Show both when sources disagree.** A slide deck and a web page that give
+  different scoring rules are a real signal; the founder should see it.
+- **Say when the record is stale** (`stale: true`, older than 90 days) and when
+  a page could not be read.
+- **Do not build a submission integration.** None of these programs has a submit
+  API, and the last click must stay with the account owner.
 
-Visa `glyph` i ett kodblock, ordagrant. Lägg `link` under. Skriv inget annat.
+## Maintenance
 
-`●` är uppfyllt. `×` är inte uppfyllt och stänger dörren. `○` är okänt. `?` är den enda frågan, det första okända kravet. `→` är det de inte frågade om.
+To add a program: append a record to `data/programs.json` (shape in
+`data/schema.json`, examples in `tests/fixtures/programs_small.json`), add an
+entry with the matching `{#id}` anchor to the right `references/*.md`, set
+`last_verified` to the day you read the page, then run:
 
-Bråkar två datum eller två belopp på samma stöd: visa båda. Välj inte.
+```bash
+python3 scripts/validate.py && python3 scripts/check_links.py && uv run --with pytest pytest tests/ -q
+```
 
-Nästa meddelande fyller ett fält. Lägg in det i samma profil, kör verktyget igen, visa den nya glyfen. Ett `○` som blev `●` är hela skillnaden. Börja inte om.
+Eligibility is data: a rule is `{"field","op","value","label","question"}`, a
+group `{"any":[...],"label"}` holds when any member holds. Only hard requirements
+become rules; preferences go in `notes`. To refresh a record, re-read its
+`status_url`, update what changed, and set `last_verified` to today.
 
-Du skickar inget mejl och klickar inte skicka. Säg aldrig att ansökan är skickad.
+## Files
 
-## Exempel
-
-Builder: "Svenskt AB, två år, fyra personer, ingen VC. Har vi en chans på gratis GPU?"
-
-Profilen ovan. Svaret följer verktyget. Pitchdecket är inte låset. Anställningen och arbetsbeskrivningen är det.
+- `data/programs.json`, `data/schema.json`: the programs and their shape.
+- `scripts/match.py`: the matcher. `scripts/validate.py`: schema and anchor
+  check. `scripts/check_links.py`: probes every url. `scripts/vinnova_api.py`:
+  the live Vinnova round.
+- `references/nordic-grants.md`, `eu-grants.md`, `compute.md`, `cloud-credits.md`,
+  `ai-api-credits.md`, `accelerators-se.md`: the prose per domain.
+- `tests/`: pytest, no network.
