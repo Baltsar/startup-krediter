@@ -65,6 +65,21 @@
         "availability": {
           "enum": ["open", "closed", "unknown"],
           "description": "Whether applications were being accepted on last_verified. Closed doors rank last and carry a glyph line that points at the status page."
+        },
+        "apply_requirements": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "description": "Things the founder must have, prepare or do to get through the application that are not eligibility rules: login method, attachments, co-financing, language, account, partner, interview, decision time. Shown as a checklist before the founder goes to the site."
+        },
+        "unclear": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "description": "What the program's pages do not say or say inconsistently, phrased so the founder knows what to ask and whom."
+        },
+        "group": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "Doors in the same group with the same status and open questions collapse into one answer with the siblings listed, so three EuroHPC tiers read as one choice."
         }
       }
     },
@@ -87,36 +102,34 @@
     },
     "rule": {
       "type": "object",
-      "required": ["field", "op", "value", "label", "question"],
+      "required": ["field", "op", "value"],
       "additionalProperties": false,
+      "description": "The label and the question the founder sees are generated from field, op and value in the founder's language (scripts/i18n.py), so the glyph can never claim more than the rule checks.",
       "properties": {
         "field": {
           "enum": [
-            "country", "legal_form", "age_years", "employees",
+            "country", "residence_country", "legal_form", "age_years", "employees",
             "revenue_msek", "balance_msek", "revenue_meur", "balance_meur", "funding_raised_usd",
-            "stage", "vc_backed", "vc_partner", "stack", "sector",
+            "stage", "vc_backed", "vc_partner", "stack", "sector", "confirmed",
             "has_vat", "has_employment", "has_work_email", "has_website",
             "has_developer", "workload_defined", "profit_distributed"
           ]
         },
         "op": {"enum": ["eq", "neq", "in", "not_in", "lte", "gte", "lt", "gt", "contains"]},
-        "value": {},
-        "label": {"type": "string", "minLength": 1},
-        "question": {"type": "string", "minLength": 1}
+        "value": {}
       }
     },
     "group": {
       "type": "object",
-      "required": ["any", "label"],
+      "required": ["any"],
       "additionalProperties": false,
-      "description": "Met if any member is met. Failed only when every member is known and failed. Otherwise unknown.",
+      "description": "Met if any member is met. Failed only when every member is known and failed. Otherwise unknown. The label is the members' labels joined with 'or'.",
       "properties": {
         "any": {
           "type": "array",
           "minItems": 2,
           "items": {"$ref": "#/$defs/rule"}
-        },
-        "label": {"type": "string", "minLength": 1}
+        }
       }
     },
     "live": {

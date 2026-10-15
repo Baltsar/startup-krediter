@@ -60,7 +60,7 @@ Credits from model providers (Anthropic, OpenAI, Mistral) and GPU-cloud vendors 
 - **Status page:** https://modal.com/startups
 - **Verified:** 2026-10-15
 - **Evidence:** "Customers that are new to Modal and meet the below requirements are eligible to apply. Credits are a one-time grant and you may not reapply once you have received credits in a given tier."
-- **Gotchas:** Form live on 2026-10-15. The FAQ answers (credit duration and expiry, tier assignment, where to see credit status, full VC partner list, why a payment method is required) are rendered client-side and were not readable in the fetch; open the FAQ in a browser before promising a duration. The "$30 / month free compute" banner is a general offer, not part of this program. A separate Modal for Academics program exists.
+- **Gotchas:** Form live on 2026-10-15. FAQ answers read in the in-app browser on 2026-10-15: duration "Credits last 1 year and cannot be reinstated if they expire."; tier "The credit amount is determined based on factors like traction, amount of funding raised, and whether you are a portfolio company of a VC or accelerator that we have an official partnership with. Reach out to startups@modal.com for more details."; who "Early-stage startups who are new to Modal may apply." The remaining FAQ items (credit status, contact for pending applications, why a payment method is required, the full VC partner list) were not copied. The "$30 / month free compute" banner is a general offer, not part of this program. A separate Modal for Academics program exists.
 
 ## Lambda Cloud credits for NVIDIA Inception members {#lambda-nvidia-inception}
 

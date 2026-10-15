@@ -122,7 +122,7 @@ def test_accepts_known_availability() -> None:
 
 
 def rule(field: str, op: str, value: object) -> dict:
-    return {"field": field, "op": op, "value": value, "label": "x", "question": "x?"}
+    return {"field": field, "op": op, "value": value}
 
 
 def with_rule(new_rule: dict) -> dict:

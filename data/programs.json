@@ -19,56 +19,41 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
+          "value": "SE"
         },
         {
           "field": "legal_form",
           "op": "eq",
-          "value": "company",
-          "label": "limited company",
-          "question": "Is it a limited company?"
+          "value": "company"
         },
         {
           "field": "age_years",
           "op": "lte",
-          "value": 10,
-          "label": "at most 10 years",
-          "question": "How old is the company?"
+          "value": 10
         },
         {
           "field": "employees",
           "op": "lte",
-          "value": 10,
-          "label": "at most 10 employees",
-          "question": "How many employees (full-time equivalents)?"
+          "value": 10
         },
         {
           "any": [
             {
               "field": "revenue_msek",
               "op": "lte",
-              "value": 10,
-              "label": "net revenue at most 10 MSEK",
-              "question": "Net revenue last fiscal year, in MSEK?"
+              "value": 10
             },
             {
               "field": "balance_msek",
               "op": "lte",
-              "value": 10,
-              "label": "balance sheet at most 10 MSEK",
-              "question": "Balance sheet total last fiscal year, in MSEK?"
+              "value": 10
             }
-          ],
-          "label": "net revenue or balance sheet at most 10 MSEK"
+          ]
         },
         {
           "field": "profit_distributed",
           "op": "eq",
-          "value": false,
-          "label": "no dividend last fiscal year",
-          "question": "Did the company pay a dividend in the last fiscal year?"
+          "value": false
         }
       ],
       "apply_url": "https://ansok.vinnova.se/utlysning/0382e83b-4c96-404d-bed1-08deab387617?opencall=true&lang=sv",
@@ -102,23 +87,17 @@
         {
           "field": "legal_form",
           "op": "eq",
-          "value": "company",
-          "label": "limited company",
-          "question": "Is it a limited company?"
+          "value": "company"
         },
         {
           "field": "age_years",
           "op": "lte",
-          "value": 10,
-          "label": "registered at most 10 years",
-          "question": "How many years since the company was registered?"
+          "value": 10
         },
         {
           "field": "employees",
           "op": "lt",
-          "value": 50,
-          "label": "fewer than 50 employees",
-          "question": "How many employees?"
+          "value": 50
         }
       ],
       "apply_url": "https://ansok.vinnova.se/utlysning/26bdd234-db2b-4fa2-1fab-08dec63ac2d3?opencall=true&lang=en",
@@ -128,6 +107,288 @@
       "last_verified": "2026-10-15",
       "availability": "open",
       "notes": "Reference number 2026-01767. Open on 2026-10-15: 'Closes on 29 October 2026 at 2PM'. Opened 15 Jun 2026; earlier assessment date 16 Sep 2026 14:00 with decision planned 16 Oct; final decision 24 Nov 2026. Total budget 22 MSEK across the year's application opportunities. The innovation must connect to at least one FFI sub-programme: Circularity, Transport and mobility solutions, Traffic-safe automation, Zero emissions. Projects need at least two participants, at least one need owner and at least one startup; only the startup can be beneficiary. Aid basis: startups under five years (fewer than 50 employees, not listed, no profit distributed, not formed by merger or takeover) get start-up aid; older small companies get de minimis aid, at most 300 000 EUR over three years. No country rule is encoded because the page says foreign startups without Swedish presence may apply (they attach a home-country registration certificate). The English page is machine-translated and the Swedish text takes precedence: https://www.vinnova.se/e/accelerera-svenskt-partnerskap/ffi-asp-accelerated-startup-2026-01767/. The sibling spring round 2026-00299 closed 2 June 2026. Scoped EU in this data because the call admits foreign startups; every applicant still needs an established Swedish need owner as partner."
+    },
+    {
+      "id": "eureka-innowwide-call-5",
+      "name": "Eureka Innowwide call 5 (autumn 2026)",
+      "country": "EU",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Innovative small and medium-sized companies (EU recommendation 2003/361) in an EU member state, Iceland, Israel, Norway, Switzerland, Türkiye or the United Kingdom, legally established for at least two years by the deadline (on or before 1 December 2024), that have not received funding in a previous Innowwide call and want to assess a new market in Africa, the Americas, Asia or Oceania together with an independent local subcontractor there.",
+      "what": "Fixed grant of 60 000 EUR for a six-month market feasibility project in the target country: technical, market, legal or socioeconomic assessments of an innovative solution at TRL 4 to 8 with a local partner as main subcontractor. Maximum support rate 70 percent, so total eligible costs must be at least 86 000 EUR and the SME self-funds the rest. 70 percent is paid up front, 30 percent after an accepted final report.",
+      "amount": {
+        "text": "60 000 EUR fixed grant; total eligible costs at least 86 000 EUR (co-financing of at least 26 000 EUR)",
+        "max": 60000,
+        "currency": "EUR"
+      },
+      "eligibility": [
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company"
+        },
+        {
+          "field": "employees",
+          "op": "lt",
+          "value": 250
+        },
+        {
+          "field": "age_years",
+          "op": "gte",
+          "value": 2
+        }
+      ],
+      "apply_url": "https://www.eurekanetwork.org/programmes-and-calls/innowwide/5th-innowwide-call-for-market-feasibility-projects-autumn-2026/",
+      "status_url": "https://www.vinnova.se/e/eureka-innowwide/eureka-innowwide-call-5/",
+      "next_step": "Find the local counterpart in the target country (Eureka's Innowwide partner search helps), register on Eureka's SmartSimple platform (eureka.smartsimple.ie) as a person legally authorised to represent the company, fill in the English application form and workplan template, invite the subcontractor to sign the commitment on the platform, and submit before 1 December 2026 at 14:00 CET. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#eureka-innowwide-call-5",
+      "last_verified": "2026-10-15",
+      "availability": "open",
+      "notes": "Vinnova diarienummer 2026-01726. Open on 2026-10-15: Vinnova's page says 'Stänger den 1 december 2026' (sista ansökningsdag 1 dec. 2026 kl 14:00, beslut meddelas 20 maj 2027, informationsmöte 29 sep. 2026); Eureka's call page says apply from 1 October 2026, submission deadline 1 December 2026 14:00 CET, results intended during the first trimester of 2027. Budget 4.2 MEUR for 70 projects; the top 105 above-threshold proposals go to an independent panel and ethics review; thresholds Excellence 18/30, Impact 24/40, Implementation 18/30. Mono-beneficiary: only the SME signs the grant; the subcontractor in the target country is not party to it and subcontracting costs must be above zero. Civil applications only; one application per company; the company must not be an undertaking in difficulty. Vinnova's page is an information page without an apply button and refers to Eureka for the exact limits; the money comes from the EU-funded European Partnership on Innovative SMEs, not from Vinnova's budget. Scoped EU because every EU member state plus Iceland, Israel, Norway, Switzerland, Türkiye and the UK are listed as participating; Denmark, Finland, Sweden, Iceland and Norway are all on the list."
+    },
+    {
+      "id": "vinnova-sprang-baltic-marine-watchdog",
+      "name": "Vinnova Språng Challenge: The Baltic Marine Watchdog",
+      "country": "EU",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Teams with ambition, technical expertise and business drive: legal entities such as universities, research institutes, established companies and startups headquartered in the EU, EFTA or the United Kingdom; an incorporated company must also have at least 50 percent of its equity held within the EU, EFTA or the UK. Individuals and sole proprietorships can only take part in a team where a legal entity submits.",
+      "what": "Two-stage innovation challenge to develop, demonstrate and validate fully autonomous systems for maritime surveillance, vessel tracking, documentation and monitoring in the Baltic Sea. Vinnova pays each team an individually fixed price based on its own cost estimate (Stage 1 cap 170 000 EUR, Stage 2 cap 350 000 EUR, at most 520 000 EUR in total over 10 months) plus coaching and test days.",
+      "amount": {
+        "text": "Up to 520 000 EUR per team (Stage 1 cap 170 000 EUR, Stage 2 cap 350 000 EUR)",
+        "max": 520000,
+        "currency": "EUR"
+      },
+      "eligibility": [
+        {
+          "field": "legal_form",
+          "op": "not_in",
+          "value": [
+            "sole_trader",
+            "none"
+          ]
+        }
+      ],
+      "apply_url": "https://ansok.vinnova.se/utlysning/aa892961-4010-4e1c-726f-08df237ab60c?opencall=true",
+      "status_url": "https://www.vinnova.se/e/radikal-innovation/the-baltic-marine-watchdog-challenge/",
+      "next_step": "Read the English call for submissions on the status page, assemble a team with maritime robotics, sensor fusion and commercial experience, complete the online submission form in Vinnova's e-service with every claim backed by data (or a declared estimate), and attach the signed Declaration of Honour before 2 December 2026 at 14:00. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#vinnova-sprang-baltic-marine-watchdog",
+      "last_verified": "2026-10-15",
+      "availability": "open",
+      "notes": "Diarienummer 2026-02609, programme Radikal innovation. Open on 2026-10-15: 'Stänger den 2 december 2026 kl 14:00'; opened 8 October 2026; decision 19 January 2027. Timeline: initial selection December 2026 to January 2027 with a pitch event in front of a jury, up to twelve teams contracted for Stage 1 (February to June 2027, interim demonstration tracking a surface target in Baltic littoral waters), up to nine teams for Stage 2 (June to November 2027, final public demonstration with surface and underwater targets); challenge closes 30 November 2027. Both demonstrations are mandatory and Vinnova may reclaim the stage's funds from a team that does not attend. The money is a fixed price for R&D services, not a cost-share grant, and the contribution must not already be financed by other public funding. The system must be fully autonomous, with a safety risk assessment plan and a kill switch. Evaluation criteria Approach, Implementation and Team weigh equally, Economy decides ties, and a portfolio view on solution variety may be applied; team gender balance is a sub-criterion. Research teams should aim to incorporate a company. No sector rule is encoded because the schema has no maritime or robotics sector. Contact challenge@vinnova.se."
+    },
+    {
+      "id": "vinnova-chips-ju-pilot-line-access",
+      "name": "Vinnova Chips JU: Test och validering av ny halvledarteknik (pilot line access)",
+      "country": "SE",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Swedish small and medium-sized companies working in design, development of production processes and products, production, research and innovation in semiconductor technology, that have already been granted access to the Chips JU pilot line the application concerns and can attach the documented access decision and timetable.",
+      "what": "Grant of up to 3.5 MSEK per project to use a Chips JU pilot line (NanoIC, FAMES, APECS, WBG or PIXEurope) for developing semiconductor process technologies, new components, proof-of-concept and prototypes. Only the pilot line's innovation advisory and innovation support services are eligible costs; salaries, equipment and land are not. Projects may run until October 2027.",
+      "amount": {
+        "text": "Up to 3,5 MSEK per project; total budget 7 MSEK per year in 2026 and 2027",
+        "max": 3500000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company"
+        },
+        {
+          "field": "employees",
+          "op": "lt",
+          "value": 250
+        },
+        {
+          "any": [
+            {
+              "field": "sector",
+              "op": "contains",
+              "value": "hardware"
+            },
+            {
+              "field": "sector",
+              "op": "contains",
+              "value": "deeptech"
+            }
+          ]
+        }
+      ],
+      "apply_url": "https://ansok.vinnova.se/utlysning/71906547-ba29-46fa-ae75-08de6e00a7ec?opencall=true&lang=sv",
+      "status_url": "https://www.vinnova.se/e/chips-ju/chips-ju-test-och-validering-av-ny-2025-04692/",
+      "next_step": "First obtain approved access from the pilot line itself (each line runs its own assessment; the Swedish Chips Competence Centre at sccc.se guides Swedish applicants), then log in to Vinnova's e-service and apply with the access decision and timetable attached, before 29 July 2027 at 14:00. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#vinnova-chips-ju-pilot-line-access",
+      "last_verified": "2026-10-15",
+      "availability": "open",
+      "notes": "Diarienummer 2025-04692, programme Chips JU (2023-03764). Open on 2026-10-15: opened 25 February 2026, projects may start from 26 March 2026, last application day 29 July 2027 at 14:00; no decision date is printed. Total budget 7 MSEK per year in 2026 and 2027. Pilot lines listed on the page: NanoIC, FAMES, APECS (advanced packaging and heterogeneous integration), WBG (wide band gap), PIXEurope (photonic integrated circuits). Eligible costs are only innovation advisory and innovation support services bought from the pilot line, booked under 'Konsultkostnader, licenser'; the same services from any other actor, salaries, equipment and land are not eligible. The access decision from the pilot line must exist before the Vinnova application. The sector rule accepts hardware or deeptech because the schema has no semiconductor sector."
+    },
+    {
+      "id": "vinnova-avancerad-digitalisering-5g-automatisering",
+      "name": "Vinnova Avancerad digitalisering: 5G och automatisering för operativ industrinytta",
+      "country": "SE",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Consortia of at least two project parties, at least one of them a Swedish company (aktiebolag) from industry acting as a committed need owner; industrial companies, SMEs, universities, research institutes and other relevant organisations can take part, and all parties may be companies. Each party applying for funding must be a Swedish legal person (or a foreign organisation with a Swedish branch).",
+      "what": "Grant for collaborative projects that develop, test and verify industrial solutions with high demands on connectivity and digital infrastructure where 5G standalone (5G SA) is a key enabling component, such as remote-controlled or autonomous machines, robots, real-time data analysis and connected tools. Experimental development; projects of 12 to 36 months.",
+      "amount": {
+        "text": "3 to 15 MSEK per project, at most 50 percent of eligible costs; preliminary budget 40 MSEK",
+        "min": 3000000,
+        "max": 15000000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE"
+        },
+        {
+          "field": "legal_form",
+          "op": "not_in",
+          "value": [
+            "sole_trader",
+            "none"
+          ]
+        }
+      ],
+      "apply_url": "https://ansok.vinnova.se/utlysning/7a946e8f-1ee0-4d57-417c-08df24511a20?opencall=true&lang=sv",
+      "status_url": "https://www.vinnova.se/e/avancerad-digitalisering-industriell-2024-04161/5g-och-automatisering-for-operativ-industrinytta/",
+      "next_step": "Find an industrial need owner (a Swedish aktiebolag) as consortium partner, agree a 12 to 36 month project with at least 50 percent co-financing and a budget of 3 to 15 MSEK in grant, then log in to Vinnova's e-service and submit with CVs, project description and summary before 19 January 2027 at 14:00. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#vinnova-avancerad-digitalisering-5g-automatisering",
+      "last_verified": "2026-10-15",
+      "availability": "open",
+      "notes": "Diarienummer 2026-02219. Open on 2026-10-15: 'Stänger den 19 januari 2027 kl 14:00'. Opened 13 October 2026; information meeting 23 October 2026; last application day 19 January 2027 at 14:00; decision 18 March 2027. Part of the programme Avancerad digitalisering (2024-04161). Every project party that applies for funding must be a Swedish legal person; a foreign organisation with a branch or place of business in Sweden counts if the costs belong to that branch. The project may not have started before the application is submitted. Vinnova's share of each party's costs follows the state-aid rules and is set per organisation (EU SME definition applies, group figures count); the project as a whole gets at most 50 percent. 'Industri' in the programme means the whole production chain plus industry-near service and technology sectors, including energy, logistics, telecom, water/air/ventilation, recycling and defence. Assessment: Potential 40 percent, Aktörer 30, Genomförbarhet 30. Application in Swedish or English with CV, project description and summary templates. Projects must start between 19 March and 19 April 2027 and end by 19 April 2030. The consortium rule (two parties, one Swedish industrial aktiebolag as need owner) has no profile field, so the record only encodes country and legal form; a startup can be the applicant with its industrial customer as the need owner."
+    },
+    {
+      "id": "vinnova-avancerad-digitalisering-cybersakerhet-ai",
+      "name": "Vinnova Avancerad digitalisering: Cybersäkerhet, AI och resiliens",
+      "country": "SE",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Consortia of at least two legal persons, at least one of them a Swedish company; actors from industry, business, academia, research institutes, public bodies and authorities can take part, with active participation from industrial need owners. Individuals and sole traders cannot apply.",
+      "what": "Grant for research and innovation projects that develop AI-based solutions to prevent, detect and handle cyber threats, or enable reliable and secure industrial AI in complex digital systems, driven by industrial needs and with potential to be implemented in industry. Industrial research; projects of 12 to 24 months.",
+      "amount": {
+        "text": "1 to 10 MSEK per project, at most 50 percent of eligible costs; preliminary budget 30 MSEK",
+        "min": 1000000,
+        "max": 10000000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE"
+        },
+        {
+          "field": "legal_form",
+          "op": "not_in",
+          "value": [
+            "sole_trader",
+            "none"
+          ]
+        }
+      ],
+      "apply_url": "https://ansok.vinnova.se/utlysning/e4b28ee4-05d4-4e1d-713c-08df17abb26c?opencall=true&lang=sv",
+      "status_url": "https://www.vinnova.se/e/avancerad-digitalisering-industriell-2024-04161/cybersakerhet-ai-och-resiliens/",
+      "next_step": "Partner with an industrial need owner, choose one of the call's two tracks (preventing, detecting and handling cyber threats, or secure and reliable industrial AI), then log in to Vinnova's e-service and submit with CVs, project description and summary before 19 January 2027 at 14:00. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#vinnova-avancerad-digitalisering-cybersakerhet-ai",
+      "last_verified": "2026-10-15",
+      "availability": "open",
+      "notes": "Diarienummer 2026-01891. Open on 2026-10-15: 'Stänger den 19 januari 2027 kl 14:00'. Opened 13 October 2026; information meeting 23 October 2026; last application day 19 January 2027 at 14:00; decision 18 March 2027. Part of the programme Avancerad digitalisering (2024-04161). Every project party that applies for funding must be a Swedish legal person; a foreign organisation with a branch or place of business in Sweden counts if the costs belong to that branch. The project may not have started before the application is submitted. Vinnova's share of each party's costs follows the state-aid rules and is set per organisation (EU SME definition applies, group figures count); the project as a whole gets at most 50 percent. 'Industri' in the programme means the whole production chain plus industry-near service and technology sectors, including energy, logistics, telecom, water/air/ventilation, recycling and defence. Assessment: Potential 40 percent, Aktörer 30, Genomförbarhet 30. Application in Swedish or English with CV, project description and summary templates. Projects must start between 19 March and 15 April 2027. The page says the call does not address single organisations and that individuals and sole traders cannot apply. The consortium rule has no profile field, so the record only encodes country and legal form."
+    },
+    {
+      "id": "vinnova-avancerad-digitalisering-cyberfysiska-system",
+      "name": "Vinnova Avancerad digitalisering: Effektiv produktutveckling av cyberfysiska system",
+      "country": "SE",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Consortia of at least two participants, at least two of them industrial project parties in the form of companies, led by a need owner in industry; academia, institutes, public bodies and product-development experts can also take part. Each party applying for funding must be a Swedish legal person (or a foreign organisation with a Swedish branch).",
+      "what": "Grant for research and innovation projects that develop methods, tools and ways of working that integrate AI (generative AI, AI agents and other AI-based development tools) across the whole product-development chain of cyber-physical systems, from requirements to verification and regulatory compliance. Industrial research; projects of 12 to 24 months.",
+      "amount": {
+        "text": "Up to 8 MSEK per project, at most 50 percent of eligible costs; preliminary budget 40 MSEK",
+        "max": 8000000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE"
+        },
+        {
+          "field": "legal_form",
+          "op": "not_in",
+          "value": [
+            "sole_trader",
+            "none"
+          ]
+        }
+      ],
+      "apply_url": "https://ansok.vinnova.se/utlysning/aedd8745-2a6c-4af8-726e-08df237ab60c?opencall=true&lang=sv",
+      "status_url": "https://www.vinnova.se/e/avancerad-digitalisering-industriell-2024-04161/effektiv-produktutveckling-av-2026-01892/",
+      "next_step": "Form a consortium with at least one more industrial company (an industrial need owner should lead), then log in to Vinnova's e-service and submit with CVs, project description and summary before 19 January 2027 at 14:00. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#vinnova-avancerad-digitalisering-cyberfysiska-system",
+      "last_verified": "2026-10-15",
+      "availability": "open",
+      "notes": "Diarienummer 2026-01892. Open on 2026-10-15: 'Stänger den 19 januari 2027 kl 14:00'. Opened 13 October 2026; information meeting 23 October 2026; last application day 19 January 2027 at 14:00; decision 18 March 2027. Part of the programme Avancerad digitalisering (2024-04161). Every project party that applies for funding must be a Swedish legal person; a foreign organisation with a branch or place of business in Sweden counts if the costs belong to that branch. The project may not have started before the application is submitted. Vinnova's share of each party's costs follows the state-aid rules and is set per organisation (EU SME definition applies, group figures count); the project as a whole gets at most 50 percent. 'Industri' in the programme means the whole production chain plus industry-near service and technology sectors, including energy, logistics, telecom, water/air/ventilation, recycling and defence. Assessment: Potential 40 percent, Aktörer 30, Genomförbarhet 30. Application in Swedish or English with CV, project description and summary templates. Projects must start between 19 March and 15 April 2027. Cross-sector consortia are especially welcome. The requirement of two industrial company parties has no profile field, so the record only encodes country and legal form; a software startup needs at least one industrial company partner."
+    },
+    {
+      "id": "vinnova-avancerad-digitalisering-flexibel-energistyrning",
+      "name": "Vinnova Avancerad digitalisering: Industriell flexibel energistyrning",
+      "country": "SE",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Projects with at least two project parties, at least one of them a need owner from Swedish industry; industrial companies, grid operators, small and medium-sized companies, universities, research institutes and other relevant organisations can join, and all parties may be companies. Each party applying for funding must be a Swedish legal person (or a foreign organisation with a Swedish branch).",
+      "what": "Grant for collaborative projects that use advanced digital technology to make electricity use in Swedish industry more flexible and efficient: forecasting, planning and optimising power demand and energy costs. Two tracks: industrial research (new knowledge, models, algorithms, decision support) or experimental development (test, verify, demonstrate an existing solution in an industrial setting). Projects of 12 to 24 months.",
+      "amount": {
+        "text": "2 to 8 MSEK per project, at most 50 percent of eligible costs; preliminary budget 20 MSEK",
+        "min": 2000000,
+        "max": 8000000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE"
+        },
+        {
+          "field": "legal_form",
+          "op": "not_in",
+          "value": [
+            "sole_trader",
+            "none"
+          ]
+        }
+      ],
+      "apply_url": "https://ansok.vinnova.se/utlysning/4eee6a9a-1453-4f32-0017-08df15776219?opencall=true&lang=sv",
+      "status_url": "https://www.vinnova.se/e/avancerad-digitalisering-industriell-2024-04161/industriell-flexibel-energistyrning-med-2026-02019/",
+      "next_step": "Partner with an industrial need owner (an industrial company or grid operator), choose the research or the experimental-development track, then log in to Vinnova's e-service and submit with project description, CVs and summary before 19 January 2027 at 14:00. The founder clicks submit.",
+      "reference": "references/nordic-grants.md#vinnova-avancerad-digitalisering-flexibel-energistyrning",
+      "last_verified": "2026-10-15",
+      "availability": "open",
+      "notes": "Diarienummer 2026-02019. Open on 2026-10-15: 'Stänger den 19 januari 2027 kl 14:00'. Opened 13 October 2026; information meeting 23 October 2026; last application day 19 January 2027 at 14:00; decision 18 March 2027. Part of the programme Avancerad digitalisering (2024-04161). Every project party that applies for funding must be a Swedish legal person; a foreign organisation with a branch or place of business in Sweden counts if the costs belong to that branch. The project may not have started before the application is submitted. Vinnova's share of each party's costs follows the state-aid rules and is set per organisation (EU SME definition applies, group figures count); the project as a whole gets at most 50 percent. 'Industri' in the programme means the whole production chain plus industry-near service and technology sectors, including energy, logistics, telecom, water/air/ventilation, recycling and defence. Assessment: Potential 40 percent, Aktörer 30, Genomförbarhet 30. Application in Swedish or English with CV, project description and summary templates. Projects must start between 24 March and 15 April 2027. The experimental-development track may not mainly be routine adaptation, commercial operation or market introduction. The need-owner rule has no profile field, so the record only encodes country and legal form."
     },
     {
       "id": "almi-innovationslan",
@@ -149,16 +410,20 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
+          "value": "SE"
+        },
+        {
+          "field": "legal_form",
+          "op": "in",
+          "value": [
+            "company",
+            "sole_trader"
+          ]
         },
         {
           "field": "employees",
           "op": "lte",
-          "value": 249,
-          "label": "at most 249 employees",
-          "question": "How many employees?"
+          "value": 249
         }
       ],
       "apply_url": "https://etjanster.almi.se/oversikt/flow/1006",
@@ -188,9 +453,7 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
+          "value": "SE"
         },
         {
           "field": "legal_form",
@@ -198,35 +461,26 @@
           "value": [
             "company",
             "sole_trader"
-          ],
-          "label": "company or sole trader",
-          "question": "Is the applicant a company or a sole trader (not a private individual)?"
+          ]
         },
         {
           "field": "employees",
           "op": "lte",
-          "value": 9,
-          "label": "at most 9 employees",
-          "question": "How many employees?"
+          "value": 9
         },
         {
           "any": [
             {
               "field": "revenue_meur",
               "op": "lt",
-              "value": 2,
-              "label": "turnover under 2 MEUR",
-              "question": "Annual turnover last fiscal year, in MEUR?"
+              "value": 2
             },
             {
               "field": "balance_meur",
               "op": "lt",
-              "value": 2,
-              "label": "balance sheet under 2 MEUR",
-              "question": "Balance sheet total, in MEUR?"
+              "value": 2
             }
-          ],
-          "label": "turnover or balance sheet under 2 MEUR"
+          ]
         }
       ],
       "apply_url": "https://etjanster.almi.se/oversikt/flow/1006",
@@ -256,23 +510,17 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
+          "value": "SE"
         },
         {
           "field": "legal_form",
           "op": "eq",
-          "value": "company",
-          "label": "limited company",
-          "question": "Is it a limited company?"
+          "value": "company"
         },
         {
           "field": "employees",
           "op": "lte",
-          "value": 250,
-          "label": "at most 250 employees",
-          "question": "How many employees?"
+          "value": 250
         }
       ],
       "apply_url": "https://etjanster.almi.se/oversikt/flow/1006",
@@ -302,9 +550,7 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
+          "value": "SE"
         },
         {
           "field": "legal_form",
@@ -312,9 +558,7 @@
           "value": [
             "company",
             "academia"
-          ],
-          "label": "company or university",
-          "question": "Is the applicant a company or a university?"
+          ]
         }
       ],
       "apply_url": "https://minasidor.energimyndigheten.se/",
@@ -344,16 +588,12 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
+          "value": "SE"
         },
         {
           "field": "legal_form",
           "op": "eq",
-          "value": "company",
-          "label": "limited company",
-          "question": "Is it a limited company?"
+          "value": "company"
         }
       ],
       "apply_url": "https://minasidor.energimyndigheten.se/",
@@ -383,23 +623,17 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "NO",
-          "label": "Norwegian company",
-          "question": "Is the company registered in Norway?"
+          "value": "NO"
         },
         {
           "field": "legal_form",
           "op": "eq",
-          "value": "company",
-          "label": "limited company",
-          "question": "Is it a limited company?"
+          "value": "company"
         },
         {
           "field": "age_years",
           "op": "lt",
-          "value": 5,
-          "label": "less than five years old",
-          "question": "How old is the company?"
+          "value": 5
         }
       ],
       "apply_url": "https://www.innovasjonnorge.no/en/tjeneste/oppstartstilskudd-1",
@@ -429,23 +663,17 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "NO",
-          "label": "Norwegian company",
-          "question": "Is the company registered in Norway?"
+          "value": "NO"
         },
         {
           "field": "legal_form",
           "op": "eq",
-          "value": "company",
-          "label": "limited company",
-          "question": "Is it a limited company?"
+          "value": "company"
         },
         {
           "field": "age_years",
           "op": "lt",
-          "value": 5,
-          "label": "incorporated less than five years ago",
-          "question": "How many years since the company was incorporated?"
+          "value": 5
         }
       ],
       "apply_url": "https://www.innovasjonnorge.no/en/tjeneste/oppstartstilskudd-2",
@@ -476,42 +704,31 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "FI",
-          "label": "Finnish company",
-          "question": "Is the company registered in Finland?"
+          "value": "FI"
         },
         {
           "field": "legal_form",
           "op": "eq",
-          "value": "company",
-          "label": "limited company",
-          "question": "Is it a limited company?"
+          "value": "company"
         },
         {
           "field": "employees",
           "op": "lt",
-          "value": 50,
-          "label": "fewer than 50 employees",
-          "question": "How many employees?"
+          "value": 50
         },
         {
           "any": [
             {
               "field": "revenue_meur",
               "op": "lte",
-              "value": 10,
-              "label": "turnover at most 10 MEUR",
-              "question": "Annual turnover last fiscal year, in MEUR?"
+              "value": 10
             },
             {
               "field": "balance_meur",
               "op": "lte",
-              "value": 10,
-              "label": "balance sheet at most 10 MEUR",
-              "question": "Balance sheet total, in MEUR?"
+              "value": 10
             }
-          ],
-          "label": "turnover or balance sheet at most 10 MEUR"
+          ]
         }
       ],
       "apply_url": "https://www.businessfinland.fi/en/services/funding/funding-e-service/",
@@ -539,16 +756,12 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "FI",
-          "label": "Finnish company",
-          "question": "Is the company registered in Finland?"
+          "value": "FI"
         },
         {
           "field": "legal_form",
           "op": "eq",
-          "value": "company",
-          "label": "limited company",
-          "question": "Is it a limited company?"
+          "value": "company"
         }
       ],
       "apply_url": "https://www.businessfinland.fi/en/services/funding/funding-e-service/",
@@ -578,49 +791,36 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "FI",
-          "label": "Finnish company",
-          "question": "Is the company registered in Finland?"
+          "value": "FI"
         },
         {
           "field": "legal_form",
           "op": "eq",
-          "value": "company",
-          "label": "limited company",
-          "question": "Is it a limited company?"
+          "value": "company"
         },
         {
           "field": "age_years",
           "op": "lt",
-          "value": 5,
-          "label": "less than five years old",
-          "question": "How old is the company?"
+          "value": 5
         },
         {
           "field": "employees",
           "op": "lt",
-          "value": 50,
-          "label": "fewer than 50 employees",
-          "question": "How many employees?"
+          "value": 50
         },
         {
           "any": [
             {
               "field": "revenue_meur",
               "op": "lte",
-              "value": 10,
-              "label": "turnover at most 10 MEUR",
-              "question": "Annual turnover last fiscal year, in MEUR?"
+              "value": 10
             },
             {
               "field": "balance_meur",
               "op": "lte",
-              "value": 10,
-              "label": "balance sheet at most 10 MEUR",
-              "question": "Balance sheet total, in MEUR?"
+              "value": 10
             }
-          ],
-          "label": "turnover or balance sheet at most 10 MEUR"
+          ]
         }
       ],
       "apply_url": "https://www.businessfinland.fi/en/services/funding/funding-e-service/",
@@ -649,9 +849,7 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "DK",
-          "label": "Danish company",
-          "question": "Is the company registered in Denmark?"
+          "value": "DK"
         }
       ],
       "apply_url": "https://www.e-grant.dk/",
@@ -681,28 +879,21 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "IS",
-          "label": "Icelandic applicant",
-          "question": "Is the company or applicant based in Iceland?"
+          "value": "IS"
         },
         {
           "any": [
             {
               "field": "legal_form",
               "op": "eq",
-              "value": "none",
-              "label": "individual applicant",
-              "question": "Are you applying as an individual without a company?"
+              "value": "none"
             },
             {
               "field": "age_years",
               "op": "lt",
-              "value": 5,
-              "label": "company under five years",
-              "question": "How old is the company?"
+              "value": 5
             }
-          ],
-          "label": "individual, or company under five years old"
+          ]
         }
       ],
       "apply_url": "https://island.is/en/grants-plaza/grant/1-42",
@@ -734,45 +925,33 @@
             {
               "field": "legal_form",
               "op": "eq",
-              "value": "company",
-              "label": "a single company (start-up or SME)",
-              "question": "Is the applicant a registered company?"
+              "value": "company"
             },
             {
               "field": "legal_form",
               "op": "eq",
-              "value": "none",
-              "label": "a founder about to set up a company",
-              "question": "Are you a natural person intending to set up an SME?"
+              "value": "none"
             }
-          ],
-          "label": "single company or founder about to incorporate"
+          ]
         },
         {
           "field": "employees",
           "op": "lt",
-          "value": 250,
-          "label": "fewer than 250 employees (SME; mid-caps up to 499 get investment only)",
-          "question": "How many employees does the company have?"
+          "value": 250
         },
         {
           "any": [
             {
               "field": "revenue_meur",
               "op": "lte",
-              "value": 50,
-              "label": "turnover at most 50 MEUR",
-              "question": "Annual turnover last fiscal year, in MEUR?"
+              "value": 50
             },
             {
               "field": "balance_meur",
               "op": "lte",
-              "value": 43,
-              "label": "balance sheet at most 43 MEUR",
-              "question": "Balance sheet total, in MEUR?"
+              "value": 43
             }
-          ],
-          "label": "turnover at most 50 MEUR or balance sheet at most 43 MEUR (EU SME definition)"
+          ]
         }
       ],
       "apply_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2026-ACCELERATOR-01",
@@ -800,35 +979,26 @@
         {
           "field": "legal_form",
           "op": "eq",
-          "value": "company",
-          "label": "company (the consortium lead must be an SME)",
-          "question": "Is the applicant a registered company?"
+          "value": "company"
         },
         {
           "field": "employees",
           "op": "lt",
-          "value": 250,
-          "label": "fewer than 250 employees (SME lead)",
-          "question": "How many employees does the company have?"
+          "value": 250
         },
         {
           "any": [
             {
               "field": "revenue_meur",
               "op": "lte",
-              "value": 50,
-              "label": "turnover at most 50 MEUR",
-              "question": "Annual turnover last fiscal year, in MEUR?"
+              "value": 50
             },
             {
               "field": "balance_meur",
               "op": "lte",
-              "value": 43,
-              "label": "balance sheet at most 43 MEUR",
-              "question": "Balance sheet total, in MEUR?"
+              "value": 43
             }
-          ],
-          "label": "turnover at most 50 MEUR or balance sheet at most 43 MEUR (EU SME definition)"
+          ]
         }
       ],
       "apply_url": "https://www.eurekanetwork.org/programmes-and-calls/eurostars/eurostars-call-12-for-projects-deadline-march-2027/",
@@ -857,37 +1027,27 @@
         {
           "field": "legal_form",
           "op": "eq",
-          "value": "company",
-          "label": "company",
-          "question": "Is the applicant a company?"
+          "value": "company"
         },
         {
           "field": "has_employment",
           "op": "eq",
-          "value": true,
-          "label": "employment",
-          "question": "Is the project lead employed until at least three months after the allocation ends?"
+          "value": true
         },
         {
           "field": "has_vat",
           "op": "eq",
-          "value": true,
-          "label": "VAT number",
-          "question": "Does the company have a VAT number?"
+          "value": true
         },
         {
           "field": "has_work_email",
           "op": "eq",
-          "value": true,
-          "label": "work email",
-          "question": "Which address on your own domain is the contact?"
+          "value": true
         },
         {
           "field": "workload_defined",
           "op": "eq",
-          "value": true,
-          "label": "workload",
-          "question": "Which code, which single system, and how many GPU hours?"
+          "value": true
         }
       ],
       "apply_url": "https://access.eurohpc-ju.europa.eu/",
@@ -896,6 +1056,7 @@
       "reference": "references/compute.md#eurohpc-playground",
       "last_verified": "2026-10-15",
       "availability": "open",
+      "group": "eurohpc-industry",
       "notes": "Continuously open with no cut-off dates; the page says access can be granted within two working days. Process from the Terms of Reference V3 (31/03/2026): eligibility check by self-assessment plus ethics self-assessment, then technical assessment by the requested AI Factory, then first-come-first-served until the call's reserved resources are exhausted. Innovation is the decisive factor of the final decision. One Playground award per project lead at a time; no extensions and no additional resources; final report due three months after the allocation ends; results must be published except confidential parts and EuroHPC JU plus the AI Factory acknowledged; only proposals in English, with a civilian purpose and compliant with the AI Act; no double-awarding with a running EuroHPC allocation. The organisation proves its status with a valid VAT number and, if applicable, a PIC. The hour table on the page is an image: 5 000 GPU hours on every listed partition (read 2026-10-15); partition availability may be limited by demand. Apply Now on the page links to the portal root; the portal is a JavaScript app so the call number could not be verified from outside it. Questions: aif.access@eurohpc-ju.europa.eu."
     },
     {
@@ -916,37 +1077,27 @@
         {
           "field": "legal_form",
           "op": "eq",
-          "value": "company",
-          "label": "company",
-          "question": "Is the applicant a company?"
+          "value": "company"
         },
         {
           "field": "has_employment",
           "op": "eq",
-          "value": true,
-          "label": "employment",
-          "question": "Is the project lead employed until at least three months after the allocation ends?"
+          "value": true
         },
         {
           "field": "has_vat",
           "op": "eq",
-          "value": true,
-          "label": "VAT number",
-          "question": "Does the company have a VAT number?"
+          "value": true
         },
         {
           "field": "has_work_email",
           "op": "eq",
-          "value": true,
-          "label": "work email",
-          "question": "Which address on your own domain is the contact?"
+          "value": true
         },
         {
           "field": "workload_defined",
           "op": "eq",
-          "value": true,
-          "label": "workload",
-          "question": "Which code, which single system, and how many GPU hours up to 50 000?"
+          "value": true
         }
       ],
       "apply_url": "https://access.eurohpc-ju.europa.eu/calls/49",
@@ -955,6 +1106,7 @@
       "reference": "references/compute.md#eurohpc-fast-lane",
       "last_verified": "2026-10-15",
       "availability": "open",
+      "group": "eurohpc-industry",
       "notes": "Continuously open with no cut-off dates; proposals are assessed on a rolling basis; the page says approval within four working days. Process: eligibility check (self-assessment plus ethics self-assessment), technical assessment by the requested AI Factory, then first-come-first-served until the call's reserved resources are exhausted. Intended for HPC-ready users. One Fast Lane award per project lead at a time; no extensions and no additional resources; final report three months after the allocation ends; results published except confidential parts; English, civilian purpose, AI Act compliance, no double-awarding. The page itself shows no per-system table, only the 50 000 GPU hour cap and the three-month maximum. Questions: aif.access@eurohpc-ju.europa.eu."
     },
     {
@@ -975,37 +1127,27 @@
         {
           "field": "legal_form",
           "op": "eq",
-          "value": "company",
-          "label": "company",
-          "question": "Is the applicant a company?"
+          "value": "company"
         },
         {
           "field": "has_employment",
           "op": "eq",
-          "value": true,
-          "label": "employment",
-          "question": "Is the project lead employed until at least three months after the allocation ends?"
+          "value": true
         },
         {
           "field": "has_vat",
           "op": "eq",
-          "value": true,
-          "label": "VAT number",
-          "question": "Does the company have a VAT number?"
+          "value": true
         },
         {
           "field": "has_work_email",
           "op": "eq",
-          "value": true,
-          "label": "work email",
-          "question": "Which address on your own domain is the contact?"
+          "value": true
         },
         {
           "field": "workload_defined",
           "op": "eq",
-          "value": true,
-          "label": "workload",
-          "question": "Which code, which single system, how many GPU hours above 50 000, and what is the month-by-month consumption plan?"
+          "value": true
         }
       ],
       "apply_url": "https://access.eurohpc-ju.europa.eu/calls/48",
@@ -1014,6 +1156,7 @@
       "reference": "references/compute.md#eurohpc-large-scale",
       "last_verified": "2026-10-15",
       "availability": "open",
+      "group": "eurohpc-industry",
       "notes": "Continuously open with two cut-off dates per month that trigger evaluation; the page says approval within ten working days from the cut-off; specific cut-off dates are not listed on the page. Process: eligibility check, technical assessment by the AI Factory, expert evaluation by the AI Factory's Industrial Innovation Group on two criteria, innovation and impact, each scored 0 to 5 with a threshold of 3 per criterion and 6 overall, then a ranked list approved by the EuroHPC JU Executive Director. EIC Accelerator challenge awardees pass without further evaluation and have priority within the cut-off. Proposals below the per-system minimum request are administratively rejected; awards may be reduced in scope. Normally one Large Scale award per project lead at a time; proposals submitted after a cut-off roll into the next one; appeals to aif.access@eurohpc-ju.europa.eu within 15 days. No extensions or top-ups; final report three months after the end; English, civilian purpose, AI Act compliance, no double-awarding. Continuation proposals are possible with a progress or final report."
     },
     {
@@ -1038,30 +1181,22 @@
           "value": [
             "academia",
             "public"
-          ],
-          "label": "academia or public sector",
-          "question": "Is the applicant a university, research institute or public authority?"
+          ]
         },
         {
           "field": "has_employment",
           "op": "eq",
-          "value": true,
-          "label": "employment",
-          "question": "Does the project lead have an employment contract valid until at least three months after the allocation ends?"
+          "value": true
         },
         {
           "field": "has_work_email",
           "op": "eq",
-          "value": true,
-          "label": "work email",
-          "question": "Which professional address is the contact for the project lead?"
+          "value": true
         },
         {
           "field": "workload_defined",
           "op": "eq",
-          "value": true,
-          "label": "workload",
-          "question": "Which code, which single system, and how many node hours between 20 000 and 90 000?"
+          "value": true
         }
       ],
       "apply_url": "https://access.eurohpc-ju.europa.eu/",
@@ -1089,23 +1224,17 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "FI",
-          "label": "Finnish company",
-          "question": "Is the company based in Finland?"
+          "value": "FI"
         },
         {
           "field": "legal_form",
           "op": "eq",
-          "value": "company",
-          "label": "company",
-          "question": "Is the applicant an officially established company?"
+          "value": "company"
         },
         {
           "field": "employees",
           "op": "lt",
-          "value": 250,
-          "label": "SME, fewer than 250 employees",
-          "question": "How many employees does the company have?"
+          "value": 250
         }
       ],
       "apply_url": "https://lumi-ai-factory.eu/contact/",
@@ -1133,9 +1262,7 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "NO",
-          "label": "Norwegian organisation",
-          "question": "Is the organisation Norwegian?"
+          "value": "NO"
         }
       ],
       "apply_url": "https://www.sigma2.no/nb/ki-fabrikken#toc-heading--ta-kontakt",
@@ -1163,9 +1290,7 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "SE",
-          "label": "Swedish organisation",
-          "question": "Is the organisation based in Sweden?"
+          "value": "SE"
         }
       ],
       "apply_url": "mailto:info@swedenaifactory.se",
@@ -1193,16 +1318,12 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "SE",
-          "label": "Swedish institution",
-          "question": "Is the PI appointed at a Swedish university or research institution?"
+          "value": "SE"
         },
         {
           "field": "legal_form",
           "op": "eq",
-          "value": "academia",
-          "label": "academia",
-          "question": "Is the applicant an academic researcher?"
+          "value": "academia"
         }
       ],
       "apply_url": "https://supr.naiss.se/round/naiss/",
@@ -1230,16 +1351,12 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "SE",
-          "label": "Swedish institution",
-          "question": "Is the PI at a Swedish academic institution?"
+          "value": "SE"
         },
         {
           "field": "legal_form",
           "op": "eq",
-          "value": "academia",
-          "label": "academia",
-          "question": "Is the applicant an academic researcher with Wallenberg Foundation funding?"
+          "value": "academia"
         }
       ],
       "apply_url": "https://supr.naiss.se/",
@@ -1267,37 +1384,27 @@
         {
           "field": "legal_form",
           "op": "eq",
-          "value": "company",
-          "label": "incorporated company",
-          "question": "Is the startup officially incorporated, and on which date?"
+          "value": "company"
         },
         {
           "field": "age_years",
           "op": "lt",
-          "value": 10,
-          "label": "under 10 years old",
-          "question": "How many years since incorporation?"
+          "value": 10
         },
         {
           "field": "has_developer",
           "op": "eq",
-          "value": true,
-          "label": "employs a developer",
-          "question": "Does the company employ at least one developer?"
+          "value": true
         },
         {
           "field": "has_website",
           "op": "eq",
-          "value": true,
-          "label": "working website",
-          "question": "Does the company have a working website?"
+          "value": true
         },
         {
           "field": "has_work_email",
           "op": "eq",
-          "value": true,
-          "label": "business email",
-          "question": "Which business email address will you apply with?"
+          "value": true
         }
       ],
       "apply_url": "https://programs.nvidia.com/phoenix/application",
@@ -1327,16 +1434,12 @@
         {
           "field": "stack",
           "op": "contains",
-          "value": "aws",
-          "label": "uses AWS",
-          "question": "Do you run on AWS?"
+          "value": "aws"
         },
         {
           "field": "age_years",
           "op": "lte",
-          "value": 10,
-          "label": "founded in the last 10 years",
-          "question": "How many years ago was the company founded?"
+          "value": 10
         },
         {
           "field": "stage",
@@ -1346,9 +1449,7 @@
             "pre_seed",
             "seed",
             "series_a"
-          ],
-          "label": "pre-Series B",
-          "question": "What is the company's latest funding stage?"
+          ]
         }
       ],
       "apply_url": "https://aws.amazon.com/startups/join?destination=/credits/apply",
@@ -1378,9 +1479,7 @@
         {
           "field": "stack",
           "op": "contains",
-          "value": "gcp",
-          "label": "uses Google Cloud",
-          "question": "Do you run on Google Cloud?"
+          "value": "gcp"
         },
         {
           "field": "stage",
@@ -1390,30 +1489,22 @@
             "pre_seed",
             "seed",
             "series_a"
-          ],
-          "label": "pre-funded to Series A",
-          "question": "What is the company's latest funding stage?"
+          ]
         },
         {
           "field": "age_years",
           "op": "lte",
-          "value": 5,
-          "label": "founded within the last 5 years (Start tier: 24 months)",
-          "question": "How many years ago was the company founded?"
+          "value": 5
         },
         {
           "field": "has_website",
           "op": "eq",
-          "value": true,
-          "label": "public website",
-          "question": "Does the company have a public website on its own domain?"
+          "value": true
         },
         {
           "field": "has_work_email",
           "op": "eq",
-          "value": true,
-          "label": "business email matching the website domain",
-          "question": "Do you have a business email on the same domain as the website?"
+          "value": true
         }
       ],
       "apply_url": "https://cloud.google.com/startup/apply",
@@ -1443,16 +1534,12 @@
         {
           "field": "stack",
           "op": "contains",
-          "value": "azure",
-          "label": "uses Azure",
-          "question": "Do you run on Azure?"
+          "value": "azure"
         },
         {
           "field": "legal_form",
           "op": "eq",
-          "value": "company",
-          "label": "privately held, for-profit company",
-          "question": "Is the applicant a privately held, for-profit company?"
+          "value": "company"
         }
       ],
       "apply_url": "https://www.microsoft.com/en-us/startups",
@@ -1482,37 +1569,27 @@
         {
           "field": "stack",
           "op": "contains",
-          "value": "cloudflare",
-          "label": "uses Cloudflare",
-          "question": "Do you run on Cloudflare?"
+          "value": "cloudflare"
         },
         {
           "field": "age_years",
           "op": "lte",
-          "value": 10,
-          "label": "incorporated within the last 10 years",
-          "question": "How many years ago was the company incorporated?"
+          "value": 10
         },
         {
           "field": "legal_form",
           "op": "eq",
-          "value": "company",
-          "label": "for-profit business",
-          "question": "Is the applicant a for-profit company?"
+          "value": "company"
         },
         {
           "field": "has_website",
           "op": "eq",
-          "value": true,
-          "label": "live, publicly accessible website",
-          "question": "Does the company have a live public website?"
+          "value": true
         },
         {
           "field": "has_work_email",
           "op": "eq",
-          "value": true,
-          "label": "business email matching the domain",
-          "question": "Do you have a business email on the company's own domain?"
+          "value": true
         }
       ],
       "apply_url": "https://www.cloudflare.com/startups/",
@@ -1542,16 +1619,12 @@
         {
           "field": "stack",
           "op": "contains",
-          "value": "vercel",
-          "label": "uses Vercel",
-          "question": "Do you deploy on Vercel?"
+          "value": "vercel"
         },
         {
           "field": "vc_backed",
           "op": "eq",
-          "value": true,
-          "label": "backed by an approved Vercel Startup Partner",
-          "question": "Is the company in an accelerator or backed by a VC that is on Vercel's Startup Partner list?"
+          "value": true
         },
         {
           "field": "stage",
@@ -1561,23 +1634,17 @@
             "pre_seed",
             "seed",
             "series_a"
-          ],
-          "label": "Series A or less",
-          "question": "What is the company's latest funding stage?"
+          ]
         },
         {
           "field": "has_website",
           "op": "eq",
-          "value": true,
-          "label": "company website",
-          "question": "Does the company have a website?"
+          "value": true
         },
         {
           "field": "has_work_email",
           "op": "eq",
-          "value": true,
-          "label": "email matching the company website",
-          "question": "Do you have an email address on the same domain as the company website?"
+          "value": true
         }
       ],
       "apply_url": "https://vercel.com/startups/credits",
@@ -1607,9 +1674,7 @@
         {
           "field": "stack",
           "op": "contains",
-          "value": "neon",
-          "label": "uses Neon",
-          "question": "Do you run your Postgres on Neon?"
+          "value": "neon"
         }
       ],
       "apply_url": "https://sites.google.com/databricks.com/startup-program-apply",
@@ -1637,16 +1702,12 @@
         {
           "field": "stack",
           "op": "contains",
-          "value": "mongodb",
-          "label": "uses MongoDB Atlas",
-          "question": "Do you run on MongoDB Atlas?"
+          "value": "mongodb"
         },
         {
           "field": "age_years",
           "op": "lt",
-          "value": 7,
-          "label": "less than 7 years old",
-          "question": "How many years ago was the company founded?"
+          "value": 7
         },
         {
           "field": "stage",
@@ -1656,16 +1717,12 @@
             "pre_seed",
             "seed",
             "series_a"
-          ],
-          "label": "Series A or earlier",
-          "question": "What is the company's latest funding stage?"
+          ]
         },
         {
           "field": "has_website",
           "op": "eq",
-          "value": true,
-          "label": "active company website",
-          "question": "Does the company have an active website?"
+          "value": true
         }
       ],
       "apply_url": "https://www.mongodb.com/solutions/startups#startups",
@@ -1695,9 +1752,7 @@
         {
           "field": "stack",
           "op": "contains",
-          "value": "anthropic",
-          "label": "builds on Anthropic",
-          "question": "Do you build on Anthropic's Claude API?"
+          "value": "anthropic"
         }
       ],
       "apply_url": "https://claude.com/programs/startups",
@@ -1727,9 +1782,7 @@
         {
           "field": "stack",
           "op": "contains",
-          "value": "together",
-          "label": "builds on Together AI",
-          "question": "Do you build on Together AI?"
+          "value": "together"
         }
       ],
       "apply_url": "https://www.together.ai/startup-accelerator",
@@ -1757,28 +1810,21 @@
         {
           "field": "stack",
           "op": "contains",
-          "value": "modal",
-          "label": "builds on Modal",
-          "question": "Do you build on Modal?"
+          "value": "modal"
         },
         {
           "any": [
             {
               "field": "vc_backed",
               "op": "eq",
-              "value": true,
-              "label": "backed by a partner investor",
-              "question": "Is the company backed by one of the program's partner investors?"
+              "value": true
             },
             {
               "field": "funding_raised_usd",
               "op": "gt",
-              "value": 1000000,
-              "label": "raised over 1 MUSD in VC funding",
-              "question": "How much VC funding has the company raised, in USD?"
+              "value": 1000000
             }
-          ],
-          "label": "VC funding from a Modal partner fund, or over 1 MUSD VC funding from any fund"
+          ]
         }
       ],
       "apply_url": "https://modal.com/startups#apply",
@@ -1787,7 +1833,7 @@
       "reference": "references/ai-api-credits.md#modal-for-startups",
       "last_verified": "2026-10-15",
       "availability": "open",
-      "notes": "Application form was live on 2026-10-15. The page only says \"thousands of free GPU credits\"; the credit size per tier is not published. Only customers new to Modal are eligible; credits are a one-time grant and you cannot reapply once you have received credits in a tier. The FAQ asks why a payment method is required, so expect to add a card. FAQ answers (credit duration, tier assignment, full VC partner list) are rendered client-side and could not be read in this fetch; check them in a browser. Partner logos shown: Y Combinator, Andreessen Horowitz, Sequoia, Khosla Ventures, Neo, HF0, Pear VC, Lux Capital. A separate Modal for Academics program exists. The 30 USD/month free compute banner is a general offer, not part of this program."
+      "notes": "Application form was live on 2026-10-15. The page only says \"thousands of free GPU credits\"; the credit size per tier is not published. FAQ answers read in the in-app browser on 2026-10-15: 'Credits last 1 year and cannot be reinstated if they expire.' Tier: 'The credit amount is determined based on factors like traction, amount of funding raised, and whether you are a portfolio company of a VC or accelerator that we have an official partnership with. Reach out to startups@modal.com for more details.' Who can apply: 'Early-stage startups who are new to Modal may apply.' Only customers new to Modal are eligible; credits are a one-time grant and you cannot reapply once you have received credits in a tier. The FAQ asks why a payment method is required, so expect to add a card. The full VC partner list sits in the FAQ item 'Who are Modal's VC partners?' (not copied). Partner logos shown: Y Combinator, Andreessen Horowitz, Sequoia, Khosla Ventures, Neo, HF0, Pear VC, Lux Capital. A separate Modal for Academics program exists. The 30 USD/month free compute banner is a general offer, not part of this program."
     },
     {
       "id": "lambda-nvidia-inception",
@@ -1808,9 +1854,7 @@
         {
           "field": "stack",
           "op": "contains",
-          "value": "lambda",
-          "label": "builds on Lambda",
-          "question": "Do you build on Lambda Cloud?"
+          "value": "lambda"
         }
       ],
       "apply_url": "https://lambda.ai/nvidia-inception",
@@ -1840,9 +1884,7 @@
         {
           "field": "stack",
           "op": "contains",
-          "value": "runpod",
-          "label": "builds on Runpod",
-          "question": "Do you build on Runpod?"
+          "value": "runpod"
         }
       ],
       "apply_url": "https://www.runpod.io/startup-program",
@@ -1870,16 +1912,12 @@
         {
           "field": "stack",
           "op": "contains",
-          "value": "openai",
-          "label": "builds on OpenAI",
-          "question": "Do you build on OpenAI's API?"
+          "value": "openai"
         },
         {
           "field": "vc_backed",
           "op": "eq",
-          "value": true,
-          "label": "backed by a partner-network VC",
-          "question": "Is the company backed by a VC in OpenAI's partner network? Your investor knows."
+          "value": true
         }
       ],
       "apply_url": "https://openai.com/startups/",
@@ -1909,9 +1947,7 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
+          "value": "SE"
         },
         {
           "field": "stage",
@@ -1919,42 +1955,31 @@
           "value": [
             "pre_seed",
             "seed"
-          ],
-          "label": "MVP/prototype stage, before commercial launch",
-          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+          ]
         },
         {
           "any": [
             {
               "field": "sector",
               "op": "contains",
-              "value": "climate",
-              "label": "climate",
-              "question": "Which sectors does the company work in?"
+              "value": "climate"
             },
             {
               "field": "sector",
               "op": "contains",
-              "value": "health",
-              "label": "health",
-              "question": "Which sectors does the company work in?"
+              "value": "health"
             },
             {
               "field": "sector",
               "op": "contains",
-              "value": "ai",
-              "label": "AI",
-              "question": "Which sectors does the company work in?"
+              "value": "ai"
             },
             {
               "field": "sector",
               "op": "contains",
-              "value": "deeptech",
-              "label": "deep tech",
-              "question": "Which sectors does the company work in?"
+              "value": "deeptech"
             }
-          ],
-          "label": "climate, health, AI or deep tech"
+          ]
         }
       ],
       "apply_url": "https://share.hsforms.com/2gw10xJqxRF--BnigBjZ_HQ50drh",
@@ -1984,9 +2009,7 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
+          "value": "SE"
         },
         {
           "field": "stage",
@@ -1995,9 +2018,7 @@
             "idea",
             "pre_seed",
             "seed"
-          ],
-          "label": "early research spinout",
-          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+          ]
         }
       ],
       "apply_url": "https://share.hsforms.com/2gw10xJqxRF--BnigBjZ_HQ50drh",
@@ -2025,9 +2046,7 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
+          "value": "SE"
         },
         {
           "field": "stage",
@@ -2035,42 +2054,31 @@
           "value": [
             "idea",
             "pre_seed"
-          ],
-          "label": "just getting started",
-          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+          ]
         },
         {
           "any": [
             {
               "field": "sector",
               "op": "contains",
-              "value": "deeptech",
-              "label": "deep tech",
-              "question": "Which sectors does the company work in?"
+              "value": "deeptech"
             },
             {
               "field": "sector",
               "op": "contains",
-              "value": "health",
-              "label": "health and life science",
-              "question": "Which sectors does the company work in?"
+              "value": "health"
             },
             {
               "field": "sector",
               "op": "contains",
-              "value": "climate",
-              "label": "climate",
-              "question": "Which sectors does the company work in?"
+              "value": "climate"
             },
             {
               "field": "sector",
               "op": "contains",
-              "value": "energy",
-              "label": "energy",
-              "question": "Which sectors does the company work in?"
+              "value": "energy"
             }
-          ],
-          "label": "deep tech, health or climate and energy track"
+          ]
         }
       ],
       "apply_url": "https://www.sting.co/pre-sting/test-drive",
@@ -2104,9 +2112,7 @@
           "value": [
             "pre_seed",
             "seed"
-          ],
-          "label": "pre-seed or early seed",
-          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+          ]
         }
       ],
       "apply_url": "https://airtable.com/app7bGSveZe9qXGM5/pag01no0ldy3Ae7Br/form",
@@ -2136,9 +2142,7 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
+          "value": "SE"
         },
         {
           "field": "stage",
@@ -2146,9 +2150,7 @@
           "value": [
             "idea",
             "pre_seed"
-          ],
-          "label": "idea to pre-seed, before raising",
-          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+          ]
         }
       ],
       "apply_url": "https://www.antler.co/apply",
@@ -2178,9 +2180,7 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
+          "value": "SE"
         },
         {
           "field": "stage",
@@ -2188,9 +2188,7 @@
           "value": [
             "idea",
             "pre_seed"
-          ],
-          "label": "idea or earliest stage",
-          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+          ]
         }
       ],
       "apply_url": "https://kthinnovation.lime-forms.se/forms/awGkjUiUUAkAFlwC0BVn",
@@ -2218,9 +2216,7 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
+          "value": "SE"
         },
         {
           "field": "stage",
@@ -2228,9 +2224,7 @@
           "value": [
             "pre_seed",
             "seed"
-          ],
-          "label": "prototype and initial team in place",
-          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+          ]
         }
       ],
       "apply_url": "https://apply-kth-innovation-launch.lovable.app/",
@@ -2258,9 +2252,7 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
+          "value": "SE"
         },
         {
           "field": "stage",
@@ -2268,16 +2260,12 @@
           "value": [
             "idea",
             "pre_seed"
-          ],
-          "label": "research idea, lab to market",
-          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+          ]
         },
         {
           "field": "sector",
           "op": "contains",
-          "value": "deeptech",
-          "label": "deep tech based on university research",
-          "question": "Which sectors does the company work in?"
+          "value": "deeptech"
         }
       ],
       "apply_url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ZXoUKW1T-UO4AuChtc-dv0iVaT60b5JNsELIevUlG_pUMFVKQ0lXQUhRWFhGOFBTV1JYUzNaRExSNiQlQCN0PWcu",
@@ -2307,25 +2295,21 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
+          "value": "SE"
         },
         {
           "field": "sector",
           "op": "contains",
-          "value": "deeptech",
-          "label": "deep tech or university spin-out",
-          "question": "Which sectors does the company work in?"
+          "value": "deeptech"
         }
       ],
-      "apply_url": "https://chalmersventures.com/program/",
+      "apply_url": "https://chalmersventures.com/open-coaching/",
       "status_url": "https://chalmersventures.com/program/",
-      "next_step": "The page's 'APPLY NOW' link was broken on 2026-10-15, so book a 15-minute Open Coaching slot (Tuesdays 15:00-16:00, Zoom) through the Bookings page and describe the idea, or email info@chalmersventures.com. The founder clicks book.",
+      "next_step": "The program page's 'APPLY NOW' link was still broken on 2026-10-15, so open the Open Coaching page, click 'Book a session!' to book a 15-minute slot (Tuesdays 15:00-16:00, Zoom, for individuals and teams in the VGR region with a Swedish project or company) and describe the idea, or email info@chalmersventures.com. The founder clicks book.",
       "reference": "references/accelerators-se.md#chalmers-ventures-venture-building",
       "last_verified": "2026-10-15",
       "availability": "unknown",
-      "notes": "Both 'APPLY NOW' buttons link to chalmersventures.com/game-changer-challenge/, which returned HTTP 404 on 2026-10-15. Open Coaching is for 'Individuals and teams located in the VGR-region' with a connection to Swedish projects or companies. Tracks: Tech Transfer (for Chalmers researchers; patent financing and commercialisation support, contact david@chalmersventures.com), Tech Matching for Encubation ('Application period is now closed and scheduled re-open in march 2027'; tech owners are matched with Chalmers School of Entrepreneurship students for a project year, then investment if validation succeeds), Startup Camp Deep Tech 2026 (own record). No equity terms, stage split or deadlines published. Gothenburg. The Open Coaching booking page on outlook.office365.com refuses automated clients (417); reach it from the program page."
+      "notes": "Re-read in the in-app browser on 2026-10-15: both 'APPLY NOW' buttons still link to chalmersventures.com/game-changer-challenge/ (HTTP 404), and the 'Program and Tracks' overview at chalmersventures.com/programs/ also returns 404, so no application form exists for the Venture Building Program itself. The live entry points are the tracks: Open Coaching (chalmersventures.com/open-coaching/, 'Book a session!' opens an outlook.office365.com Bookings page that refuses automated clients with 417; slots Tuesday 15:00-15:15, 15:20-15:35, 15:40-15:55; 'only open to individuals with a connection to Swedish projects/companies'), Tech Transfer (for Chalmers researchers; patent financing and commercialisation support, contact david@chalmersventures.com), Tech Matching for Encubation ('Application period is now closed and scheduled re-open in march 2027'; tech owners are matched with Chalmers School of Entrepreneurship students for a project year, then investment if validation succeeds) and Startup Camp Deep Tech 2026 (own record). No equity terms, stage split or deadlines published. Gothenburg."
     },
     {
       "id": "minc-incubator",
@@ -2346,16 +2330,12 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
+          "value": "SE"
         },
         {
           "field": "legal_form",
           "op": "eq",
-          "value": "company",
-          "label": "registered AB",
-          "question": "Is it a registered limited company (AB)?"
+          "value": "company"
         },
         {
           "field": "stage",
@@ -2363,9 +2343,7 @@
           "value": [
             "pre_seed",
             "seed"
-          ],
-          "label": "validated MVP and team",
-          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+          ]
         }
       ],
       "apply_url": "https://minc.typeform.com/to/UJtc0HVO",
@@ -2393,9 +2371,7 @@
         {
           "field": "country",
           "op": "eq",
-          "value": "SE",
-          "label": "Swedish company",
-          "question": "Is the company registered in Sweden?"
+          "value": "SE"
         },
         {
           "field": "stage",
@@ -2403,9 +2379,7 @@
           "value": [
             "idea",
             "pre_seed"
-          ],
-          "label": "idea to early product",
-          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+          ]
         }
       ],
       "apply_url": "https://minc.typeform.com/to/UJtc0HVO",
@@ -2437,19 +2411,14 @@
             {
               "field": "country",
               "op": "eq",
-              "value": "SE",
-              "label": "Swedish company",
-              "question": "Is the company registered in Sweden?"
+              "value": "SE"
             },
             {
               "field": "country",
               "op": "eq",
-              "value": "DK",
-              "label": "Danish company (Copenhagen area)",
-              "question": "Is the company registered in Denmark?"
+              "value": "DK"
             }
-          ],
-          "label": "Southern Sweden or the Copenhagen area"
+          ]
         },
         {
           "field": "stage",
@@ -2457,9 +2426,7 @@
           "value": [
             "pre_seed",
             "seed"
-          ],
-          "label": "raising venture capital",
-          "question": "What stage is the company at: idea, pre-seed, seed, series A or later?"
+          ]
         }
       ],
       "apply_url": "https://minc.typeform.com/to/SuWd4mOq",
