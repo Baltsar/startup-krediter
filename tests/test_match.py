@@ -362,3 +362,58 @@ def test_integer_booleans_coerced() -> None:
     assert profile["has_vat"] is True
     assert profile["has_website"] is False
     assert warnings == []
+
+
+# --- deferred minors from the 2026-10-15 review ----------------------------
+
+
+def test_non_finite_number_is_unknown_with_warning() -> None:
+    assert match.to_number("nan") is None
+    assert match.to_number("inf") is None
+    assert match.to_number("-Infinity") is None
+    assert match.to_number(float("nan")) is None
+    assert match.to_number("1e999") is None
+    profile, warnings = match.normalize_profile({"revenue_msek": "nan", "employees": "inf"})
+    assert "revenue_msek" not in profile
+    assert "employees" not in profile
+    assert any("revenue_msek" in warning for warning in warnings)
+    assert any("employees" in warning for warning in warnings)
+
+
+def test_cli_missing_programs_file_exits_two_with_one_line(capsys: pytest.CaptureFixture[str], tmp_path: Path) -> None:
+    missing = tmp_path / "nowhere.json"
+    code = match.main(["--programs", str(missing)], stdin=io.StringIO("{}"))
+    assert code == 2
+    err = capsys.readouterr().err
+    assert "nowhere.json" in err
+    assert "Traceback" not in err
+    assert len(err.strip().splitlines()) == 1
+
+
+def test_cli_programs_file_not_json_exits_two_with_one_line(capsys: pytest.CaptureFixture[str], tmp_path: Path) -> None:
+    broken = tmp_path / "broken.json"
+    broken.write_text("{not json", encoding="utf-8")
+    code = match.main(["--programs", str(broken)], stdin=io.StringIO("{}"))
+    assert code == 2
+    err = capsys.readouterr().err
+    assert "broken.json" in err
+    assert len(err.strip().splitlines()) == 1
+
+
+def test_cli_malformed_record_exits_two_naming_the_record(capsys: pytest.CaptureFixture[str], tmp_path: Path) -> None:
+    bad = tmp_path / "bad.json"
+    bad.write_text(json.dumps({"programs": [{"id": "half-a-record", "name": "Half"}]}), encoding="utf-8")
+    code = match.main(["--programs", str(bad)], stdin=io.StringIO('{"country": "SE"}'))
+    assert code == 2
+    err = capsys.readouterr().err
+    assert "half-a-record" in err
+    assert "Traceback" not in err
+    assert len(err.strip().splitlines()) == 1
+
+
+def test_cli_programs_document_without_list_exits_two(capsys: pytest.CaptureFixture[str], tmp_path: Path) -> None:
+    bad = tmp_path / "list.json"
+    bad.write_text(json.dumps([1, 2, 3]), encoding="utf-8")
+    code = match.main(["--programs", str(bad)], stdin=io.StringIO("{}"))
+    assert code == 2
+    assert "programs" in capsys.readouterr().err

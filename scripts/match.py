@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import re
 import sys
 from collections.abc import Callable
@@ -126,16 +127,20 @@ def slug(value: object) -> str:
 
 
 def to_number(value: object) -> float | None:
+    """A finite float, or None. 'nan', 'inf' and 1e999 parse as floats, but no cap can be checked against them."""
     if isinstance(value, bool):
         return None
+    number: float | None = None
     if isinstance(value, (int, float)):
-        return float(value)
-    if isinstance(value, str):
+        number = float(value)
+    elif isinstance(value, str):
         try:
-            return float(value.replace(",", ".").replace(" ", ""))
+            number = float(value.replace(",", ".").replace(" ", ""))
         except ValueError:
             return None
-    return None
+    if number is None or not math.isfinite(number):
+        return None
+    return number
 
 
 def to_bool(value: object) -> bool | None:
@@ -361,6 +366,40 @@ def rank(doors: list[Door]) -> list[Door]:
     return sorted(doors, key=lambda door: (door.availability == "closed", RANK[door.status], len(door.unknown)))
 
 
+class MalformedRecord(ValueError):
+    """A record the matcher cannot evaluate. The message names the record and what is wrong with it."""
+
+
+def describe_malformed(program: object, index: int, exc: Exception) -> str:
+    ident = program["id"] if isinstance(program, dict) and isinstance(program.get("id"), str) else f"programs[{index}]"
+    if isinstance(exc, KeyError):
+        return f"record {ident} has no field {exc.args[0]!r}"
+    return f"record {ident} cannot be evaluated: {exc}"
+
+
+def build_door(
+    program: dict,
+    profile: dict,
+    today: date,
+    include_all: bool,
+    live_fetch: Callable[[str], dict | None] | None,
+) -> Door | None:
+    """The door for one record, or None when the record is irrelevant to the profile or blocked and hidden."""
+    if not is_relevant(program, profile):
+        return None
+    door = evaluate(program, profile, today)
+    if door.status == "blocked" and not include_all:
+        return None
+    live = program.get("live")
+    if live_fetch is not None and live and live.get("source") == "vinnova":
+        try:
+            door.live = live_fetch(live["call_id"])
+        except Exception as exc:  # the boundary: a dead API must not hide the other doors
+            door.live = {"error": str(exc)}
+    door.glyph = render_glyph(door)
+    return door
+
+
 def run(
     raw_profile: dict,
     programs: list[dict],
@@ -368,22 +407,16 @@ def run(
     include_all: bool = False,
     live_fetch: Callable[[str], dict | None] | None = None,
 ) -> dict:
+    """Raises MalformedRecord when a record lacks a field or holds a value the rules cannot read."""
     profile, warnings = normalize_profile(raw_profile)
     doors: list[Door] = []
-    for program in programs:
-        if not is_relevant(program, profile):
-            continue
-        door = evaluate(program, profile, today)
-        if door.status == "blocked" and not include_all:
-            continue
-        live = program.get("live")
-        if live_fetch is not None and live and live.get("source") == "vinnova":
-            try:
-                door.live = live_fetch(live["call_id"])
-            except Exception as exc:  # the boundary: a dead API must not hide the other doors
-                door.live = {"error": str(exc)}
-        door.glyph = render_glyph(door)
-        doors.append(door)
+    for index, program in enumerate(programs):
+        try:
+            door = build_door(program, profile, today, include_all, live_fetch)
+        except (KeyError, TypeError, ValueError) as exc:
+            raise MalformedRecord(describe_malformed(program, index, exc)) from exc
+        if door is not None:
+            doors.append(door)
     ranked = rank(doors)
     return {
         "profile": profile,
@@ -391,6 +424,20 @@ def run(
         "stale": [door.id for door in ranked if door.stale],
         "doors": [asdict(door) for door in ranked],
     }
+
+
+def load_programs(path: Path) -> list[dict]:
+    """The records of a programs file. Raises ValueError with the one-line reason main prints instead of a traceback."""
+    try:
+        document = json.loads(path.read_text(encoding="utf-8"))
+    except OSError as exc:
+        raise ValueError(f"cannot read programs file {path}: {exc.strerror or exc}") from exc
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"programs file {path} is not valid JSON: {exc}") from exc
+    records = document.get("programs") if isinstance(document, dict) else None
+    if not isinstance(records, list):
+        raise ValueError(f"programs file {path} must be an object with a 'programs' list")
+    return records
 
 
 def main(argv: list[str] | None = None, stdin: TextIO | None = None) -> int:
@@ -409,7 +456,6 @@ def main(argv: list[str] | None = None, stdin: TextIO | None = None) -> int:
     if not isinstance(raw, dict):
         print("profile must be a JSON object", file=sys.stderr)
         return 2
-    programs = json.loads(args.programs.read_text(encoding="utf-8"))["programs"]
     live_fetch: Callable[[str], dict | None] | None = None
     if args.live:
         now = datetime.now(timezone.utc)
@@ -419,7 +465,12 @@ def main(argv: list[str] | None = None, stdin: TextIO | None = None) -> int:
             return found.to_dict() if found else None
 
         live_fetch = fetch_round
-    result = run(raw, programs, args.today or date.today(), include_all=args.all, live_fetch=live_fetch)
+    try:
+        programs = load_programs(args.programs)
+        result = run(raw, programs, args.today or date.today(), include_all=args.all, live_fetch=live_fetch)
+    except ValueError as exc:  # unreadable file, wrong shape, or a MalformedRecord: one line, no traceback
+        print(str(exc), file=sys.stderr)
+        return 2
     json.dump(result, sys.stdout, ensure_ascii=False, indent=2)
     sys.stdout.write("\n")
     return 0
