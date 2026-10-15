@@ -5,8 +5,9 @@ Interprets the subset of JSON Schema 2020-12 that schema.json uses (type, enum,
 pattern, minLength, minItems, uniqueItems, required, properties,
 additionalProperties, items, $ref, oneOf), so the schema stays the single source
 of truth for enums and required fields. Then adds the checks a schema cannot
-express: unique ids, last_verified not in the future, and the reference anchor
-present in the reference file.
+express: unique ids, last_verified not in the future, the reference anchor
+present in the reference file, and that each rule's op suits its field and value
+(a mismatch makes the matcher fail the rule for every founder without a word).
 
 Usage: python3 scripts/validate.py [path/to/programs.json]
 Prints one line per problem to stderr and exits 1 when anything is wrong.
@@ -21,10 +22,18 @@ from collections.abc import Callable
 from datetime import date
 from pathlib import Path
 
+from match import BOOLEAN_FIELDS, LIST_FIELDS, NUMERIC_FIELDS
+
 ROOT = Path(__file__).resolve().parent.parent
 SCHEMA_PATH = ROOT / "data" / "schema.json"
 PROGRAMS_PATH = ROOT / "data" / "programs.json"
 REFERENCES_DIR = ROOT / "references"
+
+# need is matched by relevance, not by a rule, so the schema's field enum leaves it out.
+CONTAINS_FIELDS = LIST_FIELDS - {"need"}
+NUMERIC_OPS = {"lte", "gte", "lt", "gt"}
+LIST_VALUE_OPS = {"in", "not_in"}
+EQUALITY_OPS = {"eq", "neq"}
 
 TYPE_CHECKS: dict[str, Callable[[object], bool]] = {
     "object": lambda v: isinstance(v, dict),
@@ -96,6 +105,54 @@ def check(value: object, schema: dict, path: str, root: dict) -> list[str]:
     return out
 
 
+def is_number(value: object) -> bool:
+    return isinstance(value, (int, float)) and not isinstance(value, bool)
+
+
+def check_rule_compatibility(rule: dict, path: str) -> list[str]:
+    """The op must suit the field and the value. The matcher's compare() answers False for any mismatch, which would block the door silently."""
+    field, op, value = rule.get("field"), rule.get("op"), rule.get("value")
+    if not isinstance(field, str) or not isinstance(op, str):
+        return []
+    if op in LIST_VALUE_OPS and not isinstance(value, list):
+        return [f"{path}: op '{op}' needs a list value, got {type(value).__name__}"]
+    if op == "contains":
+        if field not in CONTAINS_FIELDS:
+            return [f"{path}: op 'contains' needs a list field ({', '.join(sorted(CONTAINS_FIELDS))}), got '{field}'"]
+        if isinstance(value, (list, dict)):
+            return [f"{path}: op 'contains' needs a single item as value, got {type(value).__name__}"]
+    if op in NUMERIC_OPS:
+        if field not in NUMERIC_FIELDS:
+            return [f"{path}: op '{op}' needs a numeric field, got '{field}'"]
+        if not is_number(value):
+            return [f"{path}: op '{op}' needs a numeric value, got {value!r}"]
+    if op in EQUALITY_OPS:
+        if isinstance(value, (list, dict)):
+            return [f"{path}: op '{op}' needs a scalar value, got {type(value).__name__}"]
+        if field in BOOLEAN_FIELDS and not isinstance(value, bool):
+            return [f"{path}: op '{op}' on boolean field '{field}' needs a boolean value, got {value!r}"]
+        if field not in BOOLEAN_FIELDS and isinstance(value, bool):
+            return [f"{path}: op '{op}' with a boolean value needs a boolean field, got '{field}'"]
+    return []
+
+
+def check_gates(ident: str, gates: object) -> list[str]:
+    """Compatibility of every rule, inside groups too. Shape errors are the schema's job and are skipped here."""
+    if not isinstance(gates, list):
+        return []
+    out: list[str] = []
+    for index, gate in enumerate(gates):
+        if not isinstance(gate, dict):
+            continue
+        if isinstance(gate.get("any"), list):
+            for member_index, member in enumerate(gate["any"]):
+                if isinstance(member, dict):
+                    out.extend(check_rule_compatibility(member, f"{ident}.eligibility[{index}].any[{member_index}]"))
+        else:
+            out.extend(check_rule_compatibility(gate, f"{ident}.eligibility[{index}]"))
+    return out
+
+
 def check_date(ident: str, raw: object, today: date) -> list[str]:
     if not isinstance(raw, str):
         return []
@@ -142,6 +199,7 @@ def validate(programs: object, schema: dict, today: date, references_dir: Path |
         if ident in seen:
             out.append(f"{ident}: duplicate id '{ident}'")
         seen.add(ident)
+        out.extend(check_gates(ident, record.get("eligibility")))
         out.extend(check_date(ident, record.get("last_verified"), today))
         if references_dir is not None:
             out.extend(check_reference(ident, record.get("reference"), references_dir))

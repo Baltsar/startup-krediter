@@ -116,3 +116,67 @@ def test_accepts_known_availability() -> None:
     good = copy.deepcopy(FIXTURE)
     good["programs"][0]["availability"] = "closed"
     assert errors(good) == []
+
+
+# --- op, value and field compatibility --------------------------------------
+
+
+def rule(field: str, op: str, value: object) -> dict:
+    return {"field": field, "op": op, "value": value, "label": "x", "question": "x?"}
+
+
+def with_rule(new_rule: dict) -> dict:
+    bad = copy.deepcopy(FIXTURE)
+    bad["programs"][0]["eligibility"][0] = new_rule
+    return bad
+
+
+def test_in_needs_a_list_value() -> None:
+    found = errors(with_rule(rule("country", "in", "SE")))
+    assert any("'in'" in e and "list" in e for e in found)
+    assert errors(with_rule(rule("country", "in", ["SE", "FI"]))) == []
+
+
+def test_not_in_needs_a_list_value() -> None:
+    assert any("'not_in'" in e for e in errors(with_rule(rule("stage", "not_in", "later"))))
+
+
+def test_contains_needs_a_list_field() -> None:
+    found = errors(with_rule(rule("country", "contains", "SE")))
+    assert any("'contains'" in e and "stack" in e for e in found)
+    assert errors(with_rule(rule("stack", "contains", "aws"))) == []
+
+
+def test_contains_value_must_be_a_single_item() -> None:
+    assert any("'contains'" in e for e in errors(with_rule(rule("stack", "contains", ["aws", "gcp"]))))
+
+
+def test_numeric_ops_need_a_numeric_field() -> None:
+    found = errors(with_rule(rule("country", "lte", 10)))
+    assert any("'lte'" in e and "numeric" in e for e in found)
+
+
+def test_numeric_ops_need_a_numeric_value() -> None:
+    found = errors(with_rule(rule("age_years", "gte", "10")))
+    assert any("'gte'" in e and "numeric" in e for e in found)
+    assert any("'lt'" in e for e in errors(with_rule(rule("employees", "lt", True))))
+    assert errors(with_rule(rule("employees", "gt", 2.5))) == []
+
+
+def test_eq_on_boolean_field_needs_a_boolean_value() -> None:
+    found = errors(with_rule(rule("has_vat", "eq", "yes")))
+    assert any("has_vat" in e and "boolean" in e for e in found)
+    assert any("'neq'" in e for e in errors(with_rule(rule("vc_backed", "neq", 1))))
+    assert errors(with_rule(rule("has_vat", "eq", True))) == []
+
+
+def test_boolean_value_needs_a_boolean_field() -> None:
+    found = errors(with_rule(rule("country", "eq", True)))
+    assert any("country" in e and "boolean" in e for e in found)
+
+
+def test_compatibility_is_checked_inside_groups() -> None:
+    bad = copy.deepcopy(FIXTURE)
+    bad["programs"][0]["eligibility"][3]["any"][0] = rule("revenue_msek", "lte", "ten")
+    found = errors(bad)
+    assert any("any[0]" in e and "'lte'" in e for e in found)
