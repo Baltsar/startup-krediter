@@ -76,6 +76,11 @@
           "items": {"type": "string", "minLength": 1},
           "description": "What the program's pages do not say or say inconsistently, phrased so the founder knows what to ask and whom."
         },
+        "home_country": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$",
+          "description": "For a door open to several countries but run and paid by one (a Vinnova call that admits foreign startups): the funder's country. Doors whose home_country is not the founder's rank after domestic doors instead of first."
+        },
         "group": {
           "type": "string",
           "pattern": "^[a-z0-9-]+$",

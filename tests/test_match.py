@@ -553,3 +553,13 @@ def test_unlocks_only_for_founders_who_can_register_a_company() -> None:
     assert match.run({"country": "SE", "legal_form": "company", "need": ["money"]}, [SE_GRANT, not_in], TODAY)["unlocks"] == {}
     academic = match.run({"country": "SE", "legal_form": "academia", "need": ["money"]}, [SE_GRANT], TODAY)
     assert academic["unlocks"] == {}
+
+
+def test_door_run_from_another_country_ranks_after_domestic_doors() -> None:
+    swedish_open_call = dict(EU_COMPUTE, id="test-se-open-call", name="Swedish open call", home_country="SE", eligibility=[])
+    finnish = dict(SE_GRANT, id="test-fi-grant", name="Finnish grant", country="FI", eligibility=[{"field": "country", "op": "eq", "value": "FI"}, {"field": "has_vat", "op": "eq", "value": True}])
+    out = match.run({"country": "FI", "need": ["compute", "money"]}, [swedish_open_call, finnish], TODAY, top=0)
+    assert [door["id"] for door in out["doors"]] == ["test-fi-grant", "test-se-open-call"]
+    assert out["doors"][1]["foreign"] is True
+    home = match.run({"country": "SE", "need": ["compute"]}, [swedish_open_call], TODAY, top=0)
+    assert home["doors"][0]["foreign"] is False

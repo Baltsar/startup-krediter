@@ -156,3 +156,13 @@ def test_claude_startups_is_closed_and_ranks_after_the_open_doors() -> None:
     assert by_id["claude-startups"]["availability"] == "closed"
     assert ids.index("claude-startups") > ids.index("eurohpc-playground")
     assert "Stängd vid kontroll 2026-10-15" in by_id["claude-startups"]["glyph"]
+
+
+def test_finnish_founder_does_not_get_a_swedish_call_first() -> None:
+    """Regression from the 2026-10-16 evaluation: FFI ASP led a Finnish answer."""
+    out = match.run({"country": "FI", "legal_form": "company", "age_years": 1, "employees": 2, "need": ["money"], "lang": "en"}, PROGRAMS, TODAY, top=0)
+    ids = [door["id"] for door in out["doors"]]
+    first_foreign = next((i for i, d in enumerate(out["doors"]) if d["foreign"]), len(ids))
+    assert all(not d["foreign"] for d in out["doors"][:first_foreign])
+    assert ids[0] != "vinnova-ffi-asp-accelerated-startup-partnership", ids
+    assert out["doors"][0]["country"] in ("FI", "EU"), ids[:3]

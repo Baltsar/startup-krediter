@@ -124,6 +124,7 @@
       "reference": "references/nordic-grants.md#vinnova-ffi-asp-accelerated-startup-partnership",
       "last_verified": "2026-10-15",
       "availability": "open",
+      "home_country": "SE",
       "apply_requirements": [
         "At least two participants: one established need owner in road transport plus the startup; only the startup is beneficiary",
         "Co-financing of at least 25 percent of the total budget; Vinnova calls this an eligibility requirement",
@@ -212,6 +213,7 @@
       "reference": "references/nordic-grants.md#vinnova-sprang-baltic-marine-watchdog",
       "last_verified": "2026-10-15",
       "availability": "open",
+      "home_country": "SE",
       "notes": "Diarienummer 2026-02609, programme Radikal innovation. Open on 2026-10-15: 'Stänger den 2 december 2026 kl 14:00'; opened 8 October 2026; decision 19 January 2027. Timeline: initial selection December 2026 to January 2027 with a pitch event in front of a jury, up to twelve teams contracted for Stage 1 (February to June 2027, interim demonstration tracking a surface target in Baltic littoral waters), up to nine teams for Stage 2 (June to November 2027, final public demonstration with surface and underwater targets); challenge closes 30 November 2027. Both demonstrations are mandatory and Vinnova may reclaim the stage's funds from a team that does not attend. The money is a fixed price for R&D services, not a cost-share grant, and the contribution must not already be financed by other public funding. The system must be fully autonomous, with a safety risk assessment plan and a kill switch. Evaluation criteria Approach, Implementation and Team weigh equally, Economy decides ties, and a portfolio view on solution variety may be applied; team gender balance is a sub-criterion. Research teams should aim to incorporate a company. No sector rule is encoded because the schema has no maritime or robotics sector. Contact challenge@vinnova.se."
     },
     {
@@ -1354,7 +1356,6 @@
       "reference": "references/eu-grants.md#eic-accelerator",
       "last_verified": "2026-10-15",
       "availability": "open",
-      "notes": "Four-step process: short application (any time, batched first Tuesday monthly), full application (2026 batching dates written on the page as 7/01/2026, 04/03/2026, 06/05/2026, 08/07/2026, 02/09/2026, 04/11/2026, all 17:00 Brussels time; remote result in 8-9 weeks), interview with the EIC Jury (an interview session is organised after each second batch; results 2-3 weeks after the interview week), then grant agreement signature and due diligence for the investment component (decided within 2-6 months). Only one application at a time; a new one only after results of the previous. Grant only is provided once per company during Horizon Europe 2021-2027. Mid-caps (up to 499 employees) can apply for investment only; UK applicants grant only; third-country applicants must relocate before Step 2. Two strands: Accelerator Open (any field of technology, EUR 414 million budget in 2026) and Accelerator Challenges (pre-defined topics, EUR 220 million in 2026). Top-ranked full proposals corresponding to 2.5 times the available grant budget are invited to interview; proposals above the 13/15 threshold that are not funded receive a Seal of Excellence. Fast Track (existing Horizon projects) and Plug-In (certified national programmes) schemes go straight to the full application stage. The page does not state an open or closed status; it lists the 2026 cut-offs and links to the portal topic. Re-read the status page before quoting any 2027 date.",
       "apply_requirements": [
         "EU Login and a PIC number on the EU Funding and Tenders portal",
         "Step 1 short application: a 12-page form, a pitch deck of at most 10 slides as PDF, and a video pitch of at most 3 minutes by up to three core team members",
@@ -1366,7 +1367,8 @@
       "unclear": [
         "The topic page on the Funding and Tenders portal refuses automated reads; check the 2027 cut-off dates there in a browser",
         "The 2026 batching dates are written in mixed formats on the page (7/01/2026, 04/03/2026); confirm the next date before planning"
-      ]
+      ],
+      "notes": "Four-step process: short application (any time, batched first Tuesday monthly), full application (2026 batching dates written on the page as 7/01/2026, 04/03/2026, 06/05/2026, 08/07/2026, 02/09/2026, 04/11/2026, all 17:00 Brussels time; remote result in 8-9 weeks), interview with the EIC Jury (an interview session is organised after each second batch; results 2-3 weeks after the interview week), then grant agreement signature and due diligence for the investment component (decided within 2-6 months). Only one application at a time; a new one only after results of the previous. Grant only is provided once per company during Horizon Europe 2021-2027. Mid-caps (up to 499 employees) can apply for investment only; UK applicants grant only; third-country applicants must relocate before Step 2. Two strands: Accelerator Open (any field of technology, EUR 414 million budget in 2026) and Accelerator Challenges (pre-defined topics, EUR 220 million in 2026). Top-ranked full proposals corresponding to 2.5 times the available grant budget are invited to interview; proposals above the 13/15 threshold that are not funded receive a Seal of Excellence. Fast Track (existing Horizon projects) and Plug-In (certified national programmes) schemes go straight to the full application stage. The page does not state an open or closed status; it lists the 2026 cut-offs and links to the portal topic. Re-read the status page before quoting any 2027 date."
     },
     {
       "id": "eurostars",
@@ -1418,7 +1420,6 @@
       "reference": "references/eu-grants.md#eurostars",
       "last_verified": "2026-10-15",
       "availability": "closed",
-      "notes": "No Eurostars call is open on 2026-10-15: the Eureka open-calls listing shows no Eurostars call, and Call 12 opens 17 December 2026 with deadline 4 March 2027 14:00 CET; calls are usually organised twice a year. Seven international eligibility criteria: SME lead from a Eurostars country; at least two independent entities; at least two Eurostars countries with at least one organisation from an EU or Horizon Europe associated country; SMEs from Eurostars countries carry 50% or more of the budget excluding subcontracting; no single participant or country above 70% of the budget; duration 36 months or less; exclusive focus on civil applications. Funding is decentralised: Eureka pays nothing, each partner's national funding body pays under national rules and may cap amounts. National details for Call 12 were marked as being confirmed and subject to change before the call opens. Sweden: Vinnova funds SMEs up to 50% of costs, max 5 MSEK per project; Swedish participants submit a national application to Vinnova after a positive evaluation; Vinnova checks the latest registered annual report and credit reports. Finland: Business Finland requires a parallel national application with attachments when the Eurostars application is submitted. Denmark: IFD max 300 000 EUR per participant (500 000 EUR for several Danish participants, min 50 000 EUR); upload the application to e-grant within 14 days after the deadline. Norway: the funder is the Research Council of Norway, not Innovasjon Norge. Iceland: Rannís, max 45 MISK per project. Greece, Israel, Italy and Brussels have no budget for this call.",
       "apply_requirements": [
         "A consortium of at least two independent organisations from at least two Eurostars countries, led by an SME; SMEs carry at least half the budget and no participant or country more than 70 percent",
         "Every partner checks eligibility with its own national funding body before applying; Vinnova for a Swedish partner",
@@ -1428,7 +1429,8 @@
       "unclear": [
         "No call is open on 2026-10-16; national rules for Call 12 are marked as being confirmed and may change before it opens",
         "Each national funding body pays its own partner under national rules and may cap the amount; Eureka publishes no central amount"
-      ]
+      ],
+      "notes": "No Eurostars call is open on 2026-10-15: the Eureka open-calls listing shows no Eurostars call, and Call 12 opens 17 December 2026 with deadline 4 March 2027 14:00 CET; calls are usually organised twice a year. Seven international eligibility criteria: SME lead from a Eurostars country; at least two independent entities; at least two Eurostars countries with at least one organisation from an EU or Horizon Europe associated country; SMEs from Eurostars countries carry 50% or more of the budget excluding subcontracting; no single participant or country above 70% of the budget; duration 36 months or less; exclusive focus on civil applications. Funding is decentralised: Eureka pays nothing, each partner's national funding body pays under national rules and may cap amounts. National details for Call 12 were marked as being confirmed and subject to change before the call opens. Sweden: Vinnova funds SMEs up to 50% of costs, max 5 MSEK per project; Swedish participants submit a national application to Vinnova after a positive evaluation; Vinnova checks the latest registered annual report and credit reports. Finland: Business Finland requires a parallel national application with attachments when the Eurostars application is submitted. Denmark: IFD max 300 000 EUR per participant (500 000 EUR for several Danish participants, min 50 000 EUR); upload the application to e-grant within 14 days after the deadline. Norway: the funder is the Research Council of Norway, not Innovasjon Norge. Iceland: Rannís, max 45 MISK per project. Greece, Israel, Italy and Brussels have no budget for this call."
     },
     {
       "id": "eurohpc-playground",

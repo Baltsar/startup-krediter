@@ -141,6 +141,8 @@ class Door:
     notes: str
     availability: str = "unknown"
     group: str | None = None
+    home_country: str | None = None
+    foreign: bool = False
     also: list[dict] = dc_field(default_factory=list)
     live: dict | None = None
     glyph: str = ""
@@ -394,6 +396,8 @@ def evaluate(program: dict, profile: dict, today: date, lang: str) -> Door:
         notes=program.get("notes", ""),
         availability=str(program.get("availability", "unknown")),
         group=program.get("group"),
+        home_country=program.get("home_country"),
+        foreign=bool(program.get("home_country")) and bool(profile_countries(profile)) and program.get("home_country") not in profile_countries(profile),
     )
 
 
@@ -423,8 +427,12 @@ def render_glyph(door: Door, lang: str) -> str:
 
 
 def rank(doors: list[Door]) -> list[Door]:
-    """Open doors first: eligible, then unknown with the fewest open questions, then blocked. Closed doors last. Ties keep data-file order."""
-    return sorted(doors, key=lambda door: (door.availability == "closed", RANK[door.status], len(door.unknown)))
+    """Open doors first: eligible, then unknown with the fewest open questions, then blocked. Doors run from another country than the founder's come after domestic ones, closed doors last. Ties keep data-file order.
+
+    A Swedish call that admits foreign startups is technically open to a Finnish
+    founder, but leading a Finnish answer with it buries the Finnish doors.
+    """
+    return sorted(doors, key=lambda door: (door.availability == "closed", door.foreign, RANK[door.status], len(door.unknown)))
 
 
 def collapse_groups(doors: list[Door]) -> list[Door]:

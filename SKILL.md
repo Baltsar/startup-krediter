@@ -185,8 +185,14 @@ the key and rerun.
   captcha.** The account, the declaration and the money belong to the founder.
 - **Never state an amount or date that is not on the page you read today.** The
   data is a map, not a source. No number on the page means "not published".
-- **Never guess country, legal form, headcount, revenue or dividend.** These
-  are the fields that close doors. Ask.
+- **Never guess country, legal form, headcount, revenue or dividend, and never
+  infer a yes/no gate.** "Tre anställda" does not mean the project lead is
+  employed three months past the allocation; "2 000 GPU-timmar" does not mean
+  the workload is defined. Set `has_employment`, `workload_defined`, `has_vat`
+  and the other booleans only when the founder says exactly that. Ask.
+- **Keep the machinery out of the reply.** Do not write "the matcher", "the data
+  file", "the record" or "verified yesterday" to the founder. Say what the
+  program's page says, and when you read it.
 - **Never call a door open before the founder has seen its checklist and
   unclear points.** That is why the two lists exist.
 - **Show both when sources disagree.** The founder should see the conflict.
