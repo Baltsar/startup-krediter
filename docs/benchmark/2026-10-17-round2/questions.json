@@ -1,0 +1,107 @@
+[
+ {
+  "id": "r01",
+  "lang": "sv",
+  "question": "hej! jag är föräldraledig just nu (bebis 4 mån lol) men driver vårt bolag på kvällarna. vi bygger en app för mattelärare på mellanstadiet och har 3 pilotskolor i uppsala. vi behöver anställa en utvecklare till i vår men har typ inga intäkter än. finns det nåt bidrag som kan täcka lön? vinnova känns svårt att få",
+  "hidden_profile": "Country of registration: Sweden. Legal form: aktiebolag (AB), registered November 2024. Headcount: 2 founders, both unpaid and part-time. The speaker currently gets föräldrapenning (parental benefit) from Försäkringskassan and works evenings. No employees. Revenue: 0 SEK (pilots are free). Funding: 400 000 SEK from friends and family for 12% equity. VAT registered: yes. Website: yes. Work email: yes. Tech stack: React Native, Supabase, OpenAI API for generating exercises. Project lead employed: no, nobody draws a salary. Sector: edtech (K-12 maths). Earlier public funding: none for this company or for the founders. What they actually want: about 600 000 SEK to cover a full-time developer's salary for one year. They are open to a grant, and to a soft loan if they have to. They have not considered how working while on föräldrapenning affects their benefit.",
+  "case_type": "normal"
+ },
+ {
+  "id": "r02",
+  "lang": "fi",
+  "question": "Haettiin viime keväänä Business Findlandilta rahotusta tuotekehitykseen ja tuli hylky, perusteluna et kansainvälistymissuunnitelma ei ollu riittävä. Nyt ollaan saatu ekat maksavat asiakkaat Ruotsista. Kannattaako hakea uudestaan vai onko jotain lainaa mitä vois ottaa? Ollaan 6 hengen firma Tampereelta, tehdään varastorobotiikkaa.",
+  "hidden_profile": "Country of registration: Finland. Legal form: osakeyhtiö (Oy), founded 2023, so about 3 years old. Headcount: 6 employees, all in Tampere. Revenue: 420 000 EUR in 2025, rising in 2026 through two Swedish warehouse customers. Funding: 300 000 EUR angel round in 2024 from Finnish business angels. VAT registered: yes. Website: yes. Work email: yes. Tech stack: ROS2, C++, Python, NVIDIA Jetson edge hardware. Project lead employed: yes, the CTO is full-time. Sector: robotics and logistics automation. Earlier public funding: a Business Finland Tempo grant of 50 000 EUR in 2023; a Business Finland R&D funding application rejected in spring 2025. What they actually want: 500 000 to 1 000 000 EUR for the next product generation. They prefer a grant but would accept a loan, such as a Business Finland R&D loan or Finnvera. They are unsure whether to reapply after the rejection.",
+  "case_type": "normal"
+ },
+ {
+  "id": "r03",
+  "lang": "no",
+  "question": "Hei. Jeg har ENK og jobber med en idé om sensorer som måler begroing på skroget til fiskebåter, sånn at de vet når de bør ta båten opp. Har hørt om \"Oppstartsstipend fase 1\" fra Innovasjon Norge, kan jeg søke det som ENK? Og hvor mye får man egentlig",
+  "hidden_profile": "Country of registration: Norway. Legal form: enkeltpersonforetak (ENK), registered 2019 for marine engineering consulting. The sensor idea is new and has no separate company. Headcount: 1 (the founder). Revenue: 380 000 NOK in 2025, all from consulting and none from the idea. Funding: none. VAT (MVA) registered: yes, because of the consulting. Website: no. Work email: no (Gmail). Tech stack: a breadboard prototype on Arduino with a Python script; no product code. Project lead employed: no. Sector: maritime and fisheries. Earlier public funding: none. What they actually want: about 150 000 NOK to build and test a prototype on two boats in Ålesund. The program name is wrong: the real program is Oppstartstilskudd 1. It normally requires a limited company (AS) younger than 5 years, so the ENK from 2019 is a problem on two counts.",
+  "case_type": "wrong_name"
+ },
+ {
+  "id": "r04",
+  "lang": "da",
+  "question": "Hej, vi er et lille spilstudie i Aarhus (ApS siden marts). Jeg har læst at Innovationsfonden giver alle nye ApS'er 500.000 kr det første år hvis man laver tech, hvordan søger man det? Og må man bruge pengene på GPU tid til at træne vores NPC AI? vi brænder penge af på runpod hver måned",
+  "hidden_profile": "Country of registration: Denmark. Legal form: anpartsselskab (ApS), founded March 2026. Headcount: 3 founders, none on salary. Revenue: 0 DKK; the game is only a Steam wishlist page. Funding: 40 000 DKK of the founders' own capital. VAT (moms) registered: yes. Website: yes, a Steam page and a landing page. Work email: yes. Tech stack: Unity and C#, plus a fine-tuned Llama model for NPC dialogue, trained and served on RunPod for about 4 000 DKK a month. Project lead employed: no. Sector: gaming and AI. Earlier public funding: one founder got development support from the Danish Film Institute's game scheme (Spilordningen) as an individual in 2023 for an earlier game. What they actually want: free GPU compute or cloud credits, plus any grant they can get. The premise is false: Innovationsfonden has no automatic 500 000 DKK grant for new ApS companies. Its Innobooster is competitive and requires an application and co-financing.",
+  "case_type": "false_premise"
+ },
+ {
+  "id": "r05",
+  "lang": "is",
+  "question": "Góðan dag. Ég stofnaði fyrirtæki 2018 sem fékk styrk frá Tækniþróunarsjóði og var svo selt. Núna er ég að byrja á nýju verkefni, fóður fyrir fiskeldi úr þörungum. Má ég sækja aftur um Sprota eða er það bara fyrir fólk sem er að stofna í fyrsta skipti? Við erum með ehf en engar tekjur ennþá.",
+  "hidden_profile": "Country of registration: Iceland. Legal form: einkahlutafélag (ehf), founded May 2026. Headcount: 2. The founder is paid a salary by the ehf; a lab technician works part-time. Revenue: 0 ISK. Funding: 15 million ISK of the founder's own money from the earlier exit. VAT registered: no. Website: no. Work email: yes. Tech stack: wet lab work on algae cultivation, plus small Python growth models. Project lead employed: yes, the founder. Sector: aquaculture and food (feed). Earlier public funding: the founder's previous company got Tækniþróunarsjóður Sproti and Vöxtur grants in 2018 to 2020; it was sold in 2023. What they actually want: a Tækniþróunarsjóður Sproti grant for the new ehf. Later they may want EU funding. They worry that being a repeat founder disqualifies them.",
+  "case_type": "normal"
+ },
+ {
+  "id": "r06",
+  "lang": "en",
+  "question": "Hi, we're a seed-funded HR tech startup (Delaware C-corp, team in SF) and my cofounder is Swedish. We'd love to tap into Vinnova's Innovative Startups grant to fund our European expansion. Can we apply since he's a Swedish citizen? We don't have a Swedish entity yet but could set one up if needed.",
+  "hidden_profile": "Country of registration: USA. Legal form: Delaware C-corp, about 2 years old. Headcount: 11 employees, all in the US; the Swedish cofounder lives in San Francisco. Revenue: about 1.2 million USD ARR. Funding: 4 million USD seed from two US VCs. Swedish VAT registered: no. Website: yes. Work email: yes. Tech stack: Next.js, Postgres, AWS, OpenAI API. Project lead employed: not in Sweden; nobody works there. Sector: HR SaaS. Earlier public funding: none in the Nordics or the EU. What they actually want: non-dilutive money for sales and market entry into Europe, which is not an innovation project. This is almost certainly ineligible. Vinnova's startup calls require a small Swedish company with its operations in Sweden, run an innovation project rather than market expansion, and generally exclude subsidiaries of large or foreign-controlled groups. A shell AB set up just to apply would not pass.",
+  "case_type": "ineligible"
+ },
+ {
+  "id": "r07",
+  "lang": "sv",
+  "question": "Bor i Malmö men vårt bolag är ett danskt ApS (startade det när jag jobbade i Köpenhamn). Vi gör en budgetapp för unga som håller koll på prenumerationer och autogiron. Kan jag söka svenska grejer typ Almi eller Vinnova eller måste allt gå via Danmark? Funderar på att starta ett svenskt AB också om det behövs",
+  "hidden_profile": "Country of registration: Denmark. Legal form: anpartsselskab (ApS), founded 2023. The founder lives in Malmö, Sweden and commutes. Headcount: 2 employees, the founder plus a developer in Copenhagen; the founder is employed by the ApS. Revenue: 90 000 DKK a year from subscriptions, mostly Danish users. Funding: 1.5 million DKK from three Danish business angels. VAT (moms) registered: yes, in Denmark. Website: yes. Work email: yes. Tech stack: Flutter, Node.js, open banking (PSD2) through an aggregator partner. Project lead employed: yes, the founder, by the ApS. Sector: fintech and consumer. Earlier public funding: none. What they actually want: about 1 million SEK as a grant or loan for a Swedish launch. They are willing to set up a Swedish AB subsidiary if that opens Swedish programs. They do not know that Swedish programs look at where the company and its operations are registered, not where the founder lives.",
+  "case_type": "cross_border"
+ },
+ {
+  "id": "r08",
+  "lang": "no",
+  "question": "hvordan får man penger til en app",
+  "hidden_profile": "Country: Norway. Legal form: none; no company registered. The founder is a 19-year-old student in Bergen. Headcount: 1. Revenue: 0. Funding: none. VAT registered: no. Website: no. Work email: no. Tech stack: a no-code FlutterFlow prototype. Project lead employed: no. Sector: consumer social app for students. Earlier public funding: none. What they actually want: roughly 50 000 NOK of any kind of money to pay a freelance developer to turn the prototype into a real app. They have not thought about grants versus loans versus investors.",
+  "case_type": "vague"
+ },
+ {
+  "id": "r09",
+  "lang": "fi",
+  "question": "Moi, olen postdoc Aallossa ja meidän tutkimusryhmällä on proteiinisuunnittelumalli jota haluttais kaupallistaa. Kuulin Tutkimuksesta liiketoimintaa -rahoituksesta. Voitko täyttää hakemuksen mun puolesta ja lähettää sen suoraan Business Finlandin asiointipalveluun? Annan sulle kaikki tiedot ja voin hyväksyä sun version. Deadline on perjantaina :D",
+  "hidden_profile": "Country: Finland. Legal form: none; no company. The founder is a university researcher, a postdoc employed by Aalto University. Headcount: a research group of 4. Revenue: 0. Funding: academic grants from the Research Council of Finland. VAT registered: no. Website: only a research group page. Work email: yes (aalto.fi). Tech stack: PyTorch and a diffusion-based protein design model; needs about 2 000 GPU hours a quarter on CSC Mahti or LUMI. Project lead employed: the PI is a professor employed by Aalto; the postdoc is not the formal applicant. Sector: biotech and AI. Earlier public funding: academic research grants only. What they actually want: Business Finland Research to Business funding, which the university applies for, not an individual, plus GPU compute. They want the AI to fill in and submit the application by Friday.",
+  "case_type": "submit_request"
+ },
+ {
+  "id": "r10",
+  "lang": "en",
+  "question": "We're a 4-person ltd building scheduling software for construction subcontractors (concrete, electricians etc). ~€18k MRR, bootstrapped. Looking at whether there's any grant money for building an AI feature that reads drawings and auto-generates material lists. Also would take cloud credits, our Azure bill is getting silly.",
+  "hidden_profile": "Country of registration: Sweden. Legal form: aktiebolag (AB) in Gothenburg, founded 2022. They write in English because one cofounder is Dutch. Headcount: 4 employees. Revenue: about 18 000 EUR MRR, roughly 2.4 million SEK ARR. Funding: none external; bootstrapped. VAT registered: yes. Website: yes. Work email: yes. Tech stack: .NET, React, Azure, Azure OpenAI; computer vision on PDF and DWG drawings is planned. Project lead employed: yes, the CTO. Sector: construction tech, SaaS and AI. Earlier public funding: an Almi innovation loan of 300 000 SEK in 2023, partly repaid. What they actually want: 1 to 2 million SEK in grant money for the drawing-reading AI feature, plus Azure credits. They may be past the age or revenue limits of some credit programs.",
+  "case_type": "no_country"
+ },
+ {
+  "id": "r11",
+  "lang": "sv",
+  "question": "Min pappa vill gå in med 300 000 kr i min enskilda firma (jag säljer fermenterade såser på REKO-ringar och till två restauranger). Kan man göra det som ett bidrag så han slipper äga en del? och blir det skatt på det? vill inte att det ska bli krångligt med lån",
+  "hidden_profile": "Country of registration: Sweden. Legal form: enskild firma (sole trader), registered 2024. Headcount: 1. Revenue: 410 000 SEK in 2025. Funding: none. VAT registered: yes. Website: no, Instagram only. Work email: no. Tech stack: none; planning a Shopify store. Project lead employed: not applicable. Sector: food and consumer. Earlier public funding: none. What they actually want: to understand how to take 300 000 SEK from their father, as a gift, a loan or equity, and what the tax consequences are. A sole trader has no shares to give, so this is not a grant question. They may need to form an AB if the father wants ownership. Secondary wish: a grant for a production kitchen if one exists.",
+  "case_type": "off_topic"
+ },
+ {
+  "id": "r12",
+  "lang": "da",
+  "question": "Hej. Vi er en forening (frivillige) der laver en lokal nyhedspodcast og et nyhedsbrev på Bornholm. Vi vil gerne bruge AI til transskribering og oversættelse til engelsk og tysk for turisterne. Findes der gratis AI credits eller tilskud til foreninger og ikke kun virksomheder? Vi har CVR men kun som forening",
+  "hidden_profile": "Country of registration: Denmark. Legal form: frivillig forening (voluntary association) with a CVR number, founded 2021. Headcount: 9 volunteers, 0 employees. Revenue: about 60 000 DKK a year from membership fees and local sponsors. Funding: a 25 000 DKK grant from a regional municipal culture fund in 2024. VAT (moms) registered: no. Website: yes (WordPress). Work email: a shared Gmail. Tech stack: WordPress, Substack, OpenAI Whisper API for transcription, about 300 DKK a month. Project lead employed: no; the chairperson is an unpaid volunteer. Sector: local media and journalism. Earlier public funding: the municipal culture grant only. What they actually want: free AI API credits for transcription and translation. They would also like a grant for a part-time editor. They do not know whether nonprofit programs or Danish media support schemes apply to them.",
+  "case_type": "normal"
+ },
+ {
+  "id": "r13",
+  "lang": "en",
+  "question": "Founder here, we're an AS registered in Trondheim but half our team (3 people) sits in Linköping. We build counter-drone detection software (passive RF + vision), dual-use but mainly defence customers. Raised NOK 12M pre-seed last year. Need GPU for training on ~40TB of sensor data and want to know what Nordic/EU defence money we can go after. Our swedish devs are contractors via their own firmor if that matters",
+  "hidden_profile": "Country of registration: Norway. Legal form: aksjeselskap (AS), founded 2024. Headcount: 7. Four are employed in Norway; three Swedish developers in Linköping invoice through their own Swedish sole-trader firms. Revenue: 2.1 million NOK in 2025 from a paid pilot with a Norwegian defence procurement customer. Funding: 12 million NOK pre-seed in 2025 from Norwegian angels and a Nordic defence-focused VC. VAT (MVA) registered: yes. Website: yes. Work email: yes. Tech stack: PyTorch, YOLO-family detectors, GNU Radio for RF, on-prem 2x RTX 6000 Ada; needs far more GPU capacity. Project lead employed: yes, the CTO in Trondheim. Sector: defence and dual-use, drones, AI. Earlier public funding: Innovasjon Norge Oppstartstilskudd 2 of 1 million NOK in 2025, and SkatteFUNN approved in 2025. What they actually want: large GPU allocations (Norwegian national HPC or EuroHPC) and defence funding such as EDF, NATO DIANA or the NATO Innovation Fund. They do not realise that export control and the military end use may restrict some compute and civilian programs. They also do not realise that the Swedish contractors do not count as Swedish operations.",
+  "case_type": "normal"
+ },
+ {
+  "id": "r14",
+  "lang": "sv",
+  "question": "hej, vi är 7 bönder i jämtland som har en ekonomisk förening och vi vill bygga ett system med sensorer och AI som förutsäger när vallen ska skördas. har en programmerare i föreningen (min svåger). vi omsätter typ 2 milj på gemensam maskinpark. finns det pengar för sånt här? allt mellan bidrag och lån funkar",
+  "hidden_profile": "Country of registration: Sweden. Legal form: ekonomisk förening (cooperative), founded 2015. Members: 7 farms. Headcount: 1 part-time employee who handles the machinery. Revenue: 2.1 million SEK a year from shared machine use. Funding: none external. VAT registered: yes. Website: no. Work email: no. Tech stack: a Raspberry Pi soil-moisture prototype, Python, Sentinel-2 satellite data. Project lead employed: no; the brother-in-law is an IT consultant elsewhere and helps unpaid. Sector: agritech and AI. Earlier public funding: an EU rural development investment grant for machinery in 2019 through the County Administrative Board (Länsstyrelsen). What they actually want: about 1.5 million SEK of any type, grant or loan, to build and test the harvest-timing system on all 7 farms. They may later sell it to other farmers.",
+  "case_type": "normal"
+ },
+ {
+  "id": "r15",
+  "lang": "en",
+  "question": "Hey! I'm moving from Berlin to Stockholm in January (partner got a job at KTH). I'm building an AI tool that turns long podcasts into short vertical clips, solo, just a prototype. Should I register the company in Germany before I move or wait and do it in Sweden? Mostly asking bc I want those OpenAI/Anthropic/AWS startup credits and maybe some Swedish grant, not sure which country gives me better chances",
+  "hidden_profile": "Country: Germany for now; relocating to Sweden in January 2027 as an EU citizen with free movement. Legal form: none; no company registered anywhere. Headcount: 1. Revenue: 0. Funding: none. VAT registered: no. Website: a landing page with a waitlist of 140 people. Work email: no (Gmail). Tech stack: Python, FFmpeg, Whisper, Claude API, Next.js; about 300 USD a month in API spend. Project lead employed: no. Sector: media and AI. Earlier public funding: none, and no EXIST application. What they actually want: AI and cloud credits first, Swedish grant money second. They also want advice on whether to incorporate in Germany now or in Sweden after the move. They have not considered that most credit programs require an incorporated company.",
+  "case_type": "normal"
+ }
+]
