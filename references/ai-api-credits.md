@@ -8,6 +8,8 @@ Credits from model providers (Anthropic, OpenAI, Mistral) and GPU-cloud vendors 
 - **What:** Membership program: discounts and credits worth up to $45,000 from companies building with Claude (the Startup Stack, redeemed by code in the Claude Console), Applied AI group sessions every other week, events, hackathons and meetups. Up to $100K in additional Claude API credits for founders backed by a partner-network VC, claimed through the VC.
 - **Amount:** Up to 45 000 USD in partner offers and credits; up to 100 000 USD in additional Claude API credits via a partner VC.
 - **Requirements:** Builds on the first-party Claude API. No funding caps, tiers or work-email requirement are published. The 100K route requires a VC in Anthropic's partner network.
+- **Before you apply:** 1. Applications are closed: the current cohort is full; subscribe to the Claude Startup newsletter to hear when the next opens. 2. Credits redeem only on the first-party Claude API in the Claude Console, not on Bedrock, Google Cloud or Azure. 3. Partner offers are redeemed one by one with a code in the Claude Console. 4. The extra API credits up to 100 000 USD are claimed through a VC in Anthropic's partner network, not on the page.
+- **Unclear:** No reopening date is published. Form questions, credit expiry, tier amounts and email requirements are not shown while the program is closed. How a VC joins the partner network and claims credits for a portfolio company is not described.
 - **How to apply:** Applications are closed. Subscribe to the Claude Startup newsletter on the status page to hear when the next cohort opens, then apply there. Member sign-in: platform.claude.com/claude-for-startups.
 - **Status page:** https://claude.com/programs/startups
 - **Verified:** 2026-10-15
@@ -20,6 +22,7 @@ Credits from model providers (Anthropic, OpenAI, Mistral) and GPU-cloud vendors 
 - **What:** Free API credits, rate-limit upgrades, time with solutions engineers, invitations to events and a direct line to the Startup team, all unlocked through the partner VC.
 - **Amount:** Not published on the page.
 - **Requirements:** A unique referral code from the partner VC; a description of the product and how it uses the API; company name and contacts with a valid business email; basic funding details.
+- **Unclear:** openai.com refuses automated reads (HTTP 403), so the application requirements could not be verified; open the page in a browser before quoting anything.
 - **How to apply:** Ask the investor whether they are in the network and for the referral code, then submit the credit application with the items above. The founder clicks submit.
 - **Status page:** https://openai.com/startups/
 - **Verified:** 2026-10-15, read in a browser (the site returns 403 to automated fetch and redirects to the visitor's locale, here sv-SE).
@@ -44,6 +47,8 @@ Credits from model providers (Anthropic, OpenAI, Mistral) and GPU-cloud vendors 
 - **What:** Free platform credits for serverless inference, dedicated endpoints, fine-tuning and instant clusters; free forward-deployed engineering hours (3, 6 or 10 by tier); exclusive content; joint GTM; community events; access to Together's VC network.
 - **Amount:** Up to 15 000 USD (Build), 30 000 USD (Scale) or 50 000 USD (Grow) in platform credits.
 - **Requirements:** Builds on Together AI. Selection-based; no partner-VC, work-email or funding-cap requirement is stated.
+- **Before you apply:** 1. Selection-based: applications are reviewed, not auto-approved. 2. Application form on the page with company details. 3. Tier set by total funding raised: under 5 MUSD, 5 to 10 MUSD, over 10 MUSD.
+- **Unclear:** No open or closed status, deadline or cohort dates are stated. Credit expiry and review timeline are not published. No FAQ or program terms page exists.
 - **How to apply:** Fill in the "Submit your application" form at the bottom of the status page; the founder clicks submit.
 - **Status page:** https://www.together.ai/startup-accelerator
 - **Verified:** 2026-10-15
@@ -56,6 +61,8 @@ Credits from model providers (Anthropic, OpenAI, Mistral) and GPU-cloud vendors 
 - **What:** One-time grant of free Modal compute credits ("thousands of free GPU credits"), direct access to Modal's engineering team, GTM amplification on launches and raises, founder community.
 - **Amount:** Not published; the page says only "thousands of free GPU credits", assigned by tier.
 - **Requirements:** New to Modal; VC funding as above; a payment method on the account (per FAQ question). Partner logos shown: Y Combinator, Andreessen Horowitz, Sequoia, Khosla Ventures, Neo, HF0, Pear VC, Lux Capital.
+- **Before you apply:** 1. Only customers new to Modal may apply; credits are a one-time grant per tier. 2. Startup credits form on the page with company, funding and investor details. 3. Payment method on the Modal account. 4. Seed to Series A: VC funding from a partner-network fund, or more than 1 MUSD VC funding from any fund.
+- **Unclear:** Credit amount per tier is not published. The full VC partner list sits in a client-side FAQ; logos shown include Y Combinator, a16z, Sequoia, Khosla, Lux. No review timeline; the FAQ has a question about not hearing back.
 - **How to apply:** Click "Apply Now" on the status page and fill in the embedded Fillout "Startup credits form" at https://modal.com/startups#apply; the founder clicks submit.
 - **Status page:** https://modal.com/startups
 - **Verified:** 2026-10-15
@@ -68,6 +75,8 @@ Credits from model providers (Anthropic, OpenAI, Mistral) and GPU-cloud vendors 
 - **What:** 1 000 USD in Lambda Cloud credits for on-demand GPU instances (NVIDIA B200, H100, A100, GH200 Grace Hopper), no quotas or GPU tiers, no ingress or egress fees; credits cover persistent storage at $0.20/GB/month.
 - **Amount:** 1 000 USD in Lambda Cloud credits.
 - **Requirements:** NVIDIA Inception membership (hard requirement the schema cannot express as a rule); one grant per company; valid credit card on file.
+- **Before you apply:** 1. NVIDIA Inception membership first; the offer is for members only. 2. Application form on the page; Lambda reviews and approves, submitting does not guarantee credits. 3. Valid credit card on the Lambda account issued in an eligible country (EU except Lithuania, Norway, Iceland, Switzerland, UK among others). 4. One grant per company.
+- **Unclear:** No review or approval timeline is published. The page does not say how Inception membership is verified. Third-party sites quote higher amounts; the page says 1 000 USD.
 - **How to apply:** Fill in the HubSpot form on the status page; the founder clicks submit. Join NVIDIA Inception first if needed.
 - **Status page:** https://lambda.ai/nvidia-inception
 - **Verified:** 2026-10-15
@@ -92,6 +101,8 @@ Credits from model providers (Anthropic, OpenAI, Mistral) and GPU-cloud vendors 
 - **What:** Credits usable across Pods, Serverless, Clusters, Public Endpoints and Storage. Starter: $1,000 in free credits, self-serve onboarding, direct support. Growth: commit $50,000 upfront under a 12-month agreement and Runpod adds $25,000 in bonus credits ($75,000 total), plus a 30-minute 1:1 onboarding call, SLA options and an enterprise path.
 - **Amount:** Starter 1 000 USD free; Growth 25 000 USD bonus credits on a 50 000 USD commitment.
 - **Requirements:** Builds on Runpod. Venture backing is "strongly preferred", not required: the FAQ says every application is reviewed holistically. Primarily for new customers.
+- **Before you apply:** 1. Selective program: every application is reviewed and not all are accepted. 2. Application form behind the Apply button; primarily for customers new to Runpod. 3. Growth tier: deposit 50 000 USD upfront under a 12-month agreement to get the 25 000 USD bonus, one time. 4. Venture backing strongly preferred; investors who can validate traction. 5. A production workload ready to onboard now.
+- **Unclear:** Starter tier credit expiry is not published. No review timeline or acceptance rate is disclosed. Application form questions are not shown; only the general Terms of Service is linked.
 - **How to apply:** Click "Apply now" on the status page and fill in the form (funding status, workload type, timing, commitment); the founder clicks submit.
 - **Status page:** https://www.runpod.io/startup-program
 - **Verified:** 2026-10-15
