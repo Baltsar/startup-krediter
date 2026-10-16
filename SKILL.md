@@ -93,13 +93,13 @@ The JSON has:
 - `warnings`, `stale`, `lang`.
 
 Per door: `status` is `eligible`, `unknown` or `blocked`; `met`, `failed`,
-`unknown` hold labels in the founder's language, each unknown with its
-question; `before_apply` is the checklist (open questions first, then
-`apply_requirements`); `unclear`; `also` lists collapsed sibling doors (Fast
-Lane and Large Scale under Playground) with any extra question they add;
-`glyph` is the status block; `what`, `amount`, `next_step`, `apply_url`,
-`status_url`, `reference`, `notes`, `availability`, `last_verified`, `stale`,
-`live` carry the facts.
+`unknown` hold labels in the founder's language, each unknown with its question;
+`apply_requirements` is the checklist of what stops you inside the application
+(`before_apply` repeats the open questions in front of it); `unclear`; `also`
+lists collapsed sibling doors (Fast Lane and Large Scale under Playground) with
+any extra question they add; `glyph` is the status block; `what`, `amount`,
+`next_step`, `apply_url`, `status_url`, `reference`, `notes`, `availability`,
+`last_verified`, `stale`, `live` carry the facts.
 
 Labels are generated from each rule's field, operator and value, never written
 by hand, so a label cannot claim more than the rule checks. "i Sverige" means
@@ -125,27 +125,38 @@ to apply, a quoted sentence from the page, and gotchas.
 
 ## Step 4: Answer
 
-Under 300 words for a typical profile, three doors at most in full. A founder
-on a phone should reach the end.
+Open with two lines a founder on a phone can stop after: the verdict in one
+sentence (which door fits best and what decides it), and the one question that
+moves them forward. Everything below supports those two lines.
 
-For each door in `doors`:
+Then, for each door in `doors` (three at most), in this order:
 
-1. The `glyph` verbatim in a code block. `●` met, `×` failed, `○` unknown, `?`
-   the next question, `→` amount, siblings, live closing date, closed or stale
-   note. Head: `●` eligible, `◐` unknown, `×` blocked.
+1. The `glyph` in a code block, verbatim except that the `→` lines are
+   translated into the founder's language (amounts are English in the data).
+   `●` met, `×` failed, `○` unknown, `?` the next question, `→` amount,
+   siblings, live closing date, closed or stale note. Head: `●` eligible, `◐`
+   unknown, `×` blocked.
 2. One sentence: what the door is and whether it fits.
-3. **Before you apply**: every item in `before_apply`, short, in the founder's
-   language (rule labels already are; `apply_requirements` are English in the
-   data, so translate them). This list is what keeps the trip to the site from
-   ending in a surprise. Do not drop items; do not pad.
-4. **Unclear**: one line per item, saying what to ask and whom. Skip if empty.
+3. **Before you apply**: the door's `apply_requirements`, short, translated.
+   The `○` lines in the glyph are already the open eligibility questions; do
+   not repeat them. This list is what keeps the trip to the site from ending in
+   a surprise. Do not drop items; do not pad.
+4. **Unclear**: one line per item, phrased for the founder: what is unclear,
+   and whom to ask. Skip if empty.
 5. The next step from `next_step`, and the link.
 
 Then, each at most one line:
 
-- `more`: "Fler dörrar: X, Y, Z. Vill du se dem?"
+- `more`: "Fler dörrar: X, Y, Z. Vill du se dem?" Mark a closed door as closed.
 - `unlocks`: "Registrerar ni ett AB öppnas dessutom: A, B, C."
-- One question: the first `?` of the best door. Not a form.
+
+Length: about 150 to 200 words per door in full, so a three-door answer stays
+under roughly 600 words. If you are over, shorten the sentences, never the
+checklist.
+
+The question at the top is the first `?` of the best door for the kind the
+founder stressed most. If that door has no open question, take the next door's.
+One question, not a form.
 
 A door is open only when it is eligible **and** the founder has seen its
 checklist and unclear points. A door whose page could not be read today is not
@@ -161,16 +172,16 @@ by judgment. Say what the process is instead.
 
 Worked example. Founder: "Svenskt AB, två år, fyra personer. Har vi en chans på
 gratis GPU?" Profile: `{"country":"SE","legal_form":"company","age_years":2,
-"employees":4,"need":["compute"],"lang":"sv"}`. The matcher returns Sweden AI
-Factory and EuroHPC Playground, with Fast Lane and Large Scale under `also`.
-Answer: each glyph; one sentence each (the factory helps you pick the call and
-checks your form; Playground has the hours and the form holds; employment
-decides); Playground's checklist in Swedish (konto på portalen med er egen
-e-postdomän och en captcha ni löser själva, momsnummer, formulär på engelska,
-etisk självskattning, ett system, teknisk underbyggnad för koden, ingen annan
-pågående EuroHPC-allokering, 2026-callen på /calls/60); the unclear line about
-open science; next step and link; "Fler dörrar" if any; then the employment
-question.
+"employees":4,"need":["compute"],"lang":"sv"}`. The doors: Sweden AI Factory
+and EuroHPC Playground, with Fast Lane and Large Scale under `also`. Answer:
+"Ja, EuroHPC Playground passar ett svenskt AB och ger 5 000 GPU-timmar gratis;
+det som avgör är projektledarens anställning. Är projektledaren anställd minst
+tre månader efter att GPU-tiden tar slut?" Then each glyph with its `→` lines
+in Swedish; one sentence each; Playground's checklist in Swedish (konto på
+portalen med er egen e-postdomän och en captcha ni löser själva, momsnummer,
+formulär på engelska, etisk självskattning, ett system, teknisk underbyggnad
+för koden, ingen annan pågående EuroHPC-allokering, 2026-callen på /calls/60);
+the unclear line about open science; next step and link; "Fler dörrar" if any.
 
 ## Step 5: Follow up
 

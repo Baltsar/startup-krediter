@@ -1819,7 +1819,7 @@
       "unclear": [
         "Neither the FAQ nor the form says what the message must contain beyond 'tell us about your AI project'",
         "No response time beyond 'shortly'",
-        "The compute page exists in two versions with different hour figures; quote the EuroHPC pages instead",
+        "The factory's compute page exists in two versions with different hour figures; rely on the EuroHPC call pages for the numbers, or ask info@swedenaifactory.se",
         "Own supercomputer expected early 2027 and funding secured only until March 2028"
       ],
       "notes": "mimer-ai.eu redirects (301) to swedenaifactory.se; the Mimer name appears only in the LinkedIn slug and the compute page. FAQ: everything is at no cost because it is publicly funded; compute applications for all organisations across Europe go through the central EuroHPC portal; large companies can use the resources free but must do open science, SMEs and startups are exempt. As of May 2026 the supercomputer is procured and expected to run by early 2027; meanwhile Swedish companies use the existing EuroHPC systems. The compute page lists hour figures that conflict between versions (AI for Science 360k vs 90 000 GPU hours; Large Scale 22 million vs 30 million), so quote the EuroHPC pages instead. Arrhenius at NAISS is the Swedish EuroHPC system in the Playground and AI for Science tables. Everything is free: 'we are publicly funded and therefore everything offered is at no cost'. Large companies must publish some outcomes; SMEs and startups are exempt."
