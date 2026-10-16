@@ -571,6 +571,8 @@ def summary(door: Door) -> dict:
         "availability": door.availability,
         "amount": door.amount["text"],
         "open_questions": len(door.unknown),
+        "foreign": door.foreign,
+        "status_url": door.status_url,
     }
 
 

@@ -505,7 +505,7 @@ def test_top_limits_full_doors_and_lists_the_rest_under_more() -> None:
     out = run({"country": "SE", "legal_form": "company", "stack": ["anthropic"]}, top=1)
     assert [door["id"] for door in out["doors"]] == ["test-global-credit"]
     assert [door["id"] for door in out["more"]] == ["test-se-grant", "test-eu-compute"]
-    assert set(out["more"][0]) == {"id", "name", "kind", "status", "availability", "amount", "open_questions"}
+    assert set(out["more"][0]) == {"id", "name", "kind", "status", "availability", "amount", "open_questions", "foreign", "status_url"}
     assert run({"country": "SE", "legal_form": "company", "stack": ["anthropic"]}, top=0)["more"] == []
 
 

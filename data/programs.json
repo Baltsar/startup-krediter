@@ -896,7 +896,7 @@
         "At least 50 000 EUR of equity on the balance sheet, and a committed team of at least two people in Finland, one full-time",
         "Net financial assets of at least 63 334 EUR (under five years, with advance) or 133 334 EUR (five years or older)",
         "No binding purchase agreements before submission; purchases of 60 000 EUR or more tendered as public procurement",
-        "No earlier Business Finland startup funding for a company under five years; de minimis quota not exceeded"
+        "No earlier Business Finland R&D or startup funding for a company under five years old; apply for Sprint before any Business Finland loan"
       ],
       "unclear": [
         "Decision timeline is not stated beyond 'continuously'",
@@ -937,10 +937,11 @@
       "last_verified": "2026-10-15",
       "availability": "open",
       "apply_requirements": [
+        "Order matters: Business Finland R&D funding taken first blocks the Sprint Grant for a company under five years old, so apply for Sprint first if you want both",
         "Suomi.fi e-identification; the application can only be created by a Trade Register representative with sole signing right or a holder of the Suomi.fi mandate for corporate financing",
         "Project plan on Business Finland's template and the company background information form",
         "Account-level income statement and balance sheet no older than two months, plus a monthly cash flow forecast and an annual profit and funding forecast on the e-service Excel template",
-        "A committed team of at least two people in Finland, at least one full-time, and a named project leader employed by the company",
+        "A committed team of at least two people in Finland, at least one full-time, and a named project leader who is employed by the company or holds a position of responsibility in it",
         "A credible total funding plan: you cover project costs before reimbursement; loans give a 30 percent advance, grants are paid against reports, and part is held until the final report is approved",
         "No binding purchase agreement before the application is pending"
       ],
@@ -1279,9 +1280,9 @@
           "value": 250
         }
       ],
-      "apply_url": "https://www.finnvera.fi/eng/products/guarantees/start-guarantee",
-      "status_url": "https://www.finnvera.fi/eng/products/guarantees/start-guarantee",
-      "next_step": "Prepare a business plan and a loan request and take them to your bank; ask the bank to apply for Finnvera's Start Guarantee. The founder signs the bank's credit application and the bank submits to Finnvera.",
+      "apply_url": "https://www.finnvera.fi/eng/financing/guarantees/start-guarantee",
+      "status_url": "https://www.finnvera.fi/eng/financing/guarantees/start-guarantee",
+      "next_step": "Prepare a business plan and a loan request and take them to a participating bank (the page lists Aktia, Alisa, Danske, Fennia, Nordea, Oma Säästöpankki, OP, POP and the Savings Banks); ask the bank to apply for Finnvera's Start Guarantee. The founder signs the bank's credit application and the bank submits to Finnvera.",
       "reference": "references/nordic-grants.md#finnvera-alkutakaus",
       "last_verified": "2026-10-16",
       "availability": "open",
@@ -1295,8 +1296,7 @@
         "Finnvera usually decides within three business days; the loan can be drawn after Finnvera's notice of effectiveness to the bank"
       ],
       "unclear": [
-        "Page has no explicit open or closed statement; the guarantee is a continuous product",
-        "Page does not list which banks participate"
+        "Page has no explicit open or closed statement; the guarantee is a continuous product"
       ],
       "notes": "No self-financing requirement. Not usable for buying a company, own shares or business premises, or for export financing; larger needs go to the ordinary Finnvera Guarantee. A new Start Guarantee can be requested at least two months after the previous decision. Founders need not live in Finland but the company must be a Finnish company or a registered Finnish private entrepreneur. 'Your bank files an application on your behalf.'"
     },

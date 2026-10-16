@@ -51,7 +51,7 @@ costs trust.
 | `country` | `SE`, `FI`, `NO`, `DK`, `IS`, any ISO-2 | where the company is registered, or will be. **Ask first if missing.** |
 | `residence_country` | ISO-2 | where the founders live, when it differs. Doors from both countries are checked. |
 | `legal_form` | `company`, `nonprofit`, `academia`, `public`, `sole_trader`, `none` | AB, AS, Oy, ApS, ehf, Ltd normalize to `company`; `none` before a company exists |
-| `age_years`, `employees` | numbers | |
+| `age_years`, `employees` | numbers | `employees` counts the people working in the company, founders included, as the EU SME definition does |
 | `revenue_msek`, `balance_msek` | numbers, MSEK | Swedish caps (Vinnova) |
 | `revenue_meur`, `balance_meur` | numbers, MEUR | EU SME definition |
 | `funding_raised_usd` | number | credit programs cap on this |
@@ -148,6 +148,8 @@ Then, for each door in `doors` (three at most), in this order:
 Then, each at most one line:
 
 - `more`: "Fler dörrar: X, Y, Z. Vill du se dem?" Mark a closed door as closed.
+  Leave out doors with `foreign: true` unless the founder asked about other
+  countries or lives in one, and leave out kinds the founder did not ask for.
 - `unlocks`: "Registrerar ni ett AB öppnas dessutom: A, B, C."
 
 Length: about 150 to 200 words per door in full, so a three-door answer stays
