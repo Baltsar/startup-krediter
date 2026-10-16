@@ -4,7 +4,7 @@
 
 For founders in Sweden, Finland, Norway, Denmark and Iceland. Answers in Swedish, Finnish, Norwegian, Danish or English.
 
-An open-source skill for Claude Code, Cursor and Codex, by [OpenSverige](https://opensverige.se).
+An open-source skill for AI assistants, by [OpenSverige](https://opensverige.se). Tested with Claude Code; it also installs into Cursor and Codex.
 
 ---
 
@@ -24,43 +24,61 @@ This skill does that reading for you, before you open a single form.
 
 You describe your company in plain words, the way you would to a friend:
 
-> We're a Swedish AB, two years old, four people, building an AI product. We need GPU time to fine-tune a model. Do we have a chance at anything free?
+> we're pre-seed (just closed a 400k USD angel round, no VC), 3 people, Swedish AB, building an AI agent product on Vercel + Supabase + Anthropic. which credits can we actually get?
 
-The answer starts with a verdict and the one question that decides it:
+**The first answer is short.** A verdict, the one question that decides it, and the three doors that fit, one line each. Every line says how many requirements are waiting, so nothing looks simpler than it is:
 
-> Yes. EuroHPC Playground is open to a Swedish AB and gives you 5,000 free GPU hours for fine-tuning. What decides it is your project lead's employment contract. Is the project lead employed until at least three months after the GPU allocation ends?
+> AWS Activate fits you best on what we know. What decides it is your angel round: the Founders tier is for self-funded startups, and the bigger Portfolio tier needs an Org ID from an Activate Provider.
+>
+> How old is the company, in years?
+>
+> ◐ AWS Activate Credits: Founders tier starts at 1 000 USD, and select startups may get up to 5 000 USD. Portfolio tier goes up to 200 000 USD with a provider Org ID. Decides: whether one of your angels is an Activate Provider. 9 requirements in the application, 3 unclear points.
+> ◐ NVIDIA Inception: free membership with cloud credits from NVIDIA and partners, amounts not published. 8 requirements, 5 unclear points.
+> ● Claude Startups (Anthropic): partner credits worth up to 45 000 USD. Closed right now because the cohort is full. 4 requirements, 3 unclear points.
+>
+> AWS credits can pay for Claude, but only when you call it through Amazon Bedrock, not Anthropic's own API.
 
-Then each door that fits, at most three, with a status block:
+**Pick a door and you get all of it.** The status block, everything the application will ask of you, what the page leaves unclear and whom to ask, and the next step:
 
 ```
-◐  EuroHPC AI Factories Playground Access
-●  a company
-○  project lead employed past the allocation
-○  VAT number
-○  email on your own domain
-○  workload defined: code, one system, GPU hours
-?  Is the project lead employed until at least three months after the allocation ends?
-→  5 000 GPU hours fixed per application, 1 to 3 months, one system
+◐  AWS Activate Credits
+●  uses AWS, or uses Anthropic
+●  stage: idea, pre-seed, seed or series A
+○  at most 10 years old
+○  new to AWS Activate credits, or asking for more than you received before
+?  How old is the company, in years?
 ```
 
 `●` you meet it · `○` not known yet · `×` this rules you out · `?` the question that matters next
 
-Under the block, what the application will ask of you and what the page leaves open:
-
-> **Before you apply:**
-> - Use the hours for training or fine-tuning. Only a small, justified share can go to inference, and running a live product is not allowed.
-> - Register on access.eurohpc-ju.europa.eu with your company email. You solve the captcha yourself.
-> - You need the company's VAT number, plus a PIC if you have one.
-> - The form is online and in English. Every mandatory field must be filled in.
+> **Before you apply**
+> - The Founders tier is for bootstrapped or self-funded startups. With outside funding, ask your angels whether any of them is an Activate Provider, and if so apply on the Portfolio tier.
+> - For the Portfolio tier, the provider must answer AWS's verification email. If they don't, the application is declined.
+> - AWS may ask you to verify your identity with an ID document. Saying no means rejection.
+> - An application cannot be edited after you submit it.
 >
-> **Unclear:**
-> - The terms say you commit to publishing results. Sweden AI Factory says startups are exempt. Ask aif.access@eurohpc-ju.europa.eu what you must publish.
->
-> **Next step:** create the portal account, open the Playground call, choose a system and fill in the form. You click submit yourself.
+> **Unclear**
+> - Whether an angel-funded startup whose angels are not Activate Providers can still use the Founders tier. The credits page says self-funded, but the FAQ says the program is open to funded startups. Ask AWS Activate through the contact page.
 
-*Shortened from a real answer the skill gave on 16 October 2026. The full answer had a second door and six more requirements.*
+*Shortened from real answers the skill gave on 16 October 2026. The full checklist had eleven items.*
 
 Answer the question and the status updates. No forms, no starting over.
+
+## How it compares
+
+We asked six founder questions to the same AI model twice: with the skill, and with web search but no skill. Graders who did not know which answer was which checked both against the programs' own pages.
+
+| | Search engine | AI without the skill | AI with the skill |
+|---|---|---|---|
+| Starts from your company | No. You read every page yourself | Yes | Yes |
+| Checks whether you qualify | No | Partly, from what it finds | Rule by rule, from each program's own pages |
+| Requirements that stop an application, named before you apply | You find them in the form | 50% (37 of 74) | 96% (66 of 69) |
+| Wrong facts that would change what you do | Old pages rank high | 6 across six answers, such as a call called closed while open, or a grant spent on costs it excludes | 2 across six answers: a revenue question to founders with no company (since fixed), and an FAQ answer called broken when it was not |
+| Words in the first answer | none | 253 to 551 | 138 to 213 |
+| Picked the better first program | | better in 1 of 6 | better in 1 of 6; same pick in 4 |
+| Time per conversation | hours | 65 to 84 seconds | 76 to 142 seconds |
+
+The search engine column describes what a search engine does; it was not measured. Six questions, one run each, Claude Opus 5.5, 16 October 2026. The skill is not faster, and a plain AI search still sometimes finds a program our data lacks. Its edge is that you learn what will stop you before you start. Full method, per-question results and all twelve answers: [docs/benchmark/2026-10-16](docs/benchmark/2026-10-16/).
 
 ## How it works
 
@@ -74,7 +92,7 @@ Answer the question and the status updates. No forms, no starting over.
 
 ## What it covers
 
-63 programs, each read from its own pages on 15 or 16 October 2026.
+64 programs, each read from its own pages on 15 or 16 October 2026.
 
 | You need | Programs include |
 |---|---|
@@ -88,7 +106,7 @@ Coverage is deepest in Sweden. Here is the honest count by where a program is ru
 
 | Sweden | EU-wide | Global vendors | Finland | Norway | Denmark | Iceland |
 |---|---|---|---|---|---|---|
-| 24 | 12 | 14 | 6 | 4 | 2 | 1 |
+| 25 | 12 | 14 | 6 | 4 | 2 | 1 |
 
 Founders in every Nordic country can use the EU-wide and global programs. The national lists for Finland, Norway, Denmark and Iceland are thin, and [adding a program](#add-a-program) is the most useful contribution you can make.
 
@@ -96,7 +114,7 @@ Programs open and close all the time. Treat the data as a map: the skill reads t
 
 ## Get started
 
-You need Claude Code, Cursor or Codex, plus git and Python 3.10 or later.
+You need an AI coding assistant, plus git and Python 3.10 or later. The skill is tested with Claude Code. It also installs into Cursor and Codex, but those have not been tested yet.
 
 **1. Install once.** In a terminal:
 
