@@ -219,10 +219,12 @@ Order: keep the matcher's order, except that doors of the kind the founder
 stressed most ("vi behöver GPU") come first.
 
 The question is the first `?` of the best door of the kind the founder stressed
-most. If that door has no open question, take the first `?` of the next door
-of that kind among those you show. If none has one, ask the question whose
-answer opens the most doors in `unlocks` ("Tänker ni registrera ett aktiebolag
-nu?"). One question, not a form.
+most. If that door has no open question, ask the question whose answer opens
+the most doors in `unlocks` ("Tänker ni registrera ett aktiebolag nu?"); if
+`unlocks` is empty, ask about the hardest stopper of the best door ("Har ni
+50 000 euro i eget kapital i bolaget i dag?"). Never ask for something the
+founder cannot have yet: no revenue or balance-sheet question to founders
+without a company. One question, not a form.
 
 If a checklist item carries a date or figure the page you read today does not
 show, keep the item and say where the date comes from ("enligt portalens
