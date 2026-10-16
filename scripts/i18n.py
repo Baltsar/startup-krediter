@@ -117,6 +117,13 @@ CONFIRMATIONS: dict[str, dict[str, tuple[str, str]]] = {
         "no": ("en løsning for å overvåke havmiljøet i Østersjøen", "Er løsningen deres laget for å overvåke havmiljøet i Østersjøen, slik utfordringen ber om?"),
         "da": ("en løsning til overvågning af Østersøens havmiljø", "Er jeres løsning til overvågning af Østersøens havmiljø, som udfordringen efterspørger?"),
     },
+    "new_to_aws_activate": {
+        "en": ("new to AWS Activate credits, or asking for more than you received before", "Has the company received AWS Activate credits before, and if so, how much?"),
+        "sv": ("ny i AWS Activate, eller ber om mer än ni fått tidigare", "Har bolaget fått AWS Activate-krediter tidigare, och i så fall hur mycket?"),
+        "fi": ("uusi AWS Activate -hyvitysten hakija, tai pyytää enemmän kuin aiemmin", "Onko yhtiö saanut AWS Activate -hyvityksiä aiemmin, ja jos on, kuinka paljon?"),
+        "no": ("ny i AWS Activate, eller ber om mer enn dere har fått før", "Har selskapet fått AWS Activate-kreditter før, og i så fall hvor mye?"),
+        "da": ("ny i AWS Activate, eller beder om mere end I har fået før", "Har virksomheden fået AWS Activate-kreditter før, og i så fald hvor meget?"),
+    },
     "need_owner": {
         "en": ("an established need owner committed to the project", "Do you have an established company or organisation committed as need owner in the project?"),
         "sv": ("en etablerad behovsägare som förbundit sig till projektet", "Har ni ett etablerat bolag eller en organisation som förbundit sig som behovsägare i projektet?"),

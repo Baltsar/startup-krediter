@@ -1597,14 +1597,17 @@
       "availability": "open",
       "group": "eurohpc-industry",
       "apply_requirements": [
+        "The hours are for developing and training models: training or fine-tuning, with only a small, justified share for inference; serving a product in production is not allowed",
         "Account on access.eurohpc-ju.europa.eu with your organisation's own email; registration has a reCAPTCHA you solve yourself",
         "Organisation VAT number, plus PIC if you have one",
         "Online form in English; no documents are uploaded, every mandatory field must be filled",
         "Eligibility and ethics self-assessment inside the form: civilian purpose, AI Act compliance",
         "One system out of eight partitions; 5 000 GPU hours is fixed, not negotiable",
         "Technical feasibility data in the form: the code and its software stack; missing data means rejection",
+        "Apply to the 2026 call, portal /calls/60, open until 31 December 2026",
+        "One Playground award per project lead at a time",
         "No other EuroHPC allocation running for the same proposal",
-        "Apply to the 2026 call, portal /calls/60, open until 31 December 2026"
+        "After the award: sign the AI Factory's Acceptable Use Policy before access, file a final report within 3 months that EuroHPC may publish after a year, use the set acknowledgement sentence, and join at least one EuroHPC event or interview within two years"
       ],
       "unclear": [
         "The page says templates are provided, but none is downloadable without a portal account",
@@ -1667,6 +1670,7 @@
       "availability": "open",
       "group": "eurohpc-industry",
       "apply_requirements": [
+        "The hours are for developing and training models, not for serving a product in production",
         "Account on access.eurohpc-ju.europa.eu with your organisation's own email; registration has a reCAPTCHA",
         "Organisation VAT number, plus PIC if you have one",
         "Online form in English with eligibility and ethics self-assessment",
@@ -1731,6 +1735,7 @@
       "availability": "open",
       "group": "eurohpc-industry",
       "apply_requirements": [
+        "The hours are for developing and training models, not for serving a product in production",
         "Account on access.eurohpc-ju.europa.eu with your organisation's own email; VAT number and PIC if you have one",
         "Online form in English: relevance, impact, why a large allocation on one system is needed and why a smaller system will not do, technical feasibility (Playground data recommended)",
         "Project plan with a month-by-month resource consumption schedule for 3, 6 or 12 months",
@@ -2129,6 +2134,11 @@
             "seed",
             "series_a"
           ]
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "new_to_aws_activate"
         }
       ],
       "apply_url": "https://aws.amazon.com/startups/join?destination=/credits/apply",
@@ -2141,13 +2151,12 @@
         "AWS Builder ID verified by email and an Activate profile with a business email on your own domain",
         "AWS account on a paid account plan (free plans are not eligible), linked to the Builder ID with root or admin access",
         "A fully functioning company website; AWS evaluates public information from it",
-        "Org ID or email invitation from your Activate Provider for the Portfolio tier",
+        "Portfolio tier: an Org ID or email invitation from your Activate Provider, and your latest funding round within the last 12 months",
         "Product, target market, traction, funding stage and date of the latest round in the form",
         "Identity verification with an ID document when AWS asks; declining means rejection"
       ],
       "unclear": [
         "Review time differs across pages: 5 to 10 or 7 to 10 business days",
-        "Credit validity is 'usually 1 to 2 years depending on the package'; the exact expiry appears after approval",
         "Founders tier: 1 000 USD stated, 'select startups may qualify for up to 5 000 USD' with no criteria; Portfolio amounts depend on the provider and are not published",
         "The FAQ answer on why applications are declined is a broken placeholder"
       ],
@@ -3079,7 +3088,8 @@
         "The extra up to EUR 300K comes only in your next round: one-third of what you raise from professional investors, on your lead's terms, within nine months of Antler's first investment",
         "Free office space at whichever Nordic hub you pick (Stockholm, Oslo, Copenhagen or Helsinki)",
         "Rolling intake in Stockholm, no fixed residency cohort and no deadline; applications reviewed on an ongoing basis",
-        "A priced pre-seed at a materially higher valuation may put you 'past us'"
+        "A priced pre-seed at a materially higher valuation may put you 'past us'",
+        "Be all in: the FAQ says you need no co-founder, company or product, but you need to be all in"
       ],
       "unclear": [
         "Selection steps after the form (calls, partner meetings, investment committee) and decision time are not stated beyond 'We move fast'; the Nordics page names no program contact, so ask through the pitch form",
@@ -3515,7 +3525,7 @@
       "who": "Pre-seed startups from the Nordic and Baltic countries, before customers, revenue or traction. The company does not need to be incorporated yet when the pitch deck is sent.",
       "what": "A DKK 1,000,000 standardized convertible loan with a conversion cap, a place in a seven-week investment program ending with an invite-only Investor Day in Copenhagen, and lifetime access to the Allstars founder community and mentors. The startup pays a one-time fee of DKK 250,000.",
       "amount": {
-        "text": "DKK 1,000,000 convertible loan; a one-time fee of DKK 250,000 is paid back to Accelerace",
+        "text": "DKK 500 000 to 1 000 000 convertible loan per the term sheet; a one-time DKK 250 000 fee",
         "min": 1000000,
         "max": 1000000,
         "currency": "DKK"
@@ -3556,13 +3566,15 @@
         "The current or intended country of incorporation, plus founder name, email and phone",
         "Acceptance of the standard convertible loan terms; the page says terms are not negotiable and links a term sheet to download",
         "Budget for the one-time fee of DKK 250,000 that comes out of the investment",
-        "Time for a seven-week hybrid investment program with in-person sessions in Copenhagen, two batches per year"
+        "Time for a seven-week hybrid investment program with in-person sessions in Copenhagen, two batches per year",
+        "Payout only after another qualified investor puts in at least DKK 125 000 on similar terms"
       ],
       "unclear": [
-        "Conversion cap, interest and maturity of the loan are only in the downloadable term sheet, not on the page",
+        "The term sheet gives 8 percent interest and 3 years to repayment, but sets the valuation cap and discount case by case; ask Accelerace before you plan on a figure",
         "Decision time after submitting the deck is not stated",
         "The FAQ page describes an older program that took no equity and required a Danish CVR number; the funding page does not repeat that requirement",
-        "Whether a team incorporated outside the Nordics and Baltics can apply if it intends to incorporate there"
+        "Whether a team incorporated outside the Nordics and Baltics can apply if it intends to incorporate there",
+        "The page does not say whether the DKK 250 000 fee is deducted from the loan or paid separately"
       ],
       "notes": "Rolling intake through the deck form; no deadline on the page. About 65% of the first fund's portfolio raised follow-on funding. Accelerace very rarely takes a board seat. The investment program runs twice a year, hybrid with in-person parts in Copenhagen. 'We invest 1 000 000 DKK before you have customers, revenue or traction, using a standardized convertible loan with a conversion cap.'"
     },
