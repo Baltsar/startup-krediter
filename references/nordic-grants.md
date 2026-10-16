@@ -130,6 +130,20 @@ Not covered here: EU instruments (EIC Accelerator, Eurostars, Horizon Europe), r
 - **Evidence:** "Projekten ska ha minst två projektparter, varav minst en behovsägare från svensk industri."
 - **Gotchas:** Diarienummer 2026-02019. The aid basis (industrial research or experimental development) follows the track and sets the per-party support level. Assessment: Potential 40 percent, Aktörer 30, Genomförbarhet 30. The record only encodes country and legal form.
 
+## Almi Verifieringsmedel {#almi-verifieringsmedel}
+
+- **Who:** Early-stage Swedish SMEs and established companies with an innovative business idea. In some cases private individuals: Swedish personal identity number, an account with a Swedish bank, and a clear intention to start a company in Sweden.
+- **What:** Grant to buy external services that verify critical parts of the idea: customer needs and market potential, market and competitor analyses, novelty searches, technical and legal assessments. Normally no co-financing.
+- **Amount:** "I många fall kan företag få upp till 100 000 kronor i stöd. Privatpersoner kan få upp till 25 000 kronor." Varies by region; set with the advisor.
+- **Requirements:** Swedish company, or a private individual meeting the three conditions above; an innovative idea Almi assesses.
+- **Before you apply:** 1. A conversation with an Almi advisor first; only then access to the e-service. 2. Without a company: personnummer, Swedish bank account, clear intention to start a company in Sweden. 3. The money buys external services only; not travel, representation, marketing, training, patent applications, or prototypes and investments that create lasting value. 4. De minimis aid, so earlier public aid over a rolling three years counts. 5. Work paid by the grant starts after approval; handling up to a few weeks.
+- **Unclear:** The exact amount per region. Whether founders' own work can be paid; the page lists external services only.
+- **How to apply:** Contact Almi and book an advisor conversation; the advisor opens the e-service for the application. Continuous.
+- **Status page:** https://www.almi.se/lan-finansiering/verifieringsmedel/
+- **Verified:** 2026-10-16
+- **Evidence:** "Verifieringsmedel används för att köpa externa tjänster som hjälper dig att verifiera kritiska delar av din affärsidé."
+- **Gotchas:** The only grant in this data a founder without a company can start on. An earlier research pass on 2026-10-15 did not find the page; a plain AI search found it in the 2026-10-16 benchmark. Do not suggest spending it on a prototype, a landing page or the founders' own customer interviews.
+
 ## Almi Innovationslån {#almi-innovationslan}
 
 - **Who:** Companies registered in Sweden with up to 249 employees, new or established, with an innovation project of large potential still in its development phase.
@@ -179,7 +193,7 @@ Not covered here: EU instruments (EIC Accelerator, Eurostars, Horizon Europe), r
 - **Status page:** https://www.almi.se/lan-finansiering/foretagslan/
 - **Verified:** 2026-10-15
 - **Evidence:** "Det finns ingen fast övre gräns för Företagslån."
-- **Gotchas:** Not recorded because it targets established companies and publishes no amount. Almi's "Verifieringsmedel" was not found on almi.se on 2026-10-15; Almi's page almi.se/energimyndigheten/ only offers advisory conversations ahead of the two Energimyndigheten calls below.
+- **Gotchas:** Not recorded because it targets established companies and publishes no amount. Almi's Verifieringsmedel has its own entry below (found 2026-10-16); Almi's page almi.se/energimyndigheten/ only offers advisory conversations ahead of the two Energimyndigheten calls below.
 
 ## Energimyndigheten - Konceptutveckling av innovationer med affärsfokus {#energimyndigheten-konceptutveckling}
 

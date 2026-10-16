@@ -79,7 +79,8 @@
         "The threshold for the lottery stage ('i hög och likvärdig grad') is not published; ask startups@vinnova.se",
         "The state-aid basis per company age (start-up aid or de minimis) is only on a linked rules page"
       ],
-      "notes": "Round open on 2026-10-15. Page: 'Stänger den 12 januari 2027 kl 14:00'. Dates on the page: 12 okt. 2026 opens; info meetings 2 nov. 2026 kl 09:00 and 9 nov. 2026 kl 09:00; 12 jan. 2027 kl 14:00 last day; 23 mars 2027 decision and earliest project start; 30 mars 2027 latest project start; project at most nine months. Selection: complete applications are scored by three expert assessors, and among those judged to meet the criteria 'i hög och likvärdig grad' the grants are decided by lottery ('lottning, så kallad randomisering'), introduced from 2026. Company age is counted at the decision date 2027-03-23. One of net revenue or balance sheet may exceed 10 MSEK, but not both. Companies granted funding in Innovativa Startups 2025 may not apply. The whole group must be unlisted if the company belongs to a group. The page footer shows diarienummer 2025-04831; in Vinnova's open-data API 2016-04714 is the parent call 'Innovativa Startups' and 2025-04831 is this application round (open 2026-10-12, closes 2027-01-12T14:00, decision 2027-03-23). Three expert assessors score each application; among equally high-rated applications the grants are drawn by lot. Decision 23 March 2027; the project must start by 30 March 2027 and run at most nine months. No mandatory attachments are listed on the call page."
+      "notes": "Round open on 2026-10-15. Page: 'Stänger den 12 januari 2027 kl 14:00'. Dates on the page: 12 okt. 2026 opens; info meetings 2 nov. 2026 kl 09:00 and 9 nov. 2026 kl 09:00; 12 jan. 2027 kl 14:00 last day; 23 mars 2027 decision and earliest project start; 30 mars 2027 latest project start; project at most nine months. Selection: complete applications are scored by three expert assessors, and among those judged to meet the criteria 'i hög och likvärdig grad' the grants are decided by lottery ('lottning, så kallad randomisering'), introduced from 2026. Company age is counted at the decision date 2027-03-23. One of net revenue or balance sheet may exceed 10 MSEK, but not both. Companies granted funding in Innovativa Startups 2025 may not apply. The whole group must be unlisted if the company belongs to a group. The page footer shows diarienummer 2025-04831; in Vinnova's open-data API 2016-04714 is the parent call 'Innovativa Startups' and 2025-04831 is this application round (open 2026-10-12, closes 2027-01-12T14:00, decision 2027-03-23). Three expert assessors score each application; among equally high-rated applications the grants are drawn by lot. Decision 23 March 2027; the project must start by 30 March 2027 and run at most nine months. No mandatory attachments are listed on the call page.",
+      "founder_cost": "none"
     },
     {
       "id": "vinnova-ffi-asp-accelerated-startup-partnership",
@@ -142,7 +143,8 @@
         "Whether the need owner must sign anything before submission is not stated; a project agreement is required only after a grant",
         "Login method for the e-service is not stated"
       ],
-      "notes": "Reference number 2026-01767. Open on 2026-10-15: 'Closes on 29 October 2026 at 2PM'. Opened 15 Jun 2026; earlier assessment date 16 Sep 2026 14:00 with decision planned 16 Oct; final decision 24 Nov 2026. Total budget 22 MSEK across the year's application opportunities. The innovation must connect to at least one FFI sub-programme: Circularity, Transport and mobility solutions, Traffic-safe automation, Zero emissions. Projects need at least two participants, at least one need owner and at least one startup; only the startup can be beneficiary. Aid basis: startups under five years (fewer than 50 employees, not listed, no profit distributed, not formed by merger or takeover) get start-up aid; older small companies get de minimis aid, at most 300 000 EUR over three years. No country rule is encoded because the page says foreign startups without Swedish presence may apply (they attach a home-country registration certificate). The English page is machine-translated and the Swedish text takes precedence: https://www.vinnova.se/e/accelerera-svenskt-partnerskap/ffi-asp-accelerated-startup-2026-01767/. The sibling spring round 2026-00299 closed 2 June 2026. Scoped EU in this data because the call admits foreign startups; every applicant still needs an established Swedish need owner as partner. Relevance to an FFI sub-programme is a knock-out criterion; at least three evaluators score relevance, potential, actors and feasibility. Consultant and licence costs at most 20 percent of a party's budget unless justified. After a grant: participation document, project agreement and regular reporting."
+      "notes": "Reference number 2026-01767. Open on 2026-10-15: 'Closes on 29 October 2026 at 2PM'. Opened 15 Jun 2026; earlier assessment date 16 Sep 2026 14:00 with decision planned 16 Oct; final decision 24 Nov 2026. Total budget 22 MSEK across the year's application opportunities. The innovation must connect to at least one FFI sub-programme: Circularity, Transport and mobility solutions, Traffic-safe automation, Zero emissions. Projects need at least two participants, at least one need owner and at least one startup; only the startup can be beneficiary. Aid basis: startups under five years (fewer than 50 employees, not listed, no profit distributed, not formed by merger or takeover) get start-up aid; older small companies get de minimis aid, at most 300 000 EUR over three years. No country rule is encoded because the page says foreign startups without Swedish presence may apply (they attach a home-country registration certificate). The English page is machine-translated and the Swedish text takes precedence: https://www.vinnova.se/e/accelerera-svenskt-partnerskap/ffi-asp-accelerated-startup-2026-01767/. The sibling spring round 2026-00299 closed 2 June 2026. Scoped EU in this data because the call admits foreign startups; every applicant still needs an established Swedish need owner as partner. Relevance to an FFI sub-programme is a knock-out criterion; at least three evaluators score relevance, potential, actors and feasibility. Consultant and licence costs at most 20 percent of a party's budget unless justified. After a grant: participation document, project agreement and regular reporting.",
+      "founder_cost": "none"
     },
     {
       "id": "eureka-innowwide-call-5",
@@ -197,7 +199,8 @@
         "Vinnova's page says the decision is announced 20 May 2027, while Eureka says results are intended in the first trimester of 2027; ask the Innowwide team (innowwide@eurekanetwork.org) which date to plan for",
         "No project start date or latest start date is published for the six-month project; ask the Innowwide team when the grant agreement and project start are expected",
         "Startups without closed annual accounts 'may be asked' for a business plan and applicants 'may be subject to' a financial viability check; what triggers either is not stated"
-      ]
+      ],
+      "founder_cost": "none"
     },
     {
       "id": "vinnova-sprang-baltic-marine-watchdog",
@@ -252,7 +255,8 @@
         "How a team of several organisations is contracted is not spelled out: only one legal entity submits and signs the Participation Agreement; ask challenge@vinnova.se how partners are paid (as subcontractors or otherwise)",
         "Dates and locations of the test days and the interim demonstration are not published yet",
         "The login method for Vinnova's e-services is not stated, although the challenge is open to applicants across the EU, EFTA and UK; ask helpdesk@vinnova.se whether a foreign applicant can create an account and log in without a Swedish e-ID"
-      ]
+      ],
+      "founder_cost": "none"
     },
     {
       "id": "vinnova-chips-ju-pilot-line-access",
@@ -327,7 +331,8 @@
         "Vinnova's share of the costs is not stated; the decision sets it per organisation, so ask the call contact what aid rate applies before planning your own co-financing",
         "No decision date is printed; applications are read daily but are also said to be assessed in competition, so ask how and when decisions are made",
         "The formal requirements say the application must follow 'the instructions in section 9', but the web page has no numbered sections and no separate call text is linked"
-      ]
+      ],
+      "founder_cost": "none"
     },
     {
       "id": "vinnova-avancerad-digitalisering-5g-automatisering",
@@ -386,7 +391,8 @@
         "The call text asks for at least one Swedish company in the form of an aktiebolag and an engaged need owner, but the formal requirements only say two parties, one of them a company; ask sara.nasstrom@vinnova.se whether a consortium without a separate industrial need owner is rejected",
         "The page says the project description uses 12 pt text, while the template says 11 pt Times New Roman",
         "The login method for Vinnova's e-service is not stated on the call page"
-      ]
+      ],
+      "founder_cost": "none"
     },
     {
       "id": "vinnova-avancerad-digitalisering-cybersakerhet-ai",
@@ -445,7 +451,8 @@
         "The page header says at least one company from Swedish industry must take part, but the formal requirements only say two project parties with no company rule; ask asa.moum@vinnova.se whether a consortium without a company is rejected",
         "The web page says projects may start from 19 March 2027, while the linked call text PDF (registered 21 September 2026) says 24 March 2027; ask the call contact which date applies",
         "What counts as sufficient financial coverage for an SME is not defined in this call, unlike the 5G and cyber-physical calls (turnover or capital covering the whole own share); ask the call contact"
-      ]
+      ],
+      "founder_cost": "none"
     },
     {
       "id": "vinnova-avancerad-digitalisering-cyberfysiska-system",
@@ -502,7 +509,8 @@
       "unclear": [
         "The call says 'industrial' project parties in the form of companies but does not say whether a software or AI startup counts as industrial; ask staffan.nystrom@vinnova.se before relying on the startup as one of the two",
         "The call is aimed at need owners in industry, but whether the need owner must be the coordinator is not stated"
-      ]
+      ],
+      "founder_cost": "none"
     },
     {
       "id": "vinnova-avancerad-digitalisering-flexibel-energistyrning",
@@ -561,7 +569,60 @@
         "The page header asks for a need owner from Swedish industry, but the formal requirements only say two parties, one of them a company; ask susanne.liljeblad@vinnova.se whether a startup with a non-industrial partner is rejected",
         "The call page lists the three attachments without page limits; the limits (10 pages at 11 pt, 1-page summary, 1-page CVs) appear only in the downloadable templates",
         "What counts as sufficient financial coverage for an SME is not defined in this call, unlike the 5G and cyber-physical calls (turnover or capital covering the whole own share); ask the call contact"
-      ]
+      ],
+      "founder_cost": "none"
+    },
+    {
+      "id": "almi-verifieringsmedel",
+      "name": "Almi Verifieringsmedel (Verification Grant)",
+      "country": "SE",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Early-stage Swedish SMEs and established companies with an innovative business idea; in some cases private individuals with a Swedish personal identity number, a Swedish bank account and a clear intention to start a company in Sweden.",
+      "what": "Grant to buy external services that verify critical parts of an innovative business idea before the next step: customer needs and market potential, market and competitor analyses, novelty searches, technical and legal assessments. Normally no co-financing.",
+      "amount": {
+        "text": "Companies in many cases up to 100 000 SEK; private individuals up to 25 000 SEK; amount set with the advisor and varies by region",
+        "max": 100000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE"
+        },
+        {
+          "field": "legal_form",
+          "op": "in",
+          "value": [
+            "company",
+            "sole_trader",
+            "none"
+          ]
+        }
+      ],
+      "apply_url": "https://www.almi.se/lan-finansiering/verifieringsmedel/",
+      "status_url": "https://www.almi.se/lan-finansiering/verifieringsmedel/",
+      "next_step": "Contact Almi and book a conversation with an advisor about the idea and what needs verifying; the advisor then gives you access to Almi's e-service, where the founder submits the application.",
+      "reference": "references/nordic-grants.md#almi-verifieringsmedel",
+      "last_verified": "2026-10-16",
+      "availability": "open",
+      "founder_cost": "none",
+      "apply_requirements": [
+        "You cannot apply directly: first a conversation with an Almi advisor, who then gives access to the e-service",
+        "Without a company: Swedish personal identity number, an account with a Swedish bank, and a clear intention to start a company in Sweden",
+        "The money only buys external services that verify the idea; it may not pay for travel, representation, marketing, training, patent applications, or prototypes and investments that create lasting value",
+        "The idea must be innovative; Almi assesses it, and the amount is set with the advisor and varies by region",
+        "De minimis aid: a cap on public aid over a rolling three-year period, so earlier aid counts",
+        "Work paid by the grant starts only after approval; handling usually takes up to a few weeks once the application is complete"
+      ],
+      "unclear": [
+        "Whether your region pays the full 25 000 SEK to private individuals or 100 000 SEK to companies; 'the amount depends on the region'. Ask your regional Almi advisor",
+        "Whether founders' own work can be paid; the page lists external services only. Ask the advisor before you plan the budget"
+      ],
+      "notes": "Page 2026-10-16: 'Privatpersoner kan få upp till 25 000 kronor.' 'I många fall kan företag få upp till 100 000 kronor i stöd.' 'Verifieringsmedel används för att köpa externa tjänster.' Excluded: 'resor och resekostnader, representation, marknadsföring, utbildningar, patentansökningar, prototyper eller investeringar som skapar bestående värde.' Normally no co-financing. De minimis."
     },
     {
       "id": "almi-innovationslan",
@@ -619,7 +680,8 @@
         "Interest rate is not published; set individually and may be somewhat higher than Almi's other loans",
         "Regional handling is only visible in the contact form, which asks for region and municipality"
       ],
-      "notes": "Continuous, no deadline. Co-financing is required: 'Almi kan finansiera upp till 50 procent av den beräknade projektkostnaden'; for loans above 300 000 SEK at least half of the co-financing must be capital, for smaller loans part of it may be own work. Typical loan around 300 000 SEK. Security usually a combination of a floating charge (företagsinteckning) and a limited personal guarantee. Interest may be somewhat higher than for other Almi loans because of project risk. Almi is regional: 'Alla ansökningar hanteras av ditt regionala Almi-bolag' and every loan is an individual assessment, so terms vary by case and region. Handling normally 3 to 4 weeks from a complete application; an adviser calls you for a dialogue. Only the budget is marked mandatory, so ask the adviser what a pre-revenue company must attach."
+      "notes": "Continuous, no deadline. Co-financing is required: 'Almi kan finansiera upp till 50 procent av den beräknade projektkostnaden'; for loans above 300 000 SEK at least half of the co-financing must be capital, for smaller loans part of it may be own work. Typical loan around 300 000 SEK. Security usually a combination of a floating charge (företagsinteckning) and a limited personal guarantee. Interest may be somewhat higher than for other Almi loans because of project risk. Almi is regional: 'Alla ansökningar hanteras av ditt regionala Almi-bolag' and every loan is an individual assessment, so terms vary by case and region. Handling normally 3 to 4 weeks from a complete application; an adviser calls you for a dialogue. Only the budget is marked mandatory, so ask the adviser what a pre-revenue company must attach.",
+      "founder_cost": "repay"
     },
     {
       "id": "almi-mikrolan",
@@ -689,7 +751,8 @@
         "Interest rate is not published: set individually, normally 2 to 3 points above banks, yet described as lower than Almi's other loans",
         "Regional handling is not described on the pages read"
       ],
-      "notes": "Continuous, no deadline. The micro-company limit is 'max nio anställda och en årsomsättning eller balansomslutning som understiger två miljoner euro'; a company over 2 MEUR revenue but under 2 MEUR balance sheet may still qualify. 'Nej, Mikrolån kräver normalt ingen medfinansiering.' Interest set individually; Almi's rates are normally about 2-3 percentage points above bank rates, but Mikrolån can have longer term, initial amortisation-free period and lower rate than Almi's other loans. Handled by the regional Almi company. Normally no co-financing. Handling normally 3 to 4 weeks from a complete application. Page: 'Du kan ansöka om Mikrolån om du driver, eller ska starta, ett företag som är registrerat i Sverige.'"
+      "notes": "Continuous, no deadline. The micro-company limit is 'max nio anställda och en årsomsättning eller balansomslutning som understiger två miljoner euro'; a company over 2 MEUR revenue but under 2 MEUR balance sheet may still qualify. 'Nej, Mikrolån kräver normalt ingen medfinansiering.' Interest set individually; Almi's rates are normally about 2-3 percentage points above bank rates, but Mikrolån can have longer term, initial amortisation-free period and lower rate than Almi's other loans. Handled by the regional Almi company. Normally no co-financing. Handling normally 3 to 4 weeks from a complete application. Page: 'Du kan ansöka om Mikrolån om du driver, eller ska starta, ett företag som är registrerat i Sverige.'",
+      "founder_cost": "repay"
     },
     {
       "id": "almi-tillvaxtlan",
@@ -742,7 +805,8 @@
         "No minimum company age or revenue history is stated for 'established'; ask the adviser whether a pre-revenue startup qualifies",
         "InvestEU/EIF guarantee exclusions are not spelled out"
       ],
-      "notes": "Continuous, no deadline. 'Tillväxtlån är ett lån för innovativa små och medelstora aktiebolag' and 'Ett lån för etablerade och innovativa företag', so very early startups without revenue history may not fit. Almi's rates are normally about 2-3 percentage points above bank rates. Handled by the regional Almi company; each loan is an individual assessment. Handling normally 3 to 4 weeks from a complete application. Applicant needs a residence permit, EU/EEA right of residence or Nordic citizenship."
+      "notes": "Continuous, no deadline. 'Tillväxtlån är ett lån för innovativa små och medelstora aktiebolag' and 'Ett lån för etablerade och innovativa företag', so very early startups without revenue history may not fit. Almi's rates are normally about 2-3 percentage points above bank rates. Handled by the regional Almi company; each loan is an individual assessment. Handling normally 3 to 4 weeks from a complete application. Applicant needs a residence permit, EU/EEA right of residence or Nordic citizenship.",
+      "founder_cost": "repay"
     },
     {
       "id": "energimyndigheten-konceptutveckling",
@@ -794,7 +858,8 @@
         "Application language is not stated",
         "Whether the person who signs in the e-service must be the firmatecknare is not stated"
       ],
-      "notes": "Not open on 2026-10-15. The call page (Senast uppdaterad 2026-04-08) still shows the spring round: 'Sista dag för ansökan 2026-06-02 23:59', decisions 'löpande under september till november 2026', project start between 15 October and 1 December 2026, at most 12 months, pool 'Cirka 10 miljoner kronor'. The programme page says the call opens twice a year, 'planerat april samt oktober', and the kommande-utlysningar page lists the next opening as October 2026 without a day. The 500 000 SEK and 100 percent figures come from the programme page utveckla-en-affarside; the spring call page gives only the total pool. One application per company per round; the applicant must own or control the solution. Almi and five other innovation environments give advice before applying but do not write the application. Re-read the status page before quoting any date. Up to 100 percent of eligible costs, at most 500 000 SEK, no co-financing. Decision within three to five months after the round closes; the agency may run a credit check on the company, partners, owners and board. Support available until 16:00 on the closing day."
+      "notes": "Not open on 2026-10-15. The call page (Senast uppdaterad 2026-04-08) still shows the spring round: 'Sista dag för ansökan 2026-06-02 23:59', decisions 'löpande under september till november 2026', project start between 15 October and 1 December 2026, at most 12 months, pool 'Cirka 10 miljoner kronor'. The programme page says the call opens twice a year, 'planerat april samt oktober', and the kommande-utlysningar page lists the next opening as October 2026 without a day. The 500 000 SEK and 100 percent figures come from the programme page utveckla-en-affarside; the spring call page gives only the total pool. One application per company per round; the applicant must own or control the solution. Almi and five other innovation environments give advice before applying but do not write the application. Re-read the status page before quoting any date. Up to 100 percent of eligible costs, at most 500 000 SEK, no co-financing. Decision within three to five months after the round closes; the agency may run a credit check on the company, partners, owners and board. Support available until 16:00 on the closing day.",
+      "founder_cost": "none"
     },
     {
       "id": "energimyndigheten-verifiering-med-kund",
@@ -842,7 +907,8 @@
         "The effective co-financing share depends on the activity mix: 45 percent support for development, 100 percent for business development",
         "Application language, and who at the customer must sign the letter of intent, are not stated"
       ],
-      "notes": "Not open on 2026-10-15. The call page (Senast uppdaterad 2026-04-08) shows the spring round: 'Sista dag för ansökan 2026-06-02 23:59', decisions September to November 2026, project start 15 August to 1 December 2026 (recommended no earlier than 15 October), at most 24 months, pool 'Cirka 30 miljoner kronor'. Next opening planned October 2026 per the kommande-utlysningar page ('planerat april samt oktober' on the programme page), no day given. Maximum one application per company; the applicant must own or control the solution. The 55 percent co-financing figure is from the programme page verifiering-med-kund; the call page says co-financing is required without a general percentage. Re-read the status page before quoting any date. Decision within three to five months after closing; starting before the decision is at your own risk. Credit check possible on the company, partners, owners and board."
+      "notes": "Not open on 2026-10-15. The call page (Senast uppdaterad 2026-04-08) shows the spring round: 'Sista dag för ansökan 2026-06-02 23:59', decisions September to November 2026, project start 15 August to 1 December 2026 (recommended no earlier than 15 October), at most 24 months, pool 'Cirka 30 miljoner kronor'. Next opening planned October 2026 per the kommande-utlysningar page ('planerat april samt oktober' on the programme page), no day given. Maximum one application per company; the applicant must own or control the solution. The 55 percent co-financing figure is from the programme page verifiering-med-kund; the call page says co-financing is required without a general percentage. Re-read the status page before quoting any date. Decision within three to five months after closing; starting before the decision is at your own risk. Credit check possible on the company, partners, owners and board.",
+      "founder_cost": "none"
     },
     {
       "id": "innovasjon-norge-oppstartstilskudd-1",
@@ -896,7 +962,8 @@
         "Application language is not stated (the English page is machine-translated)",
         "Rural companies are assessed under regional criteria that 'vary by county' and are not on the page"
       ],
-      "notes": "Application deadline 'Ongoing'. Payment: 'You can receive up to 50% of the grant when the project starts', the rest when the project ends; 'At least 50% of the project costs must be paid upfront'. Not covered: own staff costs, related-party costs, VAT, costs before the application. Subsidiaries 50 percent or more owned by an established business are not eligible; companies with outstanding payment defaults cannot apply. The application must state other public funding sought. The page itself has no apply button; it refers to 'My page' only for reporting. Site returns 403 to curl; read via WebFetch on 2026-10-15. Processing time currently 3 to 4 weeks; applications accepted on an ongoing basis."
+      "notes": "Application deadline 'Ongoing'. Payment: 'You can receive up to 50% of the grant when the project starts', the rest when the project ends; 'At least 50% of the project costs must be paid upfront'. Not covered: own staff costs, related-party costs, VAT, costs before the application. Subsidiaries 50 percent or more owned by an established business are not eligible; companies with outstanding payment defaults cannot apply. The application must state other public funding sought. The page itself has no apply button; it refers to 'My page' only for reporting. Site returns 403 to curl; read via WebFetch on 2026-10-15. Processing time currently 3 to 4 weeks; applications accepted on an ongoing basis.",
+      "founder_cost": "none"
     },
     {
       "id": "innovasjon-norge-oppstartstilskudd-2",
@@ -950,7 +1017,8 @@
         "Processing time is not stated; the FAQ says it depends on the scope",
         "Application language is not stated"
       ],
-      "notes": "Application deadline 'Ongoing'. 'In 2026, the funding available for Startup Grant 2 has been reduced by 60%.' Costs incurred before the application is submitted are not funded. The startup may be owned by a holding company older than five years; subsidiaries 50 percent or more owned by an established business are not eligible; a shareholder owning 25-50 percent must run a separate business; outstanding payment defaults disqualify. The page does not require Startup grant 1 to have been completed first. Extension of six months, at most 18 in total. Site returns 403 to curl; read via WebFetch on 2026-10-15. The portal start.innovasjonnorge.no returned 404 on 2026-10-15; start from the apply button on the service page. Payments 50 percent at start, 30 percent halfway, 20 percent at the end against a final report and auditor-verified project accounts. The 2026 budget is cut by 60 percent, so stricter prioritisation and more rejections."
+      "notes": "Application deadline 'Ongoing'. 'In 2026, the funding available for Startup Grant 2 has been reduced by 60%.' Costs incurred before the application is submitted are not funded. The startup may be owned by a holding company older than five years; subsidiaries 50 percent or more owned by an established business are not eligible; a shareholder owning 25-50 percent must run a separate business; outstanding payment defaults disqualify. The page does not require Startup grant 1 to have been completed first. Extension of six months, at most 18 in total. Site returns 403 to curl; read via WebFetch on 2026-10-15. The portal start.innovasjonnorge.no returned 404 on 2026-10-15; start from the apply button on the service page. Payments 50 percent at start, 30 percent halfway, 20 percent at the end against a final report and auditor-verified project accounts. The 2026 budget is cut by 60 percent, so stricter prioritisation and more rejections.",
+      "founder_cost": "none"
     },
     {
       "id": "business-finland-sprint",
@@ -1021,7 +1089,8 @@
         "Decision timeline is not stated beyond 'continuously'",
         "Application language is not stated on the call page"
       ],
-      "notes": "Open on 2026-10-15: status 'Ongoing', 'Continuous call from September 1, 2026', page updated 21.8.2026, decisions made continuously. Aimed at companies under five years that have not previously received Business Finland funding; companies five years or older must show 'a significant change in direction in their business based on innovation', so age is not encoded as a hard rule. Operational, sales and marketing activities and production investments are excluded. The balance-sheet alternative to the 10 MEUR turnover limit and the 50 000 EUR equity requirement are not encoded (no matching schema fields). Tempo no longer appears on the Startup funding page; Sprint, R&D funding and the Deep Tech Accelerator are listed instead. Name a contact person and a responsible project leader employed by or holding a position in the company. A pitch deck is optional."
+      "notes": "Open on 2026-10-15: status 'Ongoing', 'Continuous call from September 1, 2026', page updated 21.8.2026, decisions made continuously. Aimed at companies under five years that have not previously received Business Finland funding; companies five years or older must show 'a significant change in direction in their business based on innovation', so age is not encoded as a hard rule. Operational, sales and marketing activities and production investments are excluded. The balance-sheet alternative to the 10 MEUR turnover limit and the 50 000 EUR equity requirement are not encoded (no matching schema fields). Tempo no longer appears on the Startup funding page; Sprint, R&D funding and the Deep Tech Accelerator are listed instead. Name a contact person and a responsible project leader employed by or holding a position in the company. A pitch deck is optional.",
+      "founder_cost": "none"
     },
     {
       "id": "business-finland-rd-funding",
@@ -1068,7 +1137,8 @@
         "Amount is not published; the page gives funding shares only (loan 50 percent, up to 70 percent for SMEs where justified)",
         "Decision timeline and application language are not stated"
       ],
-      "notes": "Open on 2026-10-15: status 'Ongoing', 'Applications are processed continuously', updated 22.9.2026. 'The amount of funding to be granted is set in the Government's annual budget.' Kind is set to loan because development and pilot projects, the typical startup case, are funded with loans; research projects get grants (SMEs up to 50 percent, mid-cap and large companies up to 40 percent). Business Finland funding is 'competitive and discretionary'. Assessment criteria: innovativeness and competitive advantage, project plan quality, impact, team, financial resources, and the 'impact of funding' condition."
+      "notes": "Open on 2026-10-15: status 'Ongoing', 'Applications are processed continuously', updated 22.9.2026. 'The amount of funding to be granted is set in the Government's annual budget.' Kind is set to loan because development and pilot projects, the typical startup case, are funded with loans; research projects get grants (SMEs up to 50 percent, mid-cap and large companies up to 40 percent). Business Finland funding is 'competitive and discretionary'. Assessment criteria: innovativeness and competitive advantage, project plan quality, impact, team, financial resources, and the 'impact of funding' condition.",
+      "founder_cost": "repay"
     },
     {
       "id": "business-finland-deep-tech-accelerator",
@@ -1141,7 +1211,8 @@
         "The 2026 call ties the five-year age limit to 27 November 2026, after the application window; verify how age is counted",
         "No interview or pitch stage is mentioned; goals are 'discussed' during processing"
       ],
-      "notes": "Closed on 2026-10-15: the 2026 call page shows status 'Ended' and application period '11.5.-16.8.2026' ('by 16 August 2026 at 11:59 PM'); the money for phase 1 had to be in the account by 2 September 2026. The DTA page says 'In 2026, one call for applications will be organised and upcoming calls will be announced on this page'; no next date is published. The company must belong to the prepayment and employer registers; costs are accepted until the company turns eight. Phase 3 loan has a 30 percent advance. The balance-sheet alternative to the 10 MEUR net-sales limit is not encoded. At most six companies per call; no conditional decisions; 2026 call decisions by January 2027. No application advice in July."
+      "notes": "Closed on 2026-10-15: the 2026 call page shows status 'Ended' and application period '11.5.-16.8.2026' ('by 16 August 2026 at 11:59 PM'); the money for phase 1 had to be in the account by 2 September 2026. The DTA page says 'In 2026, one call for applications will be organised and upcoming calls will be announced on this page'; no next date is published. The company must belong to the prepayment and employer registers; costs are accepted until the company turns eight. Phase 3 loan has a 30 percent advance. The balance-sheet alternative to the 10 MEUR net-sales limit is not encoded. At most six companies per call; no conditional decisions; 2026 call decisions by January 2027. No application advice in July.",
+      "founder_cost": "none"
     },
     {
       "id": "innovationsfonden-innofounder",
@@ -1184,7 +1255,8 @@
         "Places per thematic track (green, life science, digital, defence) are not published",
         "e-grant access for founders without MitID is only described as username and password"
       ],
-      "notes": "No call open on 2026-10-15: 'There are currently no calls available'; no next call date on the page. 'You do not need to have a CVR number when applying' but the company must be established with a Danish CVR number before the programme begins, so no legal_form rule is encoded. The education, ownership and working-time requirements have no schema fields and are hard requirements to check manually. The old URL innovationsfonden.dk/en/p/innofounder redirects (301) to danmarksinnovationsfond.dk; curl returns HTTP 454, read via WebFetch. Up to 9 weeks from deadline to rejection or pitch invitation, then 5 to 7 weeks to the decision; the grant letter must be accepted within four weeks. Optional: up to five pages of supplementary material and five pages of letters of intent."
+      "notes": "No call open on 2026-10-15: 'There are currently no calls available'; no next call date on the page. 'You do not need to have a CVR number when applying' but the company must be established with a Danish CVR number before the programme begins, so no legal_form rule is encoded. The education, ownership and working-time requirements have no schema fields and are hard requirements to check manually. The old URL innovationsfonden.dk/en/p/innofounder redirects (301) to danmarksinnovationsfond.dk; curl returns HTTP 454, read via WebFetch. Up to 9 weeks from deadline to rejection or pitch invitation, then 5 to 7 weeks to the decision; the grant letter must be accepted within four weeks. Optional: up to five pages of supplementary material and five pages of letters of intent.",
+      "founder_cost": "none"
     },
     {
       "id": "rannis-frae",
@@ -1242,7 +1314,8 @@
         "The rules PDF is version 3 from January 2023 and cites an old de minimis ceiling; confirm with taeknithrounarsjodur@rannis.is",
         "Assessment criteria for Fræ are not published"
       ],
-      "notes": "Open on 2026-10-15: 'Open for applications / Always open'; 'Applications may be made at any time. Submitted applications are evaluated and grant awards are announced at least twice a year.' Rules and instructions for Fræ and Thróunarfræ are in Icelandic. Contact taeknithrounarsjodur@rannis.is. The fund's other categories (Sprout, Growth, Market grants) had the window 04.08.2026-15.09.2026 and were closed on the fund page; Patent grants are also always open. www.rannis.is redirects (301) to island.is/redirects/www.rannis.is/. Overhead at most 25 percent; equipment, software, travel, IP protection, marketing and company formation are not eligible costs. Return the signed contract within two weeks or the grant lapses; 80 percent paid at signing, 20 percent after the final report within 12 months."
+      "notes": "Open on 2026-10-15: 'Open for applications / Always open'; 'Applications may be made at any time. Submitted applications are evaluated and grant awards are announced at least twice a year.' Rules and instructions for Fræ and Thróunarfræ are in Icelandic. Contact taeknithrounarsjodur@rannis.is. The fund's other categories (Sprout, Growth, Market grants) had the window 04.08.2026-15.09.2026 and were closed on the fund page; Patent grants are also always open. www.rannis.is redirects (301) to island.is/redirects/www.rannis.is/. Overhead at most 25 percent; equipment, software, travel, IP protection, marketing and company formation are not eligible costs. Return the signed contract within two weeks or the grant lapses; 80 percent paid at signing, 20 percent after the final report within 12 months.",
+      "founder_cost": "none"
     },
     {
       "id": "innovationsfonden-innobooster",
@@ -1303,7 +1376,8 @@
         "Pool 3 of 2026 lists an estimated answer in November to December 2027, which looks like a typo for 2026",
         "The exact success rate for a startup's theme varies from about 7% to 46% per pool"
       ],
-      "notes": "innovationsfonden.dk now redirects to danmarksinnovationsfond.dk; the old domain answers 454 to plain fetches, the new one is readable in a browser. Pools in 2026: 22 Jan to 12 Mar, 26 Mar to 13 May, 27 May to 6 Aug, 20 Aug to 15 Oct, each about DKK 71.5 to 78.9 million; the last 2026 pool closed on 15 Oct 2026 and no call was listed on 16 Oct 2026. 2025: 1,189 applications, 250 grants, 21% success. Erhvervshusene give free help with writing the application. 'Med Innobooster kan I søge mellem 200.000 kr. og 5 mio. kr. til jeres udviklingsprojekt.'"
+      "notes": "innovationsfonden.dk now redirects to danmarksinnovationsfond.dk; the old domain answers 454 to plain fetches, the new one is readable in a browser. Pools in 2026: 22 Jan to 12 Mar, 26 Mar to 13 May, 27 May to 6 Aug, 20 Aug to 15 Oct, each about DKK 71.5 to 78.9 million; the last 2026 pool closed on 15 Oct 2026 and no call was listed on 16 Oct 2026. 2025: 1,189 applications, 250 grants, 21% success. Erhvervshusene give free help with writing the application. 'Med Innobooster kan I søge mellem 200.000 kr. og 5 mio. kr. til jeres udviklingsprojekt.'",
+      "founder_cost": "none"
     },
     {
       "id": "forskningsradet-skattefunn",
@@ -1355,7 +1429,8 @@
         "Page does not state the hourly rate cap for own staff",
         "Changes from 2027 are announced (webinar 30 November 2026) but not described"
       ],
-      "notes": "Rolling intake all year; guarantee deadline 1 September, later applications are processed in order and may slip into next year and lose that year's deduction. Latest permitted project start for the 2026 call is 31 December 2026. Approval is normally given for up to three years. No residence requirement for founders; the entity must be registered in Norway and tax-liable there, a NUF branch counts. Companies in collaborative projects each file their own application and the 25 MNOK cap also applies per project. Forskningsrådet advises applying to IPN first and SkatteFUNN after. 'SkatteFUNN-støtten gis som fradrag i skatt eller som utbetaling dersom bedriften ikke er i skatteposisjon.'"
+      "notes": "Rolling intake all year; guarantee deadline 1 September, later applications are processed in order and may slip into next year and lose that year's deduction. Latest permitted project start for the 2026 call is 31 December 2026. Approval is normally given for up to three years. No residence requirement for founders; the entity must be registered in Norway and tax-liable there, a NUF branch counts. Companies in collaborative projects each file their own application and the 25 MNOK cap also applies per project. Forskningsrådet advises applying to IPN first and SkatteFUNN after. 'SkatteFUNN-støtten gis som fradrag i skatt eller som utbetaling dersom bedriften ikke er i skatteposisjon.'",
+      "founder_cost": "none"
     },
     {
       "id": "finnvera-alkutakaus",
@@ -1416,7 +1491,8 @@
       "unclear": [
         "Page has no explicit open or closed statement; the guarantee is a continuous product"
       ],
-      "notes": "No self-financing requirement. Not usable for buying a company, own shares or business premises, or for export financing; larger needs go to the ordinary Finnvera Guarantee. A new Start Guarantee can be requested at least two months after the previous decision. Founders need not live in Finland but the company must be a Finnish company or a registered Finnish private entrepreneur. 'Your bank files an application on your behalf.'"
+      "notes": "No self-financing requirement. Not usable for buying a company, own shares or business premises, or for export financing; larger needs go to the ordinary Finnvera Guarantee. A new Start Guarantee can be requested at least two months after the previous decision. Founders need not live in Finland but the company must be a Finnish company or a registered Finnish private entrepreneur. 'Your bank files an application on your behalf.'",
+      "founder_cost": "repay"
     },
     {
       "id": "eic-accelerator",
@@ -1486,7 +1562,8 @@
         "The topic page on the Funding and Tenders portal refuses automated reads; check the 2027 cut-off dates there in a browser",
         "The 2026 batching dates are written in mixed formats on the page (7/01/2026, 04/03/2026); confirm the next date before planning"
       ],
-      "notes": "Four-step process: short application (any time, batched first Tuesday monthly), full application (2026 batching dates written on the page as 7/01/2026, 04/03/2026, 06/05/2026, 08/07/2026, 02/09/2026, 04/11/2026, all 17:00 Brussels time; remote result in 8-9 weeks), interview with the EIC Jury (an interview session is organised after each second batch; results 2-3 weeks after the interview week), then grant agreement signature and due diligence for the investment component (decided within 2-6 months). Only one application at a time; a new one only after results of the previous. Grant only is provided once per company during Horizon Europe 2021-2027. Mid-caps (up to 499 employees) can apply for investment only; UK applicants grant only; third-country applicants must relocate before Step 2. Two strands: Accelerator Open (any field of technology, EUR 414 million budget in 2026) and Accelerator Challenges (pre-defined topics, EUR 220 million in 2026). Top-ranked full proposals corresponding to 2.5 times the available grant budget are invited to interview; proposals above the 13/15 threshold that are not funded receive a Seal of Excellence. Fast Track (existing Horizon projects) and Plug-In (certified national programmes) schemes go straight to the full application stage. The page does not state an open or closed status; it lists the 2026 cut-offs and links to the portal topic. Re-read the status page before quoting any 2027 date."
+      "notes": "Four-step process: short application (any time, batched first Tuesday monthly), full application (2026 batching dates written on the page as 7/01/2026, 04/03/2026, 06/05/2026, 08/07/2026, 02/09/2026, 04/11/2026, all 17:00 Brussels time; remote result in 8-9 weeks), interview with the EIC Jury (an interview session is organised after each second batch; results 2-3 weeks after the interview week), then grant agreement signature and due diligence for the investment component (decided within 2-6 months). Only one application at a time; a new one only after results of the previous. Grant only is provided once per company during Horizon Europe 2021-2027. Mid-caps (up to 499 employees) can apply for investment only; UK applicants grant only; third-country applicants must relocate before Step 2. Two strands: Accelerator Open (any field of technology, EUR 414 million budget in 2026) and Accelerator Challenges (pre-defined topics, EUR 220 million in 2026). Top-ranked full proposals corresponding to 2.5 times the available grant budget are invited to interview; proposals above the 13/15 threshold that are not funded receive a Seal of Excellence. Fast Track (existing Horizon projects) and Plug-In (certified national programmes) schemes go straight to the full application stage. The page does not state an open or closed status; it lists the 2026 cut-offs and links to the portal topic. Re-read the status page before quoting any 2027 date.",
+      "founder_cost": "none"
     },
     {
       "id": "eurostars",
@@ -1548,7 +1625,8 @@
         "No call is open on 2026-10-16; national rules for Call 12 are marked as being confirmed and may change before it opens",
         "Each national funding body pays its own partner under national rules and may cap the amount; Eureka publishes no central amount"
       ],
-      "notes": "No Eurostars call is open on 2026-10-15: the Eureka open-calls listing shows no Eurostars call, and Call 12 opens 17 December 2026 with deadline 4 March 2027 14:00 CET; calls are usually organised twice a year. Seven international eligibility criteria: SME lead from a Eurostars country; at least two independent entities; at least two Eurostars countries with at least one organisation from an EU or Horizon Europe associated country; SMEs from Eurostars countries carry 50% or more of the budget excluding subcontracting; no single participant or country above 70% of the budget; duration 36 months or less; exclusive focus on civil applications. Funding is decentralised: Eureka pays nothing, each partner's national funding body pays under national rules and may cap amounts. National details for Call 12 were marked as being confirmed and subject to change before the call opens. Sweden: Vinnova funds SMEs up to 50% of costs, max 5 MSEK per project; Swedish participants submit a national application to Vinnova after a positive evaluation; Vinnova checks the latest registered annual report and credit reports. Finland: Business Finland requires a parallel national application with attachments when the Eurostars application is submitted. Denmark: IFD max 300 000 EUR per participant (500 000 EUR for several Danish participants, min 50 000 EUR); upload the application to e-grant within 14 days after the deadline. Norway: the funder is the Research Council of Norway, not Innovasjon Norge. Iceland: Rannís, max 45 MISK per project. Greece, Israel, Italy and Brussels have no budget for this call."
+      "notes": "No Eurostars call is open on 2026-10-15: the Eureka open-calls listing shows no Eurostars call, and Call 12 opens 17 December 2026 with deadline 4 March 2027 14:00 CET; calls are usually organised twice a year. Seven international eligibility criteria: SME lead from a Eurostars country; at least two independent entities; at least two Eurostars countries with at least one organisation from an EU or Horizon Europe associated country; SMEs from Eurostars countries carry 50% or more of the budget excluding subcontracting; no single participant or country above 70% of the budget; duration 36 months or less; exclusive focus on civil applications. Funding is decentralised: Eureka pays nothing, each partner's national funding body pays under national rules and may cap amounts. National details for Call 12 were marked as being confirmed and subject to change before the call opens. Sweden: Vinnova funds SMEs up to 50% of costs, max 5 MSEK per project; Swedish participants submit a national application to Vinnova after a positive evaluation; Vinnova checks the latest registered annual report and credit reports. Finland: Business Finland requires a parallel national application with attachments when the Eurostars application is submitted. Denmark: IFD max 300 000 EUR per participant (500 000 EUR for several Danish participants, min 50 000 EUR); upload the application to e-grant within 14 days after the deadline. Norway: the funder is the Research Council of Norway, not Innovasjon Norge. Iceland: Rannís, max 45 MISK per project. Greece, Israel, Italy and Brussels have no budget for this call.",
+      "founder_cost": "none"
     },
     {
       "id": "eurohpc-playground",
@@ -1616,7 +1694,8 @@
         "Open science: the Terms of Reference say you commit to publish results, the Access Policy exempts SMEs doing private innovation; ask aif.access@eurohpc-ju.europa.eu what an SME must publish",
         "Live partition availability is only visible inside the portal"
       ],
-      "notes": "Continuously open with no cut-off dates; the page says access can be granted within two working days. Process from the Terms of Reference V3 (31/03/2026): eligibility check by self-assessment plus ethics self-assessment, then technical assessment by the requested AI Factory, then first-come-first-served until the call's reserved resources are exhausted. Innovation is the decisive factor of the final decision. One Playground award per project lead at a time; no extensions and no additional resources; final report due three months after the allocation ends; results must be published except confidential parts and EuroHPC JU plus the AI Factory acknowledged; only proposals in English, with a civilian purpose and compliant with the AI Act; no double-awarding with a running EuroHPC allocation. The organisation proves its status with a valid VAT number and, if applicable, a PIC. The hour table on the page is an image: 5 000 GPU hours on every listed partition (read 2026-10-15); partition availability may be limited by demand. Apply Now on the page links to the portal root; the portal is a JavaScript app so the call number could not be verified from outside it. Questions: aif.access@eurohpc-ju.europa.eu. The 2026 call is portal /calls/60 (EHPC-AIF-2026PG), open until 31 December 2026 per the portal's public call list; no 2027 call is announced. After award: sign the AI Factory's Acceptable Use Policy at onboarding; final report on the EuroHPC template within 3 months after the allocation, with energy use and carbon footprint; acknowledge EuroHPC JU and the AI Factory in publications."
+      "notes": "Continuously open with no cut-off dates; the page says access can be granted within two working days. Process from the Terms of Reference V3 (31/03/2026): eligibility check by self-assessment plus ethics self-assessment, then technical assessment by the requested AI Factory, then first-come-first-served until the call's reserved resources are exhausted. Innovation is the decisive factor of the final decision. One Playground award per project lead at a time; no extensions and no additional resources; final report due three months after the allocation ends; results must be published except confidential parts and EuroHPC JU plus the AI Factory acknowledged; only proposals in English, with a civilian purpose and compliant with the AI Act; no double-awarding with a running EuroHPC allocation. The organisation proves its status with a valid VAT number and, if applicable, a PIC. The hour table on the page is an image: 5 000 GPU hours on every listed partition (read 2026-10-15); partition availability may be limited by demand. Apply Now on the page links to the portal root; the portal is a JavaScript app so the call number could not be verified from outside it. Questions: aif.access@eurohpc-ju.europa.eu. The 2026 call is portal /calls/60 (EHPC-AIF-2026PG), open until 31 December 2026 per the portal's public call list; no 2027 call is announced. After award: sign the AI Factory's Acceptable Use Policy at onboarding; final report on the EuroHPC template within 3 months after the allocation, with energy use and carbon footprint; acknowledge EuroHPC JU and the AI Factory in publications.",
+      "founder_cost": "none"
     },
     {
       "id": "eurohpc-fast-lane",
@@ -1686,7 +1765,8 @@
         "Per-system thresholds are said to be on the web page but are only visible inside the portal",
         "Open science: the Terms of Reference and the Access Policy disagree on what an SME must publish; ask aif.access@eurohpc-ju.europa.eu"
       ],
-      "notes": "Continuously open with no cut-off dates; proposals are assessed on a rolling basis; the page says approval within four working days. Process: eligibility check (self-assessment plus ethics self-assessment), technical assessment by the requested AI Factory, then first-come-first-served until the call's reserved resources are exhausted. Intended for HPC-ready users. One Fast Lane award per project lead at a time; no extensions and no additional resources; final report three months after the allocation ends; results published except confidential parts; English, civilian purpose, AI Act compliance, no double-awarding. The page itself shows no per-system table, only the 50 000 GPU hour cap and the three-month maximum. Questions: aif.access@eurohpc-ju.europa.eu. The 2026 call is portal /calls/59 (EHPC-AIF-2026FL), open until 31 December 2026; /calls/49 is the closed 2025 call. After award: sign the AI Factory's Acceptable Use Policy at onboarding; final report on the EuroHPC template within 3 months after the allocation, with energy use and carbon footprint; acknowledge EuroHPC JU and the AI Factory in publications."
+      "notes": "Continuously open with no cut-off dates; proposals are assessed on a rolling basis; the page says approval within four working days. Process: eligibility check (self-assessment plus ethics self-assessment), technical assessment by the requested AI Factory, then first-come-first-served until the call's reserved resources are exhausted. Intended for HPC-ready users. One Fast Lane award per project lead at a time; no extensions and no additional resources; final report three months after the allocation ends; results published except confidential parts; English, civilian purpose, AI Act compliance, no double-awarding. The page itself shows no per-system table, only the 50 000 GPU hour cap and the three-month maximum. Questions: aif.access@eurohpc-ju.europa.eu. The 2026 call is portal /calls/59 (EHPC-AIF-2026FL), open until 31 December 2026; /calls/49 is the closed 2025 call. After award: sign the AI Factory's Acceptable Use Policy at onboarding; final report on the EuroHPC template within 3 months after the allocation, with energy use and carbon footprint; acknowledge EuroHPC JU and the AI Factory in publications.",
+      "founder_cost": "none"
     },
     {
       "id": "eurohpc-large-scale",
@@ -1751,7 +1831,8 @@
         "Per-system minimum and maximum GPU hours are only visible in the call text after login",
         "No indication of how much is typically granted or how full the reserve is"
       ],
-      "notes": "Continuously open with two cut-off dates per month that trigger evaluation; the page says approval within ten working days from the cut-off; specific cut-off dates are not listed on the page. Process: eligibility check, technical assessment by the AI Factory, expert evaluation by the AI Factory's Industrial Innovation Group on two criteria, innovation and impact, each scored 0 to 5 with a threshold of 3 per criterion and 6 overall, then a ranked list approved by the EuroHPC JU Executive Director. EIC Accelerator challenge awardees pass without further evaluation and have priority within the cut-off. Proposals below the per-system minimum request are administratively rejected; awards may be reduced in scope. Normally one Large Scale award per project lead at a time; proposals submitted after a cut-off roll into the next one; appeals to aif.access@eurohpc-ju.europa.eu within 15 days. No extensions or top-ups; final report three months after the end; English, civilian purpose, AI Act compliance, no double-awarding. Continuation proposals are possible with a progress or final report. The 2026 call is portal /calls/58 (EHPC-AIF-2026LS). Scored by the AI Factory's Industrial Innovation Group on innovation and impact, 0 to 5 each, thresholds 3 per criterion and 6 overall; decision within 10 working days after the cut-off; appeal by email to aif.access@eurohpc-ju.europa.eu within 15 days. EIC Accelerator awardees skip expert evaluation but upload the signed grant agreement. After award: sign the AI Factory's Acceptable Use Policy at onboarding; final report on the EuroHPC template within 3 months after the allocation, with energy use and carbon footprint; acknowledge EuroHPC JU and the AI Factory in publications."
+      "notes": "Continuously open with two cut-off dates per month that trigger evaluation; the page says approval within ten working days from the cut-off; specific cut-off dates are not listed on the page. Process: eligibility check, technical assessment by the AI Factory, expert evaluation by the AI Factory's Industrial Innovation Group on two criteria, innovation and impact, each scored 0 to 5 with a threshold of 3 per criterion and 6 overall, then a ranked list approved by the EuroHPC JU Executive Director. EIC Accelerator challenge awardees pass without further evaluation and have priority within the cut-off. Proposals below the per-system minimum request are administratively rejected; awards may be reduced in scope. Normally one Large Scale award per project lead at a time; proposals submitted after a cut-off roll into the next one; appeals to aif.access@eurohpc-ju.europa.eu within 15 days. No extensions or top-ups; final report three months after the end; English, civilian purpose, AI Act compliance, no double-awarding. Continuation proposals are possible with a progress or final report. The 2026 call is portal /calls/58 (EHPC-AIF-2026LS). Scored by the AI Factory's Industrial Innovation Group on innovation and impact, 0 to 5 each, thresholds 3 per criterion and 6 overall; decision within 10 working days after the cut-off; appeal by email to aif.access@eurohpc-ju.europa.eu within 15 days. EIC Accelerator awardees skip expert evaluation but upload the signed grant agreement. After award: sign the AI Factory's Acceptable Use Policy at onboarding; final report on the EuroHPC template within 3 months after the allocation, with energy use and carbon footprint; acknowledge EuroHPC JU and the AI Factory in publications.",
+      "founder_cost": "none"
     },
     {
       "id": "eurohpc-ai-for-science",
@@ -1814,7 +1895,8 @@
         "Page limits for the Project Scope and Plan sit inside the template and exceeding them can cause rejection",
         "The hour table is an image; the figures were read from a screenshot"
       ],
-      "notes": "Opened 15 May 2025; continuously open with a cut-off every two months. Cut-off dates on the page: 27 Feb, 30 Apr, 30 Jun, 1 Sep, 30 Oct and 11 Dec 2026 and 31 Dec 2033, all 10:00 CET (the Full Call Details PDF says 31 August instead of 1 September). Access starts at most one month after the cut-off. Process: administrative check, technical assessment by the hosting entity, peer review by two independent experts on excellence, innovation and impact, and quality and efficiency of implementation, each 0 to 5 with a threshold of 3 per criterion and 10 overall, then first-come-first-served until the cut-off's resources are depleted. EU-funded projects already evaluated by expert panels skip the expert evaluation and have priority. Proposals not following the template are administratively rejected. At most 10 percent of the allocation may go to inference. One AI for Science award per project lead at a time. Extensions of up to three months possible on request one month before the end. SMEs and startups doing private AI innovation are expected to use the Industrial Innovation modes; the company-in-EU-project exception cannot be expressed as a matcher rule, so ask. The hour table on the page is an image (read 2026-10-15): minimum 20 000 and maximum 90 000 node hours on each listed partition. Terms of Reference dated 20/05/2025. Questions: access@eurohpc-ju.europa.eu. The 2026 call is portal /calls/63 (EHPC-AIF-2026SC). Peer review by two experts on excellence, innovation and impact, and quality of implementation, 0 to 5 each, threshold 3 per criterion and 10 overall, then first-come-first-served; access starts at most one month after the cut-off. A missing final report can disqualify the whole research group."
+      "notes": "Opened 15 May 2025; continuously open with a cut-off every two months. Cut-off dates on the page: 27 Feb, 30 Apr, 30 Jun, 1 Sep, 30 Oct and 11 Dec 2026 and 31 Dec 2033, all 10:00 CET (the Full Call Details PDF says 31 August instead of 1 September). Access starts at most one month after the cut-off. Process: administrative check, technical assessment by the hosting entity, peer review by two independent experts on excellence, innovation and impact, and quality and efficiency of implementation, each 0 to 5 with a threshold of 3 per criterion and 10 overall, then first-come-first-served until the cut-off's resources are depleted. EU-funded projects already evaluated by expert panels skip the expert evaluation and have priority. Proposals not following the template are administratively rejected. At most 10 percent of the allocation may go to inference. One AI for Science award per project lead at a time. Extensions of up to three months possible on request one month before the end. SMEs and startups doing private AI innovation are expected to use the Industrial Innovation modes; the company-in-EU-project exception cannot be expressed as a matcher rule, so ask. The hour table on the page is an image (read 2026-10-15): minimum 20 000 and maximum 90 000 node hours on each listed partition. Terms of Reference dated 20/05/2025. Questions: access@eurohpc-ju.europa.eu. The 2026 call is portal /calls/63 (EHPC-AIF-2026SC). Peer review by two experts on excellence, innovation and impact, and quality of implementation, 0 to 5 each, threshold 3 per criterion and 10 overall, then first-come-first-served; access starts at most one month after the cut-off. A missing final report can disqualify the whole research group.",
+      "founder_cost": "none"
     },
     {
       "id": "lumi-ai-factory-finland",
@@ -1865,7 +1947,8 @@
         "The 300 000 EUR state-aid ceiling and the 100 000 EUR grant maximum are different limits; confirm which applies",
         "Commercial paid access is for Finnish companies only, priced on the CSC list, no figures on the page"
       ],
-      "notes": "Consortium countries Czechia, Denmark, Estonia, Finland, Norway and Poland can use both EuroHPC JU calls and national access opportunities; AI Factory antennas are Belgium, Iceland, Latvia and Switzerland; other EU member states and Horizon Europe associated countries get computing only through EuroHPC JU calls. The national route is state aid: the company must know it has not used up its national state aid (maximum 300 000 euro in three years) and must report the value of the resources used. Free access is for RDI, not for 24/7 or commercial deployment. The project idea is evaluated on technical feasibility and risk; usually starts with a small pilot. A short final report is required after an EU-funded computing project; an NDA can cover sensitive parts. Commercial paid access is currently possible for Finnish companies. Datasets are free only for a research project granted LUMI resources. Fully confidential projects are pointed to national mechanisms such as Business Finland. The page gives no hour caps or durations. The page says 2 to 5 days from first contact to active work and that you start with a small pilot. Short final report after an EU-funded project; acknowledge LUMI AI Factory and EuroHPC JU."
+      "notes": "Consortium countries Czechia, Denmark, Estonia, Finland, Norway and Poland can use both EuroHPC JU calls and national access opportunities; AI Factory antennas are Belgium, Iceland, Latvia and Switzerland; other EU member states and Horizon Europe associated countries get computing only through EuroHPC JU calls. The national route is state aid: the company must know it has not used up its national state aid (maximum 300 000 euro in three years) and must report the value of the resources used. Free access is for RDI, not for 24/7 or commercial deployment. The project idea is evaluated on technical feasibility and risk; usually starts with a small pilot. A short final report is required after an EU-funded computing project; an NDA can cover sensitive parts. Commercial paid access is currently possible for Finnish companies. Datasets are free only for a research project granted LUMI resources. Fully confidential projects are pointed to national mechanisms such as Business Finland. The page gives no hour caps or durations. The page says 2 to 5 days from first contact to active work and that you start with a small pilot. Short final report after an EU-funded project; acknowledge LUMI AI Factory and EuroHPC JU.",
+      "founder_cost": "none"
     },
     {
       "id": "sigma2-ki-fabrikken",
@@ -1905,7 +1988,8 @@
         "No application route beyond the contact form; the metacenter.no route is a separate paid allocation",
         "Exact deadlines for the next call are not published"
       ],
-      "notes": "The page states no prices, hour caps or durations and no formal eligibility criteria; it says the service portfolio is expanding and to get in touch. The service centre is funded jointly by the EuroHPC Joint Undertaking and the participating states FI, CZ, DK, EE, NO and PL. Ordinary national e-infrastructure allocations run through metacenter.no with a call in January (allocations from 1 April) and one in June (from 1 October), deadlines usually in February and August, open to industrial parties, but the user contribution model prices commercial and industry users (category C) at market price, 35 NOK per GPU-hour from 1 October 2025, so free GPU hours for a Norwegian company come through the EuroHPC AI Factory calls rather than the national allocation. Olivia is a Cray EX system with 448 GPUs for researchers across Norway. The English language link (/node/406) serves the same Norwegian content. Funding sources are mandatory in a national application and previous allocations must be reported. User accounts are signed by the project leader; accept the Terms of Use and Acceptable Use Policy."
+      "notes": "The page states no prices, hour caps or durations and no formal eligibility criteria; it says the service portfolio is expanding and to get in touch. The service centre is funded jointly by the EuroHPC Joint Undertaking and the participating states FI, CZ, DK, EE, NO and PL. Ordinary national e-infrastructure allocations run through metacenter.no with a call in January (allocations from 1 April) and one in June (from 1 October), deadlines usually in February and August, open to industrial parties, but the user contribution model prices commercial and industry users (category C) at market price, 35 NOK per GPU-hour from 1 October 2025, so free GPU hours for a Norwegian company come through the EuroHPC AI Factory calls rather than the national allocation. Olivia is a Cray EX system with 448 GPUs for researchers across Norway. The English language link (/node/406) serves the same Norwegian content. Funding sources are mandatory in a national application and previous allocations must be reported. User accounts are signed by the project leader; accept the Terms of Use and Acceptable Use Policy.",
+      "founder_cost": "none"
     },
     {
       "id": "sweden-ai-factory",
@@ -1945,7 +2029,8 @@
         "The factory's compute page exists in two versions with different hour figures; rely on the EuroHPC call pages for the numbers, or ask info@swedenaifactory.se",
         "Own supercomputer expected early 2027 and funding secured only until March 2028"
       ],
-      "notes": "mimer-ai.eu redirects (301) to swedenaifactory.se; the Mimer name appears only in the LinkedIn slug and the compute page. FAQ: everything is at no cost because it is publicly funded; compute applications for all organisations across Europe go through the central EuroHPC portal; large companies can use the resources free but must do open science, SMEs and startups are exempt. As of May 2026 the supercomputer is procured and expected to run by early 2027; meanwhile Swedish companies use the existing EuroHPC systems. The compute page lists hour figures that conflict between versions (AI for Science 360k vs 90 000 GPU hours; Large Scale 22 million vs 30 million), so quote the EuroHPC pages instead. Arrhenius at NAISS is the Swedish EuroHPC system in the Playground and AI for Science tables. Everything is free: 'we are publicly funded and therefore everything offered is at no cost'. Large companies must publish some outcomes; SMEs and startups are exempt."
+      "notes": "mimer-ai.eu redirects (301) to swedenaifactory.se; the Mimer name appears only in the LinkedIn slug and the compute page. FAQ: everything is at no cost because it is publicly funded; compute applications for all organisations across Europe go through the central EuroHPC portal; large companies can use the resources free but must do open science, SMEs and startups are exempt. As of May 2026 the supercomputer is procured and expected to run by early 2027; meanwhile Swedish companies use the existing EuroHPC systems. The compute page lists hour figures that conflict between versions (AI for Science 360k vs 90 000 GPU hours; Large Scale 22 million vs 30 million), so quote the EuroHPC pages instead. Arrhenius at NAISS is the Swedish EuroHPC system in the Playground and AI for Science tables. Everything is free: 'we are publicly funded and therefore everything offered is at no cost'. Large companies must publish some outcomes; SMEs and startups are exempt.",
+      "founder_cost": "none"
     },
     {
       "id": "naiss-allocations",
@@ -1991,7 +2076,8 @@
         "GPU-hour caps for Small and Medium are only visible inside SUPR",
         "The 'how to register a proposal' guide referenced by the Small and Medium pages was not found"
       ],
-      "notes": "Resources are free for researchers at Swedish universities and research institutes and authorised by the Swedish Research Council. Small: technical evaluation within a week, reviewed weekly all year. Medium: technical evaluation, monthly, submission before the 15th. Large: scientific and technical evaluation twice a year by NAC; the Large Fall 2026 deadline is 16 October 2026 at 15:00 CEST, decisions in November, projects start 1 January 2027 for 6 or 12 months, and there are now upper limits on the capacity you can request. A PI cannot hold compute in a Medium and a Large project at the same time. Alvis and Tetralith are decommissioned, Bianca this autumn and Dardel on 1 January 2027. LUMI Sweden rounds now accept CPU-only requests. No GPU hour figures are published on these pages. Industry access is not mentioned. Large round upper limits: Arrhenius GPU 25 000 GPU hours per month. After approval, request a login on each resource in SUPR; acknowledge NAISS and file an activity report."
+      "notes": "Resources are free for researchers at Swedish universities and research institutes and authorised by the Swedish Research Council. Small: technical evaluation within a week, reviewed weekly all year. Medium: technical evaluation, monthly, submission before the 15th. Large: scientific and technical evaluation twice a year by NAC; the Large Fall 2026 deadline is 16 October 2026 at 15:00 CEST, decisions in November, projects start 1 January 2027 for 6 or 12 months, and there are now upper limits on the capacity you can request. A PI cannot hold compute in a Medium and a Large project at the same time. Alvis and Tetralith are decommissioned, Bianca this autumn and Dardel on 1 January 2027. LUMI Sweden rounds now accept CPU-only requests. No GPU hour figures are published on these pages. Industry access is not mentioned. Large round upper limits: Arrhenius GPU 25 000 GPU hours per month. After approval, request a login on each resource in SUPR; acknowledge NAISS and file an activity report.",
+      "founder_cost": "none"
     },
     {
       "id": "berzelius",
@@ -2038,7 +2124,8 @@
         "The SUPR round page says Hopper is in a test pilot phase while the documentation lets you request it; ask NSC before planning on H200 hours",
         "Continuation after the normal six months is not described"
       ],
-      "notes": "Applications are normally reviewed monthly except July and December; requests at the default allocation count as small projects and get fast-track review; larger requests must be specified and justified. Normal maximum project period six months; continuation proposals are encouraged over new ones when adding Hopper to an existing Ampere allocation. The project must not process sensitive data. Access is granted by NSC via SUPR; access to one node type does not automatically grant the other. The Wallenberg funding requirement is the gate the matcher cannot express; ask about it. The NSC pages say documentation is moving to hpc.pages.naiss.se and older NSC pages may be outdated. Industry is not mentioned. After approval: request a Berzelius login in SUPR (manual check up to one working day), activation link valid 7 days, TOTP two-factor. Export control applies to remote access from outside the EU, EEA or Switzerland."
+      "notes": "Applications are normally reviewed monthly except July and December; requests at the default allocation count as small projects and get fast-track review; larger requests must be specified and justified. Normal maximum project period six months; continuation proposals are encouraged over new ones when adding Hopper to an existing Ampere allocation. The project must not process sensitive data. Access is granted by NSC via SUPR; access to one node type does not automatically grant the other. The Wallenberg funding requirement is the gate the matcher cannot express; ask about it. The NSC pages say documentation is moving to hpc.pages.naiss.se and older NSC pages may be outdated. Industry is not mentioned. After approval: request a Berzelius login in SUPR (manual check up to one working day), activation link valid 7 days, TOTP two-factor. Export control applies to remote access from outside the EU, EEA or Switzerland.",
+      "founder_cost": "none"
     },
     {
       "id": "nvidia-inception",
@@ -2065,11 +2152,6 @@
           "value": 10
         },
         {
-          "field": "has_developer",
-          "op": "eq",
-          "value": true
-        },
-        {
           "field": "has_website",
           "op": "eq",
           "value": true
@@ -2084,22 +2166,27 @@
       "status_url": "https://www.nvidia.com/en-us/startups/faq/",
       "next_step": "Open the application form at programs.nvidia.com/phoenix/application with a business email, provide the incorporation date and details about the business and products. The founder clicks submit.",
       "reference": "references/compute.md#nvidia-inception",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-16",
       "availability": "open",
       "apply_requirements": [
         "Business email on your own domain; aliases such as info@ and generic domains such as gmail.com are not accepted",
         "NVIDIA account registered with that business email; an existing account on an alias or generic address means creating a new one",
         "Unique contact details for two contacts who will manage the profile; solo founders may still apply",
         "Incorporation date, details about the business and products, and a pitch deck",
-        "Funding status, used to decide investor introductions; revenue is not required"
+        "Funding status, used to decide investor introductions; revenue is not required",
+        "A clear use case for NVIDIA technology, and the company actively operated by at least one founder",
+        "Not eligible: consulting and outsourced development firms, companies associated with cryptocurrency, cloud service providers, resellers and distributors, public companies",
+        "Company must already be incorporated; you give the incorporation date and a pitch deck"
       ],
       "unclear": [
         "No review timeline is stated",
         "Cloud credit and training credit amounts are not published; preferred pricing is a rebate with no figure",
         "The form beyond the business email step sits behind the NVIDIA account login",
-        "The embedded form on nvidia.com/startups shows a maintenance banner; use programs.nvidia.com/phoenix/application"
+        "The embedded form on nvidia.com/startups shows a maintenance banner; use programs.nvidia.com/phoenix/application",
+        "Whether a product that calls a hosted LLM API counts as a clear use case for NVIDIA technology; ask Inception or explain it in the application"
       ],
-      "notes": "No application fees, membership fees, equity, deadlines or cohorts; apply regardless of funding stage; NVIDIA reaches out after reviewing the application, no timeline stated. Cloud credits and DLI credits are described without amounts; preferred pricing is a rebate deducted from the standard supplier price on a subset of enterprise GPUs; Capital Connect is based on eligibility. The FAQ does not state a work-email-on-own-domain requirement; the form on the startups page asks for a Business Email Address. The application page is JavaScript-rendered with a captcha, so the single-field form could not be verified today. Cloud credits do not pay an LLM API invoice. No fees, deadlines or cohorts; NVIDIA contacts you after review. Keep product and company details updated in the member portal to stay eligible for benefits."
+      "notes": "No application fees, membership fees, equity, deadlines or cohorts; apply regardless of funding stage; NVIDIA reaches out after reviewing the application, no timeline stated. Cloud credits and DLI credits are described without amounts; preferred pricing is a rebate deducted from the standard supplier price on a subset of enterprise GPUs; Capital Connect is based on eligibility. The FAQ does not state a work-email-on-own-domain requirement; the form on the startups page asks for a Business Email Address. The application page is JavaScript-rendered with a captcha, so the single-field form could not be verified today. Cloud credits do not pay an LLM API invoice. No fees, deadlines or cohorts; NVIDIA contacts you after review. Keep product and company details updated in the member portal to stay eligible for benefits.",
+      "founder_cost": "none"
     },
     {
       "id": "aws-activate",
@@ -2118,9 +2205,18 @@
       },
       "eligibility": [
         {
-          "field": "stack",
-          "op": "contains",
-          "value": "aws"
+          "any": [
+            {
+              "field": "stack",
+              "op": "contains",
+              "value": "aws"
+            },
+            {
+              "field": "stack",
+              "op": "contains",
+              "value": "anthropic"
+            }
+          ]
         },
         {
           "field": "age_years",
@@ -2147,7 +2243,7 @@
       "status_url": "https://aws.amazon.com/startups/credits/",
       "next_step": "Create an AWS Builder ID with a professional email at https://aws.amazon.com/startups/join?destination=/credits/apply, choose Activate Founders (self-funded) or Activate Portfolio (enter the Org ID from your accelerator, angel or VC), describe the product, funding stage and company, link an AWS account, and the founder clicks submit. AWS answers within 5-10 business days.",
       "reference": "references/cloud-credits.md#aws-activate",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-16",
       "availability": "open",
       "apply_requirements": [
         "AWS Builder ID verified by email and an Activate profile with a business email on your own domain",
@@ -2155,14 +2251,18 @@
         "A fully functioning company website; AWS evaluates public information from it",
         "Portfolio tier: an Org ID or email invitation from your Activate Provider, and your latest funding round within the last 12 months",
         "Product, target market, traction, funding stage and date of the latest round in the form",
-        "Identity verification with an ID document when AWS asks; declining means rejection"
+        "Identity verification with an ID document when AWS asks; declining means rejection",
+        "Founders tier is for bootstrapped or self-funded startups; the form asks for funding stage and date of the latest round, so an angel round is visible. With outside funding, ask your investors or accelerator whether they are an Activate Provider and use the Portfolio tier",
+        "Portfolio tier: the provider must confirm your association by answering AWS Activate's verification email, or the application is declined",
+        "Credits also pay for third-party models on Amazon Bedrock, Anthropic's Claude included; to use them for Claude you call it through Bedrock, not Anthropic's own API"
       ],
       "unclear": [
         "Review time differs across pages: 5 to 10 or 7 to 10 business days",
         "Founders tier: 1 000 USD stated, 'select startups may qualify for up to 5 000 USD' with no criteria; Portfolio amounts depend on the provider and are not published",
         "The FAQ answer on why applications are declined is a broken placeholder"
       ],
-      "notes": "Three tiers on 2026-10-15: Activate Founders (self-funded) starts at 1 000 USD and select participants may qualify for up to 5 000 USD; Activate Portfolio (pre-Series B) up to 200 000 USD but only with an Organization ID from an Activate Provider, so the Portfolio tier is partner-locked (thousands of VC firms and accelerators are providers, e.g. Andreessen Horowitz, Sequoia, Y Combinator; list at https://aws.amazon.com/startups/providers); AWS Credits for AI Startups 200 000 USD+ is invite only after Portfolio, via the account manager. General eligibility as written: pre-Series B, founded in the last 10 years, AWS Account on Paid Tier Plan, and either new to Activate Credits or requesting more credits than previously received. Credits are in USD and subject to the AWS Promotional Credit Terms (https://aws.amazon.com/activate/terms/); the page does not state an expiry period. Kiro Startup Credits exist for eligible startups without current Activate Credits. Applications were open on 2026-10-15 (Apply now buttons live). Applications cannot be edited after submission, only cancelled and resubmitted. Credits exclude Marketplace, Route 53 registration and upfront Reserved Instance and Savings Plan fees."
+      "notes": "Three tiers on 2026-10-15: Activate Founders (self-funded) starts at 1 000 USD and select participants may qualify for up to 5 000 USD; Activate Portfolio (pre-Series B) up to 200 000 USD but only with an Organization ID from an Activate Provider, so the Portfolio tier is partner-locked (thousands of VC firms and accelerators are providers, e.g. Andreessen Horowitz, Sequoia, Y Combinator; list at https://aws.amazon.com/startups/providers); AWS Credits for AI Startups 200 000 USD+ is invite only after Portfolio, via the account manager. General eligibility as written: pre-Series B, founded in the last 10 years, AWS Account on Paid Tier Plan, and either new to Activate Credits or requesting more credits than previously received. Credits are in USD and subject to the AWS Promotional Credit Terms (https://aws.amazon.com/activate/terms/); the page does not state an expiry period. Kiro Startup Credits exist for eligible startups without current Activate Credits. Applications were open on 2026-10-15 (Apply now buttons live). Applications cannot be edited after submission, only cancelled and resubmitted. Credits exclude Marketplace, Route 53 registration and upfront Reserved Instance and Savings Plan fees. AWS FAQ 2026-10-16: credits do not cover AWS Marketplace 'with the exception of charges incurred through the use of third-party foundation models available on Amazon Bedrock'; credits page: 'AWS Activate Credits can also be used for third-party models on Amazon Bedrock.' Founders tier: 'Apply directly if you're bootstrapped or self-funded'.",
+      "founder_cost": "none"
     },
     {
       "id": "google-cloud-startup",
@@ -2229,7 +2329,8 @@
         "Start tier asks for 'plans to seek venture funding soon' and a 'digital-native' startup; neither is defined",
         "Expiry of Scale credits is set at issuance and only shown in the console"
       ],
-      "notes": "Start tier (https://cloud.google.com/startup/pre-funded): digital-native startups with a working MVP, a clear business model and plans to seek venture funding soon; founded within the last 24 months; no Google Cloud credits beyond the free trial; 2 000 USD plus 12 months Google Workspace Business Plus and 200 USD Google Skills credits. Scale tier (https://cloud.google.com/startup/early-stage): recent startup equity funding from pre-seed to Series A by an institutional investor or common Web3 funding sources (SAFEs count; private equity, government innovation grants, prize funding, crowdfunding, angel and friends-and-family money do not qualify for Scale but may for Start); founded within the last 5 years; not more than 5 000 USD in prior Google Cloud credits; funding verification if in stealth. Scale adds 12 000 USD Enhanced Support credits for one year, 12 months Workspace Business Plus, 600 USD per month Google Maps credit for one year and 500 USD Skills credits. AI-first variant (https://cloud.google.com/startup/ai): uses or plans to use Gemini as the foundation of the primary product; pre-seed/seed rounds within the last five years and Series A within the last 12 months. Series B+ startups get custom solutions, not program credits. FAQ exclusions: companies that have IPO'd or been acquired, educational institutions, government entities, nonprofits, personal blogs or content, dev shops. The apply page requires a Google sign-in. Applications open on 2026-10-15. Credits cover Google Cloud services only, not Marketplace or third-party models; Start credits last 12 months, Scale runs over 2 years with year 2 paid as 20 percent of spend. Separate applications for the Workspace and Maps benefits."
+      "notes": "Start tier (https://cloud.google.com/startup/pre-funded): digital-native startups with a working MVP, a clear business model and plans to seek venture funding soon; founded within the last 24 months; no Google Cloud credits beyond the free trial; 2 000 USD plus 12 months Google Workspace Business Plus and 200 USD Google Skills credits. Scale tier (https://cloud.google.com/startup/early-stage): recent startup equity funding from pre-seed to Series A by an institutional investor or common Web3 funding sources (SAFEs count; private equity, government innovation grants, prize funding, crowdfunding, angel and friends-and-family money do not qualify for Scale but may for Start); founded within the last 5 years; not more than 5 000 USD in prior Google Cloud credits; funding verification if in stealth. Scale adds 12 000 USD Enhanced Support credits for one year, 12 months Workspace Business Plus, 600 USD per month Google Maps credit for one year and 500 USD Skills credits. AI-first variant (https://cloud.google.com/startup/ai): uses or plans to use Gemini as the foundation of the primary product; pre-seed/seed rounds within the last five years and Series A within the last 12 months. Series B+ startups get custom solutions, not program credits. FAQ exclusions: companies that have IPO'd or been acquired, educational institutions, government entities, nonprofits, personal blogs or content, dev shops. The apply page requires a Google sign-in. Applications open on 2026-10-15. Credits cover Google Cloud services only, not Marketplace or third-party models; Start credits last 12 months, Scale runs over 2 years with year 2 paid as 20 percent of spend. Separate applications for the Workspace and Maps benefits.",
+      "founder_cost": "none"
     },
     {
       "id": "microsoft-for-startups",
@@ -2277,7 +2378,8 @@
         "What business verification requires is not stated beyond matching name and address",
         "The partner list for referral codes is not published"
       ],
-      "notes": "Program restructured: startups that joined on or after 2026-05-29 apply and activate through the Azure portal (the Get started button on microsoft.com/en-us/startups leads to portal.azure.com); earlier members use portal.startups.microsoft.com. Eligibility as written on the Learn overview (updated 2026-08-05): software product owned by the company; privately held and for-profit; HQ in a country where Azure is available; not more than 350 000 USD in lifetime free Azure credits; not Series C or later; not an educational institution, government organization, consultancy or agency; no cryptocurrency mining. The top tier is partner-locked: the investor offer requires a referral code from an Investor Network partner (investor, accelerator, incubator, angel network, university); Microsoft does not publish the partner list, ask your VC or accelerator. Credits must be activated within 90 days of accepting the program agreement and are valid up to two years, no extensions; a credit card is required; credits cannot be transferred between Microsoft accounts. The investor offer also includes Azure Standard Support, technical experts, go-to-market support and discounts such as GitHub Enterprise, LinkedIn Premium Business and Microsoft 365 Business Premium. Applications open on 2026-10-15. Decision by email in about 3 business days; reapply after 14 days if declined; activate within 90 days, valid up to 2 years, tied to that account and subscription."
+      "notes": "Program restructured: startups that joined on or after 2026-05-29 apply and activate through the Azure portal (the Get started button on microsoft.com/en-us/startups leads to portal.azure.com); earlier members use portal.startups.microsoft.com. Eligibility as written on the Learn overview (updated 2026-08-05): software product owned by the company; privately held and for-profit; HQ in a country where Azure is available; not more than 350 000 USD in lifetime free Azure credits; not Series C or later; not an educational institution, government organization, consultancy or agency; no cryptocurrency mining. The top tier is partner-locked: the investor offer requires a referral code from an Investor Network partner (investor, accelerator, incubator, angel network, university); Microsoft does not publish the partner list, ask your VC or accelerator. Credits must be activated within 90 days of accepting the program agreement and are valid up to two years, no extensions; a credit card is required; credits cannot be transferred between Microsoft accounts. The investor offer also includes Azure Standard Support, technical experts, go-to-market support and discounts such as GitHub Enterprise, LinkedIn Premium Business and Microsoft 365 Business Premium. Applications open on 2026-10-15. Decision by email in about 3 business days; reapply after 14 days if declined; activate within 90 days, valid up to 2 years, tied to that account and subscription.",
+      "founder_cost": "none"
     },
     {
       "id": "cloudflare-for-startups",
@@ -2341,7 +2443,8 @@
         "The form fields could not be read without an Airtable login",
         "The 'Apply here' link at the bottom of the page returns 404"
       ],
-      "notes": "Tier 2 and Tier 1 require funding from an affiliated partner (partner list on the program page), so the top tiers are partner-locked; self-funded startups go in at Tier 3. The page lists all of these as required: founded within the last 10 years; funded up to Series B; funded within the last 12 months; actively developing a technology product; live public website; active on LinkedIn, X or GitHub; not previously approved into the program; for-profit business with a business email matching the domain. Credits are valid for one year or until consumed, whichever comes first, and extensions are not approved. Caps: R2 up to 10 000 USD; Workers AI up to 2 500 USD (Tier 3), 10 000 USD (Tier 2) or 50 000 USD (Tier 1). Not covered: AI Gateway (temporarily), registrar services, enterprise feature add-ons, Magic Transit, Enterprise Spectrum, Dedicated IPs and the China Network. Not eligible: educational institutions, personal blogs, consultancies, service agencies, MSPs, resellers and existing enterprise customers. Tiers were recently raised (Tier 3 from 5 000 to 10 000 USD, Tier 1 from 250 000 to 350 000 USD); existing members near their cap can request an upgrade evaluation. The apply page returns HTTP 403 to automated fetches; a human in a browser reaches it. Questions to startups@cloudflare.com. Applications open on 2026-10-15. The dedicated application page /lp/startups returned 404 on 2026-10-15; apply from the program page. Decision by email typically within 48 hours; rejected applicants get a reason. Credits last one year with no extensions; R2 capped at 10 000 USD, Workers AI capped by tier; AI Gateway, Registrar and premium network services excluded."
+      "notes": "Tier 2 and Tier 1 require funding from an affiliated partner (partner list on the program page), so the top tiers are partner-locked; self-funded startups go in at Tier 3. The page lists all of these as required: founded within the last 10 years; funded up to Series B; funded within the last 12 months; actively developing a technology product; live public website; active on LinkedIn, X or GitHub; not previously approved into the program; for-profit business with a business email matching the domain. Credits are valid for one year or until consumed, whichever comes first, and extensions are not approved. Caps: R2 up to 10 000 USD; Workers AI up to 2 500 USD (Tier 3), 10 000 USD (Tier 2) or 50 000 USD (Tier 1). Not covered: AI Gateway (temporarily), registrar services, enterprise feature add-ons, Magic Transit, Enterprise Spectrum, Dedicated IPs and the China Network. Not eligible: educational institutions, personal blogs, consultancies, service agencies, MSPs, resellers and existing enterprise customers. Tiers were recently raised (Tier 3 from 5 000 to 10 000 USD, Tier 1 from 250 000 to 350 000 USD); existing members near their cap can request an upgrade evaluation. The apply page returns HTTP 403 to automated fetches; a human in a browser reaches it. Questions to startups@cloudflare.com. Applications open on 2026-10-15. The dedicated application page /lp/startups returned 404 on 2026-10-15; apply from the program page. Decision by email typically within 48 hours; rejected applicants get a reason. Credits last one year with no extensions; R2 capped at 10 000 USD, Workers AI capped by tier; AI Gateway, Registrar and premium network services excluded.",
+      "founder_cost": "none"
     },
     {
       "id": "vercel-for-startups",
@@ -2409,7 +2512,8 @@
         "The form says 'Free Vercel Pro' while the FAQ describes an Enterprise-terms contract",
         "Credits are 'at Vercel's sole discretion' and can be revoked at any time"
       ],
-      "notes": "Fully partner-locked: the page calls the program an exclusive offer to companies backed by its Startup Partners; if your VC or accelerator is not in the dropdown, ask them to submit the partner form at https://vercel.com/startups/partners. Must apply within 12 months of the most recent funding round and must not have received Vercel for Startups credits before. Benefits last up to one calendar year from when the commitment is applied; unused amounts do not roll over; once used up or expired the team moves to standard Terms of Service and list rates. At most 50% of the commitment can go to AI Gateway usage. A valid payment method is required for credits to be active. These Flex Commit terms apply to startups accepted on or after 2026-08-06. The marketing page https://vercel.com/startups only has an interest form; the real application lives on /startups/credits. Applications open on 2026-10-15. Response in 5 to 7 business days, then accept the Flexible Commitment terms; credits go live within 5 to 7 business days, last one year, no rollover, at most 50 percent on AI Gateway."
+      "notes": "Fully partner-locked: the page calls the program an exclusive offer to companies backed by its Startup Partners; if your VC or accelerator is not in the dropdown, ask them to submit the partner form at https://vercel.com/startups/partners. Must apply within 12 months of the most recent funding round and must not have received Vercel for Startups credits before. Benefits last up to one calendar year from when the commitment is applied; unused amounts do not roll over; once used up or expired the team moves to standard Terms of Service and list rates. At most 50% of the commitment can go to AI Gateway usage. A valid payment method is required for credits to be active. These Flex Commit terms apply to startups accepted on or after 2026-08-06. The marketing page https://vercel.com/startups only has an interest form; the real application lives on /startups/credits. Applications open on 2026-10-15. Response in 5 to 7 business days, then accept the Flexible Commitment terms; credits go live within 5 to 7 business days, last one year, no rollover, at most 50 percent on AI Gateway.",
+      "founder_cost": "none"
     },
     {
       "id": "neon-startups",
@@ -2452,7 +2556,8 @@
         "The paid-plan and credit-card requirement is only on the form",
         "The exact amount 'depends on your stage and funding'; no table is published"
       ],
-      "notes": "Neon is part of Databricks and the program is branded Databricks Startup Program on neon.com/startups. Two tiers on 2026-10-15: Self-Funded (early-stage, self-funded, less than 1 MUSD in funding, building an early-stage product or MVP) gets up to 1 000 USD in Neon credits; Venture-Backed (VC-backed with at least 1 MUSD in funding, or participants in recognized accelerators such as Y Combinator) gets up to 200 000 USD in Neon and Databricks credits plus speaking and co-marketing opportunities. The top tier is therefore investor-gated, but the page also says to apply or ask your investor, so no separate partner referral is required. The exact amount depends on stage and funding. Credits are valid 12 months from the date of acceptance; afterwards the account continues on its plan and is billed normally. Existing Neon or Databricks users can apply. Applying means agreeing to Databricks' Terms of Use. Applications open on 2026-10-15. Databricks and Neon share the application; reply within a few business days; credits valid 12 months from acceptance."
+      "notes": "Neon is part of Databricks and the program is branded Databricks Startup Program on neon.com/startups. Two tiers on 2026-10-15: Self-Funded (early-stage, self-funded, less than 1 MUSD in funding, building an early-stage product or MVP) gets up to 1 000 USD in Neon credits; Venture-Backed (VC-backed with at least 1 MUSD in funding, or participants in recognized accelerators such as Y Combinator) gets up to 200 000 USD in Neon and Databricks credits plus speaking and co-marketing opportunities. The top tier is therefore investor-gated, but the page also says to apply or ask your investor, so no separate partner referral is required. The exact amount depends on stage and funding. Credits are valid 12 months from the date of acceptance; afterwards the account continues on its plan and is billed normally. Existing Neon or Databricks users can apply. Applying means agreeing to Databricks' Terms of Use. Applications open on 2026-10-15. Databricks and Neon share the application; reply within a few business days; credits valid 12 months from acceptance.",
+      "founder_cost": "none"
     },
     {
       "id": "mongodb-for-startups",
@@ -2512,7 +2617,8 @@
         "The linked terms are 2018 sweepstakes rules that do not match the program; confirm with startups@mongodb.com",
         "Whether a partner referral gives a higher tier than applying directly is not stated"
       ],
-      "notes": "Base-tier eligibility as written: early-stage (less than 7 years old and Series A or earlier); focused on a single software-based product or service (development shops and agencies not eligible); not previously accepted; active company website and LinkedIn profile (the form accepts a personal LinkedIn if the company has none). Partner path is optional: MongoDB works with VCs, accelerators and incubators and asks them to refer founders, but founders without one apply directly on the page. Credits arrive as a promo code: 12 months to activate it, then 12 months to use the Atlas credits; extensions case by case, ideally requested three months before expiry; promo codes apply to future charges only. Activation needs the Organization Owner or Organization Billing Admin role. Existing Atlas users are eligible. The form offers funding stages Bootstrapped, Pre-seed, Seed, Series A, Series B or higher. Program terms: https://www.mongodb.com/solutions/startups/terms-conditions. Applications open on 2026-10-15. Decision expected within five business days. Credits last 12 months; extensions case by case, requested three months before expiry."
+      "notes": "Base-tier eligibility as written: early-stage (less than 7 years old and Series A or earlier); focused on a single software-based product or service (development shops and agencies not eligible); not previously accepted; active company website and LinkedIn profile (the form accepts a personal LinkedIn if the company has none). Partner path is optional: MongoDB works with VCs, accelerators and incubators and asks them to refer founders, but founders without one apply directly on the page. Credits arrive as a promo code: 12 months to activate it, then 12 months to use the Atlas credits; extensions case by case, ideally requested three months before expiry; promo codes apply to future charges only. Activation needs the Organization Owner or Organization Billing Admin role. Existing Atlas users are eligible. The form offers funding stages Bootstrapped, Pre-seed, Seed, Series A, Series B or higher. Program terms: https://www.mongodb.com/solutions/startups/terms-conditions. Applications open on 2026-10-15. Decision expected within five business days. Credits last 12 months; extensions case by case, requested three months before expiry.",
+      "founder_cost": "none"
     },
     {
       "id": "claude-startups",
@@ -2553,7 +2659,8 @@
         "Form questions, credit expiry, tier amounts and email requirements are not shown while the program is closed",
         "How a VC joins the partner network and claims credits for a portfolio company is not described"
       ],
-      "notes": "CLOSED on 2026-10-15: the page says the current cohort is full and no new applications are accepted; applications still in review were not advanced. Credits apply only to the first-party Claude API through the Claude Console and cannot be used on AWS, Google Cloud, Azure or other third-party platforms. The 100 000 USD figure is only for founders backed by a VC in Anthropic's partner network and is claimed through the VC, not on this page. Member sign-in: platform.claude.com/claude-for-startups. No tiers, funding caps or work-email requirement are published."
+      "notes": "CLOSED on 2026-10-15: the page says the current cohort is full and no new applications are accepted; applications still in review were not advanced. Credits apply only to the first-party Claude API through the Claude Console and cannot be used on AWS, Google Cloud, Azure or other third-party platforms. The 100 000 USD figure is only for founders backed by a VC in Anthropic's partner network and is claimed through the VC, not on this page. Member sign-in: platform.claude.com/claude-for-startups. No tiers, funding caps or work-email requirement are published.",
+      "founder_cost": "none"
     },
     {
       "id": "together-ai-startup-accelerator",
@@ -2593,7 +2700,8 @@
         "Credit expiry and review timeline are not published",
         "No FAQ or program terms page exists"
       ],
-      "notes": "Application form was live on 2026-10-15. Selection-based program, not automatic. Tiers: Build (under 5 MUSD raised) up to 15K USD credits and 3 hours of forward-deployed engineering; Scale (5 to 10 MUSD) up to 30K USD and 6 hours; Grow (over 10 MUSD) up to 50K USD and 10 hours. Credits do not apply to Reserved GPU Clusters. Testimonials refer to an inaugural cohort, so intake may be cohort-based. No partner-VC, work-email or funding cap requirement is stated. Credits do not apply to Reserved GPU Clusters."
+      "notes": "Application form was live on 2026-10-15. Selection-based program, not automatic. Tiers: Build (under 5 MUSD raised) up to 15K USD credits and 3 hours of forward-deployed engineering; Scale (5 to 10 MUSD) up to 30K USD and 6 hours; Grow (over 10 MUSD) up to 50K USD and 10 hours. Credits do not apply to Reserved GPU Clusters. Testimonials refer to an inaugural cohort, so intake may be cohort-based. No partner-VC, work-email or funding cap requirement is stated. Credits do not apply to Reserved GPU Clusters.",
+      "founder_cost": "none"
     },
     {
       "id": "modal-for-startups",
@@ -2646,7 +2754,8 @@
         "The full VC partner list sits in a client-side FAQ; logos shown include Y Combinator, a16z, Sequoia, Khosla, Lux",
         "No review timeline; the FAQ has a question about not hearing back"
       ],
-      "notes": "Application form was live on 2026-10-15. The page only says \"thousands of free GPU credits\"; the credit size per tier is not published. FAQ answers read in the in-app browser on 2026-10-15: 'Credits last 1 year and cannot be reinstated if they expire.' Tier: 'The credit amount is determined based on factors like traction, amount of funding raised, and whether you are a portfolio company of a VC or accelerator that we have an official partnership with. Reach out to startups@modal.com for more details.' Who can apply: 'Early-stage startups who are new to Modal may apply.' Only customers new to Modal are eligible; credits are a one-time grant and you cannot reapply once you have received credits in a tier. The FAQ asks why a payment method is required, so expect to add a card. The full VC partner list sits in the FAQ item 'Who are Modal's VC partners?' (not copied). Partner logos shown: Y Combinator, Andreessen Horowitz, Sequoia, Khosla Ventures, Neo, HF0, Pear VC, Lux Capital. A separate Modal for Academics program exists. The 30 USD/month free compute banner is a general offer, not part of this program. Credits last 1 year and cannot be reinstated if they expire."
+      "notes": "Application form was live on 2026-10-15. The page only says \"thousands of free GPU credits\"; the credit size per tier is not published. FAQ answers read in the in-app browser on 2026-10-15: 'Credits last 1 year and cannot be reinstated if they expire.' Tier: 'The credit amount is determined based on factors like traction, amount of funding raised, and whether you are a portfolio company of a VC or accelerator that we have an official partnership with. Reach out to startups@modal.com for more details.' Who can apply: 'Early-stage startups who are new to Modal may apply.' Only customers new to Modal are eligible; credits are a one-time grant and you cannot reapply once you have received credits in a tier. The FAQ asks why a payment method is required, so expect to add a card. The full VC partner list sits in the FAQ item 'Who are Modal's VC partners?' (not copied). Partner logos shown: Y Combinator, Andreessen Horowitz, Sequoia, Khosla Ventures, Neo, HF0, Pear VC, Lux Capital. A separate Modal for Academics program exists. The 30 USD/month free compute banner is a general offer, not part of this program. Credits last 1 year and cannot be reinstated if they expire.",
+      "founder_cost": "none"
     },
     {
       "id": "lambda-nvidia-inception",
@@ -2687,7 +2796,8 @@
         "The page does not say how Inception membership is verified",
         "Third-party sites quote higher amounts; the page says 1 000 USD"
       ],
-      "notes": "Offer was live on 2026-10-15. Hard requirement that the schema cannot express as a rule: the company must be a member of NVIDIA Inception. One grant per company. A valid credit card is required to prevent fraud and calculate tax. Credits are valid for 12 months from the date they are applied. Applications are reviewed and approved by Lambda; submitting does not guarantee credits. Eligible locations listed on the page: Australia, Canada, Chile, European Union (except Lithuania), Iceland, Israel, Japan, New Zealand, Norway, Puerto Rico, Singapore, South Africa, South Korea, Switzerland, Taiwan, Turkey, UAE, UK, US. No general Lambda startup credit program was found on lambda.ai on 2026-10-15; third-party sites quoting 7 500 USD do not match the page, which says 1 000 USD. Credits expire 12 months after they are applied to the account."
+      "notes": "Offer was live on 2026-10-15. Hard requirement that the schema cannot express as a rule: the company must be a member of NVIDIA Inception. One grant per company. A valid credit card is required to prevent fraud and calculate tax. Credits are valid for 12 months from the date they are applied. Applications are reviewed and approved by Lambda; submitting does not guarantee credits. Eligible locations listed on the page: Australia, Canada, Chile, European Union (except Lithuania), Iceland, Israel, Japan, New Zealand, Norway, Puerto Rico, Singapore, South Africa, South Korea, Switzerland, Taiwan, Turkey, UAE, UK, US. No general Lambda startup credit program was found on lambda.ai on 2026-10-15; third-party sites quoting 7 500 USD do not match the page, which says 1 000 USD. Credits expire 12 months after they are applied to the account.",
+      "founder_cost": "none"
     },
     {
       "id": "runpod-startup-program",
@@ -2729,7 +2839,8 @@
         "No review timeline or acceptance rate is disclosed",
         "Application form questions are not shown; only the general Terms of Service is linked"
       ],
-      "notes": "Application form was live on 2026-10-15. Selective program; venture backing is strongly preferred but the FAQ says every application is reviewed holistically, so it is not encoded as a hard rule. Primarily for new customers; existing customers below the Growth threshold are judged case by case. The Growth tier is a credit match: you deposit 50 000 USD under a 12-month agreement and Runpod adds 25 000 USD once, with no reload. Best fit stated on the page: Growth for Seed to Series B+ startups spending or ready to spend 5 000 to 25 000+ USD per month on GPUs; Starter for pre-Series A startups with working products. Separate Creator Program and academic research offer exist."
+      "notes": "Application form was live on 2026-10-15. Selective program; venture backing is strongly preferred but the FAQ says every application is reviewed holistically, so it is not encoded as a hard rule. Primarily for new customers; existing customers below the Growth threshold are judged case by case. The Growth tier is a credit match: you deposit 50 000 USD under a 12-month agreement and Runpod adds 25 000 USD once, with no reload. Best fit stated on the page: Growth for Seed to Series B+ startups spending or ready to spend 5 000 to 25 000+ USD per month on GPUs; Starter for pre-Series A startups with working products. Separate Creator Program and academic research offer exist.",
+      "founder_cost": "none"
     },
     {
       "id": "openai-for-startups",
@@ -2772,7 +2883,8 @@
         "The list of qualifying VC partners is not published",
         "The page's FAQ answers did not render in the browser read on 2026-10-16"
       ],
-      "notes": "Read in a browser on 2026-10-15; the site returns 403 to automated fetch and redirected to the sv-SE locale. FAQ: credits are obtained via the VC; the application asks for a unique referral code from the VC, a product description, company name and contacts with a valid business email, and basic funding details. No dollar amount, no deadline, no cohort. When credits run out, billing switches to standard automatically. Read in the in-app browser on 2026-10-16 (plain fetches get HTTP 403): 'Få tillgång till krediter och dedikerad support via kvalificerade VC-partners.' The page redirects to openai.com/sv-SE/business/why-openai/startups/."
+      "notes": "Read in a browser on 2026-10-15; the site returns 403 to automated fetch and redirected to the sv-SE locale. FAQ: credits are obtained via the VC; the application asks for a unique referral code from the VC, a product description, company name and contacts with a valid business email, and basic funding details. No dollar amount, no deadline, no cohort. When credits run out, billing switches to standard automatically. Read in the in-app browser on 2026-10-16 (plain fetches get HTTP 403): 'Få tillgång till krediter och dedikerad support via kvalificerade VC-partners.' The page redirects to openai.com/sv-SE/business/why-openai/startups/.",
+      "founder_cost": "none"
     },
     {
       "id": "sting-core",
@@ -2854,7 +2966,8 @@
         "The Propel investment is 'optional and offered to selected companies'; the selection criteria are not published",
         "Warrant terms (strike price, what decides 'up to 2%') are not published",
         "Program language not stated; the site and form are in English"
-      ]
+      ],
+      "founder_cost": "equity"
     },
     {
       "id": "sting-science-to-business",
@@ -2915,7 +3028,8 @@
         "Not stated whether the researcher needs a current university affiliation or must clear IP ownership with the university before applying",
         "Same open questions as Sting Core: whether the AB is needed at application or only at entry, and whether a solo researcher passes the two-co-founder rule",
         "Program language not stated; the site and form are in English"
-      ]
+      ],
+      "founder_cost": "equity"
     },
     {
       "id": "sting-test-drive",
@@ -2991,7 +3105,8 @@
         "Capacity is '10–15 teams' on the track pages and 'Between 12-15 projects' in the FAQ",
         "Workshop language not stated; the pages and form are in English",
         "Not stated whether a company is needed; the form asks for 'Your project/company'"
-      ]
+      ],
+      "founder_cost": "none"
     },
     {
       "id": "norrsken-evolve",
@@ -3045,7 +3160,8 @@
         "Not stated whether travel to the Barcelona demo day is covered",
         "Europe focus is soft: 'We primarily support founders from Europe (EU27, EU Candidate Counties and the UK). We will support a handful of high-potential companies outside Europe.' The country field can express it, so it is not listed as a hard gate",
         "Program language not stated; the site and form are in English"
-      ]
+      ],
+      "founder_cost": "equity"
     },
     {
       "id": "antler-stockholm",
@@ -3100,7 +3216,8 @@
         "Not stated whether 8.5% for EUR 100K is fixed for every company, or what the uncapped MFN convertible converts against",
         "antler.co/apply redirects to antler.co/pitch, which has a second 'Pitch us' form with an optional deck upload (max 10 MB) that sends the pitch to the 'Antler Elevate team'; it is not clear which form a pre-seed founder should use",
         "Program language not stated; the site is in English"
-      ]
+      ],
+      "founder_cost": "equity"
     },
     {
       "id": "kth-innovation-access",
@@ -3157,7 +3274,8 @@
         "VFT-1 process is not described: criteria, whether a company is needed, co-financing and reporting; the funding page also says 'teams funded by students or researchers' (likely meant founded); ask innovation@kth.se",
         "Not stated whether a company may or must exist; the idea form has no company field",
         "Program language not stated; the site and form are in English"
-      ]
+      ],
+      "founder_cost": "none"
     },
     {
       "id": "kth-innovation-launch",
@@ -3214,7 +3332,8 @@
         "Selection steps (interview or pitch) and the decision date are not stated; ask innovation@kth.se",
         "Time commitment beyond the one-hour weekly workshop is not quantified; the final months are 'tailored to the needs of the teams'",
         "Workshop language not stated; the application exists in English and Swedish"
-      ]
+      ],
+      "founder_cost": "none"
     },
     {
       "id": "chalmers-ventures-startup-camp",
@@ -3282,7 +3401,8 @@
         "Not stated what counts as 'a connection to the Västra Götaland-region' (residence, employer or university)",
         "Not stated whether a company may or must already exist",
         "Workshop language not stated; the page is in English"
-      ]
+      ],
+      "founder_cost": "none"
     },
     {
       "id": "chalmers-ventures-venture-building",
@@ -3333,7 +3453,8 @@
         "The Bookings page refuses automated clients (HTTP 417), so the booking fields come only from the Open Coaching page text",
         "Company timing: in Tech Matching the company is incorporated only after the student team validates the idea ('Before incorporation' / 'After incorporation'); the other tracks do not say",
         "Program language not stated; the site and form are in English"
-      ]
+      ],
+      "founder_cost": "equity"
     },
     {
       "id": "minc-incubator",
@@ -3398,7 +3519,8 @@
         "Not stated how the incubator relates to the Reality Check and Traction tracks on minc.se/startup, which use the same form; that page says 'Three programs' but describes two",
         "Not stated whether Minc takes equity",
         "Program language not stated; the site and form are in English"
-      ]
+      ],
+      "founder_cost": "equity"
     },
     {
       "id": "minc-reality-check",
@@ -3450,7 +3572,8 @@
         "Traction track length, and how the 1 650 SEK fee is billed or cancelled, are not stated",
         "Not stated whether Minc takes equity",
         "Program language not stated; the site and form are in English"
-      ]
+      ],
+      "founder_cost": "fee"
     },
     {
       "id": "fast-track-malmo",
@@ -3514,7 +3637,8 @@
         "The EUR 50 000 convertible note 'issued to all startups on the batch' and the Nordic Demo Day finale appear only in hidden sections of the Minc page HTML, so they may no longer apply",
         "Not stated whether a registered company is needed, or whether Copenhagen-area (Danish) companies get the same terms, including the Skåne Ventures pitch",
         "Program language not stated; the site and form are in English"
-      ]
+      ],
+      "founder_cost": "none"
     },
     {
       "id": "accelerace-pre-seed",
@@ -3578,7 +3702,8 @@
         "Whether a team incorporated outside the Nordics and Baltics can apply if it intends to incorporate there",
         "The page does not say whether the DKK 250 000 fee is deducted from the loan or paid separately"
       ],
-      "notes": "Rolling intake through the deck form; no deadline on the page. About 65% of the first fund's portfolio raised follow-on funding. Accelerace very rarely takes a board seat. The investment program runs twice a year, hybrid with in-person parts in Copenhagen. 'We invest 1 000 000 DKK before you have customers, revenue or traction, using a standardized convertible loan with a conversion cap.'"
+      "notes": "Rolling intake through the deck form; no deadline on the page. About 65% of the first fund's portfolio raised follow-on funding. Accelerace very rarely takes a board seat. The investment program runs twice a year, hybrid with in-person parts in Copenhagen. 'We invest 1 000 000 DKK before you have customers, revenue or traction, using a standardized convertible loan with a conversion cap.'",
+      "founder_cost": "fee"
     },
     {
       "id": "kiuas-founder-collective",
@@ -3629,7 +3754,8 @@
         "Page does not list which tools and credits make up the 500 kEUR value",
         "The page says Kiuas builds companies from Finland but states no registration or residence rule; ask hello@kiuas.com whether a team building from another Nordic country can join"
       ],
-      "notes": "The page says Kiuas is not an accelerator: no fixed cohort, no curriculum, no demo day; sprints repeat as long as it works. Free thanks to partners. Page published 25 September 2026. No stated requirement on company registration or founder residence; the mission is companies from Finland. 'No fees, no equity.'"
+      "notes": "The page says Kiuas is not an accelerator: no fixed cohort, no curriculum, no demo day; sprints repeat as long as it works. Free thanks to partners. Page published 25 September 2026. No stated requirement on company registration or founder residence; the mission is companies from Finland. 'No fees, no equity.'",
+      "founder_cost": "none"
     }
   ]
 }

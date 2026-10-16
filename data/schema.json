@@ -81,6 +81,11 @@
           "pattern": "^[A-Z]{2}$",
           "description": "For a door open to several countries but run and paid by one (a Vinnova call that admits foreign startups): the funder's country. Doors whose home_country is not the founder's rank after domestic doors instead of first."
         },
+        "founder_cost": {
+          "type": "string",
+          "enum": ["none", "repay", "equity", "fee"],
+          "description": "What taking the money costs the founder: none (grant, free compute, credits), repay (loan or guarantee), equity (investment for ownership), fee (the program charges the founder). Ranking puts none first and fee last."
+        },
         "group": {
           "type": "string",
           "pattern": "^[a-z0-9-]+$",

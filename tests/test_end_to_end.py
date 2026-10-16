@@ -166,3 +166,16 @@ def test_finnish_founder_does_not_get_a_swedish_call_first() -> None:
     assert all(not d["foreign"] for d in out["doors"][:first_foreign])
     assert ids[0] != "vinnova-ffi-asp-accelerated-startup-partnership", ids
     assert out["doors"][0]["country"] in ("FI", "EU"), ids[:3]
+
+
+def test_aws_activate_matches_a_founder_who_builds_on_claude() -> None:
+    out = match.run({"country": "SE", "legal_form": "company", "age_years": 1, "stage": "pre_seed", "need": ["credits"], "stack": ["anthropic", "vercel"]}, PROGRAMS, TODAY)
+    assert "aws-activate" in all_ids(out)
+
+
+def test_idea_stage_money_puts_a_grant_before_equity_and_fees() -> None:
+    out = match.run({"country": "SE", "legal_form": "none", "stage": "idea", "need": ["money"], "lang": "sv"}, PROGRAMS, TODAY)
+    first = out["doors"][0]
+    assert first["id"] == "almi-verifieringsmedel"
+    costs = [door["founder_cost"] for door in out["doors"]]
+    assert costs == sorted(costs, key=lambda cost: {"none": 0, "repay": 1, "equity": 2, "fee": 3}[cost])

@@ -146,6 +146,7 @@ class Door:
     group: str | None = None
     home_country: str | None = None
     foreign: bool = False
+    founder_cost: str = "none"
     also: list[dict] = dc_field(default_factory=list)
     live: dict | None = None
     glyph: str = ""
@@ -401,6 +402,7 @@ def evaluate(program: dict, profile: dict, today: date, lang: str) -> Door:
         availability=str(program.get("availability", "unknown")),
         group=program.get("group"),
         home_country=program.get("home_country"),
+        founder_cost=str(program.get("founder_cost", "none")),
         foreign=bool(program.get("home_country")) and bool(profile_countries(profile)) and program.get("home_country") not in profile_countries(profile),
     )
 
@@ -430,13 +432,19 @@ def render_glyph(door: Door, lang: str) -> str:
     return "\n".join(lines)
 
 
+# What taking the money costs the founder. A grant ranks before a loan, a loan
+# before an equity investment, and anything with a fee last: two founders who
+# ask "is there money for us" should see the money they keep first.
+COST_RANK: dict[str, int] = {"none": 0, "repay": 1, "equity": 2, "fee": 3}
+
+
 def rank(doors: list[Door]) -> list[Door]:
     """Open doors first: eligible, then unknown with the fewest open questions, then blocked. Doors run from another country than the founder's come after domestic ones, closed doors last. Ties keep data-file order.
 
     A Swedish call that admits foreign startups is technically open to a Finnish
     founder, but leading a Finnish answer with it buries the Finnish doors.
     """
-    return sorted(doors, key=lambda door: (door.availability == "closed", door.foreign, RANK[door.status], len(door.unknown)))
+    return sorted(doors, key=lambda door: (door.availability == "closed", door.foreign, COST_RANK.get(door.founder_cost, 0), RANK[door.status], len(door.unknown)))
 
 
 def collapse_groups(doors: list[Door]) -> list[Door]:
@@ -602,6 +610,7 @@ def summary(door: Door) -> dict:
         "amount": door.amount["text"],
         "open_questions": len(door.unknown),
         "foreign": door.foreign,
+        "founder_cost": door.founder_cost,
         "status_url": door.status_url,
     }
 

@@ -505,7 +505,7 @@ def test_top_limits_full_doors_and_lists_the_rest_under_more() -> None:
     out = run({"country": "SE", "legal_form": "company", "stack": ["anthropic"]}, top=1)
     assert [door["id"] for door in out["doors"]] == ["test-global-credit"]
     assert [door["id"] for door in out["more"]] == ["test-se-grant", "test-eu-compute"]
-    assert set(out["more"][0]) == {"id", "name", "kind", "status", "availability", "amount", "open_questions", "foreign", "status_url"}
+    assert set(out["more"][0]) == {"id", "name", "kind", "status", "availability", "amount", "open_questions", "foreign", "founder_cost", "status_url"}
     assert run({"country": "SE", "legal_form": "company", "stack": ["anthropic"]}, top=0)["more"] == []
 
 
@@ -588,3 +588,14 @@ def test_support_need_keeps_no_cash_programs_out_of_a_money_answer() -> None:
     both = match.run({"country": "SE", "need": ["money", "support"]}, [camp], TODAY)
     assert [d["id"] for d in both["doors"]] == ["test-camp"]
     assert match.normalize_profile({"need": ["coaching"]})[0]["need"] == ["support"]
+
+
+def test_money_the_founder_keeps_ranks_before_equity_and_fees() -> None:
+    base = {"country": "SE", "kind": "grant", "need": ["money"], "eligibility": []}
+    doors = [
+        match.evaluate(dict(EU_COMPUTE, **base, id="fee", founder_cost="fee"), {"country": "SE"}, TODAY, "en"),
+        match.evaluate(dict(EU_COMPUTE, **base, id="equity", founder_cost="equity"), {"country": "SE"}, TODAY, "en"),
+        match.evaluate(dict(EU_COMPUTE, **base, id="loan", founder_cost="repay"), {"country": "SE"}, TODAY, "en"),
+        match.evaluate(dict(EU_COMPUTE, **base, id="grant"), {"country": "SE"}, TODAY, "en"),
+    ]
+    assert [door.id for door in match.rank(doors)] == ["grant", "loan", "equity", "fee"]
