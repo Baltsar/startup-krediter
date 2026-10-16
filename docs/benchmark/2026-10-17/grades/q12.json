@@ -1,0 +1,13 @@
+{"qid":"q12",
+ "programs":{"A":"EIFO Matchlån","B":"EIFO Matchlån and EIFO Vækstlån (incl. Selvbetjent Vækstlån)"},
+ "stoppers_total":{"A":9,"B":9},
+ "stoppers_stated":{"A":7,"B":5},
+ "factual_errors":{"A":[],"B":["Proposes 'ApS + angel 250k + matchlån 250k'; the official minimum Matchlån facility is DKK 500,000 (EIFO matchlaan.pdf)"]},
+ "untraceable":{"A":["Accelerace pre-seed requires another investor of at least DKK 125,000 (not on accelerace.io/funding)","Norrsken Evolve EUR 250k-500k (official page could not be read)"],"B":[]},
+ "best_first_pick":"tie",
+ "missed_programs":{"A_missed":["EIFO Vækstlån / Selvbetjent Vækstlån"],"B_missed":["EIFO-kaution (bank guarantee, relevant after a bank refusal)"]},
+ "absolute":{"A":{"A1":"pass","A2":"pass","A3":"pass","A4":"n/a","A5":"n/a","A6":"n/a","A7":"pass","A8":"n/a"},
+             "B":{"A1":"pass","A2":"fail","A3":"pass","A4":"n/a","A5":"n/a","A6":"n/a","A7":"pass","A8":"n/a"}},
+ "turn1_words":{"A":286,"B":362},
+ "verdict":"A",
+ "incomplete":false}

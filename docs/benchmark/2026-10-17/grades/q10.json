@@ -1,0 +1,13 @@
+{"qid":"q10",
+ "programs":{"A":"Chalmers Innovation Office verification funding (Vinnova VFT)","B":"Chalmers Entrepreneurial Fellowship"},
+ "stoppers_total":{"A":3,"B":4},
+ "stoppers_stated":{"A":3,"B":4},
+ "factual_errors":{"A":[],"B":[]},
+ "untraceable":{"A":["Chalmers Innovation Office specifically runs Vinnova VFT (Vinnova names 14 offices but no list found; Chalmers page only says the office offers verification funding)","Typical first tranches of tens of thousands to a few hundred thousand SEK"],"B":[]},
+ "best_first_pick":"A",
+ "missed_programs":{"A_missed":["Chalmers Entrepreneurial Fellowship","Almi Verifieringsmedel"],"B_missed":[]},
+ "absolute":{"A":{"A1":"pass","A2":"pass","A3":"pass","A4":"n/a","A5":"pass","A6":"n/a","A7":"pass","A8":"n/a"},
+             "B":{"A1":"pass","A2":"pass","A3":"pass","A4":"n/a","A5":"pass","A6":"n/a","A7":"pass","A8":"n/a"}},
+ "turn1_words":{"A":706,"B":303},
+ "verdict":"A",
+ "incomplete":false}

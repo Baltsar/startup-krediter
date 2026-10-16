@@ -1,0 +1,13 @@
+{"qid":"q05",
+ "programs":{"A":"Taeknithrounarsjodur - Frae (seed grant, up to ISK 2M)","B":"Taeknithrounarsjodur - Sproti (plus a ranked list: Uppbyggingarsjodur Sudurnesja, Loa, Matvaelasjodur)"},
+ "stoppers_total":{"A":14,"B":13},
+ "stoppers_stated":{"A":11,"B":2},
+ "factual_errors":{"A":[],"B":[]},
+ "untraceable":{"A":[],"B":["Sproti 'historically about ISK 20M over two years': not on any current official page; current rules say up to ISK 24M (max 12M in year one). B hedged it as historical and said to check current rules","Uppbyggingarsjodur Sudurnesja spring 2026 allocation of ISK 32M to 33 projects: the cited reykjanesbaer.is PDF returned HTML and could not be read","Uppbyggingarsjodur Sudurnesja call in October 2024: not verified"]},
+ "best_first_pick":"A",
+ "missed_programs":{"A_missed":["Uppbyggingarsjodur Sudurnesja (open now, deadline 21 Oct 2026)","Loa - nyskopunarstyrkir fyrir landsbyggdina"],"B_missed":["EIC Accelerator","Eurostars (Call 12 opens 17 Dec 2026)"]},
+ "absolute":{"A":{"A1":"pass","A2":"pass","A3":"pass","A4":"n/a","A5":"n/a","A6":"n/a","A7":"pass","A8":"n/a"},
+             "B":{"A1":"pass","A2":"pass","A3":"pass","A4":"n/a","A5":"n/a","A6":"n/a","A7":"pass","A8":"n/a"}},
+ "turn1_words":{"A":191,"B":356},
+ "verdict":"A",
+ "incomplete":false}

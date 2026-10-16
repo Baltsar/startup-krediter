@@ -1,0 +1,13 @@
+{"qid":"q04",
+ "programs":{"A":"Innobooster (Danmarks Innovationsfond), track not yet chosen","B":"Innobooster (Danmarks Innovationsfond), de minimis track 200k-1M DKK"},
+ "stoppers_total":{"A":18,"B":18},
+ "stoppers_stated":{"A":13,"B":9},
+ "factual_errors":{"A":[],"B":[]},
+ "untraceable":{"A":["Answer 'cirka fire til syv måneder' after the pool closes - the official pool table gives about 3.3 to 5 months"],"B":["'Det tager typisk 30 til 60 minutter' to paste and submit","'Sidste år åbnede den første pulje i slutningen af januar' - the page shows no 2025 pulje 1 dates","Next opening 'sandsynligvis omkring januar 2027' (flagged by B as a guess; no 2027 dates published)"]},
+ "best_first_pick":"tie",
+ "missed_programs":{"A_missed":[],"B_missed":[]},
+ "absolute":{"A":{"A1":"pass","A2":"pass","A3":"pass","A4":"n/a","A5":"pass","A6":"pass","A7":"pass","A8":"n/a"},
+             "B":{"A1":"pass","A2":"pass","A3":"pass","A4":"n/a","A5":"pass","A6":"pass","A7":"pass","A8":"n/a"}},
+ "turn1_words":{"A":657,"B":366},
+ "verdict":"A",
+ "incomplete":false}

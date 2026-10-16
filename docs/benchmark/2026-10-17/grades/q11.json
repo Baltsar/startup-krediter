@@ -1,0 +1,13 @@
+{"qid":"q11",
+ "programs":{"A":"Sigma2 national e-infrastructure allocation (RFK, incl. Norway's LUMI share)","B":"Sigma2 KI-fabrikken (with Sigma2 ordinary national allocation rules)"},
+ "stoppers_total":{"A":12,"B":12},
+ "stoppers_stated":{"A":8,"B":9},
+ "factual_errors":{"A":["New projects applying outside the ordinary deadline get lower queue priority (Sigma2 Guidelines RFK 2026.2 and the apply page say new projects may apply any time and get regular priority; lower priority applies only to late/extra applications for existing projects)"],"B":[]},
+ "untraceable":{"A":["A LUMI 'GPU-hour' is counted per GCD (half an MI250X) - not found on the fetched official Sigma2/LUMI pages"],"B":["EuroHPC AI for Science gives 20 000 to 90 000 node hours (node-hour table on the call page and call PDF is an image, not readable)","EuroHPC Playground gives 5 000 GPU hours","EuroHPC Playground/Fast Lane require a company with a VAT number"]},
+ "best_first_pick":"A",
+ "missed_programs":{"A_missed":["Sigma2 KI-fabrikken (named only as LUMI AI Factory, not as Sigma2's Norwegian entry point)"],"B_missed":["EuroHPC AI Factories Large Scale access"]},
+ "absolute":{"A":{"A1":"pass","A2":"pass","A3":"pass","A4":"n/a","A5":"n/a","A6":"n/a","A7":"pass","A8":"n/a"},
+             "B":{"A1":"pass","A2":"pass","A3":"pass","A4":"n/a","A5":"n/a","A6":"n/a","A7":"pass","A8":"n/a"}},
+ "turn1_words":{"A":532,"B":203},
+ "verdict":"A",
+ "incomplete":false}

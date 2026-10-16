@@ -1,0 +1,13 @@
+{"qid":"q14",
+ "programs":{"A":"Vinnova Innovativa Startups 2026 (turn 1) and Almi Verifieringsmedel (turn 2)","B":"Vinnova Innovativa Startups 2026 (both turns), Almi Verifieringsmedel briefly"},
+ "stoppers_total":{"A":22,"B":22},
+ "stoppers_stated":{"A":19,"B":8},
+ "factual_errors":{"A":[],"B":[]},
+ "untraceable":{"A":[],"B":["Claim that the 1 MSEK figure came from an older round with a step 2 of larger amounts (not on current official pages)"]},
+ "best_first_pick":"A",
+ "missed_programs":{"A_missed":["Regional development vouchers (B named them only generically)"],"B_missed":["Almi Mikrolån"]},
+ "absolute":{"A":{"A1":"pass","A2":"pass","A3":"pass","A4":"n/a","A5":"pass","A6":"n/a","A7":"pass","A8":"n/a"},
+             "B":{"A1":"pass","A2":"pass","A3":"pass","A4":"n/a","A5":"pass","A6":"n/a","A7":"pass","A8":"n/a"}},
+ "turn1_words":{"A":675,"B":445},
+ "verdict":"A",
+ "incomplete":false}
