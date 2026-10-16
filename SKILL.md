@@ -61,7 +61,7 @@ costs trust.
 | `sector` | `ai`, `deeptech`, `energy`, `climate`, `health`, `fintech`, `saas`, `hardware` | |
 | `has_vat`, `has_employment`, `has_work_email`, `has_website`, `has_developer`, `workload_defined`, `profit_distributed` | bool | EuroHPC and vendor gates |
 | `confirmed` | list of keys | requirements the founder confirms in words: `kth_affiliation`, `research_background`, `hpc_experience`, `region_skane`, `region_vgr`, `consortium_partner`, `need_owner` |
-| `need` | list of `money`, `compute`, `credits` | `gpu` is an alias of `compute` |
+| `need` | list of `money`, `compute`, `credits`, `support` | `gpu` is an alias of `compute`; `support` is free coaching or programs without cash. A founder asking for money does not get no-cash programs unless they ask for support too |
 | `lang` | `sv`, `en`, `fi`, `no`, `da` | the founder's language; labels and questions come back in it |
 
 Leave out what the chat does not say. An absent field is unknown and becomes a
@@ -151,10 +151,11 @@ Then, each at most one line:
 - `more`: "Fler dörrar: X, Y, Z. Vill du se dem?" Mark a closed door as closed.
   Leave out doors with `foreign: true` unless the founder asked about other
   countries or lives in one, and leave out kinds the founder did not ask for.
-- `unlocks`: "Registrerar ni ett AB öppnas dessutom: A, B, C." A key such as
-  `country:DK` lists doors a company registered in that country would open,
-  for a founder who lives there: "Ett bolag registrerat i Danmark skulle öppna:
-  A, B." Mark the closed ones.
+- `unlocks`: "Registrerar ni ett AB öppnas dessutom: A, B, C." Each entry has
+  `name` and `availability`, open doors first; name at most five, then "och N
+  till", and mark closed ones as closed. A key such as `country:DK` lists doors
+  a company registered in that country would open, for a founder who lives
+  there: "Ett bolag registrerat i Danmark skulle öppna: A, B."
 
 Length: about 150 to 220 words per door in full, so a three-door answer lands
 around 500 to 700 words, with the two-line verdict on top for the founder who
@@ -166,7 +167,10 @@ stressed most ("vi behöver GPU") come first.
 
 The question at the top is the first `?` of the best door of the kind the
 founder stressed most. If that door has no open question, take the first `?` of
-the next door of that same kind, then of any kind. One question, not a form.
+the next door of that same kind among those you show. If none of the doors you
+show has an open question, ask the question whose answer opens the most doors
+in `unlocks` ("Tänker ni registrera ett aktiebolag nu?"). One question, not a
+form.
 
 If a checklist item carries a date or figure the page you read today does not
 show, keep the item and say where the date comes from ("enligt portalens
@@ -200,7 +204,9 @@ the unclear line about open science; next step and link; "Fler dörrar" if any.
 ## Step 5: Follow up
 
 Put the founder's answer into the same profile, rerun, show what changed. One
-`○` that became `●` is the whole update; do not restart. When the founder
+`○` that became `●` is the whole update; do not restart. If the previous turn
+only asked for the country and showed no doors, the next answer is a full
+Step 4 answer. When the founder
 confirms something a `confirmed` key covers ("ja, vi är KTH-studenter"), add
 the key and rerun.
 

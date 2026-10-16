@@ -33,7 +33,7 @@
           "type": "array",
           "minItems": 1,
           "uniqueItems": true,
-          "items": {"enum": ["money", "compute", "credits"]}
+          "items": {"enum": ["money", "compute", "credits", "support"]}
         },
         "who": {"type": "string", "minLength": 1},
         "what": {"type": "string", "minLength": 1},

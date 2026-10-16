@@ -70,7 +70,7 @@ def test_idea_stage_founder_without_company_gets_no_false_green_marks() -> None:
 
 def test_idea_stage_founder_hears_what_a_company_unlocks() -> None:
     out = match.run({"country": "SE", "legal_form": "none", "stage": "idea", "need": ["money"]}, PROGRAMS, TODAY)
-    unlocked = out["unlocks"].get("company", [])
+    unlocked = [entry["name"] for entry in out["unlocks"].get("company", [])]
     for expected in ("Vinnova Innovativa Startups 2026", "Almi Innovationslån"):
         assert expected in unlocked, out["unlocks"]
 

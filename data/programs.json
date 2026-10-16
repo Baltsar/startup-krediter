@@ -2912,7 +2912,7 @@
       "country": "SE",
       "kind": "accelerator",
       "need": [
-        "money"
+        "support"
       ],
       "who": "Super-early-stage teams or individuals (at least two people per team recommended) with a deep tech, health and life science, or climate and energy idea. The DeepTech track targets researchers, students and entrepreneurs and prioritises semiconductor, quantum, photonics and 2D-materials concepts.",
       "what": "No cash. A free six-week workshop series: three evening workshops and one pitch session (17:00-20:30, one session every two weeks) with expert coaches, individual coaching and peer support; the DeepTech track is run with Kista Science City, RISE and KTH. Free of charge and no equity; 10-15 teams per track.",
@@ -3096,7 +3096,8 @@
       "country": "SE",
       "kind": "accelerator",
       "need": [
-        "money"
+        "money",
+        "support"
       ],
       "who": "Current students, researchers and employees at KTH with a tech-based idea; the funding options are for teams founded by KTH students or researchers. No company is needed. KTH Innovation says it is particularly skilled at research-driven deep tech, but takes all tech-based ideas.",
       "what": "Free support: a dedicated business development coach, help with patents and IPR, team building and attracting funding, workspace at Teknikringen 1 (makerspace, production studio, co-working), events and workshops; join at any time and stay as long as needed. KTH Innovation manages the Vinnova program VFT-1, where KTH teams can apply for funding of up to 300 000 SEK (for example a market-research consultant or prototype design); applications are handled every other week. Access to the EarlyBird investor network and to KTH Ventures.",
@@ -3152,7 +3153,7 @@
       "country": "SE",
       "kind": "accelerator",
       "need": [
-        "money"
+        "support"
       ],
       "who": "Teams founded by KTH students and researchers where at least 30% of the members are KTH students, researchers or employees (external members allowed), with an early prototype, an initial team and the ambition to launch a product or service within the program period. No company is needed.",
       "what": "No cash. A free 16-18-week (one semester) program starting in January or August: weekly in-person workshops on Wednesdays 12:00-13:00 at Teknikringen 1, sprints and coaching, free office space, makerspace and production studio, perks from companies such as Anthropic, HubSpot and Stripe, operational support with contracts and agreements, investor exposure and introductions, international startup-hub and industry networks, then optional continued access to co-working, events and mentorship the following semester. Free of charge and no ownership taken.",
@@ -3209,7 +3210,7 @@
       "country": "SE",
       "kind": "accelerator",
       "need": [
-        "money"
+        "support"
       ],
       "who": "Research teams with a deep tech idea based on research from universities in western Sweden, with clear ownership rights to the idea, a connection to the Vastra Gotaland region, at least one person with the drive to explore the commercial potential, the ability to attend every session, and a solution targeting a global market.",
       "what": "No cash. Four evening sessions (16:00-19:00) of hands-on workshops with real assignments and expert guidance from the Chalmers Ventures team: lean canvas and value proposition, roles in startups, financing and pitching, and a final pitch evening with invited guests; a path into Chalmers Ventures' other offers (Tech Transfer, Tech Matching for Encubation, Venture Building Program).",
@@ -3393,7 +3394,7 @@
       "country": "SE",
       "kind": "accelerator",
       "need": [
-        "money"
+        "support"
       ],
       "who": "Solo founders or teams with a scalable idea, from just starting to having a product and wanting to grow; no business plan required, 'grit and a problem worth solving'. The work happens in person at the Minc workspace in Malmo.",
       "what": "No cash. One application, two tracks. Reality Check: an intense 4-week sprint (sessions Tuesdays and Thursdays 15:00-17:00, full workspace access for a month) combining building days and outreach days to prove market interest and decide pivot, proceed or pause. Traction: for founders who have validated the problem and are ready to sell, with go-to-market coaching, peer accountability and 1-on-1 support, progress reviewed quarterly. Tech coaches help build prototypes with AI and no-code tools. The first 4 weeks are free; the Traction track costs 1 650 SEK a month.",
@@ -3571,7 +3572,8 @@
       "country": "FI",
       "kind": "accelerator",
       "need": [
-        "credits"
+        "credits",
+        "support"
       ],
       "who": "Founders at idea or early stage, solo or in a team, who want to build a high-growth company; no registered company, co-founder or Otaniemi presence required. Kiuas exists to build companies from Finland.",
       "what": "Free, equity-free 4-week sprints you can chain: weekly catch-ups, playbooks for validating ideas and landing first customers, investor and operator introductions, building tools and credits worth up to 500 kEUR, and a workspace in Otaniemi, Espoo.",

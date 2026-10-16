@@ -447,7 +447,7 @@ def test_labels_follow_the_profile_language() -> None:
 
 def test_unlocks_names_doors_blocked_only_by_legal_form() -> None:
     out = run({"country": "SE", "legal_form": "none", "age_years": 1, "revenue_msek": 0, "profit_distributed": False, "need": ["money"]})
-    assert out["unlocks"] == {"company": ["Test SE grant"]}
+    assert [e["name"] for e in out["unlocks"]["company"]] == ["Test SE grant"]
     assert "test-se-grant" not in {door["id"] for door in out["doors"]}
 
 
@@ -549,7 +549,7 @@ def test_top_takes_the_best_door_of_each_need_in_turn() -> None:
 def test_unlocks_only_for_founders_who_can_register_a_company() -> None:
     not_in = dict(SE_GRANT, id="test-consortium", name="Test consortium", eligibility=[{"field": "country", "op": "eq", "value": "SE"}, {"field": "legal_form", "op": "not_in", "value": ["none", "sole_trader"]}])
     out = match.run({"country": "SE", "legal_form": "none", "need": ["money"]}, [SE_GRANT, not_in], TODAY)
-    assert out["unlocks"] == {"company": ["Test SE grant", "Test consortium"]}
+    assert [e["name"] for e in out["unlocks"]["company"]] == ["Test SE grant", "Test consortium"]
     assert match.run({"country": "SE", "legal_form": "company", "need": ["money"]}, [SE_GRANT, not_in], TODAY)["unlocks"] == {}
     academic = match.run({"country": "SE", "legal_form": "academia", "need": ["money"]}, [SE_GRANT], TODAY)
     assert academic["unlocks"] == {}
@@ -568,7 +568,23 @@ def test_door_run_from_another_country_ranks_after_domestic_doors() -> None:
 def test_cross_border_founder_hears_which_doors_a_local_company_would_open() -> None:
     dk_grant = dict(SE_GRANT, id="test-dk-grant", name="Test DK grant", country="DK", eligibility=[{"field": "country", "op": "eq", "value": "DK"}, {"field": "legal_form", "op": "eq", "value": "company"}])
     out = match.run({"country": "SE", "residence_country": "DK", "legal_form": "company", "need": ["money"]}, [dk_grant], TODAY)
-    assert out["unlocks"] == {"country:DK": ["Test DK grant"]}
+    assert [e["name"] for e in out["unlocks"]["country:DK"]] == ["Test DK grant"]
     assert out["doors"] == []
     same = match.run({"country": "DK", "residence_country": "DK", "legal_form": "company", "need": ["money"]}, [dk_grant], TODAY)
     assert same["unlocks"] == {}
+
+
+def test_unlocks_list_open_doors_before_closed_ones() -> None:
+    closed = dict(SE_GRANT, id="test-closed", name="Closed grant", availability="closed")
+    open_ = dict(SE_GRANT, id="test-open", name="Open grant", availability="open")
+    out = match.run({"country": "SE", "legal_form": "none", "age_years": 1, "revenue_msek": 0, "profit_distributed": False, "need": ["money"]}, [closed, open_], TODAY)
+    assert [(e["name"], e["availability"]) for e in out["unlocks"]["company"]] == [("Open grant", "open"), ("Closed grant", "closed")]
+
+
+def test_support_need_keeps_no_cash_programs_out_of_a_money_answer() -> None:
+    camp = dict(SE_GRANT, id="test-camp", name="Free camp", need=["support"], eligibility=[{"field": "country", "op": "eq", "value": "SE"}])
+    money = run({"country": "SE", "legal_form": "company", "need": ["money"]})
+    assert "test-camp" not in {d["id"] for d in money["doors"]}
+    both = match.run({"country": "SE", "need": ["money", "support"]}, [camp], TODAY)
+    assert [d["id"] for d in both["doors"]] == ["test-camp"]
+    assert match.normalize_profile({"need": ["coaching"]})[0]["need"] == ["support"]

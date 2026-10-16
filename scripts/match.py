@@ -58,7 +58,7 @@ LIST_FIELDS = {"stack", "sector", "vc_partner", "need", "confirmed"}
 COUNTRY_FIELDS = {"country", "residence_country"}
 TRUE_WORDS = {"true", "yes", "ja", "y", "1", "kyllä", "joo"}
 FALSE_WORDS = {"false", "no", "nej", "n", "0", "nei", "ei"}
-NEEDS = {"money", "compute", "credits"}
+NEEDS = {"money", "compute", "credits", "support"}
 STAGES = {"idea", "pre_seed", "seed", "series_a", "later"}
 LEGAL_FORMS = {"company", "nonprofit", "academia", "public", "sole_trader", "none"}
 # Alias tables are keyed by slug(): lowercase, spaces and hyphens as underscores.
@@ -84,6 +84,8 @@ NEED_ALIASES = {
     "penge": "money", "rahaa": "money", "rahoitus": "money", "tilskudd": "money", "tilskud": "money", "lån": "money",
     "laina": "money", "investment": "money", "credit": "credits", "krediter": "credits", "kreditter": "credits",
     "krediitit": "credits", "cloud_credits": "credits", "api_credits": "credits",
+    "coaching": "support", "mentoring": "support", "stöd": "support", "incubator": "support", "inkubator": "support",
+    "accelerator": "support", "accelerator_program": "support",
 }
 STAGE_ALIASES = {
     "preseed": "pre_seed", "pre": "pre_seed", "angel": "pre_seed", "mvp": "pre_seed", "prototype": "pre_seed",
@@ -122,6 +124,7 @@ class Door:
     id: str
     name: str
     kind: str
+    need: list[str]
     country: str
     status: str
     met: list[str]
@@ -241,7 +244,7 @@ def normalize_profile(raw: dict) -> tuple[dict, list[str]]:
                 if word in NEEDS:
                     words.append(word)
                 else:
-                    warnings.append(f"need {item!r} is not money, compute or credits, ignored")
+                    warnings.append(f"need {item!r} is not money, compute, credits or support, ignored")
             if words:
                 profile[key] = list(dict.fromkeys(words))
         elif key in LIST_FIELDS:
@@ -377,6 +380,7 @@ def evaluate(program: dict, profile: dict, today: date, lang: str) -> Door:
         id=program["id"],
         name=program["name"],
         kind=program["kind"],
+        need=list(program["need"]),
         country=program["country"],
         status=status,
         met=met,
@@ -466,6 +470,15 @@ UNLOCKABLE_FROM = {"none", "sole_trader"}
 UNLOCK_TARGETS = ("company", "sole_trader")
 
 
+def unlock_entry(program: dict) -> dict:
+    return {"id": program["id"], "name": program["name"], "availability": str(program.get("availability", "unknown"))}
+
+
+def open_first(entries: list[dict]) -> list[dict]:
+    """Open doors first, closed last; data-file order inside each."""
+    return sorted(entries, key=lambda entry: entry["availability"] == "closed")
+
+
 def legal_form_unlocks(programs: list[dict], profile: dict, today: date, lang: str) -> dict[str, list[str]]:
     """Doors the profile fails only on legal form, keyed by the form that would pass.
 
@@ -488,8 +501,8 @@ def legal_form_unlocks(programs: list[dict], profile: dict, today: date, lang: s
                 continue
             trial = dict(profile, legal_form=form)
             if all(evaluate_rule(gate, trial, lang).status == "met" for gate in failing):
-                unlocks.setdefault(form, []).append(program["name"])
-    return unlocks
+                unlocks.setdefault(form, []).append(unlock_entry(program))
+    return {form: open_first(entries) for form, entries in unlocks.items()}
 
 
 def country_unlocks(programs: list[dict], profile: dict, lang: str) -> dict[str, list[str]]:
@@ -511,8 +524,8 @@ def country_unlocks(programs: list[dict], profile: dict, lang: str) -> dict[str,
         if not failing or any(rule_fields(gate) != {"country"} for gate in failing):
             continue
         if all(evaluate_rule(gate, trial, lang).status == "met" for gate in failing):
-            found.append(program["name"])
-    return {f"country:{residence}": found} if found else {}
+            found.append(unlock_entry(program))
+    return {f"country:{residence}": open_first(found)} if found else {}
 
 
 def pick_top(doors: list[Door], needs: list[str] | None, top: int) -> tuple[list[Door], list[Door]]:
@@ -531,7 +544,7 @@ def pick_top(doors: list[Door], needs: list[str] | None, top: int) -> tuple[list
     while len(shown) < top and remaining:
         progressed = False
         for need in needs:
-            candidate = next((door for door in remaining if need in NEED_BY_KIND.get(door.kind, ())), None)
+            candidate = next((door for door in remaining if need in door.need), None)
             if candidate is None:
                 continue
             shown.append(candidate)
@@ -543,12 +556,6 @@ def pick_top(doors: list[Door], needs: list[str] | None, top: int) -> tuple[list
             shown.append(remaining.pop(0))
     return shown, remaining
 
-
-NEED_BY_KIND = {
-    "grant": ("money",), "loan": ("money",), "accelerator": ("money",),
-    "compute": ("compute",),
-    "cloud_credit": ("credits",), "ai_api_credit": ("credits",), "perks": ("credits",),
-}
 
 
 class MalformedRecord(ValueError):
