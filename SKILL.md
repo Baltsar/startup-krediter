@@ -106,7 +106,25 @@ Labels are generated from each rule's field, operator and value, never written
 by hand, so a label cannot claim more than the rule checks. "i Sverige" means
 the country matched; it does not mean a company exists.
 
-## Step 3: Read the page before you quote it
+## Step 3: Look beyond the data, once
+
+The data file is a map with edges. A program that is not in it cannot be
+matched, and a general web search sometimes finds the better door: a grant for
+founders without a company, or a way to spend credits on the vendor the founder
+already pays. After the matcher runs, do one web search for programs that fit
+this profile and are missing from the matcher's output, phrased like the
+founder's need ("bidrag privatperson idé utan bolag Sverige", "use AWS credits
+for Anthropic Claude"). Read the official page of anything you find before you
+name it.
+
+If you find a door that fits better than the matcher's first door, show it in
+Stage A with "(inte i vår data, läst i dag)" after the name, and give its
+amount, what decides it and the link; in Stage B give the checklist you read on
+its own pages. Keep it to one search and at most one extra door, so the answer
+stays short. Mention in one line at the end of the answer that the door is
+missing from the data, so the founder or a maintainer can add it.
+
+## Step 4: Read the page before you quote it
 
 The data says what was true on `last_verified`; the page says what is true
 today. Before you state a deadline, an amount, or that a round is open, fetch
@@ -132,7 +150,7 @@ Open the file in `reference` when the founder asks how the process works. Each
 entry has who, what, amount, requirements, "Before you apply", "Unclear", how
 to apply, a quoted sentence from the page, and gotchas.
 
-## Step 4: Answer
+## Step 5: Answer
 
 The answer has two stages. The first answer is short so a founder on a phone
 can see the options and choose. The full checklist comes when they choose a
@@ -151,13 +169,16 @@ carries, so no one walks to a site thinking it is simple.
    name, the amount in the founder's language, the one thing that decides it
    (the first `?` or the hardest stopper in `apply_requirements`), and the
    counts of `apply_requirements` and `unclear`. Mark a closed door as closed.
+   Say what the money costs when `founder_cost` is not `none`: "lån",
+   "investering mot ägarandel", "avgift". A founder who asked for money must
+   not mistake an equity deal or a paid program for a grant.
 4. **One closing line**: "Vilken vill ni titta på? Då får ni hela listan över
    vad ansökan kräver." Add `more` and `unlocks` lines (below) only if they
    exist.
 
 No glyph blocks, no checklists and no links in Stage A. Aim for under 150
 words. Before you name an amount or say a door is open, read its `status_url`
-(Step 3); in Stage A you do not need the linked conditions pages yet.
+(Step 4); in Stage A you do not need the linked conditions pages yet.
 
 If the founder named one specific program ("har vi en chans på Vinnova?"), skip
 Stage A and give that door in Stage B form directly.
@@ -172,7 +193,7 @@ When the founder names a door, a number, or says "visa", give that door in full:
    siblings, live closing date, closed or stale note.
 2. One sentence: what the door is and whether it fits.
 3. **Before you apply**: every item in `apply_requirements`, short, translated,
-   plus anything the linked conditions page adds (Step 3). The `○` lines in the
+   plus anything the linked conditions page adds (Step 4). The `○` lines in the
    glyph are already the open eligibility questions; do not repeat them. This
    list is what keeps the trip to the site from ending in a surprise. Do not
    drop items; do not pad.
@@ -241,7 +262,7 @@ etisk självskattning, ett system, teknisk underbyggnad för koden, ingen annan
 pågående EuroHPC-allokering, 2026-callen på /calls/60, och allt efter
 tilldelningen), the unclear line about open science, next step and link.
 
-## Step 5: Follow up
+## Step 6: Follow up
 
 If the founder picks a door, answer in Stage B. If they answer the question,
 put it into the same profile, rerun, and show what changed: one `○` that became
