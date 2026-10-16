@@ -152,13 +152,21 @@ Then, each at most one line:
   countries or lives in one, and leave out kinds the founder did not ask for.
 - `unlocks`: "Registrerar ni ett AB öppnas dessutom: A, B, C."
 
-Length: about 150 to 200 words per door in full, so a three-door answer stays
-under roughly 600 words. If you are over, shorten the sentences, never the
-checklist.
+Length: about 150 to 220 words per door in full, so a three-door answer lands
+around 500 to 700 words, with the two-line verdict on top for the founder who
+reads nothing else. If you are over, shorten the sentences, never the
+checklist or the glyph.
 
-The question at the top is the first `?` of the best door for the kind the
-founder stressed most. If that door has no open question, take the next door's.
-One question, not a form.
+Order: keep the matcher's order, except that doors of the kind the founder
+stressed most ("vi behöver GPU") come first.
+
+The question at the top is the first `?` of the best door of the kind the
+founder stressed most. If that door has no open question, take the first `?` of
+the next door of that same kind, then of any kind. One question, not a form.
+
+If a checklist item carries a date or figure the page you read today does not
+show, keep the item and say where the date comes from ("enligt portalens
+call-lista: öppen till 31 december 2026"), or drop only the date.
 
 A door is open only when it is eligible **and** the founder has seen its
 checklist and unclear points. A door whose page could not be read today is not
