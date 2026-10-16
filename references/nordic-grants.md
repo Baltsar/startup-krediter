@@ -380,3 +380,27 @@ Not covered here: EU instruments (EIC Accelerator, Eurostars, Horizon Europe), r
 - **Verified:** 2026-10-16
 - **Evidence:** "Your bank files an application on your behalf."
 - **Gotchas:** No self-financing requirement. Not usable for buying a company, own shares or business premises, or for export financing; larger needs go to the ordinary Finnvera Guarantee. A new Start Guarantee can be requested at least two months after the previous decision. Founders need not live in Finland but the company must be a Finnish company or a registered Finnish private entrepreneur. 'Your bank files an application on your behalf.'
+
+## EIFO Matchlån {#eifo-matchlan}
+
+- **Who:** Danish companies with a CVR number, innovative and scalable, under DKK 3 million in accumulated revenue, with an independent external investor already in.
+- **What:** A loan matching the investor's money krone for krone; the founder gives up no ownership to EIFO and is not personally liable.
+- **Amount:** DKK 500 000 to 3 000 000, in special cases up to 5 000 000; CIBOR3 + 5 %; fee 0.5 %, at least DKK 10 000; term 6 years, at most 10.
+- **Before you apply:** Investor in first; 12 months of runway and positive equity; form version 3.12 with the investor; documents per the requirement specification; upload in EIFO's customer portal; about one month's processing.
+- **Unclear:** Company form is not named on the page; the documents assume shareholders.
+- **Status page:** https://eifo.dk/for-dig-som-er/virksomhed/matchlaan
+- **Verified:** 2026-10-17
+- **Evidence:** "for hver krone din investor investerer i virksomheden, finansierer EIFO én krone mere"
+- **Gotchas:** Not a fallback after a bank refusal on its own: without an investor there is no match. Taking over a sole trader's business into a new company may need checking with EIFO.
+
+## Starttiraha {#starttiraha}
+
+- **Who:** A person in Finland about to start full-time entrepreneurship, before the business is founded.
+- **What:** A personal allowance for living costs during the first months, at the basic unemployment allowance level.
+- **Amount:** EUR 37.21 per day, up to 12 months in two six-month periods.
+- **Before you apply:** Apply before founding; business plan with calculations; no payment defaults or tax debt; financing, contracts and licences ready; crowded sectors are usually refused.
+- **Unclear:** The official service page did not render on 2026-10-17; rules read from the employment services' blog of 24 March 2026.
+- **Status page:** https://tyomarkkinatori.fi/blogit/starttiraha-antaa-turvaa-yritystoiminnan-alkuun
+- **Verified:** 2026-10-17
+- **Evidence:** "starttirahaa tulee hakea ennen yrityksen perustamista"
+- **Gotchas:** Founding the Oy or toiminimi first forfeits it. It pays the founder's living, not the product.

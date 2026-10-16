@@ -144,7 +144,11 @@
         "Login method for the e-service is not stated"
       ],
       "notes": "Reference number 2026-01767. Open on 2026-10-15: 'Closes on 29 October 2026 at 2PM'. Opened 15 Jun 2026; earlier assessment date 16 Sep 2026 14:00 with decision planned 16 Oct; final decision 24 Nov 2026. Total budget 22 MSEK across the year's application opportunities. The innovation must connect to at least one FFI sub-programme: Circularity, Transport and mobility solutions, Traffic-safe automation, Zero emissions. Projects need at least two participants, at least one need owner and at least one startup; only the startup can be beneficiary. Aid basis: startups under five years (fewer than 50 employees, not listed, no profit distributed, not formed by merger or takeover) get start-up aid; older small companies get de minimis aid, at most 300 000 EUR over three years. No country rule is encoded because the page says foreign startups without Swedish presence may apply (they attach a home-country registration certificate). The English page is machine-translated and the Swedish text takes precedence: https://www.vinnova.se/e/accelerera-svenskt-partnerskap/ffi-asp-accelerated-startup-2026-01767/. The sibling spring round 2026-00299 closed 2 June 2026. Scoped EU in this data because the call admits foreign startups; every applicant still needs an established Swedish need owner as partner. Relevance to an FFI sub-programme is a knock-out criterion; at least three evaluators score relevance, potential, actors and feasibility. Consultant and licence costs at most 20 percent of a party's budget unless justified. After a grant: participation document, project agreement and regular reporting.",
-      "founder_cost": "none"
+      "founder_cost": "none",
+      "sectors": [
+        "transport",
+        "climate"
+      ]
     },
     {
       "id": "eureka-innowwide-call-5",
@@ -256,7 +260,11 @@
         "Dates and locations of the test days and the interim demonstration are not published yet",
         "The login method for Vinnova's e-services is not stated, although the challenge is open to applicants across the EU, EFTA and UK; ask helpdesk@vinnova.se whether a foreign applicant can create an account and log in without a Swedish e-ID"
       ],
-      "founder_cost": "none"
+      "founder_cost": "none",
+      "sectors": [
+        "marine",
+        "climate"
+      ]
     },
     {
       "id": "vinnova-chips-ju-pilot-line-access",
@@ -332,7 +340,12 @@
         "No decision date is printed; applications are read daily but are also said to be assessed in competition, so ask how and when decisions are made",
         "The formal requirements say the application must follow 'the instructions in section 9', but the web page has no numbered sections and no separate call text is linked"
       ],
-      "founder_cost": "none"
+      "founder_cost": "none",
+      "sectors": [
+        "semiconductors",
+        "hardware",
+        "deeptech"
+      ]
     },
     {
       "id": "vinnova-avancerad-digitalisering-5g-automatisering",
@@ -392,7 +405,12 @@
         "The page says the project description uses 12 pt text, while the template says 11 pt Times New Roman",
         "The login method for Vinnova's e-service is not stated on the call page"
       ],
-      "founder_cost": "none"
+      "founder_cost": "none",
+      "sectors": [
+        "hardware",
+        "deeptech",
+        "ai"
+      ]
     },
     {
       "id": "vinnova-avancerad-digitalisering-cybersakerhet-ai",
@@ -452,7 +470,10 @@
         "The web page says projects may start from 19 March 2027, while the linked call text PDF (registered 21 September 2026) says 24 March 2027; ask the call contact which date applies",
         "What counts as sufficient financial coverage for an SME is not defined in this call, unlike the 5G and cyber-physical calls (turnover or capital covering the whole own share); ask the call contact"
       ],
-      "founder_cost": "none"
+      "founder_cost": "none",
+      "sectors": [
+        "ai"
+      ]
     },
     {
       "id": "vinnova-avancerad-digitalisering-cyberfysiska-system",
@@ -510,7 +531,11 @@
         "The call says 'industrial' project parties in the form of companies but does not say whether a software or AI startup counts as industrial; ask staffan.nystrom@vinnova.se before relying on the startup as one of the two",
         "The call is aimed at need owners in industry, but whether the need owner must be the coordinator is not stated"
       ],
-      "founder_cost": "none"
+      "founder_cost": "none",
+      "sectors": [
+        "hardware",
+        "deeptech"
+      ]
     },
     {
       "id": "vinnova-avancerad-digitalisering-flexibel-energistyrning",
@@ -570,7 +595,10 @@
         "The call page lists the three attachments without page limits; the limits (10 pages at 11 pt, 1-page summary, 1-page CVs) appear only in the downloadable templates",
         "What counts as sufficient financial coverage for an SME is not defined in this call, unlike the 5G and cyber-physical calls (turnover or capital covering the whole own share); ask the call contact"
       ],
-      "founder_cost": "none"
+      "founder_cost": "none",
+      "sectors": [
+        "energy"
+      ]
     },
     {
       "id": "almi-verifieringsmedel",
@@ -806,7 +834,12 @@
         "InvestEU/EIF guarantee exclusions are not spelled out"
       ],
       "notes": "Continuous, no deadline. 'Tillväxtlån är ett lån för innovativa små och medelstora aktiebolag' and 'Ett lån för etablerade och innovativa företag', so very early startups without revenue history may not fit. Almi's rates are normally about 2-3 percentage points above bank rates. Handled by the regional Almi company; each loan is an individual assessment. Handling normally 3 to 4 weeks from a complete application. Applicant needs a residence permit, EU/EEA right of residence or Nordic citizenship.",
-      "founder_cost": "repay"
+      "founder_cost": "repay",
+      "stages": [
+        "seed",
+        "series_a",
+        "later"
+      ]
     },
     {
       "id": "energimyndigheten-konceptutveckling",
@@ -859,7 +892,11 @@
         "Whether the person who signs in the e-service must be the firmatecknare is not stated"
       ],
       "notes": "Not open on 2026-10-15. The call page (Senast uppdaterad 2026-04-08) still shows the spring round: 'Sista dag för ansökan 2026-06-02 23:59', decisions 'löpande under september till november 2026', project start between 15 October and 1 December 2026, at most 12 months, pool 'Cirka 10 miljoner kronor'. The programme page says the call opens twice a year, 'planerat april samt oktober', and the kommande-utlysningar page lists the next opening as October 2026 without a day. The 500 000 SEK and 100 percent figures come from the programme page utveckla-en-affarside; the spring call page gives only the total pool. One application per company per round; the applicant must own or control the solution. Almi and five other innovation environments give advice before applying but do not write the application. Re-read the status page before quoting any date. Up to 100 percent of eligible costs, at most 500 000 SEK, no co-financing. Decision within three to five months after the round closes; the agency may run a credit check on the company, partners, owners and board. Support available until 16:00 on the closing day.",
-      "founder_cost": "none"
+      "founder_cost": "none",
+      "sectors": [
+        "energy",
+        "climate"
+      ]
     },
     {
       "id": "energimyndigheten-verifiering-med-kund",
@@ -908,7 +945,11 @@
         "Application language, and who at the customer must sign the letter of intent, are not stated"
       ],
       "notes": "Not open on 2026-10-15. The call page (Senast uppdaterad 2026-04-08) shows the spring round: 'Sista dag för ansökan 2026-06-02 23:59', decisions September to November 2026, project start 15 August to 1 December 2026 (recommended no earlier than 15 October), at most 24 months, pool 'Cirka 30 miljoner kronor'. Next opening planned October 2026 per the kommande-utlysningar page ('planerat april samt oktober' on the programme page), no day given. Maximum one application per company; the applicant must own or control the solution. The 55 percent co-financing figure is from the programme page verifiering-med-kund; the call page says co-financing is required without a general percentage. Re-read the status page before quoting any date. Decision within three to five months after closing; starting before the decision is at your own risk. Credit check possible on the company, partners, owners and board.",
-      "founder_cost": "none"
+      "founder_cost": "none",
+      "sectors": [
+        "energy",
+        "climate"
+      ]
     },
     {
       "id": "innovasjon-norge-oppstartstilskudd-1",
@@ -1019,6 +1060,58 @@
       ],
       "notes": "Application deadline 'Ongoing'. 'In 2026, the funding available for Startup Grant 2 has been reduced by 60%.' Costs incurred before the application is submitted are not funded. The startup may be owned by a holding company older than five years; subsidiaries 50 percent or more owned by an established business are not eligible; a shareholder owning 25-50 percent must run a separate business; outstanding payment defaults disqualify. The page does not require Startup grant 1 to have been completed first. Extension of six months, at most 18 in total. Site returns 403 to curl; read via WebFetch on 2026-10-15. The portal start.innovasjonnorge.no returned 404 on 2026-10-15; start from the apply button on the service page. Payments 50 percent at start, 30 percent halfway, 20 percent at the end against a final report and auditor-verified project accounts. The 2026 budget is cut by 60 percent, so stricter prioritisation and more rejections.",
       "founder_cost": "none"
+    },
+    {
+      "id": "starttiraha",
+      "name": "Starttiraha (Finnish start-up grant)",
+      "country": "FI",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "A person in Finland who is about to start full-time entrepreneurship and has not yet started the business.",
+      "what": "Personal living allowance for the first months of a new business, at the level of the basic unemployment allowance. It pays the founder, not the product.",
+      "amount": {
+        "text": "EUR 37.21 per day, for up to 12 months in two six-month periods",
+        "currency": "EUR"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "FI"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "none"
+        }
+      ],
+      "apply_url": "https://tyomarkkinatori.fi/blogit/starttiraha-antaa-turvaa-yritystoiminnan-alkuun",
+      "status_url": "https://tyomarkkinatori.fi/blogit/starttiraha-antaa-turvaa-yritystoiminnan-alkuun",
+      "next_step": "Talk to a regional business advisor before founding anything, then apply for starttiraha through the employment services. The founder applies.",
+      "reference": "references/nordic-grants.md#starttiraha",
+      "last_verified": "2026-10-17",
+      "availability": "open",
+      "founder_cost": "none",
+      "stages": [
+        "idea",
+        "pre_seed"
+      ],
+      "apply_requirements": [
+        "Apply before founding the business; it cannot be granted afterwards",
+        "Not granted automatically: an overall assessment of your situation (employed, student, unemployed), your skills, and other businesses you own",
+        "A careful business plan with market survey and profitability, financing and cash-flow calculations",
+        "No payment defaults and no tax debt",
+        "External financing, contracts, licences and registrations ready when you apply",
+        "Heavily competitive sectors are usually not supported",
+        "The second six-month period is a new assessment, given only if the business has started but does not yet give enough income"
+      ],
+      "unclear": [
+        "The official service page did not render today; the rules come from the employment services' own blog of 24 March 2026. Confirm with your regional employment services",
+        "Whether full-time is required as such; the page speaks of making a part-time business full-time"
+      ],
+      "notes": "Työmarkkinatori blog 24.3.2026: 'starttirahaa tulee hakea ennen yrityksen perustamista'; '37,21 euroa päivässä'; 'enintään 12 kuukaudeksi, kahdessa kuuden kuukauden jaksossa'; no 'luottohäiriöitä tai verovelkaa'; 'voimakkaasti kilpailluille aloille tukea ei yleensä myönnetä'."
     },
     {
       "id": "business-finland-sprint",
@@ -1318,6 +1411,67 @@
       "founder_cost": "none"
     },
     {
+      "id": "eifo-matchlan",
+      "name": "EIFO Matchlån",
+      "country": "DK",
+      "kind": "loan",
+      "need": [
+        "money"
+      ],
+      "who": "Early-stage Danish companies with a CVR number, an innovative and scalable business model, under DKK 3 million in accumulated revenue, and an independent external investor who has already invested.",
+      "what": "Loan that matches a private investor's investment krone for krone, without the founders giving up ownership to EIFO. For development, first pilot customers and international sales.",
+      "amount": {
+        "text": "DKK 500 000 to 3 000 000 (in special cases up to DKK 5 000 000); interest CIBOR3 + 5 %",
+        "min": 500000,
+        "max": 3000000,
+        "currency": "DKK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "DK"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company"
+        },
+        {
+          "field": "vc_backed",
+          "op": "eq",
+          "value": true
+        }
+      ],
+      "apply_url": "https://eifo.dk/for-dig-som-er/virksomhed/matchlaan",
+      "status_url": "https://eifo.dk/for-dig-som-er/virksomhed/matchlaan",
+      "next_step": "Get the investor's investment in place first, then download EIFO's application form, fill it in with the investor and upload it with the listed documents in EIFO's customer portal. The founder submits.",
+      "reference": "references/nordic-grants.md#eifo-matchlan",
+      "last_verified": "2026-10-17",
+      "availability": "open",
+      "founder_cost": "repay",
+      "stages": [
+        "pre_seed",
+        "seed"
+      ],
+      "apply_requirements": [
+        "An independent, external investor has already invested; EIFO lends at most as much as the investor put in",
+        "Registered in Denmark with a Danish CVR number",
+        "Under DKK 3 million in accumulated revenue",
+        "At least 12 months of runway after the investment and positive equity",
+        "Innovative and scalable business model, assessed with a pitch to EIFO",
+        "Application form (version 3.12) filled in together with the investor, plus the documents in EIFO's requirement specification, uploaded in EIFO's customer portal",
+        "Establishment fee of 0.5 % of the loan, at least DKK 10 000",
+        "Term normally 6 years, at most 10, with 3 years of rolled-up interest at the start",
+        "Processing about one month"
+      ],
+      "unclear": [
+        "Whether a sole trader can apply; the page names no company form, but the documents assume a company with shareholders. Ask EIFO on 31 51 94 21",
+        "How the exit bonus is calculated; ask EIFO"
+      ],
+      "notes": "Page 2026-10-17: 'for hver krone din investor investerer i virksomheden, finansierer EIFO én krone mere'; 'mindre end 3 mio. DKK i akkumuleret omsætning'; 'minimum 12 måneders runway'; founder 'ikke selv hæfter personligt for lånet'. Product sheet: 500.000-3.000.000 DKK, CIBOR3 + 5%, etableringsgebyr 0,5 pct. dog minimum 10.000 DKK, løbetid 6 år, max 10."
+    },
+    {
       "id": "innovationsfonden-innobooster",
       "name": "Innobooster (Innovationsfonden / Danmarks Innovationsfond)",
       "country": "DK",
@@ -1563,7 +1717,13 @@
         "The 2026 batching dates are written in mixed formats on the page (7/01/2026, 04/03/2026); confirm the next date before planning"
       ],
       "notes": "Four-step process: short application (any time, batched first Tuesday monthly), full application (2026 batching dates written on the page as 7/01/2026, 04/03/2026, 06/05/2026, 08/07/2026, 02/09/2026, 04/11/2026, all 17:00 Brussels time; remote result in 8-9 weeks), interview with the EIC Jury (an interview session is organised after each second batch; results 2-3 weeks after the interview week), then grant agreement signature and due diligence for the investment component (decided within 2-6 months). Only one application at a time; a new one only after results of the previous. Grant only is provided once per company during Horizon Europe 2021-2027. Mid-caps (up to 499 employees) can apply for investment only; UK applicants grant only; third-country applicants must relocate before Step 2. Two strands: Accelerator Open (any field of technology, EUR 414 million budget in 2026) and Accelerator Challenges (pre-defined topics, EUR 220 million in 2026). Top-ranked full proposals corresponding to 2.5 times the available grant budget are invited to interview; proposals above the 13/15 threshold that are not funded receive a Seal of Excellence. Fast Track (existing Horizon projects) and Plug-In (certified national programmes) schemes go straight to the full application stage. The page does not state an open or closed status; it lists the 2026 cut-offs and links to the portal topic. Re-read the status page before quoting any 2027 date.",
-      "founder_cost": "none"
+      "founder_cost": "none",
+      "stages": [
+        "pre_seed",
+        "seed",
+        "series_a",
+        "later"
+      ]
     },
     {
       "id": "eurostars",
@@ -1626,7 +1786,12 @@
         "Each national funding body pays its own partner under national rules and may cap the amount; Eureka publishes no central amount"
       ],
       "notes": "No Eurostars call is open on 2026-10-15: the Eureka open-calls listing shows no Eurostars call, and Call 12 opens 17 December 2026 with deadline 4 March 2027 14:00 CET; calls are usually organised twice a year. Seven international eligibility criteria: SME lead from a Eurostars country; at least two independent entities; at least two Eurostars countries with at least one organisation from an EU or Horizon Europe associated country; SMEs from Eurostars countries carry 50% or more of the budget excluding subcontracting; no single participant or country above 70% of the budget; duration 36 months or less; exclusive focus on civil applications. Funding is decentralised: Eureka pays nothing, each partner's national funding body pays under national rules and may cap amounts. National details for Call 12 were marked as being confirmed and subject to change before the call opens. Sweden: Vinnova funds SMEs up to 50% of costs, max 5 MSEK per project; Swedish participants submit a national application to Vinnova after a positive evaluation; Vinnova checks the latest registered annual report and credit reports. Finland: Business Finland requires a parallel national application with attachments when the Eurostars application is submitted. Denmark: IFD max 300 000 EUR per participant (500 000 EUR for several Danish participants, min 50 000 EUR); upload the application to e-grant within 14 days after the deadline. Norway: the funder is the Research Council of Norway, not Innovasjon Norge. Iceland: Rannís, max 45 MISK per project. Greece, Israel, Italy and Brussels have no budget for this call.",
-      "founder_cost": "none"
+      "founder_cost": "none",
+      "stages": [
+        "seed",
+        "series_a",
+        "later"
+      ]
     },
     {
       "id": "eurohpc-playground",
@@ -1832,7 +1997,12 @@
         "No indication of how much is typically granted or how full the reserve is"
       ],
       "notes": "Continuously open with two cut-off dates per month that trigger evaluation; the page says approval within ten working days from the cut-off; specific cut-off dates are not listed on the page. Process: eligibility check, technical assessment by the AI Factory, expert evaluation by the AI Factory's Industrial Innovation Group on two criteria, innovation and impact, each scored 0 to 5 with a threshold of 3 per criterion and 6 overall, then a ranked list approved by the EuroHPC JU Executive Director. EIC Accelerator challenge awardees pass without further evaluation and have priority within the cut-off. Proposals below the per-system minimum request are administratively rejected; awards may be reduced in scope. Normally one Large Scale award per project lead at a time; proposals submitted after a cut-off roll into the next one; appeals to aif.access@eurohpc-ju.europa.eu within 15 days. No extensions or top-ups; final report three months after the end; English, civilian purpose, AI Act compliance, no double-awarding. Continuation proposals are possible with a progress or final report. The 2026 call is portal /calls/58 (EHPC-AIF-2026LS). Scored by the AI Factory's Industrial Innovation Group on innovation and impact, 0 to 5 each, thresholds 3 per criterion and 6 overall; decision within 10 working days after the cut-off; appeal by email to aif.access@eurohpc-ju.europa.eu within 15 days. EIC Accelerator awardees skip expert evaluation but upload the signed grant agreement. After award: sign the AI Factory's Acceptable Use Policy at onboarding; final report on the EuroHPC template within 3 months after the allocation, with energy use and carbon footprint; acknowledge EuroHPC JU and the AI Factory in publications.",
-      "founder_cost": "none"
+      "founder_cost": "none",
+      "stages": [
+        "seed",
+        "series_a",
+        "later"
+      ]
     },
     {
       "id": "eurohpc-ai-for-science",
@@ -3161,7 +3331,11 @@
         "Europe focus is soft: 'We primarily support founders from Europe (EU27, EU Candidate Counties and the UK). We will support a handful of high-potential companies outside Europe.' The country field can express it, so it is not listed as a hard gate",
         "Program language not stated; the site and form are in English"
       ],
-      "founder_cost": "equity"
+      "founder_cost": "equity",
+      "stages": [
+        "pre_seed",
+        "seed"
+      ]
     },
     {
       "id": "antler-stockholm",
@@ -3415,7 +3589,7 @@
       "who": "Research-based tech companies, primarily deep tech and university spin-outs, with global commercial and impact potential. Entry is normally through the Tech Transfer, Tech Matching for Encubation or Startup Camp tracks; Chalmers Ventures invests and makes the startup a portfolio company 'if the correct criterias are met'.",
       "what": "Portfolio program with a dedicated Chalmers Ventures contact and business guidance (value proposition, problem/solution fit, strategic board work, goals and KPIs), support through the financing process and access to the investor network with a possible total investment of 15 Mkr (15 MSEK), PR and communication, community and peer-to-peer learning, an office space partner, partner deals and discounts.",
       "amount": {
-        "text": "Possible total investment of 15 Mkr (15 MSEK) over the journey; per-stage amounts and equity not published",
+        "text": "Possible total investment of 15 MSEK over the journey; per-stage amounts and equity not published",
         "max": 15000000,
         "currency": "SEK"
       },
@@ -3703,7 +3877,8 @@
         "The page does not say whether the DKK 250 000 fee is deducted from the loan or paid separately"
       ],
       "notes": "Rolling intake through the deck form; no deadline on the page. About 65% of the first fund's portfolio raised follow-on funding. Accelerace very rarely takes a board seat. The investment program runs twice a year, hybrid with in-person parts in Copenhagen. 'We invest 1 000 000 DKK before you have customers, revenue or traction, using a standardized convertible loan with a conversion cap.'",
-      "founder_cost": "fee"
+      "founder_cost": "fee",
+      "home_country": "DK"
     },
     {
       "id": "kiuas-founder-collective",
