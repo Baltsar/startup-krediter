@@ -120,6 +120,14 @@ cannot be read, say so and give the link instead of a number. When `stale` is
 true, say the record is old and lead with the page. When page and data
 disagree, show both and say which is newer.
 
+For each door you show in full, also open the general-conditions page or FAQ
+the program page links to ("General obstacles to granting funding", "Ofte
+stilte spørsmål", "Allmänna villkor", terms). Rules that stop an application
+often live there, not on the call page: register entries, filed accounts,
+share capital not used up, market acceptance. Add anything the checklist lacks,
+and drop an unclear line the linked page answers. Give financial conditions in
+full: a minimum amount and any "also enough to cover other costs" clause.
+
 Open the file in `reference` when the founder asks how the process works. Each
 entry has who, what, amount, requirements, "Before you apply", "Unclear", how
 to apply, a quoted sentence from the page, and gotchas.

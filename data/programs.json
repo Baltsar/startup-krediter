@@ -131,8 +131,10 @@
         "Mandatory attachments: CVs on Vinnova's template for the project manager and participants, and a GANTT chart",
         "De minimis declaration on Vinnova's form if that aid basis applies; a foreign startup attaches a home-country certificate of registration",
         "Project manager employed by the coordinating startup",
+        "An aktiebolag must not have used up half or more of its share capital",
         "Swedish applicants registered as employers; financial status is checked via a credit report",
-        "Application in Swedish or English in the e-service, submitted before 29 October 2026 at 14:00; the project may not start before submission"
+        "Application in Swedish or English in the e-service, submitted before 29 October 2026 at 14:00; the project may not start before submission",
+        "A project of at most one year, with gender equality and climate written into the team and the outcome, and a project agreement between the parties started early"
       ],
       "unclear": [
         "Dates conflict inside the English call text: the summary says closing 29 October 2026 and decision 24 November 2026, the body lists other assessment dates; confirm with the call manager",
@@ -882,7 +884,7 @@
       "availability": "open",
       "apply_requirements": [
         "Company incorporated as an AS before you apply; ENK, ANS and DA are not accepted",
-        "Apply on Min side; log in with BankID as a person with a registered role in Brønnøysundregistrene, such as daglig leder or board member",
+        "Apply on Min side with BankID as a person registered in Brønnøysundregistrene, such as daglig leder or board member; the FAQ says people without such a role (an accountant or project lead) cannot apply",
         "The application must cover customer insight (the page gives findings from customer interviews as an example), the solution, a competitor analysis, segment and market, IPR, and the team",
         "Explain how the project is fully financed and state other public funding applied for",
         "Pre-finance at least 50 percent: up to half the grant is paid at start, the rest after the final report",
@@ -892,8 +894,7 @@
       "unclear": [
         "The service page has no apply button; the portal redirects to minside.innovasjonnorge.no behind a security check that automated clients cannot pass",
         "Application language is not stated (the English page is machine-translated)",
-        "Rural companies are assessed under regional criteria that 'vary by county' and are not on the page",
-        "How a founder without a Brønnøysund role logs in is not stated"
+        "Rural companies are assessed under regional criteria that 'vary by county' and are not on the page"
       ],
       "notes": "Application deadline 'Ongoing'. Payment: 'You can receive up to 50% of the grant when the project starts', the rest when the project ends; 'At least 50% of the project costs must be paid upfront'. Not covered: own staff costs, related-party costs, VAT, costs before the application. Subsidiaries 50 percent or more owned by an established business are not eligible; companies with outstanding payment defaults cannot apply. The application must state other public funding sought. The page itself has no apply button; it refers to 'My page' only for reporting. Site returns 403 to curl; read via WebFetch on 2026-10-15. Processing time currently 3 to 4 weeks; applications accepted on an ongoing basis."
     },
@@ -938,16 +939,16 @@
       "apply_requirements": [
         "Apply on Min side; log in with BankID as a person with a registered role in Brønnøysundregistrene",
         "AS less than five years old; a foreign applicant establishes an AS or NUF before the first payment",
-        "Own funding at least equal to the grant, available before the first payment, from earned income, savings or private capital; not public funds",
+        "Market acceptance: someone outside the company willing to share the risk of developing the product; the FAQ calls it a requirement and points to Startup grant 1 for getting it",
+        "The solution already tested on possible customers, with evidence that the problem is worth solving and that they would pay",
+        "Own funding at least equal to the grant, available before the first payment, from earned income, savings or private capital; not public funds, not tied to other purposes, and no interest or repayment to lenders or investors during the project",
         "Declaration of own funding on Innovation Norway's template, confirmed by an authorised accountant or auditor, with the advance payment request",
         "Address the three assessment areas: impact (value creation in Norway, growth), level of innovation (significantly better than competitors), implementation capacity (founder-led team, customer collaboration, funding plan)",
         "Costs before submission are not funded; not a subsidiary half-owned by an established business; no payment defaults"
       ],
       "unclear": [
         "Processing time is not stated; the FAQ says it depends on the scope",
-        "Application language is not stated",
-        "Whether Startup grant 1 must be completed first is not stated",
-        "The portal sits behind a security check; expect ID-porten or BankID"
+        "Application language is not stated"
       ],
       "notes": "Application deadline 'Ongoing'. 'In 2026, the funding available for Startup Grant 2 has been reduced by 60%.' Costs incurred before the application is submitted are not funded. The startup may be owned by a holding company older than five years; subsidiaries 50 percent or more owned by an established business are not eligible; a shareholder owning 25-50 percent must run a separate business; outstanding payment defaults disqualify. The page does not require Startup grant 1 to have been completed first. Extension of six months, at most 18 in total. Site returns 403 to curl; read via WebFetch on 2026-10-15. The portal start.innovasjonnorge.no returned 404 on 2026-10-15; start from the apply button on the service page. Payments 50 percent at start, 30 percent halfway, 20 percent at the end against a final report and auditor-verified project accounts. The 2026 budget is cut by 60 percent, so stricter prioritisation and more rejections."
     },
@@ -1010,14 +1011,15 @@
         "Suomi.fi e-identification for the Funding e-service; the application can only be created by a Trade Register representative with sole signing right or a holder of the Suomi.fi mandate for corporate financing",
         "Project plan on the Sprint template, list of shareholders, and an account-level income statement and balance sheet no older than two months",
         "At least 50 000 EUR of equity on the balance sheet, and a committed team of at least two people in Finland, one full-time",
-        "Net financial assets of at least 63 334 EUR (under five years, with advance) or 133 334 EUR (five years or older)",
+        "Net financial assets of at least 63 334 EUR (under five years, with advance) or 133 334 EUR (five years or older), and on top of that enough money to cover the company's other costs during the project",
         "No binding purchase agreements before submission; purchases of 60 000 EUR or more tendered as public procurement",
-        "No earlier Business Finland R&D or startup funding for a company under five years old; apply for Sprint before any Business Finland loan"
+        "No earlier Business Finland R&D or startup funding for a company under five years old; apply for Sprint before any Business Finland loan",
+        "A project where at least two-thirds of the cost is R&D and that includes customer and market research",
+        "Business Finland's general obstacles: the company must be in the prepayment register, have filed its beneficial-ownership notice and its financial statements with the Finnish Patent and Registration Office, and have no overdue taxes or neglected VAT and employer register duties"
       ],
       "unclear": [
         "Decision timeline is not stated beyond 'continuously'",
-        "Application language is not stated on the call page",
-        "Whether My Business Finland registration is required or only recommended: the call page says register before applying, the My Business Finland page says funding is applied for separately"
+        "Application language is not stated on the call page"
       ],
       "notes": "Open on 2026-10-15: status 'Ongoing', 'Continuous call from September 1, 2026', page updated 21.8.2026, decisions made continuously. Aimed at companies under five years that have not previously received Business Finland funding; companies five years or older must show 'a significant change in direction in their business based on innovation', so age is not encoded as a hard rule. Operational, sales and marketing activities and production investments are excluded. The balance-sheet alternative to the 10 MEUR turnover limit and the 50 000 EUR equity requirement are not encoded (no matching schema fields). Tempo no longer appears on the Startup funding page; Sprint, R&D funding and the Deep Tech Accelerator are listed instead. Name a contact person and a responsible project leader employed by or holding a position in the company. A pitch deck is optional."
     },
@@ -1058,13 +1060,13 @@
         "Project plan on Business Finland's template and the company background information form",
         "Account-level income statement and balance sheet no older than two months, plus a monthly cash flow forecast and an annual profit and funding forecast on the e-service Excel template",
         "A committed team of at least two people in Finland, at least one full-time, and a named project leader who is employed by the company or holds a position of responsibility in it",
-        "A credible total funding plan: you cover project costs before reimbursement; loans give a 30 percent advance, grants are paid against reports, and part is held until the final report is approved",
-        "No binding purchase agreement before the application is pending"
+        "A credible total funding plan for the project, and the means to finance the company's other business activities during it; you cover costs before reimbursement, loans give a 30 percent advance, grants are paid against reports",
+        "No binding purchase agreement before the application is pending",
+        "Business Finland's general obstacles: the company must be in the prepayment register, have filed its beneficial-ownership notice and its financial statements with the Finnish Patent and Registration Office, and have no overdue taxes or neglected VAT and employer register duties"
       ],
       "unclear": [
         "Amount is not published; the page gives funding shares only (loan 50 percent, up to 70 percent for SMEs where justified)",
-        "Decision timeline and application language are not stated",
-        "Prepayment and employer register requirements are not mentioned on this page"
+        "Decision timeline and application language are not stated"
       ],
       "notes": "Open on 2026-10-15: status 'Ongoing', 'Applications are processed continuously', updated 22.9.2026. 'The amount of funding to be granted is set in the Government's annual budget.' Kind is set to loan because development and pilot projects, the typical startup case, are funded with loans; research projects get grants (SMEs up to 50 percent, mid-cap and large companies up to 40 percent). Business Finland funding is 'competitive and discretionary'. Assessment criteria: innovativeness and competitive advantage, project plan quality, impact, team, financial resources, and the 'impact of funding' condition."
     },
