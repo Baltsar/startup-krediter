@@ -1,0 +1,62 @@
+{
+ "qid": "r07",
+ "programs": {
+  "A": "Vinnova Innovativa Startups 2026",
+  "B": "Vinnova Innovativa Startups 2026 (plus Innofounder, Innobooster, Almi Innovationslån)"
+ },
+ "stoppers_total": {
+  "A": 17,
+  "B": 17
+ },
+ "stoppers_stated": {
+  "A": 15,
+  "B": 5
+ },
+ "factual_errors": {
+  "A": [],
+  "B": [
+   "Turn 1: Innofounder company may be at most 3 years old when applying; the official 1 July 2026 guidelines say at most five years old at the time of award (B corrected this in turn 2)"
+  ]
+ },
+ "untraceable": {
+  "A": [],
+  "B": []
+ },
+ "best_first_pick": "tie",
+ "missed_programs": {
+  "A_missed": [],
+  "B_missed": [
+   "EIFO Matchlån (B only said 'EIFO' in passing; it fits this ApS with 1.5 MDKK of angel money)",
+   "Almi Verifieringsmedel",
+   "Almi Mikrolån"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "fail",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 200,
+  "B": 492
+ },
+ "verdict": "A",
+ "incomplete": false
+}

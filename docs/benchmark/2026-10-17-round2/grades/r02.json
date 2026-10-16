@@ -1,0 +1,62 @@
+{
+ "qid": "r02",
+ "programs": {
+  "A": "Business Finland Sprint Grant",
+  "B": "Business Finland Research, development and piloting (R&D) funding, grant or loan"
+ },
+ "stoppers_total": {
+  "A": 16,
+  "B": 12
+ },
+ "stoppers_stated": {
+  "A": 14,
+  "B": 4
+ },
+ "factual_errors": {
+  "A": [
+   "Turn 1: 'Sprint on tarkoitettu alle viisivuotiaille' - official call says Sprint suits small companies of all ages; companies 5+ years need a significant change of direction"
+  ],
+  "B": []
+ },
+ "untraceable": {
+  "A": [],
+  "B": [
+   "Finnvera micro-company loan application period 'originally ending 31.7.2026, then extended indefinitely' (official page only says open from 1.2.2026, no end date; sourced to Yrittajat)"
+  ]
+ },
+ "best_first_pick": "B",
+ "missed_programs": {
+  "A_missed": [
+   "Finnvera pk-takaus"
+  ],
+  "B_missed": []
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "fail",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 181,
+  "B": 380
+ },
+ "verdict": "B",
+ "incomplete": false
+}

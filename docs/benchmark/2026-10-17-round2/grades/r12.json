@@ -1,0 +1,65 @@
+{
+ "qid": "r12",
+ "programs": {
+  "A": "Sparekassen Bornholms Fond",
+  "B": "Microsoft for Nonprofits Azure grant (USD 2,000 Azure credits/year)"
+ },
+ "stoppers_total": {
+  "A": 6,
+  "B": 9
+ },
+ "stoppers_stated": {
+  "A": 1,
+  "B": 9
+ },
+ "factual_errors": {
+  "A": [],
+  "B": []
+ },
+ "untraceable": {
+  "A": [
+   "Bornholms Regionskommune culture pools: one covers music/theatre/literature/film and pools have been cut (cited BRK PDF returned empty, could not verify)",
+   "Sparekassen Bornholms Fond 'pulje til mindre beløb' as an application route (official policy only describes a 'skulderklap' pool for persons/initiatives spreading joy)"
+  ],
+  "B": []
+ },
+ "best_first_pick": "B",
+ "missed_programs": {
+  "A_missed": [
+   "Microsoft for Nonprofits Azure grant (USD 2,000 Azure credits per year)"
+  ],
+  "B_missed": [
+   "Sparekassen Bornholms Fond",
+   "Google for Nonprofits",
+   "Bornholms Regionskommune kulturpuljer"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 526,
+  "B": 130
+ },
+ "verdict": "B",
+ "incomplete": false
+}

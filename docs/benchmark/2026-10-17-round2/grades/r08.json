@@ -1,0 +1,70 @@
+{
+ "qid": "r08",
+ "programs": {
+  "A": "Innovasjon Norge Oppstartstilskudd 1",
+  "B": "Innovasjon Norge Oppstartstilskudd 1 (plus Bergen student programs: UiB idé / TILT Student)"
+ },
+ "stoppers_total": {
+  "A": 10,
+  "B": 10
+ },
+ "stoppers_stated": {
+  "A": 4,
+  "B": 1
+ },
+ "factual_errors": {
+  "A": [
+   "Says pre-application development costs are covered by none of the three programs; SkatteFUNN's official sok page implies costs in the whole application year can be deducted if approved before year end",
+   "Says no Norwegian grant fits without a registered company; UiB idé / UiB tidleg idé (up to 100k / 25k NOK) has no company requirement"
+  ],
+  "B": [
+   "Oppstartstilskudd 1 'gjelder bedrifter under 3 år' - official page says under five years",
+   "Says an AS is only 'in practice usually' expected for Oppstartstilskudd 1 - official page says AS is required before applying, ENK/ANS/DA not accepted"
+  ]
+ },
+ "untraceable": {
+  "A": [],
+  "B": [
+   "Startuplab and VIS Inkubator as 'later' options (not verified on an official page)",
+   "Turn-1 sources are third-party (PNO, DNB, Smartbyraa), not official pages"
+  ]
+ },
+ "best_first_pick": "B",
+ "missed_programs": {
+  "A_missed": [
+   "UiB idé / UiB tidleg idé (TILT Student, Bergen student micro-grants, no company needed)",
+   "HVL Skape / Kronstad student incubator",
+   "NHH innovation sprint",
+   "GründerCampus / VIS student meetings"
+  ],
+  "B_missed": []
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "pass",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "fail",
+   "A3": "pass",
+   "A4": "pass",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 47,
+  "B": 334
+ },
+ "verdict": "B",
+ "incomplete": false
+}

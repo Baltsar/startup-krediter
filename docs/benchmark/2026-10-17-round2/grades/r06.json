@@ -1,0 +1,64 @@
+{
+ "qid": "r06",
+ "programs": {
+  "A": "Vinnova Innovative Startups 2026",
+  "B": "Vinnova Innovative Startups 2026"
+ },
+ "stoppers_total": {
+  "A": 16,
+  "B": 16
+ },
+ "stoppers_stated": {
+  "A": 8,
+  "B": 11
+ },
+ "factual_errors": {
+  "A": [],
+  "B": [
+   "Claims the 10 FTE employee cap is counted across the whole group (turn 1: '10 or fewer full-time equivalents in total'; turn 2: 'Vinnova counts the whole group, so a Swedish subsidiary would bring all 11'). The official call page applies the group rule only to listing and net turnover/balance sheet (requirements 3 and 4); the employee cap (requirement 5) applies to the applicant company. B's stated reason for rejection is therefore wrong."
+  ]
+ },
+ "untraceable": {
+  "A": [
+   "Bolagsverket registration 'usually takes a few weeks' (no official processing time found)"
+  ],
+  "B": []
+ },
+ "best_first_pick": "A",
+ "missed_programs": {
+  "A_missed": [
+   "Almi Verifieringsmedel (weak fit for this founder)"
+  ],
+  "B_missed": [
+   "Business Sweden investment promotion (free establishment support for foreign companies)"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "fail",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 500,
+  "B": 193
+ },
+ "verdict": "A",
+ "incomplete": false
+}
