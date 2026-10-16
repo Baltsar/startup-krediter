@@ -98,6 +98,11 @@
           "field": "employees",
           "op": "lt",
           "value": 50
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "swedish_need_owner"
         }
       ],
       "apply_url": "https://ansok.vinnova.se/utlysning/26bdd234-db2b-4fa2-1fab-08dec63ac2d3?opencall=true&lang=en",
@@ -264,6 +269,11 @@
             "sole_trader",
             "none"
           ]
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "consortium_partner"
         }
       ],
       "apply_url": "https://ansok.vinnova.se/utlysning/7a946e8f-1ee0-4d57-417c-08df24511a20?opencall=true&lang=sv",
@@ -303,6 +313,11 @@
             "sole_trader",
             "none"
           ]
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "consortium_partner"
         }
       ],
       "apply_url": "https://ansok.vinnova.se/utlysning/e4b28ee4-05d4-4e1d-713c-08df17abb26c?opencall=true&lang=sv",
@@ -341,6 +356,11 @@
             "sole_trader",
             "none"
           ]
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "consortium_partner"
         }
       ],
       "apply_url": "https://ansok.vinnova.se/utlysning/aedd8745-2a6c-4af8-726e-08df237ab60c?opencall=true&lang=sv",
@@ -380,6 +400,11 @@
             "sole_trader",
             "none"
           ]
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "consortium_partner"
         }
       ],
       "apply_url": "https://ansok.vinnova.se/utlysning/4eee6a9a-1453-4f32-0017-08df15776219?opencall=true&lang=sv",
@@ -561,13 +586,16 @@
           ]
         }
       ],
-      "apply_url": "https://minasidor.energimyndigheten.se/",
+      "apply_url": "https://www.energimyndigheten.se/utlysningar/konceptutveckling-av-innovationer-med-affarsfokus/",
       "status_url": "https://www.energimyndigheten.se/utlysningar/konceptutveckling-av-innovationer-med-affarsfokus/",
       "next_step": "Check the status page for the current round and read the call text and the mandatory 'Ytterligare ansökningsfrågor' document, then log in to Energimyndigheten's e-service Mina sidor, fill in the application with the attachment and submit before the round's deadline. The founder clicks submit.",
       "reference": "references/nordic-grants.md#energimyndigheten-konceptutveckling",
       "last_verified": "2026-10-15",
       "availability": "closed",
-      "notes": "Not open on 2026-10-15. The call page (Senast uppdaterad 2026-04-08) still shows the spring round: 'Sista dag för ansökan 2026-06-02 23:59', decisions 'löpande under september till november 2026', project start between 15 October and 1 December 2026, at most 12 months, pool 'Cirka 10 miljoner kronor'. The programme page says the call opens twice a year, 'planerat april samt oktober', and the kommande-utlysningar page lists the next opening as October 2026 without a day. The 500 000 SEK and 100 percent figures come from the programme page utveckla-en-affarside; the spring call page gives only the total pool. One application per company per round; the applicant must own or control the solution. Almi and five other innovation environments give advice before applying but do not write the application. Re-read the status page before quoting any date."
+      "notes": "Not open on 2026-10-15. The call page (Senast uppdaterad 2026-04-08) still shows the spring round: 'Sista dag för ansökan 2026-06-02 23:59', decisions 'löpande under september till november 2026', project start between 15 October and 1 December 2026, at most 12 months, pool 'Cirka 10 miljoner kronor'. The programme page says the call opens twice a year, 'planerat april samt oktober', and the kommande-utlysningar page lists the next opening as October 2026 without a day. The 500 000 SEK and 100 percent figures come from the programme page utveckla-en-affarside; the spring call page gives only the total pool. One application per company per round; the applicant must own or control the solution. Almi and five other innovation environments give advice before applying but do not write the application. Re-read the status page before quoting any date.",
+      "unclear": [
+        "The e-service root minasidor.energimyndigheten.se returned an internal error on 2026-10-16; start from the call page and use its own 'Ansök' link when the round is open"
+      ]
     },
     {
       "id": "energimyndigheten-verifiering-med-kund",
@@ -596,13 +624,16 @@
           "value": "company"
         }
       ],
-      "apply_url": "https://minasidor.energimyndigheten.se/",
+      "apply_url": "https://www.energimyndigheten.se/utlysningar/verifiering-av-innovationer-med-kund/",
       "status_url": "https://www.energimyndigheten.se/utlysningar/verifiering-av-innovationer-med-kund/",
       "next_step": "Check the status page for the current round, secure a dated and signed letter of intent from at least one customer using Energimyndigheten's template, fill in 'Ytterligare ansökningsfrågor', then log in to Mina sidor and submit before the deadline. The founder clicks submit.",
       "reference": "references/nordic-grants.md#energimyndigheten-verifiering-med-kund",
       "last_verified": "2026-10-15",
       "availability": "closed",
-      "notes": "Not open on 2026-10-15. The call page (Senast uppdaterad 2026-04-08) shows the spring round: 'Sista dag för ansökan 2026-06-02 23:59', decisions September to November 2026, project start 15 August to 1 December 2026 (recommended no earlier than 15 October), at most 24 months, pool 'Cirka 30 miljoner kronor'. Next opening planned October 2026 per the kommande-utlysningar page ('planerat april samt oktober' on the programme page), no day given. Maximum one application per company; the applicant must own or control the solution. The 55 percent co-financing figure is from the programme page verifiering-med-kund; the call page says co-financing is required without a general percentage. Re-read the status page before quoting any date."
+      "notes": "Not open on 2026-10-15. The call page (Senast uppdaterad 2026-04-08) shows the spring round: 'Sista dag för ansökan 2026-06-02 23:59', decisions September to November 2026, project start 15 August to 1 December 2026 (recommended no earlier than 15 October), at most 24 months, pool 'Cirka 30 miljoner kronor'. Next opening planned October 2026 per the kommande-utlysningar page ('planerat april samt oktober' on the programme page), no day given. Maximum one application per company; the applicant must own or control the solution. The 55 percent co-financing figure is from the programme page verifiering-med-kund; the call page says co-financing is required without a general percentage. Re-read the status page before quoting any date.",
+      "unclear": [
+        "The e-service root minasidor.energimyndigheten.se returned an internal error on 2026-10-16; start from the call page and use its own 'Ansök' link when the round is open"
+      ]
     },
     {
       "id": "innovasjon-norge-oppstartstilskudd-1",
@@ -999,6 +1030,11 @@
               "value": 43
             }
           ]
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "consortium_partner"
         }
       ],
       "apply_url": "https://www.eurekanetwork.org/programmes-and-calls/eurostars/eurostars-call-12-for-projects-deadline-march-2027/",
@@ -1050,14 +1086,29 @@
           "value": true
         }
       ],
-      "apply_url": "https://access.eurohpc-ju.europa.eu/",
+      "apply_url": "https://access.eurohpc-ju.europa.eu/calls/60",
       "status_url": "https://www.eurohpc-ju.europa.eu/playground-access-ai-factories_en",
       "next_step": "Register an account on access.eurohpc-ju.europa.eu (registration has a captcha the founder solves themselves), open the AI for Industrial Innovation Playground call, pick one system and fill the online form with the VAT number, the project lead's work email, the code and the GPU hours, plus the eligibility and ethics self-assessments. The founder clicks submit.",
       "reference": "references/compute.md#eurohpc-playground",
       "last_verified": "2026-10-15",
       "availability": "open",
       "group": "eurohpc-industry",
-      "notes": "Continuously open with no cut-off dates; the page says access can be granted within two working days. Process from the Terms of Reference V3 (31/03/2026): eligibility check by self-assessment plus ethics self-assessment, then technical assessment by the requested AI Factory, then first-come-first-served until the call's reserved resources are exhausted. Innovation is the decisive factor of the final decision. One Playground award per project lead at a time; no extensions and no additional resources; final report due three months after the allocation ends; results must be published except confidential parts and EuroHPC JU plus the AI Factory acknowledged; only proposals in English, with a civilian purpose and compliant with the AI Act; no double-awarding with a running EuroHPC allocation. The organisation proves its status with a valid VAT number and, if applicable, a PIC. The hour table on the page is an image: 5 000 GPU hours on every listed partition (read 2026-10-15); partition availability may be limited by demand. Apply Now on the page links to the portal root; the portal is a JavaScript app so the call number could not be verified from outside it. Questions: aif.access@eurohpc-ju.europa.eu."
+      "apply_requirements": [
+        "Account on access.eurohpc-ju.europa.eu with your organisation's own email; registration has a reCAPTCHA you solve yourself",
+        "Organisation VAT number, plus PIC if you have one",
+        "Online form in English; no documents are uploaded, every mandatory field must be filled",
+        "Eligibility and ethics self-assessment inside the form: civilian purpose, AI Act compliance",
+        "One system out of eight partitions; 5 000 GPU hours is fixed, not negotiable",
+        "Technical feasibility data in the form: the code and its software stack; missing data means rejection",
+        "No other EuroHPC allocation running for the same proposal",
+        "Apply to the 2026 call, portal /calls/60, open until 31 December 2026"
+      ],
+      "unclear": [
+        "The page says templates are provided, but none is downloadable without a portal account",
+        "Open science: the Terms of Reference say you commit to publish results, the Access Policy exempts SMEs doing private innovation; ask aif.access@eurohpc-ju.europa.eu what an SME must publish",
+        "Live partition availability is only visible inside the portal"
+      ],
+      "notes": "Continuously open with no cut-off dates; the page says access can be granted within two working days. Process from the Terms of Reference V3 (31/03/2026): eligibility check by self-assessment plus ethics self-assessment, then technical assessment by the requested AI Factory, then first-come-first-served until the call's reserved resources are exhausted. Innovation is the decisive factor of the final decision. One Playground award per project lead at a time; no extensions and no additional resources; final report due three months after the allocation ends; results must be published except confidential parts and EuroHPC JU plus the AI Factory acknowledged; only proposals in English, with a civilian purpose and compliant with the AI Act; no double-awarding with a running EuroHPC allocation. The organisation proves its status with a valid VAT number and, if applicable, a PIC. The hour table on the page is an image: 5 000 GPU hours on every listed partition (read 2026-10-15); partition availability may be limited by demand. Apply Now on the page links to the portal root; the portal is a JavaScript app so the call number could not be verified from outside it. Questions: aif.access@eurohpc-ju.europa.eu. The 2026 call is portal /calls/60 (EHPC-AIF-2026PG), open until 31 December 2026 per the portal's public call list; no 2027 call is announced. After award: sign the AI Factory's Acceptable Use Policy at onboarding; final report on the EuroHPC template within 3 months after the allocation, with energy use and carbon footprint; acknowledge EuroHPC JU and the AI Factory in publications."
     },
     {
       "id": "eurohpc-fast-lane",
@@ -1098,16 +1149,35 @@
           "field": "workload_defined",
           "op": "eq",
           "value": true
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "hpc_experience"
         }
       ],
-      "apply_url": "https://access.eurohpc-ju.europa.eu/calls/49",
+      "apply_url": "https://access.eurohpc-ju.europa.eu/calls/59",
       "status_url": "https://www.eurohpc-ju.europa.eu/ai-factories/ai-factories-access-modes/fast-lane-access-ai-factories_en",
       "next_step": "Register on access.eurohpc-ju.europa.eu, open the Fast Lane call (calls/49), pick one system, and fill the online form with the VAT number, the project lead's work email, evidence that the code already runs on HPC, the GPU hours (at most 50 000) and the duration. The founder clicks submit.",
       "reference": "references/compute.md#eurohpc-fast-lane",
       "last_verified": "2026-10-15",
       "availability": "open",
       "group": "eurohpc-industry",
-      "notes": "Continuously open with no cut-off dates; proposals are assessed on a rolling basis; the page says approval within four working days. Process: eligibility check (self-assessment plus ethics self-assessment), technical assessment by the requested AI Factory, then first-come-first-served until the call's reserved resources are exhausted. Intended for HPC-ready users. One Fast Lane award per project lead at a time; no extensions and no additional resources; final report three months after the allocation ends; results published except confidential parts; English, civilian purpose, AI Act compliance, no double-awarding. The page itself shows no per-system table, only the 50 000 GPU hour cap and the three-month maximum. Questions: aif.access@eurohpc-ju.europa.eu."
+      "apply_requirements": [
+        "Account on access.eurohpc-ju.europa.eu with your organisation's own email; registration has a reCAPTCHA",
+        "Organisation VAT number, plus PIC if you have one",
+        "Online form in English with eligibility and ethics self-assessment",
+        "Evidence that the code already runs on HPC; the AI Factory runs a technical assessment and missing data means rejection",
+        "One system, at most 50 000 GPU hours, 1 to 3 months",
+        "No other EuroHPC allocation running for the same proposal",
+        "Apply to the 2026 call, portal /calls/59, open until 31 December 2026; the 2025 call /calls/49 is closed"
+      ],
+      "unclear": [
+        "What counts as HPC-ready is not defined; the technical assessment has no published checklist",
+        "Per-system thresholds are said to be on the web page but are only visible inside the portal",
+        "Open science: the Terms of Reference and the Access Policy disagree on what an SME must publish; ask aif.access@eurohpc-ju.europa.eu"
+      ],
+      "notes": "Continuously open with no cut-off dates; proposals are assessed on a rolling basis; the page says approval within four working days. Process: eligibility check (self-assessment plus ethics self-assessment), technical assessment by the requested AI Factory, then first-come-first-served until the call's reserved resources are exhausted. Intended for HPC-ready users. One Fast Lane award per project lead at a time; no extensions and no additional resources; final report three months after the allocation ends; results published except confidential parts; English, civilian purpose, AI Act compliance, no double-awarding. The page itself shows no per-system table, only the 50 000 GPU hour cap and the three-month maximum. Questions: aif.access@eurohpc-ju.europa.eu. The 2026 call is portal /calls/59 (EHPC-AIF-2026FL), open until 31 December 2026; /calls/49 is the closed 2025 call. After award: sign the AI Factory's Acceptable Use Policy at onboarding; final report on the EuroHPC template within 3 months after the allocation, with energy use and carbon footprint; acknowledge EuroHPC JU and the AI Factory in publications."
     },
     {
       "id": "eurohpc-large-scale",
@@ -1150,14 +1220,28 @@
           "value": true
         }
       ],
-      "apply_url": "https://access.eurohpc-ju.europa.eu/calls/48",
+      "apply_url": "https://access.eurohpc-ju.europa.eu/calls/58",
       "status_url": "https://www.eurohpc-ju.europa.eu/ai-factories/ai-factories-access-modes/large-scale-access-ai-factories_en",
       "next_step": "Test the production code first through Playground, then register on access.eurohpc-ju.europa.eu, open the Large Scale call (calls/48), pick one system and submit before a cut-off: the online form with the VAT number, the work email, the impact and innovation case, why a smaller system will not do, the resource schedule and the ethics self-assessment. The founder clicks submit.",
       "reference": "references/compute.md#eurohpc-large-scale",
       "last_verified": "2026-10-15",
       "availability": "open",
       "group": "eurohpc-industry",
-      "notes": "Continuously open with two cut-off dates per month that trigger evaluation; the page says approval within ten working days from the cut-off; specific cut-off dates are not listed on the page. Process: eligibility check, technical assessment by the AI Factory, expert evaluation by the AI Factory's Industrial Innovation Group on two criteria, innovation and impact, each scored 0 to 5 with a threshold of 3 per criterion and 6 overall, then a ranked list approved by the EuroHPC JU Executive Director. EIC Accelerator challenge awardees pass without further evaluation and have priority within the cut-off. Proposals below the per-system minimum request are administratively rejected; awards may be reduced in scope. Normally one Large Scale award per project lead at a time; proposals submitted after a cut-off roll into the next one; appeals to aif.access@eurohpc-ju.europa.eu within 15 days. No extensions or top-ups; final report three months after the end; English, civilian purpose, AI Act compliance, no double-awarding. Continuation proposals are possible with a progress or final report."
+      "apply_requirements": [
+        "Account on access.eurohpc-ju.europa.eu with your organisation's own email; VAT number and PIC if you have one",
+        "Online form in English: relevance, impact, why a large allocation on one system is needed and why a smaller system will not do, technical feasibility (Playground data recommended)",
+        "Project plan with a month-by-month resource consumption schedule for 3, 6 or 12 months",
+        "Eligibility and ethics self-assessment inside the form",
+        "Respect the per-system minimum GPU-hour request in the call text; below the minimum the proposal is rejected administratively",
+        "Submit before a cut-off at 10:00 CET: 30 October, 13 November, 30 November, 15 December 2026, 4 January 2027",
+        "Apply to the 2026 call, portal /calls/58; the 2025 call /calls/48 is closed"
+      ],
+      "unclear": [
+        "The web page says two cut-offs per month and lists no dates; the dates above come from the portal's public call list and are irregular",
+        "Per-system minimum and maximum GPU hours are only visible in the call text after login",
+        "No indication of how much is typically granted or how full the reserve is"
+      ],
+      "notes": "Continuously open with two cut-off dates per month that trigger evaluation; the page says approval within ten working days from the cut-off; specific cut-off dates are not listed on the page. Process: eligibility check, technical assessment by the AI Factory, expert evaluation by the AI Factory's Industrial Innovation Group on two criteria, innovation and impact, each scored 0 to 5 with a threshold of 3 per criterion and 6 overall, then a ranked list approved by the EuroHPC JU Executive Director. EIC Accelerator challenge awardees pass without further evaluation and have priority within the cut-off. Proposals below the per-system minimum request are administratively rejected; awards may be reduced in scope. Normally one Large Scale award per project lead at a time; proposals submitted after a cut-off roll into the next one; appeals to aif.access@eurohpc-ju.europa.eu within 15 days. No extensions or top-ups; final report three months after the end; English, civilian purpose, AI Act compliance, no double-awarding. Continuation proposals are possible with a progress or final report. The 2026 call is portal /calls/58 (EHPC-AIF-2026LS). Scored by the AI Factory's Industrial Innovation Group on innovation and impact, 0 to 5 each, thresholds 3 per criterion and 6 overall; decision within 10 working days after the cut-off; appeal by email to aif.access@eurohpc-ju.europa.eu within 15 days. EIC Accelerator awardees skip expert evaluation but upload the signed grant agreement. After award: sign the AI Factory's Acceptable Use Policy at onboarding; final report on the EuroHPC template within 3 months after the allocation, with energy use and carbon footprint; acknowledge EuroHPC JU and the AI Factory in publications."
     },
     {
       "id": "eurohpc-ai-for-science",
@@ -1199,13 +1283,28 @@
           "value": true
         }
       ],
-      "apply_url": "https://access.eurohpc-ju.europa.eu/",
+      "apply_url": "https://access.eurohpc-ju.europa.eu/calls/63",
       "status_url": "https://eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-ai-science-and-collaborative-eu-projects_en",
       "next_step": "Download the Project Scope and Plan template from the call page, write it on the template with a resource schedule and a Gantt chart, then register on access.eurohpc-ju.europa.eu, open the AI for Science and Collaborative EU Projects call, fill the online form, upload the plan as PDF and the ethics self-assessment, and submit before the next cut-off (30 October 2026, 10:00 CET). The project lead clicks submit.",
       "reference": "references/compute.md#eurohpc-ai-for-science",
       "last_verified": "2026-10-15",
       "availability": "open",
-      "notes": "Opened 15 May 2025; continuously open with a cut-off every two months. Cut-off dates on the page: 27 Feb, 30 Apr, 30 Jun, 1 Sep, 30 Oct and 11 Dec 2026 and 31 Dec 2033, all 10:00 CET (the Full Call Details PDF says 31 August instead of 1 September). Access starts at most one month after the cut-off. Process: administrative check, technical assessment by the hosting entity, peer review by two independent experts on excellence, innovation and impact, and quality and efficiency of implementation, each 0 to 5 with a threshold of 3 per criterion and 10 overall, then first-come-first-served until the cut-off's resources are depleted. EU-funded projects already evaluated by expert panels skip the expert evaluation and have priority. Proposals not following the template are administratively rejected. At most 10 percent of the allocation may go to inference. One AI for Science award per project lead at a time. Extensions of up to three months possible on request one month before the end. SMEs and startups doing private AI innovation are expected to use the Industrial Innovation modes; the company-in-EU-project exception cannot be expressed as a matcher rule, so ask. The hour table on the page is an image (read 2026-10-15): minimum 20 000 and maximum 90 000 node hours on each listed partition. Terms of Reference dated 20/05/2025. Questions: access@eurohpc-ju.europa.eu."
+      "apply_requirements": [
+        "Account on access.eurohpc-ju.europa.eu with your organisation's own email",
+        "Two-part proposal in English: the online form plus a Project Scope and Plan on the latest template from the call page, uploaded as PDF; wrong template, missing sections or extra pages mean rejection",
+        "Project plan with a resource consumption schedule and a GANTT chart; show why a smaller system will not do and that the code runs on the requested system",
+        "Ethics self-assessment inside the form",
+        "One system, 20 000 to 90 000 node hours; at most 10 percent of the allocation for inference",
+        "Submit before the cut-off: 30 October 2026 10:00 Luxembourg time, then 11 December 2026",
+        "Industrial applicants must prove participation in an EU-funded R&I project (Horizon Europe or Digital Europe)"
+      ],
+      "unclear": [
+        "The page lists a 1 September 2026 cut-off while the Full Call Details PDF says 31 August; the page also lists 31 December 2033",
+        "What proof of an EU-funded project is accepted, and whether Eurostars or EIC projects count, is not stated",
+        "Page limits for the Project Scope and Plan sit inside the template and exceeding them can cause rejection",
+        "The hour table is an image; the figures were read from a screenshot"
+      ],
+      "notes": "Opened 15 May 2025; continuously open with a cut-off every two months. Cut-off dates on the page: 27 Feb, 30 Apr, 30 Jun, 1 Sep, 30 Oct and 11 Dec 2026 and 31 Dec 2033, all 10:00 CET (the Full Call Details PDF says 31 August instead of 1 September). Access starts at most one month after the cut-off. Process: administrative check, technical assessment by the hosting entity, peer review by two independent experts on excellence, innovation and impact, and quality and efficiency of implementation, each 0 to 5 with a threshold of 3 per criterion and 10 overall, then first-come-first-served until the cut-off's resources are depleted. EU-funded projects already evaluated by expert panels skip the expert evaluation and have priority. Proposals not following the template are administratively rejected. At most 10 percent of the allocation may go to inference. One AI for Science award per project lead at a time. Extensions of up to three months possible on request one month before the end. SMEs and startups doing private AI innovation are expected to use the Industrial Innovation modes; the company-in-EU-project exception cannot be expressed as a matcher rule, so ask. The hour table on the page is an image (read 2026-10-15): minimum 20 000 and maximum 90 000 node hours on each listed partition. Terms of Reference dated 20/05/2025. Questions: access@eurohpc-ju.europa.eu. The 2026 call is portal /calls/63 (EHPC-AIF-2026SC). Peer review by two experts on excellence, innovation and impact, and quality of implementation, 0 to 5 each, threshold 3 per criterion and 10 overall, then first-come-first-served; access starts at most one month after the cut-off. A missing final report can disqualify the whole research group."
     },
     {
       "id": "lumi-ai-factory-finland",
@@ -1243,7 +1342,20 @@
       "reference": "references/compute.md#lumi-ai-factory-finland",
       "last_verified": "2026-10-15",
       "availability": "open",
-      "notes": "Consortium countries Czechia, Denmark, Estonia, Finland, Norway and Poland can use both EuroHPC JU calls and national access opportunities; AI Factory antennas are Belgium, Iceland, Latvia and Switzerland; other EU member states and Horizon Europe associated countries get computing only through EuroHPC JU calls. The national route is state aid: the company must know it has not used up its national state aid (maximum 300 000 euro in three years) and must report the value of the resources used. Free access is for RDI, not for 24/7 or commercial deployment. The project idea is evaluated on technical feasibility and risk; usually starts with a small pilot. A short final report is required after an EU-funded computing project; an NDA can cover sensitive parts. Commercial paid access is currently possible for Finnish companies. Datasets are free only for a research project granted LUMI resources. Fully confidential projects are pointed to national mechanisms such as Business Finland. The page gives no hour caps or durations."
+      "apply_requirements": [
+        "Contact form: inquiry type, name, email, company, type of organisation, country, domain area, message, privacy checkbox",
+        "Present the AI idea for an assessment of technical feasibility, risk and business potential; the resource need is estimated with the LUMI team",
+        "Then apply for the resources yourself: a EuroHPC call on access.eurohpc-ju.europa.eu, or the national route",
+        "National route: a Business Finland computing grant tied to a Business Finland R&D project, computing costs of at least 15 000 EUR, at most 100 000 EUR",
+        "Know your remaining state-aid headroom (300 000 EUR over three years) and report the value of resources used"
+      ],
+      "unclear": [
+        "No GPU-hour amount or duration is published; it depends on the EuroHPC call or the Business Finland decision",
+        "Whether a startup without Business Finland R&D funding can get free national compute is not stated; the computing grant PDF is undated",
+        "The 300 000 EUR state-aid ceiling and the 100 000 EUR grant maximum are different limits; confirm which applies",
+        "Commercial paid access is for Finnish companies only, priced on the CSC list, no figures on the page"
+      ],
+      "notes": "Consortium countries Czechia, Denmark, Estonia, Finland, Norway and Poland can use both EuroHPC JU calls and national access opportunities; AI Factory antennas are Belgium, Iceland, Latvia and Switzerland; other EU member states and Horizon Europe associated countries get computing only through EuroHPC JU calls. The national route is state aid: the company must know it has not used up its national state aid (maximum 300 000 euro in three years) and must report the value of the resources used. Free access is for RDI, not for 24/7 or commercial deployment. The project idea is evaluated on technical feasibility and risk; usually starts with a small pilot. A short final report is required after an EU-funded computing project; an NDA can cover sensitive parts. Commercial paid access is currently possible for Finnish companies. Datasets are free only for a research project granted LUMI resources. Fully confidential projects are pointed to national mechanisms such as Business Finland. The page gives no hour caps or durations. The page says 2 to 5 days from first contact to active work and that you start with a small pilot. Short final report after an EU-funded project; acknowledge LUMI AI Factory and EuroHPC JU."
     },
     {
       "id": "sigma2-ki-fabrikken",
@@ -1271,7 +1383,19 @@
       "reference": "references/compute.md#sigma2-ki-fabrikken",
       "last_verified": "2026-10-15",
       "availability": "open",
-      "notes": "The page states no prices, hour caps or durations and no formal eligibility criteria; it says the service portfolio is expanding and to get in touch. The service centre is funded jointly by the EuroHPC Joint Undertaking and the participating states FI, CZ, DK, EE, NO and PL. Ordinary national e-infrastructure allocations run through metacenter.no with a call in January (allocations from 1 April) and one in June (from 1 October), deadlines usually in February and August, open to industrial parties, but the user contribution model prices commercial and industry users (category C) at market price, 35 NOK per GPU-hour from 1 October 2025, so free GPU hours for a Norwegian company come through the EuroHPC AI Factory calls rather than the national allocation. Olivia is a Cray EX system with 448 GPUs for researchers across Norway. The English language link (/node/406) serves the same Norwegian content."
+      "apply_requirements": [
+        "Contact form on the KI-fabrikken page (name, email, phone, message, consent) or email contact@sigma2.no",
+        "For national allocations: log in to metacenter.no with Feide or register an OpenIdP account",
+        "Project leader with an employment at the organisation; students apply through a supervisor",
+        "Two calls a year, deadlines usually February and August, allocations from 1 April and 1 October; outside the calls, requests take a couple of working days subject to availability",
+        "Industry pays category C market price: 35 NOK per GPU hour from 1 October 2025; EU-funded projects can be exempt if Sigma2 is consulted first"
+      ],
+      "unclear": [
+        "The KI-fabrikken page states no prices, hour caps, durations or eligibility; whether a Norwegian startup gets AI Factory services free or at category C price is not stated, ask contact@sigma2.no",
+        "No application route beyond the contact form; the metacenter.no route is a separate paid allocation",
+        "Exact deadlines for the next call are not published"
+      ],
+      "notes": "The page states no prices, hour caps or durations and no formal eligibility criteria; it says the service portfolio is expanding and to get in touch. The service centre is funded jointly by the EuroHPC Joint Undertaking and the participating states FI, CZ, DK, EE, NO and PL. Ordinary national e-infrastructure allocations run through metacenter.no with a call in January (allocations from 1 April) and one in June (from 1 October), deadlines usually in February and August, open to industrial parties, but the user contribution model prices commercial and industry users (category C) at market price, 35 NOK per GPU-hour from 1 October 2025, so free GPU hours for a Norwegian company come through the EuroHPC AI Factory calls rather than the national allocation. Olivia is a Cray EX system with 448 GPUs for researchers across Norway. The English language link (/node/406) serves the same Norwegian content. Funding sources are mandatory in a national application and previous allocations must be reported. User accounts are signed by the project leader; accept the Terms of Use and Acceptable Use Policy."
     },
     {
       "id": "sweden-ai-factory",
@@ -1293,13 +1417,25 @@
           "value": "SE"
         }
       ],
-      "apply_url": "mailto:info@swedenaifactory.se",
+      "apply_url": "https://swedenaifactory.se/contact-us/",
       "status_url": "https://swedenaifactory.se/about/faq/",
-      "next_step": "Email info@swedenaifactory.se (or use the contact form) with the AI project and the compute need; the team helps choose the call and reviews the form, then the founder submits the application on access.eurohpc-ju.europa.eu and clicks submit.",
+      "next_step": "Fill the contact form at swedenaifactory.se/contact-us (the FAQ asks for the form rather than email): your company, sector, focus area, the expertise you need and a description of the AI project and the compute need. The team helps choose the EuroHPC call and checks your form before you submit it yourself on access.eurohpc-ju.europa.eu.",
       "reference": "references/compute.md#sweden-ai-factory",
       "last_verified": "2026-10-15",
       "availability": "open",
-      "notes": "mimer-ai.eu redirects (301) to swedenaifactory.se; the Mimer name appears only in the LinkedIn slug and the compute page. FAQ: everything is at no cost because it is publicly funded; compute applications for all organisations across Europe go through the central EuroHPC portal; large companies can use the resources free but must do open science, SMEs and startups are exempt. As of May 2026 the supercomputer is procured and expected to run by early 2027; meanwhile Swedish companies use the existing EuroHPC systems. The compute page lists hour figures that conflict between versions (AI for Science 360k vs 90 000 GPU hours; Large Scale 22 million vs 30 million), so quote the EuroHPC pages instead. Arrhenius at NAISS is the Swedish EuroHPC system in the Playground and AI for Science tables."
+      "apply_requirements": [
+        "Contact form with name, email, company, sector, focus area, expertise needed and a message that describes the AI project and the compute need; the FAQ asks for the form rather than email",
+        "The compute application itself is yours, on access.eurohpc-ju.europa.eu; Sweden AI Factory helps choose the call and checks the form",
+        "Organisational email for training events; private email providers are not accepted",
+        "Expert development help is capped at about one month and you must match the effort and bring the domain knowledge"
+      ],
+      "unclear": [
+        "Neither the FAQ nor the form says what the message must contain beyond 'tell us about your AI project'",
+        "No response time beyond 'shortly'",
+        "The compute page exists in two versions with different hour figures; quote the EuroHPC pages instead",
+        "Own supercomputer expected early 2027 and funding secured only until March 2028"
+      ],
+      "notes": "mimer-ai.eu redirects (301) to swedenaifactory.se; the Mimer name appears only in the LinkedIn slug and the compute page. FAQ: everything is at no cost because it is publicly funded; compute applications for all organisations across Europe go through the central EuroHPC portal; large companies can use the resources free but must do open science, SMEs and startups are exempt. As of May 2026 the supercomputer is procured and expected to run by early 2027; meanwhile Swedish companies use the existing EuroHPC systems. The compute page lists hour figures that conflict between versions (AI for Science 360k vs 90 000 GPU hours; Large Scale 22 million vs 30 million), so quote the EuroHPC pages instead. Arrhenius at NAISS is the Swedish EuroHPC system in the Playground and AI for Science tables. Everything is free: 'we are publicly funded and therefore everything offered is at no cost'. Large companies must publish some outcomes; SMEs and startups are exempt."
     },
     {
       "id": "naiss-allocations",
@@ -1332,7 +1468,20 @@
       "reference": "references/compute.md#naiss-allocations",
       "last_verified": "2026-10-15",
       "availability": "open",
-      "notes": "Resources are free for researchers at Swedish universities and research institutes and authorised by the Swedish Research Council. Small: technical evaluation within a week, reviewed weekly all year. Medium: technical evaluation, monthly, submission before the 15th. Large: scientific and technical evaluation twice a year by NAC; the Large Fall 2026 deadline is 16 October 2026 at 15:00 CEST, decisions in November, projects start 1 January 2027 for 6 or 12 months, and there are now upper limits on the capacity you can request. A PI cannot hold compute in a Medium and a Large project at the same time. Alvis and Tetralith are decommissioned, Bianca this autumn and Dardel on 1 January 2027. LUMI Sweden rounds now accept CPU-only requests. No GPU hour figures are published on these pages. Industry access is not mentioned."
+      "apply_requirements": [
+        "SUPR account (federated university identity or the form) and acceptance of the NAISS General Terms of Use",
+        "Proposal in SUPR: title, affiliation, English abstract, duration, start date, Research Council classification codes",
+        "Monthly GPU-hour need per system backed by calculations, plus software and licensing details; storage in GiB and a data management plan above the default",
+        "Activity reports filed for any previous NAISS project, or no new allocation",
+        "Small: PI at least a PhD student with a 20 percent appointment, supervisor named, reviewed weekly. Medium: at least assistant professor with a 60 percent appointment, submit before the 15th",
+        "Large Fall 2026: deadline 16 October 2026 15:00 CEST, PI CV, publication list and project description as PDFs, prior Medium experience; start 1 January 2027"
+      ],
+      "unclear": [
+        "No industry or company route is mentioned; free access is for researchers affiliated with Swedish academia, so a startup needs an academic PI",
+        "GPU-hour caps for Small and Medium are only visible inside SUPR",
+        "The 'how to register a proposal' guide referenced by the Small and Medium pages was not found"
+      ],
+      "notes": "Resources are free for researchers at Swedish universities and research institutes and authorised by the Swedish Research Council. Small: technical evaluation within a week, reviewed weekly all year. Medium: technical evaluation, monthly, submission before the 15th. Large: scientific and technical evaluation twice a year by NAC; the Large Fall 2026 deadline is 16 October 2026 at 15:00 CEST, decisions in November, projects start 1 January 2027 for 6 or 12 months, and there are now upper limits on the capacity you can request. A PI cannot hold compute in a Medium and a Large project at the same time. Alvis and Tetralith are decommissioned, Bianca this autumn and Dardel on 1 January 2027. LUMI Sweden rounds now accept CPU-only requests. No GPU hour figures are published on these pages. Industry access is not mentioned. Large round upper limits: Arrhenius GPU 25 000 GPU hours per month. After approval, request a login on each resource in SUPR; acknowledge NAISS and file an activity report."
     },
     {
       "id": "berzelius",
@@ -1365,7 +1514,21 @@
       "reference": "references/compute.md#berzelius",
       "last_verified": "2026-10-15",
       "availability": "open",
-      "notes": "Applications are normally reviewed monthly except July and December; requests at the default allocation count as small projects and get fast-track review; larger requests must be specified and justified. Normal maximum project period six months; continuation proposals are encouraged over new ones when adding Hopper to an existing Ampere allocation. The project must not process sensitive data. Access is granted by NSC via SUPR; access to one node type does not automatically grant the other. The Wallenberg funding requirement is the gate the matcher cannot express; ask about it. The NSC pages say documentation is moving to hpc.pages.naiss.se and older NSC pages may be outdated. Industry is not mentioned."
+      "apply_requirements": [
+        "SUPR account and acceptance of the NAISS General Terms of Use",
+        "Proposal in SUPR under the LiU Berzelius 2026 round, open until 1 January 2027",
+        "PI at least assistant professor (or docent with eligible funding) with active Wallenberg funding; attach the grant decision letter",
+        "Choose Ampere, Hopper or both and estimate GPU hours per month; the default 240 GPU hours per month is fast-tracked, more must be justified",
+        "Public abstract without confidential information; storage above 2 000 GiB justified in a data management plan",
+        "Submit before the 15th for same-month review; no reviews in July and December",
+        "Work must be intended for publication and must not process sensitive data"
+      ],
+      "unclear": [
+        "No industry or company route; a startup can only take part inside a Wallenberg-funded academic project",
+        "The SUPR round page says Hopper is in a test pilot phase while the documentation lets you request it; ask NSC before planning on H200 hours",
+        "Continuation after the normal six months is not described"
+      ],
+      "notes": "Applications are normally reviewed monthly except July and December; requests at the default allocation count as small projects and get fast-track review; larger requests must be specified and justified. Normal maximum project period six months; continuation proposals are encouraged over new ones when adding Hopper to an existing Ampere allocation. The project must not process sensitive data. Access is granted by NSC via SUPR; access to one node type does not automatically grant the other. The Wallenberg funding requirement is the gate the matcher cannot express; ask about it. The NSC pages say documentation is moving to hpc.pages.naiss.se and older NSC pages may be outdated. Industry is not mentioned. After approval: request a Berzelius login in SUPR (manual check up to one working day), activation link valid 7 days, TOTP two-factor. Export control applies to remote access from outside the EU, EEA or Switzerland."
     },
     {
       "id": "nvidia-inception",
@@ -1413,7 +1576,20 @@
       "reference": "references/compute.md#nvidia-inception",
       "last_verified": "2026-10-15",
       "availability": "open",
-      "notes": "No application fees, membership fees, equity, deadlines or cohorts; apply regardless of funding stage; NVIDIA reaches out after reviewing the application, no timeline stated. Cloud credits and DLI credits are described without amounts; preferred pricing is a rebate deducted from the standard supplier price on a subset of enterprise GPUs; Capital Connect is based on eligibility. The FAQ does not state a work-email-on-own-domain requirement; the form on the startups page asks for a Business Email Address. The application page is JavaScript-rendered with a captcha, so the single-field form could not be verified today. Cloud credits do not pay an LLM API invoice."
+      "apply_requirements": [
+        "Business email on your own domain; aliases such as info@ and generic domains such as gmail.com are not accepted",
+        "NVIDIA account registered with that business email; an existing account on an alias or generic address means creating a new one",
+        "Unique contact details for two contacts who will manage the profile; solo founders may still apply",
+        "Incorporation date, details about the business and products, and a pitch deck",
+        "Funding status, used to decide investor introductions; revenue is not required"
+      ],
+      "unclear": [
+        "No review timeline is stated",
+        "Cloud credit and training credit amounts are not published; preferred pricing is a rebate with no figure",
+        "The form beyond the business email step sits behind the NVIDIA account login",
+        "The embedded form on nvidia.com/startups shows a maintenance banner; use programs.nvidia.com/phoenix/application"
+      ],
+      "notes": "No application fees, membership fees, equity, deadlines or cohorts; apply regardless of funding stage; NVIDIA reaches out after reviewing the application, no timeline stated. Cloud credits and DLI credits are described without amounts; preferred pricing is a rebate deducted from the standard supplier price on a subset of enterprise GPUs; Capital Connect is based on eligibility. The FAQ does not state a work-email-on-own-domain requirement; the form on the startups page asks for a Business Email Address. The application page is JavaScript-rendered with a captcha, so the single-field form could not be verified today. Cloud credits do not pay an LLM API invoice. No fees, deadlines or cohorts; NVIDIA contacts you after review. Keep product and company details updated in the member portal to stay eligible for benefits."
     },
     {
       "id": "aws-activate",
@@ -2019,6 +2195,11 @@
             "pre_seed",
             "seed"
           ]
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "research_background"
         }
       ],
       "apply_url": "https://share.hsforms.com/2gw10xJqxRF--BnigBjZ_HQ50drh",
@@ -2189,6 +2370,11 @@
             "idea",
             "pre_seed"
           ]
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "kth_affiliation"
         }
       ],
       "apply_url": "https://kthinnovation.lime-forms.se/forms/awGkjUiUUAkAFlwC0BVn",
@@ -2225,6 +2411,11 @@
             "pre_seed",
             "seed"
           ]
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "kth_affiliation"
         }
       ],
       "apply_url": "https://apply-kth-innovation-launch.lovable.app/",
