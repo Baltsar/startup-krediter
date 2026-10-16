@@ -103,6 +103,13 @@ CONFIRMATIONS: dict[str, dict[str, tuple[str, str]]] = {
         "no": ("en partnerorganisasjon som har forpliktet seg til å søke med dere", "Har dere en partnerorganisasjon som har forpliktet seg til å søke sammen med dere?"),
         "da": ("en partnerorganisation, der har forpligtet sig til at søge med jer", "Har I en partnerorganisation, der har forpligtet sig til at søge sammen med jer?"),
     },
+    "dk_financial_foundation": {
+        "en": ("at least DKK 100 000 raised in risk capital or grants in three years, or DKK 250 000 gross profit in one year", "Has the company raised at least DKK 100 000 in risk capital or development grants in the last three years, or had a gross profit of at least DKK 250 000 in one of its last three annual accounts?"),
+        "sv": ("minst 100 000 DKK i riskkapital eller bidrag på tre år, eller 250 000 DKK i bruttovinst ett år", "Har bolaget tagit in minst 100 000 DKK i riskkapital eller utvecklingsbidrag de senaste tre åren, eller haft minst 250 000 DKK i bruttovinst i något av de tre senaste bokslut?"),
+        "fi": ("vähintään 100 000 DKK riskipääomaa tai avustuksia kolmessa vuodessa, tai 250 000 DKK bruttokate yhtenä vuonna", "Onko yhtiö kerännyt vähintään 100 000 DKK riskipääomaa tai kehitysavustuksia kolmen viime vuoden aikana, tai onko sen bruttokate ollut vähintään 250 000 DKK jossakin kolmesta viimeisestä tilinpäätöksestä?"),
+        "no": ("minst 100 000 DKK i risikokapital eller tilskudd på tre år, eller 250 000 DKK i bruttofortjeneste ett år", "Har selskapet hentet minst 100 000 DKK i risikokapital eller utviklingstilskudd de siste tre årene, eller hatt minst 250 000 DKK i bruttofortjeneste i ett av de tre siste regnskapene?"),
+        "da": ("mindst 100.000 kr. i risikovillig kapital eller tilskud på tre år, eller 250.000 kr. i bruttofortjeneste ét år", "Har virksomheden rejst mindst 100.000 kr. i risikovillig kapital eller udviklingstilskud de seneste tre år, eller haft en bruttofortjeneste på mindst 250.000 kr. i et af de seneste tre årsregnskaber?"),
+    },
     "swedish_need_owner": {
         "en": ("a Swedish need owner committed to the project", "Do you have a Swedish company or organisation committed as need owner for the project?"),
         "sv": ("en svensk behovsägare som förbundit sig till projektet", "Har ni ett svenskt bolag eller en organisation som förbundit sig som behovsägare i projektet?"),

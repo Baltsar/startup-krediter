@@ -1124,6 +1124,181 @@
       "notes": "Open on 2026-10-15: 'Open for applications / Always open'; 'Applications may be made at any time. Submitted applications are evaluated and grant awards are announced at least twice a year.' Rules and instructions for Fræ and Thróunarfræ are in Icelandic. Contact taeknithrounarsjodur@rannis.is. The fund's other categories (Sprout, Growth, Market grants) had the window 04.08.2026-15.09.2026 and were closed on the fund page; Patent grants are also always open. www.rannis.is redirects (301) to island.is/redirects/www.rannis.is/. Overhead at most 25 percent; equipment, software, travel, IP protection, marketing and company formation are not eligible costs. Return the signed contract within two weeks or the grant lapses; 80 percent paid at signing, 20 percent after the final report within 12 months."
     },
     {
+      "id": "innovationsfonden-innobooster",
+      "name": "Innobooster (Innovationsfonden / Danmarks Innovationsfond)",
+      "country": "DK",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Danish-registered SMEs, including startups, with a risky, knowledge-based development project inside one of the fund's themes: green tech, life science and welfare tech, critical and digital tech, or defence and security tech. The company must already have a financial foundation: at least DKK 100,000 raised in risk capital or development grants in the last three years, or gross profit of at least DKK 250,000 in one of the last three published annual accounts.",
+      "what": "Co-financing of up to 35% of the project's costs, between DKK 200,000 and DKK 5 million, for a development project of up to two years. Up to DKK 1 million falls under de minimis rules, above that under the block exemption.",
+      "amount": {
+        "text": "DKK 200,000 to 5 million, covering up to 35% of project costs",
+        "min": 200000,
+        "max": 5000000,
+        "currency": "DKK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "DK"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company"
+        },
+        {
+          "field": "employees",
+          "op": "lt",
+          "value": 250
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "dk_financial_foundation"
+        }
+      ],
+      "apply_url": "https://danmarksinnovationsfond.dk/da/programmer/innobooster/",
+      "status_url": "https://danmarksinnovationsfond.dk/da/programmer/innobooster/",
+      "next_step": "Read the 2026 guidelines for the de minimis or block-exemption frame, check which pool is open under 'Søgemuligheder', and draft the project and budget in the template. The founder creates the e-grant user and clicks submit.",
+      "reference": "references/nordic-grants.md#innovationsfonden-innobooster",
+      "last_verified": "2026-10-16",
+      "availability": "closed",
+      "apply_requirements": [
+        "An e-grant account, created with MitID or a username and password",
+        "An open call listed under 'Søgemuligheder' on the program page; pick the frame that matches the amount (DKK 200,000 to 1 million de minimis, or DKK 1 to 5 million block exemption)",
+        "Application text in Danish or English describing the company, the problem, the solution, the value inside the chosen theme, the team and the project plan",
+        "A budget in Innovationsfonden's fixed template, uploaded with the application",
+        "Own or other financing for at least 65% of the project costs, since Innobooster covers at most 35%",
+        "A statement of why the project fits the chosen theme; it competes only against applications in that theme",
+        "Only one application per project under review at a time; an unsent draft is deleted when the period closes at 12:00",
+        "Patience: applications are judged in pools, and the estimated answer comes four to seven months after the pool closes"
+      ],
+      "unclear": [
+        "On 2026-10-16 the page lists no open call ('Der er lige nu ingen søgemuligheder') although it says Innobooster is open most of the year; the next 2027 pool dates are not published",
+        "Pool 3 of 2026 lists an estimated answer in November to December 2027, which looks like a typo for 2026",
+        "The exact success rate for a startup's theme varies from about 7% to 46% per pool"
+      ],
+      "notes": "innovationsfonden.dk now redirects to danmarksinnovationsfond.dk; the old domain answers 454 to plain fetches, the new one is readable in a browser. Pools in 2026: 22 Jan to 12 Mar, 26 Mar to 13 May, 27 May to 6 Aug, 20 Aug to 15 Oct, each about DKK 71.5 to 78.9 million; the last 2026 pool closed on 15 Oct 2026 and no call was listed on 16 Oct 2026. 2025: 1,189 applications, 250 grants, 21% success. Erhvervshusene give free help with writing the application. 'Med Innobooster kan I søge mellem 200.000 kr. og 5 mio. kr. til jeres udviklingsprojekt.'"
+    },
+    {
+      "id": "forskningsradet-skattefunn",
+      "name": "SkatteFUNN (Norwegian R&D tax incentive, paid out in cash to companies without taxable profit)",
+      "country": "NO",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Any company registered in the Brønnøysund registers and tax-liable in Norway, of any size, industry or legal form, that runs a defined R&D project to develop or improve a product, service or process. A startup with no taxable profit still gets the support paid out.",
+      "what": "A tax deduction of 19 percent of approved R&D project costs on a cost base of up to 25 MNOK per company per income year. If the company runs a loss the support is paid out in cash through the tax settlement.",
+      "amount": {
+        "text": "19 % of approved R&D costs; cost base capped at 25 MNOK per company per year, so up to 4.75 MNOK per year",
+        "max": 4750000,
+        "currency": "NOK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "NO"
+        },
+        {
+          "field": "legal_form",
+          "op": "in",
+          "value": [
+            "company",
+            "sole_trader"
+          ]
+        }
+      ],
+      "apply_url": "https://www.forskningsradet.no/skattefunn/sok/",
+      "status_url": "https://www.forskningsradet.no/utlysninger/2026/skattefunn-skattefradrag-for-forskning-og-utvikling-i-et-nyskapende-naringsliv/",
+      "next_step": "Check with Forskningsrådet's Prosjektkanvas that your project counts as R&D, then create a Min side profile and draft one project with work packages and budget. The founder submits the application on Min side.",
+      "reference": "references/nordic-grants.md#forskningsradet-skattefunn",
+      "last_verified": "2026-10-16",
+      "availability": "open",
+      "apply_requirements": [
+        "User profile on Forskningsrådet's Min side; create it by logging in before you start the form",
+        "Project leader and an organisation representative must accept their role invitations on Min side before the application can be sent",
+        "One R&D project per application: what is new, which R&D challenge you solve, the method, and work packages with budget",
+        "Project must be targeted, limited and separable from ordinary operations; routine development, customer surveys and training are not eligible",
+        "Submit by 1 September to be guaranteed a decision within the year and the deduction for that income year",
+        "Company must not be a 'foretak i vanskeligheter' at approval; older than three years and lost more than half its equity counts as one",
+        "Sole traders can only claim documented paid work, never the owner's unpaid hours",
+        "Annual report to Forskningsrådet by 1 March and a separate project account for the tax return"
+      ],
+      "unclear": [
+        "Page does not state the hourly rate cap for own staff",
+        "Changes from 2027 are announced (webinar 30 November 2026) but not described"
+      ],
+      "notes": "Rolling intake all year; guarantee deadline 1 September, later applications are processed in order and may slip into next year and lose that year's deduction. Latest permitted project start for the 2026 call is 31 December 2026. Approval is normally given for up to three years. No residence requirement for founders; the entity must be registered in Norway and tax-liable there, a NUF branch counts. Companies in collaborative projects each file their own application and the 25 MNOK cap also applies per project. Forskningsrådet advises applying to IPN first and SkatteFUNN after. 'SkatteFUNN-støtten gis som fradrag i skatt eller som utbetaling dersom bedriften ikke er i skatteposisjon.'"
+    },
+    {
+      "id": "finnvera-alkutakaus",
+      "name": "Finnvera Alkutakaus (Start Guarantee)",
+      "country": "FI",
+      "kind": "loan",
+      "need": [
+        "money"
+      ],
+      "who": "Newly founded Finnish SMEs and registered private entrepreneurs owned by private individuals, entered in the Trade Register no more than three years ago, that need a bank loan for investments, working capital or development. Cooperatives, associations, farming, forestry and property developers are excluded.",
+      "what": "A Finnvera guarantee covering up to 80 percent of a bank loan so the bank lends without full collateral from the founders. Maximum 80,000 EUR guarantee per project at one time and 160,000 EUR in total per company.",
+      "amount": {
+        "text": "Guarantee of 10,000 to 80,000 EUR per project, up to 160,000 EUR in total per company, covering up to 80 % of the bank loan",
+        "min": 10000,
+        "max": 80000,
+        "currency": "EUR"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "FI"
+        },
+        {
+          "field": "legal_form",
+          "op": "in",
+          "value": [
+            "company",
+            "sole_trader"
+          ]
+        },
+        {
+          "field": "age_years",
+          "op": "lte",
+          "value": 3
+        },
+        {
+          "field": "employees",
+          "op": "lt",
+          "value": 250
+        }
+      ],
+      "apply_url": "https://www.finnvera.fi/eng/products/guarantees/start-guarantee",
+      "status_url": "https://www.finnvera.fi/eng/products/guarantees/start-guarantee",
+      "next_step": "Prepare a business plan and a loan request and take them to your bank; ask the bank to apply for Finnvera's Start Guarantee. The founder signs the bank's credit application and the bank submits to Finnvera.",
+      "reference": "references/nordic-grants.md#finnvera-alkutakaus",
+      "last_verified": "2026-10-16",
+      "availability": "open",
+      "apply_requirements": [
+        "Apply for the loan at a Finnish bank; the bank files the Start Guarantee application with Finnvera, you never apply to Finnvera directly",
+        "Company owned by private individuals, not by other companies or funds",
+        "Acceptable credit ratings for the company and its responsible persons; no bankruptcy entries or payment defaults",
+        "Principal shareholders give personal guarantees covering 25 % of the guarantee amount, at least 3,000 EUR each",
+        "Budget for a guarantee commission of 1.75 % per year and a one-off service fee of 1 % (minimum 150 EUR)",
+        "Report earlier de minimis aid; the guarantee counts as de minimis",
+        "Finnvera usually decides within three business days; the loan can be drawn after Finnvera's notice of effectiveness to the bank"
+      ],
+      "unclear": [
+        "Page has no explicit open or closed statement; the guarantee is a continuous product",
+        "Page does not list which banks participate"
+      ],
+      "notes": "No self-financing requirement. Not usable for buying a company, own shares or business premises, or for export financing; larger needs go to the ordinary Finnvera Guarantee. A new Start Guarantee can be requested at least two months after the previous decision. Founders need not live in Finland but the company must be a Finnish company or a registered Finnish private entrepreneur. 'Your bank files an application on your behalf.'"
+    },
+    {
       "id": "eic-accelerator",
       "name": "EIC Accelerator",
       "country": "EU",
@@ -2965,6 +3140,118 @@
       "last_verified": "2026-10-15",
       "availability": "closed",
       "notes": "'Join our waitlist for our upcoming batch': no batch dates or deadline on the page; the Nordic Demo Day finale is listed as 18 May without a year. The page is inconsistent on the Skane Ventures instrument ('500k SEK equity investment' in one list, '500k SEK convertible investment' in another). An older section mentions 'A convertible note of EUR 50,000 ... issued to all startups on the batch'. Program length not stated. Southern Sweden is a stated requirement but there is no region field. fasttrackmalmo.com (read 2026-10-15) describes a free four-day VC fundraising bootcamp 2-5 June 2026 at Minc, deadline May 24, apply via minc.typeform.com/to/WxJDNumm. Record country is SE, so Danish founders are filtered before the rule runs. Contact nino@fasttrackmalmo.com."
+    },
+    {
+      "id": "accelerace-pre-seed",
+      "name": "Accelerace pre-seed funding (Accelerace Invest II)",
+      "country": "EU",
+      "kind": "accelerator",
+      "need": [
+        "money"
+      ],
+      "who": "Pre-seed startups from the Nordic and Baltic countries, before customers, revenue or traction. The company does not need to be incorporated yet when the pitch deck is sent.",
+      "what": "A DKK 1,000,000 standardized convertible loan with a conversion cap, a place in a seven-week investment program ending with an invite-only Investor Day in Copenhagen, and lifetime access to the Allstars founder community and mentors. The startup pays a one-time fee of DKK 250,000.",
+      "amount": {
+        "text": "DKK 1,000,000 convertible loan; a one-time fee of DKK 250,000 is paid back to Accelerace",
+        "min": 1000000,
+        "max": 1000000,
+        "currency": "DKK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "in",
+          "value": [
+            "DK",
+            "SE",
+            "NO",
+            "FI",
+            "IS",
+            "EE",
+            "LV",
+            "LT"
+          ]
+        },
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "idea",
+            "pre_seed"
+          ]
+        }
+      ],
+      "apply_url": "https://accelerace.io/submit-deck/",
+      "status_url": "https://accelerace.io/funding/",
+      "next_step": "Download the term sheet, prepare a pitch deck PDF and a website, then fill in the submit-deck form. The founder clicks submit.",
+      "reference": "references/accelerators-se.md#accelerace-pre-seed",
+      "last_verified": "2026-10-16",
+      "availability": "open",
+      "apply_requirements": [
+        "A pitch deck as PDF, at most 25 MB, uploaded through the web form",
+        "A website URL for the startup",
+        "The current or intended country of incorporation, plus founder name, email and phone",
+        "Acceptance of the standard convertible loan terms; the page says terms are not negotiable and links a term sheet to download",
+        "Budget for the one-time fee of DKK 250,000 that comes out of the investment",
+        "Time for a seven-week hybrid investment program with in-person sessions in Copenhagen, two batches per year"
+      ],
+      "unclear": [
+        "Conversion cap, interest and maturity of the loan are only in the downloadable term sheet, not on the page",
+        "Decision time after submitting the deck is not stated",
+        "The FAQ page describes an older program that took no equity and required a Danish CVR number; the funding page does not repeat that requirement",
+        "Whether a team incorporated outside the Nordics and Baltics can apply if it intends to incorporate there"
+      ],
+      "notes": "Rolling intake through the deck form; no deadline on the page. About 65% of the first fund's portfolio raised follow-on funding. Accelerace very rarely takes a board seat. The investment program runs twice a year, hybrid with in-person parts in Copenhagen. 'We invest 1 000 000 DKK before you have customers, revenue or traction, using a standardized convertible loan with a conversion cap.'"
+    },
+    {
+      "id": "kiuas-founder-collective",
+      "name": "Kiuas (founder collective, Otaniemi)",
+      "country": "FI",
+      "kind": "accelerator",
+      "need": [
+        "credits"
+      ],
+      "who": "Founders at idea or early stage, solo or in a team, who want to build a high-growth company; no registered company, co-founder or Otaniemi presence required. Kiuas exists to build companies from Finland.",
+      "what": "Free, equity-free 4-week sprints you can chain: weekly catch-ups, playbooks for validating ideas and landing first customers, investor and operator introductions, building tools and credits worth up to 500 kEUR, and a workspace in Otaniemi, Espoo.",
+      "amount": {
+        "text": "No cash; building tools and credits worth up to 500,000 EUR",
+        "max": 500000,
+        "currency": "EUR"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "FI"
+        },
+        {
+          "field": "stage",
+          "op": "in",
+          "value": [
+            "idea",
+            "pre_seed",
+            "seed"
+          ]
+        }
+      ],
+      "apply_url": "https://kiuas.typeform.com/to/lH9EvcaO",
+      "status_url": "https://www.kiuas.com/accelerator",
+      "next_step": "Write two paragraphs on the problem, what you have tested and your goal for the next four weeks, then fill in the Typeform. The founder submits the form and takes the fit conversation.",
+      "reference": "references/accelerators-se.md#kiuas-founder-collective",
+      "last_verified": "2026-10-16",
+      "availability": "open",
+      "apply_requirements": [
+        "Fill in the Typeform application or email hello@kiuas.com to start a conversation",
+        "A conversation with the Kiuas team about what you are building and where you are headed decides fit",
+        "Set your own goal for the first 4-week sprint, from testing an idea to landing first customers",
+        "Commit to a weekly catch-up; the sprint runs hybrid and the Otaniemi office is optional"
+      ],
+      "unclear": [
+        "Page does not state open or closed; intake appears continuous with no cohorts",
+        "Page does not list which tools and credits make up the 500 kEUR value",
+        "The page says Kiuas builds companies from Finland but states no registration or residence rule; ask hello@kiuas.com whether a team building from another Nordic country can join"
+      ],
+      "notes": "The page says Kiuas is not an accelerator: no fixed cohort, no curriculum, no demo day; sprints repeat as long as it works. Free thanks to partners. Page published 25 September 2026. No stated requirement on company registration or founder residence; the mission is companies from Finland. 'No fees, no equity.'"
     }
   ]
 }

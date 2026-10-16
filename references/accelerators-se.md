@@ -212,3 +212,29 @@ Accelerators trade equity, warrants or convertible instruments for money, coachi
 - **Verified:** 2026-10-15
 - **Evidence:** "Are a standout tech startup in Malmö ready to expand."
 - **Gotchas:** Lower sections of the page repeat the Fast Track Malmo batch text (EUR 50k note, Nordic Demo Day), which does not belong to Minc Scale.
+
+## Accelerace pre-seed funding (Accelerace Invest II) {#accelerace-pre-seed}
+
+- **Who:** Pre-seed startups from the Nordic and Baltic countries, before customers, revenue or traction. The company does not need to be incorporated yet when the pitch deck is sent.
+- **What:** A DKK 1,000,000 standardized convertible loan with a conversion cap, a place in a seven-week investment program ending with an invite-only Investor Day in Copenhagen, and lifetime access to the Allstars founder community and mentors. The startup pays a one-time fee of DKK 250,000.
+- **Amount:** DKK 1,000,000 convertible loan; a one-time fee of DKK 250,000 is paid back to Accelerace
+- **Before you apply:** 1. A pitch deck as PDF, at most 25 MB, uploaded through the web form. 2. A website URL for the startup. 3. The current or intended country of incorporation, plus founder name, email and phone. 4. Acceptance of the standard convertible loan terms; the page says terms are not negotiable and links a term sheet to download. 5. Budget for the one-time fee of DKK 250,000 that comes out of the investment. 6. Time for a seven-week hybrid investment program with in-person sessions in Copenhagen, two batches per year.
+- **Unclear:** Conversion cap, interest and maturity of the loan are only in the downloadable term sheet, not on the page. Decision time after submitting the deck is not stated. The FAQ page describes an older program that took no equity and required a Danish CVR number; the funding page does not repeat that requirement. Whether a team incorporated outside the Nordics and Baltics can apply if it intends to incorporate there.
+- **How to apply:** Download the term sheet, prepare a pitch deck PDF and a website, then fill in the submit-deck form. The founder clicks submit. Start at https://accelerace.io/submit-deck/.
+- **Status page:** https://accelerace.io/funding/
+- **Verified:** 2026-10-16
+- **Evidence:** "s portfolio raised follow-on funding. Accelerace very rarely takes a board seat. The investment program runs twice a year, hybrid with in-person parts in Copenhagen. "
+- **Gotchas:** Rolling intake through the deck form; no deadline on the page. About 65% of the first fund's portfolio raised follow-on funding. Accelerace very rarely takes a board seat. The investment program runs twice a year, hybrid with in-person parts in Copenhagen. 'We invest 1 000 000 DKK before you have customers, revenue or traction, using a standardized convertible loan with a conversion cap.'
+
+## Kiuas (founder collective, Otaniemi) {#kiuas-founder-collective}
+
+- **Who:** Founders at idea or early stage, solo or in a team, who want to build a high-growth company; no registered company, co-founder or Otaniemi presence required. Kiuas exists to build companies from Finland.
+- **What:** Free, equity-free 4-week sprints you can chain: weekly catch-ups, playbooks for validating ideas and landing first customers, investor and operator introductions, building tools and credits worth up to 500 kEUR, and a workspace in Otaniemi, Espoo.
+- **Amount:** No cash; building tools and credits worth up to 500,000 EUR
+- **Before you apply:** 1. Fill in the Typeform application or email hello@kiuas.com to start a conversation. 2. A conversation with the Kiuas team about what you are building and where you are headed decides fit. 3. Set your own goal for the first 4-week sprint, from testing an idea to landing first customers. 4. Commit to a weekly catch-up; the sprint runs hybrid and the Otaniemi office is optional.
+- **Unclear:** Page does not state open or closed; intake appears continuous with no cohorts. Page does not list which tools and credits make up the 500 kEUR value. The page says Kiuas builds companies from Finland but states no registration or residence rule; ask hello@kiuas.com whether a team building from another Nordic country can join.
+- **How to apply:** Write two paragraphs on the problem, what you have tested and your goal for the next four weeks, then fill in the Typeform. The founder submits the form and takes the fit conversation. Start at https://kiuas.typeform.com/to/lH9EvcaO.
+- **Status page:** https://www.kiuas.com/accelerator
+- **Verified:** 2026-10-16
+- **Evidence:** see the status page.
+- **Gotchas:** The page says Kiuas is not an accelerator: no fixed cohort, no curriculum, no demo day; sprints repeat as long as it works. Free thanks to partners. Page published 25 September 2026. No stated requirement on company registration or founder residence; the mission is companies from Finland. 'No fees, no equity.'
