@@ -134,62 +134,85 @@ to apply, a quoted sentence from the page, and gotchas.
 
 ## Step 4: Answer
 
-Open with two lines a founder on a phone can stop after: the verdict in one
-sentence (which door fits best and what decides it), and the one question that
-moves them forward. Everything below supports those two lines.
+The answer has two stages. The first answer is short so a founder on a phone
+can see the options and choose. The full checklist comes when they choose a
+door. Nothing is hidden: the first answer says how many requirements each door
+carries, so no one walks to a site thinking it is simple.
 
-Then, for each door in `doors` (three at most), in this order:
+### Stage A: the first answer (verdict and top three)
+
+1. **Verdict**, one sentence: which door fits best and what decides it.
+2. **The question** that moves them forward, one sentence (rule below).
+3. **Top three doors**, one line each, in this shape:
+
+   `◐ EuroHPC Playground: 5 000 GPU-timmar gratis. Avgör: projektledarens anställning. 11 krav i ansökan, 2 oklarheter.`
+
+   Head symbol from the glyph (`●` eligible, `◐` unknown, `×` blocked), the
+   name, the amount in the founder's language, the one thing that decides it
+   (the first `?` or the hardest stopper in `apply_requirements`), and the
+   counts of `apply_requirements` and `unclear`. Mark a closed door as closed.
+4. **One closing line**: "Vilken vill ni titta på? Då får ni hela listan över
+   vad ansökan kräver." Add `more` and `unlocks` lines (below) only if they
+   exist.
+
+No glyph blocks, no checklists and no links in Stage A. Aim for under 150
+words. Before you name an amount or say a door is open, read its `status_url`
+(Step 3); in Stage A you do not need the linked conditions pages yet.
+
+If the founder named one specific program ("har vi en chans på Vinnova?"), skip
+Stage A and give that door in Stage B form directly.
+
+### Stage B: when the founder picks a door
+
+When the founder names a door, a number, or says "visa", give that door in full:
 
 1. The `glyph` in a code block, verbatim except that the `→` lines are
    translated into the founder's language (amounts are English in the data).
    `●` met, `×` failed, `○` unknown, `?` the next question, `→` amount,
-   siblings, live closing date, closed or stale note. Head: `●` eligible, `◐`
-   unknown, `×` blocked.
+   siblings, live closing date, closed or stale note.
 2. One sentence: what the door is and whether it fits.
-3. **Before you apply**: the door's `apply_requirements`, short, translated.
-   The `○` lines in the glyph are already the open eligibility questions; do
-   not repeat them. This list is what keeps the trip to the site from ending in
-   a surprise. Do not drop items; do not pad.
-4. **Unclear**: one line per item, phrased for the founder: what is unclear,
-   and whom to ask. Skip if empty.
+3. **Before you apply**: every item in `apply_requirements`, short, translated,
+   plus anything the linked conditions page adds (Step 3). The `○` lines in the
+   glyph are already the open eligibility questions; do not repeat them. This
+   list is what keeps the trip to the site from ending in a surprise. Do not
+   drop items; do not pad.
+4. **Unclear**: one line per item: what is unclear, and whom to ask.
 5. The next step from `next_step`, and the link.
+6. One line: "Vill ni se nästa dörr, eller svara på frågan ovan?"
 
-Then, each at most one line:
+If the founder asks for several doors in full, give them one after another in
+this form. Shorten sentences, never the checklist or the glyph.
 
-- `more`: "Fler dörrar: X, Y, Z. Vill du se dem?" Mark a closed door as closed.
-  Leave out doors with `foreign: true` unless the founder asked about other
-  countries or lives in one, and leave out kinds the founder did not ask for.
+### Lines that apply to both stages
+
+- `more`: "Fler dörrar: X, Y, Z." Mark a closed door as closed. Leave out doors
+  with `foreign: true` unless the founder asked about other countries or lives
+  in one, and leave out kinds the founder did not ask for.
 - `unlocks`: "Registrerar ni ett AB öppnas dessutom: A, B, C." Each entry has
   `name` and `availability`, open doors first; name at most five, then "och N
   till", and mark closed ones as closed. A key such as `country:DK` lists doors
   a company registered in that country would open, for a founder who lives
   there: "Ett bolag registrerat i Danmark skulle öppna: A, B."
 
-Length: about 150 to 220 words per door in full, so a three-door answer lands
-around 500 to 700 words, with the two-line verdict on top for the founder who
-reads nothing else. If you are over, shorten the sentences, never the
-checklist or the glyph.
-
 Order: keep the matcher's order, except that doors of the kind the founder
 stressed most ("vi behöver GPU") come first.
 
-The question at the top is the first `?` of the best door of the kind the
-founder stressed most. If that door has no open question, take the first `?` of
-the next door of that same kind among those you show. If none of the doors you
-show has an open question, ask the question whose answer opens the most doors
-in `unlocks` ("Tänker ni registrera ett aktiebolag nu?"). One question, not a
-form.
+The question is the first `?` of the best door of the kind the founder stressed
+most. If that door has no open question, take the first `?` of the next door
+of that kind among those you show. If none has one, ask the question whose
+answer opens the most doors in `unlocks` ("Tänker ni registrera ett aktiebolag
+nu?"). One question, not a form.
 
 If a checklist item carries a date or figure the page you read today does not
 show, keep the item and say where the date comes from ("enligt portalens
 call-lista: öppen till 31 december 2026"), or drop only the date.
 
-A door is open only when it is eligible **and** the founder has seen its
-checklist and unclear points. A door whose page could not be read today is not
-open; say so.
+Never call a door ready to apply for until the founder has seen its Stage B
+checklist and unclear points. In Stage A say "passar på det vi vet", not "ni
+kan söka". A door whose page could not be read today is not open; say so.
 
 When two kinds of door were asked for, say in one line which door is for which.
-When credit doors are unknown only because the stack is unknown, do not print
+When credit doors are unknown only because the stack is unknown, do not list
 them: say credits depend on the stack and ask which vendors they use.
 
 Never write a percentage or a promise. Vinnova draws lots among equally strong
@@ -198,23 +221,32 @@ by judgment. Say what the process is instead.
 
 Worked example. Founder: "Svenskt AB, två år, fyra personer. Har vi en chans på
 gratis GPU?" Profile: `{"country":"SE","legal_form":"company","age_years":2,
-"employees":4,"need":["compute"],"lang":"sv"}`. The doors: Sweden AI Factory
-and EuroHPC Playground, with Fast Lane and Large Scale under `also`. Answer:
-"Ja, EuroHPC Playground passar ett svenskt AB och ger 5 000 GPU-timmar gratis;
-det som avgör är projektledarens anställning. Är projektledaren anställd minst
-tre månader efter att GPU-tiden tar slut?" Then each glyph with its `→` lines
-in Swedish; one sentence each; Playground's checklist in Swedish (konto på
-portalen med er egen e-postdomän och en captcha ni löser själva, momsnummer,
-formulär på engelska, etisk självskattning, ett system, teknisk underbyggnad
-för koden, ingen annan pågående EuroHPC-allokering, 2026-callen på /calls/60);
-the unclear line about open science; next step and link; "Fler dörrar" if any.
+"employees":4,"need":["compute"],"lang":"sv"}`. Stage A:
+
+> Ja, EuroHPC Playground passar ett svenskt AB på det vi vet och ger 5 000
+> GPU-timmar gratis. Det som avgör är projektledarens anställning.
+>
+> Är projektledaren anställd minst tre månader efter att GPU-tiden tar slut?
+>
+> ◐ EuroHPC Playground: 5 000 GPU-timmar gratis, 1 till 3 månader. Avgör: anställningen. 11 krav i ansökan, 3 oklarheter.
+> ● Sweden AI Factory: gratis hjälp att välja call och granska ansökan, inga egna timmar än. 4 krav, 4 oklarheter.
+> ◐ EuroHPC Fast Lane: upp till 50 000 GPU-timmar. Kräver att koden redan körs på en HPC-maskin.
+>
+> Vilken vill ni titta på? Då får ni hela listan över vad ansökan kräver.
+
+Founder: "Playground." Stage B: the Playground glyph with `→` lines in Swedish,
+one sentence, the full checklist in Swedish (konto på portalen med er egen
+e-postdomän och en captcha ni löser själva, momsnummer, formulär på engelska,
+etisk självskattning, ett system, teknisk underbyggnad för koden, ingen annan
+pågående EuroHPC-allokering, 2026-callen på /calls/60, och allt efter
+tilldelningen), the unclear line about open science, next step and link.
 
 ## Step 5: Follow up
 
-Put the founder's answer into the same profile, rerun, show what changed. One
-`○` that became `●` is the whole update; do not restart. If the previous turn
-only asked for the country and showed no doors, the next answer is a full
-Step 4 answer. When the founder
+If the founder picks a door, answer in Stage B. If they answer the question,
+put it into the same profile, rerun, and show what changed: one `○` that became
+`●` is the whole update; do not restart. If the previous turn only asked for the
+country and showed no doors, the next answer is a Stage A answer. When the founder
 confirms something a `confirmed` key covers ("ja, vi är KTH-studenter"), add
 the key and rerun.
 
