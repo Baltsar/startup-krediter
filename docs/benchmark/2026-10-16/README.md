@@ -21,11 +21,16 @@ without knowing which answer came from where.
 - **Size:** six questions, one run each. Treat the numbers as a strong signal,
   not a statistic.
 
-Four questions were also run the day before, and the skill lost two of them.
-Those two losses led to fixes: Almi Verifieringsmedel was missing, AWS Activate
-did not match a founder building on Claude, and equity and fee programs ranked
-above grants. The two held-out questions, Norway and Denmark, were written after
-the fixes and did not inform them.
+Four of the questions were first run earlier the same day against commit
+`a65d470`, and the skill lost two of them. Those losses led to fixes: Almi
+Verifieringsmedel was missing, AWS Activate did not match a founder building on
+Claude, and equity and fee programs ranked above grants. The new AWS and Almi
+records were written with the requirements the first-round graders had listed,
+which makes those two questions easier for the skill in the second round. The
+answers without the skill for those four questions are the first-round answers,
+reused because they do not depend on the skill. The two held-out questions,
+Norway and Denmark, were written after the fixes and did not inform them, so
+read their numbers first.
 
 | Question | Language | Held out |
 |---|---|---|
@@ -40,7 +45,9 @@ the fixes and did not inform them.
 
 | | With skill | Without skill |
 |---|---|---|
-| Requirements that stop an application, stated for the program the founder picked | 66 of 69 (96%) | 37 of 74 (50%) |
+| Stoppers stated for the program the founder picked, held-out questions | 15 of 16 (94%) | 11 of 21 (52%) |
+| Stoppers stated, the four questions that informed the fixes | 51 of 53 (96%) | 26 of 53 (49%) |
+| Stoppers stated, all six | 66 of 69 (96%) | 37 of 74 (50%) |
 | Picked the better first program | 1 question | 1 question |
 | Same first program | 4 questions | 4 questions |
 | Overall verdict from the grader | better in 5 (2 narrowly) | better in 1 (narrowly) |
@@ -90,6 +97,10 @@ lists differ in length.
 - **It called an AWS FAQ answer broken** when the answer was there; the page
   renders it late.
 - **It is not faster.** Reading every page it quotes costs time and tokens.
+- **It states some rules a little stronger than the page.** The graders noted
+  "Fast Lane requires code already running on HPC" where the page says
+  HPC-ready, the 12-month funding rule placed on one AWS tier only, and "no
+  credits without a partner VC" where OpenAI also hands out credits at events.
 
 ## Not measured
 

@@ -70,15 +70,17 @@ We asked six founder questions to the same AI model twice: with the skill, and w
 
 | | Search engine | AI without the skill | AI with the skill |
 |---|---|---|---|
-| Starts from your company | No. You read every page yourself | Yes | Yes |
+| Starts from your company | No | Yes | Yes |
 | Checks whether you qualify | No | Partly, from what it finds | Rule by rule, from each program's own pages |
-| Requirements that stop an application, named before you apply | You find them in the form | 50% (37 of 74) | 96% (66 of 69) |
-| Wrong facts that would change what you do | Old pages rank high | 6 across six answers, such as a call called closed while open, or a grant spent on costs it excludes | 2 across six answers: a revenue question to founders with no company (since fixed), and an FAQ answer called broken when it was not |
-| Words in the first answer | none | 253 to 551 | 138 to 213 |
-| Picked the better first program | | better in 1 of 6 | better in 1 of 6; same pick in 4 |
-| Time per conversation | hours | 65 to 84 seconds | 76 to 142 seconds |
+| Requirements that stop an application, named before you apply: **two questions the skill was not tuned on** | not measured | 11 of 21 (52%) | 15 of 16 (94%) |
+| Same, all six questions | not measured | 37 of 74 (50%) | 66 of 69 (96%) |
+| Words in the first answer | not measured | 253 to 551 | 138 to 213 |
+| Picked the better first program | not measured | better in 1 of 6 | better in 1 of 6; same pick in 4 |
+| Time per conversation | not measured | 65 to 84 seconds | 76 to 142 seconds |
 
-The search engine column describes what a search engine does; it was not measured. Six questions, one run each, Claude Opus 5.5, 16 October 2026. The skill is not faster, and a plain AI search still sometimes finds a program our data lacks. Its edge is that you learn what will stop you before you start. Full method, per-question results and all twelve answers: [docs/benchmark/2026-10-16](docs/benchmark/2026-10-16/).
+Examples of wrong facts the graders found. Without the skill: a GPU call described as possibly closed while it was open, a grant budgeted for a prototype the grant excludes, the wrong age limit for a Norwegian grant, Google credits said to pay for Claude when Google's page says they do not. With the skill: a revenue question put to founders with no company (since fixed), an AWS FAQ answer called broken when it was not, and requirements stated a little stronger than the page states them.
+
+The search engine column describes what a search engine does; nothing in it was measured. Six questions, one run each, Claude Opus 5.5, 16 October 2026. Four of the questions shaped fixes made earlier that day, so the first row counts only the two that did not. The skill is not faster, and a plain AI search still sometimes finds a program our data lacks. Its edge is that you learn what will stop you before you start. Full method, per-question results and all twelve answers: [docs/benchmark/2026-10-16](docs/benchmark/2026-10-16/).
 
 ## How it works
 
