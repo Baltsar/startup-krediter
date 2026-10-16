@@ -205,6 +205,11 @@
             "sole_trader",
             "none"
           ]
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "baltic_marine_monitoring"
         }
       ],
       "apply_url": "https://ansok.vinnova.se/utlysning/aa892961-4010-4e1c-726f-08df237ab60c?opencall=true",
@@ -767,7 +772,7 @@
       "apply_requirements": [
         "Company incorporated as an AS before you apply; ENK, ANS and DA are not accepted",
         "Apply on Min side; log in with BankID as a person with a registered role in Brønnøysundregistrene, such as daglig leder or board member",
-        "The application must cover customer insight (3 to 5 findings from customer interviews), the solution, a competitor analysis, segment and market, IPR, and the team",
+        "The application must cover customer insight (the page gives findings from customer interviews as an example), the solution, a competitor analysis, segment and market, IPR, and the team",
         "Explain how the project is fully financed and state other public funding applied for",
         "Pre-finance at least 50 percent: up to half the grant is paid at start, the rest after the final report",
         "Only invoiced costs from external suppliers count; own staff, related parties, VAT and costs before submission do not",
@@ -1755,7 +1760,7 @@
       "who": "Public institutions and Norwegian businesses, as well as research environments, that want access to national and European compute with expert guidance and services adapted to Norwegian privacy and AI Act requirements.",
       "what": "Sigma2's AI Factory, Norway's contribution to the LUMI AI Factory: access to national (Olivia) and European computing power, model guidance for machine learning in HPC and GPU environments, onboarding, hosted open language models on national infrastructure and private dedicated AI instances.",
       "amount": {
-        "text": "Amount not published on the page"
+        "text": "No price or hours published for KI-fabrikken; national allocations cost industry 35 NOK per GPU hour (category C)"
       },
       "eligibility": [
         {

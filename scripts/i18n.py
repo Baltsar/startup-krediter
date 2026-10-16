@@ -110,6 +110,13 @@ CONFIRMATIONS: dict[str, dict[str, tuple[str, str]]] = {
         "no": ("minst 100 000 DKK i risikokapital eller tilskudd på tre år, eller 250 000 DKK i bruttofortjeneste ett år", "Har selskapet hentet minst 100 000 DKK i risikokapital eller utviklingstilskudd de siste tre årene, eller hatt minst 250 000 DKK i bruttofortjeneste i ett av de tre siste regnskapene?"),
         "da": ("mindst 100.000 kr. i risikovillig kapital eller tilskud på tre år, eller 250.000 kr. i bruttofortjeneste ét år", "Har virksomheden rejst mindst 100.000 kr. i risikovillig kapital eller udviklingstilskud de seneste tre år, eller haft en bruttofortjeneste på mindst 250.000 kr. i et af de seneste tre årsregnskaber?"),
     },
+    "baltic_marine_monitoring": {
+        "en": ("a solution for monitoring the Baltic Sea marine environment", "Is your solution for monitoring the marine environment of the Baltic Sea, as the challenge asks?"),
+        "sv": ("en lösning för att övervaka Östersjöns havsmiljö", "Är er lösning till för att övervaka Östersjöns havsmiljö, som utmaningen efterfrågar?"),
+        "fi": ("ratkaisu Itämeren meriympäristön seurantaan", "Onko ratkaisunne tarkoitettu Itämeren meriympäristön seurantaan, kuten haaste edellyttää?"),
+        "no": ("en løsning for å overvåke havmiljøet i Østersjøen", "Er løsningen deres laget for å overvåke havmiljøet i Østersjøen, slik utfordringen ber om?"),
+        "da": ("en løsning til overvågning af Østersøens havmiljø", "Er jeres løsning til overvågning af Østersøens havmiljø, som udfordringen efterspørger?"),
+    },
     "swedish_need_owner": {
         "en": ("a Swedish need owner committed to the project", "Do you have a Swedish company or organisation committed as need owner for the project?"),
         "sv": ("en svensk behovsägare som förbundit sig till projektet", "Har ni ett svenskt bolag eller en organisation som förbundit sig som behovsägare i projektet?"),
