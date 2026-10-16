@@ -178,9 +178,24 @@
       "status_url": "https://www.vinnova.se/e/eureka-innowwide/eureka-innowwide-call-5/",
       "next_step": "Find the local counterpart in the target country (Eureka's Innowwide partner search helps), register on Eureka's SmartSimple platform (eureka.smartsimple.ie) as a person legally authorised to represent the company, fill in the English application form and workplan template, invite the subcontractor to sign the commitment on the platform, and submit before 1 December 2026 at 14:00 CET. The founder clicks submit.",
       "reference": "references/nordic-grants.md#eureka-innowwide-call-5",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-16",
       "availability": "open",
-      "notes": "Vinnova diarienummer 2026-01726. Open on 2026-10-15: Vinnova's page says 'Stänger den 1 december 2026' (sista ansökningsdag 1 dec. 2026 kl 14:00, beslut meddelas 20 maj 2027, informationsmöte 29 sep. 2026); Eureka's call page says apply from 1 October 2026, submission deadline 1 December 2026 14:00 CET, results intended during the first trimester of 2027. Budget 4.2 MEUR for 70 projects; the top 105 above-threshold proposals go to an independent panel and ethics review; thresholds Excellence 18/30, Impact 24/40, Implementation 18/30. Mono-beneficiary: only the SME signs the grant; the subcontractor in the target country is not party to it and subcontracting costs must be above zero. Civil applications only; one application per company; the company must not be an undertaking in difficulty. Vinnova's page is an information page without an apply button and refers to Eureka for the exact limits; the money comes from the EU-funded European Partnership on Innovative SMEs, not from Vinnova's budget. Scoped EU because every EU member state plus Iceland, Israel, Norway, Switzerland, Türkiye and the UK are listed as participating; Denmark, Finland, Sweden, Iceland and Norway are all on the list."
+      "notes": "Vinnova diarienummer 2026-01726. Open on 2026-10-15: Vinnova's page says 'Stänger den 1 december 2026' (sista ansökningsdag 1 dec. 2026 kl 14:00, beslut meddelas 20 maj 2027, informationsmöte 29 sep. 2026); Eureka's call page says apply from 1 October 2026, submission deadline 1 December 2026 14:00 CET, results intended during the first trimester of 2027. Budget 4.2 MEUR for 70 projects; the top 105 above-threshold proposals go to an independent panel and ethics review; thresholds Excellence 18/30, Impact 24/40, Implementation 18/30. Mono-beneficiary: only the SME signs the grant; the subcontractor in the target country is not party to it and subcontracting costs must be above zero. Civil applications only; one application per company; the company must not be an undertaking in difficulty. Vinnova's page is an information page without an apply button and refers to Eureka for the exact limits; the money comes from the EU-funded European Partnership on Innovative SMEs, not from Vinnova's budget. Scoped EU because every EU member state plus Iceland, Israel, Norway, Switzerland, Türkiye and the UK are listed as participating; Denmark, Finland, Sweden, Iceland and Norway are all on the list.",
+      "apply_requirements": [
+        "Account on Eureka's SmartSimple platform (eureka.smartsimple.ie); the application must be submitted by a person legally authorised to represent the SME",
+        "An independent local subcontractor in the target country who signs the commitment and declaration of honour inside SmartSimple before you can submit; accepting the email invitation is not enough",
+        "Application form completed in English, every field mandatory, within per-question character limits",
+        "Workplan uploaded in Eureka's mandatory template, plus a six-month GANTT chart in the form",
+        "Total eligible costs of at least 86 000 EUR, so at least 26 000 EUR self-funded, with a subcontracting budget above zero",
+        "SME self-assessment in the form; proof of the incorporation date, a business plan or a financial viability check may be requested",
+        "If selected: signed legal entity form, VAT document and registration extract under one year old, SME declaration and a signed contract with the same subcontractor, before the grant agreement",
+        "Deadline 1 December 2026 at 14:00 Brussels time; one application per company"
+      ],
+      "unclear": [
+        "Vinnova's page says the decision is announced 20 May 2027, while Eureka says results are intended in the first trimester of 2027; ask the Innowwide team (innowwide@eurekanetwork.org) which date to plan for",
+        "No project start date or latest start date is published for the six-month project; ask the Innowwide team when the grant agreement and project start are expected",
+        "Startups without closed annual accounts 'may be asked' for a business plan and applicants 'may be subject to' a financial viability check; what triggers either is not stated"
+      ]
     },
     {
       "id": "vinnova-sprang-baltic-marine-watchdog",
@@ -216,10 +231,26 @@
       "status_url": "https://www.vinnova.se/e/radikal-innovation/the-baltic-marine-watchdog-challenge/",
       "next_step": "Read the English call for submissions on the status page, assemble a team with maritime robotics, sensor fusion and commercial experience, complete the online submission form in Vinnova's e-service with every claim backed by data (or a declared estimate), and attach the signed Declaration of Honour before 2 December 2026 at 14:00. The founder clicks submit.",
       "reference": "references/nordic-grants.md#vinnova-sprang-baltic-marine-watchdog",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-16",
       "availability": "open",
       "home_country": "SE",
-      "notes": "Diarienummer 2026-02609, programme Radikal innovation. Open on 2026-10-15: 'Stänger den 2 december 2026 kl 14:00'; opened 8 October 2026; decision 19 January 2027. Timeline: initial selection December 2026 to January 2027 with a pitch event in front of a jury, up to twelve teams contracted for Stage 1 (February to June 2027, interim demonstration tracking a surface target in Baltic littoral waters), up to nine teams for Stage 2 (June to November 2027, final public demonstration with surface and underwater targets); challenge closes 30 November 2027. Both demonstrations are mandatory and Vinnova may reclaim the stage's funds from a team that does not attend. The money is a fixed price for R&D services, not a cost-share grant, and the contribution must not already be financed by other public funding. The system must be fully autonomous, with a safety risk assessment plan and a kill switch. Evaluation criteria Approach, Implementation and Team weigh equally, Economy decides ties, and a portfolio view on solution variety may be applied; team gender balance is a sub-criterion. Research teams should aim to incorporate a company. No sector rule is encoded because the schema has no maritime or robotics sector. Contact challenge@vinnova.se."
+      "notes": "Diarienummer 2026-02609, programme Radikal innovation. Open on 2026-10-15: 'Stänger den 2 december 2026 kl 14:00'; opened 8 October 2026; decision 19 January 2027. Timeline: initial selection December 2026 to January 2027 with a pitch event in front of a jury, up to twelve teams contracted for Stage 1 (February to June 2027, interim demonstration tracking a surface target in Baltic littoral waters), up to nine teams for Stage 2 (June to November 2027, final public demonstration with surface and underwater targets); challenge closes 30 November 2027. Both demonstrations are mandatory and Vinnova may reclaim the stage's funds from a team that does not attend. The money is a fixed price for R&D services, not a cost-share grant, and the contribution must not already be financed by other public funding. The system must be fully autonomous, with a safety risk assessment plan and a kill switch. Evaluation criteria Approach, Implementation and Team weigh equally, Economy decides ties, and a portfolio view on solution variety may be applied; team gender balance is a sub-criterion. Research teams should aim to incorporate a company. No sector rule is encoded because the schema has no maritime or robotics sector. Contact challenge@vinnova.se.",
+      "apply_requirements": [
+        "Account in Vinnova's e-services, created before you open the submission form",
+        "Submission written in English (the call text exists only in English); deadline 2 December 2026 at 14:00 CET",
+        "Declaration of Honour form (docx on the call page) signed by an authorised representative and sent with the submission",
+        "Every claim in the submission backed by scientific data, or by an estimate declared as such",
+        "Fixed-price cost estimate per stage within the caps (170 000 EUR Stage 1, 350 000 EUR Stage 2, plus VAT); the price cannot be changed later and the calculation risk is yours",
+        "Pitch to a jury on 14 to 15 January 2027 if invited after the written evaluation, then contract signing 18 to 29 January 2027",
+        "Attendance at both the interim and the final sea demonstrations; Vinnova may reclaim that stage's funds from a team that does not attend",
+        "No other public funding for the same contribution"
+      ],
+      "unclear": [
+        "The call text says the price caps 'should be completed before publication', a leftover draft note, and the timeline prints contract signing as '18 – 29 January 202'; confirm the caps (170 000 / 350 000 / 520 000 EUR) and dates with challenge@vinnova.se",
+        "How a team of several organisations is contracted is not spelled out: only one legal entity submits and signs the Participation Agreement; ask challenge@vinnova.se how partners are paid (as subcontractors or otherwise)",
+        "Dates and locations of the test days and the interim demonstration are not published yet",
+        "The login method for Vinnova's e-services is not stated, although the challenge is open to applicants across the EU, EFTA and UK; ask helpdesk@vinnova.se whether a foreign applicant can create an account and log in without a Swedish e-ID"
+      ]
     },
     {
       "id": "vinnova-chips-ju-pilot-line-access",
@@ -229,7 +260,7 @@
       "need": [
         "money"
       ],
-      "who": "Swedish small and medium-sized companies working in design, development of production processes and products, production, research and innovation in semiconductor technology, that have already been granted access to the Chips JU pilot line the application concerns and can attach the documented access decision and timetable.",
+      "who": "Swedish small companies (under 50 staff per the formal requirements; the page also says SMEs) working in design, development of production processes and products, production, research and innovation in semiconductor technology, that have already been granted access to the Chips JU pilot line the application concerns and can attach the documented access decision and timetable.",
       "what": "Grant of up to 3.5 MSEK per project to use a Chips JU pilot line (NanoIC, FAMES, APECS, WBG or PIXEurope) for developing semiconductor process technologies, new components, proof-of-concept and prototypes. Only the pilot line's innovation advisory and innovation support services are eligible costs; salaries, equipment and land are not. Projects may run until October 2027.",
       "amount": {
         "text": "Up to 3,5 MSEK per project; total budget 7 MSEK per year in 2026 and 2027",
@@ -250,7 +281,12 @@
         {
           "field": "employees",
           "op": "lt",
-          "value": 250
+          "value": 50
+        },
+        {
+          "field": "age_years",
+          "op": "gte",
+          "value": 2
         },
         {
           "any": [
@@ -271,9 +307,25 @@
       "status_url": "https://www.vinnova.se/e/chips-ju/chips-ju-test-och-validering-av-ny-2025-04692/",
       "next_step": "First obtain approved access from the pilot line itself (each line runs its own assessment; the Swedish Chips Competence Centre at sccc.se guides Swedish applicants), then log in to Vinnova's e-service and apply with the access decision and timetable attached, before 29 July 2027 at 14:00. The founder clicks submit.",
       "reference": "references/nordic-grants.md#vinnova-chips-ju-pilot-line-access",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-16",
       "availability": "open",
-      "notes": "Diarienummer 2025-04692, programme Chips JU (2023-03764). Open on 2026-10-15: opened 25 February 2026, projects may start from 26 March 2026, last application day 29 July 2027 at 14:00; no decision date is printed. Total budget 7 MSEK per year in 2026 and 2027. Pilot lines listed on the page: NanoIC, FAMES, APECS (advanced packaging and heterogeneous integration), WBG (wide band gap), PIXEurope (photonic integrated circuits). Eligible costs are only innovation advisory and innovation support services bought from the pilot line, booked under 'Konsultkostnader, licenser'; the same services from any other actor, salaries, equipment and land are not eligible. The access decision from the pilot line must exist before the Vinnova application. The sector rule accepts hardware or deeptech because the schema has no semiconductor sector."
+      "notes": "Diarienummer 2025-04692, programme Chips JU (2023-03764). Open on 2026-10-15: opened 25 February 2026, projects may start from 26 March 2026, last application day 29 July 2027 at 14:00; no decision date is printed. Total budget 7 MSEK per year in 2026 and 2027. Pilot lines listed on the page: NanoIC, FAMES, APECS (advanced packaging and heterogeneous integration), WBG (wide band gap), PIXEurope (photonic integrated circuits). Eligible costs are only innovation advisory and innovation support services bought from the pilot line, booked under 'Konsultkostnader, licenser'; the same services from any other actor, salaries, equipment and land are not eligible. The access decision from the pilot line must exist before the Vinnova application. The sector rule accepts hardware or deeptech because the schema has no semiconductor sector.",
+      "apply_requirements": [
+        "Certificate from the Chips JU pilot line that your company has approved access to its services, with the time period for them; each pilot line runs its own assessment, so get it before you apply",
+        "Quote and invoicing plan from the pilot line: the project description must break the budget down by the quote's categories and include the pilot line's invoicing plan",
+        "Project description of at most 10 pages, 12 pt, in Vinnova's mandatory template (background, goals, choice of pilot line, services used, budget, invoicing plan, commercialisation plan)",
+        "All costs booked as 'Konsultkostnader, licenser', and this exact sentence pasted into the form's question on consultant costs above 20 percent: \"Kostnadsslaget konsultkostnader ska vara 100% av totala kostnader i ansökan enligt anvisningen i utlysningstexten\"",
+        "CV of the project lead, who must be employed in an operative role at the company",
+        "Latest registered annual report showing net sales or equity of at least half the amount you apply for, and at least two annual reports registered at Bolagsverket",
+        "Credit check via Dun & Bradstreet; an aktiebolag must not have used up half its share capital, and on request you must show you can cover the project budget",
+        "Application in Swedish or English in Vinnova's e-service before the project starts; last day 29 July 2027 at 14:00"
+      ],
+      "unclear": [
+        "The page says Swedish SMEs can apply, but the formal requirements say the company must be classified as a small company (under 50 staff); a medium-sized company should ask the call contact (adela.saavedragranholm@vinnova.se) before applying",
+        "Vinnova's share of the costs is not stated; the decision sets it per organisation, so ask the call contact what aid rate applies before planning your own co-financing",
+        "No decision date is printed; applications are read daily but are also said to be assessed in competition, so ask how and when decisions are made",
+        "The formal requirements say the application must follow 'the instructions in section 9', but the web page has no numbered sections and no separate call text is linked"
+      ]
     },
     {
       "id": "vinnova-avancerad-digitalisering-5g-automatisering",
@@ -315,9 +367,24 @@
       "status_url": "https://www.vinnova.se/e/avancerad-digitalisering-industriell-2024-04161/5g-och-automatisering-for-operativ-industrinytta/",
       "next_step": "Find an industrial need owner (a Swedish aktiebolag) as consortium partner, agree a 12 to 36 month project with at least 50 percent co-financing and a budget of 3 to 15 MSEK in grant, then log in to Vinnova's e-service and submit with CVs, project description and summary before 19 January 2027 at 14:00. The founder clicks submit.",
       "reference": "references/nordic-grants.md#vinnova-avancerad-digitalisering-5g-automatisering",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-16",
       "availability": "open",
-      "notes": "Diarienummer 2026-02219. Open on 2026-10-15: 'Stänger den 19 januari 2027 kl 14:00'. Opened 13 October 2026; information meeting 23 October 2026; last application day 19 January 2027 at 14:00; decision 18 March 2027. Part of the programme Avancerad digitalisering (2024-04161). Every project party that applies for funding must be a Swedish legal person; a foreign organisation with a branch or place of business in Sweden counts if the costs belong to that branch. The project may not have started before the application is submitted. Vinnova's share of each party's costs follows the state-aid rules and is set per organisation (EU SME definition applies, group figures count); the project as a whole gets at most 50 percent. 'Industri' in the programme means the whole production chain plus industry-near service and technology sectors, including energy, logistics, telecom, water/air/ventilation, recycling and defence. Assessment: Potential 40 percent, Aktörer 30, Genomförbarhet 30. Application in Swedish or English with CV, project description and summary templates. Projects must start between 19 March and 19 April 2027 and end by 19 April 2030. The consortium rule (two parties, one Swedish industrial aktiebolag as need owner) has no profile field, so the record only encodes country and legal form; a startup can be the applicant with its industrial customer as the need owner."
+      "notes": "Diarienummer 2026-02219. Open on 2026-10-15: 'Stänger den 19 januari 2027 kl 14:00'. Opened 13 October 2026; information meeting 23 October 2026; last application day 19 January 2027 at 14:00; decision 18 March 2027. Part of the programme Avancerad digitalisering (2024-04161). Every project party that applies for funding must be a Swedish legal person; a foreign organisation with a branch or place of business in Sweden counts if the costs belong to that branch. The project may not have started before the application is submitted. Vinnova's share of each party's costs follows the state-aid rules and is set per organisation (EU SME definition applies, group figures count); the project as a whole gets at most 50 percent. 'Industri' in the programme means the whole production chain plus industry-near service and technology sectors, including energy, logistics, telecom, water/air/ventilation, recycling and defence. Assessment: Potential 40 percent, Aktörer 30, Genomförbarhet 30. Application in Swedish or English with CV, project description and summary templates. Projects must start between 19 March and 19 April 2027 and end by 19 April 2030. The consortium rule (two parties, one Swedish industrial aktiebolag as need owner) has no profile field, so the record only encodes country and legal form; a startup can be the applicant with its industrial customer as the need owner.",
+      "apply_requirements": [
+        "At least one more project party and an engaged industrial need owner in the consortium; the coordinator must be a Swedish legal person operating in Sweden",
+        "CVs for the project lead and all key persons, at least one per project party, one page each in Vinnova's CV template, collected from partners before you submit",
+        "Two attachments in the mandatory templates: a project description of at most 10 pages answering Potential (40 percent), Actors (30) and Feasibility (30) with work packages and hours, a gender-split table, a cybersecurity section and a risk table; and a one-page summary shared with the programme council, so nothing confidential",
+        "Co-financing of at least 50 percent of the project; a small company gets at most 45 percent of its own costs (60 with a bonus ground), and on request an SME must show turnover or capital covering its whole own share",
+        "Registration as an employer at Skatteverket by the decision if you claim salary costs; retroactive registration is not accepted",
+        "Project start between 19 March and 19 April 2027, and not before you submit",
+        "If granted, a written consortium agreement signed by all parties before the first progress report; Vinnova advises starting it early",
+        "Application in Swedish or English in Vinnova's e-service by 19 January 2027 at 14:00; decision 18 March 2027"
+      ],
+      "unclear": [
+        "The call text asks for at least one Swedish company in the form of an aktiebolag and an engaged need owner, but the formal requirements only say two parties, one of them a company; ask sara.nasstrom@vinnova.se whether a consortium without a separate industrial need owner is rejected",
+        "The page says the project description uses 12 pt text, while the template says 11 pt Times New Roman",
+        "The login method for Vinnova's e-service is not stated on the call page"
+      ]
     },
     {
       "id": "vinnova-avancerad-digitalisering-cybersakerhet-ai",
@@ -359,9 +426,24 @@
       "status_url": "https://www.vinnova.se/e/avancerad-digitalisering-industriell-2024-04161/cybersakerhet-ai-och-resiliens/",
       "next_step": "Partner with an industrial need owner, choose one of the call's two tracks (preventing, detecting and handling cyber threats, or secure and reliable industrial AI), then log in to Vinnova's e-service and submit with CVs, project description and summary before 19 January 2027 at 14:00. The founder clicks submit.",
       "reference": "references/nordic-grants.md#vinnova-avancerad-digitalisering-cybersakerhet-ai",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-16",
       "availability": "open",
-      "notes": "Diarienummer 2026-01891. Open on 2026-10-15: 'Stänger den 19 januari 2027 kl 14:00'. Opened 13 October 2026; information meeting 23 October 2026; last application day 19 January 2027 at 14:00; decision 18 March 2027. Part of the programme Avancerad digitalisering (2024-04161). Every project party that applies for funding must be a Swedish legal person; a foreign organisation with a branch or place of business in Sweden counts if the costs belong to that branch. The project may not have started before the application is submitted. Vinnova's share of each party's costs follows the state-aid rules and is set per organisation (EU SME definition applies, group figures count); the project as a whole gets at most 50 percent. 'Industri' in the programme means the whole production chain plus industry-near service and technology sectors, including energy, logistics, telecom, water/air/ventilation, recycling and defence. Assessment: Potential 40 percent, Aktörer 30, Genomförbarhet 30. Application in Swedish or English with CV, project description and summary templates. Projects must start between 19 March and 15 April 2027. The page says the call does not address single organisations and that individuals and sole traders cannot apply. The consortium rule has no profile field, so the record only encodes country and legal form."
+      "notes": "Diarienummer 2026-01891. Open on 2026-10-15: 'Stänger den 19 januari 2027 kl 14:00'. Opened 13 October 2026; information meeting 23 October 2026; last application day 19 January 2027 at 14:00; decision 18 March 2027. Part of the programme Avancerad digitalisering (2024-04161). Every project party that applies for funding must be a Swedish legal person; a foreign organisation with a branch or place of business in Sweden counts if the costs belong to that branch. The project may not have started before the application is submitted. Vinnova's share of each party's costs follows the state-aid rules and is set per organisation (EU SME definition applies, group figures count); the project as a whole gets at most 50 percent. 'Industri' in the programme means the whole production chain plus industry-near service and technology sectors, including energy, logistics, telecom, water/air/ventilation, recycling and defence. Assessment: Potential 40 percent, Aktörer 30, Genomförbarhet 30. Application in Swedish or English with CV, project description and summary templates. Projects must start between 19 March and 15 April 2027. The page says the call does not address single organisations and that individuals and sole traders cannot apply. The consortium rule has no profile field, so the record only encodes country and legal form.",
+      "apply_requirements": [
+        "At least one more legal person as project party, with industrial need owners actively taking part; companies in the same group count as one party, and the coordinator must be a Swedish legal person operating in Sweden",
+        "Choice of one of the two tracks: AI as an enabler for cybersecurity, or reliable and secure industrial AI",
+        "CVs for the project lead and all key persons, at least one per project party, one page each in Vinnova's CV template, collected from partners before you submit",
+        "Two attachments in the mandatory templates: a project description of at most 10 pages, 11 pt, answering Potential (40 percent), Actors (30) and Feasibility (30) with work packages and hours, a gender-split table, a cybersecurity section and a risk table; and a one-page summary shared with the programme council, so nothing confidential",
+        "Co-financing of at least 50 percent of the project; Vinnova may ask an SME to show it can cover its own share",
+        "Registration as an employer at Skatteverket by the decision if you claim salary costs; retroactive registration is not accepted",
+        "Project start between 19 March and 15 April 2027, and not before you submit",
+        "Application in Swedish or English in Vinnova's e-service by 19 January 2027 at 14:00; possible interview, decision 18 March 2027"
+      ],
+      "unclear": [
+        "The page header says at least one company from Swedish industry must take part, but the formal requirements only say two project parties with no company rule; ask asa.moum@vinnova.se whether a consortium without a company is rejected",
+        "The web page says projects may start from 19 March 2027, while the linked call text PDF (registered 21 September 2026) says 24 March 2027; ask the call contact which date applies",
+        "What counts as sufficient financial coverage for an SME is not defined in this call, unlike the 5G and cyber-physical calls (turnover or capital covering the whole own share); ask the call contact"
+      ]
     },
     {
       "id": "vinnova-avancerad-digitalisering-cyberfysiska-system",
@@ -402,9 +484,23 @@
       "status_url": "https://www.vinnova.se/e/avancerad-digitalisering-industriell-2024-04161/effektiv-produktutveckling-av-2026-01892/",
       "next_step": "Form a consortium with at least one more industrial company (an industrial need owner should lead), then log in to Vinnova's e-service and submit with CVs, project description and summary before 19 January 2027 at 14:00. The founder clicks submit.",
       "reference": "references/nordic-grants.md#vinnova-avancerad-digitalisering-cyberfysiska-system",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-16",
       "availability": "open",
-      "notes": "Diarienummer 2026-01892. Open on 2026-10-15: 'Stänger den 19 januari 2027 kl 14:00'. Opened 13 October 2026; information meeting 23 October 2026; last application day 19 January 2027 at 14:00; decision 18 March 2027. Part of the programme Avancerad digitalisering (2024-04161). Every project party that applies for funding must be a Swedish legal person; a foreign organisation with a branch or place of business in Sweden counts if the costs belong to that branch. The project may not have started before the application is submitted. Vinnova's share of each party's costs follows the state-aid rules and is set per organisation (EU SME definition applies, group figures count); the project as a whole gets at most 50 percent. 'Industri' in the programme means the whole production chain plus industry-near service and technology sectors, including energy, logistics, telecom, water/air/ventilation, recycling and defence. Assessment: Potential 40 percent, Aktörer 30, Genomförbarhet 30. Application in Swedish or English with CV, project description and summary templates. Projects must start between 19 March and 15 April 2027. Cross-sector consortia are especially welcome. The requirement of two industrial company parties has no profile field, so the record only encodes country and legal form; a software startup needs at least one industrial company partner."
+      "notes": "Diarienummer 2026-01892. Open on 2026-10-15: 'Stänger den 19 januari 2027 kl 14:00'. Opened 13 October 2026; information meeting 23 October 2026; last application day 19 January 2027 at 14:00; decision 18 March 2027. Part of the programme Avancerad digitalisering (2024-04161). Every project party that applies for funding must be a Swedish legal person; a foreign organisation with a branch or place of business in Sweden counts if the costs belong to that branch. The project may not have started before the application is submitted. Vinnova's share of each party's costs follows the state-aid rules and is set per organisation (EU SME definition applies, group figures count); the project as a whole gets at most 50 percent. 'Industri' in the programme means the whole production chain plus industry-near service and technology sectors, including energy, logistics, telecom, water/air/ventilation, recycling and defence. Assessment: Potential 40 percent, Aktörer 30, Genomförbarhet 30. Application in Swedish or English with CV, project description and summary templates. Projects must start between 19 March and 15 April 2027. Cross-sector consortia are especially welcome. The requirement of two industrial company parties has no profile field, so the record only encodes country and legal form; a software startup needs at least one industrial company partner.",
+      "apply_requirements": [
+        "At least two industrial project parties in the form of companies, so a startup needs at least one more company; the coordinator must be a Swedish legal person operating in Sweden",
+        "CVs for the project lead and all key persons, at least one per project party, one page each in Vinnova's CV template, collected from partners before you submit",
+        "Two attachments in the mandatory templates: a project description of at most 10 pages, 11 pt, answering Potential (40 percent), Actors (30) and Feasibility (30) with work packages and hours, a gender-split table, a cybersecurity section and a risk table; and a one-page summary shared with the programme council, so nothing confidential",
+        "Co-financing of at least 50 percent of the project; on request an SME must show registered turnover or available capital covering its whole own share, and sign an SME model declaration",
+        "Registration as an employer at Skatteverket by the decision if you claim salary costs; retroactive registration is not accepted",
+        "Project lead employed by a project party, preferably the coordinator",
+        "Project start between 19 March and 15 April 2027, and not before you submit",
+        "Application in Swedish or English in Vinnova's e-service by 19 January 2027 at 14:00; possible interview, decision 18 March 2027"
+      ],
+      "unclear": [
+        "The call says 'industrial' project parties in the form of companies but does not say whether a software or AI startup counts as industrial; ask staffan.nystrom@vinnova.se before relying on the startup as one of the two",
+        "The call is aimed at need owners in industry, but whether the need owner must be the coordinator is not stated"
+      ]
     },
     {
       "id": "vinnova-avancerad-digitalisering-flexibel-energistyrning",
@@ -446,9 +542,24 @@
       "status_url": "https://www.vinnova.se/e/avancerad-digitalisering-industriell-2024-04161/industriell-flexibel-energistyrning-med-2026-02019/",
       "next_step": "Partner with an industrial need owner (an industrial company or grid operator), choose the research or the experimental-development track, then log in to Vinnova's e-service and submit with project description, CVs and summary before 19 January 2027 at 14:00. The founder clicks submit.",
       "reference": "references/nordic-grants.md#vinnova-avancerad-digitalisering-flexibel-energistyrning",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-16",
       "availability": "open",
-      "notes": "Diarienummer 2026-02019. Open on 2026-10-15: 'Stänger den 19 januari 2027 kl 14:00'. Opened 13 October 2026; information meeting 23 October 2026; last application day 19 January 2027 at 14:00; decision 18 March 2027. Part of the programme Avancerad digitalisering (2024-04161). Every project party that applies for funding must be a Swedish legal person; a foreign organisation with a branch or place of business in Sweden counts if the costs belong to that branch. The project may not have started before the application is submitted. Vinnova's share of each party's costs follows the state-aid rules and is set per organisation (EU SME definition applies, group figures count); the project as a whole gets at most 50 percent. 'Industri' in the programme means the whole production chain plus industry-near service and technology sectors, including energy, logistics, telecom, water/air/ventilation, recycling and defence. Assessment: Potential 40 percent, Aktörer 30, Genomförbarhet 30. Application in Swedish or English with CV, project description and summary templates. Projects must start between 24 March and 15 April 2027. The experimental-development track may not mainly be routine adaptation, commercial operation or market introduction. The need-owner rule has no profile field, so the record only encodes country and legal form."
+      "notes": "Diarienummer 2026-02019. Open on 2026-10-15: 'Stänger den 19 januari 2027 kl 14:00'. Opened 13 October 2026; information meeting 23 October 2026; last application day 19 January 2027 at 14:00; decision 18 March 2027. Part of the programme Avancerad digitalisering (2024-04161). Every project party that applies for funding must be a Swedish legal person; a foreign organisation with a branch or place of business in Sweden counts if the costs belong to that branch. The project may not have started before the application is submitted. Vinnova's share of each party's costs follows the state-aid rules and is set per organisation (EU SME definition applies, group figures count); the project as a whole gets at most 50 percent. 'Industri' in the programme means the whole production chain plus industry-near service and technology sectors, including energy, logistics, telecom, water/air/ventilation, recycling and defence. Assessment: Potential 40 percent, Aktörer 30, Genomförbarhet 30. Application in Swedish or English with CV, project description and summary templates. Projects must start between 19 March and 15 April 2027. The experimental-development track may not mainly be routine adaptation, commercial operation or market introduction. The need-owner rule has no profile field, so the record only encodes country and legal form.",
+      "apply_requirements": [
+        "At least one more project party and a need owner from Swedish industry in the consortium, at least one party a company; the coordinator must be a Swedish legal person operating in Sweden",
+        "Choice of track in the form: industrial research or experimental development; a small company gets at most 70 percent of its costs on the research track but 45 percent on the development track (80 or 60 with a bonus ground)",
+        "CVs for the project lead and all key persons, at least one per project party, one page each in Vinnova's CV template, collected from partners before you submit",
+        "Two attachments in the mandatory templates: a project description of at most 10 pages, 11 pt, answering Potential (40 percent), Actors (30) and Feasibility (30) with work packages and hours, a gender-split table, a cybersecurity section and a risk table; and a one-page summary shared with the programme council, so nothing confidential",
+        "Co-financing of at least 50 percent of the project; Vinnova may ask an SME to show it can cover its own share",
+        "Registration as an employer at Skatteverket by the decision if you claim salary costs; retroactive registration is not accepted",
+        "Project start between 19 March and 15 April 2027, and not before you submit",
+        "Application in Swedish or English in Vinnova's e-service by 19 January 2027 at 14:00; decision 18 March 2027"
+      ],
+      "unclear": [
+        "The page header asks for a need owner from Swedish industry, but the formal requirements only say two parties, one of them a company; ask susanne.liljeblad@vinnova.se whether a startup with a non-industrial partner is rejected",
+        "The call page lists the three attachments without page limits; the limits (10 pages at 11 pt, 1-page summary, 1-page CVs) appear only in the downloadable templates",
+        "What counts as sufficient financial coverage for an SME is not defined in this call, unlike the 5G and cyber-physical calls (turnover or capital covering the whole own share); ask the call contact"
+      ]
     },
     {
       "id": "almi-innovationslan",
