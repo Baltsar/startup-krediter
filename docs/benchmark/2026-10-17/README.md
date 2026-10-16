@@ -92,15 +92,31 @@ mostly calling open programs closed or giving wrong amounts.
   17 December 2026, so the skill was right. The second grader agreed. This is
   recorded in `grades/q13.json` and `grades/q13-g2.json`.
 
-## What to fix before the next round
+## Causes, and what to fix before the next round
+
+Three of the failures come from rules in `SKILL.md` itself:
+
+- **Leaked internal notes.** Step 3 tells the assistant to "mention in one line
+  at the end of the answer that the door is missing from the data". That rule
+  produced every "should be added to our list" line. Delete it.
+- **Long first answers.** The rule "if the founder named one specific program,
+  skip Stage A" sent q02, q03, q04, q07 and q14 straight to the full checklist,
+  at 517 to 847 words. Those five set the median. Give a short verdict first in
+  that case too.
+- **Filler doors.** "Top three doors" is read as "always three", which is how a
+  Danish fee-charging accelerator and EIC Accelerator reached idea-stage
+  founders (q09, q13). Say that one or two doors are fine when nothing else fits.
+
+The rest needs data and ranking work:
 
 1. Rank by realistic fit, not by rule match alone: open now, in the founder's
    country, without a fee or equity unless asked, ahead of everything else.
 2. Keep foreign and fee programs out of the top three unless the founder asks.
 3. Label every amount with its currency code.
-4. Make the web search step aim at what the data lacks for this founder's
-   country and stage, and never print maintenance notes to the founder.
-5. Write new questions for the next round. These fifteen are spent.
+4. Aim the web search step at what the data lacks for this founder's country
+   and stage.
+5. Write new questions for the next round, independently. These fifteen are
+   spent.
 
 ## Not measured
 
