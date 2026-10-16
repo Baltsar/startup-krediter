@@ -22,7 +22,8 @@ Credits from model providers (Anthropic, OpenAI, Mistral) and GPU-cloud vendors 
 - **What:** Free API credits, rate-limit upgrades, time with solutions engineers, invitations to events and a direct line to the Startup team, all unlocked through the partner VC.
 - **Amount:** Not published on the page.
 - **Requirements:** A unique referral code from the partner VC; a description of the product and how it uses the API; company name and contacts with a valid business email; basic funding details.
-- **Unclear:** openai.com refuses automated reads (HTTP 403), so the application requirements could not be verified; open the page in a browser before quoting anything.
+- **Before you apply:** 1. No public application form: credits and dedicated support go through a qualifying VC partner, so ask your investor whether they are an OpenAI partner. 2. Without a partner VC the page offers events (Builder Lounges, including Stockholm), build guides and a newsletter, not credits. 3. An OpenAI platform account to receive credits once a partner refers you.
+- **Unclear:** No credit amount is published. The list of qualifying VC partners is not published. The page's FAQ answers did not render in the browser read on 2026-10-16.
 - **How to apply:** Ask the investor whether they are in the network and for the referral code, then submit the credit application with the items above. The founder clicks submit.
 - **Status page:** https://openai.com/startups/
 - **Verified:** 2026-10-15, read in a browser (the site returns 403 to automated fetch and redirects to the visitor's locale, here sv-SE).

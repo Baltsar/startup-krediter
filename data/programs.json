@@ -2631,13 +2631,19 @@
       "status_url": "https://openai.com/startups/",
       "next_step": "Ask your investor whether they are in OpenAI's partner network and for the unique referral code. Then apply with the code, a description of the product and how it uses the API, the company name and a business email, and basic funding details. The founder clicks submit.",
       "reference": "references/ai-api-credits.md#openai-for-startups",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-16",
       "availability": "open",
-      "apply_requirements": [],
-      "unclear": [
-        "openai.com refuses automated reads (HTTP 403), so the application requirements could not be verified; open the page in a browser before quoting anything"
+      "apply_requirements": [
+        "No public application form: credits and dedicated support go through a qualifying VC partner, so ask your investor whether they are an OpenAI partner",
+        "Without a partner VC the page offers events (Builder Lounges, including Stockholm), build guides and a newsletter, not credits",
+        "An OpenAI platform account to receive credits once a partner refers you"
       ],
-      "notes": "Read in a browser on 2026-10-15; the site returns 403 to automated fetch and redirected to the sv-SE locale. FAQ: credits are obtained via the VC; the application asks for a unique referral code from the VC, a product description, company name and contacts with a valid business email, and basic funding details. No dollar amount, no deadline, no cohort. When credits run out, billing switches to standard automatically."
+      "unclear": [
+        "No credit amount is published",
+        "The list of qualifying VC partners is not published",
+        "The page's FAQ answers did not render in the browser read on 2026-10-16"
+      ],
+      "notes": "Read in a browser on 2026-10-15; the site returns 403 to automated fetch and redirected to the sv-SE locale. FAQ: credits are obtained via the VC; the application asks for a unique referral code from the VC, a product description, company name and contacts with a valid business email, and basic funding details. No dollar amount, no deadline, no cohort. When credits run out, billing switches to standard automatically. Read in the in-app browser on 2026-10-16 (plain fetches get HTTP 403): 'Få tillgång till krediter och dedikerad support via kvalificerade VC-partners.' The page redirects to openai.com/sv-SE/business/why-openai/startups/."
     },
     {
       "id": "sting-core",
