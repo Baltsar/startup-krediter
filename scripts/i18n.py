@@ -117,12 +117,12 @@ CONFIRMATIONS: dict[str, dict[str, tuple[str, str]]] = {
         "no": ("en løsning for å overvåke havmiljøet i Østersjøen", "Er løsningen deres laget for å overvåke havmiljøet i Østersjøen, slik utfordringen ber om?"),
         "da": ("en løsning til overvågning af Østersøens havmiljø", "Er jeres løsning til overvågning af Østersøens havmiljø, som udfordringen efterspørger?"),
     },
-    "swedish_need_owner": {
-        "en": ("a Swedish need owner committed to the project", "Do you have a Swedish company or organisation committed as need owner for the project?"),
-        "sv": ("en svensk behovsägare som förbundit sig till projektet", "Har ni ett svenskt bolag eller en organisation som förbundit sig som behovsägare i projektet?"),
-        "fi": ("ruotsalainen tarpeen omistaja sitoutunut hankkeeseen", "Onko teillä ruotsalainen yritys tai organisaatio sitoutuneena hankkeen tarpeen omistajaksi?"),
-        "no": ("en svensk behovseier som har forpliktet seg til prosjektet", "Har dere et svensk selskap eller en organisasjon som har forpliktet seg som behovseier i prosjektet?"),
-        "da": ("en svensk behovsejer, der har forpligtet sig til projektet", "Har I et svensk selskab eller en organisation, der har forpligtet sig som behovsejer i projektet?"),
+    "need_owner": {
+        "en": ("an established need owner committed to the project", "Do you have an established company or organisation committed as need owner in the project?"),
+        "sv": ("en etablerad behovsägare som förbundit sig till projektet", "Har ni ett etablerat bolag eller en organisation som förbundit sig som behovsägare i projektet?"),
+        "fi": ("vakiintunut tarpeen omistaja sitoutunut hankkeeseen", "Onko teillä vakiintunut yritys tai organisaatio sitoutuneena hankkeen tarpeen omistajaksi?"),
+        "no": ("en etablert behovseier som har forpliktet seg til prosjektet", "Har dere et etablert selskap eller en organisasjon som har forpliktet seg som behovseier i prosjektet?"),
+        "da": ("en etableret behovsejer, der har forpligtet sig til projektet", "Har I en etableret virksomhed eller organisation, der har forpligtet sig som behovsejer i projektet?"),
     },
 }
 

@@ -60,7 +60,7 @@ costs trust.
 | `stack` | `aws`, `gcp`, `azure`, `cloudflare`, `vercel`, `supabase`, `neon`, `mongodb`, `anthropic`, `openai`, `mistral`, `together`, `modal`, `lambda`, `runpod`, `huggingface`, `replicate`, `nvidia` | decides the credit doors |
 | `sector` | `ai`, `deeptech`, `energy`, `climate`, `health`, `fintech`, `saas`, `hardware` | |
 | `has_vat`, `has_employment`, `has_work_email`, `has_website`, `has_developer`, `workload_defined`, `profit_distributed` | bool | EuroHPC and vendor gates |
-| `confirmed` | list of keys | requirements the founder confirms in words: `kth_affiliation`, `research_background`, `hpc_experience`, `region_skane`, `region_vgr`, `consortium_partner`, `swedish_need_owner` |
+| `confirmed` | list of keys | requirements the founder confirms in words: `kth_affiliation`, `research_background`, `hpc_experience`, `region_skane`, `region_vgr`, `consortium_partner`, `need_owner` |
 | `need` | list of `money`, `compute`, `credits` | `gpu` is an alias of `compute` |
 | `lang` | `sv`, `en`, `fi`, `no`, `da` | the founder's language; labels and questions come back in it |
 
@@ -88,8 +88,9 @@ The JSON has:
 - `doors`: the best doors in full, three by default. When two kinds were asked
   for, the best door of each kind is taken in turn.
 - `more`: the rest, by name, kind, status and amount.
-- `unlocks`: for a founder without a company, doors that open on legal form
-  alone, keyed by the form (`company`, `sole_trader`).
+- `unlocks`: doors that open on legal form alone, keyed by the form (`company`,
+  `sole_trader`), and for a founder living abroad, doors that open on the
+  registration country alone, keyed `country:XX`.
 - `warnings`, `stale`, `lang`.
 
 Per door: `status` is `eligible`, `unknown` or `blocked`; `met`, `failed`,
@@ -150,7 +151,10 @@ Then, each at most one line:
 - `more`: "Fler dörrar: X, Y, Z. Vill du se dem?" Mark a closed door as closed.
   Leave out doors with `foreign: true` unless the founder asked about other
   countries or lives in one, and leave out kinds the founder did not ask for.
-- `unlocks`: "Registrerar ni ett AB öppnas dessutom: A, B, C."
+- `unlocks`: "Registrerar ni ett AB öppnas dessutom: A, B, C." A key such as
+  `country:DK` lists doors a company registered in that country would open,
+  for a founder who lives there: "Ett bolag registrerat i Danmark skulle öppna:
+  A, B." Mark the closed ones.
 
 Length: about 150 to 220 words per door in full, so a three-door answer lands
 around 500 to 700 words, with the two-line verdict on top for the founder who

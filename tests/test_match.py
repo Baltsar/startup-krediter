@@ -563,3 +563,12 @@ def test_door_run_from_another_country_ranks_after_domestic_doors() -> None:
     assert out["doors"][1]["foreign"] is True
     home = match.run({"country": "SE", "need": ["compute"]}, [swedish_open_call], TODAY, top=0)
     assert home["doors"][0]["foreign"] is False
+
+
+def test_cross_border_founder_hears_which_doors_a_local_company_would_open() -> None:
+    dk_grant = dict(SE_GRANT, id="test-dk-grant", name="Test DK grant", country="DK", eligibility=[{"field": "country", "op": "eq", "value": "DK"}, {"field": "legal_form", "op": "eq", "value": "company"}])
+    out = match.run({"country": "SE", "residence_country": "DK", "legal_form": "company", "need": ["money"]}, [dk_grant], TODAY)
+    assert out["unlocks"] == {"country:DK": ["Test DK grant"]}
+    assert out["doors"] == []
+    same = match.run({"country": "DK", "residence_country": "DK", "legal_form": "company", "need": ["money"]}, [dk_grant], TODAY)
+    assert same["unlocks"] == {}

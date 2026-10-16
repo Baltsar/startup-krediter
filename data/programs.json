@@ -115,7 +115,7 @@
         {
           "field": "confirmed",
           "op": "contains",
-          "value": "swedish_need_owner"
+          "value": "need_owner"
         }
       ],
       "apply_url": "https://ansok.vinnova.se/utlysning/26bdd234-db2b-4fa2-1fab-08dec63ac2d3?opencall=true&lang=en",

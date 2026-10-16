@@ -492,6 +492,29 @@ def legal_form_unlocks(programs: list[dict], profile: dict, today: date, lang: s
     return unlocks
 
 
+def country_unlocks(programs: list[dict], profile: dict, lang: str) -> dict[str, list[str]]:
+    """For a founder who lives in another country than the company is registered in: doors blocked only by
+    the registration country that a company registered where the founder lives would pass.
+
+    A Swede in Copenhagen with a Swedish AB fails every Danish grant on one line,
+    the registration. Saying so is the useful answer; hiding the doors is not.
+    """
+    home, residence = profile.get("country"), profile.get("residence_country")
+    if not home or not residence or home == residence:
+        return {}
+    trial = dict(profile, country=residence)
+    found: list[str] = []
+    for program in programs:
+        if not is_relevant(program, profile):
+            continue
+        failing = [gate for gate in program["eligibility"] if evaluate_rule(gate, profile, lang).status == "failed"]
+        if not failing or any(rule_fields(gate) != {"country"} for gate in failing):
+            continue
+        if all(evaluate_rule(gate, trial, lang).status == "met" for gate in failing):
+            found.append(program["name"])
+    return {f"country:{residence}": found} if found else {}
+
+
 def pick_top(doors: list[Door], needs: list[str] | None, top: int) -> tuple[list[Door], list[Door]]:
     """The doors shown in full, then the rest.
 
@@ -599,7 +622,7 @@ def run(
     for door in ranked:
         door.glyph = render_glyph(door, lang)
     try:
-        unlocks = legal_form_unlocks(programs, profile, today, lang)
+        unlocks = legal_form_unlocks(programs, profile, today, lang) | country_unlocks(programs, profile, lang)
     except (KeyError, TypeError, ValueError) as exc:
         raise MalformedRecord(f"cannot compute unlocks: {exc}") from exc
     shown, rest = pick_top(ranked, profile.get("need"), top)
