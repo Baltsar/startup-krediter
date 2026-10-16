@@ -91,6 +91,9 @@ mostly calling open programs closed or giving wrong amounts.
   skill for calling Eurostars closed. Eureka's own page shows Call 12 opening on
   17 December 2026, so the skill was right. The second grader agreed. This is
   recorded in `grades/q13.json` and `grades/q13-g2.json`.
+- **Fairness:** only that finding, which went against the skill, was re-checked
+  against a primary source. Findings against the plain AI were not re-checked.
+  The verdict does not depend on it, because q08 blocks the launch either way.
 
 ## Causes, and what to fix before the next round
 
