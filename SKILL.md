@@ -118,11 +118,14 @@ for Anthropic Claude"). Read the official page of anything you find before you
 name it.
 
 If you find a door that fits better than the matcher's first door, show it in
-Stage A with "(inte i vår data, läst i dag)" after the name, and give its
-amount, what decides it and the link; in Stage B give the checklist you read on
-its own pages. Keep it to one search and at most one extra door, so the answer
-stays short. Mention in one line at the end of the answer that the door is
-missing from the data, so the founder or a maintainer can add it.
+Stage A like any other door and give its amount and what decides it; in Stage B
+give the checklist you read on its own pages. Keep it to one search and at most
+one extra door, so the answer stays short.
+
+The founder never hears about this skill's machinery. Do not write about "our
+data", "our list", the matcher, records, or what should be added or maintained.
+A founder reading "this program is missing from our list" learns nothing they
+can act on and starts to doubt the rest of the answer.
 
 ## Step 4: Read the page before you quote it
 
@@ -161,7 +164,7 @@ carries, so no one walks to a site thinking it is simple.
 
 1. **Verdict**, one sentence: which door fits best and what decides it.
 2. **The question** that moves them forward, one sentence (rule below).
-3. **Top three doors**, one line each, in this shape:
+3. **Up to three doors**, one line each, in this shape:
 
    `◐ EuroHPC Playground: 5 000 GPU-timmar gratis. Avgör: projektledarens anställning. 11 krav i ansökan, 2 oklarheter.`
 
@@ -172,16 +175,41 @@ carries, so no one walks to a site thinking it is simple.
    Say what the money costs when `founder_cost` is not `none`: "lån",
    "investering mot ägarandel", "avgift". A founder who asked for money must
    not mistake an equity deal or a paid program for a grant.
+
+   Show only doors that are realistic for this founder now. One or two doors
+   is a good answer when nothing else fits; filler costs the founder time and
+   trust. Leave a door out of Stage A when any of these is true, unless the
+   founder asked for it by name:
+   - it is run from another country than the one the founder's company is in
+     or would be in (`foreign: true`);
+   - it charges a fee or takes equity and the founder asked for money, not
+     investment;
+   - it is closed and no next date is published;
+   - its stage or size clearly does not match the founder (an EU
+     scale-up grant for two people with an idea, an investor program for a
+     company with no plans to raise);
+   - its hardest stopper is something the founder has already said they lack.
+   Such doors may go in the `more` line, marked for what they are.
 4. **One closing line**: "Vilken vill ni titta på? Då får ni hela listan över
    vad ansökan kräver." Add `more` and `unlocks` lines (below) only if they
    exist.
 
 No glyph blocks, no checklists and no links in Stage A. Aim for under 150
-words. Before you name an amount or say a door is open, read its `status_url`
+words, never over 200.
+
+Write every amount with its currency code: SEK, NOK, DKK, ISK, EUR, USD. Never
+"kr" or "kronor" alone. A Danish grant written as "200 000 kr" in a Swedish
+answer reads as Swedish kronor, and the difference is a third of the money.
+
+Before you name an amount or say a door is open, read its `status_url`
 (Step 4); in Stage A you do not need the linked conditions pages yet.
 
-If the founder named one specific program ("har vi en chans på Vinnova?"), skip
-Stage A and give that door in Stage B form directly.
+If the founder named one specific program ("har vi en chans på Vinnova?"),
+answer about that program first, still in Stage A form: two sentences on
+whether it fits and what decides it, then its one-line door, then at most one
+alternative if it fits better. Correct a wrong premise in the first sentence.
+Offer the full checklist instead of printing it. Stay under 200 words; the
+founder asked one question and should get the answer before the paperwork.
 
 ### Stage B: when the founder picks a door
 
@@ -206,6 +234,10 @@ this form. Shorten sentences, never the checklist or the glyph.
 
 ### Lines that apply to both stages
 
+- When `doors` is empty, nothing in the data fits this founder well. Say so in
+  one plain sentence, do the Step 3 search, and offer `more` only as weaker
+  options. Doors in `more` with `poor_fit: true` are closed, foreign, in the
+  wrong stage or sector, or charge a fee; never promote one into Stage A.
 - `more`: "Fler dörrar: X, Y, Z." Mark a closed door as closed. Leave out doors
   with `foreign: true` unless the founder asked about other countries or lives
   in one, and leave out kinds the founder did not ask for.
