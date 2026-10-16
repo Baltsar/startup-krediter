@@ -17,6 +17,7 @@ Three hours later you have twenty open tabs and no answer.
 - **The blog post you found is out of date.** The round closed in August. The cohort is full. The amount changed.
 - **You do not know what to search for.** You need GPU time, but the door is called "EuroHPC AI Factories Playground Access".
 - **Money, compute and credits get mixed up.** Free GPU hours will not pay your OpenAI bill. A grant will not give you a GPU.
+- **The surprise comes inside the application.** You decide you qualify, open the form, and only then meet the BankID login, the co-financing rule, the partner you needed to sign first, or the deadline that passed.
 
 So most founders give up, or apply for the one program they happened to hear about.
 
@@ -33,40 +34,48 @@ The answer shows each program that fits, with a clear status:
 
 ```
 ◐  EuroHPC AI Factories Playground Access
-●  company
-○  employment
+●  a company
+○  project lead employed past the allocation
 ○  VAT number
-○  work email
-○  workload
+○  email on your own domain
+○  workload defined: code, one system, GPU hours
 ?  Is the project lead employed until at least three months after the allocation ends?
 →  5 000 GPU hours fixed per application, 1 to 3 months, one system
 ```
 
 `●` you meet it. `○` not known yet. `×` this rules you out. `?` the one question that matters next.
 
-Under each one, a few sentences in your own language: what the program is, why it fits or what is missing, and the exact next step with the link.
+The answer starts with two lines: which door fits best, and the one question that decides it. Then, for at most three programs:
 
-Answer the question and it updates. No forms. No starting over.
+- what the program is, in one sentence
+- **what you need before you apply**: the login, the attachments, the co-financing, the partner, the deadline
+- **what the page leaves unclear**, and whom to ask
+- the exact next step, with the link
+
+Everything is in your language: Swedish, Finnish, Norwegian, Danish or English. Answer the question and it updates. No forms. No starting over.
 
 ## What makes it different
 
 - **It checks the live page first.** Before it tells you a deadline or an amount, it reads the program's own website today. If the page says the round is closed, you hear that.
 - **It asks, it does not guess.** If it does not know your country or your headcount, it asks. A guess gives you a confident wrong answer.
 - **It tells you what rules you out.** Not just "you might qualify". It names the exact requirement, like "the project lead must be employed for three months after the GPU time ends".
+- **It tells you what the form will ask before you open it.** Every program carries a checklist read from its own application page, so the BankID login or the 50 percent co-financing is not a surprise on page three of the form.
+- **It says what it does not know.** When a page leaves out the amount or two pages disagree on a date, you hear it, with the address to ask.
+- **It works across borders.** Live in Copenhagen with a Swedish AB? You see both countries, and which Danish programs a Danish company would open.
 - **It never applies for you.** It shows you the door and the next step. The account, the signature and the submit button stay with you.
 - **No percentages, no promises.** Vinnova draws lots between equally strong applications. EuroHPC is first come, first served. You get told how the process works, not a made-up score.
 
 ## What it covers
 
-51 programs, checked on 15 October 2026.
+63 programs, checked on 15 and 16 October 2026.
 
 | You need | Examples |
 |---|---|
-| **Money** | Vinnova, Almi, Energimyndigheten, EIC Accelerator, Eurostars, Innovasjon Norge, Business Finland, Innovationsfonden, Rannís |
+| **Money** | Vinnova, Almi, Energimyndigheten, EIC Accelerator, Eurostars, Innovasjon Norge, SkatteFUNN, Business Finland, Finnvera, Innofounder, Innobooster, Rannís |
 | **GPU and compute** | EuroHPC Playground, Fast Lane and Large Scale, Sweden AI Factory, LUMI, Sigma2 KI-fabrikken, NAISS, Berzelius |
 | **Cloud credits** | AWS Activate, Google for Startups, Microsoft for Startups, Cloudflare, Vercel, Neon, MongoDB |
 | **AI credits** | Claude Startups, OpenAI for Startups, Together AI, Modal, Runpod, Lambda, NVIDIA Inception |
-| **Accelerators** | Sting, Norrsken Evolve, Antler, KTH Innovation, Chalmers Ventures, Minc |
+| **Accelerators** | Sting, Norrsken Evolve, Antler, Accelerace, Kiuas, KTH Innovation, Chalmers Ventures, Minc |
 
 Programs open and close. The skill reads each page again before it tells you anything, so the list above is a map, not a promise.
 
@@ -82,7 +91,7 @@ cd startup-krediter
 sh bootstrap.sh
 ```
 
-**2. Ask your assistant.** In any language. For example:
+**2. Ask your assistant.** In Swedish, Finnish, Norwegian, Danish or English. For example:
 
 - "Har vi en chans på gratis GPU? Svenskt AB, två år, fyra personer."
 - "We're a Finnish Oy, pre-seed, building on OpenAI. What credits can we get?"
