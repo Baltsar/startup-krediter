@@ -1,36 +1,36 @@
 # startup-krediter
 
-**Find the money, GPU time and free credits your startup can actually get. In one conversation.**
+**Ask your AI assistant which grants, GPU hours and startup credits your company can get. Get the doors that fit, everything each one will ask of you, and the next step.**
 
-For founders in Sweden, Norway, Finland, Denmark and Iceland.
+For founders in Sweden, Finland, Norway, Denmark and Iceland. Answers in Swedish, Finnish, Norwegian, Danish or English.
+
+An open-source skill for Claude Code, Cursor and Codex, by [OpenSverige](https://opensverige.se).
 
 ---
 
-## The problem
+## Why this exists
 
-You have heard there is free money out there. Grants. Free GPU hours. Thousands of dollars in cloud credits. So you start looking.
+There is real money for early startups in the Nordics: grants, soft loans, free time on EU supercomputers, and tens of thousands of dollars in cloud and AI credits. Finding the part that fits you is the hard part.
 
-Three hours later you have twenty open tabs and no answer.
+- **Every program speaks its own language.** Vinnova, Almi, EuroHPC, Business Finland and AWS all describe eligibility differently, on different sites.
+- **The rule that rules you out is buried.** It sits on a conditions page, in a PDF, or in the form itself.
+- **Old advice looks current.** Rounds close, cohorts fill, amounts change. The blog post you found does not say so.
+- **You do not know the names.** You need GPU time, and the door is called "EuroHPC AI Factories Playground Access".
+- **The surprises come late.** You decide you qualify, start the application, and then meet the BankID login, the co-financing rule, the partner you needed first, or the deadline that passed.
 
-- **Every program has its own website, its own words and its own rules.** Vinnova, Almi, EuroHPC, AWS, Google. Nobody puts them side by side.
-- **You cannot tell if you qualify until you have read everything.** The rule that rules you out is often on page four.
-- **The blog post you found is out of date.** The round closed in August. The cohort is full. The amount changed.
-- **You do not know what to search for.** You need GPU time, but the door is called "EuroHPC AI Factories Playground Access".
-- **Money, compute and credits get mixed up.** Free GPU hours will not pay your OpenAI bill. A grant will not give you a GPU.
-- **The surprise comes inside the application.** You decide you qualify, open the form, and only then meet the BankID login, the co-financing rule, the partner you needed to sign first, or the deadline that passed.
+This skill does that reading for you, before you open a single form.
 
-So most founders give up, or apply for the one program they happened to hear about.
+## What you get
 
-## What this does
+You describe your company in plain words, the way you would to a friend:
 
-You describe your company in plain words. You get back the programs that fit you, and what to do next.
+> We're a Swedish AB, two years old, four people, building an AI product. We need GPU time to fine-tune a model. Do we have a chance at anything free?
 
-```
-You:   We're a Swedish AB, two years old, four people. We need GPU
-       time and we pay for Claude and AWS. Do we have a chance?
-```
+The answer starts with a verdict and the one question that decides it:
 
-The answer shows each program that fits, with a clear status:
+> Yes. EuroHPC Playground is open to a Swedish AB and gives you 5,000 free GPU hours for fine-tuning. What decides it is your project lead's employment contract. Is the project lead employed until at least three months after the GPU allocation ends?
+
+Then each door that fits, at most three, with a status block:
 
 ```
 ◐  EuroHPC AI Factories Playground Access
@@ -43,47 +43,62 @@ The answer shows each program that fits, with a clear status:
 →  5 000 GPU hours fixed per application, 1 to 3 months, one system
 ```
 
-`●` you meet it. `○` not known yet. `×` this rules you out. `?` the one question that matters next.
+`●` you meet it · `○` not known yet · `×` this rules you out · `?` the question that matters next
 
-The answer starts with two lines: which door fits best, and the one question that decides it. Then, for at most three programs:
+Under the block, what the application will ask of you and what the page leaves open:
 
-- what the program is, in one sentence
-- **what you need before you apply**: the login, the attachments, the co-financing, the partner, the deadline
-- **what the page leaves unclear**, and whom to ask
-- the exact next step, with the link
+> **Before you apply:**
+> - Use the hours for training or fine-tuning. Only a small, justified share can go to inference, and running a live product is not allowed.
+> - Register on access.eurohpc-ju.europa.eu with your company email. You solve the captcha yourself.
+> - You need the company's VAT number, plus a PIC if you have one.
+> - The form is online and in English. Every mandatory field must be filled in.
+>
+> **Unclear:**
+> - The terms say you commit to publishing results. Sweden AI Factory says startups are exempt. Ask aif.access@eurohpc-ju.europa.eu what you must publish.
+>
+> **Next step:** create the portal account, open the Playground call, choose a system and fill in the form. You click submit yourself.
 
-Everything is in your language: Swedish, Finnish, Norwegian, Danish or English. Answer the question and it updates. No forms. No starting over.
+*Shortened from a real answer the skill gave on 16 October 2026. The full answer had a second door and six more requirements.*
 
-## What makes it different
+Answer the question and the status updates. No forms, no starting over.
 
-- **It checks the live page first.** Before it tells you a deadline or an amount, it reads the program's own website today. If the page says the round is closed, you hear that.
-- **It asks, it does not guess.** If it does not know your country or your headcount, it asks. A guess gives you a confident wrong answer.
-- **It tells you what rules you out.** Not just "you might qualify". It names the exact requirement, like "the project lead must be employed for three months after the GPU time ends".
-- **It tells you what the form will ask before you open it.** Every program carries a checklist read from its own application page, so the BankID login or the 50 percent co-financing is not a surprise on page three of the form.
-- **It says what it does not know.** When a page leaves out the amount or two pages disagree on a date, you hear it, with the address to ask.
-- **It works across borders.** Live in Copenhagen with a Swedish AB? You see both countries, and which Danish programs a Danish company would open.
-- **It never applies for you.** It shows you the door and the next step. The account, the signature and the submit button stay with you.
-- **No percentages, no promises.** Vinnova draws lots between equally strong applications. EuroHPC is first come, first served. You get told how the process works, not a made-up score.
+## How it works
+
+- **It reads the live page before it quotes anything.** Deadlines, amounts and "is it open" come from the program's own site that day, not from memory. When a page cannot be read, it says so and gives you the link.
+- **It carries each program's own conditions.** Every program has a checklist read from its application and conditions pages: logins, attachments, co-financing, partners, what you must report afterwards.
+- **It says what it does not know.** When a page leaves out the amount or two pages disagree, you hear it, with the address to ask.
+- **It asks instead of guessing.** Country, legal form and headcount close more doors than anything else, so it asks for them rather than assume.
+- **It tells you what would open more doors.** No company yet? It names the programs a registered company would unlock. Living in Copenhagen with a Swedish AB? You see both countries.
+- **It never applies for you.** The account, the signature and the submit button stay with you.
+- **No scores, no promises.** Vinnova draws lots between equally strong applications. EuroHPC is first come, first served. You get the process, not a made-up percentage.
 
 ## What it covers
 
-63 programs, checked on 15 and 16 October 2026.
+63 programs, each read from its own pages on 15 or 16 October 2026.
 
-| You need | Examples |
+| You need | Programs include |
 |---|---|
-| **Money** | Vinnova, Almi, Energimyndigheten, EIC Accelerator, Eurostars, Innovasjon Norge, SkatteFUNN, Business Finland, Finnvera, Innofounder, Innobooster, Rannís |
+| **Grants and loans** | Vinnova, Almi, Energimyndigheten, EIC Accelerator, Eurostars, Eureka Innowwide, Innovasjon Norge, SkatteFUNN, Business Finland, Finnvera, InnoFounder, Innobooster, Rannís |
 | **GPU and compute** | EuroHPC Playground, Fast Lane and Large Scale, Sweden AI Factory, LUMI, Sigma2 KI-fabrikken, NAISS, Berzelius |
 | **Cloud credits** | AWS Activate, Google for Startups, Microsoft for Startups, Cloudflare, Vercel, Neon, MongoDB |
 | **AI credits** | Claude Startups, OpenAI for Startups, Together AI, Modal, Runpod, Lambda, NVIDIA Inception |
 | **Accelerators** | Sting, Norrsken Evolve, Antler, Accelerace, Kiuas, KTH Innovation, Chalmers Ventures, Minc |
 
-Programs open and close. The skill reads each page again before it tells you anything, so the list above is a map, not a promise.
+Coverage is deepest in Sweden. Here is the honest count by where a program is run:
 
-## How to use it
+| Sweden | EU-wide | Global vendors | Finland | Norway | Denmark | Iceland |
+|---|---|---|---|---|---|---|
+| 24 | 12 | 14 | 6 | 4 | 2 | 1 |
 
-It runs inside an AI coding assistant: Claude Code, Cursor or Codex. If you already use one of those, it takes a minute to set up.
+Founders in every Nordic country can use the EU-wide and global programs. The national lists for Finland, Norway, Denmark and Iceland are thin, and [adding a program](#add-a-program) is the most useful contribution you can make.
 
-**1. Install it once.** Paste this into your terminal:
+Programs open and close all the time. Treat the data as a map: the skill reads the page again before it tells you anything.
+
+## Get started
+
+You need Claude Code, Cursor or Codex, plus git and Python 3.10 or later.
+
+**1. Install once.** In a terminal:
 
 ```bash
 git clone https://github.com/Baltsar/startup-krediter.git
@@ -91,38 +106,58 @@ cd startup-krediter
 sh bootstrap.sh
 ```
 
-**2. Ask your assistant.** In Swedish, Finnish, Norwegian, Danish or English. For example:
+The script links the folder into each assistant it finds on your machine. Keep the folder where it is, because the links point to it. Run `git pull` in it to get new programs.
+
+**2. Ask your assistant**, in any of the five languages:
 
 - "Har vi en chans på gratis GPU? Svenskt AB, två år, fyra personer."
-- "We're a Finnish Oy, pre-seed, building on OpenAI. What credits can we get?"
-- "Which grants can a Norwegian AS under three years apply for?"
-- Or type `/startup-krediter`.
+- "Olemme suomalainen Oy, pre-seed, rakennamme OpenAI:n päälle. Mitä krediittejä voimme saada?"
+- "Hvilke tilskudd kan et norsk AS under tre år søke?"
+- "Two founders, no company yet, a climate idea. Is there any money for us?"
 
-That is it. You need Python 3.10 or later, which most computers already have.
+Or type `/startup-krediter`.
 
-Prefer reading to asking? The human version of the Swedish GPU map is here: https://opensverige.se/blogg/startup-krediter-gpu-sverige
+**Not using an AI assistant?** Read the human-written map of Swedish GPU and credit programs at [opensverige.se](https://opensverige.se/blogg/startup-krediter-gpu-sverige).
 
----
+## Good to know
 
-## For contributors
+- This is not financial or legal advice. It points you at doors and reads their rules. The program decides.
+- The data was correct on the date shown for each program. Rules change, so the skill checks the live page, and you should read it too before you apply.
+- Some sites block automated readers. When that happens the skill says so instead of guessing.
 
-Everything below is for people who want to add a program or improve the code.
+## Add a program
 
-**How it works.** `data/programs.json` holds one record per program, with its requirements written as data. `scripts/match.py` takes a company profile and returns the programs ranked: eligible first, then unknown with the fewest open questions, then ruled out. `SKILL.md` tells the assistant how to build the profile from the chat, when to read the live page, and how to answer. `references/*.md` hold the longer notes per area, each with a quoted sentence from the program's page as evidence.
+**Not a developer?** [Open an issue](https://github.com/Baltsar/startup-krediter/issues/new) with the program's name, its link, and the country. That is enough for someone to add it.
 
-```bash
-echo '{"country":"SE","legal_form":"company","age_years":2,"employees":4,"need":["compute","credits"],"stack":["anthropic","aws"]}' \
-  | python3 scripts/match.py --live
-```
+**Developer?** Each program is one record in `data/programs.json`. Its eligibility rules are data, so you add a program without writing any code.
 
-Records older than 90 days are flagged so the assistant reads the page again. Standard library only, no packages.
-
-**Add a program.** Append a record to `data/programs.json` (shape in `data/schema.json`), add an entry with the matching `{#id}` anchor to the right file in `references/`, set `last_verified` to the day you read the page, and run:
+1. Append a record. The shape is in `data/schema.json` and examples are in `tests/fixtures/programs_small.json`.
+2. Add an entry with the matching `{#id}` anchor to the right file in `references/`, with a quoted sentence from the program's page as evidence.
+3. Set `last_verified` to the day you read the page.
+4. Run the checks:
 
 ```bash
 python3 scripts/validate.py && python3 scripts/check_links.py && uv run --with pytest pytest tests/ -q
 ```
 
-Only facts that appear on the program's own page go into a record. If the page does not state an amount, the record says so.
+Only facts that appear on the program's own pages go into a record. If a page does not state an amount, the record says so.
 
-MIT. Copyright 2026 OpenSverige.
+<details>
+<summary>How the pieces fit</summary>
+
+- `SKILL.md` tells the assistant how to build a profile from the chat, when to read the live page, and how to answer.
+- `scripts/match.py` takes a company profile as JSON and returns the doors ranked: fits first, then fewest open questions, then ruled out. Standard library only, no packages.
+- `scripts/vinnova_api.py` reads the current Vinnova round from Vinnova's open data API.
+- `references/*.md` hold the longer notes per area.
+- Records older than 90 days are flagged so the assistant re-reads the page.
+
+```bash
+echo '{"country":"SE","legal_form":"company","age_years":2,"employees":4,"need":["compute"],"lang":"en"}' \
+  | python3 scripts/match.py --live
+```
+
+</details>
+
+---
+
+MIT licensed. Made by [OpenSverige](https://opensverige.se), Sweden's open community for AI agents.
