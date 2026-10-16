@@ -76,6 +76,10 @@ SECTOR_ALIASES = {
     "climatetech": "climate", "climate_tech": "climate", "klimat": "climate", "klima": "climate", "ilmasto": "climate",
     "healthtech": "health", "medtech": "health", "life_science": "health", "lifescience": "health", "hälsa": "health",
     "helse": "health", "sundhed": "health", "terveys": "health", "energi": "energy", "energia": "energy", "fin_tech": "fintech",
+    "logistics": "transport", "logistik": "transport", "logistikk": "transport", "logistiikka": "transport",
+    "trucking": "transport", "road_transport": "transport", "mobility": "transport", "chips": "semiconductors",
+    "semiconductor": "semiconductors", "halvledare": "semiconductors", "ocean": "marine", "maritime": "marine",
+    "hav": "marine", "aquaculture": "marine", "havbruk": "marine", "fiskeoppdrett": "marine",
 }
 NEED_ALIASES = {
     "gpu": "compute", "hpc": "compute", "gpu_hours": "compute", "gpu_timmar": "compute", "gpu_timer": "compute",
@@ -147,6 +151,8 @@ class Door:
     home_country: str | None = None
     foreign: bool = False
     founder_cost: str = "none"
+    stage_mismatch: bool = False
+    topic_mismatch: bool = False
     also: list[dict] = dc_field(default_factory=list)
     live: dict | None = None
     glyph: str = ""
@@ -403,6 +409,8 @@ def evaluate(program: dict, profile: dict, today: date, lang: str) -> Door:
         group=program.get("group"),
         home_country=program.get("home_country"),
         founder_cost=str(program.get("founder_cost", "none")),
+        stage_mismatch=stage_mismatch(program, profile),
+        topic_mismatch=topic_mismatch(program, profile),
         foreign=bool(program.get("home_country")) and bool(profile_countries(profile)) and program.get("home_country") not in profile_countries(profile),
     )
 
@@ -438,13 +446,69 @@ def render_glyph(door: Door, lang: str) -> str:
 COST_RANK: dict[str, int] = {"none": 0, "repay": 1, "equity": 2, "fee": 3}
 
 
+def founder_stage(profile: dict) -> str | None:
+    """The founder's stage, or idea when they have no company and gave no stage."""
+    stage = profile.get("stage")
+    if stage in STAGES:
+        return str(stage)
+    if profile.get("legal_form") == "none":
+        return "idea"
+    return None
+
+
+def stage_mismatch(program: dict, profile: dict) -> bool:
+    """True when the program lists the stages it serves and the founder's known stage is not one of them.
+
+    An EU scale-up grant is formally open to two people with an idea, but
+    leading their answer with it sends them to the wrong door.
+    """
+    stages = program.get("stages")
+    stage = founder_stage(profile)
+    return bool(stages) and stage is not None and stage not in stages
+
+
+def topic_mismatch(program: dict, profile: dict) -> bool:
+    """True for a call tied to sectors the founder has not said they work in.
+
+    A Vinnova challenge on Baltic marine monitoring is open to any Swedish
+    company, but it should not lead an answer to a logistics founder, or to a
+    founder whose sector is unknown.
+    """
+    sectors = program.get("sectors")
+    if not sectors:
+        return False
+    return not set(sectors) & set(profile.get("sector") or [])
+
+
+def poor_fit(door: Door) -> bool:
+    """Doors that stay out of the full answer and go to `more`: closed, run from another country, wrong stage, wrong sector, or charging a fee."""
+    return (
+        door.availability == "closed"
+        or door.foreign
+        or door.stage_mismatch
+        or door.topic_mismatch
+        or door.founder_cost == "fee"
+    )
+
+
 def rank(doors: list[Door]) -> list[Door]:
     """Open doors first: eligible, then unknown with the fewest open questions, then blocked. Doors run from another country than the founder's come after domestic ones, closed doors last. Ties keep data-file order.
 
     A Swedish call that admits foreign startups is technically open to a Finnish
     founder, but leading a Finnish answer with it buries the Finnish doors.
     """
-    return sorted(doors, key=lambda door: (door.availability == "closed", door.foreign, COST_RANK.get(door.founder_cost, 0), RANK[door.status], len(door.unknown)))
+    return sorted(
+        doors,
+        key=lambda door: (
+            door.availability == "closed",
+            door.foreign,
+            door.stage_mismatch or door.topic_mismatch,
+            COST_RANK.get(door.founder_cost, 0),
+            door.availability != "open",
+            RANK[door.status],
+            len(door.unknown),
+        ),
+    )
 
 
 def collapse_groups(doors: list[Door]) -> list[Door]:
@@ -545,10 +609,12 @@ def pick_top(doors: list[Door], needs: list[str] | None, top: int) -> tuple[list
     """
     if top <= 0:
         return doors, []
+    good = [door for door in doors if not poor_fit(door)]
+    poor = [door for door in doors if poor_fit(door)]
     if not needs or len(needs) < 2:
-        return doors[:top], doors[top:]
+        return good[:top], good[top:] + poor
     shown: list[Door] = []
-    remaining = list(doors)
+    remaining = list(good)
     while len(shown) < top and remaining:
         progressed = False
         for need in needs:
@@ -562,7 +628,7 @@ def pick_top(doors: list[Door], needs: list[str] | None, top: int) -> tuple[list
                 break
         if not progressed:
             shown.append(remaining.pop(0))
-    return shown, remaining
+    return shown, remaining + poor
 
 
 
@@ -611,6 +677,9 @@ def summary(door: Door) -> dict:
         "open_questions": len(door.unknown),
         "foreign": door.foreign,
         "founder_cost": door.founder_cost,
+        "stage_mismatch": door.stage_mismatch,
+        "topic_mismatch": door.topic_mismatch,
+        "poor_fit": poor_fit(door),
         "status_url": door.status_url,
     }
 

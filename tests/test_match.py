@@ -280,13 +280,16 @@ def test_cli_rejects_non_object_profile(capsys: pytest.CaptureFixture[str]) -> N
 def test_closed_door_ranks_last_even_when_eligible() -> None:
     closed = dict(CREDIT, availability="closed")
     out = match.run({"country": "SE", "legal_form": "company", "stack": ["anthropic"]}, [closed, EU_COMPUTE], TODAY)
-    assert [door["id"] for door in out["doors"]] == ["test-eu-compute", "test-global-credit"]
-    assert out["doors"][1]["availability"] == "closed"
+    assert [door["id"] for door in out["doors"]] == ["test-eu-compute"]
+    assert [door["id"] for door in out["more"]] == ["test-global-credit"]
+    every = match.run({"country": "SE", "legal_form": "company", "stack": ["anthropic"]}, [closed, EU_COMPUTE], TODAY, top=0)
+    assert [door["id"] for door in every["doors"]] == ["test-eu-compute", "test-global-credit"]
+    assert every["doors"][1]["availability"] == "closed"
 
 
 def test_closed_glyph_names_the_date_and_points_at_the_page() -> None:
     closed = dict(CREDIT, availability="closed")
-    out = match.run({"country": "SE", "legal_form": "company", "stack": ["anthropic"], "funding_raised_usd": 0}, [closed], TODAY)
+    out = match.run({"country": "SE", "legal_form": "company", "stack": ["anthropic"], "funding_raised_usd": 0}, [closed], TODAY, top=0)
     glyph = out["doors"][0]["glyph"]
     assert glyph.startswith("●  Test global credit")
     assert "→  Closed when verified 2026-07-01; read the status page for the next round" in glyph
@@ -505,7 +508,7 @@ def test_top_limits_full_doors_and_lists_the_rest_under_more() -> None:
     out = run({"country": "SE", "legal_form": "company", "stack": ["anthropic"]}, top=1)
     assert [door["id"] for door in out["doors"]] == ["test-global-credit"]
     assert [door["id"] for door in out["more"]] == ["test-se-grant", "test-eu-compute"]
-    assert set(out["more"][0]) == {"id", "name", "kind", "status", "availability", "amount", "open_questions", "foreign", "founder_cost", "status_url"}
+    assert set(out["more"][0]) == {"id", "name", "kind", "status", "availability", "amount", "open_questions", "foreign", "founder_cost", "stage_mismatch", "topic_mismatch", "poor_fit", "status_url"}
     assert run({"country": "SE", "legal_form": "company", "stack": ["anthropic"]}, top=0)["more"] == []
 
 
@@ -599,3 +602,35 @@ def test_money_the_founder_keeps_ranks_before_equity_and_fees() -> None:
         match.evaluate(dict(EU_COMPUTE, **base, id="grant"), {"country": "SE"}, TODAY, "en"),
     ]
     assert [door.id for door in match.rank(doors)] == ["grant", "loan", "equity", "fee"]
+
+
+def test_stage_mismatch_ranks_after_doors_that_fit_the_stage() -> None:
+    base = {"country": "SE", "kind": "grant", "need": ["money"], "eligibility": []}
+    profile = {"country": "SE", "legal_form": "none"}
+    doors = [
+        match.evaluate(dict(EU_COMPUTE, **base, id="scaleup", stages=["seed", "series_a"]), profile, TODAY, "en"),
+        match.evaluate(dict(EU_COMPUTE, **base, id="early", stages=["idea", "pre_seed"]), profile, TODAY, "en"),
+    ]
+    assert [door.id for door in match.rank(doors)] == ["early", "scaleup"]
+    assert match.founder_stage({"legal_form": "none"}) == "idea"
+    assert match.founder_stage({"legal_form": "company"}) is None
+
+
+def test_open_doors_rank_before_doors_of_unknown_status() -> None:
+    base = {"country": "SE", "kind": "grant", "need": ["money"], "eligibility": []}
+    doors = [
+        match.evaluate(dict(EU_COMPUTE, **base, id="maybe", availability="unknown"), {"country": "SE"}, TODAY, "en"),
+        match.evaluate(dict(EU_COMPUTE, **base, id="open", availability="open"), {"country": "SE"}, TODAY, "en"),
+    ]
+    assert [door.id for door in match.rank(doors)] == ["open", "maybe"]
+
+
+def test_topic_call_stays_out_unless_the_sector_matches() -> None:
+    base = {"country": "SE", "kind": "grant", "need": ["money"], "eligibility": []}
+    marine = dict(EU_COMPUTE, **base, id="marine", sectors=["marine"])
+    general = dict(EU_COMPUTE, **base, id="general")
+    out = match.run({"country": "SE", "legal_form": "company", "need": ["money"]}, [marine, general], TODAY)
+    assert [door["id"] for door in out["doors"]] == ["general"]
+    assert [door["id"] for door in out["more"]] == ["marine"]
+    out = match.run({"country": "SE", "legal_form": "company", "need": ["money"], "sector": ["ocean"]}, [marine, general], TODAY)
+    assert "marine" in [door["id"] for door in out["doors"]]

@@ -86,6 +86,16 @@
           "enum": ["none", "repay", "equity", "fee"],
           "description": "What taking the money costs the founder: none (grant, free compute, credits), repay (loan or guarantee), equity (investment for ownership), fee (the program charges the founder). Ranking puts none first and fee last."
         },
+        "stages": {
+          "type": "array",
+          "items": {"type": "string", "enum": ["idea", "pre_seed", "seed", "series_a", "later"]},
+          "description": "Stages the program realistically serves. Not an eligibility rule: a founder outside these stages can still apply, but the door ranks after doors that fit their stage. A profile with no company and no stage counts as idea."
+        },
+        "sectors": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Only for calls tied to a topic (a marine challenge, a semiconductor pilot line). Such a door ranks after general doors and stays out of the full answer unless the founder's sector matches."
+        },
         "group": {
           "type": "string",
           "pattern": "^[a-z0-9-]+$",
