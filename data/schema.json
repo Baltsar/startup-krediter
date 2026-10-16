@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Baltsar/startup-krediter/data/schema.json",
+  "title": "startup-krediter programs",
+  "description": "One record per funding, compute, credit or accelerator program. Eligibility is data: a list of rules the matcher evaluates against a profile.",
+  "type": "object",
+  "required": ["programs"],
+  "additionalProperties": false,
+  "properties": {
+    "programs": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/program"}
+    }
+  },
+  "$defs": {
+    "program": {
+      "type": "object",
+      "required": [
+        "id", "name", "country", "kind", "need", "who", "what", "amount",
+        "eligibility", "apply_url", "status_url", "next_step", "reference", "last_verified"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+        "name": {"type": "string", "minLength": 1},
+        "country": {
+          "type": "string",
+          "pattern": "^([A-Z]{2}|EU|global)$",
+          "description": "ISO-2 country, EU for EU plus EEA plus Horizon-associated countries, or global."
+        },
+        "kind": {"enum": ["grant", "loan", "compute", "cloud_credit", "ai_api_credit", "accelerator", "perks"]},
+        "need": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"enum": ["money", "compute", "credits", "support"]}
+        },
+        "who": {"type": "string", "minLength": 1},
+        "what": {"type": "string", "minLength": 1},
+        "amount": {"$ref": "#/$defs/amount"},
+        "eligibility": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/gate"}
+        },
+        "apply_url": {"type": "string", "pattern": "^(https?://|mailto:)"},
+        "status_url": {
+          "type": "string",
+          "pattern": "^https?://",
+          "description": "The page to fetch before quoting a date, an amount, or whether a round is open."
+        },
+        "live": {"$ref": "#/$defs/live"},
+        "next_step": {"type": "string", "minLength": 1},
+        "reference": {
+          "type": "string",
+          "pattern": "^references/[a-z-]+\\.md#[a-z0-9-]+$",
+          "description": "Reference file and anchor with the prose entry for this program."
+        },
+        "last_verified": {
+          "type": "string",
+          "format": "date",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "description": "The date the status page was actually read. Records older than 90 days are flagged stale."
+        },
+        "notes": {"type": "string"},
+        "availability": {
+          "enum": ["open", "closed", "unknown"],
+          "description": "Whether applications were being accepted on last_verified. Closed doors rank last and carry a glyph line that points at the status page."
+        },
+        "apply_requirements": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "description": "Things the founder must have, prepare or do to get through the application that are not eligibility rules: login method, attachments, co-financing, language, account, partner, interview, decision time. Shown as a checklist before the founder goes to the site."
+        },
+        "unclear": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "description": "What the program's pages do not say or say inconsistently, phrased so the founder knows what to ask and whom."
+        },
+        "home_country": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$",
+          "description": "For a door open to several countries but run and paid by one (a Vinnova call that admits foreign startups): the funder's country. Doors whose home_country is not the founder's rank after domestic doors instead of first."
+        },
+        "founder_cost": {
+          "type": "string",
+          "enum": ["none", "repay", "equity", "fee"],
+          "description": "What taking the money costs the founder: none (grant, free compute, credits), repay (loan or guarantee), equity (investment for ownership), fee (the program charges the founder). Ranking puts none first and fee last."
+        },
+        "group": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "Doors in the same group with the same status and open questions collapse into one answer with the siblings listed, so three EuroHPC tiers read as one choice."
+        }
+      }
+    },
+    "amount": {
+      "type": "object",
+      "required": ["text"],
+      "additionalProperties": false,
+      "properties": {
+        "text": {"type": "string", "minLength": 1},
+        "min": {"type": "number"},
+        "max": {"type": "number"},
+        "currency": {"type": "string", "pattern": "^[A-Z]{3}$"}
+      }
+    },
+    "gate": {
+      "oneOf": [
+        {"$ref": "#/$defs/rule"},
+        {"$ref": "#/$defs/group"}
+      ]
+    },
+    "rule": {
+      "type": "object",
+      "required": ["field", "op", "value"],
+      "additionalProperties": false,
+      "description": "The label and the question the founder sees are generated from field, op and value in the founder's language (scripts/i18n.py), so the glyph can never claim more than the rule checks.",
+      "properties": {
+        "field": {
+          "enum": [
+            "country", "residence_country", "legal_form", "age_years", "employees",
+            "revenue_msek", "balance_msek", "revenue_meur", "balance_meur", "funding_raised_usd",
+            "stage", "vc_backed", "vc_partner", "stack", "sector", "confirmed",
+            "has_vat", "has_employment", "has_work_email", "has_website",
+            "has_developer", "workload_defined", "profit_distributed"
+          ]
+        },
+        "op": {"enum": ["eq", "neq", "in", "not_in", "lte", "gte", "lt", "gt", "contains"]},
+        "value": {}
+      }
+    },
+    "group": {
+      "type": "object",
+      "required": ["any"],
+      "additionalProperties": false,
+      "description": "Met if any member is met. Failed only when every member is known and failed. Otherwise unknown. The label is the members' labels joined with 'or'.",
+      "properties": {
+        "any": {
+          "type": "array",
+          "minItems": 2,
+          "items": {"$ref": "#/$defs/rule"}
+        }
+      }
+    },
+    "live": {
+      "type": "object",
+      "required": ["source", "call_id"],
+      "additionalProperties": false,
+      "properties": {
+        "source": {"enum": ["vinnova"]},
+        "call_id": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

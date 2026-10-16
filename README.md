@@ -1,63 +1,124 @@
 # startup-krediter
 
-A skill for a builder in Sweden or the Nordics who asks if they have a chance. It checks one door. It does not quote a percentage. It does not submit the application.
+**Ask your AI assistant which grants, GPU hours and startup credits your company can get. Get the doors that fit, everything each one will ask of you, and the next step.**
 
-`/startup-krediter` loads it. So does Sweden AI Factory, EuroHPC, Playground, Fast Lane, Vinnova, NVIDIA Inception, Claude Startups, AWS Activate, GPU hours, or "do we have a chance". The same question in the other languages is startup-krediitit, startup-kreditter, "har vi en sjanse", and "har vi en chance". The id stays startup-krediter.
+For founders in Sweden, Finland, Norway, Denmark and Iceland. Answers in Swedish, Finnish, Norwegian, Danish or English.
 
-## Sweden AI Factory
+An open-source skill for AI assistants, by [OpenSverige](https://opensverige.se). Tested with Claude Code; it also installs into Cursor and Codex.
 
-Sweden AI Factory does not hand out GPU hours by email. The email asks them which call to use. The skill writes that draft. It does not send it. Address: `info@swedenaifactory.se`.
+---
 
-The GPU call for a Swedish company is EuroHPC Playground, on the factory's machines. Playground is open, permanent, industry only. Eligibility check, then a technical assessment of one system, then first come, first served until the reserved hours run out. The same terms also say innovation can decide the last allocation. Both sentences stay. The form is behind an account. Registration has a captcha. The skill does not solve the captcha and does not click Register.
+## Why this exists
 
-Fast Lane is the sibling industrial call in the same terms: also rolling, also eligibility plus technical assessment. Large Scale is the scored call. Innovation and impact are scored there, not in the Playground section. Academia and the public sector belong in EuroHPC AI for Science, not in Playground.
+There is real money for early startups in the Nordics: grants, soft loans, free time on EU supercomputers, and tens of thousands of dollars in cloud and AI credits. Finding the part that fits you is the hard part.
 
-RISE has no application form. Paid GPU is ICE Connect, or an invoice from Berget, ICE, or Stormgrid. Hyperight, Agorify, HP, Bull, Consumeit, and Aderian are booths at Nordic AI Factory Summit 2026. A booth is not a call.
+- **Every program speaks its own language.** Vinnova, Almi, EuroHPC, Business Finland and AWS all describe eligibility differently, on different sites.
+- **The rule that rules you out is buried.** It sits on a conditions page, in a PDF, or in the form itself.
+- **Old advice looks current.** Rounds close, cohorts fill, amounts change. The blog post you found does not say so.
+- **You do not know the names.** You need GPU time, and the door is called "EuroHPC AI Factories Playground Access".
+- **The surprises come late.** You decide you qualify, start the application, and then meet the BankID login, the co-financing rule, the partner you needed first, or the deadline that passed.
 
-## The catch
+This skill does that reading for you, before you open a single form.
 
-Free GPU, a grant, and a cloud-credit program are three doors. GPU time does not pay the API invoice.
+## What you get
 
-Nothing here has a submit API. `submit` is `no`. A portal needs the account owner's login. The last click stays with them.
+You describe your company in plain words, the way you would to a friend:
 
-## Money
+> we're pre-seed (just closed a 400k USD angel round, no VC), 3 people, Swedish AB, building an AI agent product on Vercel + Supabase + Anthropic. which credits can we actually get?
 
-| Country | Door | What the page says |
-|---|---|---|
-| Sweden | Vinnova Innovativa Startups | Swedish page: up to SEK 500,000, decision 23 March 2027. Low scores are rejected. Very high scores are granted. High and equal scores are drawn by lot. English page: same cap, and a line that the full assessment text is published when the call opens. A March 2026 slide deck says scores of 0–5, a ranked total, and an opening on 1 September. Do not pick. |
-| Norway | Oppstartstilskudd 1 | Up to NOK 150,000. The 2026 assignment letter targets companies up to three years old, five in an exception. |
-| Norway | Startup grant 2 | Up to NOK 1 million. The 2026 pot is cut by 60 percent. More applications are rejected. |
-| Finland | Business Finland | Young-company funding. GPU time is LUMI, not this grant. |
-| Finland | Sprint Grant | Continuous from 1 September 2026. EUR 75,000–100,000, after a meeting with an officer. |
-| Finland | Deep Tech Accelerator | At most six companies. The 2026 window closed 16 August. |
-| Denmark | Innofounder | Spring round closed 17 February 2026. Autumn round closed 25 August 2026 at 12:00. Final grant or rejection is expected in mid-December 2026. |
-| Iceland | Fræ | Open year-round at Rannís, on the skill's last read. A different call, Icelandic Research Fund Startup grants for postdocs, closed 15 June 2026. |
+**The first answer is short.** A verdict, the one question that decides it, and the three doors that fit, one line each. Every line says how many requirements are waiting, so nothing looks simpler than it is:
 
-No named award list for the 2026 Vinnova round exists yet. The decision date is 23 March 2027. The last named cohort is Vinnova's own October 2025 note: 103 companies, more than SEK 50 million. That sits outside this six-month window.
+> AWS Activate fits you best on what we know. What decides it is your angel round: the Founders tier is for self-funded startups, and the bigger Portfolio tier needs an Org ID from an Activate Provider.
+>
+> How old is the company, in years?
+>
+> ◐ AWS Activate Credits: Founders tier starts at 1 000 USD, and select startups may get up to 5 000 USD. Portfolio tier goes up to 200 000 USD with a provider Org ID. Decides: whether one of your angels is an Activate Provider. 9 requirements in the application, 3 unclear points.
+> ◐ NVIDIA Inception: free membership with cloud credits from NVIDIA and partners, amounts not published. 8 requirements, 5 unclear points.
+> ● Claude Startups (Anthropic): partner credits worth up to 45 000 USD. Closed right now because the cohort is full. 4 requirements, 3 unclear points.
+>
+> AWS credits can pay for Claude, but only when you call it through Amazon Bedrock, not Anthropic's own API.
 
-Almi is named, and the map says it has no coded call. Fetch Almi’s own page before quoting an amount.
+**Pick a door and you get all of it.** The status block, everything the application will ask of you, what the page leaves unclear and whom to ask, and the next step:
 
-## GPU by country
+```
+◐  AWS Activate Credits
+●  uses AWS, or uses Anthropic
+●  stage: idea, pre-seed, seed or series A
+○  at most 10 years old
+○  new to AWS Activate credits, or asking for more than you received before
+?  How old is the company, in years?
+```
 
-| Country | Door |
+`●` you meet it · `○` not known yet · `×` this rules you out · `?` the question that matters next
+
+> **Before you apply**
+> - The Founders tier is for bootstrapped or self-funded startups. With outside funding, ask your angels whether any of them is an Activate Provider, and if so apply on the Portfolio tier.
+> - For the Portfolio tier, the provider must answer AWS's verification email. If they don't, the application is declined.
+> - AWS may ask you to verify your identity with an ID document. Saying no means rejection.
+> - An application cannot be edited after you submit it.
+>
+> **Unclear**
+> - Whether an angel-funded startup whose angels are not Activate Providers can still use the Founders tier. The credits page says self-funded, but the FAQ says the program is open to funded startups. Ask AWS Activate through the contact page.
+
+*Shortened from real answers the skill gave on 16 October 2026. The full checklist had eleven items.*
+
+Answer the question and the status updates. No forms, no starting over.
+
+## How it compares
+
+We asked six founder questions to the same AI model twice: with the skill, and with web search but no skill. Graders who did not know which answer was which checked both against the programs' own pages.
+
+| | Search engine | AI without the skill | AI with the skill |
+|---|---|---|---|
+| Starts from your company | No | Yes | Yes |
+| Checks whether you qualify | No | Partly, from what it finds | Rule by rule, from each program's own pages |
+| Requirements that stop an application, named before you apply: **two questions the skill was not tuned on** | not measured | 11 of 21 (52%) | 15 of 16 (94%) |
+| Same, all six questions | not measured | 37 of 74 (50%) | 66 of 69 (96%) |
+| Words in the first answer | not measured | 253 to 551 | 138 to 213 |
+| Picked the better first program | not measured | better in 1 of 6 | better in 1 of 6; same pick in 4 |
+| Time per conversation | not measured | 65 to 84 seconds | 76 to 142 seconds |
+
+Examples of wrong facts the graders found. Without the skill: a GPU call described as possibly closed while it was open, a grant budgeted for a prototype the grant excludes, the wrong age limit for a Norwegian grant, Google credits said to pay for Claude when Google's page says they do not. With the skill: a revenue question put to founders with no company (since fixed), an AWS FAQ answer called broken when it was not, and requirements stated a little stronger than the page states them.
+
+The search engine column describes what a search engine does; nothing in it was measured. Six questions, one run each, Claude Opus 5.5, 16 October 2026. Four of the questions shaped fixes made earlier that day, so the first row counts only the two that did not. The skill is not faster, and a plain AI search still sometimes finds a program our data lacks. Its edge is that you learn what will stop you before you start. Full method, per-question results and all twelve answers: [docs/benchmark/2026-10-16](docs/benchmark/2026-10-16/).
+
+## How it works
+
+- **It reads the live page before it quotes anything.** Deadlines, amounts and "is it open" come from the program's own site that day, not from memory. When a page cannot be read, it says so and gives you the link.
+- **It carries each program's own conditions.** Every program has a checklist read from its application and conditions pages: logins, attachments, co-financing, partners, what you must report afterwards.
+- **It says what it does not know.** When a page leaves out the amount or two pages disagree, you hear it, with the address to ask.
+- **It asks instead of guessing.** Country, legal form and headcount close more doors than anything else, so it asks for them rather than assume.
+- **It tells you what would open more doors.** No company yet? It names the programs a registered company would unlock. Living in Copenhagen with a Swedish AB? You see both countries.
+- **It never applies for you.** The account, the signature and the submit button stay with you.
+- **No scores, no promises.** Vinnova draws lots between equally strong applications. EuroHPC is first come, first served. You get the process, not a made-up percentage.
+
+## What it covers
+
+64 programs, each read from its own pages on 15 or 16 October 2026.
+
+| You need | Programs include |
 |---|---|
-| Sweden | EuroHPC Playground. Sweden AI Factory only points at the call. |
-| Finland | LUMI, national track. Consortium country. |
-| Norway | KI-fabrikken at Sigma2. The machine is Olivia. |
-| Denmark | LUMI consortium. The national grant name is not on the page. Do not guess it. |
-| Iceland | EuroHPC. Iceland is a LUMI antenna, not a consortium country. No national GPU pot on that page. |
+| **Grants and loans** | Vinnova, Almi, Energimyndigheten, EIC Accelerator, Eurostars, Eureka Innowwide, Innovasjon Norge, SkatteFUNN, Business Finland, Finnvera, InnoFounder, Innobooster, Rannís |
+| **GPU and compute** | EuroHPC Playground, Fast Lane and Large Scale, Sweden AI Factory, LUMI, Sigma2 KI-fabrikken, NAISS, Berzelius |
+| **Cloud credits** | AWS Activate, Google for Startups, Microsoft for Startups, Cloudflare, Vercel, Neon, MongoDB |
+| **AI credits** | Claude Startups, OpenAI for Startups, Together AI, Modal, Runpod, Lambda, NVIDIA Inception |
+| **Accelerators** | Sting, Norrsken Evolve, Antler, Accelerace, Kiuas, KTH Innovation, Chalmers Ventures, Minc |
 
-## Credits
+Coverage is deepest in Sweden. Here is the honest count by where a program is run:
 
-Credits sit with the vendor. No stack, no answer. The short map is AWS Activate, Cloudflare for Startups, Neon, Google for Startups Cloud, Microsoft for Startups, and Claude Startups.
+| Sweden | EU-wide | Global vendors | Finland | Norway | Denmark | Iceland |
+|---|---|---|---|---|---|---|
+| 25 | 12 | 14 | 6 | 4 | 2 | 1 |
 
-Claude Startups, as of 13 October 2026: the cohort is full. No new applications. Fetch the page again before saying it is open. Partner stack up to USD 45,000. A partner VC can add up to USD 100,000 in API credits. The expansion article also says up to USD 7,000 in Claude products, of which USD 1,000 is API credit. Credits apply to the Claude Console, not Bedrock or Vertex.
+Founders in every Nordic country can use the EU-wide and global programs. The national lists for Finland, Norway, Denmark and Iceland are thin, and [adding a program](#add-a-program) is the most useful contribution you can make.
 
-NVIDIA Inception: incorporated, under 10 years, one developer, a website, a work email on your own domain. No published credit amount. The public page has one field, Business Email. The rest is behind Sign Up / Login.
+Programs open and close all the time. Treat the data as a map: the skill reads the page again before it tells you anything.
 
-An OpenAI invoice matches nothing in the map.
+## Get started
 
-## Install
+You need an AI coding assistant, plus git and Python 3.10 or later. The skill is tested with Claude Code. It also installs into Cursor and Codex, but those have not been tested yet.
+
+**1. Install once.** In a terminal:
 
 ```bash
 git clone https://github.com/Baltsar/startup-krediter.git
@@ -65,32 +126,58 @@ cd startup-krediter
 sh bootstrap.sh
 ```
 
-That links this directory into Cursor, Claude, Codex, and the shared agent skills folder. Python 3. No packages.
+The script links the folder into each assistant it finds on your machine. Keep the folder where it is, because the links point to it. Run `git pull` in it to get new programs.
 
-## Run
+**2. Ask your assistant**, in any of the five languages:
 
-Chance, one door:
+- "Har vi en chans på gratis GPU? Svenskt AB, två år, fyra personer."
+- "Olemme suomalainen Oy, pre-seed, rakennamme OpenAI:n päälle. Mitä krediittejä voimme saada?"
+- "Hvilke tilskudd kan et norsk AS under tre år søke?"
+- "Two founders, no company yet, a climate idea. Is there any money for us?"
+
+Or type `/startup-krediter`.
+
+**Not using an AI assistant?** Read the human-written map of Swedish GPU and credit programs at [opensverige.se](https://opensverige.se/blogg/startup-krediter-gpu-sverige).
+
+## Good to know
+
+- This is not financial or legal advice. It points you at doors and reads their rules. The program decides.
+- The data was correct on the date shown for each program. Rules change, so the skill checks the live page, and you should read it too before you apply.
+- Some sites block automated readers. When that happens the skill says so instead of guessing.
+
+## Add a program
+
+**Not a developer?** [Open an issue](https://github.com/Baltsar/startup-krediter/issues/new) with the program's name, its link, and the country. That is enough for someone to add it.
+
+**Developer?** Each program is one record in `data/programs.json`. Its eligibility rules are data, so you add a program without writing any code.
+
+1. Append a record. The shape is in `data/schema.json` and examples are in `tests/fixtures/programs_small.json`.
+2. Add an entry with the matching `{#id}` anchor to the right file in `references/`, with a quoted sentence from the program's page as evidence.
+3. Set `last_verified` to the day you read the page.
+4. Run the checks:
 
 ```bash
-echo '{"view":"chance","need":"gpu","legal_form":"ab","country":"SE","age_years":2,"employees":4}' | python3 match.py
+python3 scripts/validate.py && python3 scripts/check_links.py && uv run --with pytest pytest tests/ -q
 ```
 
-`●` met. `×` closes the door. `○` unknown. `?` the only question, the first unknown requirement. `→` what they did not ask.
+Only facts that appear on the program's own pages go into a record. If a page does not state an amount, the record says so.
 
-Every door:
+<details>
+<summary>How the pieces fit</summary>
+
+- `SKILL.md` tells the assistant how to build a profile from the chat, when to read the live page, and how to answer.
+- `scripts/match.py` takes a company profile as JSON and returns the doors ranked: fits first, then fewest open questions, then ruled out. Standard library only, no packages.
+- `scripts/vinnova_api.py` reads the current Vinnova round from Vinnova's open data API.
+- `references/*.md` hold the longer notes per area.
+- Records older than 90 days are flagged so the assistant re-reads the page.
 
 ```bash
-echo '{"view":"matrix","legal_form":"ab","country":"SE"}' | python3 match.py
+echo '{"country":"SE","legal_form":"company","age_years":2,"employees":4,"need":["compute"],"lang":"en"}' \
+  | python3 scripts/match.py --live
 ```
 
-The packet, once the profile is filled. Every list stops before send:
+</details>
 
-```bash
-echo '{"view":"packet","legal_form":"ab","country":"SE","age_years":2,"employees":4}' | python3 match.py
-```
+---
 
-Use only what the chat already said. Do not guess age, headcount, revenue, VAT, or employment. If the country is missing, ask. Do not guess Sweden.
-
-A human map: https://opensverige.se/blogg/startup-krediter-gpu-sverige
-
-MIT. Copyright 2026 OpenSverige.
+MIT licensed. Made by [OpenSverige](https://opensverige.se), Sweden's open community for AI agents.

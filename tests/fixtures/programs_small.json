@@ -1,0 +1,153 @@
+{
+  "programs": [
+    {
+      "id": "test-se-grant",
+      "name": "Test SE grant",
+      "country": "SE",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Swedish limited company, at most ten years old.",
+      "what": "A grant for a market test. Fixture, not a real program.",
+      "amount": {
+        "max": 500000,
+        "currency": "SEK",
+        "text": "Up to 500 000 SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company"
+        },
+        {
+          "field": "age_years",
+          "op": "lte",
+          "value": 10
+        },
+        {
+          "any": [
+            {
+              "field": "revenue_msek",
+              "op": "lte",
+              "value": 10
+            },
+            {
+              "field": "balance_msek",
+              "op": "lte",
+              "value": 10
+            }
+          ]
+        },
+        {
+          "field": "profit_distributed",
+          "op": "eq",
+          "value": false
+        }
+      ],
+      "apply_url": "https://example.org/se-grant/apply",
+      "status_url": "https://example.org/se-grant",
+      "live": {
+        "source": "vinnova",
+        "call_id": "2016-04714"
+      },
+      "next_step": "Open the e-service and fill the form. The account owner clicks submit.",
+      "reference": "references/nordic-grants.md#test-se-grant",
+      "last_verified": "2026-10-15",
+      "notes": "Fixture record shaped like Vinnova Innovativa Startups."
+    },
+    {
+      "id": "test-eu-compute",
+      "name": "Test EU compute",
+      "country": "EU",
+      "kind": "compute",
+      "need": [
+        "compute"
+      ],
+      "who": "Industry, SME or startup in an EU or associated country.",
+      "what": "GPU hours on a single system. Fixture, not a real program.",
+      "amount": {
+        "text": "Up to 5 000 GPU hours, 1 to 3 months, one system"
+      },
+      "eligibility": [
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company"
+        },
+        {
+          "field": "has_employment",
+          "op": "eq",
+          "value": true
+        },
+        {
+          "field": "has_vat",
+          "op": "eq",
+          "value": true
+        },
+        {
+          "field": "has_work_email",
+          "op": "eq",
+          "value": true
+        },
+        {
+          "field": "workload_defined",
+          "op": "eq",
+          "value": true
+        }
+      ],
+      "apply_url": "https://example.org/eu-compute/portal",
+      "status_url": "https://example.org/eu-compute",
+      "next_step": "Register in the portal, pass eligibility and technical assessment. The account owner clicks submit.",
+      "reference": "references/compute.md#test-eu-compute",
+      "last_verified": "2026-10-15",
+      "apply_requirements": [
+        "Account on the portal; registration has a captcha",
+        "Application written in English"
+      ],
+      "unclear": [
+        "The hours table is an image and could not be read"
+      ]
+    },
+    {
+      "id": "test-global-credit",
+      "name": "Test global credit",
+      "country": "global",
+      "kind": "ai_api_credit",
+      "need": [
+        "credits"
+      ],
+      "who": "Early-stage startups building on the vendor.",
+      "what": "API credits. Fixture, not a real program.",
+      "amount": {
+        "max": 1000,
+        "currency": "USD",
+        "text": "Up to 1 000 USD in API credits"
+      },
+      "eligibility": [
+        {
+          "field": "stack",
+          "op": "contains",
+          "value": "anthropic"
+        },
+        {
+          "field": "funding_raised_usd",
+          "op": "lt",
+          "value": 20000000
+        }
+      ],
+      "apply_url": "https://example.org/credit/apply",
+      "status_url": "https://example.org/credit",
+      "next_step": "Apply on the vendor page with a work email.",
+      "reference": "references/ai-api-credits.md#test-global-credit",
+      "last_verified": "2026-07-01",
+      "notes": "Dated 2026-07-01 so test_match has a stale record against today 2026-10-15."
+    }
+  ]
+}
