@@ -14,8 +14,10 @@ description: >-
   en chance", "onko meillä mahdollisuus", and any question about startup money,
   compute or credits in Sweden, Finland, Norway, Denmark or Iceland, including a
   founder who lives in one Nordic country and has the company in another. Also use
-  when asked to add or update a program in this skill's data. Invoke as
-  /startup-krediter.
+  when a founder asks for help writing, filling in or preparing an application to
+  one of these programs ("hjälp oss söka", "skriv ansökan", "fyll i ansökan",
+  "help us apply", "write the application"), and when asked to add or update a
+  program in this skill's data. Invoke as /startup-krediter.
 ---
 
 # Startup-krediter
@@ -23,7 +25,11 @@ description: >-
 A founder asks whether they have a chance. This skill turns that into a profile,
 checks it against a data file of programs, reads the live page for every door it
 names, and answers with what is met, what is missing, what they must have ready
-before applying, and what the page leaves unclear. It never submits anything.
+before applying, and what the page leaves unclear. When the founder wants to
+apply, it writes the application with them, puts the budget in the program's
+template, reviews it as an assessor would, and fills the online form after they
+have logged in, stopping before the submit button. Logging in, the declarations
+and the submit click stay with the founder.
 
 The failure it exists to prevent: the founder gets a lead, goes to the site,
 reads around, comes back, decides they qualify, starts the application, and
@@ -88,7 +94,8 @@ EOF
 
 Flags: `--live` asks the Vinnova API for the current round and closing date;
 `--all` also returns blocked doors; `--top N` sets how many doors come back in
-full (default 3, `0` for all); `--today YYYY-MM-DD` pins the date.
+full (default 3, `0` for all); `--today YYYY-MM-DD` pins the date; `--door
+<id>` returns one program in full with its `application` block, for Stage C.
 
 The JSON has:
 
@@ -107,7 +114,8 @@ Per door: `status` is `eligible`, `unknown` or `blocked`; `met`, `failed`,
 lists collapsed sibling doors (Fast Lane and Large Scale under Playground) with
 any extra question they add; `glyph` is the status block; `what`, `amount`,
 `next_step`, `apply_url`, `status_url`, `reference`, `notes`, `availability`,
-`last_verified`, `stale`, `live` carry the facts. `undersized` is true when
+`last_verified`, `stale`, `live` carry the facts; `application`, when the
+record has one, describes the form itself (Stage C). `undersized` is true when
 the founder gave `need_eur` and the door's maximum is under a fifth of it.
 
 Labels are generated from each rule's field, operator and value, never written
@@ -236,6 +244,8 @@ whether it fits and what decides it, then its one-line door, then at most one
 alternative if it fits better. Correct a wrong premise in the first sentence.
 Offer the full checklist instead of printing it. Stay under 200 words; the
 founder asked one question and should get the answer before the paperwork.
+If they asked for help applying to it, not whether they have a chance, go
+straight to Stage C.
 
 ### Stage B: when the founder picks a door
 
@@ -258,7 +268,43 @@ When the founder names a door, a number, or says "visa", give that door in full:
 If the founder asks for several doors in full, give them one after another in
 this form. Shorten sentences, never the checklist or the glyph.
 
-### Lines that apply to both stages
+### Stage C: when the founder wants help applying
+
+When the founder asks for help with the application itself ("hjälp oss söka",
+"kan du skriva ansökan", "fyll i den åt oss", "write the application"), the
+answer starts with yes: "Ja, jag skriver ansökan med er och fyller i formuläret
+fram till skicka-knappen." The second sentence says, once, what stays with
+them: they log in with their own BankID, MitID or account, tick the
+declarations and press submit. If they offer a login or password, decline in
+that sentence and move on. A founder who asked for help and gets a checklist
+back has been refused, whatever the checklist says.
+
+Read `references/applying.md` before you draft; it has each step in detail.
+In short:
+
+1. **Check fit and timing** in one line each: run the matcher with `--door
+   <id>`; say if the round is closed and offer to prepare for the next one;
+   do not draft for a door the program will reject.
+2. **Material:** take the form's sections, limits, criteria and budget rules
+   from the door's `application` block, or from the program's guide and
+   templates when the block is missing. Ask once for the deck, the budget and
+   the facts the sections need, and read every file they share.
+3. **Draft section by section** in the form's order, language and limits,
+   each criterion easy to find. Only the founder's facts; mark gaps
+   `[FYLL I: ...]`; never invent customers, numbers or letters.
+4. **Budget in the program's template,** with the funding rate, caps and
+   excluded costs applied and the arithmetic shown.
+5. **Review as the assessor:** score each criterion on the program's scale,
+   check every `apply_requirements` item and the conditions page, and name
+   the three changes that would help most. No probabilities.
+6. **Deliver** as files in the founder's folder when you can write files,
+   otherwise ready to paste, field by field.
+7. **Fill the form in the browser** if this session has one: the founder logs
+   in, you fill the fields and upload their files, save a draft, and stop
+   before anything that submits, signs or declares. Tell them what is left and
+   which button submits.
+
+### Lines that apply to all stages
 
 - When `doors` is empty, nothing in the data fits this founder well. Say so in
   one plain sentence, do the Step 3 search, and offer `more` only as weaker
@@ -324,7 +370,8 @@ tilldelningen), the unclear line about open science, next step and link.
 
 ## Step 6: Follow up
 
-If the founder picks a door, answer in Stage B. If they answer the question,
+If the founder picks a door, answer in Stage B. If they ask for help applying,
+or say yes to it after Stage B, go to Stage C. If they answer the question,
 put it into the same profile, rerun, and show what changed: one `○` that became
 `●` is the whole update; do not restart. If the previous turn only asked for the
 country and showed no doors, the next answer is a Stage A answer. When the founder
@@ -333,8 +380,14 @@ the key and rerun.
 
 ## Rules, and why they exist
 
-- **Never say an application is sent; never click submit, register, or solve a
-  captcha.** The account, the declaration and the money belong to the founder.
+- **Help with everything up to the button, and never press it.** Write the
+  application, fill the budget, review it, fill the form in the founder's own
+  logged-in browser. Never log in for them, type a password, personal identity
+  number or code, solve a captcha, create an account, tick a declaration, sign,
+  or click submit; never say an application is sent. The account, the
+  declarations and the money belong to the founder, and BankID or MitID is
+  their legal signature. Say this once, as the second sentence, and get on
+  with the help.
 - **Never state an amount or date that is not on the page you read today.** The
   data is a map, not a source. No number on the page means "not published".
 - **Never stretch a rule beyond the page.** A rule applies to exactly what the
@@ -362,7 +415,9 @@ the key and rerun.
   unclear points.** That is why the two lists exist.
 - **Show both when sources disagree.** The founder should see the conflict.
 - **Say when a record is stale** (older than 90 days) or a page could not be read.
-- **Do not build a submission integration.** No program has a submit API.
+- **Do not build a submission integration.** No program has a submit API,
+  and the last click stays with the account owner. Filling the founder's open
+  form is help; submitting it is not.
 
 ## Maintenance
 
@@ -387,4 +442,5 @@ python3 scripts/validate.py && python3 scripts/check_links.py && uv run --with p
 - `scripts/match.py`: the matcher. `scripts/i18n.py`: labels, questions and
   phrases in en, sv, fi, no, da. `scripts/validate.py`, `scripts/check_links.py`,
   `scripts/vinnova_api.py`.
-- `references/*.md`: prose per domain. `tests/`: pytest, no network.
+- `references/*.md`: prose per domain; `references/applying.md`: Stage C step by
+  step. `tests/`: pytest, no network.
