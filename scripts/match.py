@@ -80,6 +80,11 @@ SECTOR_ALIASES = {
     "trucking": "transport", "road_transport": "transport", "mobility": "transport", "chips": "semiconductors",
     "semiconductor": "semiconductors", "halvledare": "semiconductors", "ocean": "marine", "maritime": "marine",
     "hav": "marine", "aquaculture": "marine", "havbruk": "marine", "fiskeoppdrett": "marine",
+    "agritech": "agriculture", "agtech": "agriculture", "agri": "agriculture", "farming": "agriculture",
+    "jordbruk": "agriculture", "lantbruk": "agriculture", "trädgård": "agriculture", "rennäring": "agriculture",
+    "landbruk": "agriculture", "landbrug": "agriculture", "maatalous": "agriculture",
+    "defense": "defence", "försvar": "defence", "forsvar": "defence", "puolustus": "defence", "military": "defence",
+    "dual_use": "defence",
 }
 NEED_ALIASES = {
     "gpu": "compute", "hpc": "compute", "gpu_hours": "compute", "gpu_timmar": "compute", "gpu_timer": "compute",
@@ -107,6 +112,8 @@ LEGAL_FORM_ALIASES = {
     "academic": "academia", "institute": "academia",
     "public_sector": "public", "offentlig": "public", "municipality": "public", "kommun": "public", "kommune": "public",
     "kunta": "public",
+    "ekonomisk_förening": "company", "cooperative": "company", "kooperativ": "company", "osuuskunta": "company",
+    "andelslag": "company", "samvirkelag": "company", "andelsselskab": "company",
     "enskild_firma": "sole_trader", "sole": "sole_trader", "enk": "sole_trader", "enkeltpersonforetak": "sole_trader",
     "toiminimi": "sole_trader", "enkeltmandsvirksomhed": "sole_trader",
     "individual": "none", "person": "none", "no_company": "none", "inget_bolag": "none", "ei_yhtiötä": "none",
@@ -153,6 +160,7 @@ class Door:
     founder_cost: str = "none"
     stage_mismatch: bool = False
     topic_mismatch: bool = False
+    topic_match: bool = False
     undersized: bool = False
     also: list[dict] = dc_field(default_factory=list)
     live: dict | None = None
@@ -412,6 +420,7 @@ def evaluate(program: dict, profile: dict, today: date, lang: str) -> Door:
         founder_cost=str(program.get("founder_cost", "none")),
         stage_mismatch=stage_mismatch(program, profile),
         topic_mismatch=topic_mismatch(program, profile),
+        topic_match=bool(set(program.get("sectors") or []) & set(profile.get("sector") or [])),
         undersized=undersized(program, profile),
         foreign=bool(program.get("home_country")) and bool(profile_countries(profile)) and program.get("home_country") not in profile_countries(profile),
     )
@@ -514,7 +523,7 @@ def poor_fit(door: Door) -> bool:
 
 
 def rank(doors: list[Door]) -> list[Door]:
-    """Open doors first: eligible, then unknown with the fewest open questions, then blocked. Doors run from another country than the founder's come after domestic ones, doors that pay a small fraction of the stated need after doors that can pay it, closed doors last. Ties keep data-file order.
+    """Open doors first: eligible, then unknown with the fewest open questions, then blocked. Doors run from another country than the founder's come after domestic ones, doors that pay a small fraction of the stated need after doors that can pay it, a call tied to the founder's own sector before general calls, closed doors last. Ties keep data-file order.
 
     A Swedish call that admits foreign startups is technically open to a Finnish
     founder, but leading a Finnish answer with it buries the Finnish doors.
@@ -526,6 +535,7 @@ def rank(doors: list[Door]) -> list[Door]:
             door.foreign,
             door.stage_mismatch or door.topic_mismatch,
             door.undersized,
+            not door.topic_match,
             COST_RANK.get(door.founder_cost, 0),
             door.availability != "open",
             RANK[door.status],

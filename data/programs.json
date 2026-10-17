@@ -657,6 +657,220 @@
       "notes": "Page 2026-10-16: 'Privatpersoner kan få upp till 25 000 kronor.' 'I många fall kan företag få upp till 100 000 kronor i stöd.' 'Verifieringsmedel används för att köpa externa tjänster.' Excluded: 'resor och resekostnader, representation, marknadsföring, utbildningar, patentansökningar, prototyper eller investeringar som skapar bestående värde.' Normally no co-financing. De minimis."
     },
     {
+      "id": "jordbruksverket-eip-innovationsprojekt",
+      "name": "Jordbruksverket Stöd för att genomföra ett innovationsprojekt (EIP)",
+      "country": "SE",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Companies, associations (so also an ekonomisk förening), municipalities, regions, authorities and other organisations with an idea for an innovation that matters for farming, horticulture or reindeer herding, working in an innovation group of at least two organisations. Private individuals cannot apply.",
+      "what": "Grant for running an EIP-Agri innovation project: a new product, method, process or route to market for farming, horticulture or reindeer herding, taken towards the market. Pays salaries, overheads, travel, materials, equipment, bought services and part of investments, in arrears against paid costs. Research and marketing costs are not covered, and the results must benefit more than the group.",
+      "amount": {
+        "text": "No maximum stated; salaries 100 %, indirect costs a further 15 % of salary costs, other costs (travel, materials, equipment, bought services) 100 %, investments 50 %; advance of up to 50 % of the grant, at most 250 000 SEK",
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE"
+        },
+        {
+          "field": "legal_form",
+          "op": "in",
+          "value": [
+            "company",
+            "sole_trader",
+            "nonprofit",
+            "academia",
+            "public"
+          ]
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "eip_competence_mix"
+        }
+      ],
+      "apply_url": "https://jordbruksverket.se/e-tjanster-databaser-och-appar/e-tjanster-och-databaser-stod/projektstod-investeringsstod-och-foretagsstod",
+      "status_url": "https://jordbruksverket.se/stod/innovationsprojekt-inom-eip/stod-for-att-genomfora-ett-innovationsprojekt-eip",
+      "next_step": "Call or email the free innovation support (innovationssupporten) at Landsbygdsnätverket to test the idea and find group members, sign the cooperation agreement and check freedom to operate, then apply in Jordbruksverket's e-service with e-ID by 11 December 2026 at 13:00. The founder submits the application.",
+      "reference": "references/nordic-grants.md#jordbruksverket-eip-innovationsprojekt",
+      "last_verified": "2026-10-17",
+      "notes": "Page read 2026-10-17 ('Senast granskad: 2026-01-28'). Continuous intake judged in four 2026 rounds: 'senast skicka in din ansökan den 31 mars, 30 juni, 30 september och 11 december', 'senast klockan 13'; the next is 11 December 2026. 'Handläggningstiden för att få ett beslut om stöd varierar, men är ungefär 11 månader, räknat från när du skickar in ansökan.' Payout claims take about 5 months. Last day to report any project in the current programme: 6 April 2029. An external advisory selection committee meets about 3-4 times a year; a prioritised application goes to case handling, usually with requests for more documents, then the decision. Scoring (Urvalskriterier EIP projekt 2026, GD decision 3.1.17-14003/2025): need 170, end result 70, originality 150, sustainability 140, competitiveness and benefit 150, budget and work packages 50, competitor analysis 30, market entry and strategy 140, cooperation group 70, knowledge exchange 30; minimum 600 of 1 000. Group rule: 'minst två organisationer som tillsammans har minst två av de här kompetenserna'. Agreement before applying: 'För att kunna få stöd för ett innovationsprojekt måste du först ha en innovationsgrupp och gruppen måste ha tecknat ett samarbetsavtal', and the Samarbetsgruppen criterion asks for each member's name, organisation and role in the application. 'Du kan inte få stöd för utgifter som gäller forskning eller marknadsföring.' Advance: 'upp till 50 procent av ditt stöd i förskott, dock högst 250 000 kronor', only the Swedish-financed share, not for state agencies, regions or municipalities. Own work: 340 SEK per hour for sole traders and HB/KB partners; 'Om du äger ett aktiebolag måste du alltså ta ut lön'. The innovation support is outside Jordbruksverket: 'Det är en kostnadsfri tjänst', 'Innovationssupporten har tystnadsplikt'; it cannot write the application but can review a draft. Budget 525 MSEK for 2023-2027, about 400 MSEK through the continuous rounds and 125 MSEK through thematic calls; no thematic EIP call was listed on the calls page on 2026-10-17. Country SE because the e-service needs Swedish e-ID and the English page asks for 'a Swedish partner as the main applicant'; the Swedish pages do not say 'registered in Sweden'.",
+      "availability": "open",
+      "apply_requirements": [
+        "An innovation group of at least two organisations with a signed cooperation agreement before you apply, covering responsibility for the work, the cost split between the parties and intellectual property; Jordbruksverket has a template",
+        "Investigate freedom to operate before you apply; you are responsible for not infringing anyone's patent or trademark",
+        "About 11 months from submission to a decision, and about 5 months per payout claim; only costs invoiced and paid from the day you submit count",
+        "You pre-finance the project and claim against costs already paid; an advance of up to 50 % of the grant, at most 250 000 SEK, can be claimed once you have the decision; the applicant must be creditworthy and able to finance the project",
+        "Owners of an AB must draw a salary to claim their time; sole traders and HB/KB partners claim own work at 340 SEK per hour with a project diary",
+        "Budget entered in the e-service and backed by quotes or prices from more than one supplier, hourly-wage calculations and CVs or payslips; no research or marketing costs; investments (over 24 000 SEK and over 3 years' life) only 50 %",
+        "Score at least 600 of 1 000: technical ideas get the end-result points only from TRL 3-6 at start to TRL 8-9 at end; competence profiles max 1 000 characters per person, attached CVs are ignored; attach proof of customer interest, such as a letter of intent, as 'Annan bilaga' in step 9",
+        "Log in with Swedish e-ID (BankID or Freja eID); an AB, HB or förening must first give itself a power of attorney on a form signed by all signatories, about a week's processing; the e-service works best in Chrome, and the page warns of problems on a Mac",
+        "Partners re-invoice their costs to the applicant at cost with proof of payment; cash or Swish payments over 1 000 SEK are rejected; separate bookkeeping, and procurement rules if any party must follow them",
+        "Final payout claim by the date in the decision: 1 % less per day late, nothing after 25 days; all projects must be reported by 6 April 2029"
+      ],
+      "unclear": [
+        "Who may claim own work: the page excludes private individuals as applicants, yet the own-work text mentions support received 'som privatperson'. Ask Jordbruksverket (0771-223 223) which group members can claim 340 SEK per hour",
+        "Budget format: the 2026 selection criteria (version 2025-09-18) ask for a budget template attachment split into work packages, while the e-service page says that since 1 October 2026 expenses are entered directly in the e-service. Ask Jordbruksverket how to show the work packages",
+        "No 2027 decision rounds are published; with about 11 months to a decision and final reporting by 6 April 2029, ask Jordbruksverket whether an application after 11 December 2026 can still be finished in time",
+        "State aid: farm activity is exempt, but whether a non-farming company's share is tested as de minimis (300 000 EUR over three years) or under another rule is not stated. Ask Jordbruksverket before you plan the budget",
+        "Whether a tech company selling to farmers counts as the 'företagare inom primärproduktionen eller inom jordbruks- eller livsmedelssektorn' competence. Ask the innovation support",
+        "No maximum grant per project is stated. Ask the innovation support what budget size the selection committee usually funds"
+      ],
+      "founder_cost": "none",
+      "group": "jordbruksverket-eip",
+      "sectors": [
+        "agriculture"
+      ]
+    },
+    {
+      "id": "jordbruksverket-eip-innovationsgrupp",
+      "name": "Jordbruksverket Stöd för att bilda en innovationsgrupp (EIP)",
+      "country": "SE",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Companies, associations (so also an ekonomisk förening), municipalities, regions, authorities and other organisations with an idea for an innovation that matters for farming, horticulture or reindeer herding, who want to put together the group to develop it. Private individuals cannot get the grant.",
+      "what": "Fixed lump sum for forming an EIP-Agri innovation group: present the idea to partners, hold meetings, draft the cooperation agreement, plan activities, write the project application and check freedom to operate. Not for research. An optional first step before the project grant.",
+      "amount": {
+        "text": "80 000 SEK if 2-4 organisations sign the cooperation agreement, 120 000 SEK if 5 or more; a lump sum, no expense reporting",
+        "min": 80000,
+        "max": 120000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE"
+        },
+        {
+          "field": "legal_form",
+          "op": "in",
+          "value": [
+            "company",
+            "sole_trader",
+            "nonprofit",
+            "academia",
+            "public"
+          ]
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "eip_competence_mix"
+        }
+      ],
+      "apply_url": "https://jordbruksverket.se/e-tjanster-databaser-och-appar/e-tjanster-och-databaser-stod/projektstod-investeringsstod-och-foretagsstod",
+      "status_url": "https://jordbruksverket.se/stod/innovationsprojekt-inom-eip/stod-for-att-bilda-en-innovationsgrupp-eip",
+      "next_step": "Call or email the free innovation support (innovationssupporten) at Landsbygdsnätverket to discuss the idea and get tips on group members, then apply in Jordbruksverket's e-service with e-ID by 1 November 2026 at 13:00, or 1 December. The founder submits the application.",
+      "reference": "references/nordic-grants.md#jordbruksverket-eip-innovationsgrupp",
+      "last_verified": "2026-10-17",
+      "notes": "Page read 2026-10-17 ('Senast granskad: 2026-01-28'). 2026 deadlines: '1 februari, 1 mars, 1 april, 1 maj, 1 juni, 1 oktober, 1 november och 1 december', 'senast klockan 13'; 'Ansökningarna kommer att bedömas inom en månad.' The next is 1 November 2026; a late application goes to the next round. Scoring (Urvalskriterier EIP grupp 2026, version 2025-09-18): need and solution 250, competitiveness and benefit 250, environmental and social sustainability 200, originality 300; minimum 600 of 1 000. Group rule: 'Minst två av de här kompetenserna ska ingå i innovationsgruppen', from entrepreneur in primary production or the agriculture and food sector, researcher, adviser. 'Vi betalar ut stödet i en klumpsumma'; 'Du kan inte få stöd för forskning.' Not required before the project grant: 'Men det är inget krav'. Jordbruksverket recommends a confidentiality agreement before the group's first meeting and has templates for it and for the cooperation agreement. The 1 October 2026 e-service budget change does not apply to this grant. The innovation support is outside Jordbruksverket: 'Det är en kostnadsfri tjänst', 'Innovationssupporten har tystnadsplikt'. Last day to report: 6 April 2029. Country SE because the e-service needs Swedish e-ID and the English page asks for 'a Swedish partner as the main applicant'; the Swedish pages do not say 'registered in Sweden'.",
+      "availability": "open",
+      "apply_requirements": [
+        "The group you form must include at least two of: an entrepreneur in primary production or the agriculture and food sector, a researcher in the field, an adviser in the field",
+        "Payout only once the group exists: attach the signed cooperation agreement and a preliminary project plan with activities, timeline and budget; the lump sum then needs no expense reporting",
+        "Deadlines 1 November and 1 December 2026 at 13:00; a late application moves to the next round; assessed within a month",
+        "The application asks for the idea, the need or problem, who benefits, competitiveness for farming, horticulture or reindeer herding, what makes it unique, sustainability, and what competence the group needs",
+        "Score at least 600 of 1 000: originality 300, need and solution 250, competitiveness and benefit 250, environmental and social sustainability 200",
+        "Log in with Swedish e-ID (BankID or Freja eID); an AB, HB or förening must first give itself a power of attorney on a form signed by all signatories, about a week's processing; the e-service works best in Chrome, and the page warns of problems on a Mac",
+        "The applicant must be creditworthy and liquid ('kreditvärdig och ha likvid förmåga') and carries overall responsibility for the project and its money",
+        "The money cannot pay for research; EU funding must be stated with the EU logo or the grant is cut",
+        "Final report and payout claim by 6 April 2029 at the latest"
+      ],
+      "unclear": [
+        "Whether each member of an ekonomisk förening counts as a separate organisation for the 80 000 or 120 000 SEK step. Ask the innovation support",
+        "Whether a tech company selling to farmers counts as the 'företagare inom primärproduktionen eller inom jordbruks- och livsmedelssektorn' competence. Ask the innovation support",
+        "How long the group has to form and claim payout; the page only says the end date is in the decision. Ask Jordbruksverket (0771-223 223)",
+        "The group page says nothing about state aid; the project page says applications are tested against state-aid and de minimis rules. Ask Jordbruksverket whether the lump sum counts towards a de minimis cap"
+      ],
+      "founder_cost": "none",
+      "group": "jordbruksverket-eip",
+      "sectors": [
+        "agriculture"
+      ]
+    },
+    {
+      "id": "skatteverket-forskningsavdrag",
+      "name": "Forskningsavdrag (Swedish R&D reduction of employer contributions; lowers payroll tax, no payout)",
+      "country": "SE",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "Any employer that pays Swedish employer contributions (arbetsgivaravgifter), Swedish or foreign, of any legal form, size or industry, on pay to employees, or to contractors it pays employer contributions for, who work directly with research or development for a commercial purpose. It needs people on the payroll: unpaid founders and a sole trader's own work (egenavgifter) give nothing to deduct.",
+      "what": "A reduction of employer contributions, not a payout. Each month the employer deducts 20 percent of the gross pay of every qualifying R&D person from its employer contributions and general payroll fee, and claims it in the monthly employer return (arbetsgivardeklaration). For most staff the contributions fall from 31.42 to 11.42 percent of pay. No application, no decision and no cash; a month's unused deduction is lost.",
+      "amount": {
+        "text": "20 % of each qualifying R&D person's gross pay off the employer contributions (31.42 % becomes 11.42 % for most staff); capped at 3 000 000 SEK per company or group per calendar month",
+        "max": 3000000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "any": [
+            {
+              "field": "country",
+              "op": "eq",
+              "value": "SE"
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "se_rd_staff_on_payroll"
+            }
+          ]
+        },
+        {
+          "field": "legal_form",
+          "op": "in",
+          "value": [
+            "company",
+            "sole_trader",
+            "nonprofit",
+            "academia",
+            "public"
+          ]
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "se_rd_staff_on_payroll"
+        }
+      ],
+      "apply_url": "https://www.skatteverket.se/foretag/arbetsgivare/lamnaarbetsgivardeklaration.4.41f1c61d16193087d7fcaeb.html",
+      "status_url": "https://www.skatteverket.se/foretag/arbetsgivare/arbetsgivaravgifterochskatteavdrag/forskningsavdrag.4.8dcbbe4142d38302d7cb4.html",
+      "next_step": "Check that the work meets Skatteverket's narrow R&D definition and that each person spends at least half their actual working time on it. Then set up monthly time reports and a project description. The company claims it itself in boxes 470 and 475 of its next employer return in Skatteverket's e-service.",
+      "reference": "references/nordic-grants.md#skatteverket-forskningsavdrag",
+      "last_verified": "2026-10-17",
+      "availability": "open",
+      "founder_cost": "none",
+      "apply_requirements": [
+        "No application and no advance approval: the company claims it itself each month in the employer return, base in box 470 and deduction in box 475; most employers file by the 12th of the following month",
+        "The company must be registered as an employer and pay salary; the deduction is 20 % of pay actually paid, so unpaid founders count for nothing and a sole trader's own work (egenavgifter) is excluded",
+        "Each person must spend at least 50 % and at least 15 hours of actual working time in the calendar month directly on R&D; holiday, sick leave and parental leave are not working time",
+        "R&D is narrower than ordinary product work: development counts only when research results are decisive for a new or substantially improved product; routine refining or adapting an existing product does not",
+        "Management, support functions (finance, administration, IT support), quality assurance, marketing, training and customer surveys never count, even when they serve the R&D",
+        "Keep documentation per month and per person: project descriptions, planning documents, staffing memos (bemannings-PM), time reports, how the R&D is financed, research reports; Skatteverket can ask for them afterwards",
+        "Contributions cannot go below the 10.21 % old-age pension fee: no deduction for staff aged 67 or more at the start of the year, and a smaller one for staff aged 18 to 22 at the start of the year (born 2003 to 2007 in 2026) on the reduced youth rate (pay from 1 April 2026 to 30 September 2027)",
+        "A month's unused deduction cannot be saved for later months; it also lowers any växa-stöd refund, and it is taken before regional support",
+        "Work in an R&D project run by a public body, a university or a foundation and paid with public money does not count, even when your company does the work",
+        "A confidentiality agreement with a client can stop you from sending documents; you may delimit and anonymise them, or risk losing the deduction"
+      ],
+      "unclear": [
+        "Whether a founder-CEO who takes a salary and also builds the product qualifies: the page excludes people working with 'ledning och styrning', but the law only asks for half of actual working time on R&D with no proportioning. Ask Skatteverket's employer service before the first claim",
+        "Whether your product work meets the narrow definition (research results decisive); the pages offer no advance approval, so the company self-assesses each month and carries the risk at a later audit. Ask Skatteverket or a tax adviser before claiming",
+        "Whether a project that also gets a Vinnova or Almi grant still qualifies: the pages exclude only projects run in public regi and paid with public money, yet list the financing of the R&D among the documents. Ask Skatteverket",
+        "Whether missed months can be claimed afterwards by correcting earlier employer returns; the pages only say an unused deduction cannot be saved for later months. Ask Skatteverket",
+        "Whether the proposals for 1 January 2027 (no 15-hour rule, wider R&D definitions, cap indexed to 36 inkomstbasbelopp) reach the budget bill, due by 12 November 2026. Check regeringen.se and this Skatteverket page after that date"
+      ],
+      "notes": "Skatteverket page and Rättslig vägledning (2026 edition) read 2026-10-17. Continuous: claimed every month, no application round. 'Du beräknar avdraget med 20 procent av ersättningen (avgiftsunderlaget).' 'Det sammanlagda avdraget är totalt 3 000 000 kronor per koncern och kalendermånad.' Time rule since 1 July 2021: 'minst 50 procent och minst 15 timmar av sin faktiska arbetstid'; no proportioning, so the whole monthly pay counts once the person qualifies. A month of holiday, sickness or parental leave still qualifies if the deduction was made in each of the four preceding months. 'Avdraget får göras av både svenska och utländska företag som betalar arbetsgivaravgifter i Sverige.' 'Avdraget får inte göras från socialavgifter som betalas i form av egenavgifter.' 'Ett outnyttjat avdrag en månad kan inte sparas till senare månader.' Group companies share one cap; the parent uses it first. State aid: neither Skatteverket page sets a de minimis or GBER limit, and boxes 470 and 475 ask for no other aid received; the government's lagrådsremiss of 11 June 2026 (section 7): 'När FoU-avdraget infördes ansåg regeringen att reglerna var förenliga med statsstödsreglerna.' 2027: nothing decided as of 2026-10-17. Three lagrådsremisser propose changes from 1 January 2027: drop the 15-hour rule and widen the R&D definitions (11 June 2026); index the cap to 36 inkomstbasbelopp, estimated at 3 114 000 SEK for 2027 (27 August 2026); a separate, optional 200 % extra income-tax deduction for R&D salary costs (13 August 2026). Each regeringen.se page shows no proposition yet, and each says inclusion in the 2027 budget bill depends on 'valutgången'; in this election year the bill is due by 12 November 2026. Legal basis: lag (2023:747) om särskilt avdrag vid beräkning av arbetsgivaravgifter och allmän löneavgift för personer som arbetar med forskning eller utveckling."
+    },
+    {
       "id": "almi-innovationslan",
       "name": "Almi Innovationslån",
       "country": "SE",

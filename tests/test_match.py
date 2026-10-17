@@ -653,3 +653,13 @@ def test_no_stated_need_or_no_maximum_is_never_undersized() -> None:
     assert not match.undersized(small, {"country": "SE"})
     assert not match.undersized(open_ended, {"country": "SE", "need_eur": 1000000})
     assert match.normalize_profile({"need_eur": "135 000"})[0]["need_eur"] == 135000.0
+
+
+def test_call_in_the_founders_sector_ranks_before_general_calls() -> None:
+    base = {"country": "SE", "kind": "grant", "need": ["money"], "eligibility": []}
+    general = dict(EU_COMPUTE, **base, id="general")
+    farm = dict(EU_COMPUTE, **base, id="farm", sectors=["agriculture"])
+    out = match.run({"country": "SE", "legal_form": "company", "need": ["money"], "sector": ["agritech"]}, [general, farm], TODAY)
+    assert [door["id"] for door in out["doors"]] == ["farm", "general"]
+    assert match.normalize_profile({"legal_form": "ekonomisk förening"})[0]["legal_form"] == "company"
+
