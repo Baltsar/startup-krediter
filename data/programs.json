@@ -75,12 +75,14 @@
         "Mark the application complete (klarmarkera) before 12 January 2027 at 14:00; an unlocked application is not registered",
         "The project leader must be employed by the company; if the budget has salary costs, the company must be registered as an employer with Skatteverket, or show that registration has been applied for, by the decision",
         "The company must not be insolvent, in liquidation or restructuring, owe significant debts to Kronofogden, or have used up half or more of its share capital",
-        "The company must not have taken over another company's business, bought a company or been formed by a merger"
+        "The company must not have taken over another company's business, bought a company or been formed by a merger",
+        "Grants are paid only to a bankgiro or plusgiro account in the company's name",
+        "Salary counts only if it is actually paid out during the project; an unpaid founder's time is not an eligible cost, and an unexplained salary increase before or during the project is not either"
       ],
       "unclear": [
         "Login method is not stated on any page read (BankID or username and password); 'Skapa nytt konto' points to minprofil.vinnova.se",
         "The threshold for the lottery stage ('i hög och likvärdig grad') is not published; ask startups@vinnova.se",
-        "The state-aid basis per company age (start-up aid or de minimis) is only on a linked rules page"
+        "Whether starting a salary for a founder who has been unpaid counts as an unexplained salary increase is not stated; ask startups@vinnova.se before budgeting it"
       ],
       "application": {
         "portal": "https://ansok.vinnova.se/utlysning/0382e83b-4c96-404d-bed1-08deab387617?opencall=true&lang=sv",

@@ -73,6 +73,9 @@ Swedish or English, Innobooster in Danish or English). For each section:
   invent customers, revenue, letters of intent, test results or team members;
 - write plainly. Concrete numbers, named customers and dated milestones score;
   adjectives do not.
+- when the form needs a number the founder did not give but you can derive
+  (hours per work package from their salary budget), propose it and label it
+  as your proposal for them to confirm.
 
 ## C3. Budget in the program's template
 
@@ -88,9 +91,11 @@ the template's order.
 
 ## C4. Review it as the assessor would
 
-Score the draft against each
-criterion on the program's own scale (Vinnova 0 to 5, EuroHPC thresholds 3 per
-criterion), one line each, with the weakest sentence quoted and a concrete
+Assess the draft against each
+criterion on the program's own scale when it publishes one (Innobooster 1 to 6,
+EuroHPC thresholds of 3 per criterion); when it publishes none, as Vinnova
+Innovativa Startups does (it only sorts applications into rejected, drawn by
+lot and granted), assess each criterion in words, one line each, with the weakest sentence quoted and a concrete
 fix. Then check the draft against every item in `apply_requirements` and the
 linked conditions page: a missing attachment or declaration fails an
 application that reads well. Say the three changes that would most improve
