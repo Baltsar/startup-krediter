@@ -1,0 +1,66 @@
+{
+ "qid": "s15",
+ "programs": {
+  "A": "AWS Activate (Portfolio via investor, detailed in turn 2), with Sweden AI Factory / EuroHPC Playground and Fast Lane as the GPU route",
+  "B": "AWS Activate"
+ },
+ "stoppers_total": {
+  "A": 14,
+  "B": 14
+ },
+ "stoppers_stated": {
+  "A": 2,
+  "B": 14
+ },
+ "factual_errors": {
+  "A": [
+   "Bedrock: says eu. profile requests from Stockholm are served in other EU regions 'but not in Stockholm itself'; AWS model cards (Claude Sonnet 5.5, Opus 5.5, Haiku 5.5, Opus 5) list eu-north-1 Stockholm as an EU-profile destination",
+   "Says the founder will probably run on a EuroHPC system in another EU country; EuroHPC's Playground systems table lists Arrhenius at NAISS, Sweden (NVIDIA Grace Hopper, 5,000 GPU-hours), in production since May 2026 with a sensitive-data partition"
+  ],
+  "B": []
+ },
+ "untraceable": {
+  "A": [
+   "A EuroHPC page saying Playground is 'temporarily closed': the cited URL now 301-redirects to the Playground page, which says applicants can apply any time",
+   "Google and Microsoft open tiers 'worth a few thousand dollars': no such amount on the official pages"
+  ],
+  "B": []
+ },
+ "best_first_pick": "A",
+ "missed_programs": {
+  "A_missed": [
+   "NVIDIA Inception"
+  ],
+  "B_missed": [
+   "EuroHPC AI Factories Fast Lane (up to 50,000 GPU-hours; fits the ~8,000 GPU-hour need better than Playground's fixed 5,000)"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "fail",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 768,
+  "B": 189
+ },
+ "verdict": "A",
+ "incomplete": false
+}

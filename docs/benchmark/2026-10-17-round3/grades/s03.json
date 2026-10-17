@@ -1,0 +1,59 @@
+{
+ "qid": "s03",
+ "programs": {
+  "A": "Innovasjon Norge Oppstartstilskudd 1",
+  "B": "Innovasjon Norge Oppstartstilskudd 1"
+ },
+ "stoppers_total": {
+  "A": 12,
+  "B": 12
+ },
+ "stoppers_stated": {
+  "A": 11,
+  "B": 5
+ },
+ "factual_errors": {
+  "A": [],
+  "B": []
+ },
+ "untraceable": {
+  "A": [],
+  "B": []
+ },
+ "best_first_pick": "B",
+ "missed_programs": {
+  "A_missed": [
+   "Kommunalt næringsfond (municipal business fund, applied via regionalforvaltning.no)",
+   "Local etablerertjeneste / free etablererveiledning"
+  ],
+  "B_missed": []
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 135,
+  "B": 451
+ },
+ "verdict": "B",
+ "incomplete": false
+}

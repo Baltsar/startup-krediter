@@ -1,0 +1,65 @@
+{
+ "qid": "s07",
+ "programs": {
+  "A": "Tækniþróunarsjóður Vöxtur (Rannís)",
+  "B": "Tækniþróunarsjóður Vöxtur (Rannís)"
+ },
+ "stoppers_total": {
+  "A": 18,
+  "B": 18
+ },
+ "stoppers_stated": {
+  "A": 16,
+  "B": 6
+ },
+ "factual_errors": {
+  "A": [],
+  "B": [
+   "Turn 1 says only Sproti applications graded A1 or A2 (top 25%) at forþrep go on to aðalþrep; Haust 2026 rules Viðauki A grade forþrep Já/Óljóst/Nei and the board decides, letter grades apply only at aðalþrep"
+  ]
+ },
+ "untraceable": {
+  "A": [],
+  "B": [
+   "Effective collaboration needs a research organisation bearing at least 10% of costs with the right to publish, and a customer co-applicant bearing at least 30% (GBER-based, not in the TÞS rules; EFTA and EUR-Lex sources unreadable: 403 and empty response)",
+   "Matvælasjóður has one round per year with deadlines in late February or early March in recent years (only the 2026 round verified: 27 February, extended to 4 March)"
+  ]
+ },
+ "best_first_pick": "A",
+ "missed_programs": {
+  "A_missed": [
+   "Rannís R&D tax deduction (skattfrádráttur)",
+   "AIFA-ICE, Iceland's AI Factory Antenna to LUMI",
+   "AWS Activate Portfolio"
+  ],
+  "B_missed": []
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "fail",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 197,
+  "B": 1078
+ },
+ "verdict": "B",
+ "incomplete": false
+}

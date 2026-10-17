@@ -1,0 +1,63 @@
+{
+ "qid": "s03",
+ "programs": {
+  "A": "Innovasjon Norge Oppstartstilskudd 1",
+  "B": "Innovasjon Norge Oppstartstilskudd 1"
+ },
+ "stoppers_total": {
+  "A": 17,
+  "B": 17
+ },
+ "stoppers_stated": {
+  "A": 13,
+  "B": 6
+ },
+ "factual_errors": {
+  "A": [],
+  "B": [
+   "Overstatement: says netthandel is 'utelukket' for Oppstartstilskudd 2 and (turn 2) 'Det gis ikke til netthandel'; the official pages say traditional trade incl. netthandel is normally not prioritised unless there is clear innovation (B's own turn 1 noted the exception)"
+  ]
+ },
+ "untraceable": {
+  "A": [],
+  "B": []
+ },
+ "best_first_pick": "B",
+ "missed_programs": {
+  "A_missed": [
+   "Kommunalt næringsfond (via regionalforvaltning.no)",
+   "Kommunal etablerertjeneste / gratis etablererveiledning"
+  ],
+  "B_missed": [
+   "Raskavklaring / Én vei inn (Innovasjon Norge)"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 137,
+  "B": 451
+ },
+ "verdict": "B",
+ "incomplete": false
+}

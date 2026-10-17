@@ -1,0 +1,62 @@
+{
+ "qid": "s05",
+ "programs": {
+  "A": "Innobooster (Danmarks Innovationsfond); Microsoft for Startups secondary",
+  "B": "Innobooster (Danmarks Innovationsfond); Microsoft for Startups secondary"
+ },
+ "stoppers_total": {
+  "A": 25,
+  "B": 25
+ },
+ "stoppers_stated": {
+  "A": 14,
+  "B": 23
+ },
+ "factual_errors": {
+  "A": [
+   "AWS Activate: 'op til 100.000 USD via en investor eller accelerator, der er Activate-partner' - official Activate page says the Portfolio tier (via Activate Provider) is up to USD 200,000"
+  ],
+  "B": []
+ },
+ "untraceable": {
+  "A": [
+   "EIFO Matchlån: 'En ældre udgave af ordningen krævede, at investering og lån skete samtidig' - not on the official January 2026 Match Loan sheet"
+  ],
+  "B": []
+ },
+ "best_first_pick": "tie",
+ "missed_programs": {
+  "A_missed": [
+   "Forskningsavdrag (Skatteverket) - borderline, relevant only if the ApS ends up paying Swedish employer contributions for the Malmö-based founders"
+  ],
+  "B_missed": []
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "fail",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 831,
+  "B": 193
+ },
+ "verdict": "B",
+ "incomplete": false
+}

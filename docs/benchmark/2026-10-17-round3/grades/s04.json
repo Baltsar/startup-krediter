@@ -1,0 +1,61 @@
+{
+ "qid": "s04",
+ "programs": {
+  "A": "Business Finland Sprint (OKKA-säätiö apuraha as the near-term grant)",
+  "B": "Starttiraha"
+ },
+ "stoppers_total": {
+  "A": 12,
+  "B": 10
+ },
+ "stoppers_stated": {
+  "A": 4,
+  "B": 9
+ },
+ "factual_errors": {
+  "A": [],
+  "B": []
+ },
+ "untraceable": {
+  "A": [],
+  "B": [
+   "Starttiraha service page 'päivitetty 30.1.2026' (Kainuu-Koillismaa service page is script-rendered; date could not be confirmed)"
+  ]
+ },
+ "best_first_pick": "A",
+ "missed_programs": {
+  "A_missed": [],
+  "B_missed": [
+   "OKKA-säätiö apurahat (teacher grants, no company needed)",
+   "Uusyrityskeskus Ensimetri / Tampere new-entrepreneur advisory service (free; B only pointed generically to a työllisyysalue advisor via Kainuu pages)"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "pass",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "fail",
+   "A4": "pass",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 575,
+  "B": 117
+ },
+ "verdict": "A",
+ "incomplete": false
+}
