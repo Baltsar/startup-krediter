@@ -2316,6 +2316,155 @@
         "Application language is not stated (the English page is machine-translated)",
         "Rural companies are assessed under regional criteria that 'vary by county' and are not on the page"
       ],
+      "application": {
+        "portal": "https://start.innovasjonnorge.no/",
+        "login": "Min side with BankID, as a person registered with a role in Brønnøysundregistrene (e.g. styremedlem or daglig leder). Accountants, auditors and project leaders without such a role cannot apply, access cannot be delegated to them, and people representing foreign companies cannot log in. Select the company (aktør), then start an application of type 'Oppstart'. start.innovasjonnorge.no redirects (301) to minside.innovasjonnorge.no, which returns 403 to automated clients.",
+        "sections": [
+          {
+            "title": "Problemforståelse (kundeinnsikt)",
+            "asks": "Show a real, important problem backed by conversations with real users or customers, with evidence that it costs them time, money, work, quality or risk.",
+            "limit": "none stated; attach 3-5 short findings from customer conversations"
+          },
+          {
+            "title": "Løsning og usikkerhet",
+            "asks": "What you will build, its tangible value for the user, what is technically hard or new, and which uncertainties must be tested; simple assemblies of existing solutions do not qualify.",
+            "limit": "none stated; attach a simple sketch, product description or system overview"
+          },
+          {
+            "title": "Dagens alternativ",
+            "asks": "How customers solve the problem today, including manual methods or doing nothing, and why that falls short.",
+            "limit": "none stated; attach a competitor analysis or matrix"
+          },
+          {
+            "title": "Segment og marked",
+            "asks": "A clearly defined starting customer group, a credible market size, how you reach the first customers, and growth potential including internationally.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Immaterielle rettigheter (IPR)",
+            "asks": "What is unique and hard to copy.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Team og gjennomføring",
+            "asks": "Who is on the team, what you can do yourselves and what expertise you must buy in.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Prosjekt og eksterne kjøp (from the workbook, step 5)",
+            "asks": "What the project will clarify, which assumption is tested on real customers and how, which external service you buy from which supplier, why you cannot do it yourselves, and how the cost links to the test.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Annen offentlig støtte",
+            "asks": "Whether other public support, including SkatteFunn, has been or will be sought for the project.",
+            "limit": "none stated"
+          }
+        ],
+        "criteria": [
+          {
+            "name": "Systematic work on problem, solution and market (the six areas above)",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "Concrete customer findings about an important problem, an understanding of today's alternatives, a preliminary solution with clear value, and a defined market uncertainty the project will reduce."
+          },
+          {
+            "name": "Regional criteria for companies outside the larger centres",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "Not stated; the page says they 'can vary between counties'."
+          },
+          {
+            "name": "Priority",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "Development and growth, not ordinary operations: lifestyle businesses, hobby or part-time activity, services well covered by the public sector and established sectors without clear innovation (trade, craft, transport, finance, professional and personal services, courses/consulting, hospitality) are normally not prioritised."
+          }
+        ],
+        "budget": {
+          "template": "entered in the form",
+          "funding_rate": "Up to 100 percent of invoiced costs, at most NOK 150,000",
+          "categories": [
+            "purchase of services from external suppliers"
+          ],
+          "rules": [
+            "No budget template is published",
+            "Only purchases of services from external suppliers; own time, internal costs, own staff costs and costs from related parties are not covered",
+            "Eligible activities: testing with customers, pilots and customer dialogue, a simple solution built to test hypotheses, collaboration with customers or partners, and clarifying IPR and regulatory matters where decisive",
+            "The aim is not to build a finished solution or start IP protection before the need is clarified",
+            "Costs incurred before the application is sent are not covered; VAT is not covered",
+            "At least 50 percent of project costs must be prefinanced: up to 50 percent is paid at start and the rest at the end after the final report; sufficient liquidity is needed",
+            "All costs must be documented or the grant can be reduced",
+            "Project period 9 months, extendable by up to 3 (12 in total)",
+            "Grant may be reduced or cancelled if other public support (including SkatteFunn) is later received for the same costs"
+          ]
+        },
+        "attachments": [
+          {
+            "name": "3-5 short findings from customer conversations",
+            "required": false,
+            "template": "https://cdn.sanity.io/files/loal7n8w/inno-prod/2c2bd6df96695dc6c9899b5b9f5782e94bb6dc99.pdf",
+            "limit": "3-5 findings; workbook 'Arbeidsbok: Kundeinnsikt før Oppstartstilskudd', step 4"
+          },
+          {
+            "name": "Simple sketch, product description or system overview",
+            "required": false,
+            "template": "https://cdn.sanity.io/files/loal7n8w/inno-prod/8e328e6b8998c3e17a453d8b2ece9c7a7ebf4e1f.pptx",
+            "limit": "not stated; the template is the system architecture diagram linked from the startup guidance page"
+          },
+          {
+            "name": "Competitor analysis or matrix",
+            "required": false,
+            "template": "https://cdn.sanity.io/files/loal7n8w/inno-prod/2c2bd6df96695dc6c9899b5b9f5782e94bb6dc99.pdf",
+            "limit": "not stated; workbook step 3 (today's alternatives and named competitors); the service page also points to the course https://kompetansesenter.innovasjonnorge.no/kurs/har-du-en-god-ide"
+          },
+          {
+            "name": "The completed workbook (veileder) as documentation",
+            "required": false,
+            "template": "https://cdn.sanity.io/files/loal7n8w/inno-prod/2c2bd6df96695dc6c9899b5b9f5782e94bb6dc99.pdf",
+            "limit": "not stated"
+          }
+        ],
+        "declarations": [
+          "Whether other public support has been or will be sought for the project",
+          "Company has no ongoing payment defaults (betalingsanmerkninger)",
+          "Ownership: not a subsidiary 50 percent or more owned by an established business; a holding company older than five years only if owned by the founders; with 25-50 percent ownership the business is clearly separate; chair or CEO not the same as in the parent unless the parent is the founder (otherwise support only as de minimis)"
+        ],
+        "submit_action": "Submit ('sende inn') the application on Min side; exact button label not visible without login. The founder with the Brønnøysund role submits.",
+        "draft_save": "not stated; the Min side text says you can 'opprette eller fortsette på en søknad' (create or continue an application)",
+        "form_readable_without_login": false,
+        "sources": [
+          {
+            "url": "https://www.innovasjonnorge.no/tjeneste/oppstartstilskudd-1",
+            "what": "service page (Norwegian), read via WebFetch"
+          },
+          {
+            "url": "https://www.innovasjonnorge.no/artikkel/slik-hjelper-vi-deg-som-starter-bedrift",
+            "what": "startup guidance page linking the Oppstartstilskudd 1 guide"
+          },
+          {
+            "url": "https://cdn.sanity.io/files/loal7n8w/inno-prod/2c2bd6df96695dc6c9899b5b9f5782e94bb6dc99.pdf",
+            "what": "guide PDF: workbook 'Kundeinnsikt før Oppstartstilskudd' (Aug 2026)"
+          },
+          {
+            "url": "https://www.innovasjonnorge.no/artikkel/soknad-og-soknadsbehandling",
+            "what": "application and processing article (Min side with BankID, advisor dialogue)"
+          },
+          {
+            "url": "https://www.innovasjonnorge.no/ofte-stilte-sporsmal",
+            "what": "FAQ (who can log in and apply)"
+          }
+        ],
+        "unclear": [
+          "The application form on Min side could not be seen (403 bot wall), so field names, character limits, required uploads and the submit button label are unknown",
+          "Application language is not stated; the Norwegian page is the original and the English one is machine-translated",
+          "No numbered assessment criteria, weights or scale are published beyond the six content areas; regional criteria vary by county and are not published",
+          "Whether the form asks for a project budget or financing plan, and in what format, is not stated",
+          "How long an unsent application is kept on Min side is not stated",
+          "Processing time is 'for tiden 3-4 uker' per the page; whether a de minimis declaration is asked for every applicant is not stated (de minimis is mentioned only for some holding-company cases)"
+        ],
+        "verified": "2026-10-17"
+      },
       "notes": "Application deadline 'Ongoing'. Payment: 'You can receive up to 50% of the grant when the project starts', the rest when the project ends; 'At least 50% of the project costs must be paid upfront'. Not covered: own staff costs, related-party costs, VAT, costs before the application. Subsidiaries 50 percent or more owned by an established business are not eligible; companies with outstanding payment defaults cannot apply. The application must state other public funding sought. The page itself has no apply button; it refers to 'My page' only for reporting. Site returns 403 to curl; read via WebFetch on 2026-10-15. Processing time currently 3 to 4 weeks; applications accepted on an ongoing basis.",
       "founder_cost": "none"
     },
@@ -2371,6 +2520,140 @@
         "Processing time is not stated; the FAQ says it depends on the scope",
         "Application language is not stated"
       ],
+      "application": {
+        "portal": "https://start.innovasjonnorge.no/",
+        "login": "Min side with BankID, as a person registered with a role in Brønnøysundregistrene (e.g. styremedlem or daglig leder). Accountants, auditors and project leaders without such a role cannot apply and access cannot be delegated; people representing foreign companies cannot log in. Select the company (aktør) and start an application of type 'Oppstart'. An advisor dialogue can be started from a form on Min side before submitting. start.innovasjonnorge.no redirects (301) to minside.innovasjonnorge.no, which returns 403 to automated clients.",
+        "sections": [
+          {
+            "title": "Foreløpig løsning og innovasjonshøyde",
+            "asks": "A preliminary solution that is new to the market and substantially new and better than competing solutions, with significant innovation and technical risk at international level (new business models may qualify).",
+            "limit": "none stated"
+          },
+          {
+            "title": "Markedsaksept",
+            "asks": "Evidence that outside parties will share the risk of further development, e.g. paying customers, investors, partners, pilot agreements or letters of intent; a requirement for Startup grant 2.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Kundetesting og markedsforståelse",
+            "asks": "The solution tested on potential customers, developed together with customers or user groups, plus an overview of competitors.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Teknologiløp og IP-strategi",
+            "asks": "A demanding technology development path and an IP strategy.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Aktiviteter (tekniske og forretningsmessige avklaringer)",
+            "asks": "Defined activities: technical clarifications (knowledge review, technical prerequisites, planning a main project, testing a minimum solution on customers, documenting environmental and social effects) and business clarifications (IP strategy, testing business and payment models, recruiting pilot customers, value proposition, competence and investment needs, plan for commercial success, capital for the next phase, board or advisory board).",
+            "limit": "none stated"
+          },
+          {
+            "title": "Effekter",
+            "asks": "Lasting value creation in Norway, a realistic long-term growth ambition and products that can compete internationally.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Team, kompetanse og kapital",
+            "asks": "Founders building the company with a core team that understands problem and market, a plan to recruit missing competence, and a financing plan for this phase and future capital needs, with own funding at least equal to the grant.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Annen offentlig støtte",
+            "asks": "Whether other public support, including SkatteFunn, has been or will be sought for the project.",
+            "limit": "none stated"
+          }
+        ],
+        "criteria": [
+          {
+            "name": "Effekter (virkning)",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "Lasting value creation in Norway, a realistic long-term growth ambition, and products that can compete internationally."
+          },
+          {
+            "name": "Innovasjonshøyde (innovasjonsgrad)",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "An offering 'vesentlig ny og bedre' than competing solutions with significant innovation and technical risk at international level."
+          },
+          {
+            "name": "Gjennomføringsevne",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "Founder-led team that understands problem and market, a plan to recruit needed competence, solution developed with customers or users, and a financing plan for this phase and future capital needs."
+          }
+        ],
+        "budget": {
+          "template": "entered in the form",
+          "funding_rate": "Up to 50 percent of approved project costs, at most NOK 1 million per company; the 2026 budget for Startup grant 2 is cut by 60 percent",
+          "categories": [
+            "own work (egne timer) at approved hourly rates (general Innovasjon Norge rule from the FAQ and rates article; not stated on the O2 page)",
+            "external purchases (not listed on the O2 page)"
+          ],
+          "rules": [
+            "No budget template is published",
+            "Costs incurred before the application is sent are not covered",
+            "Own funding at least equal to the grant, available before the first payment, from earned or saved funds or private capital (including subordinated loans or SLIP); not other public support, not tied up for other purposes, and private capital may not be serviced or repaid during the project",
+            "Own work must be documented with timesheets; for companies with accounting duty only agreed, booked salary counts as own work",
+            "Innovasjon Norge's general approved hourly rate: up to 1.2 per mille of agreed and actual annual salary, capped at NOK 700 per hour and 1,850 hours a year, overhead included (the rates article does not name the startup grants specifically)",
+            "VAT is not financed",
+            "Project period 12 months, one extension of 6 months, 18 months at most",
+            "Paid 50 percent at start, 30 percent when half the project is done, 20 percent at the end against a final report and project accounts checked by an auditor or state-authorised accountant; undocumented costs are cut",
+            "Grant may be reduced or lapse if other public support (including SkatteFunn) is received for the same costs"
+          ]
+        },
+        "attachments": [
+          {
+            "name": "Erklæring om egenfinansiering (own-funding declaration), signed by daglig leder or authorised signatory and confirmed by a state-authorised accountant or auditor",
+            "required": true,
+            "template": "https://cdn.sanity.io/files/loal7n8w/inno-prod/e15ff9d97e7d0329cef59bfc84bdd9babdd19f50.docx",
+            "limit": "with the advance payment request after the grant, not with the application"
+          }
+        ],
+        "declarations": [
+          "Whether other public support has been or will be sought for the project",
+          "No ongoing payment defaults (betalingsanmerkninger); no takeover of an existing business",
+          "Ownership: not a subsidiary 50 percent or more owned by an established business; a holding company older than five years only if owned by the founders (support then as de minimis); a 25-50 percent shareholder's business clearly separate with a different chair or CEO and a substantially different idea",
+          "After the grant: the own-funding declaration confirms equity paid in under the Companies Act, subordinated loans or SLIP not serviced or repaid during the project, and no public money in the own funding"
+        ],
+        "submit_action": "Submit ('sende inn') the application on Min side; exact button label not visible without login. The founder with the Brønnøysund role submits.",
+        "draft_save": "not stated; Min side lets you 'opprette eller fortsette på en søknad' (create or continue an application)",
+        "form_readable_without_login": false,
+        "sources": [
+          {
+            "url": "https://www.innovasjonnorge.no/tjeneste/oppstartstilskudd-2",
+            "what": "service page (Norwegian), read via WebFetch"
+          },
+          {
+            "url": "https://cdn.sanity.io/files/loal7n8w/inno-prod/e15ff9d97e7d0329cef59bfc84bdd9babdd19f50.docx",
+            "what": "template: own-funding declaration (Erklæring til Innovasjon Norge)"
+          },
+          {
+            "url": "https://www.innovasjonnorge.no/artikkel/godkjente-timesatser",
+            "what": "approved hourly rates (updated 7 Sep 2026)"
+          },
+          {
+            "url": "https://www.innovasjonnorge.no/ofte-stilte-sporsmal",
+            "what": "FAQ (market acceptance, own funding, own hours, VAT, who can log in, rejection reasons)"
+          },
+          {
+            "url": "https://www.innovasjonnorge.no/artikkel/soknad-og-soknadsbehandling",
+            "what": "application and processing article (Min side with BankID)"
+          }
+        ],
+        "unclear": [
+          "The application form on Min side could not be seen (403 bot wall), so field names, character limits, required uploads and the submit button label are unknown; the sections above are built from the page's eligibility and assessment text",
+          "The service page lists no attachments for the application itself; whether evidence of market acceptance (LOIs, pilot agreements) or customer tests should be uploaded is not stated",
+          "Application language is not stated",
+          "No weights or scale for the three assessment areas; the FAQ names lack of execution capability, own funding and market need as the usual rejection reasons",
+          "The service page does not list eligible cost categories; whether the general approved hourly rates apply to Startup grant 2 is not stated on the page",
+          "Processing time is not stated beyond 'depends on how extensive the application is'",
+          "How long an unsent application is kept on Min side is not stated"
+        ],
+        "verified": "2026-10-17"
+      },
       "notes": "Application deadline 'Ongoing'. 'In 2026, the funding available for Startup Grant 2 has been reduced by 60%.' Costs incurred before the application is submitted are not funded. The startup may be owned by a holding company older than five years; subsidiaries 50 percent or more owned by an established business are not eligible; a shareholder owning 25-50 percent must run a separate business; outstanding payment defaults disqualify. The page does not require Startup grant 1 to have been completed first. Extension of six months, at most 18 in total. Site returns 403 to curl; read via WebFetch on 2026-10-15. The portal start.innovasjonnorge.no returned 404 on 2026-10-15; start from the apply button on the service page. Payments 50 percent at start, 30 percent halfway, 20 percent at the end against a final report and auditor-verified project accounts. The 2026 budget is cut by 60 percent, so stricter prioritisation and more rejections.",
       "founder_cost": "none"
     },
@@ -2500,6 +2783,297 @@
         "Decision timeline is not stated beyond 'continuously'",
         "Application language is not stated on the call page"
       ],
+      "application": {
+        "portal": "https://asiointi.businessfinland.fi/asiointi",
+        "login": "Business Finland Funding e-service, registered at idm.businessfinland.fi and logged in with Suomi.fi identification (personal bank codes, mobile certificate or certificate card). Only a Trade Register representative with sole right to represent the company, or a person holding the Suomi.fi e-Authorization 'Applying for corporate funding', can create the application. Before that: register in My Business Finland, fill in the company's background information and hold the mandatory meeting with a Business Finland expert.",
+        "sections": [
+          {
+            "title": "The company's current status > Company business description",
+            "asks": "Current main customers and target market (geography and industry), current revenue and pricing model, the product or service sold today, and where current revenue comes from.",
+            "limit": "none stated"
+          },
+          {
+            "title": "The company's current status > Under five years old?",
+            "asks": "Yes/No per the Trade Register. If yes: progress already made toward the new solution before applying. If no: the circumstances behind the change of direction, how the new business, customers and solution differ from previous operations, what can be reused, and progress so far.",
+            "limit": "none stated"
+          },
+          {
+            "title": "The company's current status > Shareholder list",
+            "asks": "Attach an up-to-date shareholder list with name, address and number of shares (Limited Liability Companies Act ch. 3 s. 15).",
+            "limit": "none stated"
+          },
+          {
+            "title": "The company's current status > The company's ownership and structure",
+            "asks": "Voting rights if they differ from the share register, persons controlling the company by other means (e.g. shareholders' agreement), and group or holding structures.",
+            "limit": "none stated"
+          },
+          {
+            "title": "The company's current status > Company resources and the contributions of key personnel",
+            "asks": "Core team with background, experience and competence for the solution and business development and percentage of working time; other human resources and their time; potential partners; role of the principal owners.",
+            "limit": "none stated"
+          },
+          {
+            "title": "The company's current status > Team prerequisite",
+            "asks": "Yes/No: a committed team of at least two people working in Finland, at least one full-time; No means no funding.",
+            "limit": "Yes/No"
+          },
+          {
+            "title": "The company's current status > Business's key figures and fiscal period numbers",
+            "asks": "Whether the latest financial statements are in the Trade Register, then annual figures for previous years and an estimate for the current year (R&D costs, equity, equity investments, share capital, capital loans; zero where needed).",
+            "limit": "table, every cell required"
+          },
+          {
+            "title": "The company's current status > Income statement and balance sheet",
+            "asks": "Attach detailed account-level income statement and balance sheet from the accounting system, no older than two months, income statement from the start of the current fiscal year.",
+            "limit": "attachment"
+          },
+          {
+            "title": "The company's current status > De minimis aid",
+            "asks": "Yes/No: de minimis aid granted to the company or a Finnish company in the same group or under the same control in the past three years; if yes, the amount.",
+            "limit": "Yes/No plus amount"
+          },
+          {
+            "title": "Growth vision > Vision and growth plan",
+            "asks": "Vision and target market position in three to five years, the concrete measures and annual targets to get there, international expansion (geography, industry, distribution) and how the vision would transform the industry.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Growth vision > Business target figures",
+            "asks": "Annual turnover and employment targets for only the business area the project develops.",
+            "limit": "table, all years required"
+          },
+          {
+            "title": "Project objectives (Projektin tavoitteet) > Market and customer need",
+            "asks": "Potential paying customers or end users, target market with size and growth, the customer need or problem, and concrete benefits.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Project objectives > Approach/Solution",
+            "asks": "The product, service or know-how to be developed and the preliminary business and revenue model.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Project objectives > Competitive advantage",
+            "asks": "Current competing solutions and companies, what is new and innovative, and the advantage from the customer's view.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Project objectives > Future R&D plan",
+            "asks": "Main objectives, measures, schedule and budget after Sprint and the expertise, people and funding needed; companies five years or older also explain how Sprint changes their earlier R&D plan and raises R&D investment.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Project objectives > Intellectual property rights",
+            "asks": "IPR the company owns, third-party IPR it will use (including employees' and owners'), how it protects its advantage, and how freedom to operate has been ensured.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Project implementation > Basic information",
+            "asks": "Project name, start and end dates and municipality where the project is mainly carried out.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Project implementation > Project plan",
+            "asks": "Download the mandatory project plan template and attach the completed plan.",
+            "limit": "fixed template"
+          },
+          {
+            "title": "Project implementation > Earlier Business Finland funding for the same solution",
+            "asks": "Yes/No: Sprint, Tempo (or ESA-BIC-type incubator funding), R&D funding, Young Innovative Companies or Deep Tech Accelerator for the same solution, to the applicant, its group or another company; if yes, the earlier project and case number.",
+            "limit": "Yes/No plus text"
+          },
+          {
+            "title": "Budget and funding",
+            "asks": "Estimated cost of the project, project funding and other funding.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Summary and sending of the application > Sanctions and counter-terrorism",
+            "asks": "Five Yes/No questions on sanctioned persons or companies among owners, management or beneficiaries, freezing measures, exports or operations in Russia, Belarus or Iran, and terrorist offences; a Yes opens a details field.",
+            "limit": "Yes/No plus details"
+          },
+          {
+            "title": "Project plan template > Timetable, current state, description",
+            "asks": "Start and end dates, a brief current state of the solution, and the project's content and significance to the company.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Project plan template > Objectives",
+            "asks": "2-3 concrete, measurable project objectives with success indicators, plus business development objectives (customer relationships, partnerships, revenue or financing by project end); they are discussed with a Funding Advisor and become part of the decision.",
+            "limit": "2-3 objectives"
+          },
+          {
+            "title": "Project plan template > Further development plan and Risks",
+            "asks": "Plan for further development and commercialisation after the project, and risks identified at the start with mitigation.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Project plan template > Work packages",
+            "asks": "Per work package: content type (either R&D activities or market analysis and business planning), concrete description of activities and methods, personnel with tasks and person-months, purchases and rents with supplier and cost ex VAT, and targeted results; a Gantt chart over months 1-12.",
+            "limit": "copy the table per work package"
+          },
+          {
+            "title": "Project plan template > Summary of resources and Project budget",
+            "asks": "Person-months per employee, purchases and rents per supplier, and a budget per work package with salaries, indirect personnel costs, purchases and rents, other costs, R&D total and the R&D share of total costs.",
+            "limit": "R&D share at least two-thirds"
+          }
+        ],
+        "criteria": [
+          {
+            "name": "Team resourcing, expertise, and commitment",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "Diverse, complementary expertise in the technology, industry and international business, a plan to strengthen the team, credibly committed owners, board and team, and enough people for the project."
+          },
+          {
+            "name": "Innovativeness and competitive advantage of the solution",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "An innovative, concrete solution with a credible international competitive advantage, identified target customers and needs, a preliminary revenue model, and sufficient IPR or a credible basis and protection plan."
+          },
+          {
+            "name": "International market and growth potential",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "Significant, preliminarily demonstrated international business potential enabling rapid growth, with a realistic view of market size and entry requirements."
+          },
+          {
+            "name": "Project plan",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "Made on the Business Finland template, clear and detailed enough to decide and monitor, credible resources and schedule, at least two-thirds R&D, credible risk assessment, and specific measurable objectives."
+          },
+          {
+            "name": "Project focus on the early stages of development",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "The project validates technology, customer need and demand before larger R&D investments and, if successful, leads to them."
+          },
+          {
+            "name": "Project impact and further development plan",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "The solution needs significant development after Sprint, there is an ambitious, credible follow-on R&D plan with an investment forecast, and the project yields the information needed for it."
+          },
+          {
+            "name": "Financial resources and further funding plan",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "Enough money for the project on top of other business, and a credible further funding plan for development and commercialisation."
+          },
+          {
+            "name": "Change in business direction (companies five years or older only)",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "Substantial changes in several key areas (solution, technology, target customer, revenue or business model) that significantly improve international scalability and raise R&D investment; mere extension of existing business is not funded."
+          }
+        ],
+        "budget": {
+          "template": "https://www.businessfinland.fi/globalassets/finnish-customers/01-funding/08-guidelines--terms/forms/sprint_project_plan_template_ongoing.docx",
+          "funding_rate": "75 percent of eligible costs; project cost estimate 100,000-133,334 EUR, so 75,000-100,000 EUR; de minimis aid. 70 percent paid in advance if the company is under five years and no group company is five or older, otherwise all after the project.",
+          "categories": [
+            "Salaries",
+            "Indirect personnel costs (30 % of salaries)",
+            "Purchases and rents (expert services, materials and supplies, equipment rentals incl. software licences and SaaS)",
+            "Other costs (flat 10 % of salaries, purchases and rents)"
+          ],
+          "rules": [
+            "The budget table is part of the project plan template (per work package: salaries, indirect personnel costs, purchases and rents, other costs, R&D share); totals also go into the form's 'Budget and funding' section",
+            "At least two-thirds of project costs must be R&D; each work package is either R&D or market analysis and business planning; IPR studies, plans and initial applications count as R&D under Purchases and rents",
+            "The project must also include customer and market research or other measures supporting use of the solution (not counted as R&D)",
+            "Salaries: only pay for project hours per hourly time tracking, at most 11 months a year, from the Incomes Register; persons owning at least 10 percent get at most 4,000 EUR monthly salary, of which the project share is reported",
+            "An unpaid entrepreneur's work can count as human resources but is not a project cost; trade income goes under purchased services",
+            "Time tracking hourly for everyone, approved monthly; the CEO, management and shareholders without defined hours are counted at 215 h/month; the CEO or project leader cannot approve their own hours",
+            "Indirect personnel costs are a flat 30 percent of approved salaries (holiday pay, social security, recruitment, training, benefits); not accepted if social security is not paid in Finland",
+            "Other costs are a flat 10 percent of salaries, purchases and rents and cover overhead, travel, freight, facility rent, machinery purchases and depreciation; not reported separately",
+            "Purchases from group companies accepted as invoiced (foreign group companies only if named in the decision); purchases from other associated companies are not eligible",
+            "Only procurements and work ordered or agreed in writing after the application is submitted; costs eligible at the earliest when the application is pending with the mandatory attachments",
+            "Procurements of 60,000 EUR or more ex VAT are tendered under the Public Procurement Act",
+            "Costs ex VAT, paid in money, booked, necessary and reasonable; IPR maintenance fees, extensions and disputes not eligible",
+            "Excluded: operational, sales and marketing activities, production investments, drafting commercial contracts, staff training, export activities and distribution networks, entertainment, trade fairs, financing costs, and costs not in the project plan",
+            "No salary costs for a person who already gets a startup grant for the same period; other public funding for the project must be reported",
+            "An independent auditor's report covering the whole project is attached to the final report; its reasonable cost is eligible"
+          ]
+        },
+        "attachments": [
+          {
+            "name": "Project plan on the Sprint template",
+            "required": true,
+            "template": "https://www.businessfinland.fi/globalassets/finnish-customers/01-funding/08-guidelines--terms/forms/sprint_project_plan_template_ongoing.docx",
+            "limit": "fixed template, not stated in pages"
+          },
+          {
+            "name": "List of shareholders (and the parent company's if a subsidiary)",
+            "required": true,
+            "template": "none",
+            "limit": "not stated"
+          },
+          {
+            "name": "Income statement and balance sheet, detailed account-level, from the accounting system",
+            "required": true,
+            "template": "none",
+            "limit": "no older than two months; income statement from the start of the current fiscal year"
+          },
+          {
+            "name": "Signed investment commitment or term sheet",
+            "required": false,
+            "template": "none",
+            "limit": "needed only when agreed investments are used to meet the 50,000 EUR equity or cash requirement"
+          },
+          {
+            "name": "Pitch deck or similar document",
+            "required": false,
+            "template": "none",
+            "limit": "not stated"
+          }
+        ],
+        "declarations": [
+          "De minimis aid to the company and Finnish companies in the same group or under the same control over the past three years, with amount; total must stay under EUR 300,000",
+          "Whether the applicant, its group or another company has had Sprint, Tempo, ESA-BIC-type incubator funding, R&D funding, Young Innovative Companies or Deep Tech Accelerator for the same solution",
+          "Whether the team prerequisite (two committed people in Finland, one full-time) is met",
+          "Five sanctions and counter-terrorism questions (sanctioned parties, freezing measures, exports or operations in Russia, Belarus or Iran, terrorist offences)",
+          "Whether the latest financial statements have been filed in the Trade Register"
+        ],
+        "submit_action": "Send the application from the e-service section 'Summary and sending of the application' (Yhteenveto ja lähetys / Sammandrag av ansökan och sändning); the application then becomes pending. Done by the Trade Register representative or Suomi.fi-authorised person, only after the expert meeting.",
+        "draft_save": "not stated; the Funding e-service page says an application can be cancelled from its 'Summary and submission page' by the application administrator, responsible manager, contact person or a company representative",
+        "form_readable_without_login": false,
+        "sources": [
+          {
+            "url": "https://www.businessfinland.fi/en/services/funding/calls/2026/ongoing-sprint-grant-funding/",
+            "what": "call page (updated 21.8.2026)"
+          },
+          {
+            "url": "https://www.businessfinland.fi/globalassets/finnish-customers/01-funding/08-guidelines--terms/instructions/sprint-hakemuskysymykset.pdf",
+            "what": "form definition: Sprint application questions valid from 1.9.2026 (FI/SV/EN)"
+          },
+          {
+            "url": "https://www.businessfinland.fi/globalassets/finnish-customers/01-funding/08-guidelines--terms/forms/sprint_project_plan_template_ongoing.docx",
+            "what": "project plan template (ongoing call)"
+          },
+          {
+            "url": "https://www.businessfinland.fi/globalassets/finnish-customers/01-funding/08-guidelines--terms/funding-terms/sprint_funding.pdf",
+            "what": "Sprint funding terms and conditions, 2.3.2026"
+          },
+          {
+            "url": "https://www.businessfinland.fi/en/for-finnish-customers/services/funding/guidelines-terms-and-forms/applying-for-funding",
+            "what": "applying for funding page listing Sprint questions and template"
+          },
+          {
+            "url": "https://www.businessfinland.fi/en/services/funding/funding-e-service/",
+            "what": "Funding e-service page (login, authorisation, cancellation)"
+          }
+        ],
+        "unclear": [
+          "No character limits are given in the questions PDF or the call page",
+          "The question list is published in Finnish, Swedish and English (the form's interface languages), but no page says which language the answers must be written in",
+          "The call page links two template files: sprint_project_plan_template_ongoing.docx (the one listed under mandatory attachments and on the applying-for-funding page) and an older sprint-project-plan-template.docx that refers to a 'Project objectives' section in the online form; use the 'ongoing' one",
+          "Weights and scoring scale for the evaluation criteria are not published",
+          "Whether and for how long the e-service keeps an unsent draft is not stated",
+          "The exact fields of the 'Budget and funding' section are only named (estimated cost, project funding, other funding)",
+          "The Funding instructions, terms and forms page redirects to a Microsoft login, so it could not be read"
+        ],
+        "verified": "2026-10-17"
+      },
       "notes": "Open on 2026-10-15: status 'Ongoing', 'Continuous call from September 1, 2026', page updated 21.8.2026, decisions made continuously. Aimed at companies under five years that have not previously received Business Finland funding; companies five years or older must show 'a significant change in direction in their business based on innovation', so age is not encoded as a hard rule. Operational, sales and marketing activities and production investments are excluded. The balance-sheet alternative to the 10 MEUR turnover limit and the 50 000 EUR equity requirement are not encoded (no matching schema fields). Tempo no longer appears on the Startup funding page; Sprint, R&D funding and the Deep Tech Accelerator are listed instead. Name a contact person and a responsible project leader employed by or holding a position in the company. A pitch deck is optional. Obstacle on the call page: a company under five years old that has previously been granted Sprint, Tempo (or equivalent incubator funding such as ESA-BIC), R&D funding, Young Innovative Companies or Deep Tech Accelerator cannot get Sprint; at any age, earlier funding of these kinds for the same solution also blocks it. Read 2026-10-17.",
       "founder_cost": "none"
     },
@@ -2666,6 +3240,193 @@
         "Places per thematic track (green, life science, digital, defence) are not published",
         "e-grant access for founders without MitID is only described as username and password"
       ],
+      "application": {
+        "portal": "https://www.e-grant.dk/",
+        "login": "e-grant profile created by one of the company founders with MitID or a username and password (the same method is used at every later login). Then 'Søgemuligheder' (Search options), find the IF Innofounder call and press 'Ansøg nu' / 'Apply for investment'. Other users can be invited with 'Tilføj ny sagspart'; a 'Støtteperson' cannot submit. Automatic logout after 30 minutes idle.",
+        "languages": [
+          "da",
+          "en"
+        ],
+        "sections": [
+          {
+            "title": "Theme or non-thematic funding",
+            "asks": "Pick green tech, life science/health/welfare tech, critical and digital tech, defence (when funded) or non-thematic, and briefly explain how the idea fits; non-thematic must justify why it falls outside the themes.",
+            "limit": "not stated"
+          },
+          {
+            "title": "Beskriv iværksætteridéen / Describe the entrepreneurial idea",
+            "asks": "The specific problem, need or desire, the proposed solution, and how and why it works.",
+            "limit": "1,000 characters"
+          },
+          {
+            "title": "Describe how the idea is innovative",
+            "asks": "What is innovative about the solution and how it rests on knowledge from education, research or professional experience.",
+            "limit": "1,000 characters"
+          },
+          {
+            "title": "Describe how the entrepreneurial idea differs from competing solutions, products and services",
+            "asks": "Competitors, how the solution differs and creates more customer value, how the competitive landscape affects adoption, and protection against imitation.",
+            "limit": "1,000 characters"
+          },
+          {
+            "title": "Demonstrate need, users, likely paying customers and market size, preferably also internationally",
+            "asks": "Who the customers or users are and what they think, what was done to validate the need, and market size and potential.",
+            "limit": "1,200 characters"
+          },
+          {
+            "title": "Demonstrate how a financially sustainable business can be established and how Innofounder raises the likelihood",
+            "asks": "Who pays and how revenue arises, business model, cost structure and pricing, go-to-market, and the key uncertainties the programme will reduce.",
+            "limit": "1,200 characters"
+          },
+          {
+            "title": "Demonstrate the potential to create value for Denmark through growth and by addressing significant societal challenges",
+            "asks": "Societal value, intended outcomes and how they will be documented, and concrete quantitative or qualitative indicators and targets.",
+            "limit": "1,200 characters"
+          },
+          {
+            "title": "Describe and demonstrate that the team has the skills required to execute the idea",
+            "asks": "How team diversity helps, team capabilities, competence gaps and how to close them, and hours per week from team members not applying.",
+            "limit": "1,200 characters"
+          },
+          {
+            "title": "Demonstrate that the idea is realistic and can be implemented in practice",
+            "asks": "Current status, remaining development, the activities during the course as specifically as possible, and technical, regulatory or other challenges with plans.",
+            "limit": "1,200 characters"
+          },
+          {
+            "title": "Demonstrate that Innofounder can bring the idea to a financially sustainable stage",
+            "asks": "Where the company will be at the end of the programme and how the next stage will be financed.",
+            "limit": "1,000 characters"
+          },
+          {
+            "title": "Milestone plan",
+            "asks": "Plan for the whole 12-month course with Activity, Responsible person, Time period and Result/Milestone.",
+            "limit": "not stated"
+          },
+          {
+            "title": "Team roles",
+            "asks": "Which individuals apply for admission (1, 2 or 3 founders) and which form the remaining team, with competences, roles and responsibilities.",
+            "limit": "not stated"
+          },
+          {
+            "title": "Pitch to the Innofounder Panel Committee (only if shortlisted)",
+            "asks": "Short presentation of the idea and team in Danish or English, then Q&A on the assessment criteria, to a panel of the chair or a vice-chair and two to four members.",
+            "limit": "not stated"
+          }
+        ],
+        "criteria": [
+          {
+            "name": "Quality of the idea",
+            "weight": "equal",
+            "scale": "not stated; the guidelines refer to an overall score where 3.33 or below lets the second assessor only quality-assure",
+            "what_scores_high": "Clear idea, based on relevant education, research or experience, innovative by combining knowledge with new or existing solutions, and clearly differentiated from competing solutions."
+          },
+          {
+            "name": "Impact",
+            "weight": "equal",
+            "scale": "not stated",
+            "what_scores_high": "Demonstrated need, users, paying customers and a sizeable, preferably international market; relevant validation activities; a credible path to a financially sustainable business that Innofounder makes significantly more likely; value for Denmark; fit with the chosen theme."
+          },
+          {
+            "name": "Quality of execution",
+            "weight": "equal",
+            "scale": "not stated",
+            "what_scores_high": "Relevant and diverse team with a realistic plan for gaps, a technically, regulatorily and operationally realistic idea, a credible route to external funding or revenue by the end, and an investment proportionate to needs, potential and risk."
+          }
+        ],
+        "budget": {
+          "template": "entered in the form",
+          "funding_rate": "Fixed amounts, not a share of costs: DKK 27,500 per founder per month for 12 months (DKK 27,500 / 55,000 / 82,500 a month for 1 / 2 / 3 founders) plus a DKK 100,000 development grant, 80 percent paid at start and 20 percent after approved final accounts",
+          "categories": [
+            "monthly funding per founder",
+            "development grant"
+          ],
+          "rules": [
+            "No project budget is asked for: the founders choose 1, 2 or 3 Innofounders in the form and the amounts follow from that",
+            "The company decides how much of the monthly funding is paid as salary",
+            "Development grant may cover equipment rental, specialised IT or hardware, external consultancy, prototype development and testing, software, market maturation and product validation, and travel to customer meetings and conferences at the lowest cost",
+            "Development grant may not cover rent, commuting, meals on travel, office supplies, PCs for general office work, mobile phones, catering or lunch schemes, salaries for employees and founders, or audit costs",
+            "Founders may not put working hours into another publicly funded project, such as an Innobooster project, during the course",
+            "All expenses must be incurred and paid within the 12-month project period; the last 20 percent requires DKK 100,000 of documented development expenses, otherwise it is paid pro rata and an under-spend below the 80 percent advance is repaid",
+            "Start-up aid under GBER article 22; total aid including the accelerator is DKK 510,000 / 840,000 / 1,170,000 for 1 / 2 / 3 founders and cannot be stacked beyond the article 22 ceilings"
+          ]
+        },
+        "attachments": [
+          {
+            "name": "Degree certificate, or documentation of ongoing education with expected graduation date (per applying founder)",
+            "required": true,
+            "template": "none",
+            "limit": "PDF; must show the education meets the rule of thumb of at least 120 ECTS; missing documentation means rejection without assessment"
+          },
+          {
+            "name": "CV (per applying founder)",
+            "required": true,
+            "template": "none",
+            "limit": "at most 2 pages per applicant, PDF"
+          },
+          {
+            "name": "Non-EU/EEA founders: proof of a Danish degree or one year's employment in Denmark within three years, and a residence permit allowing self-employment",
+            "required": true,
+            "template": "none",
+            "limit": "PDF; missing documentation means rejection without assessment"
+          },
+          {
+            "name": "Supplementary material (illustration, competitive landscape graphic, expressions of interest or similar; the program page names a slide deck)",
+            "required": false,
+            "template": "none",
+            "limit": "up to 5 pages"
+          },
+          {
+            "name": "Letters of Intent",
+            "required": false,
+            "template": "none",
+            "limit": "up to 5 pages"
+          },
+          {
+            "name": "All appendices together",
+            "required": true,
+            "template": "none",
+            "limit": "PDF, at most 25 MB in total and 20 MB per file (e-grant FAQ); optional material beyond 10 pages is not considered"
+          }
+        ],
+        "declarations": [
+          "State aid (GBER article 22 start-up aid) declarations that the company: was not registered more than five years before the award (also any company with controlling influence), has not taken over another company's activities, was not formed by merger (unless all merged companies were under five years), has not distributed profits, does not have more than 49 employees and a balance sheet over EUR 10 million, has no outstanding EU recovery order, and is not an undertaking in difficulty",
+          "Incorrect declarations mean ineligibility and, as a rule, repayment of the full grant",
+          "The applicant is responsible for correct information, the required appendices and on-time submission",
+          "No classified information (Danish or NATO) may be uploaded to e-grant",
+          "The applicant warrants that receiving and using the grant does not breach national or international sanctions"
+        ],
+        "submit_action": "Submit from the bottom of the application menu in e-grant ('indsende ansøgningen') before the deadline, always a weekday at 12 noon; the application then shows under 'Ansøgninger' > 'Indsendte'. Nothing can be corrected or added after the deadline.",
+        "draft_save": "Saved in e-grant with 'Gem og fortsæt' (automatic logout after 30 minutes idle). The e-grant FAQ says a submitted application can be reopened while the deadline has not passed. How long unsent drafts are kept is not stated.",
+        "form_readable_without_login": false,
+        "sources": [
+          {
+            "url": "https://danmarksinnovationsfond.dk/en/programmes/innofounder/",
+            "what": "program page (English, machine-translated)"
+          },
+          {
+            "url": "https://danmarksinnovationsfond.dk/wp-content/uploads/2026/08/Innofounder-Guidelines_-ENG_01.07.2026-1.pdf",
+            "what": "guidelines PDF (English), effective 1 July 2026, with every form question and its character limit"
+          },
+          {
+            "url": "https://ufsn.dk/tilskud-puljer-og-bevillinger/e-grant/spoergsmaal-svar/",
+            "what": "e-grant FAQ linked from the program page (profile, Søgemuligheder > Ansøg nu, Gem og fortsæt, PDF limit, submit, reopen)"
+          },
+          {
+            "url": "https://www.e-grant.dk/",
+            "what": "application portal (JavaScript app, login required)"
+          }
+        ],
+        "unclear": [
+          "No call open on 2026-10-17 ('There are currently no calls available'); next deadline not published",
+          "Only the English guidelines were read; the Danish form labels are known only for the first question ('Beskriv iværksætteridéen (1000 tegn)'). The guidelines say the exact character limits are shown in the e-grant form",
+          "The scoring scale is not stated; only the 3.33 threshold for a lighter second review is given",
+          "The program page lists a slide deck among optional attachments; the guidelines only speak of up to five pages of supplementary material, so whether a deck counts against the five pages is not stated",
+          "Two file limits apply: all appendices together at most 25 MB (guidelines) and each file at most 20 MB (e-grant FAQ)",
+          "The exact submit button label and the wording of the state-aid declarations in the form could not be seen without login"
+        ],
+        "verified": "2026-10-17"
+      },
       "notes": "No call open on 2026-10-15: 'There are currently no calls available'; no next call date on the page. 'You do not need to have a CVR number when applying' but the company must be established with a Danish CVR number before the programme begins, so no legal_form rule is encoded. The education, ownership and working-time requirements have no schema fields and are hard requirements to check manually. The old URL innovationsfonden.dk/en/p/innofounder redirects (301) to danmarksinnovationsfond.dk; curl returns HTTP 454, read via WebFetch. Up to 9 weeks from deadline to rejection or pitch invitation, then 5 to 7 weeks to the decision; the grant letter must be accepted within four weeks. Optional: up to five pages of supplementary material and five pages of letters of intent.",
       "founder_cost": "none"
     },
@@ -2725,6 +3486,149 @@
         "The rules PDF is version 3 from January 2023 and cites an old de minimis ceiling; confirm with taeknithrounarsjodur@rannis.is",
         "Assessment criteria for Fræ are not published"
       ],
+      "application": {
+        "portal": "https://sjodir.rannis.is/menu",
+        "login": "Íslykill or Icelandic electronic ID (rafræn skilríki) per the rules; the portal redirects to innskra.island.is (Ísland.is login). The application can be registered under the company's or the registering person's kennitala; a personal registration can later be moved to the company on request. The Apply button on the Ísland.is grant page leads to this Rannís My pages portal.",
+        "sections": [
+          {
+            "title": "Fræ eða Þróunarfræ (grant type)",
+            "asks": "Choose Fræ (preparation grant for a concept-stage project leading to a larger development project, e.g. a later Sprout application) or Þróunarfræ (pre-study for a development cooperation project improving living conditions in DAC-list developing countries).",
+            "limit": "choice"
+          },
+          {
+            "title": "Heiti verkefnis og stutt lýsing (title and short description)",
+            "asks": "Project title and a short description; these are not confidential and are published in Icelandic and English on Rannís' allocation page, so they must not reveal anything that would block a patent.",
+            "limit": "not stated"
+          },
+          {
+            "title": "Project description (per the rules; form label not seen)",
+            "asks": "Enough detail on each item for a professional assessment of an idea with practical value and likely benefit; eligible tasks include defining the idea, a market and technical feasibility study, first prototype drafts, a business plan and user or prototype testing.",
+            "limit": "not stated"
+          },
+          {
+            "title": "Kostnaðaráætlun (cost plan)",
+            "asks": "Total project cost for the grant period, split into salaries and salary-related charges, operating supplies, purchased services (what, why from that supplier, cost) and overhead.",
+            "limit": "numbers entered in the form; an Excel helper is mentioned but not submitted"
+          },
+          {
+            "title": "Mótframlag (counter-contribution)",
+            "asks": "How any counter-contribution is arranged, if the project has one; none is required.",
+            "limit": "not stated"
+          },
+          {
+            "title": "Vanhæfi (reviewers to exclude)",
+            "asks": "Optionally name individuals who should not read the application.",
+            "limit": "optional"
+          },
+          {
+            "title": "Myndband og/eða glærukynning (video and/or slide deck)",
+            "asks": "At least one of: a link to a video presenting the project, or a PDF slide deck; both may be sent.",
+            "limit": "video at most 5 minutes on YouTube, Vimeo or similar, online until the board decides; deck at most 10 slides, PDF, at most 10 MB"
+          }
+        ],
+        "criteria": [
+          {
+            "name": "Formal requirements (formkröfur)",
+            "weight": "pass/fail",
+            "scale": "pass/fail",
+            "what_scores_high": "Required attachments present, video at most 5 minutes or deck at most 10 slides, and the applicant an individual or a company under five years (or covered by the dormancy exception); any No means rejection without assessment."
+          },
+          {
+            "name": "Assessment by the professional council (fagráð)",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "Within the fund's scope, based on an idea with practical value and likely benefit, and each item in the application explained well enough for a professional assessment; the idea should lead to a value-adding product or service and a company with good turnover potential."
+          }
+        ],
+        "budget": {
+          "template": "entered in the form",
+          "funding_rate": "Up to ISK 2 million; no matching funds required, but booked project costs must at least equal the grant",
+          "categories": [
+            "Laun og launatengd gjöld (salaries and salary-related charges)",
+            "Rekstrarvörur (operating supplies)",
+            "Aðkeypt þjónusta (purchased services)",
+            "Samrekstur og aðstaða (overhead)"
+          ],
+          "rules": [
+            "The application instructions page mentions an Excel cost-estimation helper that is not submitted; its figures go into the form (the link to the file is empty on the page)",
+            "Costs incurred before the application is submitted are not accepted",
+            "Salaries: time worked on the project, paid salary plus salary-related charges, with reference to general collective agreements; billed (sales) rates cannot be used",
+            "Operating supplies: describe briefly and estimate the total; computers and other office equipment are not eligible",
+            "Purchased services: explain what is bought, why from that party and the cost; for an Icelandic subsidiary of a foreign company, foreign purchased services or work are not eligible",
+            "Overhead (rent, heat, electricity, running IT) at most 25 percent of total project cost minus purchased services",
+            "Not eligible: production, implementing services and processes, promotional or marketing material, marketing and sales, IP protection, meetings, conferences and exhibitions, travel, company formation, fund-raising and writing grant applications, courses, and buying equipment including software",
+            "Project finished within 12 months; final report within 12 months of the start date",
+            "Paid 80 percent at contract signing and 20 percent after the results are approved; the signed contract must be returned within two weeks or the grant lapses",
+            "The project manager keeps cost accounts for the project"
+          ]
+        },
+        "attachments": [
+          {
+            "name": "Video link presenting the project",
+            "required": false,
+            "template": "none",
+            "limit": "at most 5 minutes; at least one of video or deck is required"
+          },
+          {
+            "name": "Slide deck (PDF)",
+            "required": false,
+            "template": "none",
+            "limit": "at most 10 slides, PDF, at most 10 MB; at least one of video or deck is required"
+          },
+          {
+            "name": "Auditor's or bookkeeper's statement on the five-year exception (dormant company)",
+            "required": false,
+            "template": "none",
+            "limit": "only if the company is over five years and claims two dormant fiscal years"
+          },
+          {
+            "name": "Any other attachment",
+            "required": false,
+            "template": "none",
+            "limit": "not allowed"
+          }
+        ],
+        "declarations": [
+          "De minimis declaration: no de minimis aid above the ceiling in the last two fiscal years plus the current one, including the grant applied for (the rules from January 2023 state EUR 200,000)",
+          "Not an undertaking in difficulty",
+          "Company five years or younger from founding to submission, or dormant for at least two fiscal years (turnover, financial income and dividends each below ISK 200,000 and total assets below ISK 10 million)",
+          "Not a student project or a research project inside a university or research institution",
+          "Correct information; false or misleading information means rejection",
+          "No contact with council or board members about an application under assessment"
+        ],
+        "submit_action": "Submit ('senda inn') the application in the Rannís portal; the applicant gets a confirmation email on receipt. Exact button label not visible without login.",
+        "draft_save": "not stated",
+        "form_readable_without_login": false,
+        "sources": [
+          {
+            "url": "https://island.is/en/grants-plaza/grant/1-42",
+            "what": "grant page on Ísland.is (Always open)"
+          },
+          {
+            "url": "https://assets.ctfassets.net/8k0h54kbe6bj/6Jt8fNoMBvtQbJwGG4f3lR/96d198a77dd68694d3ff93fefd3da8ba/TS_Reglur-Frae_Throunarfrae_utgafa3.pdf",
+            "what": "rules and instructions PDF for Fræ and Þróunarfræ, version 3 (January 2023, Icelandic)"
+          },
+          {
+            "url": "https://island.is/en/p/technology-development-fund/application-instructions",
+            "what": "application instructions page (portal, Excel cost helper)"
+          },
+          {
+            "url": "https://island.is/en/p/technology-development-fund/application-evaluation-and-grant-disbursement",
+            "what": "evaluation page (seed applicants get a summary of the assessment)"
+          }
+        ],
+        "unclear": [
+          "Application language is not stated; the rules are only in Icelandic, while the title and short description are published in Icelandic and English",
+          "Section titles come from the rules PDF, not from the form itself",
+          "The form's fields and character limits are not published and the portal requires Ísland.is login",
+          "No scoring scale or weights for Fræ; the rules give only the formal checks and general requirements",
+          "The rules PDF is from January 2023 and cites a EUR 200,000 de minimis ceiling; the current ceiling may differ",
+          "Decision frequency: the grant page says awards are announced at least twice a year, the rules say applications are handled at least three times a year",
+          "The Excel cost-estimation file is referenced on the instructions page but has no working link",
+          "Whether the portal keeps unsent drafts, and for how long, is not stated"
+        ],
+        "verified": "2026-10-17"
+      },
       "notes": "Open on 2026-10-15: 'Open for applications / Always open'; 'Applications may be made at any time. Submitted applications are evaluated and grant awards are announced at least twice a year.' Rules and instructions for Fræ and Thróunarfræ are in Icelandic. Contact taeknithrounarsjodur@rannis.is. The fund's other categories (Sprout, Growth, Market grants) had the window 04.08.2026-15.09.2026 and were closed on the fund page; Patent grants are also always open. www.rannis.is redirects (301) to island.is/redirects/www.rannis.is/. Overhead at most 25 percent; equipment, software, travel, IP protection, marketing and company formation are not eligible costs. Return the signed contract within two weeks or the grant lapses; 80 percent paid at signing, 20 percent after the final report within 12 months.",
       "founder_cost": "none"
     },
@@ -2848,6 +3752,218 @@
         "Pool 3 of 2026 lists an estimated answer in November to December 2027, which looks like a typo for 2026",
         "The exact success rate for a startup's theme varies from about 7% to 46% per pool"
       ],
+      "application": {
+        "portal": "https://www.e-grant.dk/",
+        "login": "e-grant profile created with MitID or a username and password (the same method must be used at every later login; Danish citizens are advised to use MitID). The person who creates the application must be able to sign for and commit the company; that person becomes contact person and sender, and can invite other e-grant users ('Tilføj ny sagspart' with a role and an invitation code). A 'Støtteperson' cannot submit. Automatic logout after 30 minutes of inactivity.",
+        "languages": [
+          "da",
+          "en"
+        ],
+        "sections": [
+          {
+            "title": "Administrativ del (administrative part)",
+            "asks": "Company information and declarations, including the de minimis declaration on the de minimis track and the chosen theme.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Virksomheden (The company)",
+            "asks": "Describe the applicant company.",
+            "limit": "none stated in the guidelines; field limits live in the e-grant form"
+          },
+          {
+            "title": "Idéen (The idea)",
+            "asks": "The solution the project ends in, how it differs from existing solutions (including the company's own) and the preliminary results it builds on.",
+            "limit": "none stated in the guidelines"
+          },
+          {
+            "title": "Innobooster-projektet (The Innobooster project)",
+            "asks": "The well-defined project: its risky, challenge-driven, knowledge-based development activities, separate from ordinary operations; for the 1-5 MDKK track it must qualify as industrial research or experimental development.",
+            "limit": "none stated in the guidelines"
+          },
+          {
+            "title": "Tema (theme contribution)",
+            "asks": "How the solution contributes to the chosen theme (green tech, life science/health/welfare tech, critical and digital tech, or defence and security tech when that pool has budget); it competes only within that theme.",
+            "limit": "none stated in the guidelines"
+          },
+          {
+            "title": "Markedet (The market)",
+            "asks": "The need, the market size, users or customers and the path to an international market.",
+            "limit": "none stated in the guidelines"
+          },
+          {
+            "title": "Den forretningsmæssige gevinst (The business-related gain)",
+            "asks": "The business gain the company expects from the project, in proportion to the investment requested.",
+            "limit": "none stated in the guidelines"
+          },
+          {
+            "title": "Risikovurdering (Risk assessment)",
+            "asks": "The project's risks and how they are mitigated.",
+            "limit": "none stated in the guidelines"
+          },
+          {
+            "title": "Teamet (The team)",
+            "asks": "The team, knowledge providers and partners and their competences; new hires need not be named but their competence profile must be clear.",
+            "limit": "none stated in the guidelines"
+          },
+          {
+            "title": "Resultater fra evt. tidligere investeringer fra Innovationsfonden (Results from previous Innovation Fund investments)",
+            "asks": "Results of earlier Innobooster, Industrial Researcher, Eurostars, Grand Solutions or Innofounder grants and how they lay the foundation for this one.",
+            "limit": "none stated in the guidelines"
+          },
+          {
+            "title": "Aktivitetsplan (Activity plan)",
+            "asks": "Activities with duration, clear milestones and success criteria; for the 1-5 MDKK track it is a Danish-only template ('Aktivitetsplan').",
+            "limit": "none stated in the guidelines"
+          },
+          {
+            "title": "Illustration",
+            "asks": "Optional single illustration (image, sketch, diagram) giving quick insight into product, technology, interface, process or market.",
+            "limit": "1 A4 page, no long text, large data tables or report extracts"
+          },
+          {
+            "title": "Video link",
+            "asks": "Optional single link to a short video or video pitch, viewable without user account, login or software install.",
+            "limit": "2 minutes"
+          },
+          {
+            "title": "Pitch to Paneludvalget for Innobooster (after the written assessment)",
+            "asks": "On the 1-5 MDKK track every application the two assessors do not reject goes on to a presentation to about five panel members with follow-up questions; on the de minimis track only when Innobooster funding in the last 3 years plus this application exceeds DKK 2 million, after large earlier Innovation Fund grants, or when assessors disagree.",
+            "limit": "not stated"
+          }
+        ],
+        "criteria": [
+          {
+            "name": "Idéens kvalitet (Quality of the idea)",
+            "weight": "equal",
+            "scale": "6-point scale; average below 4, or below 3 on any one criterion, cannot be funded",
+            "what_scores_high": "It is clear which solution the project ends in, it differs sufficiently from existing solutions, convincing preliminary results exist, and the project carries out risky, challenge-driven, knowledge-based development."
+          },
+          {
+            "name": "Impact",
+            "weight": "equal",
+            "scale": "6-point scale; average below 4, or below 3 on any one criterion, cannot be funded",
+            "what_scores_high": "A significant business gain is made probable, the solution meets a need in a relevant-sized and eventually international market with users or customers, the gain is proportionate to the investment, and the project creates societal impact in the chosen theme plus growth and jobs in Denmark."
+          },
+          {
+            "name": "Kvalitet i eksekvering (Quality of execution)",
+            "weight": "equal",
+            "scale": "6-point scale; average below 4, or below 3 on any one criterion, cannot be funded",
+            "what_scores_high": "A clear purpose and activity plan with milestones and success criteria, a team with relevant specialised competences, a realistic plan with risk mitigation and resources, and a budget that is reasonable, realistic and efficient for the activities."
+          }
+        ],
+        "budget": {
+          "template": "inside e-grant (not public)",
+          "funding_rate": "Up to 35 percent of the project's costs; the 35 percent cap applies to each budget line and to the whole project. DKK 200,000-1 million under de minimis, DKK 1-5 million under the block exemption (GBER). The budget states the total investment percentage applied for.",
+          "categories": [
+            "Nye medarbejdere (new employees)",
+            "Eksisterende medarbejdere (existing employees)",
+            "Vidensleverandører (knowledge providers)",
+            "Materialer og udstyr (materials and equipment, min. DKK 10,000 per invoice)"
+          ],
+          "rules": [
+            "De minimis track (DKK 200,000-1 million): hours for salaried employees on the company's ATP and for owners with at least 5 percent shown on CVR.dk are costed at a fixed DKK 750 per hour, so the grant is up to 35 percent of 750; the person need not be paid a salary matching that rate",
+            "GBER track (DKK 1-5 million): employees are costed at actual salary, annual gross salary including pension, holiday pay and ATP divided by 1,628 hours for a full-time employee, at most DKK 1,000 per hour; overtime, sickness, leave, bonus and options cannot be included",
+            "Each employee can put at most 135 hours a month into the project; part-time staff at most the hours they are paid for",
+            "Staff are 'existing' if employed or co-owners at application time, 'new' if hired afterwards; the category stays for the whole project",
+            "No hours that receive other public subsidy, including wage subsidy; no hours from unpaid interns, trainees or volunteers",
+            "Consultants, freelancers, university staff, staff of group companies and staff not on the company's ATP go under knowledge providers at actual invoiced cost; a related knowledge provider must be disclosed with price and why it is the best fit",
+            "Materials and equipment invoices under DKK 10,000 are not co-financed; new equipment with value beyond the project only as depreciation in the project period; depreciation of existing equipment and internal invoices are not accepted",
+            "Invoices must be issued to and paid by the applicant company, not by parent, sister or subsidiary companies; costs excluding VAT; suppliers and their deliveries named in the application",
+            "Costs before project start are not co-financed; the project can start at the earliest on the grant date and must start within 4 months of the award; maximum 24 months",
+            "Ordinary operations are excluded: rent, transport, office costs, strategy and business development, sales and marketing, investor attraction, communication and content, market or customer analysis, manuals, training material, supplier agreements and the auditor's statement",
+            "GBER track: patent costs (novelty searches, patent attorney, filing fees) are not covered",
+            "No budget changes or extra funding after submission; the higher the amount requested, the higher the bar on the criteria",
+            "Paid quarterly in arrears against accounts in e-grant; 15 percent withheld until final report, evaluation, final accounts and auditor's statement are approved"
+          ]
+        },
+        "attachments": [
+          {
+            "name": "Budget (Innovationsfonden template)",
+            "required": true,
+            "template": "inside e-grant (not public)",
+            "limit": "Danish-only 'Budget' template, downloaded via a link in e-grant during the application; keep the format its help text describes"
+          },
+          {
+            "name": "Aktivitetsplan template (1-5 MDKK GBER track only)",
+            "required": true,
+            "template": "inside e-grant (not public)",
+            "limit": "named only in the GBER guidelines; size not stated"
+          },
+          {
+            "name": "Illustration",
+            "required": false,
+            "template": "none",
+            "limit": "one A4 page; e-grant FAQ: attachments as PDF, at most 20 MB per file, not password-protected"
+          },
+          {
+            "name": "Video or video pitch link",
+            "required": false,
+            "template": "none",
+            "limit": "2 minutes, accessible without login"
+          },
+          {
+            "name": "Any other document, letter of support or link",
+            "required": false,
+            "template": "none",
+            "limit": "not allowed; extra material is not read and can lead to administrative rejection"
+          }
+        ],
+        "declarations": [
+          "De minimis declaration (de minimis track): how much de minimis aid the company, including linked undertakings, received in the last three years, from whom and when; ceiling EUR 300,000 over three years",
+          "Primary agriculture or fisheries/aquaculture companies declare in writing that de minimis aid in the current and two previous fiscal years is below EUR 50,000 or EUR 30,000",
+          "SME status under the EU definition, counted for the whole group when the company is in a group",
+          "One of the two financial criteria met (DKK 100,000 risk capital or development grants in three years, or DKK 250,000 gross profit), documented on request",
+          "GBER track: not an undertaking in difficulty and no outstanding EU recovery order",
+          "The applicant warrants that receiving and using the grant does not breach national or international sanctions",
+          "The application must not contain classified information; contact the fund first if in doubt",
+          "The applicant is responsible that the information is correct and must tell the fund at once about material changes, such as other funding for the project"
+        ],
+        "submit_action": "In e-grant the submit option is at the bottom of the application menu ('indsende ansøgningen'), done by the contact person before the period deadline at 12:00; the application is then listed under 'Ansøgninger' > 'Indsendte'. The exact button label for applications was not visible without login.",
+        "draft_save": "Work is saved in e-grant with the 'Gem og fortsæt' button (automatic logout after 30 minutes idle); an application in progress that is not submitted is deleted when the period ends at 12:00 and must be recreated in the next period. Innobooster's guidelines say a submitted application cannot be corrected: withdraw it and start a new one.",
+        "form_readable_without_login": false,
+        "sources": [
+          {
+            "url": "https://danmarksinnovationsfond.dk/da/programmer/innobooster/",
+            "what": "program page (Danish)"
+          },
+          {
+            "url": "https://danmarksinnovationsfond.dk/en/programmes/innobooster/",
+            "what": "program page (English, machine-translated)"
+          },
+          {
+            "url": "https://danmarksinnovationsfond.dk/wp-content/uploads/2026/07/Innobooster-retningslinjer-De-minimis-Maj-2026.pdf",
+            "what": "guidelines PDF, de minimis track, effective 27 May 2026"
+          },
+          {
+            "url": "https://danmarksinnovationsfond.dk/wp-content/uploads/2026/07/Innobooster-retningslinjer-udner-gruppefritagelsesforordningen-Maj-2026.pdf",
+            "what": "guidelines PDF, GBER track, effective 27 May 2026"
+          },
+          {
+            "url": "https://danmarksinnovationsfond.dk/wp-content/uploads/2026/08/Innobooster-guidelines-De-minimis-ENG-–-2026-Valid-from-May-1.pdf",
+            "what": "guidelines PDF, de minimis track, English version"
+          },
+          {
+            "url": "https://www.e-grant.dk/",
+            "what": "application portal (JavaScript app, login required)"
+          },
+          {
+            "url": "https://ufsn.dk/tilskud-puljer-og-bevillinger/e-grant/spoergsmaal-svar/",
+            "what": "e-grant FAQ from the agency that runs e-grant (profile, Søgemuligheder > Ansøg nu, Gem og fortsæt, PDF limit, submit)"
+          }
+        ],
+        "unclear": [
+          "Character or page limits per form field are not in the guidelines or on the program page; they are only visible inside e-grant (the guidelines mention 'krav til ansøgningens omfang' without numbers)",
+          "The Budget and Aktivitetsplan templates are only reachable via links inside e-grant, so their columns and help text could not be read",
+          "The exact list and wording of declarations in the administrative part is not published beyond the de minimis, SME, financial-criterion and sanctions items above",
+          "The GBER guidelines list only salaried employees on ATP under staff costs; how owners without a salary are costed on the 1-5 MDKK track is not stated",
+          "The de minimis guidelines name only the Budget template, while the GBER guidelines name Budget and Aktivitetsplan; whether the de minimis activity plan is typed into the form or uploaded is not stated",
+          "The exact submit button label in e-grant could not be seen without login",
+          "The e-grant FAQ says a submitted application can be reopened before the deadline, while the Innobooster guidelines say it must be withdrawn and a new one started; which applies to Innobooster pools is not stated",
+          "The e-grant FAQ says attachments are always PDF (max 20 MB per file); whether the Budget template is uploaded as PDF or in its original spreadsheet format is not stated, since the template is only reachable inside e-grant",
+          "On 2026-10-17 'Søgemuligheder' says 'Der er lige nu ingen søgemuligheder'; no 2027 application periods are listed (only estimated answer dates for the autumn 2026 pools, one of them '23. november – 4. december 2027')"
+        ],
+        "verified": "2026-10-17"
+      },
       "notes": "innovationsfonden.dk now redirects to danmarksinnovationsfond.dk; the old domain answers 454 to plain fetches, the new one is readable in a browser. Pools in 2026: 22 Jan to 12 Mar, 26 Mar to 13 May, 27 May to 6 Aug, 20 Aug to 15 Oct, each about DKK 71.5 to 78.9 million; the last 2026 pool closed on 15 Oct 2026 and no call was listed on 16 Oct 2026. 2025: 1,189 applications, 250 grants, 21% success. Erhvervshusene give free help with writing the application. 'Med Innobooster kan I søge mellem 200.000 kr. og 5 mio. kr. til jeres udviklingsprojekt.'",
       "founder_cost": "none"
     },
