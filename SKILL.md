@@ -300,10 +300,14 @@ In short:
    the three changes that would help most. No probabilities.
 6. **Deliver** as files in the founder's folder when you can write files,
    otherwise ready to paste, field by field.
-7. **Fill the form in the browser** if this session has one: the founder logs
-   in, you fill the fields and upload their files, save a draft, and stop
-   before anything that submits, signs or declares. Tell them what is left and
-   which button submits.
+7. **Hand it over for submission.** If the program has an official agent
+   route (`application.agent_path`, as AWS Activate does), stage the
+   application there after the founder has seen what you will send, and give
+   them the link to submit. Otherwise, if this session has a browser, the
+   founder logs in, you fill the fields and upload their files, save a draft,
+   and stop before anything that submits, signs or declares. Tell them what is
+   left and which button submits. If the program wants AI use disclosed
+   (`application.ai_disclosure`), the draft says so.
 
 ### Lines that apply to all stages
 
