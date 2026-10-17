@@ -691,3 +691,21 @@ def test_cli_door_flag(capsys: pytest.CaptureFixture[str]) -> None:
     out = json.loads(capsys.readouterr().out)
     assert [d["id"] for d in out["doors"]] == ["test-eu-compute"]
     assert out["doors"][0]["application"] is None
+
+
+# --- confirmed and denied ------------------------------------------------------
+
+
+def test_confirming_one_key_leaves_other_confirmations_unknown() -> None:
+    rule = {"field": "confirmed", "op": "contains", "value": "eip_competence_mix"}
+    result = match.evaluate_rule(rule, {"confirmed": ["region_vgr"]})
+    assert result.status == "unknown"
+    assert result.question
+
+
+def test_confirmed_key_is_met_and_denied_key_fails() -> None:
+    rule = {"field": "confirmed", "op": "contains", "value": "consortium_partner"}
+    assert match.evaluate_rule(rule, {"confirmed": ["consortium_partner"]}).status == "met"
+    assert match.evaluate_rule(rule, {"denied": ["consortium_partner"]}).status == "failed"
+    assert match.evaluate_rule(rule, {"confirmed": ["consortium_partner"], "denied": ["consortium_partner"]}).status == "failed"
+    assert match.normalize_profile({"denied": "consortium_partner, need_owner"})[0]["denied"] == ["consortium_partner", "need_owner"]

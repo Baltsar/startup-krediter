@@ -54,7 +54,7 @@ EU_ASSOCIATED = EU_MEMBERS | {
 NUMERIC_FIELDS = {"age_years", "employees", "revenue_msek", "balance_msek", "revenue_meur", "balance_meur", "funding_raised_usd", "need_eur"}
 INTEGER_FIELDS = {"employees"}
 BOOLEAN_FIELDS = {"vc_backed", "has_vat", "has_employment", "has_work_email", "has_website", "has_developer", "workload_defined", "profit_distributed"}
-LIST_FIELDS = {"stack", "sector", "vc_partner", "need", "confirmed"}
+LIST_FIELDS = {"stack", "sector", "vc_partner", "need", "confirmed", "denied"}
 COUNTRY_FIELDS = {"country", "residence_country"}
 TRUE_WORDS = {"true", "yes", "ja", "y", "1", "kyllä", "joo"}
 FALSE_WORDS = {"false", "no", "nej", "n", "0", "nei", "ei"}
@@ -337,8 +337,16 @@ def evaluate_rule(rule: dict, profile: dict, lang: str = i18n.DEFAULT_LANG) -> R
             return RuleResult("failed", label, None)
         question = next((result.question for result in results if result.status == "unknown"), None)
         return RuleResult("unknown", label, question)
-    actual = profile.get(rule["field"])
     label = i18n.rule_label(rule, lang)
+    if rule["field"] == "confirmed" and rule["op"] == "contains":
+        # A founder confirms a requirement in words or says no to it. Not mentioning
+        # it is neither: confirming one key must not fail every other confirmation.
+        if rule["value"] in (profile.get("denied") or []):
+            return RuleResult("failed", label, None, "confirmed")
+        if rule["value"] in (profile.get("confirmed") or []):
+            return RuleResult("met", label, None, "confirmed")
+        return RuleResult("unknown", label, i18n.rule_question(rule, lang), "confirmed")
+    actual = profile.get(rule["field"])
     if actual is None:
         return RuleResult("unknown", label, i18n.rule_question(rule, lang), rule["field"])
     status = "met" if compare(rule["op"], actual, rule["value"]) else "failed"
