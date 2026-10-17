@@ -124,6 +124,13 @@ CONFIRMATIONS: dict[str, dict[str, tuple[str, str]]] = {
         "no": ("ny i AWS Activate, eller ber om mer enn dere har fått før", "Har selskapet fått AWS Activate-kreditter før, og i så fall hvor mye?"),
         "da": ("ny i AWS Activate, eller beder om mere end I har fået før", "Har virksomheden fået AWS Activate-kreditter før, og i så fald hvor meget?"),
     },
+    "no_earlier_bf_startup_funding": {
+        "en": ("no earlier Business Finland Sprint, Tempo, R&D, Young Innovative Companies or Deep Tech Accelerator funding", "Has the company received Business Finland funding before (Sprint, Tempo, R&D funding, Young Innovative Companies or Deep Tech Accelerator), and for which solution?"),
+        "sv": ("ingen tidigare Sprint, Tempo, FoU-finansiering, Young Innovative Companies eller Deep Tech Accelerator från Business Finland", "Har bolaget fått pengar från Business Finland förut (Sprint, Tempo, FoU-finansiering, Young Innovative Companies eller Deep Tech Accelerator), och i så fall för vilken lösning?"),
+        "fi": ("ei aiempaa Business Finlandin Sprint-, Tempo-, T&K-, Young Innovative Companies- tai Deep Tech Accelerator -rahoitusta", "Onko yhtiö saanut aiemmin Business Finlandin rahoitusta (Sprint, Tempo, T&K-rahoitus, Young Innovative Companies tai Deep Tech Accelerator), ja jos on, mihin ratkaisuun?"),
+        "no": ("ingen tidligere Sprint, Tempo, FoU-finansiering, Young Innovative Companies eller Deep Tech Accelerator fra Business Finland", "Har selskapet fått penger fra Business Finland før (Sprint, Tempo, FoU-finansiering, Young Innovative Companies eller Deep Tech Accelerator), og i så fall for hvilken løsning?"),
+        "da": ("ingen tidligere Sprint, Tempo, F&U-finansiering, Young Innovative Companies eller Deep Tech Accelerator fra Business Finland", "Har virksomheden fået penge fra Business Finland før (Sprint, Tempo, F&U-finansiering, Young Innovative Companies eller Deep Tech Accelerator), og i så fald til hvilken løsning?"),
+    },
     "need_owner": {
         "en": ("an established need owner committed to the project", "Do you have an established company or organisation committed as need owner in the project?"),
         "sv": ("en etablerad behovsägare som förbundit sig till projektet", "Har ni ett etablerat bolag eller en organisation som förbundit sig som behovsägare i projektet?"),

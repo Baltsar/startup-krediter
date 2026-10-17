@@ -62,12 +62,19 @@ costs trust.
 | `has_vat`, `has_employment`, `has_work_email`, `has_website`, `has_developer`, `workload_defined`, `profit_distributed` | bool | EuroHPC and vendor gates |
 | `confirmed` | list of keys | requirements the founder confirms in words: `kth_affiliation`, `research_background`, `hpc_experience`, `region_skane`, `region_vgr`, `consortium_partner`, `need_owner` |
 | `need` | list of `money`, `compute`, `credits`, `support` | `gpu` is an alias of `compute`; `support` is free coaching or programs without cash. A founder asking for money does not get no-cash programs unless they ask for support too |
+| `need_eur` | number, EUR | how much money the founder says they need, converted to EUR; only when they name an amount. Doors that pay a small fraction of it rank lower |
 | `lang` | `sv`, `en`, `fi`, `no`, `da` | the founder's language; labels and questions come back in it |
 
 Leave out what the chat does not say. An absent field is unknown and becomes a
 question; a guessed value becomes a confident wrong answer the founder cannot
 tell from a right one. The one field worth asking before running anything is
-`country`. If the founder lives in another country than the company is
+`country`, and only when the chat does not settle it. A city ("pilotskolor i
+Uppsala"), a national legal form (AB, AS, Oy, ApS, ehf) or a national funder
+the founder names ("Vinnova känns svårt") settles it: set the country, run the
+matcher, and name the assumption in the verdict ("för ett svenskt AB"). A
+founder who wrote in Swedish about Uppsala and gets only "which country?" back
+has lost a turn. Ask when the clues are missing or point to different
+countries ("Ltd", euros, no city). If the founder lives in another country than the company is
 registered in, set both: a Swedish AB with founders in Copenhagen sees Danish
 doors too, and each door's rules say which country it needs.
 
@@ -100,7 +107,8 @@ Per door: `status` is `eligible`, `unknown` or `blocked`; `met`, `failed`,
 lists collapsed sibling doors (Fast Lane and Large Scale under Playground) with
 any extra question they add; `glyph` is the status block; `what`, `amount`,
 `next_step`, `apply_url`, `status_url`, `reference`, `notes`, `availability`,
-`last_verified`, `stale`, `live` carry the facts.
+`last_verified`, `stale`, `live` carry the facts. `undersized` is true when
+the founder gave `need_eur` and the door's maximum is under a fifth of it.
 
 Labels are generated from each rule's field, operator and value, never written
 by hand, so a label cannot claim more than the rule checks. "i Sverige" means
@@ -116,6 +124,18 @@ this profile and are missing from the matcher's output, phrased like the
 founder's need ("bidrag privatperson idé utan bolag Sverige", "use AWS credits
 for Anthropic Claude"). Read the official page of anything you find before you
 name it.
+
+Aim the search at what the matcher cannot know:
+
+- **No company yet, or a student:** the founder's university or city
+  innovation office often has small idea grants that need no company
+  ("UiB idé", "KTH Innovation", "Aalto Startup Center"). Search for the
+  university or city the founder named.
+- **A sector with its own money** (farming, fisheries, defence, culture,
+  media): the sector agency usually runs it ("Jordbruksverket innovation",
+  "defence innovation startup Norway").
+- **A tax rule rather than a grant** (R&D relief on salaries, gifts, owner
+  loans): answer it from the tax agency's page.
 
 If you find a door that fits better than the matcher's first door, show it in
 Stage A like any other door and give its amount and what decides it; in Stage B
@@ -190,6 +210,12 @@ carries, so no one walks to a site thinking it is simple.
      company with no plans to raise);
    - its hardest stopper is something the founder has already said they lack.
    Such doors may go in the `more` line, marked for what they are.
+
+   Match the size of the need. A door with `undersized: true` pays a small
+   fraction of what the founder said they need. Do not lead with it. When it
+   is the first step toward a larger door (a grant to form a group before the
+   project grant), lead with the larger door and name the small one as its
+   first step.
 4. **One closing line**: "Vilken vill ni titta på? Då får ni hela listan över
    vad ansökan kräver." Add `more` and `unlocks` lines (below) only if they
    exist.
@@ -311,6 +337,19 @@ the key and rerun.
   captcha.** The account, the declaration and the money belong to the founder.
 - **Never state an amount or date that is not on the page you read today.** The
   data is a map, not a source. No number on the page means "not published".
+- **Never stretch a rule beyond the page.** A rule applies to exactly what the
+  page says it applies to. Vinnova counts the whole group for listing,
+  turnover and balance sheet, but the 10-employee cap is the applying
+  company's alone. Telling a founder they are ruled out by a rule the page
+  does not have is the worst error this skill can make.
+- **Ask about earlier funding before "passar".** When a door excludes companies
+  that already got money from the same funder, and the founder has mentioned
+  that funder ("vi sökte Business Finland i våras"), the question is whether
+  they have received anything from it before, and which program. Ask it before
+  you say the door fits.
+- **Use the call's own name.** Write "Avancerad digitalisering: Cybersäkerhet,
+  AI och resiliens", not a shortening that matches another call. A founder
+  searching for the short name lands on the wrong page.
 - **Never guess country, legal form, headcount, revenue or dividend, and never
   infer a yes/no gate.** "Tre anställda" does not mean the project lead is
   employed three months past the allocation; "2 000 GPU-timmar" does not mean

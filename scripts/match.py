@@ -51,7 +51,7 @@ EU_ASSOCIATED = EU_MEMBERS | {
     "GE", "AM", "IL", "TN", "FO", "NZ",
 }
 
-NUMERIC_FIELDS = {"age_years", "employees", "revenue_msek", "balance_msek", "revenue_meur", "balance_meur", "funding_raised_usd"}
+NUMERIC_FIELDS = {"age_years", "employees", "revenue_msek", "balance_msek", "revenue_meur", "balance_meur", "funding_raised_usd", "need_eur"}
 INTEGER_FIELDS = {"employees"}
 BOOLEAN_FIELDS = {"vc_backed", "has_vat", "has_employment", "has_work_email", "has_website", "has_developer", "workload_defined", "profit_distributed"}
 LIST_FIELDS = {"stack", "sector", "vc_partner", "need", "confirmed"}
@@ -153,6 +153,7 @@ class Door:
     founder_cost: str = "none"
     stage_mismatch: bool = False
     topic_mismatch: bool = False
+    undersized: bool = False
     also: list[dict] = dc_field(default_factory=list)
     live: dict | None = None
     glyph: str = ""
@@ -411,6 +412,7 @@ def evaluate(program: dict, profile: dict, today: date, lang: str) -> Door:
         founder_cost=str(program.get("founder_cost", "none")),
         stage_mismatch=stage_mismatch(program, profile),
         topic_mismatch=topic_mismatch(program, profile),
+        undersized=undersized(program, profile),
         foreign=bool(program.get("home_country")) and bool(profile_countries(profile)) and program.get("home_country") not in profile_countries(profile),
     )
 
@@ -480,6 +482,26 @@ def topic_mismatch(program: dict, profile: dict) -> bool:
     return not set(sectors) & set(profile.get("sector") or [])
 
 
+# Rough EUR value of one unit of each currency in the data. Used only to order
+# doors by how much of the founder's stated need they can pay, never shown.
+EUR_PER_UNIT: dict[str, float] = {"EUR": 1.0, "SEK": 0.09, "NOK": 0.085, "DKK": 0.134, "ISK": 0.0072, "USD": 0.92}
+UNDERSIZED_SHARE = 0.2
+
+
+def undersized(program: dict, profile: dict) -> bool:
+    """True when the founder named how much they need and the door's maximum is under a fifth of it.
+
+    Farmers who need 1.5 MSEK should hear about the project grant before the
+    120 000 SEK grant for forming the group, even though both fit.
+    """
+    need = profile.get("need_eur")
+    amount = program.get("amount") or {}
+    rate = EUR_PER_UNIT.get(str(amount.get("currency")))
+    if not need or rate is None or not isinstance(amount.get("max"), (int, float)):
+        return False
+    return amount["max"] * rate < UNDERSIZED_SHARE * need
+
+
 def poor_fit(door: Door) -> bool:
     """Doors that stay out of the full answer and go to `more`: closed, run from another country, wrong stage, wrong sector, or charging a fee."""
     return (
@@ -492,7 +514,7 @@ def poor_fit(door: Door) -> bool:
 
 
 def rank(doors: list[Door]) -> list[Door]:
-    """Open doors first: eligible, then unknown with the fewest open questions, then blocked. Doors run from another country than the founder's come after domestic ones, closed doors last. Ties keep data-file order.
+    """Open doors first: eligible, then unknown with the fewest open questions, then blocked. Doors run from another country than the founder's come after domestic ones, doors that pay a small fraction of the stated need after doors that can pay it, closed doors last. Ties keep data-file order.
 
     A Swedish call that admits foreign startups is technically open to a Finnish
     founder, but leading a Finnish answer with it buries the Finnish doors.
@@ -503,6 +525,7 @@ def rank(doors: list[Door]) -> list[Door]:
             door.availability == "closed",
             door.foreign,
             door.stage_mismatch or door.topic_mismatch,
+            door.undersized,
             COST_RANK.get(door.founder_cost, 0),
             door.availability != "open",
             RANK[door.status],
@@ -679,6 +702,7 @@ def summary(door: Door) -> dict:
         "founder_cost": door.founder_cost,
         "stage_mismatch": door.stage_mismatch,
         "topic_mismatch": door.topic_mismatch,
+        "undersized": door.undersized,
         "poor_fit": poor_fit(door),
         "status_url": door.status_url,
     }

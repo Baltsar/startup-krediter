@@ -64,7 +64,7 @@
       },
       "next_step": "Read the call text on the status page, log in to Vinnova's e-service for applications (ansok.vinnova.se) with the company's account, fill in the form about the project, project parties and budget, and submit before 12 January 2027 at 14:00. The founder clicks submit.",
       "reference": "references/nordic-grants.md#vinnova-innovativa-startups",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-17",
       "availability": "open",
       "apply_requirements": [
         "Account in Vinnova's e-service (ansok.vinnova.se); the account holder, project leader and signatory all get the confirmation",
@@ -72,14 +72,17 @@
         "Name a signatory (firmatecknare) and a project leader for the company in the form",
         "Answer the three assessment criteria in the form: potential, feasibility (budget, commercialisation and financing plan, why Vinnova money is needed) and team (founders control the company, strategy for gender-balanced influence)",
         "Whole project budget in whole SEK; Vinnova funds up to 100 percent of the company's costs, at most 500 000 SEK",
-        "Mark the application complete (klarmarkera) before 12 January 2027 at 14:00; an unlocked application is not registered"
+        "Mark the application complete (klarmarkera) before 12 January 2027 at 14:00; an unlocked application is not registered",
+        "The project leader must be employed by the company; if the budget has salary costs, the company must be registered as an employer with Skatteverket, or show that registration has been applied for, by the decision",
+        "The company must not be insolvent, in liquidation or restructuring, owe significant debts to Kronofogden, or have used up half or more of its share capital",
+        "The company must not have taken over another company's business, bought a company or been formed by a merger"
       ],
       "unclear": [
         "Login method is not stated on any page read (BankID or username and password); 'Skapa nytt konto' points to minprofil.vinnova.se",
         "The threshold for the lottery stage ('i hög och likvärdig grad') is not published; ask startups@vinnova.se",
         "The state-aid basis per company age (start-up aid or de minimis) is only on a linked rules page"
       ],
-      "notes": "Round open on 2026-10-15. Page: 'Stänger den 12 januari 2027 kl 14:00'. Dates on the page: 12 okt. 2026 opens; info meetings 2 nov. 2026 kl 09:00 and 9 nov. 2026 kl 09:00; 12 jan. 2027 kl 14:00 last day; 23 mars 2027 decision and earliest project start; 30 mars 2027 latest project start; project at most nine months. Selection: complete applications are scored by three expert assessors, and among those judged to meet the criteria 'i hög och likvärdig grad' the grants are decided by lottery ('lottning, så kallad randomisering'), introduced from 2026. Company age is counted at the decision date 2027-03-23. One of net revenue or balance sheet may exceed 10 MSEK, but not both. Companies granted funding in Innovativa Startups 2025 may not apply. The whole group must be unlisted if the company belongs to a group. The page footer shows diarienummer 2025-04831; in Vinnova's open-data API 2016-04714 is the parent call 'Innovativa Startups' and 2025-04831 is this application round (open 2026-10-12, closes 2027-01-12T14:00, decision 2027-03-23). Three expert assessors score each application; among equally high-rated applications the grants are drawn by lot. Decision 23 March 2027; the project must start by 30 March 2027 and run at most nine months. No mandatory attachments are listed on the call page.",
+      "notes": "Round open on 2026-10-15. Page: 'Stänger den 12 januari 2027 kl 14:00'. Dates on the page: 12 okt. 2026 opens; info meetings 2 nov. 2026 kl 09:00 and 9 nov. 2026 kl 09:00; 12 jan. 2027 kl 14:00 last day; 23 mars 2027 decision and earliest project start; 30 mars 2027 latest project start; project at most nine months. Selection: complete applications are scored by three expert assessors, and among those judged to meet the criteria 'i hög och likvärdig grad' the grants are decided by lottery ('lottning, så kallad randomisering'), introduced from 2026. Company age is counted at the decision date 2027-03-23. One of net revenue or balance sheet may exceed 10 MSEK, but not both. Companies granted funding in Innovativa Startups 2025 may not apply. The whole group must be unlisted if the company belongs to a group. The page footer shows diarienummer 2025-04831; in Vinnova's open-data API 2016-04714 is the parent call 'Innovativa Startups' and 2025-04831 is this application round (open 2026-10-12, closes 2027-01-12T14:00, decision 2027-03-23). Three expert assessors score each application; among equally high-rated applications the grants are drawn by lot. Decision 23 March 2027; the project must start by 30 March 2027 and run at most nine months. No mandatory attachments are listed on the call page. The group rule covers only listing and size by turnover or balance sheet ('hela koncernen uppfylla kraven gällande börsnotering och storlek, se krav 3 och 4'); the cap of at most 10 employees, counted as full-time equivalents, applies to the applying company alone ('Sökande företag får ha högst 10 anställda'). Read 2026-10-17.",
       "founder_cost": "none"
     },
     {
@@ -609,7 +612,7 @@
         "money"
       ],
       "who": "Early-stage Swedish SMEs and established companies with an innovative business idea; in some cases private individuals with a Swedish personal identity number, a Swedish bank account and a clear intention to start a company in Sweden.",
-      "what": "Grant to buy external services that verify critical parts of an innovative business idea before the next step: customer needs and market potential, market and competitor analyses, novelty searches, technical and legal assessments. Normally no co-financing.",
+      "what": "Grant to buy external services that verify critical parts of an innovative business idea before the next step: customer needs and market potential, market and competitor analyses, novelty searches, technical and legal assessments, and building a simple MVP. Normally no co-financing.",
       "amount": {
         "text": "Companies in many cases up to 100 000 SEK; private individuals up to 25 000 SEK; amount set with the advisor and varies by region",
         "max": 100000,
@@ -635,20 +638,21 @@
       "status_url": "https://www.almi.se/lan-finansiering/verifieringsmedel/",
       "next_step": "Contact Almi and book a conversation with an advisor about the idea and what needs verifying; the advisor then gives you access to Almi's e-service, where the founder submits the application.",
       "reference": "references/nordic-grants.md#almi-verifieringsmedel",
-      "last_verified": "2026-10-16",
+      "last_verified": "2026-10-17",
       "availability": "open",
       "founder_cost": "none",
       "apply_requirements": [
         "You cannot apply directly: first a conversation with an Almi advisor, who then gives access to the e-service",
         "Without a company: Swedish personal identity number, an account with a Swedish bank, and a clear intention to start a company in Sweden",
-        "The money only buys external services that verify the idea; it may not pay for travel, representation, marketing, training, patent applications, or prototypes and investments that create lasting value",
+        "The money only buys external services that verify the idea, including a simple MVP; it may not pay for travel, representation, marketing, training, patent applications, or prototypes and investments that create lasting value",
         "The idea must be innovative; Almi assesses it, and the amount is set with the advisor and varies by region",
         "De minimis aid: a cap on public aid over a rolling three-year period, so earlier aid counts",
         "Work paid by the grant starts only after approval; handling usually takes up to a few weeks once the application is complete"
       ],
       "unclear": [
         "Whether your region pays the full 25 000 SEK to private individuals or 100 000 SEK to companies; 'the amount depends on the region'. Ask your regional Almi advisor",
-        "Whether founders' own work can be paid; the page lists external services only. Ask the advisor before you plan the budget"
+        "Whether founders' own work can be paid; the page lists external services only. Ask the advisor before you plan the budget",
+        "The page allows 'framtagning av en enkel MVP' but excludes 'prototyper'; where a simple MVP ends and a prototype begins is not defined. Ask the advisor before you budget for development"
       ],
       "notes": "Page 2026-10-16: 'Privatpersoner kan få upp till 25 000 kronor.' 'I många fall kan företag få upp till 100 000 kronor i stöd.' 'Verifieringsmedel används för att köpa externa tjänster.' Excluded: 'resor och resekostnader, representation, marknadsföring, utbildningar, patentansökningar, prototyper eller investeringar som skapar bestående värde.' Normally no co-financing. De minimis."
     },
@@ -1141,6 +1145,11 @@
           "value": "company"
         },
         {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "no_earlier_bf_startup_funding"
+        },
+        {
           "field": "employees",
           "op": "lt",
           "value": 50
@@ -1164,7 +1173,7 @@
       "status_url": "https://www.businessfinland.fi/en/services/funding/calls/2026/ongoing-sprint-grant-funding/",
       "next_step": "Register in My Business Finland, book a meeting with a Business Finland expert, and only after that meeting submit the Sprint application in the Funding e-service. The founder clicks submit.",
       "reference": "references/nordic-grants.md#business-finland-sprint",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-17",
       "availability": "open",
       "apply_requirements": [
         "Register with My Business Finland and fill in the company's background information before applying",
@@ -1182,7 +1191,7 @@
         "Decision timeline is not stated beyond 'continuously'",
         "Application language is not stated on the call page"
       ],
-      "notes": "Open on 2026-10-15: status 'Ongoing', 'Continuous call from September 1, 2026', page updated 21.8.2026, decisions made continuously. Aimed at companies under five years that have not previously received Business Finland funding; companies five years or older must show 'a significant change in direction in their business based on innovation', so age is not encoded as a hard rule. Operational, sales and marketing activities and production investments are excluded. The balance-sheet alternative to the 10 MEUR turnover limit and the 50 000 EUR equity requirement are not encoded (no matching schema fields). Tempo no longer appears on the Startup funding page; Sprint, R&D funding and the Deep Tech Accelerator are listed instead. Name a contact person and a responsible project leader employed by or holding a position in the company. A pitch deck is optional.",
+      "notes": "Open on 2026-10-15: status 'Ongoing', 'Continuous call from September 1, 2026', page updated 21.8.2026, decisions made continuously. Aimed at companies under five years that have not previously received Business Finland funding; companies five years or older must show 'a significant change in direction in their business based on innovation', so age is not encoded as a hard rule. Operational, sales and marketing activities and production investments are excluded. The balance-sheet alternative to the 10 MEUR turnover limit and the 50 000 EUR equity requirement are not encoded (no matching schema fields). Tempo no longer appears on the Startup funding page; Sprint, R&D funding and the Deep Tech Accelerator are listed instead. Name a contact person and a responsible project leader employed by or holding a position in the company. A pitch deck is optional. Obstacle on the call page: a company under five years old that has previously been granted Sprint, Tempo (or equivalent incubator funding such as ESA-BIC), R&D funding, Young Innovative Companies or Deep Tech Accelerator cannot get Sprint; at any age, earlier funding of these kinds for the same solution also blocks it. Read 2026-10-17.",
       "founder_cost": "none"
     },
     {

@@ -508,7 +508,7 @@ def test_top_limits_full_doors_and_lists_the_rest_under_more() -> None:
     out = run({"country": "SE", "legal_form": "company", "stack": ["anthropic"]}, top=1)
     assert [door["id"] for door in out["doors"]] == ["test-global-credit"]
     assert [door["id"] for door in out["more"]] == ["test-se-grant", "test-eu-compute"]
-    assert set(out["more"][0]) == {"id", "name", "kind", "status", "availability", "amount", "open_questions", "foreign", "founder_cost", "stage_mismatch", "topic_mismatch", "poor_fit", "status_url"}
+    assert set(out["more"][0]) == {"id", "name", "kind", "status", "availability", "amount", "open_questions", "foreign", "founder_cost", "stage_mismatch", "topic_mismatch", "undersized", "poor_fit", "status_url"}
     assert run({"country": "SE", "legal_form": "company", "stack": ["anthropic"]}, top=0)["more"] == []
 
 
@@ -634,3 +634,22 @@ def test_topic_call_stays_out_unless_the_sector_matches() -> None:
     assert [door["id"] for door in out["more"]] == ["marine"]
     out = match.run({"country": "SE", "legal_form": "company", "need": ["money"], "sector": ["ocean"]}, [marine, general], TODAY)
     assert "marine" in [door["id"] for door in out["doors"]]
+
+
+def test_door_paying_a_small_share_of_the_need_ranks_after_one_that_can_pay_it() -> None:
+    base = {"country": "SE", "kind": "grant", "need": ["money"], "eligibility": []}
+    group = dict(EU_COMPUTE, **base, id="group", amount={"text": "120 000 SEK", "max": 120000, "currency": "SEK"})
+    project = dict(EU_COMPUTE, **base, id="project", amount={"text": "up to 2 MSEK", "max": 2000000, "currency": "SEK"})
+    profile = {"country": "SE", "need_eur": 135000}
+    doors = [match.evaluate(group, profile, TODAY, "en"), match.evaluate(project, profile, TODAY, "en")]
+    assert [door.undersized for door in doors] == [True, False]
+    assert [door.id for door in match.rank(doors)] == ["project", "group"]
+
+
+def test_no_stated_need_or_no_maximum_is_never_undersized() -> None:
+    base = {"country": "SE", "kind": "grant", "need": ["money"], "eligibility": []}
+    small = dict(EU_COMPUTE, **base, id="small", amount={"text": "10 000 SEK", "max": 10000, "currency": "SEK"})
+    open_ended = dict(EU_COMPUTE, **base, id="open-ended", amount={"text": "19 % of R&D costs"})
+    assert not match.undersized(small, {"country": "SE"})
+    assert not match.undersized(open_ended, {"country": "SE", "need_eur": 1000000})
+    assert match.normalize_profile({"need_eur": "135 000"})[0]["need_eur"] == 135000.0
