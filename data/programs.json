@@ -5668,7 +5668,7 @@
       "who": "Startups from self-funded to pre-Series B, founded in the last 10 years, with an AWS account on a paid tier plan and either new to Activate Credits or asking for more than they received before.",
       "what": "Promotional AWS credits in two self-applied tiers: Activate Founders for bootstrapped or self-funded startups, and Activate Portfolio for startups that hold an Organization ID from an Activate Provider (accelerator, angel investor or VC firm). An invite-only AI tier sits above Portfolio.",
       "amount": {
-        "text": "Activate Founders (self-funded) up to 5 000 USD, starting at 1 000 USD; Activate Portfolio (pre-Series B, with an Activate Provider Org ID) up to 200 000 USD; AWS Credits for AI Startups 200 000 USD+ by invitation only",
+        "text": "Activate Founders (no provider Org ID) starts at 1 000 USD, up to 5 000 USD; Activate Portfolio (with an Activate Provider Org ID) up to 200 000 USD; AWS Credits for AI Startups 200 000 USD+ by invitation only",
         "max": 200000,
         "currency": "USD"
       },
@@ -5706,6 +5706,16 @@
           "field": "confirmed",
           "op": "contains",
           "value": "new_to_aws_activate"
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "aws_paid_plan"
+        },
+        {
+          "field": "has_website",
+          "op": "eq",
+          "value": true
         }
       ],
       "apply_url": "https://aws.amazon.com/startups/join?destination=/credits/apply",
@@ -5718,10 +5728,11 @@
         "AWS Builder ID verified by email and an Activate profile with a business email on your own domain",
         "AWS account on a paid account plan (free plans are not eligible), linked to the Builder ID with root or admin access",
         "A fully functioning company website; AWS evaluates public information from it",
-        "Portfolio tier: an Org ID or email invitation from your Activate Provider, and your latest funding round within the last 12 months",
+        "Portfolio tier: an Org ID or email invitation from your Activate Provider (an investor or accelerator in AWS's program)",
+        "Founders tier: any startup without a provider Org ID can apply, funded or not, up to and including Series A",
+        "Your latest funding round, if you have had one, within the last 12 months; AWS lists an older round among its rejection reasons",
         "Product, target market, traction, funding stage and date of the latest round in the form",
         "Identity verification with an ID document when AWS asks; declining means rejection",
-        "Founders tier is for bootstrapped or self-funded startups; the form asks for funding stage and date of the latest round, so an angel round is visible. With outside funding, ask your investors or accelerator whether they are an Activate Provider and use the Portfolio tier",
         "Portfolio tier: the provider must confirm your association by answering AWS Activate's verification email, or the application is declined",
         "Credits also pay for third-party models on Amazon Bedrock, Anthropic's Claude included; to use them for Claude you call it through Bedrock, not Anthropic's own API"
       ],

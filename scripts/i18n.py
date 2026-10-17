@@ -117,6 +117,13 @@ CONFIRMATIONS: dict[str, dict[str, tuple[str, str]]] = {
         "no": ("en løsning for å overvåke havmiljøet i Østersjøen", "Er løsningen deres laget for å overvåke havmiljøet i Østersjøen, slik utfordringen ber om?"),
         "da": ("en løsning til overvågning af Østersøens havmiljø", "Er jeres løsning til overvågning af Østersøens havmiljø, som udfordringen efterspørger?"),
     },
+    "aws_paid_plan": {
+        "en": ("AWS account on a paid plan (free plans are not eligible)", "Is your AWS account on a paid plan, or still on the free plan?"),
+        "sv": ("AWS-konto på en betald plan (gratisplaner godkänns inte)", "Ligger ert AWS-konto på en betald plan, eller fortfarande på gratisplanen?"),
+        "fi": ("AWS-tili maksullisella sopimuksella (ilmaiset eivät kelpaa)", "Onko AWS-tilinne maksullisella sopimuksella vai vielä ilmaisella?"),
+        "no": ("AWS-konto på en betalt plan (gratisplaner godkjennes ikke)", "Er AWS-kontoen deres på en betalt plan, eller fortsatt på gratisplanen?"),
+        "da": ("AWS-konto på en betalt plan (gratisplaner godkendes ikke)", "Er jeres AWS-konto på en betalt plan, eller stadig på gratisplanen?"),
+    },
     "new_to_aws_activate": {
         "en": ("new to AWS Activate credits, or asking for more than you received before", "Has the company received AWS Activate credits before, and if so, how much?"),
         "sv": ("ny i AWS Activate, eller ber om mer än ni fått tidigare", "Har bolaget fått AWS Activate-krediter tidigare, och i så fall hur mycket?"),
