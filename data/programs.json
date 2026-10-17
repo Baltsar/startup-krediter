@@ -82,6 +82,312 @@
         "The threshold for the lottery stage ('i hög och likvärdig grad') is not published; ask startups@vinnova.se",
         "The state-aid basis per company age (start-up aid or de minimis) is only on a linked rules page"
       ],
+      "application": {
+        "portal": "https://ansok.vinnova.se/utlysning/0382e83b-4c96-404d-bed1-08deab387617?opencall=true&lang=sv",
+        "login": "Vinnova account (Skapa nytt konto / Logga in at etjanster.vinnova.se, portal.vinnova.se redirects there) with password plus two-step verification by a contact method such as a mobile phone number ('säkerhetsinformation'), per Vinnova's notice of 22 Nov 2023. No BankID is mentioned on any page read.",
+        "languages": [
+          "sv",
+          "en"
+        ],
+        "sections": [
+          {
+            "title": "Projektinformation: AI-stöd i ansökan (information)",
+            "asks": "Information only: AI tools and outside expertise are allowed; the applicant is always responsible that the content is correct, relevant and matches the actual project.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Projektinformation: Är ansökan en fortsättning på tidigare projekt, ange diarienummer",
+            "asks": "Diarienummer of an earlier Vinnova project if this continues it (optional).",
+            "limit": "diarienummer format"
+          },
+          {
+            "title": "Projektinformation: Söker ni även bidrag för detta projekt (helt eller delvis) i någon annan utlysning hos Vinnova eller hos någon annan finansiär?",
+            "asks": "Ja/Nej; on Ja, describe what kind of grant you seek for this project besides this application and from which funder.",
+            "limit": "Ja/Nej; follow-up 500 characters (maxLength in the published form definition)"
+          },
+          {
+            "title": "Projektinformation: Har ni fått hjälp från någon inkubator, innovationskontor, science park eller hubb för att utveckla ert företag? I så fall vilken?",
+            "asks": "Whether and from which incubator, innovation office, science park or hub the company has had help.",
+            "limit": "1 000 characters (maxLength in the published form definition)"
+          },
+          {
+            "title": "Projektinformation: Har ni beviljats bidrag i någon utlysning hos en forskningsfinansiär tidigare? I så fall vilken?",
+            "asks": "Earlier grants from any research funder, and which.",
+            "limit": "1 000 characters (maxLength in the published form definition)"
+          },
+          {
+            "title": "Projektinformation: Projekttitel på svenska / Projekttitel på engelska",
+            "asks": "Project title in Swedish and in English; it will be published and must not contain confidential information.",
+            "limit": "200 characters (maxLength in the published form definition) each"
+          },
+          {
+            "title": "Projektinformation: Projekttid",
+            "asks": "Start and end date. The form definition sets earliestDateAllowed 2027-03-22T23:00Z and latestDateAllowed 2027-03-29T22:00Z, matching the call's start window of 23-30 March 2027; the call allows at most nine months. The dates create the year columns in the budget.",
+            "limit": "date interval"
+          },
+          {
+            "title": "Projektinformation: Projektsammanfattning",
+            "asks": "Project summary written in Swedish, plus an English version (the form offers to generate an English translation).",
+            "limit": "1 500 characters (maxLength in the published form definition) per language"
+          },
+          {
+            "title": "Projektinformation: Mål för projektet",
+            "asks": "What the project will achieve.",
+            "limit": "150 characters (maxLength in the published form definition)"
+          },
+          {
+            "title": "Projektinformation: Finns det köns- och/eller genusperspektiv?",
+            "asks": "Ja/Nej on whether sex or gender perspectives are relevant to the problem, solution or effects (not the team's gender composition), then a motivation.",
+            "limit": "Ja/Nej; Motivera ditt svar 1 500 characters (maxLength in the published form definition)"
+          },
+          {
+            "title": "Projektinformation: Sekretess - Finns det uppgifter om affärs- och driftsförhållanden som skulle kunna leda till skada om de offentliggörs?",
+            "asks": "Ja/Nej flag that helps Vinnova's confidentiality review; the application becomes a public document.",
+            "limit": "Ja/Nej"
+          },
+          {
+            "title": "Klassificering",
+            "asks": "The applicant classifies the project by need area, product area and research area; mandatory but not part of the assessment.",
+            "limit": "picklists"
+          },
+          {
+            "title": "Koordinator, projektparter och finansiärer: Projektparter",
+            "asks": "Look up the applying company as coordinating project party (organisation data comes from Dun & Bradstreet); the budget is entered in a later step.",
+            "limit": "organisation lookup"
+          },
+          {
+            "title": "Potential: Problemet - Beskriv vilket problem ni löser, för vem och varför det är viktigt.",
+            "asks": "The problem, who has it and why it matters.",
+            "limit": "2 000 characters (maxLength in the published form definition)"
+          },
+          {
+            "title": "Potential: Lösningen - Beskriv er lösning och varför den är relevant för problemet.",
+            "asks": "The solution and why it fits the problem.",
+            "limit": "2 000 characters (maxLength in the published form definition)"
+          },
+          {
+            "title": "Potential: Behov och nytta - Vilken nytta och vilket värde får kunden och användarna av er lösning?",
+            "asks": "Value for customers and users.",
+            "limit": "2 000 characters (maxLength in the published form definition)"
+          },
+          {
+            "title": "Potential: Konkurrenskraften - Beskriv fördelarna med er lösning och hur ni skiljer er från befintliga alternativ. Beskriv även hur ni planerar att bygga och behålla ett långsiktigt försprång mot konkurrenter.",
+            "asks": "Advantages over existing alternatives and how a long-term lead is built and kept.",
+            "limit": "2 000 characters (maxLength in the published form definition)"
+          },
+          {
+            "title": "Potential: Affärsmodellen - Beskriv hur ni tänker att företaget ska tjäna pengar och nå sin marknad.",
+            "asks": "How the company makes money and reaches its market.",
+            "limit": "2 000 characters (maxLength in the published form definition)"
+          },
+          {
+            "title": "Potential: Lagar, regler och upphandling - Om det finns regelverk som kan påverka er affärsmodell, beskriv hur ni tänker anpassa er affärsmodell till dessa eventuella regelverk?",
+            "asks": "Laws, regulations, permits, requirements or security classification that affect the business model, and how you adapt.",
+            "limit": "2 000 characters (maxLength in the published form definition)"
+          },
+          {
+            "title": "Genomförande: Arbetspaket (repeat per work package, at least one)",
+            "asks": "Per work package: Namn på arbetspaketet (40), Tidsperiod (start no earlier than 2027-03-23), Syfte och mål (1 000), Aktiviteter (2 000), Vilka ska göra jobbet? people and partners with roles (no limit), Lönekostnad per anställd: name, hours and hourly wage for each employee (optional, no limit), Konsultkostnader: external consultants with hours and cost and why they are needed (optional, 1 000), Övriga kostnader with motivation (optional, 1 000), Totalkostnad för detta arbetspaket (number).",
+            "limit": "per-field limits as listed, in characters"
+          },
+          {
+            "title": "Genomförande: Implementering och uppföljning - Beskriv hur ni tänker följa upp och utvärdera arbetet för att säkerställa att projektet leder till önskat resultat.",
+            "asks": "How the work is followed up and evaluated.",
+            "limit": "2 000 characters (maxLength in the published form definition)"
+          },
+          {
+            "title": "Genomförande: Kommersialiseringsplan - Hur tänker ni ta er lösning vidare efter projektets slut? Hur ska ni kunna växa och nå ut till fler kunder/användare?",
+            "asks": "How the solution goes further after the project and reaches more customers.",
+            "limit": "2 000 characters (maxLength in the published form definition)"
+          },
+          {
+            "title": "Genomförande: Informations- och cybersäkerhet - Beskriv hur ni skyddar information och data som har värde för företaget.",
+            "asks": "How valuable information and data are protected.",
+            "limit": "none stated in the form definition"
+          },
+          {
+            "title": "Genomförande: Finansieringsplan - Varför behöver ni Vinnovas bidrag för att genomföra projektet? Förklara vad Vinnovas bidrag möjliggör. Redogör också för vilka andra finansieringsmöjligheter ni undersökt.",
+            "asks": "Why Vinnova money is needed, what it enables, and which other financing you explored.",
+            "limit": "2 000 characters (maxLength in the published form definition)"
+          },
+          {
+            "title": "Team: Kompetens och engagemang - Beskriv teamets erfarenhet och kompetens. Hur ser ni till att alla är engagerade i projektet?",
+            "asks": "Team experience and competence, and how engagement is secured.",
+            "limit": "2 000 characters (maxLength in the published form definition)"
+          },
+          {
+            "title": "Team: Kompetensförsörjning - Hur arbetar ni för att säkerställa att rätt personer är med i teamet, nu och framöver? Beskriv eventuella kompetensbrister ni ser och hur ni planerar att hantera dessa.",
+            "asks": "How the right people are secured now and later, competence gaps and how to close them.",
+            "limit": "2 000 characters (maxLength in the published form definition)"
+          },
+          {
+            "title": "Team: Nätverk - Vilka externa resurser, experter och nätverk har ni tillgång till, och hur bidrar dessa till projektets utveckling och genomförande?",
+            "asks": "External resources, experts and networks and how they contribute.",
+            "limit": "2 000 characters (maxLength in the published form definition)"
+          },
+          {
+            "title": "Team: Ägarskap - På vilket sätt är grundarna drivande i företagets utveckling? Beskriv deras roll, engagemang och vilka beslut eller insatser de ansvarar för.",
+            "asks": "How the founders drive the company: roles, commitment and decisions they own.",
+            "limit": "2 000 characters (maxLength in the published form definition)"
+          },
+          {
+            "title": "Team: Projektteam (repeat per person, at least one)",
+            "asks": "Namn (40), Ålder, Kön (Kvinna/Man/Annat), Titel och organisation (40), role and tasks in the project (1 000), education, competence and experience crucial for the project (1 000).",
+            "limit": "per-field limits as listed, in characters"
+          },
+          {
+            "title": "Team: Styrelse (repeat per board member, at least one)",
+            "asks": "Namn (40), Ålder, Kön, Titel och organisation (40), what knowledge, experience and network the person brings to the board (1 000), how much time and engagement the person is expected to give the board (no limit).",
+            "limit": "per-field limits as listed, in characters"
+          },
+          {
+            "title": "Om företaget: Ägare (repeat; ownership under 10 % need not be listed)",
+            "asks": "All owners (persons and/or companies): Namn, Kön (or 'Inte aktuellt - ägaren är ett aktiebolag'), Personnummer/Organisationsnummer (11), Ägarandel i procent.",
+            "limit": "per-field limits as listed"
+          },
+          {
+            "title": "Om företaget: Äger sökande företag något annat företag? / Äger företagets ägare andra företag?",
+            "asks": "Ja/Nej each; on Ja, list company name, organisationsnummer and share (and for owners, which owner).",
+            "limit": "Ja/Nej; repeat rows"
+          },
+          {
+            "title": "Om företaget: Ekonomiska uppgifter för 2025 - Nettoomsättning and Balansomslutning",
+            "asks": "Net revenue and balance sheet total in SEK for fiscal year 2025, estimated from interim balance and income reports if the 2025 accounts are not closed; group companies are counted in proportion to ownership (see the EU SME definition user guide from page 15).",
+            "limit": "amounts in SEK"
+          },
+          {
+            "title": "Om företaget: Börsnotering / Vinstutdelning / Självständig företagsstart",
+            "asks": "Ja/Nej: listed (whole group), profit distributed in the last fiscal year, taken over another company's business or formed by merger.",
+            "limit": "Ja/Nej"
+          },
+          {
+            "title": "Om företaget: Antal anställda",
+            "asks": "Number of employees as annual work units (årsarbetskrafter); if in a group, all of the group's employees.",
+            "limit": "number"
+          },
+          {
+            "title": "Budget",
+            "asks": "Per project party: eligible budgeted costs by cost type and year, and funding by year (Vinnova grant sought plus any other funding); own financing is calculated automatically; total computed at the bottom.",
+            "limit": "whole SEK; sought grant capped at 500 000 (maxSoktBidrag in the form)"
+          },
+          {
+            "title": "Kontaktuppgifter: Projektledare",
+            "asks": "The project leader appointed by the company: first and last name, e-mail, phone and sex; 'Hämta mina uppgifter' fills it from the logged-in account.",
+            "limit": "exactly one person"
+          },
+          {
+            "title": "Kontaktuppgifter: Firmatecknare",
+            "asks": "The company's authorised signatory: first and last name and e-mail.",
+            "limit": "exactly one person"
+          },
+          {
+            "title": "Intygande om ansökans riktighet",
+            "asks": "Checkbox that all information is correct, complete and factual, after a text on good research practice, no plagiarism or fabrication, and the Subsidy Offences Act (Subventionsbrottslagen 2025:1267).",
+            "limit": "checkbox, required"
+          },
+          {
+            "title": "Intygande inför inskickande av ansökan",
+            "asks": "Checkbox confirming that Vinnova is not responsible for applications that cannot be submitted in time because of technical problems, and that applications not received by 12 January 2027 at 14.00 will not be assessed.",
+            "limit": "checkbox, required"
+          }
+        ],
+        "criteria": [
+          {
+            "name": "Potential",
+            "weight": "not stated",
+            "scale": "not stated; assessors sort applications into avslag (criteria met to a low degree), beviljande (very high degree) and randomisering (high and equal degree, decided by lottery)",
+            "what_scores_high": "Sub-questions: how the solution is more innovative and better solves a problem or societal challenge than existing solutions; how the business idea can create growth in Sweden; its potential on an international market; how the company's unique and protectable knowledge assets give a competitive advantage."
+          },
+          {
+            "name": "Genomförbarhet",
+            "weight": "not stated",
+            "scale": "not stated; same three-group outcome as above",
+            "what_scores_high": "Sub-questions: budget, plan and approach are relevant and realistic for the project's goals; a credible plan for commercialisation and financing after the project; the need for Vinnova funding is well motivated against the company's current financial situation; how well the need for consultants and licences is motivated."
+          },
+          {
+            "name": "Team",
+            "weight": "not stated",
+            "scale": "not stated; same three-group outcome as above",
+            "what_scores_high": "Sub-questions: the company has the knowledge, competence, experience and entrepreneurial ability to run the project; the founders control the company and drive its development themselves; the project team is composed for the project's needs and has a strategy for gender-equal distribution of power and influence between women and men."
+          }
+        ],
+        "budget": {
+          "template": "entered in the form (Budget step in the e-service; no separate template)",
+          "funding_rate": "Up to 100 percent of the company's project costs, at most 500 000 SEK; companies under 5 years old under GBER article 22, companies 5-10 years old as de minimis (max 300 000 EUR over three years from all funders)",
+          "categories": [
+            "Lönekostnader",
+            "Utrustning, mark och byggnader",
+            "Konsult- och licenskostnader",
+            "Övriga direkta kostnader",
+            "Indirekta kostnader (overhead)"
+          ],
+          "rules": [
+            "Amounts in whole kronor (SEK), e.g. ten thousand is entered as 10 000",
+            "Costs per cost type and per year; the year columns come from the start and end date entered in step 1, and the coordinator must be chosen before the budget can be filled in",
+            "Indirect costs at most 30 percent of salary costs",
+            "Salary costs: paid gross salary, employer contributions and other salary overheads; must be actual and booked, not estimated, so a founder who takes no salary cannot claim estimated salary",
+            "Timkostnad = salary including overheads divided by working time; time must be recorded (tidredovisning) and shown on request",
+            "An unmotivated salary increase before or during the project is not eligible",
+            "All consultant and licence costs must be motivated in the application, and the motivations count in the assessment",
+            "Consultants and licences must be bought from outside parties on market terms; companies in the same group, with the same owners, or owned by a board member, CEO or employee (or their relatives) are not outside parties",
+            "Patent costs mean buying patents or licences, not applying for patents",
+            "Costs before or after the project period in the decision are not eligible",
+            "Costs must be actual, reasonable and necessary, booked on a separate project code, and only the company's own costs",
+            "Equipment counts only for the share and time it is used in the project (depreciation); ordinary premises only through overhead",
+            "VAT is eligible only if the company cannot deduct input VAT for the project",
+            "If the budget has salary costs, the company must be registered as an employer with Skatteverket by the decision, or show it has applied"
+          ]
+        },
+        "declarations": [
+          "Intygande om ansökans riktighet: 'Jag intygar att alla uppgifter som lämnas i denna ansökan är korrekta, fullständiga och sakliga.' (required checkbox)",
+          "Intygande inför inskickande av ansökan: 'Jag intygar att jag tagit del av informationen ovan.' about late or technically failed submissions and the 12 January 2027 14.00 deadline (required checkbox)",
+          "Ja/Nej answers on listing, profit distribution, takeover or merger, and other funding sought for the project",
+          "De minimis certificate is requested by Vinnova later, only from companies aged 5-10 years that become candidates for funding"
+        ],
+        "submit_action": "Klarmarkera ansökan (button in the e-service; 'Visa vad som saknas' lists missing mandatory fields first). The application is registered when the call closes; an application unlocked after klarmarkering must be klarmarkerad again or it is not registered.",
+        "draft_save": "Yes: you can start filling in and continue later, and unlock and edit until the deadline. One more person can be given editing rights and further people read access via the Dela button. The application can be downloaded as PDF. Retention of unsubmitted drafts is not stated.",
+        "form_readable_without_login": true,
+        "sources": [
+          {
+            "url": "https://www.vinnova.se/e/innovativa-startups/innovativa-startups-2026",
+            "what": "call page (criteria, costs, formal requirements, klarmarkera)"
+          },
+          {
+            "url": "https://www.vinnova.se/sok-finansiering/sa-har-fyller-du-i-ansokan/",
+            "what": "guide 'Så här fyller du i ansökan' (steps, budget in whole SEK, Klarmarkera ansökan, Dela)"
+          },
+          {
+            "url": "https://api.vinnova.se/ansok/ansokningsomgang/2025-04831/publication",
+            "what": "form JSON: the published form definition for Innovativa Startups 2026, readable without login (endpoint used by ansok.vinnova.se; id is the round's diarienummer)"
+          },
+          {
+            "url": "https://www.vinnova.se/globalassets/huvudsajt/sok-finansiering/regler-och-villkor/dokument/svenska/anvisning-till-villkor_om_stodberattigande_kostnader-2026.pdf",
+            "what": "guidelines PDF: Anvisning till villkor om stödberättigande kostnader 2026"
+          },
+          {
+            "url": "https://www.vinnova.se/sok-finansiering/regler-for-finansiering/riktlinjer-kring-anvandning-av-ai-verktyg/",
+            "what": "AI guidelines: AI tools allowed in applications, applicant responsible (updated 7 Sep 2026)"
+          },
+          {
+            "url": "https://www.vinnova.se/sok-finansiering/sa-gar-det-till-att-soka-finansiering-och-driva-projekt",
+            "what": "process page (confidentiality, AI tools, assessment)"
+          },
+          {
+            "url": "https://www.vinnova.se/sok-finansiering/hitta-finansiering/tvastegsverifiering-infors-for-att-oka-sakerheten-i-vara-e-tjanster",
+            "what": "login: password plus two-step verification (2023 notice)"
+          }
+        ],
+        "unclear": [
+          "Weight and numeric scale of the three criteria, and the threshold between 'mycket hög grad' (granted directly) and 'hög och likvärdig grad' (lottery), are not published",
+          "The exact cost-type rows inside the Budget component are not in the form definition; the five types listed are from the call page and the 2026 cost instruction",
+          "The form JSON has no maxLength on 'Informations- och cybersäkerhet', 'Vilka ska göra jobbet?' and 'Lönekostnad per anställd'; the UI may still enforce a limit",
+          "Whether limits count characters with or without spaces is not stated",
+          "The login notice is from November 2023; whether BankID or other e-ID is now offered is not stated on any page read",
+          "How long an unsubmitted draft is kept is not stated",
+          "The form's Ekonomiska uppgifter header says 2025; for a company whose first fiscal year is not closed it says to estimate from interim reports"
+        ],
+        "verified": "2026-10-17"
+      },
       "notes": "Round open on 2026-10-15. Page: 'Stänger den 12 januari 2027 kl 14:00'. Dates on the page: 12 okt. 2026 opens; info meetings 2 nov. 2026 kl 09:00 and 9 nov. 2026 kl 09:00; 12 jan. 2027 kl 14:00 last day; 23 mars 2027 decision and earliest project start; 30 mars 2027 latest project start; project at most nine months. Selection: complete applications are scored by three expert assessors, and among those judged to meet the criteria 'i hög och likvärdig grad' the grants are decided by lottery ('lottning, så kallad randomisering'), introduced from 2026. Company age is counted at the decision date 2027-03-23. One of net revenue or balance sheet may exceed 10 MSEK, but not both. Companies granted funding in Innovativa Startups 2025 may not apply. The whole group must be unlisted if the company belongs to a group. The page footer shows diarienummer 2025-04831; in Vinnova's open-data API 2016-04714 is the parent call 'Innovativa Startups' and 2025-04831 is this application round (open 2026-10-12, closes 2027-01-12T14:00, decision 2027-03-23). Three expert assessors score each application; among equally high-rated applications the grants are drawn by lot. Decision 23 March 2027; the project must start by 30 March 2027 and run at most nine months. No mandatory attachments are listed on the call page. The group rule covers only listing and size by turnover or balance sheet ('hela koncernen uppfylla kraven gällande börsnotering och storlek, se krav 3 och 4'); the cap of at most 10 employees, counted as full-time equivalents, applies to the applying company alone ('Sökande företag får ha högst 10 anställda'). Read 2026-10-17.",
       "founder_cost": "none"
     },
@@ -654,6 +960,102 @@
         "Whether founders' own work can be paid; the page lists external services only. Ask the advisor before you plan the budget",
         "The page allows 'framtagning av en enkel MVP' but excludes 'prototyper'; where a simple MVP ends and a prototype begins is not defined. Ask the advisor before you budget for development"
       ],
+      "application": {
+        "portal": "https://etjanster.almi.se",
+        "login": "E-legitimation such as BankID or Mobilt BankID, per the e-service login page; the KYC service 'Kundkännedom Finansiering' (used for 'Ansökan om Lån/Verifieringsmedel') redirects to Signicat BankID login",
+        "languages": [
+          "sv"
+        ],
+        "sections": [
+          {
+            "title": "Affärsidé och affärsmodell",
+            "asks": "A short description of the idea and the business model.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Vad som ska verifieras och varför",
+            "asks": "What you want to verify and why.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Genomförande av verifieringen",
+            "asks": "How the verification will be carried out, using external services.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Budget och tidsplan",
+            "asks": "A simple budget and timeline.",
+            "limit": "none stated"
+          }
+        ],
+        "criteria": [
+          {
+            "name": "Utvecklingspotential",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "Almi assesses whether the business has development potential, or whether the idea is interesting but expected to take longer to reach growth; the idea must be innovative and in a development phase that needs verifying."
+          }
+        ],
+        "budget": {
+          "template": "none published; 'en enkel budget och tidsplan', set in dialogue with the advisor",
+          "funding_rate": "Grant, normally no co-financing; companies in many cases up to 100 000 SEK, private individuals up to 25 000 SEK; amount varies by region and is decided with the advisor",
+          "categories": [
+            "External services: verification of customer need and market potential",
+            "market and competitor analyses",
+            "novelty searches or freedom-to-operate analyses",
+            "a simple MVP",
+            "legal or regulatory investigations"
+          ],
+          "rules": [
+            "Only for buying external services that verify critical parts of the idea",
+            "Not eligible: travel, representation, marketing, training, patent applications, prototypes or investments that create lasting value",
+            "Verification work starts after the grant is approved",
+            "De minimis (försumbart stöd): at most 300 000 EUR in total over a rolling period of 'innevarande år samt de tre föregående åren', counted for the whole group, gross, from the date the right to aid arises"
+          ]
+        },
+        "attachments": [
+          {
+            "name": "Kundkännedomsformulär ('Kundkännedom Finansiering', used for 'Ansökan om Lån/Verifieringsmedel')",
+            "required": true,
+            "template": "https://www.almi.se/globalassets/kontaktcenter/kundkannedom.pdf (paper version only for those without BankID)",
+            "limit": "none stated"
+          }
+        ],
+        "declarations": [
+          "Earlier de minimis aid over the rolling period (the advisor goes through earlier aid)",
+          "Private individuals: Swedish personnummer, an account in a Swedish bank and a clear intention to start a company in Sweden",
+          "Kundkännedom (KYC) answers on beneficial owners and PEP status"
+        ],
+        "submit_action": "Not stated for Verifieringsmedel; Almi's e-services end with a sign-and-submit step with e-legitimation (as in the loan application's 'Signera och skicka in')",
+        "draft_save": "Yes: 'Du kan när som helst avsluta en påbörjad e-tjänst och fortsätta vid senare tillfälle förutsatt att du är inloggad'; saved and submitted e-services are stored under 'Mina sidor'. How long a draft is kept is not stated.",
+        "form_readable_without_login": false,
+        "sources": [
+          {
+            "url": "https://www.almi.se/lan-finansiering/verifieringsmedel/",
+            "what": "program page: who, use, exclusions, de minimis, documents, process"
+          },
+          {
+            "url": "https://etjanster.almi.se/oversikt",
+            "what": "public list of Almi e-services (no Verifieringsmedel application listed)"
+          },
+          {
+            "url": "https://www.almi.se/kontaktcenter/kundkannedom/",
+            "what": "KYC page: 'Lån eller verifieringsmedel'"
+          },
+          {
+            "url": "https://etjanster.almi.se/om",
+            "what": "e-service: drafts saved under Mina sidor"
+          }
+        ],
+        "unclear": [
+          "Where to apply: Almi's e-service (etjanster.almi.se); the application is opened by an Almi advisor after a first conversation, and no Verifieringsmedel application is listed among the public e-services",
+          "The application form is only opened by an advisor; its questions, limits and submit button are not published",
+          "The four content items are what the page says the documentation usually contains, not confirmed form sections",
+          "How a private individual without a company fills in the company parts of the form is not stated",
+          "Exact regional amount and whether the founders' own work can be paid are not stated"
+        ],
+        "verified": "2026-10-17"
+      },
       "notes": "Page 2026-10-16: 'Privatpersoner kan få upp till 25 000 kronor.' 'I många fall kan företag få upp till 100 000 kronor i stöd.' 'Verifieringsmedel används för att köpa externa tjänster.' Excluded: 'resor och resekostnader, representation, marknadsföring, utbildningar, patentansökningar, prototyper eller investeringar som skapar bestående värde.' Normally no co-financing. De minimis."
     },
     {
@@ -926,6 +1328,200 @@
         "Interest rate is not published; set individually and may be somewhat higher than Almi's other loans",
         "Regional handling is only visible in the contact form, which asks for region and municipality"
       ],
+      "application": {
+        "portal": "https://etjanster.almi.se/oversikt/flow/1006",
+        "login": "E-legitimation: BankID, Mobilt BankID or e-legitimation from Telia ('Vi kan tyvärr inte ta emot en ansökan utan e-legitimation'); the e-service login page offers only 'Logga in med e-legitimation' (Signicat). A paper KYC form exists only for people without BankID.",
+        "languages": [
+          "sv"
+        ],
+        "sections": [
+          {
+            "title": "Step 1: Ansökan lån",
+            "asks": "Step name in the e-service overview; the pages say the application asks how large the capital need is and which amount you seek, and what the loan will be used for (field-to-step mapping not shown without login).",
+            "limit": "none stated"
+          },
+          {
+            "title": "Step 2: Verksamhet",
+            "asks": "Step name; for applicants without an earlier Almi loan the pages say you describe what the company does and its business model, the market and customers, and who is behind the company and the team's experience (mapping to this step not shown without login).",
+            "limit": "none stated"
+          },
+          {
+            "title": "Step 3: Ekonomi",
+            "asks": "Step name; the pages say you state how the investment will be financed (bank, own capital or other) and attach financial documentation (mapping not shown without login).",
+            "limit": "none stated"
+          },
+          {
+            "title": "Step 4: Företagsuppgifter",
+            "asks": "Step name; the pages say you give basic company information and the company's owners and representatives; a five-digit SNI code is asked in the application or KYC (mapping not shown without login).",
+            "limit": "one SNI code"
+          },
+          {
+            "title": "Innovation questions (step not stated)",
+            "asks": "If the loan concerns something not yet on the market: which customer need the idea solves, how the need was identified, which customers or target groups, how the problem is solved today, what makes the idea new or unique, and who is behind it.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Existing Almi customers (step not stated)",
+            "asks": "If you already have an Almi loan: what has happened in the company since the last contact.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Affärsplan (optional attachment)",
+            "asks": "A business plan may be attached if you have one; it is voluntary.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Step 5: Förhandsgranska",
+            "asks": "Preview of the whole application before signing.",
+            "limit": "none"
+          },
+          {
+            "title": "Step 6: Signera och skicka in",
+            "asks": "Sign with e-legitimation and submit.",
+            "limit": "none"
+          }
+        ],
+        "criteria": [
+          {
+            "name": "Credit assessment: repayment ability and future potential",
+            "weight": "not stated",
+            "scale": "not stated (loan decision)",
+            "what_scores_high": "There must be a reasonable probability that the company can repay, and the loan must match both the need and the repayment ability; potential, market and goals are weighed in, not only figures."
+          },
+          {
+            "name": "Innovation project fit",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "An innovative idea with potential to create growth and competitiveness, a clear development step (prototype, tests, verification, production preparation) and a commercially promising investment."
+          }
+        ],
+        "budget": {
+          "template": "none provided; budget attached as a document (mandatory)",
+          "funding_rate": "Loan of 50 000 to 500 000 SEK covering at most 50 percent of the estimated project cost ('Almi kan finansiera upp till 50 procent av den beräknade projektkostnaden')",
+          "rules": [
+            "Co-financing is required",
+            "For loans above 300 000 SEK at least half of the co-financing must be capital (own capital, bank or other external financier)",
+            "For lower amounts part of the co-financing may in some cases be own work in the project",
+            "Typical loan around 300 000 SEK; amount set after an overall assessment of need, risk and repayment ability",
+            "Use: prototype development, tests, verification of technology or business model, production preparation or other development efforts",
+            "Common documents: description of the innovation and what is new, development plan and timeline, budget and financing plan, market and business model, prototypes or test results if any"
+          ]
+        },
+        "attachments": [
+          {
+            "name": "Budget",
+            "required": true,
+            "template": "none (no Almi template found)",
+            "limit": "none stated"
+          },
+          {
+            "name": "Budget for the current and the coming fiscal year (company being formed or newly started)",
+            "required": true,
+            "template": "none",
+            "limit": "none stated"
+          },
+          {
+            "name": "Senaste bokslut (latest annual accounts, even if not audited), if the company has one",
+            "required": true,
+            "template": "none",
+            "limit": "none stated"
+          },
+          {
+            "name": "Aktuella delårssiffror (current interim figures); if the annual accounts are older than four months, income statement and balance sheet for the current year",
+            "required": true,
+            "template": "none",
+            "limit": "none stated"
+          },
+          {
+            "name": "Comparison figures for the same period the previous year",
+            "required": false,
+            "template": "none",
+            "limit": "none stated"
+          },
+          {
+            "name": "Likviditetsprognos (cash-flow forecast)",
+            "required": false,
+            "template": "none",
+            "limit": "none stated"
+          },
+          {
+            "name": "Affärsplan",
+            "required": false,
+            "template": "none",
+            "limit": "none stated"
+          },
+          {
+            "name": "Kundkännedomsformulär (separate e-service: 'Kundkännedom Finansiering', or 'Förenklad kundkännedom för dig som ska starta företag' before an organisationsnummer exists)",
+            "required": true,
+            "template": "https://www.almi.se/globalassets/kontaktcenter/kundkannedom.pdf (paper version only for those without BankID)",
+            "limit": "none stated"
+          }
+        ],
+        "declarations": [
+          "Kundkännedom (KYC) form, required for a complete application under the Swedish anti-money-laundering act (2017:630): beneficial owners (verklig huvudman), PEP/RCA status, the right to represent the company, foreign payments and how the business is financed; the founder answers and signs it",
+          "Credit check (kreditupplysning) on the applicant and the company's representatives; stated as part of the process, not as a tick box on any page read",
+          "Signing the application with e-legitimation in the final step 'Signera och skicka in'",
+          "Security is agreed later with the advisor: often a floating charge (företagsinteckning) plus a limited personal guarantee"
+        ],
+        "submit_action": "Signera och skicka in (last step of the e-service, signed with e-legitimation). The application is not binding and the amount can be adjusted later.",
+        "draft_save": "Yes: 'Du kan när som helst avsluta en påbörjad e-tjänst och fortsätta vid senare tillfälle förutsatt att du är inloggad'; saved and submitted e-services are stored under 'Mina sidor'. How long a draft is kept is not stated.",
+        "form_readable_without_login": false,
+        "sources": [
+          {
+            "url": "https://www.almi.se/lan-finansiering/innovationslan/",
+            "what": "program page: amount, co-financing, documents, FAQ"
+          },
+          {
+            "url": "https://www.almi.se/lan-finansiering/forbered-detta/",
+            "what": "guide: what the loan application asks, budget mandatory"
+          },
+          {
+            "url": "https://www.almi.se/lan-finansiering/sa-fungerar-almis-lan/",
+            "what": "guide: questions, mandatory financial documentation, innovation questions, KYC"
+          },
+          {
+            "url": "https://www.almi.se/lan-finansiering/vanliga-fragor-om-lan/",
+            "what": "FAQ: e-legitimation required, documents with and without annual accounts, credit assessment"
+          },
+          {
+            "url": "https://www.almi.se/lan-finansiering/sa-fungerar-laneprocessen/",
+            "what": "process after submission"
+          },
+          {
+            "url": "https://etjanster.almi.se/oversikt/overview/345",
+            "what": "e-service overview '4. Låneansökan': steps, requires login"
+          },
+          {
+            "url": "https://etjanster.almi.se/oversikt/overview/431",
+            "what": "e-service overview: simplified KYC for a company being formed"
+          },
+          {
+            "url": "https://etjanster.almi.se/om",
+            "what": "e-service: drafts saved under Mina sidor"
+          },
+          {
+            "url": "https://www.almi.se/kontaktcenter/kundkannedom/",
+            "what": "KYC page and document FAQ"
+          },
+          {
+            "url": "https://www.almi.se/globalassets/kontaktcenter/kundkannedom.pdf",
+            "what": "paper KYC form (for applicants without BankID)"
+          },
+          {
+            "url": "https://www.almi.se/en/loan/prepare-this/",
+            "what": "English guide: 'Go to the loan application (in Swedish)'"
+          }
+        ],
+        "unclear": [
+          "The loan form itself is behind BankID login; only the six step names and the guidance pages are readable",
+          "Which fields belong to which step, and any character limits, are not shown",
+          "Innovationslån shares the general loan application (flow 1006); there is no separate innovation-loan form, the advisor picks the loan type ('du skickar bara in en enda ansökan')",
+          "No budget template or cost categories are published",
+          "The pages give both 'upp till 249 anställda' and 'upp till 250 anställda'",
+          "The e-service is in Swedish ('Go to the loan application (in Swedish)'); whether answers may be written in English is not stated"
+        ],
+        "verified": "2026-10-17"
+      },
       "notes": "Continuous, no deadline. Co-financing is required: 'Almi kan finansiera upp till 50 procent av den beräknade projektkostnaden'; for loans above 300 000 SEK at least half of the co-financing must be capital, for smaller loans part of it may be own work. Typical loan around 300 000 SEK. Security usually a combination of a floating charge (företagsinteckning) and a limited personal guarantee. Interest may be somewhat higher than for other Almi loans because of project risk. Almi is regional: 'Alla ansökningar hanteras av ditt regionala Almi-bolag' and every loan is an individual assessment, so terms vary by case and region. Handling normally 3 to 4 weeks from a complete application; an adviser calls you for a dialogue. Only the budget is marked mandatory, so ask the adviser what a pre-revenue company must attach.",
       "founder_cost": "repay"
     },
@@ -997,6 +1593,191 @@
         "Interest rate is not published: set individually, normally 2 to 3 points above banks, yet described as lower than Almi's other loans",
         "Regional handling is not described on the pages read"
       ],
+      "application": {
+        "portal": "https://etjanster.almi.se/oversikt/flow/1006",
+        "login": "E-legitimation: BankID, Mobilt BankID or e-legitimation from Telia ('Vi kan tyvärr inte ta emot en ansökan utan e-legitimation'); the e-service login page offers only 'Logga in med e-legitimation' (Signicat). A paper KYC form exists only for people without BankID.",
+        "languages": [
+          "sv"
+        ],
+        "sections": [
+          {
+            "title": "Step 1: Ansökan lån",
+            "asks": "Step name in the e-service overview; the pages say the application asks how large the capital need is and which amount you seek, and what the loan will be used for (field-to-step mapping not shown without login).",
+            "limit": "none stated"
+          },
+          {
+            "title": "Step 2: Verksamhet",
+            "asks": "Step name; for applicants without an earlier Almi loan the pages say you describe what the company does and its business model, the market and customers, and who is behind the company and the team's experience (mapping to this step not shown without login).",
+            "limit": "none stated"
+          },
+          {
+            "title": "Step 3: Ekonomi",
+            "asks": "Step name; the pages say you state how the investment will be financed (bank, own capital or other) and attach financial documentation (mapping not shown without login).",
+            "limit": "none stated"
+          },
+          {
+            "title": "Step 4: Företagsuppgifter",
+            "asks": "Step name; the pages say you give basic company information and the company's owners and representatives; a five-digit SNI code is asked in the application or KYC (mapping not shown without login).",
+            "limit": "one SNI code"
+          },
+          {
+            "title": "Innovation questions (step not stated)",
+            "asks": "If the loan concerns something not yet on the market: which customer need the idea solves, how the need was identified, which customers or target groups, how the problem is solved today, what makes the idea new or unique, and who is behind it.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Existing Almi customers (step not stated)",
+            "asks": "If you already have an Almi loan: what has happened in the company since the last contact.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Affärsplan (optional attachment)",
+            "asks": "A business plan may be attached if you have one; it is voluntary.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Step 5: Förhandsgranska",
+            "asks": "Preview of the whole application before signing.",
+            "limit": "none"
+          },
+          {
+            "title": "Step 6: Signera och skicka in",
+            "asks": "Sign with e-legitimation and submit.",
+            "limit": "none"
+          }
+        ],
+        "criteria": [
+          {
+            "name": "Credit assessment: repayment ability and future potential",
+            "weight": "not stated",
+            "scale": "not stated (loan decision)",
+            "what_scores_high": "A reasonable probability that the company can repay, and a loan that matches the need and repayment ability; the investment should be forward-looking and help the company grow or take the next step."
+          }
+        ],
+        "budget": {
+          "template": "none provided; budget attached as a document (mandatory)",
+          "funding_rate": "Loan of up to 250 000 SEK; normally no co-financing required ('Mikrolån kräver normalt ingen medfinansiering')",
+          "rules": [
+            "Use: equipment, marketing, product development, digitalisation, recruitment or strengthening liquidity; it must be a forward-looking investment",
+            "Limited personal guarantee of 10 percent of the loan amount",
+            "With annual accounts: attach budget, current interim figures and preferably comparison figures; without annual accounts: budget, interim figures if any, preferably comparison figures",
+            "A company being formed attaches budgets for the current and the coming fiscal year",
+            "The company must be registered in Sweden before a granted loan is paid out; private individuals cannot apply"
+          ]
+        },
+        "attachments": [
+          {
+            "name": "Budget",
+            "required": true,
+            "template": "none (no Almi template found)",
+            "limit": "none stated"
+          },
+          {
+            "name": "Budget for the current and the coming fiscal year (company being formed or newly started)",
+            "required": true,
+            "template": "none",
+            "limit": "none stated"
+          },
+          {
+            "name": "Senaste bokslut (latest annual accounts, even if not audited), if the company has one",
+            "required": true,
+            "template": "none",
+            "limit": "none stated"
+          },
+          {
+            "name": "Aktuella delårssiffror (current interim figures); if the annual accounts are older than four months, income statement and balance sheet for the current year",
+            "required": true,
+            "template": "none",
+            "limit": "none stated"
+          },
+          {
+            "name": "Comparison figures for the same period the previous year",
+            "required": false,
+            "template": "none",
+            "limit": "none stated"
+          },
+          {
+            "name": "Likviditetsprognos (cash-flow forecast)",
+            "required": false,
+            "template": "none",
+            "limit": "none stated"
+          },
+          {
+            "name": "Affärsplan",
+            "required": false,
+            "template": "none",
+            "limit": "none stated"
+          },
+          {
+            "name": "Kundkännedomsformulär (separate e-service: 'Kundkännedom Finansiering', or 'Förenklad kundkännedom för dig som ska starta företag' before an organisationsnummer exists)",
+            "required": true,
+            "template": "https://www.almi.se/globalassets/kontaktcenter/kundkannedom.pdf (paper version only for those without BankID)",
+            "limit": "none stated"
+          }
+        ],
+        "declarations": [
+          "Kundkännedom (KYC) form, required for a complete application under the Swedish anti-money-laundering act (2017:630): beneficial owners (verklig huvudman), PEP/RCA status, the right to represent the company, foreign payments and how the business is financed; the founder answers and signs it",
+          "Credit check (kreditupplysning) on the applicant and the company's representatives; stated as part of the process, not as a tick box on any page read",
+          "Signing the application with e-legitimation in the final step 'Signera och skicka in'",
+          "Limited personal guarantee of 10 percent of the loan amount, agreed if the loan is granted"
+        ],
+        "submit_action": "Signera och skicka in (last step of the e-service, signed with e-legitimation). The application is not binding and the amount can be adjusted later.",
+        "draft_save": "Yes: 'Du kan när som helst avsluta en påbörjad e-tjänst och fortsätta vid senare tillfälle förutsatt att du är inloggad'; saved and submitted e-services are stored under 'Mina sidor'. How long a draft is kept is not stated.",
+        "form_readable_without_login": false,
+        "sources": [
+          {
+            "url": "https://www.almi.se/lan-finansiering/mikrolan/",
+            "what": "program page: amount, no co-financing, guarantee, documents"
+          },
+          {
+            "url": "https://www.almi.se/lan-finansiering/forbered-detta/",
+            "what": "guide: what the loan application asks, budget mandatory"
+          },
+          {
+            "url": "https://www.almi.se/lan-finansiering/sa-fungerar-almis-lan/",
+            "what": "guide: questions, mandatory financial documentation, innovation questions, KYC"
+          },
+          {
+            "url": "https://www.almi.se/lan-finansiering/vanliga-fragor-om-lan/",
+            "what": "FAQ: e-legitimation required, documents with and without annual accounts, credit assessment"
+          },
+          {
+            "url": "https://www.almi.se/lan-finansiering/sa-fungerar-laneprocessen/",
+            "what": "process after submission"
+          },
+          {
+            "url": "https://etjanster.almi.se/oversikt/overview/345",
+            "what": "e-service overview '4. Låneansökan': steps, requires login"
+          },
+          {
+            "url": "https://etjanster.almi.se/oversikt/overview/431",
+            "what": "e-service overview: simplified KYC for a company being formed"
+          },
+          {
+            "url": "https://etjanster.almi.se/om",
+            "what": "e-service: drafts saved under Mina sidor"
+          },
+          {
+            "url": "https://www.almi.se/kontaktcenter/kundkannedom/",
+            "what": "KYC page and document FAQ"
+          },
+          {
+            "url": "https://www.almi.se/globalassets/kontaktcenter/kundkannedom.pdf",
+            "what": "paper KYC form (for applicants without BankID)"
+          },
+          {
+            "url": "https://www.almi.se/en/loan/prepare-this/",
+            "what": "English guide: 'Go to the loan application (in Swedish)'"
+          }
+        ],
+        "unclear": [
+          "The loan form itself is behind BankID login; only the six step names and the guidance pages are readable",
+          "Mikrolån uses the general loan application (flow 1006); the loan type is chosen with the advisor",
+          "No budget template is published",
+          "Whether answers may be written in English is not stated; the e-service is in Swedish"
+        ],
+        "verified": "2026-10-17"
+      },
       "notes": "Continuous, no deadline. The micro-company limit is 'max nio anställda och en årsomsättning eller balansomslutning som understiger två miljoner euro'; a company over 2 MEUR revenue but under 2 MEUR balance sheet may still qualify. 'Nej, Mikrolån kräver normalt ingen medfinansiering.' Interest set individually; Almi's rates are normally about 2-3 percentage points above bank rates, but Mikrolån can have longer term, initial amortisation-free period and lower rate than Almi's other loans. Handled by the regional Almi company. Normally no co-financing. Handling normally 3 to 4 weeks from a complete application. Page: 'Du kan ansöka om Mikrolån om du driver, eller ska starta, ett företag som är registrerat i Sverige.'",
       "founder_cost": "repay"
     },
@@ -1109,6 +1890,319 @@
         "Application language is not stated",
         "Whether the person who signs in the e-service must be the firmatecknare is not stated"
       ],
+      "application": {
+        "portal": "https://minasidor.energimyndigheten.se/ (Skapa ärende > form 'Ansökan om finansiering av forskning, innovation och affärsutveckling' > choose the call, last round named 'KON 2026:1 Konceptutveckling av innovationer med affärsfokus')",
+        "login": "E-legitimation (BankID: Mobilt BankID, BankID på kort or BankID på fil). After first login the project leader applies for behörighet to represent the coordinator in the e-service 'Finansiering av forskning, innovation och affärsutveckling'; approval takes 1-3 working days, and someone who is not firmatecknare may need to attach a signed fullmakt. Without e-legitimation, contact Energimyndigheten.",
+        "languages": [
+          "sv",
+          "en"
+        ],
+        "sections": [
+          {
+            "title": "Grunduppgifter: Koordinator",
+            "asks": "The organisation that receives the grant (needs behörighet first), avdelning/institution, plusgiro or bankgiro number, payment reference.",
+            "limit": "avdelning 100 characters (tecken), per the Mina sidor manual"
+          },
+          {
+            "title": "Grunduppgifter: Projektledare",
+            "asks": "Shown from the details given when applying for behörighet.",
+            "limit": "prefilled"
+          },
+          {
+            "title": "Grunduppgifter: Ansökan",
+            "asks": "Whether the project continues an earlier Energimyndigheten project (project number P0000-0000), and whether you have applied for this project before at Energimyndigheten or any other public or private funder, with a reference.",
+            "limit": "1000 characters (tecken), per the Mina sidor manual for the earlier-application reference"
+          },
+          {
+            "title": "Grunduppgifter: Utlysning",
+            "asks": "Choose the open call from the drop-down list.",
+            "limit": "drop-down"
+          },
+          {
+            "title": "Projekt: Projekttitel",
+            "asks": "Project title in Swedish or English, a short project description; preferably also an English title.",
+            "limit": "200 characters (tecken), per the Mina sidor manual"
+          },
+          {
+            "title": "Projekt: Start- och slutdatum",
+            "asks": "Project dates; they create the year columns on the Projektpart tab. The last round required start between 15 October and 1 December 2026 and at most 12 months.",
+            "limit": "dates"
+          },
+          {
+            "title": "Projekt: Kort sammanfattning av projektet (sv or en) and på engelska",
+            "asks": "Popular-science summary of the challenge, how it will be addressed and the effects; may be published, so no confidential information.",
+            "limit": "1000 characters (tecken), per the Mina sidor manual each"
+          },
+          {
+            "title": "Projekt: Beskriv projektets bakgrund",
+            "asks": "Context: needs, challenges and opportunities linked to energy goals, current state of knowledge, development needs, and the project's history and earlier results.",
+            "limit": "5000 characters (tecken), per the Mina sidor manual"
+          },
+          {
+            "title": "Projekt: Motivera varför projektet behöver genomföras",
+            "asks": "How the project relates to what the call asks for, what is new, how results will be used and spread, and why the group can carry it out.",
+            "limit": "5000 characters (tecken), per the Mina sidor manual"
+          },
+          {
+            "title": "Projekt: Stimulanseffekt",
+            "asks": "Only if the aid falls outside Energimyndigheten's aid schemes and a large company applies: show the aid increases scope, total investment or speed.",
+            "limit": "2000 characters (tecken), per the Mina sidor manual"
+          },
+          {
+            "title": "Projekt: Beskriv hur resultaten ska nyttiggöras",
+            "asks": "Target groups and how project results will be used commercially or otherwise.",
+            "limit": "2000 characters (tecken), per the Mina sidor manual"
+          },
+          {
+            "title": "Projekt: Är köns- eller genusperspektiv tillämpligt när det gäller projektets inriktning? + Motivera",
+            "asks": "Yes/no on whether sex or gender perspective applies to the project's direction, with a motivation that is always required; if yes, how it is worked into the project.",
+            "limit": "yes/no; motivation 2000 characters (tecken), per the Mina sidor manual"
+          },
+          {
+            "title": "Mål och genomförande: Vad förväntas projektet bidra till?",
+            "asks": "Tick expected outcomes or early effects; shown only for some calls.",
+            "limit": "multiple choice"
+          },
+          {
+            "title": "Mål och genomförande: Syfte eller övergripande mål",
+            "asks": "Overall purpose and longer-term contribution.",
+            "limit": "2000 characters (tecken), per the Mina sidor manual"
+          },
+          {
+            "title": "Mål och genomförande: Projektmål (one at a time, 'Lägg till projektmål')",
+            "asks": "Specific, realistic, time-bound and if needed measurable goals describing what the project delivers.",
+            "limit": "1000 characters (tecken), per the Mina sidor manual per goal"
+          },
+          {
+            "title": "Mål och genomförande: Projektets genomförande",
+            "asks": "Work plan, timeline and who does what, and why these actors.",
+            "limit": "4000 characters (tecken), per the Mina sidor manual"
+          },
+          {
+            "title": "Mål och genomförande: Arbetspaket (one at a time, 'Lägg till arbetspaket')",
+            "asks": "Name, Kostnad (SEK, all parties' costs in the package) and Beskrivning of how it is done and its activities; the call text requires each package dated with start and end (MMÅÅ), estimated costs per package, and goals and deliveries linked to packages.",
+            "limit": "name 100 characters (tecken), per the Mina sidor manual; description 2000 characters (tecken), per the Mina sidor manual per package"
+          },
+          {
+            "title": "Mål och genomförande: Jämställdhet i projektgruppen",
+            "asks": "How gender equality is considered in the team's composition, division of work and working conditions (e.g. at least 40 percent of each sex, influence, policy).",
+            "limit": "none stated"
+          },
+          {
+            "title": "Mål och genomförande: Leveranser och milstolpar",
+            "asks": "Predefined deliveries (doctoral student, reference group meeting, course, workshop/seminar/conference) with counts, plus own deliveries and milestones.",
+            "limit": "name 100 characters (tecken), per the Mina sidor manual; description 1000 characters (tecken), per the Mina sidor manual"
+          },
+          {
+            "title": "Mål och genomförande: Publikationer",
+            "asks": "Planned publications beyond the mandatory final report, by type and count.",
+            "limit": "picklist and count"
+          },
+          {
+            "title": "Mål och genomförande: Resultatspridning - Hur ska resultaten spridas?",
+            "asks": "Target groups, why they need the results, and the dissemination and use plan.",
+            "limit": "2000 characters (tecken), per the Mina sidor manual"
+          },
+          {
+            "title": "Projektpart: Organisationsuppgifter and Arbetsplats",
+            "asks": "Organisationsnummer and name, avdelning, whether the party seeks support, and where the support will mainly be used if not at the head office.",
+            "limit": "addresses 100 characters (tecken), per the Mina sidor manual"
+          },
+          {
+            "title": "Projektpart: Stödberättigande kostnader",
+            "asks": "Eligible costs per calendar year and cost type, with descriptions of köpta tjänster, utrustning (incl. residual value), material and övriga kostnader.",
+            "limit": "whole SEK; each description 1000 characters (tecken), per the Mina sidor manual"
+          },
+          {
+            "title": "Projektpart: Finansiering från andra organisationer än Energimyndigheten",
+            "asks": "Each financier's organisation number and name, whether it is public, and amount per year.",
+            "limit": "whole SEK"
+          },
+          {
+            "title": "Projektpart: Sökt finansiering från Energimyndigheten",
+            "asks": "Calculated automatically as cost minus other financing per year; support level shown.",
+            "limit": "calculated"
+          },
+          {
+            "title": "Bilagor",
+            "asks": "Upload the attachments the chosen call requires (here 'Ytterligare ansökningsfrågor').",
+            "limit": "see attachments"
+          },
+          {
+            "title": "Samtycke",
+            "asks": "Two yes/no questions: may non-confidential project information be shown in the public project database, and may the project leader's name be shown; answers do not affect the assessment.",
+            "limit": "yes/no"
+          },
+          {
+            "title": "Ekonomisk översikt",
+            "asks": "Read-only overview of costs, financing and support level.",
+            "limit": "read-only"
+          },
+          {
+            "title": "Granska och skicka in",
+            "asks": "Shows errors to fix, offers 'Ladda ner PDF', then 'Signera och skicka in'.",
+            "limit": "none"
+          }
+        ],
+        "criteria": [
+          {
+            "name": "1. Teknisk mognadsgrad",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "The solution matches the requirement of at least TRL 2 and at most TRL 4 at project start, and the applicant describes and motivates the TRL level."
+          },
+          {
+            "name": "2. Energimässig potential (omställning av energisystemet)",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "Potential to contribute to a sustainable energy system with a credible estimate, a description of energy impact in manufacturing, use and end-of-life, and a credible calculation or description of the energy potential."
+          },
+          {
+            "name": "3. Affärsmässig potential",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "Clear and concrete customer benefit versus today's best solutions and a profitable business model; prioritised target market with competition, trends, changes and substitutes; a profitable business with jobs in Sweden or export income; ability to secure further financing."
+          },
+          {
+            "name": "4. Innovationsgrad",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "A new idea or substantially better than what exists on the market, competitive advantage through patents or another IP strategy, and done searches such as novelty search or freedom-to-operate."
+          },
+          {
+            "name": "5. Genomförbarhet",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "Measurable, concrete and well-defined goals; concrete and realistic work packages; credible financing; a budget reasonable for the planned work and goals; the project raises the TRL; the applying company has a leading role."
+          },
+          {
+            "name": "6. Aktörer och samverkan",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "The team has the competence and experience needed (own or partly hired consultants), access to competence, partners or networks needed to build a commercial business, and the competence built stays with the applicant."
+          },
+          {
+            "name": "7. Jämställdhet samt köns- och genusperspektiv",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "Clearly explains whether a sex and gender perspective is relevant, works it into the project if relevant, and considers gender equality in team composition, division of work and working conditions."
+          }
+        ],
+        "budget": {
+          "template": "entered in the form (Projektpart tab); amounts can be pasted from an Excel table of the same layout",
+          "funding_rate": "Grant of up to 100 percent of eligible costs, at most 500 000 SEK per project (KON 2026:1 call text); support basis decided per company (start-up aid GBER art 22, innovation aid art 28, or de minimis). The attachment still asks how costs not covered by Energimyndigheten will be financed ('Samfinansiering av stödberättigande kostnader')",
+          "categories": [
+            "Lön",
+            "Köpta tjänster",
+            "Utrustning",
+            "Material",
+            "Laboratorium",
+            "Resor",
+            "Övriga",
+            "Indirekta"
+          ],
+          "rules": [
+            "Whole SEK ('ental, inga ören'); År 1 is the calendar year of the start date, År 2 the next calendar year",
+            "Give the whole project budget, not only the costs you seek support for; if it exceeds 500 000 SEK, enter the other financing under 'Finansiering från andra organisationer än Energimyndigheten'",
+            "Total sought support at most 500 000 SEK",
+            "Indirect costs at most 30 percent of eligible salary costs when aid is given under GBER art 22, 25, 27 (operating aid), 29, 31 or as de minimis; otherwise indirect costs are not eligible for companies",
+            "Salary costs must be actual and auditable with time records; work without salary gives no eligible cost",
+            "Costs before or after the project period in the decision are not eligible; retroactive costs are not paid",
+            "Costs excluding VAT unless the recipient cannot deduct input VAT",
+            "Describe purchased services clearly: which organisation, which services and what they add",
+            "Equipment: describe purchase, existing use or rent, depreciation over the project and residual value",
+            "Another actor cannot finance your company's costs through in-kind contributions; co-financing must be cash",
+            "A support recipient cannot also be a financier of another project party",
+            "Innovation aid under GBER art 28 is at most 50 percent, up to 100 percent for innovation advisory and support services within 220 000 EUR per company over three years",
+            "Costs must be actual and auditable and kept separately in the accounts"
+          ]
+        },
+        "attachments": [
+          {
+            "name": "Ytterligare ansökningsfrågor – Kon 2026:1",
+            "required": true,
+            "template": "https://www.energimyndigheten.se/496416/globalassets/utlysningar/konceptutveckling/ytterligare-ansokningsfragor-konceptutveckling-av-innovationer-med-affarsfokus.docx",
+            "limit": "max 20 A4 pages, Times New Roman 12 pt, margins and line spacing unchanged; Swedish or English. Contents: company facts (group, size, beneficial owner owning over 50 percent elsewhere, age over or under five years, revenue, balance sheet, employees, profit distribution), Kort om lösningen, Mognadsgrad (TRL at start and end with motivation), Energimässig potential, Affärsmässig potential (incl. BRL and CRL tables), Innovationsgrad (incl. ownership or right of disposal and IP), Samfinansiering av stödberättigande kostnader, Aktörer och samverkan (TMRL table, collaborations, competence plan, one table per key person: name, sex, organisation, % of full time and total hours, role, competence)"
+          },
+          {
+            "name": "Intyg om stöd av mindre betydelse (de minimis certificate)",
+            "required": false,
+            "template": "https://www.energimyndigheten.se/490850/globalassets/sharepoint-dokument/process-dokument/publicerade-dokument/intyg-stod-av-mindre-betydelse.docx",
+            "limit": "recommended for companies or groups older than five years, or if accumulated start-up aid exceeds the limit; signed by an authorised representative"
+          },
+          {
+            "name": "Redogörelse för tidigare mottaget stöd till nystartade företag (startstöd, GBER art 22)",
+            "required": false,
+            "template": "https://www.energimyndigheten.se/490a65/globalassets/sharepoint-dokument/process-dokument/publicerade-dokument/art-22-nystartade-foretag.docx",
+            "limit": "recommended for companies or groups younger than five years; signed by an authorised representative"
+          }
+        ],
+        "declarations": [
+          "Samtycke: two yes/no answers on publishing non-confidential project information and the project leader's name in the project database",
+          "De minimis certificate: the authorised representative certifies no other de minimis aid in the last three years than the listed amounts (signed by the founder)",
+          "Start-up aid statement: earlier aid under GBER art 22 (signed by the founder)",
+          "In 'Ytterligare ansökningsfrågor': whether the company has ownership or right of disposal of the solution, group membership, size, age and profit distribution",
+          "Energimyndigheten may run a credit check on the applicant, project parties, owners and board (stated in the call text, not a tick box)"
+        ],
+        "submit_action": "Granska och skicka in, then 'Signera och skicka in' with e-legitimation. The manual says the application cannot be changed after it is sent; the call text says the latest version sent before the call closes is the one assessed.",
+        "draft_save": "Yes: 'Spara utkast' (bottom right of the form) saves a draft found on the tab Anslagstavla; a PDF of the draft can be downloaded under 'Granska och skicka in'. Only the project leader has access during the application. Logging in with BankID on several devices at once may overwrite changes. Retention of drafts is not stated.",
+        "form_readable_without_login": false,
+        "sources": [
+          {
+            "url": "https://www.energimyndigheten.se/utlysningar/konceptutveckling-av-innovationer-med-affarsfokus/",
+            "what": "call page (spring round KON 2026:1, last updated 2026-04-08)"
+          },
+          {
+            "url": "https://www.energimyndigheten.se/496416/globalassets/utlysningar/konceptutveckling/fullstandig-utlysningstext-konceptutveckling-av-innovationer-med-affarsfokus.pdf",
+            "what": "guidelines PDF: full call text KON 2026:1 (criteria, contents, how to apply, aid rules)"
+          },
+          {
+            "url": "https://www.energimyndigheten.se/496416/globalassets/utlysningar/konceptutveckling/ytterligare-ansokningsfragor-konceptutveckling-av-innovationer-med-affarsfokus.docx",
+            "what": "template: mandatory attachment 'Ytterligare ansökningsfrågor'"
+          },
+          {
+            "url": "https://www.energimyndigheten.se/496416/globalassets/utlysningar/konceptutveckling/checklista-konceptutveckling-av-innovationer-med-affarsfokus.docx",
+            "what": "checklist KON 2026:1"
+          },
+          {
+            "url": "https://www.energimyndigheten.se/49e98f/globalassets/sharepoint-dokument/process-dokument/publicerade-dokument/manual-for-forskningsansokningar-via-mina-sidor.pdf",
+            "what": "guidelines PDF: Mina sidor manual (updated 2026-06-24), every form tab with character limits, Spara utkast, Signera och skicka in"
+          },
+          {
+            "url": "https://www.energimyndigheten.se/stod-och-utlysningar/sok-hantera-och-redovisa-stod/mina-sidor/",
+            "what": "login (BankID) and behörighet (1-3 working days, fullmakt)"
+          },
+          {
+            "url": "https://www.energimyndigheten.se/forskning-och-innovation/affarsideer-test-och-internationalisering/vagledning-for-ansokan-inom-affarsutveckling/",
+            "what": "guidance with advice and answer examples (updated 2026-10-14)"
+          },
+          {
+            "url": "https://www.energimyndigheten.se/stod-och-utlysningar/sok-hantera-och-redovisa-stod/kommande-utlysningar/",
+            "what": "upcoming calls: Konceptutveckling listed for October 2026 (updated 2026-09-04)"
+          },
+          {
+            "url": "https://www.energimyndigheten.se/stod-och-utlysningar/sok-hantera-och-redovisa-stod/alla-utlysningar/",
+            "what": "all calls: Konceptutveckling still listed as closed (02 juni 2026) on 2026-10-17"
+          },
+          {
+            "url": "https://www.energimyndigheten.se/490850/globalassets/sharepoint-dokument/process-dokument/publicerade-dokument/intyg-stod-av-mindre-betydelse.docx",
+            "what": "template: de minimis certificate"
+          },
+          {
+            "url": "https://www.energimyndigheten.se/490a65/globalassets/sharepoint-dokument/process-dokument/publicerade-dokument/art-22-nystartade-foretag.docx",
+            "what": "template: start-up aid statement"
+          }
+        ],
+        "unclear": [
+          "No round is open on 2026-10-17: the call is listed as closed (2 June 2026) and the upcoming-calls page says October 2026 without a date; all documents are for KON 2026:1 and may change for the autumn round",
+          "The form sections come from the generic Mina sidor manual ('Guiden utgår från en typisk utlysning'), not from a call-specific form definition; the form itself is behind BankID",
+          "The call text requires each work package to have start and end (MMÅÅ), but the manual lists only Name, Kostnad and Beskrivning as work-package fields, so the dates presumably go in the description",
+          "The manual says a sent application cannot be changed, while the call text says the latest version sent before closing is assessed; whether resubmission replaces an earlier one is not stated",
+          "Weights and scoring scale of the seven criteria are not published",
+          "No character limit is stated for 'Jämställdhet i projektgruppen'"
+        ],
+        "verified": "2026-10-17"
+      },
       "notes": "Not open on 2026-10-15. The call page (Senast uppdaterad 2026-04-08) still shows the spring round: 'Sista dag för ansökan 2026-06-02 23:59', decisions 'löpande under september till november 2026', project start between 15 October and 1 December 2026, at most 12 months, pool 'Cirka 10 miljoner kronor'. The programme page says the call opens twice a year, 'planerat april samt oktober', and the kommande-utlysningar page lists the next opening as October 2026 without a day. The 500 000 SEK and 100 percent figures come from the programme page utveckla-en-affarside; the spring call page gives only the total pool. One application per company per round; the applicant must own or control the solution. Almi and five other innovation environments give advice before applying but do not write the application. Re-read the status page before quoting any date. Up to 100 percent of eligible costs, at most 500 000 SEK, no co-financing. Decision within three to five months after the round closes; the agency may run a credit check on the company, partners, owners and board. Support available until 16:00 on the closing day.",
       "founder_cost": "none",
       "sectors": [

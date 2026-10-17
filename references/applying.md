@@ -32,6 +32,16 @@ has not given (team, customers, IP, other public funding received, the amount
 they want). Read every file they share: decks, spreadsheets, earlier
 applications. Ask once; draft with what you have and mark the gaps.
 
+For a Vinnova call the whole form is public, field by field with character
+limits and the declaration checkboxes:
+`https://api.vinnova.se/ansok/ansokningsomgang/<round diarienummer>/publication`.
+The round's diarienummer is `live.dnr` when you run the matcher with `--live`
+(for Innovativa Startups 2026 it is `2025-04831`). Fetch it and draft against
+the real fields; the call's own GUID returns nothing. Vinnova allows AI tools
+in applications and holds the applicant responsible for every statement, so
+the founder must read and stand behind each section before they mark it
+complete.
+
 ## C2. Draft, section by section
 
 Follow the form's own order and headings,
