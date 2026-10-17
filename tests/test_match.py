@@ -709,3 +709,16 @@ def test_confirmed_key_is_met_and_denied_key_fails() -> None:
     assert match.evaluate_rule(rule, {"denied": ["consortium_partner"]}).status == "failed"
     assert match.evaluate_rule(rule, {"confirmed": ["consortium_partner"], "denied": ["consortium_partner"]}).status == "failed"
     assert match.normalize_profile({"denied": "consortium_partner, need_owner"})[0]["denied"] == ["consortium_partner", "need_owner"]
+
+
+def test_one_denied_one_confirmed_and_the_rest_unknown() -> None:
+    """Round-3 case s06: "no, nobody is on payroll" was passed as confirmed: [] and failed every other confirmation."""
+    def status(key: str, profile: dict) -> str:
+        return match.evaluate_rule({"field": "confirmed", "op": "contains", "value": key}, profile).status
+
+    profile = {"confirmed": ["region_vgr"], "denied": ["se_rd_staff_on_payroll"]}
+    assert status("se_rd_staff_on_payroll", profile) == "failed"
+    assert status("region_vgr", profile) == "met"
+    assert status("eip_competence_mix", profile) == "unknown"
+    assert status("no_earlier_bf_startup_funding", profile) == "unknown"
+    assert status("eip_competence_mix", {"confirmed": []}) == "unknown"
