@@ -386,7 +386,8 @@
           "How long an unsubmitted draft is kept is not stated",
           "The form's Ekonomiska uppgifter header says 2025; for a company whose first fiscal year is not closed it says to estimate from interim reports"
         ],
-        "verified": "2026-10-17"
+        "verified": "2026-10-17",
+        "ai_disclosure": "Vinnova allows AI tools and outside help in applications; the applicant is responsible for every statement being correct and nothing may be fabricated (form and Vinnova guideline updated 7 September 2026)."
       },
       "notes": "Round open on 2026-10-15. Page: 'Stänger den 12 januari 2027 kl 14:00'. Dates on the page: 12 okt. 2026 opens; info meetings 2 nov. 2026 kl 09:00 and 9 nov. 2026 kl 09:00; 12 jan. 2027 kl 14:00 last day; 23 mars 2027 decision and earliest project start; 30 mars 2027 latest project start; project at most nine months. Selection: complete applications are scored by three expert assessors, and among those judged to meet the criteria 'i hög och likvärdig grad' the grants are decided by lottery ('lottning, så kallad randomisering'), introduced from 2026. Company age is counted at the decision date 2027-03-23. One of net revenue or balance sheet may exceed 10 MSEK, but not both. Companies granted funding in Innovativa Startups 2025 may not apply. The whole group must be unlisted if the company belongs to a group. The page footer shows diarienummer 2025-04831; in Vinnova's open-data API 2016-04714 is the parent call 'Innovativa Startups' and 2025-04831 is this application round (open 2026-10-12, closes 2027-01-12T14:00, decision 2027-03-23). Three expert assessors score each application; among equally high-rated applications the grants are drawn by lot. Decision 23 March 2027; the project must start by 30 March 2027 and run at most nine months. No mandatory attachments are listed on the call page. The group rule covers only listing and size by turnover or balance sheet ('hela koncernen uppfylla kraven gällande börsnotering och storlek, se krav 3 och 4'); the cap of at most 10 employees, counted as full-time equivalents, applies to the applying company alone ('Sökande företag får ha högst 10 anställda'). Read 2026-10-17.",
       "founder_cost": "none"
@@ -3160,6 +3161,309 @@
         "The topic page on the Funding and Tenders portal refuses automated reads; check the 2027 cut-off dates there in a browser",
         "The 2026 batching dates are written in mixed formats on the page (7/01/2026, 04/03/2026); confirm the next date before planning"
       ],
+      "application": {
+        "portal": "https://ec.europa.eu/research/participants/submission/manage/screen/submission/create-draft/42510?topic=HORIZON-EIC-2026-ACCELERATOR-01",
+        "login": "EU Login account on the EU Funding & Tenders Portal (the portal's IT How-To links two-factor authentication), plus the company's 9-digit Participant Identification Code (PIC) from the Participant Register; natural persons also need a PIC to start. A validated PIC is not a prerequisite for submitting",
+        "languages": [
+          "en"
+        ],
+        "sections": [
+          {
+            "title": "Step 1, Part A (online): General information",
+            "asks": "Acronym, proposal title understandable for non-specialists, estimated duration in months, keywords (the guide says up to three, picked as parent 'sub-discipline' plus child 'descriptor', plus optional free keywords) and an abstract that must not contain confidential information.",
+            "limit": "title 200 characters with spaces; free keywords 200 characters; abstract 2 000 characters"
+          },
+          {
+            "title": "Step 1, Part A: Previous submission",
+            "asks": "Whether this or a very similar proposal was submitted in the past 2 years to any EU programme call, and if so its proposal reference or contract number.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Step 1, Part A: Company and CEO information",
+            "asks": "Insert and confirm the PIC, and give information about the CEO (or the highest managing position); a natural person simply gives their name. Main contact person details (title, gender, name, email, position, address, phone).",
+            "limit": "none stated"
+          },
+          {
+            "title": "Step 1, Part A: Budget (indicative support requested)",
+            "asks": "An indicative amount of the EIC Accelerator support you might request (the form field reads 'TOTAL Requested EU contribution to eligible costs (Requested grant amount) - EUR'); it can be revised in the full proposal, and Open vs Challenge is only chosen at the full proposal.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Step 1, Part A: Self-declaratory questions and NCP consent",
+            "asks": "The short proposal ends with a list of self-declaratory questions; you may also consent to let your National Contact Point view the proposal, evaluation reports and results.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Step 1, Part B (PDF): Title of the proposal and list of participants",
+            "asks": "Proposal title and participants (coordinator; affiliated entities, if any, with their link to the coordinator and role).",
+            "limit": "counts toward the 12-page Part B limit"
+          },
+          {
+            "title": "Step 1, Part B: 1. Technology - Novelty and breakthrough nature",
+            "asks": "How the innovation is deep tech, its novelty and disruptive potential versus existing solutions, with empirical data demonstrating the novelty and the potential to disrupt current markets.",
+            "limit": "Part B 12 pages in total including the cover page"
+          },
+          {
+            "title": "Step 1, Part B: 1. Technology - Technology Readiness Level (TRL)",
+            "asks": "Evidence that the innovation has completed all aspects of TRL 5 (validation in a relevant environment) or higher.",
+            "limit": "within the 12 pages"
+          },
+          {
+            "title": "Step 1, Part B: 1. Technology - IP protection and strategy",
+            "asks": "IP strategy in terms of patents (granted or pending), trade secrets and/or other IP elements, and freedom-to-operate (FTO) status.",
+            "limit": "within the 12 pages"
+          },
+          {
+            "title": "Step 1, Part B: 2. Market - Market opportunity",
+            "asks": "Size of the total market and realistic expected share (including civilian and defence demand where a credible business case exists), go-to-market and commercialisation strategy, customer value proposition, partnerships, who the customers are and why they will adopt.",
+            "limit": "within the 12 pages"
+          },
+          {
+            "title": "Step 1, Part B: 3. Team, financial needs, implementation - Team capability",
+            "asks": "Key team members and their competencies, how the company is governed and takes decisions, and current skills/competence gaps including gender balance with a plan to fill them.",
+            "limit": "within the 12 pages"
+          },
+          {
+            "title": "Step 1, Part B: 3. Team, financial needs, implementation - Risk level of the investment and leverage effect",
+            "asks": "Traction with investors, timing and size of the next financing round, why you need EIC funding and why market actors will not fund the full amount.",
+            "limit": "within the 12 pages"
+          },
+          {
+            "title": "Step 1 annex: Video pitch",
+            "asks": "A simple video in which the core team (up to three people) shows the innovation, the team and the motivation behind the application; it may be in any EU language with subtitles.",
+            "limit": "3 minutes, up to 3 team members"
+          },
+          {
+            "title": "Step 1 annex: Pitch deck",
+            "asks": "A pitch deck that summarises the proposal and tells the story; no predefined template; the guide advises two to four slides on business model, target market and growth forecast.",
+            "limit": "PDF, maximum 10 slides/pages"
+          },
+          {
+            "title": "Step 2 (only after a GO), Part B (PDF): full proposal",
+            "asks": "Executive summary (about half a page); 1 Technology (1.1 novelty and breakthrough, 1.2 TRL, 1.3 IP strategy); 2 Market (2.1 market opportunity, 2.2 business and revenue model and growth strategy, 2.3 broader impact, 2.4 Challenge alignment and 2.5 STEP impact for Challenges); 3 Team, financial needs, implementation (3.1 team capability, 3.2 risk level of the investment and leverage effect, 3.3 risk management); links to online CVs of key team members. Part A adds 3-6 fixed keywords, an ethics issues table and security questions.",
+            "limit": "Part B 20 pages including the cover page"
+          }
+        ],
+        "criteria": [
+          {
+            "name": "Step 1 - Excellence: Innovation, deep tech and breakthrough nature",
+            "weight": "not stated",
+            "scale": "GO/NO GO per evaluator; 4 evaluators, at least 3 GO needed",
+            "what_scores_high": "The innovation is deep tech stemming from cutting-edge scientific or technological advances and represents a significant improvement in cost or performance compared to existing or alternative solutions."
+          },
+          {
+            "name": "Step 1 - Excellence: Technology readiness (TRL)",
+            "weight": "not stated",
+            "scale": "GO/NO GO",
+            "what_scores_high": "Sufficient demonstration that the innovation has completed all aspects of TRL 5 (validation in a relevant environment for the application of the technology)."
+          },
+          {
+            "name": "Step 1 - Excellence: Intellectual property",
+            "weight": "not stated",
+            "scale": "GO/NO GO",
+            "what_scores_high": "Adequate IP protection and a sound IP strategy to enter the market to be addressed."
+          },
+          {
+            "name": "Step 1 - Impact: Market opportunity",
+            "weight": "not stated",
+            "scale": "GO/NO GO",
+            "what_scores_high": "A clear size of the total market addressed and a realistic expectation of the share of it, including civilian and defence demand where a credible business case exists in both."
+          },
+          {
+            "name": "Step 1 - Level of risk, implementation and need for Union support: Team capability",
+            "weight": "not stated",
+            "scale": "GO/NO GO",
+            "what_scores_high": "The team has the skills and competences to develop the innovation and scale the company, and skills/competence gaps, including gender balance, are identified with a credible plan to fill them."
+          },
+          {
+            "name": "Step 1 - Level of risk, implementation and need for Union support: Risk level of the investment and leverage effect",
+            "weight": "not stated",
+            "scale": "GO/NO GO",
+            "what_scores_high": "Early traction with investors, and a financing requirement to be internationally competitive that is significantly higher than what market actors can finance alone."
+          },
+          {
+            "name": "Step 2 - Excellence (innovation, TRL, IP)",
+            "weight": "not stated",
+            "scale": "0-5 per criterion, threshold 4/5 each; overall threshold 13/15 (sum of three criteria) to be considered for interview",
+            "what_scores_high": "Same questions as Step 1, assessed by a technology expert (with an online interview) and an evaluation panel of at least three experts."
+          },
+          {
+            "name": "Step 2 - Impact (market opportunity, business model, broader impact; Challenge alignment and STEP impact for Challenges)",
+            "weight": "not stated",
+            "scale": "0-5, threshold 4/5",
+            "what_scores_high": "Sound detailed business model and revenue strategy with realistic financial projections; contribution to European technological leadership or reduced dependencies; broader environmental or social impacts."
+          },
+          {
+            "name": "Step 2 - Level of risk, implementation and need for Union support (team, risk management, implementation plan, risk level and leverage)",
+            "weight": "not stated",
+            "scale": "0-5, threshold 4/5",
+            "what_scores_high": "Adequate governance and an incentivised team, main risks identified with mitigation, a clear implementation plan with measurable milestones and reasonable, non-excessive lump-sum costs per work package, and for grant only, access to the resources needed to commercialise and scale up."
+          }
+        ],
+        "budget": {
+          "template": "Step 1: entered in the form as an indicative amount. Step 2: the EIC 'Detailed Budget Table (HE Lump Sum EIC Accelerator)' .xlsm inside https://eic.ec.europa.eu/document/download/dc379cf9-2917-4f92-824d-64ea3a116df2_en?filename=Annexes%20for%20the%20EIC%20Accelerator%20full%20proposal%20%28WP2026%29.zip (generic HE lump-sum table: https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/temp-form/af/detailed-budget-table_he-ls-euratom_en.xlsm)",
+          "funding_rate": "Grant component covers a maximum of 70 % of total eligible costs of TRL 6-8 activities, as a lump sum ('For EIC Accelerator calls, the funding rate is always 70%' in the budget table); investment component EUR 1-10 million as equity or quasi-equity",
+          "categories": [
+            "A. Direct personnel costs (technical and administrative personnel)",
+            "B. Direct subcontracting costs",
+            "C.1 Travel and subsistence",
+            "C.2 Equipment (depreciation costs sheet)",
+            "C.3 Other goods, works and services",
+            "D.2 Internally invoiced goods and services",
+            "E. Indirect costs (25 % of A+C)"
+          ],
+          "rules": [
+            "Grant component below EUR 2.5 million; grant only is capped at EUR 2 499 999, and EUR 2.5 million or more only in exceptional cases for blended finance",
+            "Innovation activities normally completed within 24 months",
+            "Activities above TRL 8 cannot be covered by the grant component; the innovation must have completed all aspects of TRL 5",
+            "A single work package cannot be funded by a mix of grant and investment",
+            "Lump-sum costs must comply with the basic eligibility conditions for EU actual cost grants (AGA Article 6) and exclude ineligible costs; purchases and subcontracting must ensure best value for money and be free of conflicts of interest; ineligible costs in the table can reduce the grant later",
+            "None of the project activities may have started before the proposal was submitted (declaration 2)",
+            "Investment component: EUR 1-10 million, maximum 25 % of the voting shares, patient-capital perspective of indicatively 7-10 years; up to EUR 2 million flexibility may be added after selection",
+            "Grant only is provided once per company during Horizon Europe 2021-2027; small mid-caps cannot get grant only; UK applicants grant only",
+            "Lump sum (detailed budget table) is mandatory for grant only and blended finance; for equity only upload the Excel blank"
+          ]
+        },
+        "attachments": [
+          {
+            "name": "Step 1: Part B technical description (from the template in the submission system)",
+            "required": true,
+            "template": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/temp-form/af/af_he-eic-accelerator-short_en.pdf (information copy; use the one in the submission system)",
+            "limit": "12 pages including cover, PDF, Times New Roman or similar at least 11 pt, A4, margins at least 15 mm"
+          },
+          {
+            "name": "Step 1: Video pitch",
+            "required": true,
+            "template": "none",
+            "limit": "3 minutes, up to 3 team members"
+          },
+          {
+            "name": "Step 1: Pitch deck",
+            "required": true,
+            "template": "none",
+            "limit": "PDF, 10 slides/pages"
+          },
+          {
+            "name": "Step 1: Consent for data sharing with NCP",
+            "required": true,
+            "template": "provided in the submission system (not public)",
+            "limit": "none stated"
+          },
+          {
+            "name": "Step 2: Pitch deck",
+            "required": true,
+            "template": "none",
+            "limit": "PDF, no slide limit, but presented in 10 minutes at the jury interview"
+          },
+          {
+            "name": "Step 2: Video pitch (may reuse the Step 1 video)",
+            "required": true,
+            "template": "none",
+            "limit": "3 minutes"
+          },
+          {
+            "name": "Step 2: Lump sum detailed budget table",
+            "required": true,
+            "template": "Tpl_Detailed Budget Table (HE Lump Sum EIC Accelerator).xlsm in the annexes zip",
+            "limit": "blank file for equity only"
+          },
+          {
+            "name": "Step 2: Implementation plan",
+            "required": true,
+            "template": "Tpl_Implementation Plan Annex (HE EIC Accelerator).rtf in the annexes zip",
+            "limit": "10 pages; blank document for equity only"
+          },
+          {
+            "name": "Step 2: Financial plan and equity needed (incl. cap table)",
+            "required": true,
+            "template": "Tpl_Annex_Financial plan and equity needed (HE EIC Accelerator)-2026.xlsx in the annexes zip",
+            "limit": "none stated"
+          },
+          {
+            "name": "Step 2: Freedom-to-operate (FTO) analysis, or a note on FTO, or a simple statement where FTO is not relevant (e.g. software)",
+            "required": true,
+            "template": "none",
+            "limit": "note: 2 pages"
+          },
+          {
+            "name": "Step 2: Letters of intent",
+            "required": true,
+            "template": "Tpl_ Letter of Intent (EIC Accelerator).rtf in the annexes zip",
+            "limit": "none stated"
+          },
+          {
+            "name": "Step 2: Ownership control declaration (only Challenge 2.4 Critical Raw Materials, or Open proposals in its scope, requesting grant only)",
+            "required": false,
+            "template": "in the submission system",
+            "limit": "none stated"
+          }
+        ],
+        "declarations": [
+          "1) Explicit consent of all applicants on their participation and on the content of the proposal",
+          "2) The information is correct and complete and none of the project activities started before submission",
+          "3) Full compliance with the call eligibility criteria, not subject to exclusion grounds under the EU Financial Regulation, and financial and operational capacity to carry out the project",
+          "4) All communication goes through the Funding & Tenders Portal electronic exchange system under its Terms and Conditions",
+          "5) Read, understood and accepted the Portal Terms & Conditions and Privacy Statement",
+          "6) The proposal complies with ethical principles and research integrity (ALLEA Code of Conduct)",
+          "7) Exclusive focus on civil applications (unless the call permits military applications) and compliance with dual-use export rules",
+          "8) No reproductive human cloning, heritable genetic modification, creation of human embryos for research or destruction of human embryos",
+          "9) Activities outside the Union would have been allowed in at least one EU Member State",
+          "Step 2 lump sum: 10) the detailed budget follows usual cost accounting practices and AGA Article 6 eligibility conditions",
+          "The self-declaratory questions at the end of the short proposal",
+          "Optional consent to share the proposal, evaluation reports and results with the National Contact Point",
+          "Generative AI: the template requires applicants to verify AI-generated content, list sources, check for plagiarism and be transparent in disclosing which AI tools were used and how",
+          "Step 2: agreement to share information with the EIC Fund (if requesting investment) and with the Agency and EIC Fund partners to find co-investors; security questions; ethics issues table and ethics self-assessment",
+          "Before signing the grant, a declaration of honour"
+        ],
+        "submit_action": "Step 6 of the Funding & Tenders Portal submission wizard: in Proposal forms click 'Submit', which opens the Submit screen and sends the proposal; a signed, time-stamped e-receipt can then be downloaded and an email goes to all coordinator contacts. Proposals with a red 'Show Error' validation result are blocked. For continuously open calls such as this one, re-edit is not available once submitted; to fix a mistake ask the helpdesk (EC-FUNDING-TENDER-SERVICE-DESK@ec.europa.eu) to withdraw it, then change and resubmit (a withdrawal before the result does not count toward the three-submission limit).",
+        "draft_save": "Yes: the submission system keeps draft proposals, reachable from the Portal under My Area > My Proposals; Part A can be updated at any time before final submission. No retention period for drafts is stated.",
+        "form_readable_without_login": false,
+        "sources": [
+          {
+            "url": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en",
+            "what": "call page (steps, short proposal content, batching, 2026 full-proposal dates)"
+          },
+          {
+            "url": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/horizon-eic-2026-accelerator-01.json",
+            "what": "form JSON: F&T Portal topic details for HORIZON-EIC-2026-ACCELERATOR-01 (status Open, deadline model continuous, latest info 2026-10-15: closes 4 November 2026 17h, next topic HORIZON-EIC-2027-ACCELERATOR-01 opens November 2026; submission link; template links)"
+          },
+          {
+            "url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/temp-form/af/af_he-eic-accelerator-short_en.pdf",
+            "what": "template: Standard application form (HE EIC Accelerator stage 1 - short proposal), Part A example and Part B V2.1 12.06.2026"
+          },
+          {
+            "url": "https://eic.ec.europa.eu/document/download/9d96fbf3-4d85-4ad0-9483-c77ce348111d_en?filename=EIC%20Accelerator%20guide%20for%20applicants_WP26.pdf",
+            "what": "guidelines PDF: EIC Accelerator Guide for applicants V6.0, 19 November 2025"
+          },
+          {
+            "url": "https://eic.ec.europa.eu/document/download/52598755-1351-4b54-b46b-e2682d0a3aec_en?filename=EIC-Work-Programme-2026.pdf",
+            "what": "guidelines PDF: EIC Work Programme 2026 (Accelerator submission and evaluation, Table 8 award criteria, Annex 2 admissibility and documents)"
+          },
+          {
+            "url": "https://eic.ec.europa.eu/document/download/dc379cf9-2917-4f92-824d-64ea3a116df2_en?filename=Annexes%20for%20the%20EIC%20Accelerator%20full%20proposal%20%28WP2026%29.zip",
+            "what": "templates: Step 2 application form V2.1 09.07.2026, detailed budget table, implementation plan, letter of intent, financial plan"
+          },
+          {
+            "url": "https://webgate.ec.europa.eu/funding-tenders-opportunities/display/OM/Electronic+proposal+submission",
+            "what": "guidelines: Portal Online Manual on electronic submission (EU Login, PIC, wizard steps, no re-edit for continuously open calls)"
+          },
+          {
+            "url": "https://webgate.ec.europa.eu/funding-tenders-opportunities/display/IT/Submit",
+            "what": "guidelines: Portal IT How-To 'Submit a proposal' (Submit button, e-receipt, withdraw; continuous calls cannot be changed after submission)"
+          }
+        ],
+        "unclear": [
+          "The portal URL above is the 2026 short-proposal topic; it stops accepting proposals on 4 November 2026 at 17h, after which the 2027 topic's submission link applies (not yet published)",
+          "The HORIZON-EIC-2026-ACCELERATOR-01 short-proposal topic closes on 4 November 2026 at 17h; the next topic HORIZON-EIC-2027-ACCELERATOR-01 opens in November 2026 on a date not yet announced, and its form version may differ",
+          "The exact Step 1 Part A questions (CEO fields, the self-declaratory questions) are only visible inside the submission system; the public Part A PDF is a generic example ('FSTSB ver 1.00'), so field names may differ",
+          "NCP consent: the Part B template lists 'Consent for data sharing with NCP' among the mandatory documents, while the guide says you 'may' give consent; the template for it is only in the submission system",
+          "No video file format or size limit is published; only the 3-minute and three-person limits",
+          "Language of the written proposal is not stated for Step 1; the template is in English, the Step 2 Part A form asks for an English abstract if the proposal is in another language, and the guide says the video may be in any EU language with subtitles",
+          "Draft retention period in the submission system is not stated"
+        ],
+        "verified": "2026-10-17",
+        "ai_disclosure": "The Step 1 Part B template requires applicants to verify AI-generated content, list sources, check for plagiarism and disclose which generative AI tools were used and how. A proposal the assistant helped draft must say so."
+      },
       "notes": "Four-step process: short application (any time, batched first Tuesday monthly), full application (2026 batching dates written on the page as 7/01/2026, 04/03/2026, 06/05/2026, 08/07/2026, 02/09/2026, 04/11/2026, all 17:00 Brussels time; remote result in 8-9 weeks), interview with the EIC Jury (an interview session is organised after each second batch; results 2-3 weeks after the interview week), then grant agreement signature and due diligence for the investment component (decided within 2-6 months). Only one application at a time; a new one only after results of the previous. Grant only is provided once per company during Horizon Europe 2021-2027. Mid-caps (up to 499 employees) can apply for investment only; UK applicants grant only; third-country applicants must relocate before Step 2. Two strands: Accelerator Open (any field of technology, EUR 414 million budget in 2026) and Accelerator Challenges (pre-defined topics, EUR 220 million in 2026). Top-ranked full proposals corresponding to 2.5 times the available grant budget are invited to interview; proposals above the 13/15 threshold that are not funded receive a Seal of Excellence. Fast Track (existing Horizon projects) and Plug-In (certified national programmes) schemes go straight to the full application stage. The page does not state an open or closed status; it lists the 2026 cut-offs and links to the portal topic. Re-read the status page before quoting any 2027 date.",
       "founder_cost": "none",
       "stages": [
@@ -3520,6 +3824,133 @@
         "Open science: the Terms of Reference say you commit to publish results, the Access Policy exempts SMEs doing private innovation; ask aif.access@eurohpc-ju.europa.eu what an SME must publish",
         "Live partition availability is only visible inside the portal"
       ],
+      "application": {
+        "portal": "https://access.eurohpc-ju.europa.eu/calls/60",
+        "login": "Own account on the EuroHPC Peer-Review portal (email and password, no EU Login or other SSO in the portal code): registration asks first name, last name, the organisation's official email address, a password of at least 12 characters with one lowercase, one uppercase and one symbol, a tick 'I accept the terms of use and privacy policy', and a Google reCAPTCHA the founder solves; the account is activated through an email confirmation link",
+        "languages": [
+          "en"
+        ],
+        "sections": [
+          {
+            "title": "Eligibility self-assessment",
+            "asks": "Self-declared eligibility: an industry organisation, commercial company, SME or startup established in an EU Member State or associated country, a Principal Investigator employed there at submission with a contract valid at least 3 months after the allocation ends, civilian purpose, compliance with the AI Act, and no running EuroHPC allocation for the same proposal.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Ethics self-assessment",
+            "asks": "An ethics self-assessment form on ethical AI in line with the EU AI Act; proposals that are not eligible stop here.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Organisation status",
+            "asks": "The organisation's valid VAT number and, if it has one, its Participant Identification Code (PIC) from the EU Funding & Tenders Portal.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Principal Investigator (project lead) contact details",
+            "asks": "The PI's contact details, kept identical across all forms, using professional email addresses only.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Relevance of the proposal",
+            "asks": "A short application explaining the relevance of the proposal to the call (AI activities needing a small allocation, for industrial innovation).",
+            "limit": "none stated"
+          },
+          {
+            "title": "Technical feasibility",
+            "asks": "Technical data on the methods, software and tools showing the work is feasible on the requested AI Factory system; this data is mandatory at submission and a proposal without it is administratively rejected.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Requested resources",
+            "asks": "One system/partition out of JUPITER Booster, Arrhenius GPU, MN5 ACC, Leonardo Booster, LUMI-G, Discoverer GPU, MeluXina GPU or Vega GPU, and an allocation period of 1, 2 or 3 months; the amount is a fixed 5 000 GPU hours on every partition.",
+            "limit": "one system; fixed 5 000 GPU hours"
+          }
+        ],
+        "criteria": [
+          {
+            "name": "Eligibility check",
+            "weight": "not stated",
+            "scale": "pass/fail",
+            "what_scores_high": "Controlled by the self-assessment of eligibility criteria and the ethics self-assessment; proposals that are not eligible do not proceed."
+          },
+          {
+            "name": "Technical assessment by the requested AI Factory",
+            "weight": "not stated",
+            "scale": "pass/fail",
+            "what_scores_high": "Proposals are granted access based on their technical capability; they must pass the technical assessment of feasibility to access the system."
+          },
+          {
+            "name": "Innovation",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "The Terms of Reference say innovation of the application will be the decisive factor of the final allocation decision; allocations are otherwise first-come-first-served until the call's reserved resources are exhausted."
+          }
+        ],
+        "budget": {
+          "template": "none: no money is requested; the system, period and fixed GPU hours are chosen in the online form",
+          "funding_rate": "Access is free of charge provided that the eligibility criteria and terms of access are respected",
+          "rules": [
+            "Resources can be requested on a single system only",
+            "Allocation period of 1, 2 or 3 months",
+            "Fixed allocation of 5 000 GPU hours per application on every listed partition (hour table image on the call page)",
+            "No project extensions and no additional resources",
+            "Not for production usage; the main emphasis is foundational AI model training or fine-tuning, and only a small, well-justified proportion of time for inference",
+            "Usage is monitored monthly; under-usage must be justified and repeated under-usage cuts the allocation",
+            "Partition availability may be limited by demand; the portal warns if the selected partition is no longer available for the cut-off"
+          ]
+        },
+        "declarations": [
+          "Eligibility self-assessment (company/SME/startup status, country, PI employment contract, civilian purpose, AI Act compliance, no double-awarding)",
+          "Ethics self-assessment (ethical AI per the AI Act)",
+          "At registration: 'I accept the terms of use and privacy policy'",
+          "Commitment to publish the results except confidential parts and to reference EuroHPC JU and the AI Factory with the prescribed acknowledgement sentence",
+          "Commitment to a final report on the EuroHPC template within 3 months of the allocation end, which EuroHPC may publish one year after the allocation ends",
+          "Commitment to contribute to EuroHPC dissemination activities at least once over two years after the allocation and to accept interview requests",
+          "After award, before access: sign the AI Factory's Acceptable Use Policy"
+        ],
+        "submit_action": "On the last step of the form the 'Submit' button (earlier steps use 'Next'), then a confirmation dialog 'Submit the proposal' / 'Are you sure you want to submit this proposal?'. All mandatory fields must be filled before it can be submitted; only submitted proposals are considered.",
+        "draft_save": "Yes: a 'Save Changes' button saves the proposal as a draft that can be reopened from the dashboard. The portal code shows the warning 'This draft proposal will be deleted soon. If you want to keep it please contact support.' once a draft is more than 9 months old (it counts one year from creation minus three months), so drafts appear to be kept about one year; no guideline states this.",
+        "form_readable_without_login": false,
+        "sources": [
+          {
+            "url": "https://www.eurohpc-ju.europa.eu/playground-access-ai-factories_en",
+            "what": "call page (status Open, permanent deadline model, short application, hour table image: 5 000 GPU hours fixed on all eight partitions)"
+          },
+          {
+            "url": "https://www.eurohpc-ju.europa.eu/document/download/bd7aa666-bdf3-4436-b5ec-0b34a781e817_en?filename=Terms%20of%20Reference%20-%20AIF%20Access%20Calls.pdf",
+            "what": "guidelines PDF: Terms of Reference V3 31/03/2026 (eligibility, assessment, terms of access, how to apply, tips)"
+          },
+          {
+            "url": "https://www.eurohpc-ju.europa.eu/document/download/30614065-6dd6-4206-8065-fc97948e5e2c_en?filename=EuroHPC%20JU%20Access%20Policy%20-%20Version%202025.12.pdf",
+            "what": "guidelines PDF: Access Policy December 2025 (sections 1.5, 1.6, 3.3.1)"
+          },
+          {
+            "url": "https://www.eurohpc-ju.europa.eu/ai-factories/faqs-ai-factories_en",
+            "what": "FAQ: all information is submitted in the online form"
+          },
+          {
+            "url": "https://www.eurohpc-ju.europa.eu/document/download/312c2b36-169f-4a93-8921-bffe7d860cf7_en?filename=EuroHPC_AIF_Playground_Access-Final_Report.docx",
+            "what": "template: post-award final report"
+          },
+          {
+            "url": "https://api.access.eurohpc-ju.europa.eu/v2/calls/published",
+            "what": "form JSON: public call list (call 60 = EHPC-AIF-2026PG 'EuroHPC AI Factory Playground call', open 2026-01-21 to 2026-12-31 22:59 UTC); /v2/calls/60 returns 401 without login; /v2/calls/60/documents returns an empty list"
+          },
+          {
+            "url": "https://access.eurohpc-ju.europa.eu/main-f0648542ded733686e34.js",
+            "what": "portal JavaScript: registration fields, reCAPTCHA, Save Changes / Next / Submit buttons, submit confirmation and draft deletion warning texts"
+          }
+        ],
+        "unclear": [
+          "The exact field names, order and any character limits of the online form: the call's form definition (/v2/calls/60) needs a login, so the sections above are reconstructed from the Terms of Reference and the Access Policy, not from the form",
+          "The call page says 'templates are provided' and the Access Policy says applicants must use the templates provided from the portal, but the public documents list for call 60 is empty and the Terms of Reference describe Playground as an online form only; whether any upload is asked is not visible without login",
+          "No scoring scale or threshold is published for Playground; the 0-5 scale and 3/6 thresholds in the Terms of Reference apply to Large Scale only",
+          "Open science: the Terms of Reference say applicants commit to publish results (except confidential parts), while the Access Policy exempts SME users doing private innovation from the open-science approach",
+          "Draft retention is only inferred from the portal's own code, not stated in any guideline"
+        ],
+        "verified": "2026-10-17"
+      },
       "notes": "Continuously open with no cut-off dates; the page says access can be granted within two working days. Process from the Terms of Reference V3 (31/03/2026): eligibility check by self-assessment plus ethics self-assessment, then technical assessment by the requested AI Factory, then first-come-first-served until the call's reserved resources are exhausted. Innovation is the decisive factor of the final decision. One Playground award per project lead at a time; no extensions and no additional resources; final report due three months after the allocation ends; results must be published except confidential parts and EuroHPC JU plus the AI Factory acknowledged; only proposals in English, with a civilian purpose and compliant with the AI Act; no double-awarding with a running EuroHPC allocation. The organisation proves its status with a valid VAT number and, if applicable, a PIC. The hour table on the page is an image: 5 000 GPU hours on every listed partition (read 2026-10-15); partition availability may be limited by demand. Apply Now on the page links to the portal root; the portal is a JavaScript app so the call number could not be verified from outside it. Questions: aif.access@eurohpc-ju.europa.eu. The 2026 call is portal /calls/60 (EHPC-AIF-2026PG), open until 31 December 2026 per the portal's public call list; no 2027 call is announced. After award: sign the AI Factory's Acceptable Use Policy at onboarding; final report on the EuroHPC template within 3 months after the allocation, with energy use and carbon footprint; acknowledge EuroHPC JU and the AI Factory in publications.",
       "founder_cost": "none"
     },
@@ -4014,8 +4445,99 @@
         "Cloud credit and training credit amounts are not published; preferred pricing is a rebate with no figure",
         "The form beyond the business email step sits behind the NVIDIA account login",
         "The embedded form on nvidia.com/startups shows a maintenance banner; use programs.nvidia.com/phoenix/application",
-        "Whether a product that calls a hosted LLM API counts as a clear use case for NVIDIA technology; ask Inception or explain it in the application"
+        "Whether a product that calls a hosted LLM API counts as a clear use case for NVIDIA technology; ask Inception or explain it in the application",
+        "The two-contact rule and the NVIDIA-account-on-business-email rule were read on the application page on 2026-10-15 but could not be re-read without a browser on 2026-10-17"
       ],
+      "application": {
+        "portal": "https://programs.nvidia.com/phoenix/application",
+        "login": "The application page opens with a single 'Business Email' field and a 'Sign Up / Login' button; the page code rejects generic domains (gmail.com, yahoo.com, hotmail.com, outlook, icloud.com, protonmail.com, gmx.com and others, plus .edu and .ac.uk) and role aliases (info, admin, support, contact, hello, sales, team, ceo, cto, founder, ai and others) before it sends the founder on to sign up or log in; the rest of the form is behind that sign-in",
+        "sections": [
+          {
+            "title": "Business email (entry step)",
+            "asks": "A personal business email on the company's own domain; generic providers and role aliases are blocked by the page.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Details about the business and products",
+            "asks": "Details about your business and products, used for personalised recommendations and benefits; the FAQ asks applicants to show a clear use case for NVIDIA technology.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Incorporation date",
+            "asks": "The company's incorporation date; unincorporated companies cannot apply and members must be under 10 years old.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Funding status",
+            "asks": "Funding status, used as an indicator of maturity to decide which members fit VC introductions; revenue is not required.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Company pitch deck",
+            "asks": "A pitch deck showing the company's mission, solutions and unique value in the market.",
+            "limit": "none stated"
+          }
+        ],
+        "criteria": [
+          {
+            "name": "Membership criteria",
+            "weight": "not stated",
+            "scale": "pass/fail",
+            "what_scores_high": "A working website, official incorporation, less than 10 years old, a clear use case for NVIDIA technology, and actively operated by at least one founder."
+          },
+          {
+            "name": "Excluded organisation types",
+            "weight": "not stated",
+            "scale": "pass/fail",
+            "what_scores_high": "Not a consulting or outsourced development firm, a company associated with cryptocurrency, a cloud service provider, a reseller or distributor, or a public company."
+          }
+        ],
+        "budget": {
+          "template": "none: membership program, no budget",
+          "funding_rate": "Free: no application fees, membership fees or equity",
+          "rules": [
+            "Keep product and company details updated in the portal to remain eligible for benefits",
+            "Preferred GPU pricing is a rebate deducted from the standard supplier price on a subset of enterprise GPUs; NVIDIA does not sell directly to members"
+          ]
+        },
+        "attachments": [
+          {
+            "name": "Company pitch deck",
+            "required": true,
+            "template": "none",
+            "limit": "none stated"
+          }
+        ],
+        "declarations": [
+          "Not visible: the form after the business-email step is behind sign-in, so its consent and privacy checkboxes could not be read"
+        ],
+        "submit_action": "Not visible without sign-in; the entry step's button is 'Sign Up / Login'. NVIDIA says it reaches out after reviewing the application.",
+        "draft_save": "Not stated on the pages read",
+        "form_readable_without_login": false,
+        "sources": [
+          {
+            "url": "https://www.nvidia.com/en-us/startups/",
+            "what": "call page with FAQ (criteria, exclusions, incorporation date, funding status, pitch deck, no fees, no deadlines or cohorts); https://www.nvidia.com/en-us/startups/faq/ redirects here"
+          },
+          {
+            "url": "https://programs.nvidia.com/phoenix/application",
+            "what": "application entry page (Salesforce site): only the business-email step is public"
+          },
+          {
+            "url": "https://programs.nvidia.com/phoenix/webruntime/view/4449e56043c0533b842fad6944c8bafe/prod/en-US/application_view",
+            "what": "form code: 'Business Email' field, 'Sign Up / Login' button, blocked email aliases and domains"
+          }
+        ],
+        "unclear": [
+          "All application fields after the business-email step sit behind sign-in; the sections above come from the FAQ, not the form, so field names, limits and order are unknown",
+          "Two requirements in the current record could not be confirmed on any page read today: 'unique contact details for two contacts' and 'an NVIDIA account registered with the business email'",
+          "No review timeline is stated on the current page",
+          "The embedded form on nvidia.com/startups is a maintenance contact form ('Our systems are under planned maintenance'), not the application; it asks name, business email, organisation, industry, job title, location and preferred language",
+          "No captcha was found in the entry step's code today (the page's security policy allows Google reCAPTCHA)",
+          "No page states the language of the application form"
+        ],
+        "verified": "2026-10-17"
+      },
       "notes": "No application fees, membership fees, equity, deadlines or cohorts; apply regardless of funding stage; NVIDIA reaches out after reviewing the application, no timeline stated. Cloud credits and DLI credits are described without amounts; preferred pricing is a rebate deducted from the standard supplier price on a subset of enterprise GPUs; Capital Connect is based on eligibility. The FAQ does not state a work-email-on-own-domain requirement; the form on the startups page asks for a Business Email Address. The application page is JavaScript-rendered with a captcha, so the single-field form could not be verified today. Cloud credits do not pay an LLM API invoice. No fees, deadlines or cohorts; NVIDIA contacts you after review. Keep product and company details updated in the member portal to stay eligible for benefits.",
       "founder_cost": "none"
     },
@@ -4092,6 +4614,166 @@
         "Founders tier: 1 000 USD stated, 'select startups may qualify for up to 5 000 USD' with no criteria; Portfolio amounts depend on the provider and are not published",
         "The FAQ answer on why applications are declined is a broken placeholder"
       ],
+      "application": {
+        "portal": "https://aws.amazon.com/startups/join?destination=/credits/apply",
+        "login": "AWS Builder ID verified by email, then a one-time AWS Activate membership profile and application using the business email on the startup's domain, then the startup's AWS account (root or IAM admin, on a paid plan) linked to the Builder ID in the AWS Management Console and verified there ('Verify your account'). The pages disagree on the Builder ID email: the credits page says create it with your professional email, the step-by-step guide and FAQ say your personal email; on the agent-staging route the staged application is bound to the email entered and only a Builder ID on that same email can claim it, so there it must be the business email. An ID-document check through a Trulioo-hosted link may be requested by email afterwards",
+        "sections": [
+          {
+            "title": "Step 1: Sign in or create your AWS Builder ID",
+            "asks": "Create or sign in with an AWS Builder ID and verify it via the confirmation email.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Step 2: Complete your AWS Activate profile",
+            "asks": "One-time membership profile about the startup; use the business email address matching the startup's domain for both the profile and the credit application.",
+            "limit": "none stated"
+          },
+          {
+            "title": "Step 3: Choose your credit tier",
+            "asks": "Activate Founders (self-funded, no Org ID) or Activate Portfolio (enter the confidential, case-sensitive Organization ID from your Activate Provider, or apply through the provider's email invite with the same email address).",
+            "limit": "Org ID 4-5 letters and numbers"
+          },
+          {
+            "title": "Step 4: Company basics",
+            "asks": "Company name, a 1-2 sentence company description, founding date (exact day), HQ country, city, postcode and state.",
+            "limit": "name 3-100 characters; description 30-250 characters; postcode up to 11 characters"
+          },
+          {
+            "title": "Step 4: About the applicant",
+            "asks": "Applicant's business email, first and last name, phone, job title (CEO, CTO, ... list), current role (list) and whether the applicant is a founder.",
+            "limit": "phone 7-15 digits"
+          },
+          {
+            "title": "Step 4: Team and company size",
+            "asks": "Number of employees (1-10, 11-25, 26-50, 50-100, 100+), industry (fixed list), startup industries (fixed list) and up to 3 founders with name, email and title.",
+            "limit": "startup industries 1-10 values; founders up to 3"
+          },
+          {
+            "title": "Step 4: Product",
+            "asks": "Product stage (ideating/building, launched and iterating, scaling), product launch date, whether and how the product uses AI/ML, how users interact with it (web, mobile, API, hardware, ...) and customer type (consumer, business, public sector).",
+            "limit": "fixed choices"
+          },
+          {
+            "title": "Step 4: AWS usage",
+            "asks": "Years of AWS experience, share of cloud spend on AWS, and AWS services of interest.",
+            "limit": "fixed choices"
+          },
+          {
+            "title": "Step 4: Goals and interests",
+            "asks": "Top ways AWS can help (e.g. reducing burn rate, building scalable architecture, raising capital) and technology topics of interest.",
+            "limit": "at least 3 goals"
+          },
+          {
+            "title": "Step 4: Web presence",
+            "asks": "Company website URL, the applicant's personal LinkedIn profile URL and a public startup profile (Crunchbase, AngelList, Product Hunt, company LinkedIn page).",
+            "limit": "full https URLs; at least one"
+          },
+          {
+            "title": "Step 4: Funding",
+            "asks": "Current funding round (bootstrapped, pre-seed, seed, angel, no funding, Series A, ...), date of the most recent funding round (most recent close date), valuation band and marketing budget band.",
+            "limit": "fixed choices; exact date"
+          },
+          {
+            "title": "Step 5-6: Link and verify your AWS account",
+            "asks": "Create or log in to the startup's primary AWS account with the business email, select 'Link my AWS account', then 'Verify your account' in the console until it shows 'Accounts linked successfully'.",
+            "limit": "one Builder ID per AWS account; each startup needs its own AWS account"
+          },
+          {
+            "title": "Step 7: Review and submit your application",
+            "asks": "Double-check funding stage and email domains, then submit; a confirmation email follows.",
+            "limit": "none stated"
+          }
+        ],
+        "criteria": [
+          {
+            "name": "Eligibility check",
+            "weight": "not stated",
+            "scale": "pass/fail",
+            "what_scores_high": "Pre-Series B (Series B or later is declined), founded in the last 10 years, AWS account on a paid tier plan and in good standing, and new to Activate Credits or asking for more than previously received across all your AWS accounts."
+          },
+          {
+            "name": "Startup verification (website and domain)",
+            "weight": "not stated",
+            "scale": "pass/fail",
+            "what_scores_high": "A fully functioning company website or public profile, startup details (including name) AWS can verify, and the email on the AWS account matching the domain used in the application; free email providers are not accepted."
+          },
+          {
+            "name": "Provider affiliation (Portfolio only)",
+            "weight": "not stated",
+            "scale": "pass/fail",
+            "what_scores_high": "A valid Org ID, the same email the provider has on file, the provider confirming the affiliation by answering AWS's verification email within 30 days, and the most recent funding round within the last 12 months."
+          },
+          {
+            "name": "Internal review by the AWS business team",
+            "weight": "not stated",
+            "scale": "not stated",
+            "what_scores_high": "Not described; AWS may accept or reject any application in its sole discretion."
+          }
+        ],
+        "budget": {
+          "template": "none: no budget; you select a credit tier/package in the form",
+          "funding_rate": "Promotional credits in USD: Founders starts at 1 000 USD, select participants up to 5 000 USD; Portfolio up to 200 000 USD with a provider Org ID",
+          "rules": [
+            "Credits are subject to the AWS Promotional Credit Terms & Conditions",
+            "If you already received Activate Credits, the new award is the current offer minus the previous credits",
+            "Only one application at a time; if two are submitted, the smaller one is automatically rejected",
+            "Credits typically expire within 1-2 years depending on the package; the expiry date shows in Billing > Credits"
+          ]
+        },
+        "attachments": [
+          {
+            "name": "Government ID document and selfie for identity verification (only if AWS emails a verification request; done on a Trulioo-hosted link, never by email)",
+            "required": false,
+            "template": "none",
+            "limit": "none stated"
+          }
+        ],
+        "declarations": [
+          "Credits are subject to the AWS Promotional Credit Terms & Conditions; whether the form shows a tick box for them is not visible without login",
+          "Identity verification on request is voluntary, but declining it means the application is rejected"
+        ],
+        "submit_action": "Step 7 'Review and submit your application': click submit; a confirmation email follows and the status appears on the Credit Application Status page (https://aws.amazon.com/startups/credits/status). Applications cannot be edited after submission; to correct one, contact AWS to cancel it, unlink the AWS account from the Builder ID and submit a new application. AWS also offers an official 'Apply using your AI agent' route: an agent stages the application through a public staging API and the founder opens a one-time presubmission link, signs in with the Builder ID on the same email and submits it on startups.aws.com.",
+        "draft_save": "Yes: signed in with the Activate account you can save a draft and the membership saves your place at the last completed step; the status widget shows 'DRAFT'. No retention period stated. A staged application created by an agent expires after 24 hours if the founder does not claim it.",
+        "form_readable_without_login": false,
+        "sources": [
+          {
+            "url": "https://startups.aws.com/join?destination=/credits/apply",
+            "what": "application entry (the aws.amazon.com join link redirects here)"
+          },
+          {
+            "url": "https://aws.amazon.com/startups/credits/",
+            "what": "call page: tiers, eligibility, four-step how-to-apply, 5-10 business days"
+          },
+          {
+            "url": "https://aws.amazon.com/startups/learn/applying-for-aws-activate-credits-a-step-by-step-guide",
+            "what": "guidelines: step-by-step application guide (04 June 2026), 7 steps and the startup details asked"
+          },
+          {
+            "url": "https://startups.aws.com/faq",
+            "what": "FAQ: how to apply, drafts, no edits after submission, 7-10 business days, identity verification, one application at a time; the page also embeds the application-status reason codes"
+          },
+          {
+            "url": "https://aws.amazon.com/aws-startups/credits/apply-using-your-ai-agent/",
+            "what": "call page: official 'Apply using your AI agent' route"
+          },
+          {
+            "url": "https://startups.aws.com/startups/resource/apply-prompt/apply-credits.md",
+            "what": "form definition: field list, types, limits and allowed values of the Credits Staging API (read as data; the API was not called)"
+          }
+        ],
+        "unclear": [
+          "The signed-in application form itself was not seen; the field list comes from AWS's staging-API instruction file and the step-by-step guide, so labels, order and which fields are mandatory in the web form may differ (the API requires only email)",
+          "Review time differs: 5-10 business days on the credits page, 7-10 business days in the FAQ and guide",
+          "The FAQ answer to 'Why wasn't my credits application approved?' is still a broken placeholder ('$23'); reasons are only visible as status reason codes",
+          "The FAQ says applications are open to startups 'up to and including Series A' while the credits page says 'Pre-series B'; same meaning, different wording",
+          "Whether the form asks the founder to tick acceptance of the Promotional Credit Terms is not visible without login",
+          "Builder ID email: 'professional email' on the credits page versus 'personal email address' in the step-by-step guide and FAQ; the agent-staging route requires the same email for the staged application and the Builder ID",
+          "The agent-apply page lists 'an AWS account on a paid support plan' as a requirement, while the credits page says 'AWS Account on Paid Tier Plan' and the FAQ says free account plans are not eligible; a paid account plan, not a purchased AWS Support plan, is what the eligibility text names",
+          "Language: the startups.aws.com site offers English, Bahasa Indonesia, Deutsch, Español, Français, Italiano, Português, Japanese and Korean as interface languages; no page states which languages the application answers may be written in"
+        ],
+        "verified": "2026-10-17",
+        "agent_path": "AWS's official 'Apply using your AI agent' route: the assistant stages the application through AWS's public Credits Staging API (field list at https://startups.aws.com/startups/resource/apply-prompt/apply-credits.md; only the email is required), AWS returns a one-time presubmission link, and the founder opens it within 24 hours, signs in with the Builder ID on the same business email, reviews and submits on startups.aws.com. Staging sends the founder's data to AWS, so ask the founder before you call it."
+      },
       "notes": "Three tiers on 2026-10-15: Activate Founders (self-funded) starts at 1 000 USD and select participants may qualify for up to 5 000 USD; Activate Portfolio (pre-Series B) up to 200 000 USD but only with an Organization ID from an Activate Provider, so the Portfolio tier is partner-locked (thousands of VC firms and accelerators are providers, e.g. Andreessen Horowitz, Sequoia, Y Combinator; list at https://aws.amazon.com/startups/providers); AWS Credits for AI Startups 200 000 USD+ is invite only after Portfolio, via the account manager. General eligibility as written: pre-Series B, founded in the last 10 years, AWS Account on Paid Tier Plan, and either new to Activate Credits or requesting more credits than previously received. Credits are in USD and subject to the AWS Promotional Credit Terms (https://aws.amazon.com/activate/terms/); the page does not state an expiry period. Kiro Startup Credits exist for eligible startups without current Activate Credits. Applications were open on 2026-10-15 (Apply now buttons live). Applications cannot be edited after submission, only cancelled and resubmitted. Credits exclude Marketplace, Route 53 registration and upfront Reserved Instance and Savings Plan fees. AWS FAQ 2026-10-16: credits do not cover AWS Marketplace 'with the exception of charges incurred through the use of third-party foundation models available on Amazon Bedrock'; credits page: 'AWS Activate Credits can also be used for third-party models on Amazon Bedrock.' Founders tier: 'Apply directly if you're bootstrapped or self-funded'.",
       "founder_cost": "none"
     },
@@ -4160,6 +4842,122 @@
         "Start tier asks for 'plans to seek venture funding soon' and a 'digital-native' startup; neither is defined",
         "Expiry of Scale credits is set at issuance and only shown in the console"
       ],
+      "application": {
+        "portal": "https://cloud.google.com/startup/apply",
+        "login": "Google account sign-in (the apply page redirects to accounts.google.com); Google's best-practices sheet says identity verification is the first step of applying. Apply with the startup's business email on the same domain as the public website, and have a Google Cloud billing account whose owner uses that same email domain",
+        "sections": [
+          {
+            "title": "Business email",
+            "asks": "The startup business email; personal addresses (gmail.com, yahoo.com) are not accepted and the email domain must match the public website domain (a matching Workspace mailbox can be created if needed).",
+            "limit": "none stated"
+          },
+          {
+            "title": "Google Cloud billing account ID",
+            "asks": "The active 18-character billing account ID where credits will be deposited; it is auto-populated from the Google Cloud account tied to the business email, or you give the email of the right Cloud account or enter the ID manually (not a project ID, project number or payments profile ID).",
+            "limit": "18 characters, format like ABC123-DEF456-GHI789"
+          },
+          {
+            "title": "Proof of funding (funded startups)",
+            "asks": "Links to publicly available online sources showing the equity investment (news articles, press releases, Pitchbook, Dealroom, Crunchbase, investor portfolio pages or blog posts); stealth startups verify through their investor and its Google contact.",
+            "limit": "links only; no pitch decks or funding documents"
+          },
+          {
+            "title": "Tier matching",
+            "asks": "Google matches the startup to the Start tier (pre-funded, working MVP, founded within 24 months) or the Scale tier (pre-seed to Series A institutional equity, founded within 5 years); the AI program link targets AI-first Scale startups building on Gemini.",
+            "limit": "none stated"
+          }
+        ],
+        "criteria": [
+          {
+            "name": "Start tier selection criteria",
+            "weight": "not stated",
+            "scale": "pass/fail at Google Cloud's discretion",
+            "what_scores_high": "A digital-native technology startup with a working MVP, a clear business model and plans to seek venture funding soon, founded within the last 24 months, with no Google Cloud credits beyond the free trial."
+          },
+          {
+            "name": "Scale tier selection criteria",
+            "weight": "not stated",
+            "scale": "pass/fail at Google Cloud's discretion",
+            "what_scores_high": "Recent startup equity funding from pre-seed to Series A by an institutional investor or common Web3 funding sources, founded within the last 5 years, not more than 5 000 USD in prior Google Cloud credits, and funding verification if in stealth."
+          },
+          {
+            "name": "AI-first (AI program)",
+            "weight": "not stated",
+            "scale": "case-by-case",
+            "what_scores_high": "AI built into the startup's foundational structure and strategy, not only as a productivity or bolt-on layer; uses or plans to use Gemini as a foundation of the primary product; pre-seed/seed within five years or Series A within 12 months."
+          },
+          {
+            "name": "Domain and billing verification",
+            "weight": "not stated",
+            "scale": "pass/fail",
+            "what_scores_high": "Company website domain matches the application email domain and the email domain associated with the billing account."
+          },
+          {
+            "name": "Excluded types",
+            "weight": "not stated",
+            "scale": "pass/fail",
+            "what_scores_high": "Not IPO'd or acquired, not an educational institution, government entity, nonprofit, personal blog or content, dev shop, consultancy, agency, cryptocurrency mining company or company distributing tokens contrary to regulatory guidance."
+          }
+        ],
+        "budget": {
+          "template": "none: no budget; the tier and credit amount are set by Google",
+          "funding_rate": "Start: 2 000 USD credits valid 12 months. Scale: year 1 100 % up to 100 000 USD (AI-first up to 250 000 USD), year 2 20 % of Google Cloud spend up to a further 100 000 USD",
+          "rules": [
+            "Private equity, government innovation grants, prize funding, crowdfunding, angel and friends-and-family money do not qualify for Scale but may be evaluated for Start",
+            "Credits apply to Google Cloud services and select offerings; third-party models are billed directly and not covered",
+            "Credits are linked to the billing account ID submitted in the application",
+            "Wait 48 hours after creating a billing ID before applying (best-practices sheet)"
+          ]
+        },
+        "declarations": [
+          "Not visible: the form is behind Google sign-in, so any consent or terms checkboxes could not be read"
+        ],
+        "submit_action": "Not visible without sign-in. Decision usually within a few business days; manual review can take 10 days or more. If rejected or in stealth, email the Account Manager or cloudstartupsupport@google.com.",
+        "draft_save": "Not stated on the pages read",
+        "form_readable_without_login": false,
+        "sources": [
+          {
+            "url": "https://cloud.google.com/startup/faq",
+            "what": "FAQ: application process (billing ID, email domain, funding proof, stealth, timing, rejection), exclusions"
+          },
+          {
+            "url": "https://cloud.google.com/startup/pre-funded",
+            "what": "call page: Start tier selection criteria and benefits"
+          },
+          {
+            "url": "https://cloud.google.com/startup/early-stage",
+            "what": "call page: Scale tier selection criteria and credit structure"
+          },
+          {
+            "url": "https://cloud.google.com/startup/ai",
+            "what": "call page: AI program eligibility"
+          },
+          {
+            "url": "https://cloud.google.com/startup/onboarding",
+            "what": "guidelines: account setup before applying; credits linked to the billing account ID in the application"
+          },
+          {
+            "url": "https://services.google.com/fh/files/misc/best_practices_gfscp.pdf",
+            "what": "guidelines PDF: '5 steps for applying to the Cloud Program' (undated): identity verification first, email/domain match, billing ID format, billing owner domain, accepted funding proof"
+          },
+          {
+            "url": "https://cloud.google.com/startup/apply",
+            "what": "application page: redirects to Google sign-in"
+          },
+          {
+            "url": "https://cloud.google.com/startup/apply?pt=AI#application-form",
+            "what": "application link used by the AI program page"
+          }
+        ],
+        "unclear": [
+          "The application form itself was not readable (Google sign-in), so field names, order, limits, declarations and the submit button label are unknown",
+          "The best-practices PDF is undated and partly outdated: it says 'founded within 10 years' and that Series A must be within one year, while the current tier pages say Start within 24 months and Scale within 5 years",
+          "What the identity verification step involves is not described",
+          "Whether a draft can be saved is not stated",
+          "No page states the language of the application form"
+        ],
+        "verified": "2026-10-17"
+      },
       "notes": "Start tier (https://cloud.google.com/startup/pre-funded): digital-native startups with a working MVP, a clear business model and plans to seek venture funding soon; founded within the last 24 months; no Google Cloud credits beyond the free trial; 2 000 USD plus 12 months Google Workspace Business Plus and 200 USD Google Skills credits. Scale tier (https://cloud.google.com/startup/early-stage): recent startup equity funding from pre-seed to Series A by an institutional investor or common Web3 funding sources (SAFEs count; private equity, government innovation grants, prize funding, crowdfunding, angel and friends-and-family money do not qualify for Scale but may for Start); founded within the last 5 years; not more than 5 000 USD in prior Google Cloud credits; funding verification if in stealth. Scale adds 12 000 USD Enhanced Support credits for one year, 12 months Workspace Business Plus, 600 USD per month Google Maps credit for one year and 500 USD Skills credits. AI-first variant (https://cloud.google.com/startup/ai): uses or plans to use Gemini as the foundation of the primary product; pre-seed/seed rounds within the last five years and Series A within the last 12 months. Series B+ startups get custom solutions, not program credits. FAQ exclusions: companies that have IPO'd or been acquired, educational institutions, government entities, nonprofits, personal blogs or content, dev shops. The apply page requires a Google sign-in. Applications open on 2026-10-15. Credits cover Google Cloud services only, not Marketplace or third-party models; Start credits last 12 months, Scale runs over 2 years with year 2 paid as 20 percent of spend. Separate applications for the Workspace and Maps benefits.",
       "founder_cost": "none"
     },

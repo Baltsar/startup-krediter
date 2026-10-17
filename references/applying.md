@@ -42,6 +42,11 @@ in applications and holds the applicant responsible for every statement, so
 the founder must read and stand behind each section before they mark it
 complete.
 
+Check `application.ai_disclosure`. Some programs require the applicant to say
+which AI tools helped (EIC Accelerator); others allow AI help and hold the
+applicant responsible for every statement (Vinnova). Tell the founder which,
+and add the disclosure the program asks for to the draft.
+
 ## C2. Draft, section by section
 
 Follow the form's own order and headings,
@@ -88,7 +93,17 @@ the founder's working folder (`ansokan-<program>.md`, `budget-<program>.xlsx`
 or `.csv`) and say where. Otherwise give them in the chat, section by section,
 ready to paste. List what is still `[FYLL I]`.
 
-## C6. Fill the form in the browser, if you have one
+## C6. Use the program's own agent route, if it has one
+
+Some programs publish a route for an AI agent to prepare the application
+(`application.agent_path`). AWS Activate does: the assistant stages the
+application through AWS's public staging API, AWS returns a one-time link, and
+the founder opens it, signs in and submits. Prefer such a route to filling a
+web form. Staging sends the founder's details to the program, so show the
+founder what you will send and ask before you send it; then give them the link
+and say how long it is valid.
+
+## C6b. Fill the form in the browser, if you have one
 
 If this session has a
 browser tool (Playwright, Claude in Chrome, the in-app browser, computer use),

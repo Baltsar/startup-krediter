@@ -152,6 +152,8 @@
         },
         "declarations": {"type": "array", "items": {"type": "string"}},
         "submit_action": {"type": "string"},
+        "agent_path": {"type": "string", "description": "An official route the program offers for an AI agent to prepare the application, and how the founder completes it."},
+        "ai_disclosure": {"type": "string", "description": "What the program says about AI tools in applications: allowed, must be disclosed, or forbidden."},
         "draft_save": {"type": "string"},
         "form_readable_without_login": {"type": "boolean"},
         "sources": {
