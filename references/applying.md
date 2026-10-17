@@ -92,7 +92,7 @@ the template's order.
 ## C4. Review it as the assessor would
 
 Assess the draft against each
-criterion on the program's own scale when it publishes one (Innobooster 1 to 6,
+criterion on the program's own scale when it publishes one (Innobooster a six-point scale,
 EuroHPC thresholds of 3 per criterion); when it publishes none, as Vinnova
 Innovativa Startups does (it only sorts applications into rejected, drawn by
 lot and granted), assess each criterion in words, one line each, with the weakest sentence quoted and a concrete
