@@ -145,6 +145,13 @@ CONFIRMATIONS: dict[str, dict[str, tuple[str, str]]] = {
         "no": ("noen på lønningslisten, med svensk arbeidsgiveravgift, som bruker minst halvparten av sin faktiske arbeidstid og 15 timer i måneden på FoU", "Gründere teller bare hvis selskapet betaler dem lønn: betaler selskapet lønn, med svensk arbeidsgiveravgift, til noen som jobber direkte med forskning eller utvikling minst halvparten av sin faktiske arbeidstid og minst 15 timer i måneden?"),
         "da": ("en på lønningslisten, med svenske arbejdsgiverafgifter, der bruger mindst halvdelen af sin faktiske arbejdstid og 15 timer om måneden på F&U", "Stiftere tæller kun med, hvis virksomheden betaler dem løn: betaler virksomheden løn, med svenske arbejdsgiverafgifter, til en person, der arbejder direkte med forskning eller udvikling mindst halvdelen af sin faktiske arbejdstid og mindst 15 timer om måneden?"),
     },
+    "eur_200k_raised_or_revenue": {
+        "en": ("at least EUR 200 000 raised, or yearly revenue over EUR 200 000", "Has the company raised at least EUR 200 000 in total, from investors or non-dilutive sources such as grants, or does it have yearly revenue over EUR 200 000?"),
+        "sv": ("minst 200 000 EUR i insamlat kapital, eller årsomsättning över 200 000 EUR", "Har bolaget tagit in minst 200 000 EUR totalt, från investerare eller som bidrag och annan icke-utspädande finansiering, eller har det en årsomsättning över 200 000 EUR?"),
+        "fi": ("vähintään 200 000 EUR kerättyä rahoitusta tai yli 200 000 EUR vuosiliikevaihto", "Onko yhtiö kerännyt yhteensä vähintään 200 000 EUR sijoittajilta tai laimentamattomana rahoituksena, kuten avustuksina, tai onko sen vuosiliikevaihto yli 200 000 EUR?"),
+        "no": ("minst 200 000 EUR hentet, eller årlig omsetning over 200 000 EUR", "Har selskapet hentet minst 200 000 EUR totalt, fra investorer eller som tilskudd og annen ikke-utvannende finansiering, eller har det en årlig omsetning over 200 000 EUR?"),
+        "da": ("mindst 200.000 EUR rejst, eller årlig omsætning over 200.000 EUR", "Har virksomheden rejst mindst 200.000 EUR i alt, fra investorer eller som tilskud og anden ikke-udvandende finansiering, eller har den en årlig omsætning over 200.000 EUR?"),
+    },
     "need_owner": {
         "en": ("an established need owner committed to the project", "Do you have an established company or organisation committed as need owner in the project?"),
         "sv": ("en etablerad behovsägare som förbundit sig till projektet", "Har ni ett etablerat bolag eller en organisation som förbundit sig som behovsägare i projektet?"),

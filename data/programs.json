@@ -1872,6 +1872,133 @@
       "founder_cost": "repay"
     },
     {
+      "id": "innovasjon-norge-linc",
+      "name": "LINC - Launchpad for Innovative Norwegian Companies (Innovasjon Norge, FFI and NADIC)",
+      "country": "NO",
+      "kind": "accelerator",
+      "need": [
+        "support"
+      ],
+      "who": "Norwegian companies with technology, products or services relevant to the defence of Norway, the United States and allied countries; aimed at early-stage, growth-stage and mature dual-use companies. Eight companies per cohort.",
+      "what": "A nine-month competence-building programme for the US defence market, run by FFI, Innovasjon Norge and the Norwegian-American Defense Industry Council (NADIC). Each company is matched with US service providers and gets coaching on US business culture and pitch material, introductions to investors, industry partners and military challenge owners, legal and IP consultations, training on Norwegian and US military requirements, procurement and defence funding, and access to Norwegian and US military end users for prototyping, demonstrations and field exercises. Also two NADIC conference tickets, a basic exhibition package at AUSA and Sea-Air-Space, a kick-off in Oslo and two programme weeks in the US. No cash is paid out.",
+      "amount": {
+        "text": "No cash; programme services Innovasjon Norge estimates at over 750 000 NOK per company, against an own contribution of 50 000 NOK plus the company's own travel",
+        "currency": "NOK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "NO"
+        }
+      ],
+      "apply_url": "https://ffiprogram.powerappsportals.com/en-US/",
+      "status_url": "https://www.innovasjonnorge.no/en/tjeneste/linc-launchpad-for-innovative-norwegian-companies",
+      "next_step": "The 2026-27 cohort closed on 20 April 2026 and no next intake is posted. Ask Innovasjon Norge's defence-industry adviser (einar.irgens.gustafson@innovationnorway.no) whether a 2027-28 cohort is planned and when it opens; when it does, the founder registers interest through FFI's portal.",
+      "reference": "references/nordic-grants.md#innovasjon-norge-linc",
+      "last_verified": "2026-10-17",
+      "availability": "closed",
+      "founder_cost": "fee",
+      "sectors": [
+        "defence"
+      ],
+      "apply_requirements": [
+        "You register interest in FFI's portal (ffiprogram.powerappsportals.com), not on Innovasjon Norge's Min side; the form asks for company details, a contact person, ownership, board composition, readiness levels, IP protection, defence-sector experience, international ties, subcontractors and product descriptions",
+        "Own contribution of 50 000 NOK, fixed in a Scope of Work agreed after a non-binding scoping phase with the partners, together with your other commitments (resources, travel)",
+        "All travel, accommodation and subsistence for the Oslo kick-off and the two US programme weeks are paid by the company; a bigger trade-show presence and conferences that are not pre-approved also cost extra",
+        "Only eight companies are selected per cohort, by NADIC, FFI and Innovasjon Norge from the applicant pool",
+        "By registering interest the company confirms that it is in a sound financial position, is not an 'undertaking in difficulty' under state-aid rules, and that the information it gives is correct",
+        "Innovasjon Norge's responsible-business rules apply: written documentation of your risk assessment and handling of responsible business conduct (OECD guidelines, UN guiding principles) on request, and exclusion of projects linked to controversial weapons and of weapons sales to states in armed conflict; the services follow Innovasjon Norge's standard terms",
+        "Time for a programme that runs from August to May: monthly progress meetings with NADIC, a kick-off in Oslo in early September, and US programme weeks in October and April"
+      ],
+      "unclear": [
+        "Whether a 2027-28 cohort will run and when its intake opens; on 2026-10-17 the page still shows the 20 April 2026 deadline and names no next round. Ask Innovasjon Norge's contact, einar.irgens.gustafson@innovationnorway.no",
+        "What counts as a 'Norwegian company': the page sets no legal form, size, age or registration rule. Ask Innovasjon Norge whether a sole trader (ENK), a NUF branch or a Norwegian AS with foreign owners qualifies",
+        "Which of Innovasjon Norge's four standard-terms documents (advisory services, events, joint stand, delegations) governs the fee, cancellation and refunds; the page links only to the list. Ask the contact before you sign the Scope of Work",
+        "Whether the programme services count as state aid (for example de minimis) to the company; the page asks only for the undertaking-in-difficulty confirmation. Ask Innovasjon Norge",
+        "How the responsible-business exclusion of 'weapons sales to states in armed conflict' applies to a defence company that sells to, for example, Ukraine; the linked page does not say. Ask the contact before you register"
+      ],
+      "notes": "Service page read 2026-10-17 with WebFetch and its full text checked in the in-app browser; curl gets HTTP 403 from Innovasjon Norge's security check. Application deadline '20 April 2026'; time period 'August 2026 – May 2027'; cost 'Own contribution: NOK 50,000'. Norwegian page: 'Egenandel kr 50 000'. Target group (Målgruppe): 'Bedrifter med teknologi, produkter eller tjenester knyttet til norske, amerikanske og allierte lands forsvar', especially dual-use companies at early, growth and mature stages. Selection: 'NADIC, FFI and IN will select eight (8) companies from the applicant pool'; then a non-binding Scope Development & Definition phase that ends in a Scope of Work (deliverables, milestones, time and cost, the company's commitments including the participation fee, resources and travel); then about nine months of delivery with the selected US service providers, supported by NADIC. Calendar of the closed cohort: kick-off in Oslo early September 2026, US programme week 1 in October 2026 (optional AUSA), US programme week 2 in April 2027 with the Annual Norwegian-American Defense Conference (optional Sea-Air-Space). Value claim: 'estimated total value delivered by the programme: > NOK 750,000 per company'. 'Participating companies must cover all their own travel, accommodation and subsistence expenses.' Operational support from the defence attache's office at the Norwegian embassy in Washington. The page makes responsible business a condition and links Innovasjon Norge's 'Bærekraft og ansvarlig næringsliv' page (https://www.innovasjonnorge.no/en/artikkel/baerekraft-og-ansvarlig-naeringsliv): customers must 'provide written documentation of their risk assessment and management of responsible business conduct', follow the OECD guidelines and UN guiding principles, and exclusions follow the Government Pension Fund Global's guidelines, including 'controversial weapons' and weapons sales to states in armed conflict. Closed on 2026-10-17 because the deadline has passed and no next intake is named. Recorded as an accelerator with founder_cost fee because the company pays the own contribution and receives no cash; amount has no max so the matcher never reads the service value as cash. Only the country rule is encoded because the page sets no other hard requirement."
+    },
+    {
+      "id": "vinnova-civil-military-acceleration",
+      "name": "Vinnova and Försvarsmakten: Acceleration av civil-militära innovationer 2027 (Acceleration of civil-military innovations)",
+      "country": "SE",
+      "kind": "grant",
+      "need": [
+        "money",
+        "support"
+      ],
+      "who": "Swedish small and medium-sized aktiebolag (EU SME definition) operating in Sweden, with an innovative technology solution developed for a civilian market that can be adapted for military use and builds on one or more of NATO's nine Emerging and Disruptive Technologies. One company per application; no collaborative projects.",
+      "what": "Grant for an innovation project of at most nine months to test, verify or further develop technology, production methods, business models and customer relationships for both civilian and military markets, followed by a mandatory six-month accelerator programme: a training package from Försvarshögskolan (Swedish Defence University) and business development from an accelerator that Vinnova helps match. A joint effort of Vinnova and Försvarsmakten, financed by Försvarsmakten within the Civil-Military Innovation Programme (CMIP).",
+      "amount": {
+        "text": "Up to 1 000 000 SEK for the innovation project (part A); a granted company may also get up to 150 000 SEK to cover the mandatory accelerator programme (part B). Start-up aid and de minimis aid can cover up to 100 percent of project costs; R&D aid covers 35 to 80 percent depending on company size and activity",
+        "max": 1000000,
+        "currency": "SEK"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "eq",
+          "value": "SE"
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company"
+        },
+        {
+          "field": "employees",
+          "op": "lt",
+          "value": 250
+        },
+        {
+          "any": [
+            {
+              "field": "revenue_meur",
+              "op": "lte",
+              "value": 50
+            },
+            {
+              "field": "balance_meur",
+              "op": "lte",
+              "value": 43
+            }
+          ]
+        }
+      ],
+      "apply_url": "https://ansok.vinnova.se/utlysning/82eceff0-5447-47c0-1517-08df033a9d82?opencall=true",
+      "status_url": "https://www.vinnova.se/e/civil-militara-synergier/acceleration-av-civil-militara-innovationer-2027/",
+      "next_step": "This round closed on 6 October 2026 at 14:00 and no next round is announced. Watch Vinnova's civil-military listing (https://www.vinnova.se/e/civil-militara-synergier/) and ask cmip.acceleration@vinnova.se whether a new round is planned; earlier rounds opened in June 2024, May 2025 and August 2026. When one opens, prepare the SME declaration, project description, CVs and project summary on Vinnova's templates, then the founder submits in Vinnova's e-service.",
+      "reference": "references/nordic-grants.md#vinnova-civil-military-acceleration",
+      "last_verified": "2026-10-17",
+      "availability": "closed",
+      "founder_cost": "none",
+      "sectors": [
+        "defence"
+      ],
+      "apply_requirements": [
+        "A Swedish aktiebolag operating in Sweden and an SME by the EU definition, declared on Vinnova's Modellförsäkran SMF form; partner and linked companies' figures count toward the size",
+        "The company is the only project party, and each company may submit one application in the round",
+        "Mandatory attachments on Vinnova's templates, filled in completely: a project description of at most ten pages in 11 pt, one-page CVs for the project manager and every key person, and a project summary",
+        "Vinnova shares the project summary with Försvarsmakten, FMV, FOI and FHS; write it with that in mind",
+        "If you seek de minimis aid, attach the certificate of de minimis aid with the application; de minimis aid from any funder over three years counts toward the 300 000 EUR cap",
+        "Consultant and licence costs at most 20 percent of the budget, indirect costs at most 30 percent of salary costs, and all costs booked on a separate project code",
+        "Project start between 4 and 11 January 2027, not before you submit, and finished by 15 October 2027",
+        "A six-month accelerator programme and attendance at Vinnova's CMIP seminars and programme conferences are conditions of the grant; the part B money needs a supplementary application after the grant, in which you rank the accelerators, plus a certificate for innovation aid",
+        "Before the decision Vinnova checks employer registration at Skatteverket if you claim salaries (no retroactive registration), that the project manager is employed by the company, no significant debts at Kronofogden and share capital not half used up; it may ask an SME to show it can finance the project",
+        "Application in Swedish or English in Vinnova's e-service, marked complete (klarmarkerad) before 14:00 on the closing day; the first payment comes only after Vinnova has received the start report and the signed participant approval"
+      ],
+      "unclear": [
+        "Whether a new round will open, and when; Vinnova's listing and open-data API show only closed rounds (closed 17 Sep 2024, 9 Sep 2025 and 6 Oct 2026). That is a yearly pattern, not an announcement; ask cmip.acceleration@vinnova.se",
+        "The total budget and the number of grants are not stated; ask cmip.acceleration@vinnova.se",
+        "The NATO technology areas are in the call's focus and the assessment of potential, not in the formal requirements; ask the call contact whether a solution outside the nine areas is rejected outright",
+        "The dates list an information meeting on 5 October 2026 at 13:00, the day before closing, while the recordings section links an information meeting on 1 September; ask the call contact which one a future round follows",
+        "The login method for Vinnova's e-service is not stated on the call page"
+      ],
+      "notes": "Diarienummer 2026-01502, a round of Civil-militära synergier (2024-01511) in the Civil-militärt innovationsprogram (CMIP), financed by Försvarsmakten. Closed on 2026-10-17: 'Stängde den 6 oktober 2026 kl 14:00'. Opened 26 August 2026; decision 15 December 2026; projects start 4-11 January 2027 and end by 15 October 2027. 'Företag kan söka upp till 1 000 000 kr för utveckling och verifiering. Deltagande i ett acceleratorprogram är obligatorisk. Ytterligare bidrag upp till 150 000 kronor kan beviljas för deltagande i acceleratorprogrammet.' 'Sökande företag ska vara ett svenskt aktiebolag (AB) och bedriva verksamhet i Sverige.' 'I denna utlysning finansierar vi inte samverkansprojekt mellan flera företag.' Focus: civil solutions adaptable for military use, based on NATO's nine EDTs (AI, autonomous systems, quantum, biotechnology and human enhancement, space, hypersonic systems, new materials and manufacturing, energy and propulsion, next-generation communication networks). Aid bases, part A: start-up aid (article 22: under five years, fewer than 50 employees, not listed, no profit distributed, not formed by merger) or de minimis, both up to 100 percent, or R&D aid (article 25) at 45-70 percent for small and 35-60 percent for medium companies, up to 50-80 percent with bonus grounds. Part B: innovation aid for SMEs (article 28), up to 100 percent while under 220 000 EUR over three years. Assessment by at least three evaluators on Potential, Aktörer, Genomförbarhet and Nytta av acceleratorprogram; Vinnova and Försvarsmakten agree which projects go to decision and may apply a portfolio strategy. 'Observera att företag som beviljas finansiering inte garanteras framtida affärer eller samarbete med Försvarsmakten eller andra försvarsmyndigheter.' The English page (https://www.vinnova.se/en/calls-for-proposals/civil-military-synergies/acceleration-of-civil-military-innovations-2027) is machine-translated and refers to the Swedish text; the call text PDF (registered 2026-08-24) matches the Swedish page. SME rule encoded as in the eurostars record: fewer than 250 employees and turnover at most 50 MEUR or balance sheet at most 43 MEUR, from the EU definition PDF the call links. No live block: the parent call 2024-01511 holds every civil-military round (Baltic Sea, test and evaluation, ecosystem, collaborative projects), and scripts/vinnova_api.py 2024-01511 returns 2026-02020, an extra round of the test-and-evaluation call. Earlier rounds of this call: 2024-01609 (closed 17 Sep 2024), 2025-00980 (closed 9 Sep 2025), plus extra rounds 2025-04375 and 2025-04678 in November 2025 with no public apply link. The apply link comes from Vinnova's open-data API for round 2026-01502."
+    },
+    {
       "id": "eic-accelerator",
       "name": "EIC Accelerator",
       "country": "EU",
@@ -2015,6 +2142,223 @@
         "series_a",
         "later"
       ]
+    },
+    {
+      "id": "eudis-business-accelerator",
+      "name": "EUDIS Business Accelerator (EU defence accelerator, Cohort 4, spring 2027)",
+      "country": "EU",
+      "kind": "accelerator",
+      "need": [
+        "support",
+        "money"
+      ],
+      "who": "Start-ups and scale-ups registered in an EU Member State or Norway, with executive management there and not controlled from outside the EU or Norway, that aim to enter or grow in the European defence market with a defence or dual-use product fitting one of the programme's technology themes. They need a functioning prototype or product with early sales, pilots or pre-commercial validation, at least EUR 200 000 raised or yearly revenue over EUR 200 000, an established management team with full-time staff covering technology and business development, and a company age of at most 20 years.",
+      "what": "An 8-month defence accelerator run for the European Commission (DG DEFIS) by Starburst, Civitta, Ignity and VTT: over 300 hours of expert coaching per company, five on-site bootcamps of 2-3 days across Europe, guidance to test facilities, and meetings with defence end-users, industry and investors. Each company that completes the programme gets a non-dilutive seed voucher of EUR 120 000, paid in two tranches (20/80) against a scorecard set at kick-off; top performers get an extra reward voucher. 20 companies per cohort; the Commission takes no equity or IP.",
+      "amount": {
+        "text": "Seed voucher of EUR 120 000 per company that completes the 8-month programme, paid 20/80 against a scorecard; an extra reward voucher for top performers (no amount stated for Cohort 4)",
+        "max": 120000,
+        "currency": "EUR"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "in",
+          "value": [
+            "SE",
+            "FI",
+            "DK",
+            "NO",
+            "AT",
+            "BE",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "EE",
+            "FR",
+            "DE",
+            "GR",
+            "HU",
+            "IE",
+            "IT",
+            "LV",
+            "LT",
+            "LU",
+            "MT",
+            "NL",
+            "PL",
+            "PT",
+            "RO",
+            "SK",
+            "SI",
+            "ES"
+          ]
+        },
+        {
+          "field": "legal_form",
+          "op": "eq",
+          "value": "company"
+        },
+        {
+          "field": "age_years",
+          "op": "lte",
+          "value": 20
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "eur_200k_raised_or_revenue"
+        }
+      ],
+      "apply_url": "https://tally.so/r/68YyOY",
+      "status_url": "https://www.eudis-business-accelerator.eu/",
+      "next_step": "Read the Cohort 4 application guidelines on eudis-business-accelerator.eu (and join the online webinar on 29 October 2026 if useful), fill in the Commission's ownership-and-control declaration template, prepare an evaluation deck of at most 15 slides and, optionally, a two-minute video pitch on the programme's recording platform, then submit the application form linked from the site before 16 November 2026 at 23:59 CET. The founder submits the form.",
+      "reference": "references/eu-grants.md#eudis-business-accelerator",
+      "last_verified": "2026-10-17",
+      "availability": "open",
+      "founder_cost": "none",
+      "stages": [
+        "pre_seed",
+        "seed",
+        "series_a",
+        "later"
+      ],
+      "sectors": [
+        "defence"
+      ],
+      "apply_requirements": [
+        "Application form linked from eudis-business-accelerator.eu, submitted before 16 November 2026 at 23:59 CET; if a company submits several, only the last one counts",
+        "Ownership-and-control declaration on the Commission's template, uploaded in the form; a company controlled from outside the EU or Norway needs a guarantee approved by its home state under Article 9(4) of the EDF Regulation",
+        "Evaluation deck of at most 15 slides: technology, value proposition, go-to-market, 2025 sales and 2026 target, team, mission readiness; a longer deck is not considered",
+        "Financial capability checked Yes/No: at least EUR 200 000 raised (dilutive or non-dilutive) or yearly revenue over EUR 200 000",
+        "An established management team and a core of full-time employees covering both technology and business development",
+        "A functioning prototype, product or service with initial traction (early revenue, pilots or pre-commercial validation) and a documented business plan",
+        "Choose one of three technology themes: autonomous systems and robotics, protection against drones and low-cost threats, or defence production, sustainment and logistics; the open disruptive-technology topic is only for proposals that fit none",
+        "If shortlisted among the top 40 (announced by 30 November 2026): a 7-minute pitch and 5 minutes of questions to the Commission and European Defence Agency board, 14-16 December 2026",
+        "If selected: 8 months from March 2027 with five on-site bootcamps of 2-3 days and mandatory attendance; resources used in the programme must be in the EU or Norway",
+        "The voucher is paid only if the full programme is completed, in tranches of 20 and 80 percent unlocked by the scorecard agreed with your lead coach at kick-off"
+      ],
+      "unclear": [
+        "The guidelines ask for at least EUR 200 000 in total funding, but the form asks whether you raised more than EUR 200 000 'in the past year'; ask contact@eudis-business-accelerator.eu which one counts",
+        "No amount is given for Cohort 4's top-performer reward; the Commission's EUDIS page gives EUR 50 000 for the top 3 of the 2026 cohorts. Ask the programme team",
+        "The pages do not say whether the EUR 120 000 voucher is paid as cash or against services, what it may buy beyond 'business growth, market expansion, and long term development', or who pays travel to the five bootcamps; ask contact@eudis-business-accelerator.eu",
+        "The Terms & Conditions make the person applying confirm being an adult 'EU or Norway citizen and resident'; a founder who is neither should ask the programme team whether a colleague can submit",
+        "The Terms & Conditions exclude activities 'related to' firearms and violence; a company building weapons should ask the programme team before applying",
+        "The form says the deadline is 23:59 CET, its confirmation text says 23:59 CEST; on 16 November Brussels is on CET, but do not leave submission to the last hour"
+      ],
+      "notes": "Cohort 4 (spring 2027) open on 2026-10-17. Operator homepage: 'Cohort 4 call for applications is open - Apply before November 16'. Timeline in the Cohort 4 guidelines: application period 5 October to 16 November 2026; webinar 29 October 2026; top 40 announced and pitch slots allocated by 30 November; online pitching 14-16 December 2026; announcement and onboarding 8 January 2027; kick-off March 2027. Form: 'You have until November 16, 2026 at 23:59 CET'. Eligibility check is Yes/No on four criteria (localization, technology theme relevance, financial capability, company maturity, 'Must be 20 years old or younger'); only applications meeting all four go on. Scoring: relevance for defence 25%, innovation 25%, problem to solution 20%, technology maturity for business engagements 20%, team 10%; financial stability is also assessed. 20 companies per cohort; two cohorts in 2027 (spring cohort 4 from March, fall cohort 5 from September). Implemented by Starburst Accelerator, Civitta, Ignity and VTT for DG DEFIS; registration is free; FAQ: 'you don't need to give up any equity'. EU Member States and Norway only, so Iceland is out; entities from Ukraine may join matchmaking only. The Commission's own page (eudis.europa.eu/eudis-tracks/business-accelerator_en) still shows 2026 cohort dates and the operator FAQ still describes Cohort 3 (deadline 30 May 2026); the operator homepage, the Cohort 4 guidelines PDF and the form are current."
+    },
+    {
+      "id": "edf-eudis-sme-calls",
+      "name": "European Defence Fund open SME calls (EUDIS non-thematic research and development actions)",
+      "country": "EU",
+      "kind": "grant",
+      "need": [
+        "money"
+      ],
+      "who": "SMEs (EU definition) registered in an EU Member State or Norway, with executive management there and not controlled from outside the EU or Norway, applying in a consortium of at least three independent applicants from three different eligible countries with an SME as coordinator. Development actions: all partners are SMEs. Research actions: SMEs and non-profit research organisations, with research organisations at most 40 percent of the requested grant. A single SME cannot apply.",
+      "what": "Two open, non-thematic EDF calls for disruptive defence knowledge, products and technologies in any area of defence interest from TRL 4, including adapting civil solutions to defence. Research actions (EDF-2026-LS-DIS-RA-SMERO-NT) are funded at 100 percent, at most EUR 5 million per proposal, 12-36 months. Development actions (EDF-2026-LS-DA-SME-NT) are funded at activity rates from 20 to 90 percent plus bonuses up to 100 percent, at most EUR 6 million per proposal, with the rest co-financed. Both are lump-sum grants, managed by the European Defence Agency; SME beneficiaries can also get business coaching.",
+      "amount": {
+        "text": "Research actions: 100 percent funding, at most EUR 5 000 000 per proposal. Development actions: at most EUR 6 000 000 per proposal at activity funding rates (baseline 20-90 percent, up to 100 percent with bonuses). 2026 topic budgets EUR 35 million (research) and EUR 30 million (development).",
+        "max": 6000000,
+        "currency": "EUR"
+      },
+      "eligibility": [
+        {
+          "field": "country",
+          "op": "in",
+          "value": [
+            "SE",
+            "FI",
+            "DK",
+            "NO",
+            "AT",
+            "BE",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "EE",
+            "FR",
+            "DE",
+            "GR",
+            "HU",
+            "IE",
+            "IT",
+            "LV",
+            "LT",
+            "LU",
+            "MT",
+            "NL",
+            "PL",
+            "PT",
+            "RO",
+            "SK",
+            "SI",
+            "ES"
+          ]
+        },
+        {
+          "field": "legal_form",
+          "op": "in",
+          "value": [
+            "company",
+            "sole_trader"
+          ]
+        },
+        {
+          "field": "employees",
+          "op": "lt",
+          "value": 250
+        },
+        {
+          "any": [
+            {
+              "field": "revenue_meur",
+              "op": "lte",
+              "value": 50
+            },
+            {
+              "field": "balance_meur",
+              "op": "lte",
+              "value": 43
+            }
+          ]
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "consortium_partner"
+        }
+      ],
+      "apply_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/programmes/edf",
+      "status_url": "https://eudis.europa.eu/eudis-tracks/sme-calls_en",
+      "next_step": "No SME call is open on 2026-10-17 and no 2027 topic is published yet. Watch the EUDIS SME-calls page and the EDF programme page on the Funding & Tenders Portal for the next work programme. Meanwhile find SME partners in two other eligible countries (the portal's partner search or your national EDF focal point), get a PIC and SME self-assessment for each, and line up co-financing and, for development work, Member State declarations. The coordinating SME submits on the portal.",
+      "reference": "references/eu-grants.md#edf-eudis-sme-calls",
+      "last_verified": "2026-10-17",
+      "availability": "closed",
+      "founder_cost": "none",
+      "sectors": [
+        "defence"
+      ],
+      "apply_requirements": [
+        "A consortium of at least three independent applicants from three different eligible countries (EU Member States or Norway), coordinated by an SME; a single SME cannot apply",
+        "Every beneficiary registered in the Participant Register (PIC) before submission, with the online SME self-assessment done by the deadline on accounts not older than 31/12/2024; validation by the Central Validation Service follows",
+        "Ownership-control declaration from every participant, associated partner and involved subcontractor; a missing one normally makes that participant ineligible",
+        "Development actions: costs the EDF does not cover must be co-financed, shown with signed co-financing declarations; design work needs capability requirements signed by at least two Member States; prototyping, testing, qualification or certification needs procurement-intent declarations signed by at least two Member States",
+        "Development actions must include design, system prototyping, testing, qualification, certification or increasing efficiency; generating knowledge alone cannot be funded",
+        "Research actions: research organisations get at most 40 percent of the requested grant, subcontracting at most 30 percent, and the work may not be limited to studies",
+        "Part B at most 50 pages for research and 100 pages for development, plus a detailed lump-sum budget table, participant information and a list of infrastructure, facilities, assets and resources located in eligible countries",
+        "Submission on the EU Funding & Tenders Portal by 17:00 Brussels time on the deadline day; in 2026 that was 29 September, with results in March 2027 and grant signature by 31 December 2027",
+        "Financial capacity check during grant preparation for each beneficiary requesting more than EUR 60 000, on documents such as profit and loss, balance sheet and business plan"
+      ],
+      "unclear": [
+        "No EDF work programme 2027 and no 2027 SME topic were published on 2026-10-17 (DG DEFIS lists work programmes up to 2026; the portal shows no EDF-2027 SME topic); ask DEFIS-EDF-PROPOSALS@ec.europa.eu or your national EDF focal point when the next SME calls open",
+        "The EUDIS SME-calls page says research actions get 'up to EUR 4 million', while the topic page and call document cap requests at EUR 5 000 000; plan on the call document and confirm with DEFIS-EDF-PROPOSALS@ec.europa.eu",
+        "The call's security section says no grant is signed 'until at least one of the beneficiaries in a consortium has facility security clearance'; whether that also applies to unclassified projects is not stated. Ask DEFIS-EDF-PROPOSALS@ec.europa.eu",
+        "Whether a startup without closed annual accounts passes the SME self-assessment and the financial capacity check is not stated; ask the EDF national focal point before building a consortium around it"
+      ],
+      "notes": "Closed on 2026-10-17. Both 2026 topics closed 29 September 2026 at 17:00 Brussels time; the portal's topic pages say 'The call EDF-2026-LS-DA-SME closed at 17.00 on 29 September. 54 proposals were submitted' and 279 for EDF-2026-LS-DIS-RA-SMERO. Openings were 11 February 2026 (development) and 15 April 2026 (research); evaluation September 2026 to March 2027. The EUDIS page: 'Every year there are two open and non-thematic SME R&D calls targeting SMEs and RTOs' and 'Can single SMEs apply? No.' The EDF 2026 work programme was adopted 17 December 2025; the EDF budget covers 2021-2027, and the indicative multiannual perspective 2026-2027 names no 2027 SME call date. Eligible countries per the EDF list of participating countries: EU Member States and Norway; 'Iceland will not participate in the EDF'. Ukrainian entities may apply as consortium members pending the association agreement signed 13 July 2026. Development funding rates (baseline / maximum with bonuses): integrating knowledge 65/100, studies 90/100, design 65/100, prototyping 20/55, testing 45/80, qualification 70/80, certification 70/80, increasing efficiency 65/100. Results in 2025: 16 SME-call proposals selected; 2024: 19; 2023: 17. Topic pages: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-DA-SME-NT and .../EDF-2026-LS-DIS-RA-SMERO-NT."
     },
     {
       "id": "eurohpc-playground",

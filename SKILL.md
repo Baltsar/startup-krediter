@@ -60,7 +60,7 @@ costs trust.
 | `stack` | `aws`, `gcp`, `azure`, `cloudflare`, `vercel`, `supabase`, `neon`, `mongodb`, `anthropic`, `openai`, `mistral`, `together`, `modal`, `lambda`, `runpod`, `huggingface`, `replicate`, `nvidia` | decides the credit doors |
 | `sector` | `ai`, `deeptech`, `energy`, `climate`, `health`, `fintech`, `saas`, `hardware`, `agriculture`, `defence`, `marine`, `transport`, `semiconductors` | calls tied to a topic stay out of the first answer unless the sector matches |
 | `has_vat`, `has_employment`, `has_work_email`, `has_website`, `has_developer`, `workload_defined`, `profit_distributed` | bool | EuroHPC and vendor gates |
-| `confirmed` | list of keys | requirements the founder confirms in words: `kth_affiliation`, `research_background`, `hpc_experience`, `region_skane`, `region_vgr`, `consortium_partner`, `need_owner` |
+| `confirmed` | list of keys | requirements the founder confirms in words: `kth_affiliation`, `research_background`, `hpc_experience`, `region_skane`, `region_vgr`, `consortium_partner`, `need_owner`, `no_earlier_bf_startup_funding`, `eip_competence_mix`, `se_rd_staff_on_payroll`, `eur_200k_raised_or_revenue` |
 | `need` | list of `money`, `compute`, `credits`, `support` | `gpu` is an alias of `compute`; `support` is free coaching or programs without cash. A founder asking for money does not get no-cash programs unless they ask for support too |
 | `need_eur` | number, EUR | how much money the founder says they need, converted to EUR; only when they name an amount. Doors that pay a small fraction of it rank lower |
 | `lang` | `sv`, `en`, `fi`, `no`, `da` | the founder's language; labels and questions come back in it |
