@@ -163,6 +163,7 @@ class Door:
     topic_match: bool = False
     undersized: bool = False
     also: list[dict] = dc_field(default_factory=list)
+    application: dict | None = None
     live: dict | None = None
     glyph: str = ""
 
@@ -423,6 +424,7 @@ def evaluate(program: dict, profile: dict, today: date, lang: str) -> Door:
         topic_match=bool(set(program.get("sectors") or []) & set(profile.get("sector") or [])),
         undersized=undersized(program, profile),
         foreign=bool(program.get("home_country")) and bool(profile_countries(profile)) and program.get("home_country") not in profile_countries(profile),
+        application=program.get("application"),
     )
 
 
@@ -683,9 +685,10 @@ def build_door(
     include_all: bool,
     live_fetch: Callable[[str], dict | None] | None,
     lang: str,
+    picked: bool = False,
 ) -> Door | None:
-    """The door for one record, or None when the record is irrelevant to the profile or blocked and hidden."""
-    if not is_relevant(program, profile):
+    """The door for one record, or None when the record is irrelevant to the profile or blocked and hidden. A picked door is always returned."""
+    if not picked and not is_relevant(program, profile):
         return None
     door = evaluate(program, profile, today, lang)
     if door.status == "blocked" and not include_all:
@@ -725,14 +728,29 @@ def run(
     include_all: bool = False,
     live_fetch: Callable[[str], dict | None] | None = None,
     top: int = DEFAULT_TOP,
+    door_id: str | None = None,
 ) -> dict:
-    """Raises MalformedRecord when a record lacks a field or holds a value the rules cannot read. top=0 returns every door in full."""
+    """Raises MalformedRecord when a record lacks a field or holds a value the rules cannot read. top=0 returns every door in full.
+
+    door_id returns that one program in full, blocked or not and whatever the
+    founder asked for, with its application block: the founder has picked it
+    and wants help applying, so relevance filters no longer apply.
+    """
+    if door_id is not None:
+        chosen = [program for program in programs if isinstance(program, dict) and program.get("id") == door_id]
+        if not chosen:
+            known = sorted(str(program.get("id")) for program in programs if isinstance(program, dict))
+            close = [ident for ident in known if door_id.split("-")[0] in ident][:8]
+            raise ValueError(f"no program with id {door_id!r}" + (f"; did you mean one of: {', '.join(close)}" if close else ""))
+        programs = chosen
+        raw_profile = {key: value for key, value in raw_profile.items() if key != "need"}
+        include_all, top = True, 0
     profile, warnings = normalize_profile(raw_profile)
     lang = profile.get("lang", i18n.DEFAULT_LANG)
     doors: list[Door] = []
     for index, program in enumerate(programs):
         try:
-            door = build_door(program, profile, today, include_all, live_fetch, lang)
+            door = build_door(program, profile, today, include_all, live_fetch, lang, picked=door_id is not None)
         except (KeyError, TypeError, ValueError) as exc:
             raise MalformedRecord(describe_malformed(program, index, exc)) from exc
         if door is not None:
@@ -777,6 +795,7 @@ def main(argv: list[str] | None = None, stdin: TextIO | None = None) -> int:
     parser.add_argument("--top", type=int, default=DEFAULT_TOP, help=f"doors returned in full, the rest under 'more' (default {DEFAULT_TOP}, 0 for all)")
     parser.add_argument("--programs", type=Path, default=PROGRAMS_PATH, help="path to programs.json")
     parser.add_argument("--today", type=date.fromisoformat, default=None, help="override today's date, YYYY-MM-DD")
+    parser.add_argument("--door", default=None, help="return this one program in full, with its application block, for helping the founder apply")
     args = parser.parse_args(argv)
     source = stdin if stdin is not None else sys.stdin
     try:
@@ -798,7 +817,7 @@ def main(argv: list[str] | None = None, stdin: TextIO | None = None) -> int:
         live_fetch = fetch_round
     try:
         programs = load_programs(args.programs)
-        result = run(raw, programs, args.today or date.today(), include_all=args.all, live_fetch=live_fetch, top=args.top)
+        result = run(raw, programs, args.today or date.today(), include_all=args.all, live_fetch=live_fetch, top=args.top, door_id=args.door)
     except ValueError as exc:  # unreadable file, wrong shape, or a MalformedRecord: one line, no traceback
         print(str(exc), file=sys.stderr)
         return 2

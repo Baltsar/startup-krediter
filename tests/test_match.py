@@ -663,3 +663,31 @@ def test_call_in_the_founders_sector_ranks_before_general_calls() -> None:
     assert [door["id"] for door in out["doors"]] == ["farm", "general"]
     assert match.normalize_profile({"legal_form": "ekonomisk förening"})[0]["legal_form"] == "company"
 
+
+
+# --- Stage C: one door with its application block ----------------------------
+
+
+def test_door_flag_returns_the_picked_door_in_full_even_when_blocked_or_foreign() -> None:
+    application = {"portal": "https://example.org/apply", "sources": [{"url": "https://example.org/guide"}], "verified": "2026-10-17", "sections": [{"title": "Project", "limit": "4 000 characters"}]}
+    grant = dict(SE_GRANT, application=application)
+    out = match.run({"country": "FI", "legal_form": "company", "age_years": 12, "need": ["credits"]}, [grant, EU_COMPUTE, CREDIT], TODAY, door_id="test-se-grant")
+    assert [d["id"] for d in out["doors"]] == ["test-se-grant"]
+    door = out["doors"][0]
+    assert door["status"] == "blocked"
+    assert door["application"]["sections"][0]["limit"] == "4 000 characters"
+    assert out["more"] == []
+
+
+def test_door_flag_with_unknown_id_names_close_matches() -> None:
+    with pytest.raises(ValueError, match="did you mean one of:") as info:
+        match.run({"country": "SE"}, PROGRAMS, TODAY, door_id="test-sweden")
+    assert "test-se-grant" in str(info.value)
+
+
+def test_cli_door_flag(capsys: pytest.CaptureFixture[str]) -> None:
+    stdin = io.StringIO(json.dumps({"country": "SE", "legal_form": "company"}))
+    assert match.main(["--programs", str(FIXTURE_PATH), "--today", "2026-10-15", "--door", "test-eu-compute"], stdin=stdin) == 0
+    out = json.loads(capsys.readouterr().out)
+    assert [d["id"] for d in out["doors"]] == ["test-eu-compute"]
+    assert out["doors"][0]["application"] is None
