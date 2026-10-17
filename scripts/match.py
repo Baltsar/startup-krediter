@@ -51,10 +51,10 @@ EU_ASSOCIATED = EU_MEMBERS | {
     "GE", "AM", "IL", "TN", "FO", "NZ",
 }
 
-NUMERIC_FIELDS = {"age_years", "employees", "revenue_msek", "balance_msek", "revenue_meur", "balance_meur", "funding_raised_usd"}
+NUMERIC_FIELDS = {"age_years", "employees", "revenue_msek", "balance_msek", "revenue_meur", "balance_meur", "funding_raised_usd", "need_eur"}
 INTEGER_FIELDS = {"employees"}
 BOOLEAN_FIELDS = {"vc_backed", "has_vat", "has_employment", "has_work_email", "has_website", "has_developer", "workload_defined", "profit_distributed"}
-LIST_FIELDS = {"stack", "sector", "vc_partner", "need", "confirmed"}
+LIST_FIELDS = {"stack", "sector", "vc_partner", "need", "confirmed", "denied"}
 COUNTRY_FIELDS = {"country", "residence_country"}
 TRUE_WORDS = {"true", "yes", "ja", "y", "1", "kyllä", "joo"}
 FALSE_WORDS = {"false", "no", "nej", "n", "0", "nei", "ei"}
@@ -76,6 +76,15 @@ SECTOR_ALIASES = {
     "climatetech": "climate", "climate_tech": "climate", "klimat": "climate", "klima": "climate", "ilmasto": "climate",
     "healthtech": "health", "medtech": "health", "life_science": "health", "lifescience": "health", "hälsa": "health",
     "helse": "health", "sundhed": "health", "terveys": "health", "energi": "energy", "energia": "energy", "fin_tech": "fintech",
+    "logistics": "transport", "logistik": "transport", "logistikk": "transport", "logistiikka": "transport",
+    "trucking": "transport", "road_transport": "transport", "mobility": "transport", "chips": "semiconductors",
+    "semiconductor": "semiconductors", "halvledare": "semiconductors", "ocean": "marine", "maritime": "marine",
+    "hav": "marine", "aquaculture": "marine", "havbruk": "marine", "fiskeoppdrett": "marine",
+    "agritech": "agriculture", "agtech": "agriculture", "agri": "agriculture", "farming": "agriculture",
+    "jordbruk": "agriculture", "lantbruk": "agriculture", "trädgård": "agriculture", "rennäring": "agriculture",
+    "landbruk": "agriculture", "landbrug": "agriculture", "maatalous": "agriculture",
+    "defense": "defence", "försvar": "defence", "forsvar": "defence", "puolustus": "defence", "military": "defence",
+    "dual_use": "defence",
 }
 NEED_ALIASES = {
     "gpu": "compute", "hpc": "compute", "gpu_hours": "compute", "gpu_timmar": "compute", "gpu_timer": "compute",
@@ -103,6 +112,8 @@ LEGAL_FORM_ALIASES = {
     "academic": "academia", "institute": "academia",
     "public_sector": "public", "offentlig": "public", "municipality": "public", "kommun": "public", "kommune": "public",
     "kunta": "public",
+    "ekonomisk_förening": "company", "cooperative": "company", "kooperativ": "company", "osuuskunta": "company",
+    "andelslag": "company", "samvirkelag": "company", "andelsselskab": "company",
     "enskild_firma": "sole_trader", "sole": "sole_trader", "enk": "sole_trader", "enkeltpersonforetak": "sole_trader",
     "toiminimi": "sole_trader", "enkeltmandsvirksomhed": "sole_trader",
     "individual": "none", "person": "none", "no_company": "none", "inget_bolag": "none", "ei_yhtiötä": "none",
@@ -147,7 +158,12 @@ class Door:
     home_country: str | None = None
     foreign: bool = False
     founder_cost: str = "none"
+    stage_mismatch: bool = False
+    topic_mismatch: bool = False
+    topic_match: bool = False
+    undersized: bool = False
     also: list[dict] = dc_field(default_factory=list)
+    application: dict | None = None
     live: dict | None = None
     glyph: str = ""
 
@@ -321,8 +337,16 @@ def evaluate_rule(rule: dict, profile: dict, lang: str = i18n.DEFAULT_LANG) -> R
             return RuleResult("failed", label, None)
         question = next((result.question for result in results if result.status == "unknown"), None)
         return RuleResult("unknown", label, question)
-    actual = profile.get(rule["field"])
     label = i18n.rule_label(rule, lang)
+    if rule["field"] == "confirmed" and rule["op"] == "contains":
+        # A founder confirms a requirement in words or says no to it. Not mentioning
+        # it is neither: confirming one key must not fail every other confirmation.
+        if rule["value"] in (profile.get("denied") or []):
+            return RuleResult("failed", label, None, "confirmed")
+        if rule["value"] in (profile.get("confirmed") or []):
+            return RuleResult("met", label, None, "confirmed")
+        return RuleResult("unknown", label, i18n.rule_question(rule, lang), "confirmed")
+    actual = profile.get(rule["field"])
     if actual is None:
         return RuleResult("unknown", label, i18n.rule_question(rule, lang), rule["field"])
     status = "met" if compare(rule["op"], actual, rule["value"]) else "failed"
@@ -403,7 +427,12 @@ def evaluate(program: dict, profile: dict, today: date, lang: str) -> Door:
         group=program.get("group"),
         home_country=program.get("home_country"),
         founder_cost=str(program.get("founder_cost", "none")),
+        stage_mismatch=stage_mismatch(program, profile),
+        topic_mismatch=topic_mismatch(program, profile),
+        topic_match=bool(set(program.get("sectors") or []) & set(profile.get("sector") or [])),
+        undersized=undersized(program, profile),
         foreign=bool(program.get("home_country")) and bool(profile_countries(profile)) and program.get("home_country") not in profile_countries(profile),
+        application=program.get("application"),
     )
 
 
@@ -438,13 +467,91 @@ def render_glyph(door: Door, lang: str) -> str:
 COST_RANK: dict[str, int] = {"none": 0, "repay": 1, "equity": 2, "fee": 3}
 
 
+def founder_stage(profile: dict) -> str | None:
+    """The founder's stage, or idea when they have no company and gave no stage."""
+    stage = profile.get("stage")
+    if stage in STAGES:
+        return str(stage)
+    if profile.get("legal_form") == "none":
+        return "idea"
+    return None
+
+
+def stage_mismatch(program: dict, profile: dict) -> bool:
+    """True when the program lists the stages it serves and the founder's known stage is not one of them.
+
+    An EU scale-up grant is formally open to two people with an idea, but
+    leading their answer with it sends them to the wrong door.
+    """
+    stages = program.get("stages")
+    stage = founder_stage(profile)
+    return bool(stages) and stage is not None and stage not in stages
+
+
+def topic_mismatch(program: dict, profile: dict) -> bool:
+    """True for a call tied to sectors the founder has not said they work in.
+
+    A Vinnova challenge on Baltic marine monitoring is open to any Swedish
+    company, but it should not lead an answer to a logistics founder, or to a
+    founder whose sector is unknown.
+    """
+    sectors = program.get("sectors")
+    if not sectors:
+        return False
+    return not set(sectors) & set(profile.get("sector") or [])
+
+
+# Rough EUR value of one unit of each currency in the data. Used only to order
+# doors by how much of the founder's stated need they can pay, never shown.
+EUR_PER_UNIT: dict[str, float] = {"EUR": 1.0, "SEK": 0.09, "NOK": 0.085, "DKK": 0.134, "ISK": 0.0072, "USD": 0.92}
+UNDERSIZED_SHARE = 0.2
+
+
+def undersized(program: dict, profile: dict) -> bool:
+    """True when the founder named how much they need and the door's maximum is under a fifth of it.
+
+    Farmers who need 1.5 MSEK should hear about the project grant before the
+    120 000 SEK grant for forming the group, even though both fit.
+    """
+    need = profile.get("need_eur")
+    amount = program.get("amount") or {}
+    rate = EUR_PER_UNIT.get(str(amount.get("currency")))
+    if not need or rate is None or not isinstance(amount.get("max"), (int, float)):
+        return False
+    return amount["max"] * rate < UNDERSIZED_SHARE * need
+
+
+def poor_fit(door: Door) -> bool:
+    """Doors that stay out of the full answer and go to `more`: closed, run from another country, wrong stage, wrong sector, or charging a fee."""
+    return (
+        door.availability == "closed"
+        or door.foreign
+        or door.stage_mismatch
+        or door.topic_mismatch
+        or door.founder_cost == "fee"
+    )
+
+
 def rank(doors: list[Door]) -> list[Door]:
-    """Open doors first: eligible, then unknown with the fewest open questions, then blocked. Doors run from another country than the founder's come after domestic ones, closed doors last. Ties keep data-file order.
+    """Open doors first: eligible, then unknown with the fewest open questions, then blocked. Doors run from another country than the founder's come after domestic ones, doors that pay a small fraction of the stated need after doors that can pay it, a call tied to the founder's own sector before general calls, closed doors last. Ties keep data-file order.
 
     A Swedish call that admits foreign startups is technically open to a Finnish
     founder, but leading a Finnish answer with it buries the Finnish doors.
     """
-    return sorted(doors, key=lambda door: (door.availability == "closed", door.foreign, COST_RANK.get(door.founder_cost, 0), RANK[door.status], len(door.unknown)))
+    return sorted(
+        doors,
+        key=lambda door: (
+            door.availability == "closed",
+            door.foreign,
+            door.stage_mismatch or door.topic_mismatch,
+            door.undersized,
+            not door.topic_match,
+            COST_RANK.get(door.founder_cost, 0),
+            door.availability != "open",
+            RANK[door.status],
+            len(door.unknown),
+        ),
+    )
 
 
 def collapse_groups(doors: list[Door]) -> list[Door]:
@@ -545,10 +652,12 @@ def pick_top(doors: list[Door], needs: list[str] | None, top: int) -> tuple[list
     """
     if top <= 0:
         return doors, []
+    good = [door for door in doors if not poor_fit(door)]
+    poor = [door for door in doors if poor_fit(door)]
     if not needs or len(needs) < 2:
-        return doors[:top], doors[top:]
+        return good[:top], good[top:] + poor
     shown: list[Door] = []
-    remaining = list(doors)
+    remaining = list(good)
     while len(shown) < top and remaining:
         progressed = False
         for need in needs:
@@ -562,7 +671,7 @@ def pick_top(doors: list[Door], needs: list[str] | None, top: int) -> tuple[list
                 break
         if not progressed:
             shown.append(remaining.pop(0))
-    return shown, remaining
+    return shown, remaining + poor
 
 
 
@@ -584,9 +693,10 @@ def build_door(
     include_all: bool,
     live_fetch: Callable[[str], dict | None] | None,
     lang: str,
+    picked: bool = False,
 ) -> Door | None:
-    """The door for one record, or None when the record is irrelevant to the profile or blocked and hidden."""
-    if not is_relevant(program, profile):
+    """The door for one record, or None when the record is irrelevant to the profile or blocked and hidden. A picked door is always returned."""
+    if not picked and not is_relevant(program, profile):
         return None
     door = evaluate(program, profile, today, lang)
     if door.status == "blocked" and not include_all:
@@ -611,6 +721,10 @@ def summary(door: Door) -> dict:
         "open_questions": len(door.unknown),
         "foreign": door.foreign,
         "founder_cost": door.founder_cost,
+        "stage_mismatch": door.stage_mismatch,
+        "topic_mismatch": door.topic_mismatch,
+        "undersized": door.undersized,
+        "poor_fit": poor_fit(door),
         "status_url": door.status_url,
     }
 
@@ -622,14 +736,29 @@ def run(
     include_all: bool = False,
     live_fetch: Callable[[str], dict | None] | None = None,
     top: int = DEFAULT_TOP,
+    door_id: str | None = None,
 ) -> dict:
-    """Raises MalformedRecord when a record lacks a field or holds a value the rules cannot read. top=0 returns every door in full."""
+    """Raises MalformedRecord when a record lacks a field or holds a value the rules cannot read. top=0 returns every door in full.
+
+    door_id returns that one program in full, blocked or not and whatever the
+    founder asked for, with its application block: the founder has picked it
+    and wants help applying, so relevance filters no longer apply.
+    """
+    if door_id is not None:
+        chosen = [program for program in programs if isinstance(program, dict) and program.get("id") == door_id]
+        if not chosen:
+            known = sorted(str(program.get("id")) for program in programs if isinstance(program, dict))
+            close = [ident for ident in known if door_id.split("-")[0] in ident][:8]
+            raise ValueError(f"no program with id {door_id!r}" + (f"; did you mean one of: {', '.join(close)}" if close else ""))
+        programs = chosen
+        raw_profile = {key: value for key, value in raw_profile.items() if key != "need"}
+        include_all, top = True, 0
     profile, warnings = normalize_profile(raw_profile)
     lang = profile.get("lang", i18n.DEFAULT_LANG)
     doors: list[Door] = []
     for index, program in enumerate(programs):
         try:
-            door = build_door(program, profile, today, include_all, live_fetch, lang)
+            door = build_door(program, profile, today, include_all, live_fetch, lang, picked=door_id is not None)
         except (KeyError, TypeError, ValueError) as exc:
             raise MalformedRecord(describe_malformed(program, index, exc)) from exc
         if door is not None:
@@ -674,6 +803,7 @@ def main(argv: list[str] | None = None, stdin: TextIO | None = None) -> int:
     parser.add_argument("--top", type=int, default=DEFAULT_TOP, help=f"doors returned in full, the rest under 'more' (default {DEFAULT_TOP}, 0 for all)")
     parser.add_argument("--programs", type=Path, default=PROGRAMS_PATH, help="path to programs.json")
     parser.add_argument("--today", type=date.fromisoformat, default=None, help="override today's date, YYYY-MM-DD")
+    parser.add_argument("--door", default=None, help="return this one program in full, with its application block, for helping the founder apply")
     args = parser.parse_args(argv)
     source = stdin if stdin is not None else sys.stdin
     try:
@@ -695,7 +825,7 @@ def main(argv: list[str] | None = None, stdin: TextIO | None = None) -> int:
         live_fetch = fetch_round
     try:
         programs = load_programs(args.programs)
-        result = run(raw, programs, args.today or date.today(), include_all=args.all, live_fetch=live_fetch, top=args.top)
+        result = run(raw, programs, args.today or date.today(), include_all=args.all, live_fetch=live_fetch, top=args.top, door_id=args.door)
     except ValueError as exc:  # unreadable file, wrong shape, or a MalformedRecord: one line, no traceback
         print(str(exc), file=sys.stderr)
         return 2

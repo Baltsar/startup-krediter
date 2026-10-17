@@ -1,0 +1,13 @@
+{"qid":"q02",
+ "programs":{"A":"Business Finland Research, development and piloting funding (turn 2); Sprint Grant (turn 1)","B":"Business Finland Sprint Grant (both turns), with R&D funding recommended in turn 2"},
+ "stoppers_total":{"A":30,"B":30},
+ "stoppers_stated":{"A":29,"B":12},
+ "factual_errors":{"A":[],"B":["Says the prior-funding restriction applies only to companies under 5 years old; the Sprint call blocks any company, regardless of age, that got Sprint/Tempo/R&D/NIY/DTA funding for the same solution","Says Business Finland R&D funding is intended for SMEs; the call is open to companies of all sizes (grant rates also given for mid-cap and large companies)"]},
+ "untraceable":{"A":["No euro upper limit on R&D funding (the call page publishes no cap, but does not say there is none)"],"B":["Over 200 Sprint applications in a short time during the pilot","R&D projects are typically hundreds of thousands of euros"]},
+ "best_first_pick":"B",
+ "missed_programs":{"A_missed":[],"B_missed":[]},
+ "absolute":{"A":{"A1":"pass","A2":"pass","A3":"pass","A4":"n/a","A5":"pass","A6":"n/a","A7":"pass","A8":"n/a"},
+             "B":{"A1":"pass","A2":"pass","A3":"pass","A4":"n/a","A5":"pass","A6":"n/a","A7":"pass","A8":"n/a"}},
+ "turn1_words":{"A":517,"B":425},
+ "verdict":"A",
+ "incomplete":false}

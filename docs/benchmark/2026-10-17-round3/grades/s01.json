@@ -1,0 +1,69 @@
+{
+ "qid": "s01",
+ "programs": {
+  "A": "Eurostars (Call 12, Vinnova funds the Swedish part)",
+  "B": "Vinnova Avancerad digitalisering: Cybersäkerhet, AI och resiliens"
+ },
+ "stoppers_total": {
+  "A": 14,
+  "B": 12
+ },
+ "stoppers_stated": {
+  "A": 8,
+  "B": 12
+ },
+ "factual_errors": {
+  "A": [
+   "FFI: says autumn-2026 calls are planned and exact dates are not published; ffisweden.se shows the autumn round closed 15 Sep 2026 with 108 applications",
+   "Tillämpad AI för industrin: 'oftast 3–12 MSEK per projekt'; the call allowed 2–10 MSEK per project",
+   "Eurostars: calls autumn 2025 the latest Swedish round; Vinnova has since run spring 2026 (Call 10) and autumn 2026 (Call 11, closed 10 Sep 2026). The 5 MSEK cap is still right",
+   "Innovativa Startups: 'färre än 10 anställda'; the official rule is at most 10 full-time equivalents"
+  ],
+  "B": []
+ },
+ "untraceable": {
+  "A": [
+   "Commercial GPU prices (L40S about 1 USD/h, H100 2–4 USD/h at specialist clouds, 7–12 USD/h at AWS/Google/Azure); the only source is Hostinger, a third party",
+   "Avancerad digitalisering 'pågår 2025–2027'; the program site only says state funding runs through 2027"
+  ],
+  "B": []
+ },
+ "best_first_pick": "A",
+ "missed_programs": {
+  "A_missed": [
+   "Vinnova Avancerad digitalisering: Cybersäkerhet, AI och resiliens (open, closes 19 Jan 2027)",
+   "Almi Tillväxtlån"
+  ],
+  "B_missed": [
+   "Eurostars (Call 12, deadline 4 Mar 2027)"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "fail",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 1065,
+  "B": 182
+ },
+ "verdict": "A",
+ "incomplete": false
+}

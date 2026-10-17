@@ -180,3 +180,15 @@ def test_compatibility_is_checked_inside_groups() -> None:
     bad["programs"][0]["eligibility"][3]["any"][0] = rule("revenue_msek", "lte", "ten")
     found = errors(bad)
     assert any("any[0]" in e and "'lte'" in e for e in found)
+
+
+def test_application_block_is_validated() -> None:
+    good = copy.deepcopy(FIXTURE)
+    good["programs"][0]["application"] = {"portal": "https://example.org/apply", "sources": [{"url": "https://example.org/guide", "what": "guide"}], "verified": "2026-10-15", "criteria": [{"name": "Potential", "weight": "40 %"}]}
+    assert errors(good) == []
+    bad = copy.deepcopy(good)
+    bad["programs"][0]["application"]["criteria"] = [{"weight": "40 %"}]
+    assert any("name" in e for e in errors(bad))
+    bad2 = copy.deepcopy(good)
+    del bad2["programs"][0]["application"]["sources"]
+    assert any("sources" in e for e in errors(bad2))

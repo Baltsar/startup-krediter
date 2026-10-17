@@ -1,0 +1,66 @@
+{
+ "qid": "r03",
+ "programs": {
+  "A": "Innovasjon Norge Oppstartstilskudd 1",
+  "B": "Innovasjon Norge Oppstartstilskudd 1"
+ },
+ "stoppers_total": {
+  "A": 13,
+  "B": 13
+ },
+ "stoppers_stated": {
+  "A": 7,
+  "B": 11
+ },
+ "factual_errors": {
+  "A": [],
+  "B": []
+ },
+ "untraceable": {
+  "A": [
+   "'Potten er begrenset og deles ut fortlopende' (Stortinget answer says there is no separate pot for oppstartstilskudd; only county frames)",
+   "Ålesund described as regionsenter unlikely to be in distriktsrettet virkeomrade (not verified on an official page)"
+  ],
+  "B": [
+   "Project must be fullfinansiert (not on official Oppstartstilskudd 1 page)",
+   "Only a person with a Bronnoysund role can submit the application (official FAQ found says this for Nettbank access, not for submitting)"
+  ]
+ },
+ "best_first_pick": "tie",
+ "missed_programs": {
+  "A_missed": [
+   "SkatteFUNN",
+   "Oppstartstilskudd 2",
+   "Raskavklaring"
+  ],
+  "B_missed": []
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 375,
+  "B": 193
+ },
+ "verdict": "B",
+ "incomplete": false
+}

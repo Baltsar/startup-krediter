@@ -1,0 +1,58 @@
+{
+ "qid": "s08",
+ "programs": {
+  "A": "Business Finland - Tutkimus, kehitys ja pilotointi (Research, development and piloting), continuous call 2026",
+  "B": "Business Finland - Tutkimus, kehitys ja pilotointi (Research, development and piloting), continuous call 2026"
+ },
+ "stoppers_total": {
+  "A": 15,
+  "B": 15
+ },
+ "stoppers_stated": {
+  "A": 12,
+  "B": 8
+ },
+ "factual_errors": {
+  "A": [],
+  "B": [
+   "Twice tells the founder to call 'Business Finlandin asiakaspalvelu' on 029 50 55000. BF's Asiakaspalvelu page says the customer-service number closed on 12.12.2025 and the online-service phone line is closed. 029 50 55000 is the switchboard, used to find individual staff contacts. Questions go through the support form or the project contact person."
+  ]
+ },
+ "untraceable": {
+  "A": [],
+  "B": []
+ },
+ "best_first_pick": "tie",
+ "missed_programs": {
+  "A_missed": [],
+  "B_missed": []
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "pass",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "pass",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 184,
+  "B": 417
+ },
+ "verdict": "tie",
+ "incomplete": false
+}

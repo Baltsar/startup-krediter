@@ -1,0 +1,71 @@
+{
+ "qid": "s09",
+ "programs": {
+  "A": "Business Finland Sprint grant (turn 2), with the BF R&D and piloting loan as the follow-on",
+  "B": "Business Finland Research, development and piloting funding (loan)"
+ },
+ "stoppers_total": {
+  "A": 16,
+  "B": 14
+ },
+ "stoppers_stated": {
+  "A": 10,
+  "B": 13
+ },
+ "factual_errors": {
+  "A": [
+   "Creative Europe MEDIA video games call closing 2 Feb 2027: says the studio needs a game commercially released since 2022; the 2027 call document (V1.0, 30.09.2026) requires commercial distribution between 01/01/2024 and the deadline",
+   "Says Business Finland funding is paid only after cost reports apart from the loan advance; the Sprint call page pays 70% in advance to companies under five years old",
+   "Free LUMI capacity inside a BF-funded project 'worth about EUR 20-80k'; CSC's current page states EUR 15,000-100,000 (A hedged it as 2024 information)"
+  ],
+  "B": []
+ },
+ "untraceable": {
+  "A": [
+   "MareNostrum5 ACC and JUPITER Booster 'currently unavailable for Fast Lane because of demand': not on the EuroHPC Fast Lane page or Terms of Reference; the Playground page only says partitions may be limited by demand",
+   "Nebius AI Lift 'up to $150k': official page returned 404 and could not be read"
+  ],
+  "B": []
+ },
+ "best_first_pick": "tie",
+ "missed_programs": {
+  "A_missed": [
+   "EIC Accelerator (named by B; low relevance for this game studio)"
+  ],
+  "B_missed": [
+   "Business Finland creative-industries R&D grant call (35% grant for SME development projects; BF aims to open the next round in 2026)",
+   "EuroHPC AI Factories Fast Lane (up to 50,000 GPU hours)",
+   "Google for Startups Cloud Program (up to $350k for AI startups)",
+   "Microsoft for Startups (up to $150k)",
+   "NVIDIA Inception"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "fail",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 1010,
+  "B": 196
+ },
+ "verdict": "A",
+ "incomplete": false
+}

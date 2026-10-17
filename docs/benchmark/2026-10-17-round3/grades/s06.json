@@ -1,0 +1,62 @@
+{
+ "qid": "s06",
+ "programs": {
+  "A": "Forskningsavdrag (Skatteverket, nedsättning av arbetsgivaravgifter för FoU)",
+  "B": "Almi Innovationslån (turn 2); Forskningsavdrag was covered in turn 1 and Vinnova Innovativa Startups 2026 more briefly in turn 2"
+ },
+ "stoppers_total": {
+  "A": 10,
+  "B": 9
+ },
+ "stoppers_stated": {
+  "A": 10,
+  "B": 5
+ },
+ "factual_errors": {
+  "A": [],
+  "B": [
+   "Minor: says that for smaller Almi loans 'ert eget arbete räknas som er halva' and that above 300k the capital must come 'utifrån'. Almi's Innovationslån page says only that part of the co-financing can, in some cases, be own work, and lists eget kapital as well as bank or external financing."
+  ]
+ },
+ "untraceable": {
+  "A": [],
+  "B": []
+ },
+ "best_first_pick": "B",
+ "missed_programs": {
+  "A_missed": [
+   "AWS Activate",
+   "Google for Startups Cloud Program",
+   "Microsoft for Startups (Azure credits)"
+  ],
+  "B_missed": []
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "pass"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "pass"
+  }
+ },
+ "turn1_words": {
+  "A": 192,
+  "B": 404
+ },
+ "verdict": "B",
+ "incomplete": false
+}

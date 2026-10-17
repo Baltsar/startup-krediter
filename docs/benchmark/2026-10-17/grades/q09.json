@@ -1,0 +1,13 @@
+{"qid":"q09",
+ "programs":{"A":"Starttiraha (with Uusyrityskeskus advice as first step)","B":"Starttiraha"},
+ "stoppers_total":{"A":7,"B":7},
+ "stoppers_stated":{"A":3,"B":3},
+ "factual_errors":{"A":["Says starttiraha must be applied for AND granted before business starts; law 380/2023 only bars full-time business started before the application reaches the authority (stricter than the rule, harmless direction)"],"B":[]},
+ "untraceable":{"A":[],"B":["Norrsken Evolve 250 000-500 000 EUR tickets (official norrsken.vc shows only EUR 1-10M tickets, no Evolve page found)","Business Finland Deep Tech Accelerator 'now closed' (official page not readable)","Eurostars 'now closed' (official site returned 403)"]},
+ "best_first_pick":"A",
+ "missed_programs":{"A_missed":[],"B_missed":["Uusyrityskeskus (free pre-start advice and the business plan starttiraha needs)"]},
+ "absolute":{"A":{"A1":"pass","A2":"pass","A3":"pass","A4":"pass","A5":"n/a","A6":"n/a","A7":"pass","A8":"n/a"},
+             "B":{"A1":"pass","A2":"pass","A3":"pass","A4":"pass","A5":"n/a","A6":"n/a","A7":"pass","A8":"n/a"}},
+ "turn1_words":{"A":209,"B":26},
+ "verdict":"A",
+ "incomplete":false}

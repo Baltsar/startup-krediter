@@ -1,0 +1,67 @@
+{
+ "qid": "r04",
+ "programs": {
+  "A": "NIMBI Spilordningen (tilskud til udvikling)",
+  "B": "Innofounder (Danmarks Innovationsfond), with Innobooster and Nimbi Spilordningen covered more briefly"
+ },
+ "stoppers_total": {
+  "A": 15,
+  "B": 13
+ },
+ "stoppers_stated": {
+  "A": 14,
+  "B": 6
+ },
+ "factual_errors": {
+  "A": [],
+  "B": []
+ },
+ "untraceable": {
+  "A": [
+   "Runpod Startup Program: 'existing customers are assessed case by case'. The official page only says existing customers should contact their account manager"
+  ],
+  "B": [
+   "Innobooster 'next chance is in 2027': the official page lists no pool after Pulje 4 (closed 15 Oct 2026)",
+   "Cloud-credit programs 'often give more credits than you spend in a year' (about 48,000 DKK). No official figures were checked or cited"
+  ]
+ },
+ "best_first_pick": "A",
+ "missed_programs": {
+  "A_missed": [
+   "Google for Startups Cloud",
+   "AWS Activate"
+  ],
+  "B_missed": [
+   "EuroHPC AI Factories Playground access (free GPU hours, open on a permanent basis)",
+   "Runpod Startup Program (USD 1,000 Starter credits)"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 234,
+  "B": 497
+ },
+ "verdict": "A",
+ "incomplete": false
+}

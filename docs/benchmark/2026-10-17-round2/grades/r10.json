@@ -1,0 +1,71 @@
+{
+ "qid": "r10",
+ "programs": {
+  "A": "Vinnova Innovativa Startups 2026",
+  "B": "Forskningsavdrag (Skatteverket R&D reduction of employer contributions)"
+ },
+ "stoppers_total": {
+  "A": 15,
+  "B": 4
+ },
+ "stoppers_stated": {
+  "A": 4,
+  "B": 3
+ },
+ "factual_errors": {
+  "A": [
+   "Vinnova Avancerad digitalisering AI given as SEK 1-10M; the official Tillampad AI call says 2-10M SEK (and it closed 16 Jan 2026)"
+  ],
+  "B": [
+   "Microsoft for Startups: '$1k at signup' contradicts official $200 starter credits without referral code",
+   "Microsoft for Startups: 'You'll need a company email domain' contradicts official application guide (company-domain emails not accepted; personal Microsoft account required)"
+  ]
+ },
+ "untraceable": {
+  "A": [],
+  "B": [
+   "Microsoft for Startups non-investor tier 'about $5k' (official: up to $150K over time with verified progress)",
+   "Vinnova 'usually at most about 50%' for small companies (call-specific; Innovativa Startups funds up to 100%)"
+  ]
+ },
+ "best_first_pick": "A",
+ "missed_programs": {
+  "A_missed": [
+   "Forskningsavdrag (R&D employer-contribution reduction)",
+   "Sweden AI Factory / Mimer compute"
+  ],
+  "B_missed": [
+   "Vinnova Innovativa Startups 2026 (open until 12 Jan 2027)",
+   "Almi Verifieringsmedel",
+   "Almi Innovationslan named concretely with amounts"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "fail",
+   "A3": "pass",
+   "A4": "pass",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "fail",
+   "A3": "pass",
+   "A4": "pass",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 135,
+  "B": 606
+ },
+ "verdict": "A",
+ "incomplete": false
+}

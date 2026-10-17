@@ -1,0 +1,67 @@
+{
+ "qid": "s13",
+ "programs": {
+  "A": "EIC Accelerator (ruled out in turn 2 because of Nordvik's 62%); then Energimyndigheten Pilot och demonstration at the large-company rate and the EU Innovation Fund",
+  "B": "EIC Accelerator"
+ },
+ "stoppers_total": {
+  "A": 15,
+  "B": 15
+ },
+ "stoppers_stated": {
+  "A": 8,
+  "B": 11
+ },
+ "factual_errors": {
+  "A": [
+   "A GO 'lets you submit the full proposal to any cut-off within 12 months' - the EIC Accelerator FAQ says a GO under the 2025 or 2026 Work Programme allows a full proposal at any 2026 or 2027 cut-off"
+  ],
+  "B": [
+   "Pilot och demonstration: 'no next round is published' - the official 2026 call text says the next call is planned to open in Q1 2027",
+   "'At about EUR 0.19 million turnover you're well inside the SME limit, so ... the EIC Accelerator fits' - the SME definition applied by WP2026 (Recommendation 2003/361/EC, SME User Guide) adds linked enterprises' data; with a 62% owner that is a large group, the company is not an SME"
+  ]
+ },
+ "untraceable": {
+  "A": [
+   "EU Innovation Fund next NZT call deadline 'around April 2027' (the official page confirms only a December 2026 opening)"
+  ],
+  "B": [
+   "Technology-expert online interview limited to 'at most 3 people and no consultants' (the official FAQ sets these limits only for the Jury interview)"
+  ]
+ },
+ "best_first_pick": "A",
+ "missed_programs": {
+  "A_missed": [],
+  "B_missed": [
+   "EU Innovation Fund (IF26 Net-Zero Technologies, clean-tech manufacturing and pilot topics, opening December 2026)"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "fail",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "fail",
+   "A3": "fail",
+   "A4": "n/a",
+   "A5": "fail",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 1023,
+  "B": 247
+ },
+ "verdict": "A",
+ "incomplete": false
+}

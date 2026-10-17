@@ -179,3 +179,10 @@ def test_idea_stage_money_puts_a_grant_before_equity_and_fees() -> None:
     assert first["id"] == "almi-verifieringsmedel"
     costs = [door["founder_cost"] for door in out["doors"]]
     assert costs == sorted(costs, key=lambda cost: {"none": 0, "repay": 1, "equity": 2, "fee": 3}[cost])
+
+
+def test_a_danish_fee_programme_stays_out_of_a_finnish_idea_answer() -> None:
+    out = match.run({"country": "FI", "legal_form": "none", "need": ["money"], "lang": "fi"}, PROGRAMS, TODAY)
+    shown = [door["id"] for door in out["doors"]]
+    assert "accelerace-pre-seed" not in shown
+    assert "eic-accelerator" not in shown[:1]
