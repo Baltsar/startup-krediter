@@ -80,8 +80,8 @@ matcher's `screen` asks for the rest.
 | field | values | notes |
 |---|---|---|
 | `owner_company_share` | number, % | the largest share held by another company with its group, or by public bodies together. Venture funds, business angels and universities count only above 50%. Exactly 25% already counts |
-| `prior_grants`, `active_grants` | list of program ids, or short keys such as `rannis-sproti` | public grants the company has had, and those still running. "Inga" is `[]`, an answer |
-| `founder_employed_elsewhere`, `fulltime_in_company` | bool | a full-time job outside the company; full-time work in it |
+| `prior_grants`, `active_grants` | list of program ids, or short keys such as `rannis-sproti` | `prior_grants`: every public grant the company has had, running ones included; `active_grants`: the ones still running. "Inga" is `[]`, an answer |
+| `founder_employed_elsewhere`, `fulltime_in_company` | bool | plans, not today: the founder will keep a full-time job outside the company while building it; the founder works full-time in the company, or will once the funded work starts |
 | `paid_staff` | number | people the company pays a salary to; founders without salary do not count |
 | `affiliation` | `student`, `researcher`, `staff`, `none` | the founder's link to a university now |
 | `personal_data` | `none`, `anonymous`, `pseudonymised`, `identifiable` | set only from the answer to the screen question. "Anonymised" is the founder's word, not a fact: data the source can link back is pseudonymised |
@@ -236,10 +236,12 @@ founder with a full-time job, and "anonymised" patient data.
    (Lån, Ägarkapital); add "avgift" for a paid program. Mark a closed door as
    closed. Leave out a route the founder cannot use now (below), and kinds they
    did not ask for.
-3. **Before the details**, the `screen` questions, numbered, in its order, each
-   with its `why` and, when `decides` is not empty, the doors in parentheses:
+3. **Before the details**, the `screen` questions, numbered, in its order. Say
+   each in at most 15 words in the founder's language, keeping its facts (25 %,
+   50 %, tio år), then its `why` in a few words. When `decides` is not empty,
+   name at most two of its programs by a short name, then "och N till":
 
-   `1. Äger något annat bolag över 25 % av ert? Då kan SME-statusen falla (EIC Accelerator, Eurostars).`
+   `1. Äger ett annat bolag eller en koncern 25 % eller mer av er? Då kan SME-statusen falla (EIC, Eurostars).`
 
    When `screen` is empty, ask the one question from the rule under "Lines
    that apply to all stages". Never more than three questions.
