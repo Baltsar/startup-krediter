@@ -97,6 +97,11 @@
           "description": "Only for calls tied to a topic (a marine challenge, a semiconductor pilot line). Such a door ranks after general doors and stays out of the full answer unless the founder's sector matches."
         },
         "application": {"$ref": "#/$defs/application"},
+        "route": {
+          "type": "string",
+          "enum": ["grant", "tax", "loan", "compute", "credits", "equity", "support"],
+          "description": "The route on the founder's map when kind and founder_cost do not say it: tax for a deduction claimed in a tax or payroll return rather than applied for."
+        },
         "group": {
           "type": "string",
           "pattern": "^[a-z0-9-]+$",
@@ -199,10 +204,13 @@
             "revenue_msek", "balance_msek", "revenue_meur", "balance_meur", "funding_raised_usd",
             "stage", "vc_backed", "vc_partner", "stack", "sector", "confirmed",
             "has_vat", "has_employment", "has_work_email", "has_website",
-            "has_developer", "workload_defined", "profit_distributed"
+            "has_developer", "workload_defined", "profit_distributed",
+            "owner_company_share", "prior_grants", "active_grants", "de_minimis_eur",
+            "founder_employed_elsewhere", "fulltime_in_company", "paid_staff", "affiliation",
+            "personal_data", "lost_half_capital", "work_started", "on_market"
           ]
         },
-        "op": {"enum": ["eq", "neq", "in", "not_in", "lte", "gte", "lt", "gt", "contains"]},
+        "op": {"enum": ["eq", "neq", "in", "not_in", "lte", "gte", "lt", "gt", "contains", "excludes"]},
         "value": {}
       }
     },

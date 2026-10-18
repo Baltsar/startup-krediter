@@ -2,14 +2,15 @@
 
 from __future__ import annotations
 
+import copy
 import io
 import json
 from datetime import date
 from pathlib import Path
 
-import pytest
-
+import i18n
 import match
+import pytest
 
 FIXTURE_PATH = Path(__file__).parent / "fixtures" / "programs_small.json"
 PROGRAMS = json.loads(FIXTURE_PATH.read_text(encoding="utf-8"))["programs"]
@@ -508,7 +509,7 @@ def test_top_limits_full_doors_and_lists_the_rest_under_more() -> None:
     out = run({"country": "SE", "legal_form": "company", "stack": ["anthropic"]}, top=1)
     assert [door["id"] for door in out["doors"]] == ["test-global-credit"]
     assert [door["id"] for door in out["more"]] == ["test-se-grant", "test-eu-compute"]
-    assert set(out["more"][0]) == {"id", "name", "kind", "status", "availability", "amount", "open_questions", "foreign", "founder_cost", "stage_mismatch", "topic_mismatch", "undersized", "poor_fit", "status_url"}
+    assert set(out["more"][0]) == {"id", "name", "kind", "route", "status", "availability", "amount", "open_questions", "foreign", "founder_cost", "stage_mismatch", "topic_mismatch", "undersized", "poor_fit", "status_url"}
     assert run({"country": "SE", "legal_form": "company", "stack": ["anthropic"]}, top=0)["more"] == []
 
 
@@ -722,3 +723,435 @@ def test_one_denied_one_confirmed_and_the_rest_unknown() -> None:
     assert status("eip_competence_mix", profile) == "unknown"
     assert status("no_earlier_bf_startup_funding", profile) == "unknown"
     assert status("eip_competence_mix", {"confirmed": []}) == "unknown"
+
+
+# --- founder situation, screen and routes ------------------------------------
+
+
+match_fixture_record = SE_GRANT
+# A company at seed stage, so affiliation and data are not asked unless a test says so.
+QUIET = {"country": "SE", "legal_form": "company", "stage": "seed"}
+SME_GATE = {
+    "any": [
+        {"field": "owner_company_share", "op": "lte", "value": 25},
+        {"field": "confirmed", "op": "contains", "value": "group_within_sme_limits"},
+    ]
+}
+EXCLUDES = {"field": "prior_grants", "op": "excludes", "value": ["business-finland-tempo", "vinnova-sprint"]}
+
+
+def situated(program_id: str, name: str, eligibility: list[dict[str, object]], **edits: object) -> dict[str, object]:
+    program = copy.deepcopy(match_fixture_record)
+    program.update(edits)
+    program["id"] = program_id
+    program["name"] = name
+    program["eligibility"] = eligibility
+    return program
+
+
+def one_door(profile: dict[str, object], eligibility: list[dict[str, object]], **edits: object) -> dict[str, object]:
+    program = situated("situation-door", "Situation door", eligibility, **edits)
+    out = match.run(profile, [program], TODAY, include_all=True, top=0)
+    assert [door["id"] for door in out["doors"]] == ["situation-door"]
+    return out["doors"][0]
+
+
+def question_line(glyph: str) -> str:
+    asked = [line[3:] for line in glyph.splitlines() if line.startswith("?")]
+    assert len(asked) == 1
+    return asked[0]
+
+
+def test_grant_answers_are_hyphenated_and_none_is_kept_as_empty() -> None:
+    profile, warnings = match.normalize_profile({
+        "prior_grants": "Business_Finland Tempo",
+        "active_grants": ["Vinnova Sprint", "inga", "Business_Finland Tempo"],
+    })
+    assert warnings == []
+    assert profile["prior_grants"] == ["business-finland-tempo"]
+    assert profile["active_grants"] == ["vinnova-sprint", "business-finland-tempo"]
+    listed, _ = match.normalize_profile({"prior_grants": "inga, Business_Finland Tempo"})
+    assert listed["prior_grants"] == ["business-finland-tempo"]
+    for raw in ([], "none", "inga", "no"):
+        normalized, grant_warnings = match.normalize_profile({"prior_grants": raw})
+        assert normalized["prior_grants"] == []
+        assert grant_warnings == []
+
+
+def test_affiliation_and_personal_data_aliases_unknowns_are_dropped() -> None:
+    for field in ("affiliation", "personal_data"):
+        for word, expected in match.ENUM_FIELDS[field].items():
+            profile, warnings = match.normalize_profile({field: word})
+            assert profile[field] == expected
+            assert warnings == []
+    dropped, warnings = match.normalize_profile({"affiliation": "alumni", "personal_data": "secret"})
+    assert "affiliation" not in dropped
+    assert "personal_data" not in dropped
+    assert any("affiliation" in warning and "alumni" in warning for warning in warnings)
+    assert any("personal_data" in warning and "secret" in warning for warning in warnings)
+
+
+def test_anonymised_is_a_claim_not_a_personal_data_value() -> None:
+    for word in ("anonymised", "anonymized", "anonymiserad"):
+        profile, warnings = match.normalize_profile({"personal_data": word})
+        assert "personal_data" not in profile
+        assert profile["personal_data_claim"] == word
+        assert warnings
+        assert all("personal_data" in warning for warning in warnings)
+
+
+def test_health_sector_aliases() -> None:
+    profile, warnings = match.normalize_profile({"sector": ["radiology", "healthcare", "medtech"]})
+    assert profile["sector"] == ["health"]
+    assert warnings == []
+
+
+def test_situation_numbers_and_booleans_are_coerced() -> None:
+    profile, warnings = match.normalize_profile({
+        "owner_company_share": "25",
+        "paid_staff": "3",
+        "de_minimis_eur": 1500,
+        "fulltime_in_company": "ja",
+        "founder_employed_elsewhere": "nej",
+        "lost_half_capital": False,
+        "work_started": "yes",
+        "on_market": 0,
+    })
+    assert warnings == []
+    assert profile["owner_company_share"] == 25.0
+    assert profile["paid_staff"] == 3
+    assert isinstance(profile["paid_staff"], int)
+    assert profile["de_minimis_eur"] == 1500.0
+    assert profile["fulltime_in_company"] is True
+    assert profile["founder_employed_elsewhere"] is False
+    assert profile["lost_half_capital"] is False
+    assert profile["work_started"] is True
+    assert profile["on_market"] is False
+
+
+def test_excludes_is_unknown_until_the_list_is_answered() -> None:
+    absent = match.evaluate_rule(EXCLUDES, {})
+    assert absent.status == "unknown"
+    assert absent.question == i18n.rule_question(EXCLUDES, "en")
+    assert absent.question is not None and absent.question.endswith("?")
+    assert match.evaluate_rule(EXCLUDES, {"prior_grants": []}).status == "met"
+    assert match.evaluate_rule(EXCLUDES, {"prior_grants": ["almi-lan"]}).status == "met"
+    assert match.evaluate_rule(EXCLUDES, {"prior_grants": ["business-finland-tempo"]}).status == "failed"
+    assert match.evaluate_rule(EXCLUDES, {"prior_grants": ["vinnova-sprint", "almi-lan"]}).status == "failed"
+    active = {"field": "active_grants", "op": "excludes", "value": ["vinnova-sprint"]}
+    assert match.evaluate_rule(active, {}).status == "unknown"
+    assert match.evaluate_rule(active, {"active_grants": []}).status == "met"
+    assert match.evaluate_rule(active, {"active_grants": ["vinnova-sprint"]}).status == "failed"
+
+
+def test_sme_gate_stays_an_ownership_question_until_it_is_settled() -> None:
+    absent = one_door({"country": "SE"}, [SME_GATE])
+    assert absent["status"] == "unknown"
+    assert absent["unknown"][0]["situation"] == "ownership"
+    assert absent["situation"] == ["ownership"]
+    share_question = i18n.rule_question({"field": "owner_company_share", "op": "lte", "value": 25}, "en")
+    assert absent["unknown"][0]["question"] == share_question
+
+    open_group = one_door({"country": "SE", "owner_company_share": 62}, [SME_GATE])
+    assert open_group["status"] == "unknown"
+    assert open_group["unknown"][0]["situation"] == "ownership"
+    assert open_group["situation"] == ["ownership"]
+    confirmation = i18n.rule_question({"field": "confirmed", "op": "contains", "value": "group_within_sme_limits"}, "en")
+    assert open_group["unknown"][0]["question"] == confirmation
+
+    blocked = one_door({"country": "SE", "owner_company_share": 62, "denied": ["group_within_sme_limits"]}, [SME_GATE])
+    assert blocked["status"] == "blocked"
+    assert blocked["situation"] == []
+
+    met = one_door({"country": "SE", "owner_company_share": 10}, [SME_GATE])
+    assert met["status"] == "eligible"
+    assert met["unknown"] == []
+    assert met["situation"] == []
+
+
+def test_situation_topics_follow_gate_order_without_duplicates() -> None:
+    eligibility = [
+        {"field": "prior_grants", "op": "excludes", "value": ["x-grant"]},
+        {"field": "age_years", "op": "lte", "value": 10},
+        {"field": "owner_company_share", "op": "lte", "value": 25},
+        {"field": "active_grants", "op": "excludes", "value": ["y-grant"]},
+    ]
+    door = one_door({"country": "SE"}, eligibility)
+    assert [item["situation"] for item in door["unknown"]] == ["grants", None, "ownership", "grants"]
+    assert all("situation" in item for item in door["unknown"])
+    assert door["situation"] == ["grants", "ownership"]
+
+
+def test_door_route_prefers_the_record_then_equity_then_kind() -> None:
+    programs = [
+        situated("tax", "Tax", [], route="tax", founder_cost="equity", kind="loan"),
+        situated("equity", "Equity", [], founder_cost="equity", kind="grant"),
+        situated("grant", "Grant", [], kind="grant"),
+        situated("loan", "Loan", [], kind="loan"),
+        situated("compute", "Compute", [], kind="compute"),
+        situated("cloud", "Cloud", [], kind="cloud_credit"),
+        situated("api", "API", [], kind="ai_api_credit"),
+        situated("perks", "Perks", [], kind="perks"),
+        situated("accelerator", "Accelerator", [], kind="accelerator"),
+        situated("unknown-kind", "Unknown kind", [], kind="workshop"),
+    ]
+    out = match.run(QUIET, programs, TODAY, top=0)
+    assert {door["id"]: door["route"] for door in out["doors"]} == {
+        "tax": "tax",
+        "equity": "equity",
+        "grant": "grant",
+        "loan": "loan",
+        "compute": "compute",
+        "cloud": "credits",
+        "api": "credits",
+        "perks": "credits",
+        "accelerator": "support",
+        "unknown-kind": "support",
+    }
+
+
+def test_situation_gates_rank_as_eligible_while_status_stays_unknown() -> None:
+    situation = situated("situation", "Situation door", [EXCLUDES])
+    ordinary = situated("ordinary", "Ordinary door", [{"field": "age_years", "op": "lte", "value": 10}])
+    out = match.run(QUIET, [ordinary, situation], TODAY, top=0)
+    assert [door["id"] for door in out["doors"]] == ["situation", "ordinary"]
+    assert out["doors"][0]["status"] == "unknown"
+    sit = match.evaluate(situation, {"country": "SE"}, TODAY, "en")
+    core = match.evaluate(ordinary, {"country": "SE"}, TODAY, "en")
+    assert sit.status == "unknown"
+    assert match.core_status(sit) == "eligible"
+    assert match.core_open(sit) == 0
+    assert core.status == "unknown"
+    assert match.core_status(core) == "unknown"
+    assert match.core_open(core) == 1
+
+
+def test_glyph_asks_the_first_non_situation_question() -> None:
+    eligibility = [
+        EXCLUDES,
+        {"field": "age_years", "op": "lte", "value": 10},
+        {"field": "employees", "op": "lte", "value": 5},
+    ]
+    door = one_door({"country": "SE"}, eligibility)
+    assert question_line(door["glyph"]) == i18n.rule_question({"field": "age_years", "op": "lte", "value": 10}, "en")
+
+
+def test_glyph_asks_the_first_situation_question_when_that_is_all() -> None:
+    eligibility = [
+        {"field": "paid_staff", "op": "lte", "value": 3},
+        EXCLUDES,
+    ]
+    door = one_door({"country": "SE"}, eligibility)
+    assert question_line(door["glyph"]) == i18n.rule_question({"field": "paid_staff", "op": "lte", "value": 3}, "en")
+
+
+def test_screen_weighs_early_doors_and_stops_at_three() -> None:
+    """Position 0 adds 8 and a context topic 16. Later doors add less, and the fourth topic is cut."""
+    programs = [
+        situated("work", "Work door", [{"field": "founder_employed_elsewhere", "op": "eq", "value": True}]),
+        situated("grants", "Grants door", [
+            {"field": "prior_grants", "op": "excludes", "value": ["x-grant"]},
+            {"field": "founder_employed_elsewhere", "op": "eq", "value": True},
+        ]),
+        situated("timing", "Timing door", [{"field": "work_started", "op": "eq", "value": True}]),
+        situated("staff", "Staff door", [{"field": "paid_staff", "op": "lte", "value": 3}]),
+    ]
+    profile = {"country": "SE", "legal_form": "none", "stage": "seed", "lang": "sv"}
+    screen = match.run(profile, programs, TODAY, top=0)["screen"]
+    assert [item["topic"] for item in screen] == ["affiliation", "work", "grants"]
+    assert len(screen) == match.SCREEN_MAX
+    assert screen[1]["decides"] == ["Work door", "Grants door"]
+    assert screen[0]["decides"] == []
+    assert screen[2]["decides"] == ["Grants door"]
+    assert screen[1]["fields"] == ["founder_employed_elsewhere", "fulltime_in_company"]
+    assert screen[0]["fields"] == ["affiliation"]
+    assert screen[2]["fields"] == ["prior_grants", "active_grants", "de_minimis_eur"]
+    for item in screen:
+        assert set(item) == {"topic", "fields", "question", "why", "decides"}
+        assert item["question"] == i18n.screen_question(item["topic"], "sv")
+        assert item["why"] == i18n.screen_why(item["topic"], "sv")
+        assert item["question"].endswith("?")
+        assert item["question"] != i18n.screen_question(item["topic"], "en")
+
+
+def test_screen_ignores_a_ninth_door_a_blocked_door_and_a_poor_fit() -> None:
+    programs = [
+        situated(f"t{index}", f"Timing {index}", [{"field": "work_started", "op": "eq", "value": True}])
+        for index in range(match.SCREEN_DOORS)
+    ]
+    programs.append(situated("ninth", "Ninth", [{"field": "owner_company_share", "op": "lte", "value": 25}]))
+    screen = match.run(QUIET, programs, TODAY, top=0)["screen"]
+    assert [item["topic"] for item in screen] == ["timing"]
+    assert screen[0]["decides"] == [f"Timing {index}" for index in range(match.SCREEN_DOORS)]
+    assert "Ninth" not in screen[0]["decides"]
+
+    blocked = situated("blocked", "Blocked", [
+        {"field": "age_years", "op": "lte", "value": 1},
+        {"field": "prior_grants", "op": "excludes", "value": ["x-grant"]},
+    ])
+    fee = situated("fee", "Fee", [{"field": "owner_company_share", "op": "lte", "value": 25}], founder_cost="fee")
+    assert match.run(dict(QUIET, age_years=5), [blocked], TODAY, include_all=True)["screen"] == []
+    assert match.run(QUIET, [fee], TODAY)["screen"] == []
+
+
+def test_screen_questions_follow_finnish() -> None:
+    grants = situated("grants", "Grants", [EXCLUDES])
+    item = match.run(dict(QUIET, lang="fi"), [grants], TODAY)["screen"][0]
+    assert item["topic"] == "grants"
+    assert item["question"] == i18n.screen_question("grants", "fi")
+    assert item["why"] == i18n.screen_why("grants", "fi")
+    assert item["question"].endswith("?")
+    assert item["question"] != i18n.screen_question("grants", "en")
+
+
+def test_answered_situation_field_leaves_the_screen() -> None:
+    programs = [
+        situated("own", "Own", [{"field": "owner_company_share", "op": "lte", "value": 25}]),
+        situated("grants", "Grants", [{"field": "active_grants", "op": "excludes", "value": ["x-grant"]}]),
+    ]
+    before = match.run(QUIET, programs, TODAY)["screen"]
+    assert [item["topic"] for item in before] == ["ownership", "grants"]
+    answered = dict(QUIET, owner_company_share=10, prior_grants="none")
+    screen = match.run(answered, programs, TODAY)["screen"]
+    assert [item["topic"] for item in screen] == ["grants"]
+    assert screen[0]["fields"] == ["active_grants", "de_minimis_eur"]
+
+
+def test_context_topics_are_affiliation_and_data() -> None:
+    def topics(profile: dict[str, object]) -> list[str]:
+        return [item["topic"] for item in match.run(profile, [], TODAY)["screen"]]
+
+    assert topics({"legal_form": "none"}) == ["affiliation"]
+    assert topics({}) == ["affiliation"]
+    assert topics({"legal_form": "company", "stage": "idea"}) == ["affiliation"]
+    assert topics({"legal_form": "company", "stage": "pre_seed"}) == ["affiliation"]
+    assert topics(QUIET) == []
+    assert topics({"legal_form": "none", "affiliation": "student"}) == []
+    assert topics(dict(QUIET, sector="radiology")) == ["data"]
+    assert topics(dict(QUIET, sector=["healthcare", "medtech"])) == ["data"]
+    assert topics(dict(QUIET, personal_data="anonymous", sector="radiology")) == []
+    claimed = match.run(dict(QUIET, personal_data="anonymized"), [], TODAY)
+    assert [item["topic"] for item in claimed["screen"]] == ["data"]
+    assert claimed["screen"][0]["decides"] == []
+    assert claimed["screen"][0]["fields"] == ["personal_data"]
+    assert "personal_data" not in claimed["profile"]
+    assert claimed["profile"]["personal_data_claim"] == "anonymized"
+    both = match.run({"legal_form": "none", "sector": "healthcare", "lang": "fi"}, [], TODAY)["screen"]
+    assert [item["topic"] for item in both] == ["affiliation", "data"]
+    assert [item["decides"] for item in both] == [[], []]
+    assert both[0]["question"] == i18n.screen_question("affiliation", "fi")
+    assert both[1]["why"] == i18n.screen_why("data", "fi")
+    assert all(item["question"].endswith("?") for item in both)
+
+
+def test_routes_follow_the_best_door_and_skip_blocked_and_poor_fits() -> None:
+    programs = [
+        situated("equity", "Equity fund", [], founder_cost="equity", kind="grant", amount={"text": "Equity"}),
+        situated("tax", "Tax relief", [], route="tax", kind="grant", amount={"text": "Tax"}),
+        situated("g1", "Grant 1", [], kind="grant", amount={"text": "G1"}),
+        situated("g2", "Grant 2", [], kind="grant", amount={"text": "G2"}),
+        situated("g3", "Grant 3", [], kind="grant", amount={"text": "G3"}),
+        situated("g4", "Grant 4", [], kind="grant", amount={"text": "G4"}),
+        situated("loan", "Loan", [], kind="loan", amount={"text": "Loan"}),
+        situated("cloud", "Cloud", [], kind="cloud_credit", amount={"text": "Cloud"}),
+        situated("workshop", "Workshop", [], kind="workshop", amount={"text": "Workshop"}),
+        situated("blocked-grant", "Blocked grant", [{"field": "age_years", "op": "lte", "value": 1}], kind="grant"),
+        situated("closed-compute", "Closed compute", [], kind="compute", availability="closed", amount={"text": "Closed"}),
+    ]
+    out = match.run(dict(QUIET, lang="sv", age_years=20), programs, TODAY, include_all=True, top=1)
+    assert "screen" in out and "routes" in out
+    assert [row["route"] for row in out["routes"]] == ["grant", "tax", "loan", "credits", "equity", "support"]
+    assert out["routes"][0]["label"] == "Bidrag"
+    for row in out["routes"]:
+        assert set(row) == {"route", "label", "count", "doors"}
+        assert row["label"] == i18n.route_name(row["route"], "sv")
+        assert row["label"] != i18n.route_name(row["route"], "en")
+        assert row["count"] >= len(row["doors"])
+        assert len(row["doors"]) <= match.ROUTE_DOORS
+    grant = next(row for row in out["routes"] if row["route"] == "grant")
+    assert grant["count"] == 4
+    assert grant["doors"] == [
+        {"id": "g1", "name": "Grant 1", "status": "eligible", "amount": "G1"},
+        {"id": "g2", "name": "Grant 2", "status": "eligible", "amount": "G2"},
+        {"id": "g3", "name": "Grant 3", "status": "eligible", "amount": "G3"},
+    ]
+    assert out["doors"][0]["route"] == "tax"
+    assert out["more"][0]["id"] == "g1"
+    assert out["more"][0]["route"] == "grant"
+    assert all("route" in item for item in out["more"])
+    closed = next(item for item in out["more"] if item["id"] == "closed-compute")
+    assert closed["route"] == "compute"
+    assert "compute" not in [row["route"] for row in out["routes"]]
+    assert "blocked-grant" not in [door["id"] for row in out["routes"] for door in row["doors"]]
+    finnish = match.run(dict(QUIET, lang="fi"), programs, TODAY, top=0)
+    finnish_grant = next(row for row in finnish["routes"] if row["route"] == "grant")
+    assert finnish_grant["label"] == "Avustukset"
+
+
+def test_routes_follow_the_needs_in_the_order_given() -> None:
+    programs = [
+        situated("credit", "Credit", [], kind="cloud_credit", need=["credits"], amount={"text": "Credit"}),
+        situated("tax", "Tax relief", [], route="tax", kind="grant", amount={"text": "Tax"}),
+        situated("gpu", "GPU", [], kind="compute", need=["compute"], amount={"text": "GPU"}),
+        situated("grant", "Grant", [], kind="grant", amount={"text": "Grant"}),
+    ]
+    out = match.run(dict(QUIET, need=["compute", "money"]), programs, TODAY, top=0)
+    assert [row["route"] for row in out["routes"]] == ["compute", "grant", "tax"]
+    out = match.run(dict(QUIET, need=["credits", "compute"]), programs, TODAY, top=0)
+    assert [row["route"] for row in out["routes"]] == ["credits", "compute"]
+
+
+def test_timing_weighs_half_so_it_does_not_crowd_out_ownership() -> None:
+    programs = [
+        situated("t1", "Timing 1", [{"field": "work_started", "op": "eq", "value": False}]),
+        situated("own", "Own", [{"field": "owner_company_share", "op": "lt", "value": 25}]),
+    ]
+    screen = match.run(QUIET, programs, TODAY)["screen"]
+    assert [item["topic"] for item in screen] == ["ownership", "timing"]
+
+
+def test_basic_fact_takes_the_first_slot() -> None:
+    programs = [
+        situated("own", "Own", [{"field": "legal_form", "op": "eq", "value": "company"}, {"field": "owner_company_share", "op": "lt", "value": 25}]),
+        situated("grants", "Grants", [{"field": "prior_grants", "op": "excludes", "value": ["x-grant"]}]),
+        situated("staff", "Staff", [{"field": "paid_staff", "op": "gte", "value": 1}]),
+    ]
+    screen = match.run({"country": "SE", "stage": "seed", "lang": "sv"}, programs, TODAY)["screen"]
+    # Legal form unknown also asks about a university: one slot each, then the heaviest trap.
+    assert [item["topic"] for item in screen] == ["basics", "affiliation", "grants"]
+    assert screen[0]["fields"] == ["legal_form"]
+    assert screen[0]["decides"] == ["Own"]
+    assert screen[0]["question"] == i18n.rule_question({"field": "legal_form", "op": "eq", "value": "company"}, "sv")
+    assert screen[0]["why"] == i18n.screen_why("basics", "sv")
+
+
+def test_a_named_program_screens_first_even_outside_the_best_doors() -> None:
+    programs = [
+        situated(f"filler-{index}", f"Filler {index}", [{"field": "prior_grants", "op": "excludes", "value": ["x-grant"]}])
+        for index in range(match.SCREEN_DOORS)
+    ]
+    programs.append(situated("skatt-avdrag", "Avdrag", [{"field": "paid_staff", "op": "gte", "value": 1}], founder_cost="fee"))
+    plain = match.run(QUIET, programs, TODAY)["screen"]
+    assert [item["topic"] for item in plain] == ["grants"]
+    named = match.run(dict(QUIET, named="skatt"), programs, TODAY)["screen"]
+    assert [item["topic"] for item in named][:2] == ["grants", "staff"]
+    assert named[1]["decides"] == ["Avdrag"]
+    grants_first = [situated("g1", "G1", [], kind="grant"), situated("g2", "G2", [], kind="grant")]
+    led = match.run(dict(QUIET, named=["g2"]), grants_first, TODAY)["routes"]
+    assert [door["id"] for door in led[0]["doors"]] == ["g2", "g1"]
+    alone = match.run(dict(QUIET, named=["skatt-avdrag"]), programs[-1:], TODAY)["screen"]
+    assert [item["topic"] for item in alone] == ["staff"]
+
+
+def test_door_flag_returns_a_blocked_door_and_a_screen() -> None:
+    program = situated("blocked-door", "Blocked door", [{"field": "age_years", "op": "lte", "value": 1}])
+    out = match.run(
+        {"country": "FI", "legal_form": "none", "age_years": 9, "need": ["credits"]},
+        [program, EU_COMPUTE],
+        TODAY,
+        door_id="blocked-door",
+    )
+    assert [door["id"] for door in out["doors"]] == ["blocked-door"]
+    assert out["doors"][0]["status"] == "blocked"
+    assert [item["topic"] for item in out["screen"]] == ["affiliation"]
+    assert out["screen"][0]["decides"] == []
