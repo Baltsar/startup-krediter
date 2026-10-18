@@ -1,0 +1,59 @@
+{
+ "qid": "s09",
+ "programs": {
+  "A": "EIC Accelerator",
+  "B": "Innobooster (via a Danish ApS or by moving the company)"
+ },
+ "stoppers_total": {
+  "A": 16,
+  "B": 16
+ },
+ "stoppers_stated": {
+  "A": 16,
+  "B": 10
+ },
+ "factual_errors": {
+  "A": [],
+  "B": []
+ },
+ "untraceable": {
+  "A": [],
+  "B": []
+ },
+ "best_first_pick": "B",
+ "missed_programs": {
+  "A_missed": [],
+  "B_missed": [
+   "EIC Accelerator",
+   "EIFO Matchlån"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 189,
+  "B": 839
+ },
+ "verdict": "B",
+ "incomplete": false
+}

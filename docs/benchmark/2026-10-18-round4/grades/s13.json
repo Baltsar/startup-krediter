@@ -1,0 +1,70 @@
+{
+ "qid": "s13",
+ "programs": {
+  "A": "Innovasjon Norge Oppstartstilskudd 1 (after declaring SkatteFUNN closed by the undertaking-in-difficulty rule and sketching the equity path back)",
+  "B": "SkatteFUNN (undertaking-in-difficulty block and the recapitalisation path to reopen it)"
+ },
+ "stoppers_total": {
+  "A": 14,
+  "B": 11
+ },
+ "stoppers_stated": {
+  "A": 12,
+  "B": 5
+ },
+ "factual_errors": {
+  "A": [],
+  "B": [
+   "Google for Startups Start tier: says the limit is companies under five years and that the founder meets it until April 2027; the official page requires founding within the last 24 months, so the company (April 2022) is already out",
+   "Microsoft for Startups: says about USD 1,000 at start plus 4,000 after verification without an investor code; Microsoft Learn gives USD 200 at signup without a code (USD 1,000 only with an investor referral code); the USD 5,000 total after business verification matches"
+  ]
+ },
+ "untraceable": {
+  "A": [
+   "Payment-remark bar extended to the founders personally ('Verken dere personlig eller selskapet'); the OT1 page bars only companies with ongoing payment remarks"
+  ],
+  "B": [
+   "SkatteFUNN money arrives 'omtrent et år etter at kostnadene påløper'; no official page fetched states this timing"
+  ]
+ },
+ "best_first_pick": "B",
+ "missed_programs": {
+  "A_missed": [
+   "ElevenLabs Grants (founder already uses ElevenLabs, under 25 staff)",
+   "Microsoft for Startups",
+   "Deepgram for Startups",
+   "AWS Activate (founder runs on AWS; Founders tier may be blocked by the last-round-within-12-months clause)"
+  ],
+  "B_missed": [
+   "Innovasjon Norge Oppstartstilskudd 1 (not named; B covered art. 22 start-up aid generically and named only Oppstartstilskudd 2)"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "fail",
+   "A3": "fail",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 184,
+  "B": 716
+ },
+ "verdict": "B",
+ "incomplete": false
+}

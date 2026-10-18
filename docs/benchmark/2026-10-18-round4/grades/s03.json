@@ -1,0 +1,61 @@
+{
+ "qid": "s03",
+ "programs": {
+  "A": "Business Finland Sprint Grant (ongoing call from 1.9.2026)",
+  "B": "Business Finland Sprint Grant (ongoing call from 1.9.2026)"
+ },
+ "stoppers_total": {
+  "A": 21,
+  "B": 21
+ },
+ "stoppers_stated": {
+  "A": 13,
+  "B": 18
+ },
+ "factual_errors": {
+  "A": [],
+  "B": []
+ },
+ "untraceable": {
+  "A": [],
+  "B": [
+   "de minimis gate 'enintään 225 000 EUR' in 3 years: no official page states it; the terms PDF gives a 300,000 EUR cap (225,000 = 300,000 - 75,000 minimum grant, a derived threshold)"
+  ]
+ },
+ "best_first_pick": "tie",
+ "missed_programs": {
+  "A_missed": [
+   "Business Finland Research, development and piloting funding (R&D loan/grant, ongoing call)",
+   "Finnvera Alkutakaus"
+  ],
+  "B_missed": []
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 766,
+  "B": 203
+ },
+ "verdict": "A",
+ "incomplete": false
+}

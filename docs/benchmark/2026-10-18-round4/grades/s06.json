@@ -1,0 +1,66 @@
+{
+ "qid": "s06",
+ "programs": {
+  "A": "Vinnova Innovativa Startups 2026",
+  "B": "Forskningsavdrag (FoU-avdrag, lag 2023:747)"
+ },
+ "stoppers_total": {
+  "A": 23,
+  "B": 8
+ },
+ "stoppers_stated": {
+  "A": 22,
+  "B": 6
+ },
+ "factual_errors": {
+  "A": [
+   "Turn 1: 'Skatteverkets sida säger inte om redan inlämnade månader kan rättas' - Skatteverket's 'Rätta en arbetsgivardeklaration' page says arbetsgivardeklarationer can be corrected up to six years back (minor; not an amount, date or open status)"
+  ],
+  "B": []
+ },
+ "untraceable": {
+  "A": [
+   "'annat bolag äger högst 50 %' as an eligibility condition for Innovativa Startups 2026 - not on the call page, which only says the whole group must meet the listing and size requirements"
+  ],
+  "B": [
+   "Kammarrätten i Göteborg 2025 'Consat' ruling denying a software company the deduction - found only in third-party sources (BDO, Skattenytt), not on domstol.se, Skatteverket or Regeringen; Skatteverket rättslig vägledning page 1334 returned 'Request Rejected'"
+  ]
+ },
+ "best_first_pick": "A",
+ "missed_programs": {
+  "A_missed": [
+   "Proposed extra FoU deduction of 200 % of FoU staff wage costs, broader FoU definition and no 15-hour rule from 1 Jan 2027 (lagrådsremisser 11 Jun and 13 Aug 2026; a proposal, not law, and it would not cover bought-in services either)"
+  ],
+  "B_missed": [
+   "Vinnova Innovativa Startups 2026 (open since 12 Oct 2026, closes 12 Jan 2027 14:00, up to 500 000 SEK)"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "fail"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "pass"
+  }
+ },
+ "turn1_words": {
+  "A": 201,
+  "B": 684
+ },
+ "verdict": "A",
+ "incomplete": false
+}
