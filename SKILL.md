@@ -66,11 +66,26 @@ costs trust.
 | `stack` | `aws`, `gcp`, `azure`, `cloudflare`, `vercel`, `supabase`, `neon`, `mongodb`, `anthropic`, `openai`, `mistral`, `together`, `modal`, `lambda`, `runpod`, `huggingface`, `replicate`, `nvidia` | decides the credit doors |
 | `sector` | `ai`, `deeptech`, `energy`, `climate`, `health`, `fintech`, `saas`, `hardware`, `agriculture`, `defence`, `marine`, `transport`, `semiconductors` | calls tied to a topic stay out of the first answer unless the sector matches |
 | `has_vat`, `has_employment`, `has_work_email`, `has_website`, `has_developer`, `workload_defined`, `profit_distributed` | bool | EuroHPC and vendor gates |
-| `confirmed` | list of keys | requirements the founder confirms in words; the keys are those in `CONFIRMATIONS` in `scripts/i18n.py`: `aws_paid_plan`, `baltic_marine_monitoring`, `consortium_partner`, `dk_financial_foundation`, `eip_competence_mix`, `eur_200k_raised_or_revenue`, `hpc_experience`, `kth_affiliation`, `need_owner`, `new_to_aws_activate`, `no_earlier_bf_startup_funding`, `region_skane`, `region_vgr`, `research_background`, `se_rd_staff_on_payroll` |
+| `confirmed` | list of keys | requirements the founder confirms in words; the keys are those in `CONFIRMATIONS` in `scripts/i18n.py`: `aws_paid_plan`, `baltic_marine_monitoring`, `business_not_yet_fulltime`, `consortium_partner`, `dk_financial_foundation`, `each_founder_owns_12_5_percent`, `eic_running_grant_only_applying_blended`, `eip_competence_mix`, `equity_majority_eu_efta_uk`, `eur_200k_raised_or_revenue`, `fulltime_team_member`, `group_unlisted_within_10msek`, `group_within_small_enterprise_limits`, `group_within_sme_limits`, `hpc_experience`, `independent_investor_commits`, `kth_affiliation`, `need_owner`, `new_to_aws_activate`, `no_earlier_bf_funding_same_solution`, `no_third_country_control`, `owner_is_founders_own_holding`, `owners_all_natural_persons`, `project_lead_employed`, `region_skane`, `region_vgr`, `research_background`, `research_west_sweden_university`, `se_rd_staff_on_payroll`, `separate_from_owner_operations` |
 | `denied` | list of keys | the same keys when the founder says no ("vi har ingen partner"). A key in neither list stays an open question |
 | `need` | list of `money`, `compute`, `credits`, `support` | `gpu` is an alias of `compute`; `support` is free coaching or programs without cash. A founder asking for money does not get no-cash programs unless they ask for support too |
 | `need_eur` | number, EUR | how much money the founder says they need, converted to EUR; only when they name an amount. Doors that pay a small fraction of it rank lower |
 | `lang` | `sv`, `en`, `fi`, `no`, `da` | the founder's language; labels and questions come back in it |
+| `named` | list of program ids or funder prefixes: `vinnova`, `almi`, `energimyndigheten`, `skatteverket`, `business-finland`, `starttiraha`, `innovasjon-norge`, `forskningsradet`, `innovationsfonden`, `eifo`, `rannis`, `eic-accelerator`, `eurostars` | programs or funders the founder named. Their doors lead their route and their traps lead the `screen` |
+
+The founder's own situation decides more doors than any company fact, and no
+search for programs reveals it. Set these only from what the founder says; the
+matcher's `screen` asks for the rest.
+
+| field | values | notes |
+|---|---|---|
+| `owner_company_share` | number, % | the largest share held by another company with its group, or by public bodies together. Venture funds, business angels and universities count only above 50%. Exactly 25% already counts |
+| `prior_grants`, `active_grants` | list of program ids, or short keys such as `rannis-sproti` | public grants the company has had, and those still running. "Inga" is `[]`, an answer |
+| `founder_employed_elsewhere`, `fulltime_in_company` | bool | a full-time job outside the company; full-time work in it |
+| `paid_staff` | number | people the company pays a salary to; founders without salary do not count |
+| `affiliation` | `student`, `researcher`, `staff`, `none` | the founder's link to a university now |
+| `personal_data` | `none`, `anonymous`, `pseudonymised`, `identifiable` | set only from the answer to the screen question. "Anonymised" is the founder's word, not a fact: data the source can link back is pseudonymised |
+| `lost_half_capital`, `work_started`, `on_market`, `de_minimis_eur` | bool, bool, bool, EUR | firm in difficulty, project already started, product already sold, de minimis aid in three years |
 
 Leave out what the chat does not say. An absent field is unknown and becomes a
 question; a guessed value becomes a confident wrong answer the founder cannot
@@ -103,13 +118,24 @@ The JSON has:
 - `doors`: the best doors in full, three by default. When two kinds were asked
   for, the best door of each kind is taken in turn.
 - `more`: the rest, by name, kind, status and amount.
+- `screen`: up to three questions, the ones that decide the most of the best
+  doors. The first may be `basics` (legal form or company age, when the best
+  doors need it); the rest are about the founder's own situation. Each has
+  `question`, `why` (one short sentence) and `decides` (the doors it settles;
+  empty for a trap no rule in the data covers, such as patient data or a
+  university's IP rules).
+- `routes`: the realistic routes (grants, tax relief, loans, compute, credits,
+  equity, support) in rank order, each with its `label` in the founder's
+  language, a `count` and its best doors.
 - `unlocks`: doors that open on legal form alone, keyed by the form (`company`,
   `sole_trader`), and for a founder living abroad, doors that open on the
   registration country alone, keyed `country:XX`.
-- `warnings`, `stale`, `lang`.
+- `warnings`, `stale`, `lang`. A warning about the founder's own words
+  ("anonymised") is a question to ask, not a note to drop.
 
 Per door: `status` is `eligible`, `unknown` or `blocked`; `met`, `failed`,
-`unknown` hold labels in the founder's language, each unknown with its question;
+`unknown` hold labels in the founder's language, each unknown with its question
+and, when the founder's situation decides it, its `situation` topic; `route`;
 `apply_requirements` is the checklist of what stops you inside the application
 (`before_apply` repeats the open questions in front of it); `unclear`; `also`
 lists collapsed sibling doors (Fast Lane and Large Scale under Playground) with
@@ -189,48 +215,62 @@ can see the options and choose. The full checklist comes when they choose a
 door. Nothing is hidden: the first answer says how many requirements each door
 carries, so no one walks to a site thinking it is simple.
 
-### Stage A: the first answer (verdict and top three)
+### Stage A: the first answer (map, then the questions that decide it)
 
-1. **Verdict**, one sentence: which door fits best and what decides it.
-2. **The question** that moves them forward, one sentence (rule below).
-3. **Up to three doors**, one line each, in this shape:
+Map the routes and ask what decides between them before going deep on any
+door. A full checklist for a door the founder cannot get is the most expensive
+answer this skill can give: in the last test it lost most of its cases that
+way, on a company owned by a listed group, a grant the company already held, a
+founder with a full-time job, and "anonymised" patient data.
 
-   `◐ EuroHPC Playground: 5 000 GPU-timmar gratis. Avgör: projektledarens anställning. 11 krav i ansökan, 2 oklarheter.`
+1. **Verdict**, one or two sentences: which route looks most realistic and
+   what decides it. Correct a wrong premise first ("FoU-avdraget sänker
+   arbetsgivaravgiften på löner, det betalar inte ut pengar").
+2. **Routes**, one line each, at most four, from `routes` in its order:
 
-   Head symbol from the glyph (`●` eligible, `◐` unknown, `×` blocked), the
-   name, the amount in the founder's language, the one thing that decides it
-   (the first `?` or the hardest stopper in `apply_requirements`), and the
-   counts of `apply_requirements` and `unclear`. Mark a closed door as closed.
-   Say what the money costs when `founder_cost` is not `none`: "lån",
-   "investering mot ägarandel", "avgift". A founder who asked for money must
-   not mistake an equity deal or a paid program for a grant.
+   `Bidrag: ◐ Vinnova Innovativa startups, 300 000 SEK; ◐ Almi Verifieringsmedel, upp till 100 000 SEK.`
 
-   Show only doors that are realistic for this founder now. One or two doors
-   is a good answer when nothing else fits; filler costs the founder time and
-   trust. Leave a door out of Stage A when any of these is true, unless the
-   founder asked for it by name:
-   - it is run from another country than the one the founder's company is in
-     or would be in (`foreign: true`);
-   - it charges a fee or takes equity and the founder asked for money, not
-     investment;
-   - it is closed and no next date is published;
-   - its stage or size clearly does not match the founder (an EU
-     scale-up grant for two people with an idea, an investor program for a
-     company with no plans to raise);
-   - its hardest stopper is something the founder has already said they lack.
-   Such doors may go in the `more` line, marked for what they are.
+   The route label, then its best one or two doors with the head symbol from
+   the glyph (`●` eligible, `◐` unknown, `×` blocked), the name and the amount
+   in the founder's language. The label already says what the money costs
+   (Lån, Ägarkapital); add "avgift" for a paid program. Mark a closed door as
+   closed. Leave out a route the founder cannot use now (below), and kinds they
+   did not ask for.
+3. **Before the details**, the `screen` questions, numbered, in its order, each
+   with its `why` and, when `decides` is not empty, the doors in parentheses:
 
-   Match the size of the need. A door with `undersized: true` pays a small
-   fraction of what the founder said they need. Do not lead with it. When it
-   is the first step toward a larger door (a grant to form a group before the
-   project grant), lead with the larger door and name the small one as its
-   first step.
-4. **One closing line**: "Vilken vill ni titta på? Då får ni hela listan över
-   vad ansökan kräver." Add `more` and `unlocks` lines (below) only if they
-   exist.
+   `1. Äger något annat bolag över 25 % av ert? Då kan SME-statusen falla (EIC Accelerator, Eurostars).`
 
-No glyph blocks, no checklists and no links in Stage A. Aim for under 150
-words, never over 200.
+   When `screen` is empty, ask the one question from the rule under "Lines
+   that apply to all stages". Never more than three questions.
+4. **One closing line**: "Svara på frågorna, eller välj en väg, så går jag
+   igenom vad ansökan kräver." Add `more` and `unlocks` lines (below) only if
+   they exist.
+
+Show only routes and doors that are realistic for this founder now. One route
+is a good answer when nothing else fits; filler costs the founder time and
+trust. Leave a door out of Stage A when any of these is true, unless the
+founder asked for it by name:
+- it is run from another country than the one the founder's company is in
+  or would be in (`foreign: true`);
+- it charges a fee or takes equity and the founder asked for money, not
+  investment;
+- it is closed and no next date is published;
+- its stage or size clearly does not match the founder (an EU scale-up grant
+  for two people with an idea, an investor program for a company with no plans
+  to raise);
+- its hardest stopper is something the founder has already said they lack.
+Such doors may go in the `more` line, marked for what they are.
+
+Match the size of the need. A door with `undersized: true` pays a small
+fraction of what the founder said they need. Do not lead with it. When it is
+the first step toward a larger door (a grant to form a group before the
+project grant), lead with the larger door and name the small one as its first
+step.
+
+No glyph blocks, no checklists and no links in Stage A. Aim for under 170
+words, never over 200: four route lines and three questions are the ceiling,
+not the target.
 
 Write every amount with its currency code: SEK, NOK, DKK, ISK, EUR, USD. Never
 "kr" or "kronor" alone. A Danish grant written as "200 000 kr" in a Swedish
@@ -242,15 +282,29 @@ Before you name an amount or say a door is open, read its `status_url`
 If the founder named one specific program ("har vi en chans på Vinnova?"),
 answer about that program first, still in Stage A form: two sentences on
 whether it fits and what decides it, then its one-line door, then at most one
-alternative if it fits better. Correct a wrong premise in the first sentence.
-Offer the full checklist instead of printing it. Stay under 200 words; the
-founder asked one question and should get the answer before the paperwork.
+alternative route if it fits better, then the `screen` questions. Correct a
+wrong premise in the first sentence. Offer the full checklist instead of
+printing it. Stay under 200 words; the founder asked one question and should
+get the answer before the paperwork.
 If they asked for help applying to it, not whether they have a chance, go
 straight to Stage C.
 
 ### Stage B: when the founder picks a door
 
-When the founder names a door, a number, or says "visa", give that door in full:
+First put every answer from the founder's reply into the profile and rerun the
+matcher. Then:
+
+- If the door they picked is now blocked, say so in one sentence with the
+  line that closes it ("EIC kräver SME-status, och med 62 % ägt av en
+  börsnoterad koncern är ni inte ett SME"), and give the best open door of the
+  same route in full instead, or of the next route when the route is empty.
+- If a `screen` question that decides the picked door is still unanswered,
+  ask it in the first line, then give the door in full with that line first
+  among the `○` lines and marked as deciding.
+- If they answered the questions without picking, give the best door of the
+  first route in full and say in one line which doors the answers closed.
+
+Give the door in full:
 
 1. The `glyph` in a code block, verbatim except that the `→` lines are
    translated into the founder's language (amounts are English in the data).
@@ -284,8 +338,10 @@ Read `references/applying.md` before you draft; it has each step in detail.
 In short:
 
 1. **Check fit and timing** in one line each: run the matcher with `--door
-   <id>`; say if the round is closed and offer to prepare for the next one;
-   do not draft for a door the program will reject.
+   <id>`; ask its `screen` questions first if the founder has not answered
+   them (ownership, grants already held, full-time work, data); say if the
+   round is closed and offer to prepare for the next one; do not draft for a
+   door the program will reject.
 2. **Material:** take the form's sections, limits, criteria and budget rules
    from the door's `application` block, or from the program's guide and
    templates when the block is missing. Ask once for the deck, the budget and
@@ -327,13 +383,15 @@ In short:
 Order: keep the matcher's order, except that doors of the kind the founder
 stressed most ("vi behöver GPU") come first.
 
-The question is the first `?` of the best door of the kind the founder stressed
-most. If that door has no open question, ask the question whose answer opens
-the most doors in `unlocks` ("Tänker ni registrera ett aktiebolag nu?"); if
-`unlocks` is empty, ask about the hardest stopper of the best door ("Har ni
-50 000 euro i eget kapital i bolaget i dag?"). Never ask for something the
-founder cannot have yet: no revenue or balance-sheet question to founders
-without a company. One question, not a form.
+The questions are the `screen` items, in its order: they decide the most doors
+and are the ones a careful advisor asks first. When `screen` is empty, ask one
+question: the first `?` of the best door of the kind the founder stressed most;
+if that door has no open question, the question whose answer opens the most
+doors in `unlocks` ("Tänker ni registrera ett aktiebolag nu?"); if `unlocks` is
+empty, the hardest stopper of the best door ("Har ni 50 000 euro i eget kapital
+i bolaget i dag?"). Never ask for something the founder cannot have yet: no
+revenue or balance-sheet question to founders without a company. Three
+questions at most, never a form.
 
 If a checklist item carries a date or figure the page you read today does not
 show, keep the item and say where the date comes from ("enligt portalens
@@ -353,32 +411,43 @@ by judgment. Say what the process is instead.
 
 Worked example. Founder: "Svenskt AB, två år, fyra personer. Har vi en chans på
 gratis GPU?" Profile: `{"country":"SE","legal_form":"company","age_years":2,
-"employees":4,"need":["compute"],"lang":"sv"}`. Stage A:
+"employees":4,"need":["compute"],"lang":"sv"}`. `screen` is empty, so the one
+question is Playground's first `?`. Stage A:
 
-> Ja, EuroHPC Playground passar ett svenskt AB på det vi vet och ger 5 000
-> GPU-timmar gratis. Det som avgör är projektledarens anställning.
+> Ja, gratis GPU-tid finns för ett svenskt AB på det vi vet. Vägen går via
+> EuroHPC, och det som avgör är projektledarens anställning.
 >
-> Är projektledaren anställd minst tre månader efter att GPU-tiden tar slut?
+> Beräkningskraft: ● Sweden AI Factory, gratis hjälp att välja call och granska ansökan; ◐ EuroHPC Playground, 5 000 GPU-timmar gratis i 1 till 3 månader.
 >
-> ◐ EuroHPC Playground: 5 000 GPU-timmar gratis, 1 till 3 månader. Avgör: anställningen. 11 krav i ansökan, 3 oklarheter.
-> ● Sweden AI Factory: gratis hjälp att välja call och granska ansökan, inga egna timmar än. 4 krav, 4 oklarheter.
-> ◐ EuroHPC Fast Lane: upp till 50 000 GPU-timmar. Kräver att koden redan körs på en HPC-maskin.
+> Innan detaljerna: Är projektledaren anställd minst tre månader efter att GPU-tiden tar slut?
 >
-> Vilken vill ni titta på? Då får ni hela listan över vad ansökan kräver.
+> Svara på frågan, eller välj en väg, så går jag igenom vad ansökan kräver.
 
-Founder: "Playground." Stage B: the Playground glyph with `→` lines in Swedish,
+Founder: "Ja, hon är fast anställd. Playground." Stage B: rerun with
+`has_employment: true`, then the Playground glyph with `→` lines in Swedish,
 one sentence, the full checklist in Swedish (konto på portalen med er egen
 e-postdomän och en captcha ni löser själva, momsnummer, formulär på engelska,
 etisk självskattning, ett system, teknisk underbyggnad för koden, ingen annan
 pågående EuroHPC-allokering, 2026-callen på /calls/60, och allt efter
 tilldelningen), the unclear line about open science, next step and link.
 
+Second example. Founder: "Vi har ett AB och funderar på Vinnova. Finns det
+bidrag för oss?" Profile: `{"named":["vinnova"],"country":"SE",
+"legal_form":"company","need":["money"],"lang":"sv"}`. `screen` asks the
+company's age, ownership and the share capital. Stage A gives the verdict, the
+Bidrag line with the Vinnova door first, the Lån and Skattelättnad lines, then:
+
+> 1. Hur gammalt är bolaget, i år? Vinnova Innovativa Startups kräver högst tio år.
+> 2. Äger något annat bolag, en koncern eller en offentlig aktör 25 % eller mer av ert? Då kan SME-statusen falla.
+> 3. Har bolaget förbrukat mer än hälften av aktiekapitalet? Vinnova kräver att det inte har det.
+
 ## Step 6: Follow up
 
-If the founder picks a door, answer in Stage B. If they ask for help applying,
-or say yes to it after Stage B, go to Stage C. If they answer the question,
-put it into the same profile, rerun, and show what changed: one `○` that became
-`●` is the whole update; do not restart. If the previous turn only asked for the
+If the founder picks a door or answers the `screen`, answer in Stage B. If they
+ask for help applying, or say yes to it after Stage B, go to Stage C. If they
+answer a single question after Stage B, put it into the same profile, rerun,
+and show what changed: one `○` that became `●` is the whole update; do not
+restart. If the previous turn only asked for the
 country and showed no doors, the next answer is a Stage A answer. When the founder
 confirms something a `confirmed` key covers ("ja, vi är KTH-studenter"), add
 the key and rerun.
@@ -400,11 +469,12 @@ the key and rerun.
   turnover and balance sheet, but the 10-employee cap is the applying
   company's alone. Telling a founder they are ruled out by a rule the page
   does not have is the worst error this skill can make.
-- **Ask about earlier funding before "passar".** When a door excludes companies
-  that already got money from the same funder, and the founder has mentioned
-  that funder ("vi sökte Business Finland i våras"), the question is whether
-  they have received anything from it before, and which program. Ask it before
-  you say the door fits.
+- **Ask about the founder's situation before "passar".** Ownership by another
+  company, grants already held or running, a full-time job elsewhere, a
+  university affiliation and whether the data is really anonymous each close
+  doors the company facts leave open. The `screen` asks them; when the founder
+  has named a funder ("vi sökte Business Finland i våras"), ask what they got
+  from it before you say any of its doors fits.
 - **Use the call's own name.** Write "Avancerad digitalisering: Cybersäkerhet,
   AI och resiliens", not a shortening that matches another call. A founder
   searching for the short name lands on the wrong page.
@@ -432,7 +502,13 @@ are `{"field","op","value"}` with no label; `scripts/i18n.py` generates the
 text in five languages. A requirement no company fact expresses (affiliation,
 region, research origin, partner) is `{"field":"confirmed","op":"contains",
 "value":"<key>"}`; a new key needs its five labels and questions in
-`CONFIRMATIONS` in `scripts/i18n.py`. Fill `apply_requirements` (3 to 8 items
+`CONFIRMATIONS` in `scripts/i18n.py`. A rule on the founder's situation uses
+the situation fields: an SME-only door gets
+`{"any":[{"field":"owner_company_share","op":"lt","value":25},{"field":"confirmed","op":"contains","value":"group_within_sme_limits"}]}`,
+and "no earlier or running grant from this fund" is `prior_grants` or
+`active_grants` with `excludes` and a list of keys, each named in `GRANT_NAMES`
+in `scripts/i18n.py`. Set `route` only when kind and cost do not say it (`tax`
+for a deduction claimed in a return). Fill `apply_requirements` (3 to 8 items
 from the application page itself) and `unclear`. Set `group` on sibling doors.
 Add a `{#id}` entry to the right `references/*.md`, set `last_verified` and
 `availability`, then run:
