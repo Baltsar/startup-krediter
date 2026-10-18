@@ -319,7 +319,7 @@ Not covered here: EU instruments (EIC Accelerator, Eurostars, Horizon Europe), r
 - **Who:** Founders, alone or in teams of up to three, who have completed at least 120 ECTS of higher education before the programme starts, own at least 12.5 percent of the company, work at least 37 hours a week in it during the programme and have at most 10 hours a week of other study or paid work. A CVR number is not needed when applying but the company must be established with a Danish CVR number before the programme begins.
 - **What:** 12-month full-time programme with salary and development funding plus mentoring.
 - **Amount:** "Monthly grant: DKK 27,500 per founder per month" and "Development grant: Up to DKK 100,000 for development activities"
-- **Requirements:** As above; no company-age or residency rule is stated on the page.
+- **Requirements:** As above; the company is at most five years old at award (guidelines of 1 July 2026, "rejected without substantive assessment" otherwise), has under 50 employees, has never distributed profits and is not in difficulty; a controlling parent company is itself at most five years old.
 - **Before you apply:** 1. Apply in e-grant.dk: one founder registers (username and password or MitID) and becomes the applicant. 2. Application in Danish or English; the deadline is a weekday at 12 noon and nothing can be changed after it. 3. Mandatory appendices per applicant: degree certificate or documentation of ongoing education (at least 120 ECTS) and a CV of at most two pages, as PDF. 4. Each founder owns at least 12.5 percent, works at least 37 hours a week in the company, at most 10 hours a week elsewhere, and attends sparring sessions in person. 5. Company with a Danish CVR number by programme start, at most five years old at award, holding the rights to the idea; funded only once. 6. Non-EU/EEA founders: a Danish degree or one year's employment in Denmark within three years, plus a residence permit allowing self-employment. 7. Shortlisted applicants pitch in Danish or English to the panel.
 - **Unclear:** No call was open on 2026-10-15 ('There are currently no calls available') and no next deadline is published, although guidelines dated 1 July 2026 exist. Places per thematic track (green, life science, digital, defence) are not published. e-grant access for founders without MitID is only described as username and password.
 - **How to apply:** "You apply via the electronic application system www.e-grant.dk." Applications in Danish or English, submitted on time since no changes are possible afterwards.
@@ -395,15 +395,15 @@ Not covered here: EU instruments (EIC Accelerator, Eurostars, Horizon Europe), r
 
 ## Starttiraha {#starttiraha}
 
-- **Who:** A person in Finland about to start full-time entrepreneurship, before the business is founded.
+- **Who:** A person in Finland who moves to full-time entrepreneurship, from unemployment, a job, studies or a part-time business, before the business runs full-time.
 - **What:** A personal allowance for living costs during the first months, at the basic unemployment allowance level.
 - **Amount:** EUR 37.21 per day, up to 12 months in two six-month periods.
-- **Before you apply:** Apply before founding; business plan with calculations; no payment defaults or tax debt; financing, contracts and licences ready; crowded sectors are usually refused.
-- **Unclear:** The official service page did not render on 2026-10-17; rules read from the employment services' blog of 24 March 2026.
-- **Status page:** https://tyomarkkinatori.fi/blogit/starttiraha-antaa-turvaa-yritystoiminnan-alkuun
-- **Verified:** 2026-10-17
-- **Evidence:** "starttirahaa tulee hakea ennen yrityksen perustamista"
-- **Gotchas:** Founding the Oy or toiminimi first forfeits it. It pays the founder's living, not the product.
+- **Before you apply:** Apply before the business starts full-time (marketing, sales or VAT, prepayment or employer registration count as starting; a Trade Register entry does not); full-time entrepreneurship, so not with a full-time job kept; business plan with calculations; no payment defaults or tax debt; financing, contracts and licences ready; crowded sectors are usually refused; other income in the period is deducted.
+- **Unclear:** Nothing open on eligibility; the regional employment services make an overall assessment.
+- **Status page:** https://tyomarkkinatori.fi/lisatietoa-palveluista/starttiraha
+- **Verified:** 2026-10-18
+- **Evidence:** Act 380/2023: "starttirahan hakija on aloittanut päätoimisen yritystoiminnan ... ennen kuin tukihakemus on saapunut työvoimaviranomaiselle"; KEHA: "Kaupparekisteriin merkitsemisellä ei ole merkitystä"
+- **Gotchas:** Registering the Oy or toiminimi first does not forfeit it; starting to sell or market full-time does. A founder who keeps a full-time job is a sideline entrepreneur and does not qualify. It pays the founder's living, not the product.
 
 ## Jordbruksverket Stöd för att genomföra ett innovationsprojekt (EIP) {#jordbruksverket-eip-innovationsprojekt}
 

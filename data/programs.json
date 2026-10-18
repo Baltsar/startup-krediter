@@ -54,6 +54,51 @@
           "field": "profit_distributed",
           "op": "eq",
           "value": false
+        },
+        {
+          "any": [
+            {
+              "field": "owner_company_share",
+              "op": "lte",
+              "value": 50
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "group_unlisted_within_10msek"
+            }
+          ]
+        },
+        {
+          "field": "prior_grants",
+          "op": "excludes",
+          "value": [
+            "vinnova-innovativa-startups-2025"
+          ]
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "project_lead_employed"
+        },
+        {
+          "field": "lost_half_capital",
+          "op": "eq",
+          "value": false
+        },
+        {
+          "any": [
+            {
+              "field": "age_years",
+              "op": "lt",
+              "value": 5
+            },
+            {
+              "field": "de_minimis_eur",
+              "op": "lt",
+              "value": 300000
+            }
+          ]
         }
       ],
       "apply_url": "https://ansok.vinnova.se/utlysning/0382e83b-4c96-404d-bed1-08deab387617?opencall=true&lang=sv",
@@ -64,7 +109,7 @@
       },
       "next_step": "Read the call text on the status page, log in to Vinnova's e-service for applications (ansok.vinnova.se) with the company's account, fill in the form about the project, project parties and budget, and submit before 12 January 2027 at 14:00. The founder clicks submit.",
       "reference": "references/nordic-grants.md#vinnova-innovativa-startups",
-      "last_verified": "2026-10-17",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "apply_requirements": [
         "Account in Vinnova's e-service (ansok.vinnova.se); the account holder, project leader and signatory all get the confirmation",
@@ -77,7 +122,8 @@
         "The company must not be insolvent, in liquidation or restructuring, owe significant debts to Kronofogden, or have used up half or more of its share capital",
         "The company must not have taken over another company's business, bought a company or been formed by a merger",
         "Grants are paid only to a bankgiro or plusgiro account in the company's name",
-        "Salary counts only if it is actually paid out during the project; an unpaid founder's time is not an eligible cost, and an unexplained salary increase before or during the project is not either"
+        "Salary counts only if it is actually paid out during the project; an unpaid founder's time is not an eligible cost, and an unexplained salary increase before or during the project is not either",
+        "An unpaid founder's time cannot be budgeted as a salary cost"
       ],
       "unclear": [
         "Login method is not stated on any page read (BankID or username and password); 'Skapa nytt konto' points to minprofil.vinnova.se",
@@ -429,13 +475,65 @@
           "field": "confirmed",
           "op": "contains",
           "value": "need_owner"
+        },
+        {
+          "any": [
+            {
+              "field": "owner_company_share",
+              "op": "lt",
+              "value": 25
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "group_within_small_enterprise_limits"
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "revenue_meur",
+              "op": "lte",
+              "value": 10
+            },
+            {
+              "field": "balance_meur",
+              "op": "lte",
+              "value": 10
+            }
+          ]
+        },
+        {
+          "field": "work_started",
+          "op": "eq",
+          "value": false
+        },
+        {
+          "field": "lost_half_capital",
+          "op": "eq",
+          "value": false
+        },
+        {
+          "any": [
+            {
+              "field": "age_years",
+              "op": "lt",
+              "value": 5
+            },
+            {
+              "field": "de_minimis_eur",
+              "op": "lt",
+              "value": 300000
+            }
+          ]
         }
       ],
       "apply_url": "https://ansok.vinnova.se/utlysning/26bdd234-db2b-4fa2-1fab-08dec63ac2d3?opencall=true&lang=en",
       "status_url": "https://www.vinnova.se/en/calls-for-proposals/accelerate-swedish-partnership/ffi-asp-accelerated-startup-2026-01767/",
       "next_step": "Find a need owner (a private or public road-transport organisation) willing to partner, agree the project type and which FFI sub-programme the innovation connects to, then log in to Vinnova's e-service and complete the form with CVs for the project team and a GANTT chart before 29 October 2026 at 14:00. The founder clicks submit.",
       "reference": "references/nordic-grants.md#vinnova-ffi-asp-accelerated-startup-partnership",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "home_country": "SE",
       "apply_requirements": [
@@ -492,13 +590,65 @@
           "field": "age_years",
           "op": "gte",
           "value": 2
+        },
+        {
+          "any": [
+            {
+              "field": "owner_company_share",
+              "op": "lt",
+              "value": 25
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "group_within_sme_limits"
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "revenue_meur",
+              "op": "lte",
+              "value": 50
+            },
+            {
+              "field": "balance_meur",
+              "op": "lte",
+              "value": 43
+            }
+          ]
+        },
+        {
+          "field": "prior_grants",
+          "op": "excludes",
+          "value": [
+            "eureka-innowwide-2022",
+            "eureka-innowwide-2023",
+            "eureka-innowwide-2024",
+            "eureka-innowwide-2025"
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "age_years",
+              "op": "lt",
+              "value": 3
+            },
+            {
+              "field": "lost_half_capital",
+              "op": "eq",
+              "value": false
+            }
+          ]
         }
       ],
       "apply_url": "https://www.eurekanetwork.org/programmes-and-calls/innowwide/5th-innowwide-call-for-market-feasibility-projects-autumn-2026/",
       "status_url": "https://www.vinnova.se/e/eureka-innowwide/eureka-innowwide-call-5/",
       "next_step": "Find the local counterpart in the target country (Eureka's Innowwide partner search helps), register on Eureka's SmartSimple platform (eureka.smartsimple.ie) as a person legally authorised to represent the company, fill in the English application form and workplan template, invite the subcontractor to sign the commitment on the platform, and submit before 1 December 2026 at 14:00 CET. The founder clicks submit.",
       "reference": "references/nordic-grants.md#eureka-innowwide-call-5",
-      "last_verified": "2026-10-16",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "notes": "Vinnova diarienummer 2026-01726. Open on 2026-10-15: Vinnova's page says 'Stänger den 1 december 2026' (sista ansökningsdag 1 dec. 2026 kl 14:00, beslut meddelas 20 maj 2027, informationsmöte 29 sep. 2026); Eureka's call page says apply from 1 October 2026, submission deadline 1 December 2026 14:00 CET, results intended during the first trimester of 2027. Budget 4.2 MEUR for 70 projects; the top 105 above-threshold proposals go to an independent panel and ethics review; thresholds Excellence 18/30, Impact 24/40, Implementation 18/30. Mono-beneficiary: only the SME signs the grant; the subcontractor in the target country is not party to it and subcontracting costs must be above zero. Civil applications only; one application per company; the company must not be an undertaking in difficulty. Vinnova's page is an information page without an apply button and refers to Eureka for the exact limits; the money comes from the EU-funded European Partnership on Innovative SMEs, not from Vinnova's budget. Scoped EU because every EU member state plus Iceland, Israel, Norway, Switzerland, Türkiye and the UK are listed as participating; Denmark, Finland, Sweden, Iceland and Norway are all on the list.",
       "apply_requirements": [
@@ -546,13 +696,27 @@
           "field": "confirmed",
           "op": "contains",
           "value": "baltic_marine_monitoring"
+        },
+        {
+          "any": [
+            {
+              "field": "legal_form",
+              "op": "neq",
+              "value": "company"
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "equity_majority_eu_efta_uk"
+            }
+          ]
         }
       ],
       "apply_url": "https://ansok.vinnova.se/utlysning/aa892961-4010-4e1c-726f-08df237ab60c?opencall=true",
       "status_url": "https://www.vinnova.se/e/radikal-innovation/the-baltic-marine-watchdog-challenge/",
       "next_step": "Read the English call for submissions on the status page, assemble a team with maritime robotics, sensor fusion and commercial experience, complete the online submission form in Vinnova's e-service with every claim backed by data (or a declared estimate), and attach the signed Declaration of Honour before 2 December 2026 at 14:00. The founder clicks submit.",
       "reference": "references/nordic-grants.md#vinnova-sprang-baltic-marine-watchdog",
-      "last_verified": "2026-10-16",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "home_country": "SE",
       "notes": "Diarienummer 2026-02609, programme Radikal innovation. Open on 2026-10-15: 'Stänger den 2 december 2026 kl 14:00'; opened 8 October 2026; decision 19 January 2027. Timeline: initial selection December 2026 to January 2027 with a pitch event in front of a jury, up to twelve teams contracted for Stage 1 (February to June 2027, interim demonstration tracking a surface target in Baltic littoral waters), up to nine teams for Stage 2 (June to November 2027, final public demonstration with surface and underwater targets); challenge closes 30 November 2027. Both demonstrations are mandatory and Vinnova may reclaim the stage's funds from a team that does not attend. The money is a fixed price for R&D services, not a cost-share grant, and the contribution must not already be financed by other public funding. The system must be fully autonomous, with a safety risk assessment plan and a kill switch. Evaluation criteria Approach, Implementation and Team weigh equally, Economy decides ties, and a portfolio view on solution variety may be applied; team gender balance is a sub-criterion. Research teams should aim to incorporate a company. No sector rule is encoded because the schema has no maritime or robotics sector. Contact challenge@vinnova.se.",
@@ -627,13 +791,56 @@
               "value": "deeptech"
             }
           ]
+        },
+        {
+          "any": [
+            {
+              "field": "owner_company_share",
+              "op": "lt",
+              "value": 25
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "group_within_small_enterprise_limits"
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "revenue_meur",
+              "op": "lte",
+              "value": 10
+            },
+            {
+              "field": "balance_meur",
+              "op": "lte",
+              "value": 10
+            }
+          ]
+        },
+        {
+          "field": "work_started",
+          "op": "eq",
+          "value": false
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "project_lead_employed"
+        },
+        {
+          "field": "lost_half_capital",
+          "op": "eq",
+          "value": false
         }
       ],
       "apply_url": "https://ansok.vinnova.se/utlysning/71906547-ba29-46fa-ae75-08de6e00a7ec?opencall=true&lang=sv",
       "status_url": "https://www.vinnova.se/e/chips-ju/chips-ju-test-och-validering-av-ny-2025-04692/",
       "next_step": "First obtain approved access from the pilot line itself (each line runs its own assessment; the Swedish Chips Competence Centre at sccc.se guides Swedish applicants), then log in to Vinnova's e-service and apply with the access decision and timetable attached, before 29 July 2027 at 14:00. The founder clicks submit.",
       "reference": "references/nordic-grants.md#vinnova-chips-ju-pilot-line-access",
-      "last_verified": "2026-10-16",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "notes": "Diarienummer 2025-04692, programme Chips JU (2023-03764). Open on 2026-10-15: opened 25 February 2026, projects may start from 26 March 2026, last application day 29 July 2027 at 14:00; no decision date is printed. Total budget 7 MSEK per year in 2026 and 2027. Pilot lines listed on the page: NanoIC, FAMES, APECS (advanced packaging and heterogeneous integration), WBG (wide band gap), PIXEurope (photonic integrated circuits). Eligible costs are only innovation advisory and innovation support services bought from the pilot line, booked under 'Konsultkostnader, licenser'; the same services from any other actor, salaries, equipment and land are not eligible. The access decision from the pilot line must exist before the Vinnova application. The sector rule accepts hardware or deeptech because the schema has no semiconductor sector.",
       "apply_requirements": [
@@ -693,13 +900,32 @@
           "field": "confirmed",
           "op": "contains",
           "value": "consortium_partner"
+        },
+        {
+          "field": "work_started",
+          "op": "eq",
+          "value": false
+        },
+        {
+          "any": [
+            {
+              "field": "legal_form",
+              "op": "neq",
+              "value": "company"
+            },
+            {
+              "field": "lost_half_capital",
+              "op": "eq",
+              "value": false
+            }
+          ]
         }
       ],
       "apply_url": "https://ansok.vinnova.se/utlysning/7a946e8f-1ee0-4d57-417c-08df24511a20?opencall=true&lang=sv",
       "status_url": "https://www.vinnova.se/e/avancerad-digitalisering-industriell-2024-04161/5g-och-automatisering-for-operativ-industrinytta/",
       "next_step": "Find an industrial need owner (a Swedish aktiebolag) as consortium partner, agree a 12 to 36 month project with at least 50 percent co-financing and a budget of 3 to 15 MSEK in grant, then log in to Vinnova's e-service and submit with CVs, project description and summary before 19 January 2027 at 14:00. The founder clicks submit.",
       "reference": "references/nordic-grants.md#vinnova-avancerad-digitalisering-5g-automatisering",
-      "last_verified": "2026-10-16",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "notes": "Diarienummer 2026-02219. Open on 2026-10-15: 'Stänger den 19 januari 2027 kl 14:00'. Opened 13 October 2026; information meeting 23 October 2026; last application day 19 January 2027 at 14:00; decision 18 March 2027. Part of the programme Avancerad digitalisering (2024-04161). Every project party that applies for funding must be a Swedish legal person; a foreign organisation with a branch or place of business in Sweden counts if the costs belong to that branch. The project may not have started before the application is submitted. Vinnova's share of each party's costs follows the state-aid rules and is set per organisation (EU SME definition applies, group figures count); the project as a whole gets at most 50 percent. 'Industri' in the programme means the whole production chain plus industry-near service and technology sectors, including energy, logistics, telecom, water/air/ventilation, recycling and defence. Assessment: Potential 40 percent, Aktörer 30, Genomförbarhet 30. Application in Swedish or English with CV, project description and summary templates. Projects must start between 19 March and 19 April 2027 and end by 19 April 2030. The consortium rule (two parties, one Swedish industrial aktiebolag as need owner) has no profile field, so the record only encodes country and legal form; a startup can be the applicant with its industrial customer as the need owner.",
       "apply_requirements": [
@@ -758,13 +984,32 @@
           "field": "confirmed",
           "op": "contains",
           "value": "consortium_partner"
+        },
+        {
+          "field": "work_started",
+          "op": "eq",
+          "value": false
+        },
+        {
+          "any": [
+            {
+              "field": "legal_form",
+              "op": "neq",
+              "value": "company"
+            },
+            {
+              "field": "lost_half_capital",
+              "op": "eq",
+              "value": false
+            }
+          ]
         }
       ],
       "apply_url": "https://ansok.vinnova.se/utlysning/e4b28ee4-05d4-4e1d-713c-08df17abb26c?opencall=true&lang=sv",
       "status_url": "https://www.vinnova.se/e/avancerad-digitalisering-industriell-2024-04161/cybersakerhet-ai-och-resiliens/",
       "next_step": "Partner with an industrial need owner, choose one of the call's two tracks (preventing, detecting and handling cyber threats, or secure and reliable industrial AI), then log in to Vinnova's e-service and submit with CVs, project description and summary before 19 January 2027 at 14:00. The founder clicks submit.",
       "reference": "references/nordic-grants.md#vinnova-avancerad-digitalisering-cybersakerhet-ai",
-      "last_verified": "2026-10-16",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "notes": "Diarienummer 2026-01891. Open on 2026-10-15: 'Stänger den 19 januari 2027 kl 14:00'. Opened 13 October 2026; information meeting 23 October 2026; last application day 19 January 2027 at 14:00; decision 18 March 2027. Part of the programme Avancerad digitalisering (2024-04161). Every project party that applies for funding must be a Swedish legal person; a foreign organisation with a branch or place of business in Sweden counts if the costs belong to that branch. The project may not have started before the application is submitted. Vinnova's share of each party's costs follows the state-aid rules and is set per organisation (EU SME definition applies, group figures count); the project as a whole gets at most 50 percent. 'Industri' in the programme means the whole production chain plus industry-near service and technology sectors, including energy, logistics, telecom, water/air/ventilation, recycling and defence. Assessment: Potential 40 percent, Aktörer 30, Genomförbarhet 30. Application in Swedish or English with CV, project description and summary templates. Projects must start between 19 March and 15 April 2027. The page says the call does not address single organisations and that individuals and sole traders cannot apply. The consortium rule has no profile field, so the record only encodes country and legal form.",
       "apply_requirements": [
@@ -820,13 +1065,32 @@
           "field": "confirmed",
           "op": "contains",
           "value": "consortium_partner"
+        },
+        {
+          "field": "work_started",
+          "op": "eq",
+          "value": false
+        },
+        {
+          "any": [
+            {
+              "field": "legal_form",
+              "op": "neq",
+              "value": "company"
+            },
+            {
+              "field": "lost_half_capital",
+              "op": "eq",
+              "value": false
+            }
+          ]
         }
       ],
       "apply_url": "https://ansok.vinnova.se/utlysning/aedd8745-2a6c-4af8-726e-08df237ab60c?opencall=true&lang=sv",
       "status_url": "https://www.vinnova.se/e/avancerad-digitalisering-industriell-2024-04161/effektiv-produktutveckling-av-2026-01892/",
       "next_step": "Form a consortium with at least one more industrial company (an industrial need owner should lead), then log in to Vinnova's e-service and submit with CVs, project description and summary before 19 January 2027 at 14:00. The founder clicks submit.",
       "reference": "references/nordic-grants.md#vinnova-avancerad-digitalisering-cyberfysiska-system",
-      "last_verified": "2026-10-16",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "notes": "Diarienummer 2026-01892. Open on 2026-10-15: 'Stänger den 19 januari 2027 kl 14:00'. Opened 13 October 2026; information meeting 23 October 2026; last application day 19 January 2027 at 14:00; decision 18 March 2027. Part of the programme Avancerad digitalisering (2024-04161). Every project party that applies for funding must be a Swedish legal person; a foreign organisation with a branch or place of business in Sweden counts if the costs belong to that branch. The project may not have started before the application is submitted. Vinnova's share of each party's costs follows the state-aid rules and is set per organisation (EU SME definition applies, group figures count); the project as a whole gets at most 50 percent. 'Industri' in the programme means the whole production chain plus industry-near service and technology sectors, including energy, logistics, telecom, water/air/ventilation, recycling and defence. Assessment: Potential 40 percent, Aktörer 30, Genomförbarhet 30. Application in Swedish or English with CV, project description and summary templates. Projects must start between 19 March and 15 April 2027. Cross-sector consortia are especially welcome. The requirement of two industrial company parties has no profile field, so the record only encodes country and legal form; a software startup needs at least one industrial company partner.",
       "apply_requirements": [
@@ -883,13 +1147,32 @@
           "field": "confirmed",
           "op": "contains",
           "value": "consortium_partner"
+        },
+        {
+          "field": "work_started",
+          "op": "eq",
+          "value": false
+        },
+        {
+          "any": [
+            {
+              "field": "legal_form",
+              "op": "neq",
+              "value": "company"
+            },
+            {
+              "field": "lost_half_capital",
+              "op": "eq",
+              "value": false
+            }
+          ]
         }
       ],
       "apply_url": "https://ansok.vinnova.se/utlysning/4eee6a9a-1453-4f32-0017-08df15776219?opencall=true&lang=sv",
       "status_url": "https://www.vinnova.se/e/avancerad-digitalisering-industriell-2024-04161/industriell-flexibel-energistyrning-med-2026-02019/",
       "next_step": "Partner with an industrial need owner (an industrial company or grid operator), choose the research or the experimental-development track, then log in to Vinnova's e-service and submit with project description, CVs and summary before 19 January 2027 at 14:00. The founder clicks submit.",
       "reference": "references/nordic-grants.md#vinnova-avancerad-digitalisering-flexibel-energistyrning",
-      "last_verified": "2026-10-16",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "notes": "Diarienummer 2026-02019. Open on 2026-10-15: 'Stänger den 19 januari 2027 kl 14:00'. Opened 13 October 2026; information meeting 23 October 2026; last application day 19 January 2027 at 14:00; decision 18 March 2027. Part of the programme Avancerad digitalisering (2024-04161). Every project party that applies for funding must be a Swedish legal person; a foreign organisation with a branch or place of business in Sweden counts if the costs belong to that branch. The project may not have started before the application is submitted. Vinnova's share of each party's costs follows the state-aid rules and is set per organisation (EU SME definition applies, group figures count); the project as a whole gets at most 50 percent. 'Industri' in the programme means the whole production chain plus industry-near service and technology sectors, including energy, logistics, telecom, water/air/ventilation, recycling and defence. Assessment: Potential 40 percent, Aktörer 30, Genomförbarhet 30. Application in Swedish or English with CV, project description and summary templates. Projects must start between 19 March and 15 April 2027. The experimental-development track may not mainly be routine adaptation, commercial operation or market introduction. The need-owner rule has no profile field, so the record only encodes country and legal form.",
       "apply_requirements": [
@@ -941,13 +1224,18 @@
             "sole_trader",
             "none"
           ]
+        },
+        {
+          "field": "de_minimis_eur",
+          "op": "lt",
+          "value": 300000
         }
       ],
       "apply_url": "https://www.almi.se/lan-finansiering/verifieringsmedel/",
       "status_url": "https://www.almi.se/lan-finansiering/verifieringsmedel/",
       "next_step": "Contact Almi and book a conversation with an advisor about the idea and what needs verifying; the advisor then gives you access to Almi's e-service, where the founder submits the application.",
       "reference": "references/nordic-grants.md#almi-verifieringsmedel",
-      "last_verified": "2026-10-17",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "founder_cost": "none",
       "apply_requirements": [
@@ -956,7 +1244,8 @@
         "The money only buys external services that verify the idea, including a simple MVP; it may not pay for travel, representation, marketing, training, patent applications, or prototypes and investments that create lasting value",
         "The idea must be innovative; Almi assesses it, and the amount is set with the advisor and varies by region",
         "De minimis aid: a cap on public aid over a rolling three-year period, so earlier aid counts",
-        "Work paid by the grant starts only after approval; handling usually takes up to a few weeks once the application is complete"
+        "Work paid by the grant starts only after approval; handling usually takes up to a few weeks once the application is complete",
+        "De minimis aid over the current year and the three before it, the whole group counted, must stay under 300 000 EUR; little room left cuts the grant"
       ],
       "unclear": [
         "Whether your region pays the full 25 000 SEK to private individuals or 100 000 SEK to companies; 'the amount depends on the region'. Ask your regional Almi advisor",
@@ -1096,13 +1385,32 @@
           "field": "confirmed",
           "op": "contains",
           "value": "eip_competence_mix"
+        },
+        {
+          "any": [
+            {
+              "field": "age_years",
+              "op": "lt",
+              "value": 3
+            },
+            {
+              "field": "lost_half_capital",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        {
+          "field": "de_minimis_eur",
+          "op": "lt",
+          "value": 300000
         }
       ],
       "apply_url": "https://jordbruksverket.se/e-tjanster-databaser-och-appar/e-tjanster-och-databaser-stod/projektstod-investeringsstod-och-foretagsstod",
       "status_url": "https://jordbruksverket.se/stod/innovationsprojekt-inom-eip/stod-for-att-genomfora-ett-innovationsprojekt-eip",
       "next_step": "Call or email the free innovation support (innovationssupporten) at Landsbygdsnätverket to test the idea and find group members, sign the cooperation agreement and check freedom to operate, then apply in Jordbruksverket's e-service with e-ID by 11 December 2026 at 13:00. The founder submits the application.",
       "reference": "references/nordic-grants.md#jordbruksverket-eip-innovationsprojekt",
-      "last_verified": "2026-10-17",
+      "last_verified": "2026-10-18",
       "notes": "Page read 2026-10-17 ('Senast granskad: 2026-01-28'). Continuous intake judged in four 2026 rounds: 'senast skicka in din ansökan den 31 mars, 30 juni, 30 september och 11 december', 'senast klockan 13'; the next is 11 December 2026. 'Handläggningstiden för att få ett beslut om stöd varierar, men är ungefär 11 månader, räknat från när du skickar in ansökan.' Payout claims take about 5 months. Last day to report any project in the current programme: 6 April 2029. An external advisory selection committee meets about 3-4 times a year; a prioritised application goes to case handling, usually with requests for more documents, then the decision. Scoring (Urvalskriterier EIP projekt 2026, GD decision 3.1.17-14003/2025): need 170, end result 70, originality 150, sustainability 140, competitiveness and benefit 150, budget and work packages 50, competitor analysis 30, market entry and strategy 140, cooperation group 70, knowledge exchange 30; minimum 600 of 1 000. Group rule: 'minst två organisationer som tillsammans har minst två av de här kompetenserna'. Agreement before applying: 'För att kunna få stöd för ett innovationsprojekt måste du först ha en innovationsgrupp och gruppen måste ha tecknat ett samarbetsavtal', and the Samarbetsgruppen criterion asks for each member's name, organisation and role in the application. 'Du kan inte få stöd för utgifter som gäller forskning eller marknadsföring.' Advance: 'upp till 50 procent av ditt stöd i förskott, dock högst 250 000 kronor', only the Swedish-financed share, not for state agencies, regions or municipalities. Own work: 340 SEK per hour for sole traders and HB/KB partners; 'Om du äger ett aktiebolag måste du alltså ta ut lön'. The innovation support is outside Jordbruksverket: 'Det är en kostnadsfri tjänst', 'Innovationssupporten har tystnadsplikt'; it cannot write the application but can review a draft. Budget 525 MSEK for 2023-2027, about 400 MSEK through the continuous rounds and 125 MSEK through thematic calls; no thematic EIP call was listed on the calls page on 2026-10-17. Country SE because the e-service needs Swedish e-ID and the English page asks for 'a Swedish partner as the main applicant'; the Swedish pages do not say 'registered in Sweden'.",
       "availability": "open",
       "apply_requirements": [
@@ -1168,13 +1476,32 @@
           "field": "confirmed",
           "op": "contains",
           "value": "eip_competence_mix"
+        },
+        {
+          "any": [
+            {
+              "field": "age_years",
+              "op": "lt",
+              "value": 3
+            },
+            {
+              "field": "lost_half_capital",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        {
+          "field": "de_minimis_eur",
+          "op": "lte",
+          "value": 289000
         }
       ],
       "apply_url": "https://jordbruksverket.se/e-tjanster-databaser-och-appar/e-tjanster-och-databaser-stod/projektstod-investeringsstod-och-foretagsstod",
       "status_url": "https://jordbruksverket.se/stod/innovationsprojekt-inom-eip/stod-for-att-bilda-en-innovationsgrupp-eip",
       "next_step": "Call or email the free innovation support (innovationssupporten) at Landsbygdsnätverket to discuss the idea and get tips on group members, then apply in Jordbruksverket's e-service with e-ID by 1 November 2026 at 13:00, or 1 December. The founder submits the application.",
       "reference": "references/nordic-grants.md#jordbruksverket-eip-innovationsgrupp",
-      "last_verified": "2026-10-17",
+      "last_verified": "2026-10-18",
       "notes": "Page read 2026-10-17 ('Senast granskad: 2026-01-28'). 2026 deadlines: '1 februari, 1 mars, 1 april, 1 maj, 1 juni, 1 oktober, 1 november och 1 december', 'senast klockan 13'; 'Ansökningarna kommer att bedömas inom en månad.' The next is 1 November 2026; a late application goes to the next round. Scoring (Urvalskriterier EIP grupp 2026, version 2025-09-18): need and solution 250, competitiveness and benefit 250, environmental and social sustainability 200, originality 300; minimum 600 of 1 000. Group rule: 'Minst två av de här kompetenserna ska ingå i innovationsgruppen', from entrepreneur in primary production or the agriculture and food sector, researcher, adviser. 'Vi betalar ut stödet i en klumpsumma'; 'Du kan inte få stöd för forskning.' Not required before the project grant: 'Men det är inget krav'. Jordbruksverket recommends a confidentiality agreement before the group's first meeting and has templates for it and for the cooperation agreement. The 1 October 2026 e-service budget change does not apply to this grant. The innovation support is outside Jordbruksverket: 'Det är en kostnadsfri tjänst', 'Innovationssupporten har tystnadsplikt'. Last day to report: 6 April 2029. Country SE because the e-service needs Swedish e-ID and the English page asks for 'a Swedish partner as the main applicant'; the Swedish pages do not say 'registered in Sweden'.",
       "availability": "open",
       "apply_requirements": [
@@ -1205,6 +1532,7 @@
       "name": "Forskningsavdrag (Swedish R&D reduction of employer contributions; lowers payroll tax, no payout)",
       "country": "SE",
       "kind": "grant",
+      "route": "tax",
       "need": [
         "money"
       ],
@@ -1245,13 +1573,18 @@
           "field": "confirmed",
           "op": "contains",
           "value": "se_rd_staff_on_payroll"
+        },
+        {
+          "field": "paid_staff",
+          "op": "gte",
+          "value": 1
         }
       ],
       "apply_url": "https://www.skatteverket.se/foretag/arbetsgivare/lamnaarbetsgivardeklaration.4.41f1c61d16193087d7fcaeb.html",
       "status_url": "https://www.skatteverket.se/foretag/arbetsgivare/arbetsgivaravgifterochskatteavdrag/forskningsavdrag.4.8dcbbe4142d38302d7cb4.html",
       "next_step": "Check that the work meets Skatteverket's narrow R&D definition and that each person spends at least half their actual working time on it. Then set up monthly time reports and a project description. The company claims it itself in boxes 470 and 475 of its next employer return in Skatteverket's e-service.",
       "reference": "references/nordic-grants.md#skatteverket-forskningsavdrag",
-      "last_verified": "2026-10-17",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "founder_cost": "none",
       "apply_requirements": [
@@ -1264,7 +1597,8 @@
         "Contributions cannot go below the 10.21 % old-age pension fee: no deduction for staff aged 67 or more at the start of the year, and a smaller one for staff aged 18 to 22 at the start of the year (born 2003 to 2007 in 2026) on the reduced youth rate (pay from 1 April 2026 to 30 September 2027)",
         "A month's unused deduction cannot be saved for later months; it also lowers any växa-stöd refund, and it is taken before regional support",
         "Work in an R&D project run by a public body, a university or a foundation and paid with public money does not count, even when your company does the work",
-        "A confidentiality agreement with a client can stop you from sending documents; you may delimit and anonymise them, or risk losing the deduction"
+        "A confidentiality agreement with a client can stop you from sending documents; you may delimit and anonymise them, or risk losing the deduction",
+        "Pay to people working with management and control does not count, so a founder-CEO's own salary may not qualify"
       ],
       "unclear": [
         "Whether a founder-CEO who takes a salary and also builds the product qualifies: the page excludes people working with 'ledning och styrning', but the law only asks for half of actual working time on R&D with no proportioning. Ask Skatteverket's employer service before the first claim",
@@ -1309,13 +1643,41 @@
           "field": "employees",
           "op": "lte",
           "value": 249
+        },
+        {
+          "any": [
+            {
+              "field": "age_years",
+              "op": "lt",
+              "value": 5
+            },
+            {
+              "field": "de_minimis_eur",
+              "op": "lt",
+              "value": 300000
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "revenue_meur",
+              "op": "lte",
+              "value": 50
+            },
+            {
+              "field": "balance_meur",
+              "op": "lte",
+              "value": 43
+            }
+          ]
         }
       ],
       "apply_url": "https://etjanster.almi.se/oversikt/flow/1006",
       "status_url": "https://www.almi.se/lan-finansiering/innovationslan/",
       "next_step": "Prepare a budget (mandatory), the latest annual accounts, current interim figures and a liquidity forecast, then open Almi's e-service with BankID and fill in the loan application; your regional Almi company reviews it and contacts you. The founder clicks submit.",
       "reference": "references/nordic-grants.md#almi-innovationslan",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "apply_requirements": [
         "BankID or Mobilt BankID to log in to Almi's e-service",
@@ -1576,13 +1938,27 @@
               "value": 2
             }
           ]
+        },
+        {
+          "any": [
+            {
+              "field": "age_years",
+              "op": "lt",
+              "value": 5
+            },
+            {
+              "field": "de_minimis_eur",
+              "op": "lt",
+              "value": 300000
+            }
+          ]
         }
       ],
       "apply_url": "https://etjanster.almi.se/oversikt/flow/1006",
       "status_url": "https://www.almi.se/lan-finansiering/mikrolan/",
       "next_step": "Prepare a budget (mandatory; for a company being formed, budgets for the current and next fiscal year), then open Almi's e-service with BankID and fill in the loan application; your regional Almi company handles it. The founder clicks submit.",
       "reference": "references/nordic-grants.md#almi-mikrolan",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "apply_requirements": [
         "BankID or Mobilt BankID to log in to Almi's e-service",
@@ -1814,13 +2190,41 @@
           "field": "employees",
           "op": "lte",
           "value": 250
+        },
+        {
+          "any": [
+            {
+              "field": "age_years",
+              "op": "lt",
+              "value": 5
+            },
+            {
+              "field": "de_minimis_eur",
+              "op": "lt",
+              "value": 300000
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "revenue_meur",
+              "op": "lte",
+              "value": 50
+            },
+            {
+              "field": "balance_meur",
+              "op": "lte",
+              "value": 43
+            }
+          ]
         }
       ],
       "apply_url": "https://etjanster.almi.se/oversikt/flow/1006",
       "status_url": "https://www.almi.se/lan-finansiering/tillvaxtlan/",
       "next_step": "Prepare a budget, the latest annual accounts, interim figures and a liquidity forecast, then open Almi's e-service with BankID and fill in the loan application; your regional Almi company reviews it. The founder clicks submit.",
       "reference": "references/nordic-grants.md#almi-tillvaxtlan",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "apply_requirements": [
         "BankID or Mobilt BankID to log in to Almi's e-service",
@@ -1871,13 +2275,70 @@
             "company",
             "academia"
           ]
+        },
+        {
+          "any": [
+            {
+              "field": "legal_form",
+              "op": "eq",
+              "value": "academia"
+            },
+            {
+              "field": "owner_company_share",
+              "op": "lt",
+              "value": 25
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "group_within_sme_limits"
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "legal_form",
+              "op": "eq",
+              "value": "academia"
+            },
+            {
+              "field": "employees",
+              "op": "lt",
+              "value": 250
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "legal_form",
+              "op": "eq",
+              "value": "academia"
+            },
+            {
+              "field": "revenue_meur",
+              "op": "lte",
+              "value": 50
+            },
+            {
+              "field": "balance_meur",
+              "op": "lte",
+              "value": 43
+            }
+          ]
+        },
+        {
+          "field": "work_started",
+          "op": "eq",
+          "value": false
         }
       ],
       "apply_url": "https://www.energimyndigheten.se/utlysningar/konceptutveckling-av-innovationer-med-affarsfokus/",
       "status_url": "https://www.energimyndigheten.se/utlysningar/konceptutveckling-av-innovationer-med-affarsfokus/",
       "next_step": "Check the status page for the current round and read the call text and the mandatory 'Ytterligare ansökningsfrågor' document, then log in to Energimyndigheten's e-service Mina sidor, fill in the application with the attachment and submit before the round's deadline. The founder clicks submit.",
       "reference": "references/nordic-grants.md#energimyndigheten-konceptutveckling",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-18",
       "availability": "closed",
       "apply_requirements": [
         "E-legitimation such as BankID for Energimyndigheten's Mina sidor",
@@ -1886,7 +2347,8 @@
         "Whole project budget in the form; name other financing if the budget exceeds 500 000 SEK",
         "One application per company per round; the applicant must own or have the right to use the solution",
         "Address the seven assessment criteria in the call text, including TRL 2 to 4, energy relevance, market and team",
-        "Recommended: de minimis or earlier start-up aid certificate, plus the checklist"
+        "Recommended: de minimis or earlier start-up aid certificate, plus the checklist",
+        "Unpaid work is not an eligible cost, so founders without salary cannot budget their own time"
       ],
       "unclear": [
         "No round was open on 2026-10-15; the status page still shows the spring round (deadline 2 June 2026) and the call text says the next round is planned around October 2026 with no date",
@@ -2238,13 +2700,65 @@
           "field": "legal_form",
           "op": "eq",
           "value": "company"
+        },
+        {
+          "any": [
+            {
+              "field": "owner_company_share",
+              "op": "lt",
+              "value": 25
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "group_within_sme_limits"
+            }
+          ]
+        },
+        {
+          "field": "employees",
+          "op": "lt",
+          "value": 250
+        },
+        {
+          "any": [
+            {
+              "field": "revenue_meur",
+              "op": "lte",
+              "value": 50
+            },
+            {
+              "field": "balance_meur",
+              "op": "lte",
+              "value": 43
+            }
+          ]
+        },
+        {
+          "field": "work_started",
+          "op": "eq",
+          "value": false
+        },
+        {
+          "any": [
+            {
+              "field": "age_years",
+              "op": "lt",
+              "value": 3
+            },
+            {
+              "field": "lost_half_capital",
+              "op": "eq",
+              "value": false
+            }
+          ]
         }
       ],
       "apply_url": "https://www.energimyndigheten.se/utlysningar/verifiering-av-innovationer-med-kund/",
       "status_url": "https://www.energimyndigheten.se/utlysningar/verifiering-av-innovationer-med-kund/",
       "next_step": "Check the status page for the current round, secure a dated and signed letter of intent from at least one customer using Energimyndigheten's template, fill in 'Ytterligare ansökningsfrågor', then log in to Mina sidor and submit before the deadline. The founder clicks submit.",
       "reference": "references/nordic-grants.md#energimyndigheten-verifiering-med-kund",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-18",
       "availability": "closed",
       "apply_requirements": [
         "E-legitimation such as BankID for Mina sidor, and behörighet to represent the company applied for in advance",
@@ -2252,7 +2766,8 @@
         "Mandatory attachment 'Ytterligare ansökningsfrågor' (max 20 pages)",
         "Co-financing: development and verification activities get at most 45 percent support; business-development activities up to 100 percent, capped at 500 000 SEK, in separate work packages",
         "Accepted co-financing: own cash, share issue or investors, verified orders, Almi or bank loans; not other public funds or unpaid work",
-        "One application per company; the applicant must own or have the right to use the solution; TRL 4 to 7 at project start"
+        "One application per company; the applicant must own or have the right to use the solution; TRL 4 to 7 at project start",
+        "Unpaid work and other public money do not count as the required co-financing"
       ],
       "unclear": [
         "No round was open on 2026-10-15; the next round is 'planned to open around October 2026' with no date",
@@ -2296,13 +2811,41 @@
           "field": "age_years",
           "op": "lt",
           "value": 5
+        },
+        {
+          "any": [
+            {
+              "field": "owner_company_share",
+              "op": "lt",
+              "value": 50
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "owner_is_founders_own_holding"
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "owner_company_share",
+              "op": "lt",
+              "value": 25
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "separate_from_owner_operations"
+            }
+          ]
         }
       ],
       "apply_url": "https://www.innovasjonnorge.no/en/tjeneste/oppstartstilskudd-1",
       "status_url": "https://www.innovasjonnorge.no/en/tjeneste/oppstartstilskudd-1",
       "next_step": "Optionally get quick feedback on the idea at raskavklaring.innovasjonnorge.no, then log in to Innovation Norway's 'My page' (start.innovasjonnorge.no, the portal linked from the Startup grant 2 page), choose application type Startup and submit the application; applications are accepted on an ongoing basis. The founder clicks submit.",
       "reference": "references/nordic-grants.md#innovasjon-norge-oppstartstilskudd-1",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "apply_requirements": [
         "Company incorporated as an AS before you apply; ENK, ANS and DA are not accepted",
@@ -2311,7 +2854,9 @@
         "Explain how the project is fully financed and state other public funding applied for",
         "Pre-finance at least 50 percent: up to half the grant is paid at start, the rest after the final report",
         "Only invoiced costs from external suppliers count; own staff, related parties, VAT and costs before submission do not",
-        "Idea phase completed before applying; no outstanding payment defaults"
+        "Idea phase completed before applying; no outstanding payment defaults",
+        "Part-time or hobby ventures, and ventures that mainly create a job for the founder, are normally not supported",
+        "Costs incurred before the application is sent are not covered, and other public funding for the project, SkatteFUNN included, must be declared"
       ],
       "unclear": [
         "The service page has no apply button; the portal redirects to minside.innovasjonnorge.no behind a security check that automated clients cannot pass",
@@ -2500,13 +3045,41 @@
           "field": "age_years",
           "op": "lt",
           "value": 5
+        },
+        {
+          "any": [
+            {
+              "field": "owner_company_share",
+              "op": "lt",
+              "value": 50
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "owner_is_founders_own_holding"
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "owner_company_share",
+              "op": "lt",
+              "value": 25
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "separate_from_owner_operations"
+            }
+          ]
         }
       ],
       "apply_url": "https://www.innovasjonnorge.no/en/tjeneste/oppstartstilskudd-2",
       "status_url": "https://www.innovasjonnorge.no/en/tjeneste/oppstartstilskudd-2",
       "next_step": "Secure own funding at least matching the grant, then go to 'My page' at start.innovasjonnorge.no, start a Startup application and submit it; applications are accepted on an ongoing basis. The founder clicks submit.",
       "reference": "references/nordic-grants.md#innovasjon-norge-oppstartstilskudd-2",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "apply_requirements": [
         "Apply on Min side; log in with BankID as a person with a registered role in Brønnøysundregistrene",
@@ -2516,7 +3089,9 @@
         "Own funding at least equal to the grant, available before the first payment, from earned income, savings or private capital; not public funds, not tied to other purposes, and no interest or repayment to lenders or investors during the project",
         "Declaration of own funding on Innovation Norway's template, confirmed by an authorised accountant or auditor, with the advance payment request",
         "Address the three assessment areas: impact (value creation in Norway, growth), level of innovation (significantly better than competitors), implementation capacity (founder-led team, customer collaboration, funding plan)",
-        "Costs before submission are not funded; not a subsidiary half-owned by an established business; no payment defaults"
+        "Costs before submission are not funded; not a subsidiary half-owned by an established business; no payment defaults",
+        "Part-time or hobby ventures, and ventures that mainly create a job for the founder, are normally not supported",
+        "Costs incurred before the application is sent are not covered, and other public funding for the project, SkatteFUNN included, must be declared"
       ],
       "unclear": [
         "Processing time is not stated; the FAQ says it depends on the scope",
@@ -2667,7 +3242,7 @@
       "need": [
         "money"
       ],
-      "who": "A person in Finland who is about to start full-time entrepreneurship and has not yet started the business.",
+      "who": "A person in Finland who moves to full-time entrepreneurship, from unemployment, a job, studies or a part-time business, before the business starts full-time.",
       "what": "Personal living allowance for the first months of a new business, at the level of the basic unemployment allowance. It pays the founder, not the product.",
       "amount": {
         "text": "EUR 37.21 per day, for up to 12 months in two six-month periods",
@@ -2680,16 +3255,30 @@
           "value": "FI"
         },
         {
-          "field": "legal_form",
+          "any": [
+            {
+              "field": "legal_form",
+              "op": "eq",
+              "value": "none"
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "business_not_yet_fulltime"
+            }
+          ]
+        },
+        {
+          "field": "founder_employed_elsewhere",
           "op": "eq",
-          "value": "none"
+          "value": false
         }
       ],
-      "apply_url": "https://tyomarkkinatori.fi/blogit/starttiraha-antaa-turvaa-yritystoiminnan-alkuun",
-      "status_url": "https://tyomarkkinatori.fi/blogit/starttiraha-antaa-turvaa-yritystoiminnan-alkuun",
-      "next_step": "Talk to a regional business advisor before founding anything, then apply for starttiraha through the employment services. The founder applies.",
+      "apply_url": "https://tyomarkkinatori.fi/lisatietoa-palveluista/starttiraha",
+      "status_url": "https://tyomarkkinatori.fi/lisatietoa-palveluista/starttiraha",
+      "next_step": "Talk to a regional business advisor and apply for starttiraha through the employment services before the business starts full-time. The founder applies.",
       "reference": "references/nordic-grants.md#starttiraha",
-      "last_verified": "2026-10-17",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "founder_cost": "none",
       "stages": [
@@ -2697,19 +3286,18 @@
         "pre_seed"
       ],
       "apply_requirements": [
-        "Apply before founding the business; it cannot be granted afterwards",
+        "Apply before the business starts full-time: marketing, sales or entry in the VAT, prepayment or employer register count as starting; a Trade Register entry does not",
         "Not granted automatically: an overall assessment of your situation (employed, student, unemployed), your skills, and other businesses you own",
         "A careful business plan with market survey and profitability, financing and cash-flow calculations",
         "No payment defaults and no tax debt",
         "External financing, contracts, licences and registrations ready when you apply",
         "Heavily competitive sectors are usually not supported",
-        "The second six-month period is a new assessment, given only if the business has started but does not yet give enough income"
+        "The second six-month period is a new assessment, given only if the business has started but does not yet give enough income",
+        "Full-time entrepreneurship: a founder who keeps a full-time job is a sideline entrepreneur and does not qualify; employees and students qualify when they move to full-time",
+        "Other income in the period (salary, student aid, benefits) is deducted, and starttiraha is refused if nothing would remain"
       ],
-      "unclear": [
-        "The official service page did not render today; the rules come from the employment services' own blog of 24 March 2026. Confirm with your regional employment services",
-        "Whether full-time is required as such; the page speaks of making a part-time business full-time"
-      ],
-      "notes": "Työmarkkinatori blog 24.3.2026: 'starttirahaa tulee hakea ennen yrityksen perustamista'; '37,21 euroa päivässä'; 'enintään 12 kuukaudeksi, kahdessa kuuden kuukauden jaksossa'; no 'luottohäiriöitä tai verovelkaa'; 'voimakkaasti kilpailluille aloille tukea ei yleensä myönnetä'."
+      "unclear": [],
+      "notes": "Act 380/2023 (in force 2025): starttiraha is refused if 'starttirahan hakija on aloittanut päätoimisen yritystoiminnan ... ennen kuin tukihakemus on saapunut'; KEHA guidance: 'Kaupparekisteriin merkitsemisellä ei ole merkitystä'; sideline if six months in unrelated full-time work (Unemployment Security Act). Työmarkkinatori: '37,21 euroa päivässä', 'enintään 12 kuukaudeksi'."
     },
     {
       "id": "business-finland-sprint",
@@ -2739,9 +3327,25 @@
           "value": "company"
         },
         {
-          "field": "confirmed",
-          "op": "contains",
-          "value": "no_earlier_bf_startup_funding"
+          "any": [
+            {
+              "field": "age_years",
+              "op": "gte",
+              "value": 5
+            },
+            {
+              "field": "prior_grants",
+              "op": "excludes",
+              "value": [
+                "business-finland-sprint",
+                "business-finland-tempo",
+                "esa-bic",
+                "business-finland-rd-funding",
+                "business-finland-yic",
+                "business-finland-deep-tech-accelerator"
+              ]
+            }
+          ]
         },
         {
           "field": "employees",
@@ -2761,13 +3365,65 @@
               "value": 10
             }
           ]
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "no_earlier_bf_funding_same_solution"
+        },
+        {
+          "any": [
+            {
+              "field": "owner_company_share",
+              "op": "lt",
+              "value": 25
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "group_within_small_enterprise_limits"
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "fulltime_in_company",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "fulltime_team_member"
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "age_years",
+              "op": "lt",
+              "value": 3
+            },
+            {
+              "field": "lost_half_capital",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        {
+          "field": "de_minimis_eur",
+          "op": "lte",
+          "value": 225000
         }
       ],
       "apply_url": "https://www.businessfinland.fi/en/services/funding/funding-e-service/",
       "status_url": "https://www.businessfinland.fi/en/services/funding/calls/2026/ongoing-sprint-grant-funding/",
       "next_step": "Register in My Business Finland, book a meeting with a Business Finland expert, and only after that meeting submit the Sprint application in the Funding e-service. The founder clicks submit.",
       "reference": "references/nordic-grants.md#business-finland-sprint",
-      "last_verified": "2026-10-17",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "apply_requirements": [
         "Register with My Business Finland and fill in the company's background information before applying",
@@ -2779,7 +3435,8 @@
         "No binding purchase agreements before submission; purchases of 60 000 EUR or more tendered as public procurement",
         "No earlier Business Finland R&D or startup funding for a company under five years old; apply for Sprint before any Business Finland loan",
         "A project where at least two-thirds of the cost is R&D and that includes customer and market research",
-        "Business Finland's general obstacles: the company must be in the prepayment register, have filed its beneficial-ownership notice and its financial statements with the Finnish Patent and Registration Office, and have no overdue taxes or neglected VAT and employer register duties"
+        "Business Finland's general obstacles: the company must be in the prepayment register, have filed its beneficial-ownership notice and its financial statements with the Finnish Patent and Registration Office, and have no overdue taxes or neglected VAT and employer register duties",
+        "A founder's salary for a period on starttiraha is not an eligible cost"
       ],
       "unclear": [
         "Decision timeline is not stated beyond 'continuously'",
@@ -3102,13 +3759,41 @@
           "field": "legal_form",
           "op": "eq",
           "value": "company"
+        },
+        {
+          "any": [
+            {
+              "field": "age_years",
+              "op": "lt",
+              "value": 3
+            },
+            {
+              "field": "lost_half_capital",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "fulltime_in_company",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "fulltime_team_member"
+            }
+          ]
         }
       ],
       "apply_url": "https://www.businessfinland.fi/en/services/funding/funding-e-service/",
       "status_url": "https://www.businessfinland.fi/en/services/funding/calls/2026/research-development-and-piloting/",
       "next_step": "Review the call page, then have a person who may represent the company alone (per the Trade Register) or who holds the Suomi.fi authorisation 'Applying for corporate financing' create and submit the application in the Funding e-service. The founder clicks submit.",
       "reference": "references/nordic-grants.md#business-finland-rd-funding",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "apply_requirements": [
         "Order matters: Business Finland R&D funding taken first blocks the Sprint Grant for a company under five years old, so apply for Sprint first if you want both",
@@ -3176,13 +3861,41 @@
               "value": 10
             }
           ]
+        },
+        {
+          "field": "owner_company_share",
+          "op": "lte",
+          "value": 50
+        },
+        {
+          "field": "prior_grants",
+          "op": "excludes",
+          "value": [
+            "business-finland-yic",
+            "business-finland-deep-tech-accelerator",
+            "business-finland-growth-engine-startup"
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "age_years",
+              "op": "lt",
+              "value": 3
+            },
+            {
+              "field": "lost_half_capital",
+              "op": "eq",
+              "value": false
+            }
+          ]
         }
       ],
       "apply_url": "https://www.businessfinland.fi/en/services/funding/funding-e-service/",
       "status_url": "https://www.businessfinland.fi/en/services/funding/calls/2026/dta-funding-call-2026/",
       "next_step": "Wait for the next DTA call to be announced on the DTA page, secure the company's total financing for phase 1, then submit the application on the Young Innovative Company template with appendices in the Funding e-service well before the announced deadline. The founder clicks submit.",
       "reference": "references/nordic-grants.md#business-finland-deep-tech-accelerator",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-18",
       "availability": "closed",
       "apply_requirements": [
         "Discuss the company's suitability with Business Finland before applying",
@@ -3220,13 +3933,68 @@
           "field": "country",
           "op": "eq",
           "value": "DK"
+        },
+        {
+          "any": [
+            {
+              "field": "legal_form",
+              "op": "eq",
+              "value": "none"
+            },
+            {
+              "field": "age_years",
+              "op": "lte",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "field": "employees",
+          "op": "lt",
+          "value": 50
+        },
+        {
+          "field": "prior_grants",
+          "op": "excludes",
+          "value": [
+            "innovationsfonden-innofounder"
+          ]
+        },
+        {
+          "field": "fulltime_in_company",
+          "op": "eq",
+          "value": true
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "each_founder_owns_12_5_percent"
+        },
+        {
+          "any": [
+            {
+              "field": "legal_form",
+              "op": "eq",
+              "value": "none"
+            },
+            {
+              "field": "age_years",
+              "op": "lt",
+              "value": 3
+            },
+            {
+              "field": "lost_half_capital",
+              "op": "eq",
+              "value": false
+            }
+          ]
         }
       ],
       "apply_url": "https://www.e-grant.dk/",
       "status_url": "https://danmarksinnovationsfond.dk/en/programmes/innofounder/",
       "next_step": "Watch the status page for the next call; when it opens, write the application in Danish or English in the e-grant system (www.e-grant.dk) and submit before the deadline, since no changes are possible afterwards. The founder clicks submit.",
       "reference": "references/nordic-grants.md#innovationsfonden-innofounder",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-18",
       "availability": "closed",
       "apply_requirements": [
         "Apply in e-grant.dk: one founder registers (username and password or MitID) and becomes the applicant",
@@ -3235,7 +4003,10 @@
         "Each founder owns at least 12.5 percent, works at least 37 hours a week in the company, at most 10 hours a week elsewhere, and attends sparring sessions in person",
         "Company with a Danish CVR number by programme start, at most five years old at award, holding the rights to the idea; funded only once",
         "Non-EU/EEA founders: a Danish degree or one year's employment in Denmark within three years, plus a residence permit allowing self-employment",
-        "Shortlisted applicants pitch in Danish or English to the panel"
+        "Shortlisted applicants pitch in Danish or English to the panel",
+        "At least 37 hours a week in the company during the programme, and at most 10 hours a week of other paid work or study",
+        "Students may apply if they finish their degree before the programme starts",
+        "A parent company with control must itself be at most five years old at award, and the company must never have distributed profits"
       ],
       "unclear": [
         "No call was open on 2026-10-15 ('There are currently no calls available') and no next deadline is published, although guidelines dated 1 July 2026 exist",
@@ -3462,17 +4233,51 @@
             },
             {
               "field": "age_years",
-              "op": "lt",
+              "op": "lte",
               "value": 5
             }
           ]
+        },
+        {
+          "field": "active_grants",
+          "op": "excludes",
+          "value": [
+            "rannis-frae",
+            "rannis-sproti",
+            "rannis-voxtur",
+            "rannis-hagnyt-rannsoknarverkefni"
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "legal_form",
+              "op": "eq",
+              "value": "none"
+            },
+            {
+              "field": "age_years",
+              "op": "lte",
+              "value": 3
+            },
+            {
+              "field": "lost_half_capital",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        {
+          "field": "de_minimis_eur",
+          "op": "lte",
+          "value": 286000
         }
       ],
       "apply_url": "https://island.is/en/grants-plaza/grant/1-42",
       "status_url": "https://island.is/en/grants-plaza/grant/1-42",
       "next_step": "Open the grant page on Ísland.is, click Apply to log in to the Rannís online application portal, fill in the Fræ application and submit; applications are accepted at any time. The founder clicks submit.",
       "reference": "references/nordic-grants.md#rannis-frae",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "apply_requirements": [
         "Icelandic electronic ID (rafræn skilríki) or Íslykill to open the form in the Rannís portal; the application can be moved to the company later",
@@ -3480,7 +4285,9 @@
         "A video of at most 5 minutes (link, kept online until the board decides) and/or a PDF deck of at most 10 slides; no other attachments",
         "Full project cost for the period; booked costs must at least equal the grant; no costs before submission",
         "Company five years or younger counted from founding to submission, or dormant for two fiscal years",
-        "De minimis declaration; not for student or university research projects"
+        "De minimis declaration; not for student or university research projects",
+        "As a rule a company can hold only one active Technology Development Fund grant as main applicant (Fræ, Sproti, Vöxtur or applied research); a Markaður grant may run alongside",
+        "Costs before the application is submitted are not accepted"
       ],
       "unclear": [
         "Decision frequency differs: island.is says at least twice a year, the rules PDF says at least three times a year; no timeline is given",
@@ -3662,16 +4469,49 @@
           "value": "company"
         },
         {
-          "field": "vc_backed",
-          "op": "eq",
-          "value": true
+          "field": "confirmed",
+          "op": "contains",
+          "value": "independent_investor_commits"
+        },
+        {
+          "field": "employees",
+          "op": "lt",
+          "value": 50
+        },
+        {
+          "any": [
+            {
+              "field": "owner_company_share",
+              "op": "lt",
+              "value": 25
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "group_within_small_enterprise_limits"
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "age_years",
+              "op": "lte",
+              "value": 5
+            },
+            {
+              "field": "de_minimis_eur",
+              "op": "lt",
+              "value": 300000
+            }
+          ]
         }
       ],
       "apply_url": "https://eifo.dk/for-dig-som-er/virksomhed/matchlaan",
       "status_url": "https://eifo.dk/for-dig-som-er/virksomhed/matchlaan",
       "next_step": "Get the investor's investment in place first, then download EIFO's application form, fill it in with the investor and upload it with the listed documents in EIFO's customer portal. The founder submits.",
       "reference": "references/nordic-grants.md#eifo-matchlan",
-      "last_verified": "2026-10-17",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "founder_cost": "repay",
       "stages": [
@@ -3687,7 +4527,8 @@
         "Application form (version 3.12) filled in together with the investor, plus the documents in EIFO's requirement specification, uploaded in EIFO's customer portal",
         "Establishment fee of 0.5 % of the loan, at least DKK 10 000",
         "Term normally 6 years, at most 10, with 3 years of rolled-up interest at the start",
-        "Processing about one month"
+        "Processing about one month",
+        "Positive equity and at least 12 months of runway after the investment; public bodies must not control 25% or more"
       ],
       "unclear": [
         "Whether a sole trader can apply; the page names no company form, but the documents assume a company with shareholders. Ask EIFO on 31 51 94 21",
@@ -3731,13 +4572,46 @@
           "field": "confirmed",
           "op": "contains",
           "value": "dk_financial_foundation"
+        },
+        {
+          "any": [
+            {
+              "field": "owner_company_share",
+              "op": "lt",
+              "value": 25
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "group_within_sme_limits"
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "de_minimis_eur",
+              "op": "lte",
+              "value": 273000
+            },
+            {
+              "field": "age_years",
+              "op": "lt",
+              "value": 3
+            },
+            {
+              "field": "lost_half_capital",
+              "op": "eq",
+              "value": false
+            }
+          ]
         }
       ],
       "apply_url": "https://danmarksinnovationsfond.dk/da/programmer/innobooster/",
       "status_url": "https://danmarksinnovationsfond.dk/da/programmer/innobooster/",
       "next_step": "Read the 2026 guidelines for the de minimis or block-exemption frame, check which pool is open under 'Søgemuligheder', and draft the project and budget in the template. The founder creates the e-grant user and clicks submit.",
       "reference": "references/nordic-grants.md#innovationsfonden-innobooster",
-      "last_verified": "2026-10-16",
+      "last_verified": "2026-10-18",
       "availability": "closed",
       "apply_requirements": [
         "An e-grant account, created with MitID or a username and password",
@@ -3747,7 +4621,8 @@
         "Own or other financing for at least 65% of the project costs, since Innobooster covers at most 35%",
         "A statement of why the project fits the chosen theme; it competes only against applications in that theme",
         "Only one application per project under review at a time; an unsent draft is deleted when the period closes at 12:00",
-        "Patience: applications are judged in pools, and the estimated answer comes four to seven months after the pool closes"
+        "Patience: applications are judged in pools, and the estimated answer comes four to seven months after the pool closes",
+        "Hours already paid by other public aid, such as wage subsidies or a running InnoFounder, cannot be budgeted"
       ],
       "unclear": [
         "On 2026-10-16 the page lists no open call ('Der er lige nu ingen søgemuligheder') although it says Innobooster is open most of the year; the next 2027 pool dates are not published",
@@ -3974,6 +4849,7 @@
       "name": "SkatteFUNN (Norwegian R&D tax incentive, paid out in cash to companies without taxable profit)",
       "country": "NO",
       "kind": "grant",
+      "route": "tax",
       "need": [
         "money"
       ],
@@ -3997,13 +4873,27 @@
             "company",
             "sole_trader"
           ]
+        },
+        {
+          "any": [
+            {
+              "field": "age_years",
+              "op": "lte",
+              "value": 3
+            },
+            {
+              "field": "lost_half_capital",
+              "op": "eq",
+              "value": false
+            }
+          ]
         }
       ],
       "apply_url": "https://www.forskningsradet.no/skattefunn/sok/",
       "status_url": "https://www.forskningsradet.no/utlysninger/2026/skattefunn-skattefradrag-for-forskning-og-utvikling-i-et-nyskapende-naringsliv/",
       "next_step": "Check with Forskningsrådet's Prosjektkanvas that your project counts as R&D, then create a Min side profile and draft one project with work packages and budget. The founder submits the application on Min side.",
       "reference": "references/nordic-grants.md#forskningsradet-skattefunn",
-      "last_verified": "2026-10-16",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "apply_requirements": [
         "User profile on Forskningsrådet's Min side; create it by logging in before you start the form",
@@ -4012,7 +4902,7 @@
         "Project must be targeted, limited and separable from ordinary operations; routine development, customer surveys and training are not eligible",
         "Submit by 1 September to be guaranteed a decision within the year and the deduction for that income year",
         "Company must not be a 'foretak i vanskeligheter' at approval; older than three years and lost more than half its equity counts as one",
-        "Sole traders can only claim documented paid work, never the owner's unpaid hours",
+        "A firm without employees, an AS whose founders take no salary included, cannot claim own hours; only purchased R&D and other documented costs count",
         "Annual report to Forskningsrådet by 1 March and a separate project account for the tax return"
       ],
       "unclear": [
@@ -4061,13 +4951,18 @@
           "field": "employees",
           "op": "lt",
           "value": 250
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "owners_all_natural_persons"
         }
       ],
       "apply_url": "https://www.finnvera.fi/eng/financing/guarantees/start-guarantee",
       "status_url": "https://www.finnvera.fi/eng/financing/guarantees/start-guarantee",
       "next_step": "Prepare a business plan and a loan request and take them to a participating bank (the page lists Aktia, Alisa, Danske, Fennia, Nordea, Oma Säästöpankki, OP, POP and the Savings Banks); ask the bank to apply for Finnvera's Start Guarantee. The founder signs the bank's credit application and the bank submits to Finnvera.",
       "reference": "references/nordic-grants.md#finnvera-alkutakaus",
-      "last_verified": "2026-10-16",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "apply_requirements": [
         "Apply for the loan at a Finnish bank; the bank files the Start Guarantee application with Finnvera, you never apply to Finnvera directly",
@@ -4178,13 +5073,42 @@
               "value": 43
             }
           ]
+        },
+        {
+          "any": [
+            {
+              "field": "owner_company_share",
+              "op": "lt",
+              "value": 25
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "group_within_sme_limits"
+            }
+          ]
+        },
+        {
+          "field": "work_started",
+          "op": "eq",
+          "value": false
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "project_lead_employed"
+        },
+        {
+          "field": "lost_half_capital",
+          "op": "eq",
+          "value": false
         }
       ],
       "apply_url": "https://ansok.vinnova.se/utlysning/82eceff0-5447-47c0-1517-08df033a9d82?opencall=true",
       "status_url": "https://www.vinnova.se/e/civil-militara-synergier/acceleration-av-civil-militara-innovationer-2027/",
       "next_step": "This round closed on 6 October 2026 at 14:00 and no next round is announced. Watch Vinnova's civil-military listing (https://www.vinnova.se/e/civil-militara-synergier/) and ask cmip.acceleration@vinnova.se whether a new round is planned; earlier rounds opened in June 2024, May 2025 and August 2026. When one opens, prepare the SME declaration, project description, CVs and project summary on Vinnova's templates, then the founder submits in Vinnova's e-service.",
       "reference": "references/nordic-grants.md#vinnova-civil-military-acceleration",
-      "last_verified": "2026-10-17",
+      "last_verified": "2026-10-18",
       "availability": "closed",
       "founder_cost": "none",
       "sectors": [
@@ -4259,13 +5183,50 @@
               "value": 43
             }
           ]
+        },
+        {
+          "any": [
+            {
+              "field": "owner_company_share",
+              "op": "lt",
+              "value": 25
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "group_within_sme_limits"
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "active_grants",
+              "op": "excludes",
+              "value": [
+                "eic-accelerator",
+                "eic-accelerator-pilot",
+                "sme-instrument"
+              ]
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "eic_running_grant_only_applying_blended"
+            }
+          ]
+        },
+        {
+          "field": "work_started",
+          "op": "eq",
+          "value": false
         }
       ],
       "apply_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2026-ACCELERATOR-01",
       "status_url": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en",
       "next_step": "Step 1: write the short application (12-page form, pitch deck of up to ten slides, three-minute video pitch) on the EU Funding and Tenders portal under topic HORIZON-EIC-2026-ACCELERATOR-01; short proposals may be submitted at any time and are batched every first Tuesday of the month at 17:00 Brussels time, with feedback in about 4-6 weeks. On a GO, Step 2: prepare the full application (20-page form, pitch deck, implementation plan, financial information, letters of intent, FTO analysis, three-minute video) and submit it to a batching date; the last 2026 cut-off on the page is 4 November 2026 at 17:00 Brussels time. Step 3: pitch to the EIC Jury if invited. The founder, as the company's account holder on the portal, clicks submit.",
       "reference": "references/eu-grants.md#eic-accelerator",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "apply_requirements": [
         "EU Login and a PIC number on the EU Funding and Tenders portal",
@@ -4273,7 +5234,9 @@
         "Step 2 full application on the portal: a 20-page form, pitch deck, implementation plan, financial information, letters of intent, a freedom-to-operate analysis and a 3-minute video",
         "Submit Step 2 before a batching date at 17:00 Brussels time; the 2026 page lists 4 November 2026 as the last",
         "Step 3: an interview with the EIC Jury if your proposal ranks high enough",
-        "Only one application at a time; a new one only after the previous result. A third-country applicant must relocate before Step 2"
+        "Only one application at a time; a new one only after the previous result. A third-country applicant must relocate before Step 2",
+        "Grant only is given once per company under Horizon Europe; a company that has had it can still apply for blended finance or investment only",
+        "Three unsuccessful submissions of the same or an improved proposal end the company's access to the EIC Accelerator for the rest of Horizon Europe"
       ],
       "unclear": [
         "The topic page on the Funding and Tenders portal refuses automated reads; check the 2027 cut-off dates there in a browser",
@@ -4633,19 +5596,87 @@
           "field": "confirmed",
           "op": "contains",
           "value": "consortium_partner"
+        },
+        {
+          "any": [
+            {
+              "field": "owner_company_share",
+              "op": "lt",
+              "value": 25
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "group_within_sme_limits"
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "country",
+              "op": "neq",
+              "value": "SE"
+            },
+            {
+              "field": "lost_half_capital",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "country",
+              "op": "neq",
+              "value": "DK"
+            },
+            {
+              "field": "age_years",
+              "op": "lt",
+              "value": 3
+            },
+            {
+              "field": "lost_half_capital",
+              "op": "eq",
+              "value": false
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "field": "country",
+              "op": "neq",
+              "value": "FI"
+            },
+            {
+              "field": "age_years",
+              "op": "lt",
+              "value": 3
+            },
+            {
+              "field": "lost_half_capital",
+              "op": "eq",
+              "value": false
+            }
+          ]
         }
       ],
       "apply_url": "https://www.eurekanetwork.org/programmes-and-calls/eurostars/eurostars-call-12-for-projects-deadline-march-2027/",
       "status_url": "https://www.eurekanetwork.org/programmes/eurostars",
       "next_step": "Read the current call page and your national funding body's rules (Vinnova for Sweden, Research Council of Norway, Business Finland, Innovation Fund Denmark, Rannís for Iceland), build a consortium of at least two independent organisations from at least two Eurostars countries with your SME as leader, then register on the Eureka project platform (myeurekaproject.org) and fill in the international application while Call 12 is open, 17 December 2026 to 4 March 2027 14:00 Brussels time. Swedish, Finnish and Danish partners also file a national application with their agency. The founder, as lead applicant, clicks submit on the platform.",
       "reference": "references/eu-grants.md#eurostars",
-      "last_verified": "2026-10-15",
+      "last_verified": "2026-10-18",
       "availability": "closed",
       "apply_requirements": [
         "A consortium of at least two independent organisations from at least two Eurostars countries, led by an SME; SMEs carry at least half the budget and no participant or country more than 70 percent",
         "Every partner checks eligibility with its own national funding body before applying; Vinnova for a Swedish partner",
         "Application on the Eureka platform myeurekaproject.org, Call 12 open 17 December 2026 to 4 March 2027 at 14:00 Brussels time",
-        "A project of at most 36 months with an exclusively civil application"
+        "A project of at most 36 months with an exclusively civil application",
+        "Sweden (Vinnova): at least two annual reports registered with Bolagsverket and registration as an employer with Skatteverket before the call closes; the amount applied for is at most twice the equity or net turnover",
+        "Norway (Research Council): at least NOK 500 000 in equity, one funded project per deadline and at most two running Eurostars projects"
       ],
       "unclear": [
         "No call is open on 2026-10-16; national rules for Call 12 are marked as being confirmed and may change before it opens",
@@ -4845,13 +5876,32 @@
           "field": "confirmed",
           "op": "contains",
           "value": "consortium_partner"
+        },
+        {
+          "any": [
+            {
+              "field": "owner_company_share",
+              "op": "lt",
+              "value": 25
+            },
+            {
+              "field": "confirmed",
+              "op": "contains",
+              "value": "group_within_sme_limits"
+            }
+          ]
+        },
+        {
+          "field": "confirmed",
+          "op": "contains",
+          "value": "no_third_country_control"
         }
       ],
       "apply_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/programmes/edf",
       "status_url": "https://eudis.europa.eu/eudis-tracks/sme-calls_en",
       "next_step": "No SME call is open on 2026-10-17 and no 2027 topic is published yet. Watch the EUDIS SME-calls page and the EDF programme page on the Funding & Tenders Portal for the next work programme. Meanwhile find SME partners in two other eligible countries (the portal's partner search or your national EDF focal point), get a PIC and SME self-assessment for each, and line up co-financing and, for development work, Member State declarations. The coordinating SME submits on the portal.",
       "reference": "references/eu-grants.md#edf-eudis-sme-calls",
-      "last_verified": "2026-10-17",
+      "last_verified": "2026-10-18",
       "availability": "closed",
       "founder_cost": "none",
       "sectors": [
@@ -6696,13 +7746,18 @@
               "value": "deeptech"
             }
           ]
+        },
+        {
+          "field": "on_market",
+          "op": "eq",
+          "value": false
         }
       ],
       "apply_url": "https://share.hsforms.com/2gw10xJqxRF--BnigBjZ_HQ50drh",
       "status_url": "https://www.sting.co/sting-core",
       "next_step": "Fill in the Sting Core application form (the HubSpot form behind 'Apply for Sting Core') with team, stage, sector and traction. The founder clicks submit.",
       "reference": "references/accelerators-se.md#sting-core",
-      "last_verified": "2026-10-16",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "notes": "Stockholm (office space at A House). Two cohorts per year; the page lists the blocks as Oct-Mar and Mar-Sept, 12-16 startups per cohort, and says 'Our next program kicks off in early 2027'. No application deadline is stated; the apply button was live on 2026-10-15 but the page does not say whether applications are open. Investment comes from Propel Capital, which invests exclusively in Sting companies (400 000 SEK upfront plus a 200 000 SEK follow-on per the Propel page). Mixed-gender, international, complementary teams are a stated preference, not a rule. Figures on sting.co are inconsistent: other pages still say 'up to 500,000 SEK from Propel Capital'.",
       "apply_requirements": [
@@ -6761,13 +7816,18 @@
           "field": "confirmed",
           "op": "contains",
           "value": "research_background"
+        },
+        {
+          "field": "on_market",
+          "op": "eq",
+          "value": false
         }
       ],
       "apply_url": "https://share.hsforms.com/2gw10xJqxRF--BnigBjZ_HQ50drh",
       "status_url": "https://www.sting.co/science-to-business",
       "next_step": "Use 'Apply to the Sting Core Program' on the Science to Business page, which opens the Sting Core application form; describe the research, team and IP position. Pre-company researchers can instead enroll in the Startup Academy form. The founder clicks submit.",
       "reference": "references/accelerators-se.md#sting-science-to-business",
-      "last_verified": "2026-10-16",
+      "last_verified": "2026-10-18",
       "availability": "unknown",
       "notes": "No deadline or open/closed status on the page. Startup Academy enrollment form: https://share.hsforms.com/1HWrh3OfhSRGFeTkH81WnPw50drh (free, self-paced, deep tech modules). Equity terms of the convertible loans are not published. The Propel figure is inconsistent across sting.co (500 000 vs 600 000 SEK); the Propel Capital page says 600 000 SEK for Sting Core companies and 500 000 SEK for other Sting startups, 'usually made via a standardized convertible debt instrument', with a 4-6 week decision timeline.",
       "apply_requirements": [
@@ -7137,14 +8197,14 @@
         {
           "field": "confirmed",
           "op": "contains",
-          "value": "research_background"
+          "value": "research_west_sweden_university"
         }
       ],
       "apply_url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ZXoUKW1T-UO4AuChtc-dv0iVaT60b5JNsELIevUlG_pUMFVKQ0lXQUhRWFhGOFBTV1JYUzNaRExSNiQlQCN0PWcu",
       "status_url": "https://chalmersventures.com/startup-camp-deep-tech-2026/",
       "next_step": "Fill in the Microsoft Forms application behind 'Apply here!' with the research idea, team and regional connection before October 28. The founder clicks submit.",
       "reference": "references/accelerators-se.md#chalmers-ventures-startup-camp",
-      "last_verified": "2026-10-16",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "notes": "'Application for Startup Camp Deep Tech 2026 is now open! Last day to apply is October 28.' (year not printed; presumably 2026). Sessions as printed: December 1 2026, December 15 2026, 'January 15 - 2025' and 'February 2 - 2026' (the last two look like typos for 2027). Gothenburg (Vera Sandbergs Alle 8). The Vastra Gotaland connection is a stated requirement but there is no region field, so it lives here. Contact evelina@chalmersventures.com.",
       "apply_requirements": [
@@ -7501,10 +8561,10 @@
         }
       ],
       "apply_url": "https://kiuas.typeform.com/to/lH9EvcaO",
-      "status_url": "https://www.kiuas.com/accelerator",
+      "status_url": "https://kiuas.com/about",
       "next_step": "Write two paragraphs on the problem, what you have tested and your goal for the next four weeks, then fill in the Typeform. The founder submits the form and takes the fit conversation.",
       "reference": "references/accelerators-se.md#kiuas-founder-collective",
-      "last_verified": "2026-10-16",
+      "last_verified": "2026-10-18",
       "availability": "open",
       "apply_requirements": [
         "Fill in the Typeform application or email hello@kiuas.com to start a conversation",
