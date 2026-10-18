@@ -96,7 +96,11 @@ the founder names ("Vinnova känns svårt") settles it: set the country, run the
 matcher, and name the assumption in the verdict ("för ett svenskt AB"). A
 founder who wrote in Swedish about Uppsala and gets only "which country?" back
 has lost a turn. Ask when the clues are missing or point to different
-countries ("Ltd", euros, no city). If the founder lives in another country than the company is
+countries ("Ltd", euros, no city). Then run the matcher without a country
+anyway and ask, with the country, its `basics` and university or data
+questions from `screen`: at most three questions, no doors yet. "Finns det
+bidrag för en app?" from a student is answered by the university question,
+and a turn spent on the country alone delays it. If the founder lives in another country than the company is
 registered in, set both: a Swedish AB with founders in Copenhagen sees Danish
 doors too, and each door's rules say which country it needs.
 

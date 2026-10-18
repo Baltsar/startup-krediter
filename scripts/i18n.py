@@ -352,7 +352,7 @@ SCREEN_WHY: dict[str, dict[str, str]] = {
     "en": {
         "basics": "Most of these programs depend on it.",
         "ownership": "25% or more owned by another company can end SME status.",
-        "grants": "Some funders allow one grant at a time, or one per company.",
+        "grants": "Earlier grants can close a program or use up the state-aid room.",
         "work": "Start-up allowances and founder grants often require full-time work.",
         "affiliation": "Universities run free startup support, and their IP rules may apply.",
         "data": "Data the source can re-link is personal data under GDPR.",
@@ -363,7 +363,7 @@ SCREEN_WHY: dict[str, dict[str, str]] = {
     "sv": {
         "basics": "De flesta av programmen hänger på det.",
         "ownership": "Äger ett annat bolag 25 % eller mer kan SME-statusen falla.",
-        "grants": "Vissa finansiärer tillåter ett bidrag åt gången, eller ett per bolag.",
+        "grants": "Tidigare stöd kan stänga ett program eller ta upp utrymmet för statsstöd.",
         "work": "Starta eget-stöd och grundarbidrag kräver ofta att du jobbar heltid.",
         "affiliation": "Lärosäten har gratis startup-stöd, och deras regler om rättigheter kan gälla.",
         "data": "Data som källan kan koppla tillbaka är personuppgifter enligt GDPR.",
@@ -374,7 +374,7 @@ SCREEN_WHY: dict[str, dict[str, str]] = {
     "fi": {
         "basics": "Useimmat näistä ohjelmista riippuvat tästä.",
         "ownership": "Jos toinen yritys omistaa vähintään 25 %, pk-yritysasema voi kaatua.",
-        "grants": "Osa rahoittajista sallii vain yhden avustuksen kerrallaan tai yritystä kohden.",
+        "grants": "Aiempi tuki voi sulkea ohjelman tai käyttää valtiontukikaton.",
         "work": "Starttiraha ja perustajarahoitus edellyttävät usein päätoimisuutta.",
         "affiliation": "Korkeakouluilla on maksutonta startup-tukea, ja niiden IPR-säännöt voivat koskea teitä.",
         "data": "Lähteen yhdistettävissä oleva aineisto on GDPR:n mukaan henkilötietoa.",
@@ -385,7 +385,7 @@ SCREEN_WHY: dict[str, dict[str, str]] = {
     "no": {
         "basics": "De fleste av disse programmene avhenger av dette.",
         "ownership": "Eier et annet selskap 25 % eller mer, kan SMB-statusen falle.",
-        "grants": "Noen finansiører tillater ett tilskudd om gangen, eller ett per selskap.",
+        "grants": "Tidligere støtte kan stenge et program eller bruke opp rommet for statsstøtte.",
         "work": "Oppstartsstøtte og gründerstipend krever ofte at du jobber heltid.",
         "affiliation": "Universiteter har gratis gründerstøtte, og reglene deres om rettigheter kan gjelde.",
         "data": "Data kilden kan koble tilbake, er personopplysninger etter GDPR.",
@@ -396,7 +396,7 @@ SCREEN_WHY: dict[str, dict[str, str]] = {
     "da": {
         "basics": "De fleste af disse programmer afhænger af det.",
         "ownership": "Ejer en anden virksomhed 25 % eller mere, kan SMV-status falde bort.",
-        "grants": "Nogle bevillingsgivere tillader ét tilskud ad gangen, eller ét per virksomhed.",
+        "grants": "Tidligere støtte kan lukke et program eller bruge rummet til statsstøtte op.",
         "work": "Iværksætterstøtte og stipendier kræver ofte, at du arbejder fuld tid.",
         "affiliation": "Universiteter har gratis iværksætterstøtte, og deres regler om rettigheder kan gælde.",
         "data": "Data, som kilden kan koble tilbage, er personoplysninger efter GDPR.",
