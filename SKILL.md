@@ -270,9 +270,11 @@ Read `references/applying.md` before you draft; it has each step in detail.
 In short:
 
 1. **Check fit and timing** in one line each: run the matcher with `--door
-   <id>`. Ask its `screen` questions in the same message as the request for
-   material when the chat has not answered them; say if the round is closed
-   and offer to prepare for the next one. Never draft for a program the
+   <id>`; say if the round is closed and offer to prepare for the next one.
+   When `screen` has questions the chat has not answered, ask them with the
+   request for material and draft once they are answered. When the deadline
+   is less than a week away, draft now and put the questions first, saying
+   which answer would stop the application. Never draft for a program the
    founder's answers close: say why, as above.
 2. **Material:** take the form's sections, limits, criteria and budget rules
    from the program's `application` block, or from its guide and templates
