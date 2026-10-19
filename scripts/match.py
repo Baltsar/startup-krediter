@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Match a founder profile against data/programs.json. Standard library only.
 
-    python3 scripts/match.py [--all] [--live] [--top N] [--programs PATH] [--today YYYY-MM-DD] < profile.json
+    python3 scripts/match.py [--all] [--live] [--top N] [--door ID] [--programs PATH] [--today YYYY-MM-DD] < profile.json
+    python3 scripts/match.py --find "words in the program name"
 
 A door is eligible when every rule is met, blocked when any rule failed, and
 unknown otherwise. A field that is absent from the profile is unknown, never
@@ -26,6 +27,7 @@ import json
 import math
 import re
 import sys
+import unicodedata
 from collections.abc import Callable
 from dataclasses import asdict, dataclass, field as dc_field
 from datetime import date, datetime, timezone
@@ -39,6 +41,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PROGRAMS_PATH = ROOT / "data" / "programs.json"
 STALE_DAYS = 90
 DEFAULT_TOP = 3
+FIND_MAX = 8
 
 EU_MEMBERS = {
     "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE",
@@ -113,6 +116,9 @@ CONFIRMATION_TOPIC: dict[str, str] = {
 }
 SITUATION_FIELDS = set(FIELD_TOPIC)
 SCREEN_MAX = 3
+# One chosen program has no route map competing for the founder's attention, and every
+# gate on it is final for that application, so its first answer may ask one more.
+CHOSEN_SCREEN_MAX = 4
 SCREEN_DOORS = 8
 # Routes the first answer maps before going deep on one door. A record may set its own
 # route (tax relief is paid as a grant-like deduction, not applied for as one).
@@ -852,28 +858,40 @@ def context_topics(profile: dict) -> list[str]:
     return topics
 
 
-def screen(doors: list[Door], profile: dict, lang: str) -> list[dict]:
-    """The founder-situation questions for the first answer, at most SCREEN_MAX.
+def screen(doors: list[Door], profile: dict, lang: str, chosen: bool = False) -> list[dict]:
+    """The founder-situation questions for the first answer, at most SCREEN_MAX (CHOSEN_SCREEN_MAX for one chosen program).
 
     A topic weighs more the more of the best doors it decides and the higher
     those doors rank. A door the founder named, and a context topic, weigh as
     two best doors. One slot goes first to a basic fact the best doors need.
     Asking these before going deep on any door is what the plain assistant did
     in round 3 and the skill did not.
+
+    chosen: the founder picked this one program (`--door`). Its own gates come
+    first and weigh the same whatever their topic, even when the program is
+    closed or a poor fit: a work-started or finance gate is as final as an
+    ownership gate for the program they mean to apply to (round 4, s15). The
+    context topics follow them.
     """
     weight: dict[str, float] = {}
     decides: dict[str, list[str]] = {}
     open_doors = [door for door in doors if door.status != "blocked"]
-    named = [door for door in open_doors if is_named(door, profile)]
-    best = named + [door for door in open_doors if not poor_fit(door) and door not in named][: SCREEN_DOORS - len(named)]
-    for position, door in enumerate(best):
-        door_weight = SCREEN_DOORS * NAMED_WEIGHT if door in named else SCREEN_DOORS - position
+    best: list[Door] = open_doors
+    door_weights: list[float] = [1.0] * len(open_doors)
+    topic_weight: dict[str, float] = {}
+    context_weight = 0.5
+    if not chosen:
+        named = [door for door in open_doors if is_named(door, profile)]
+        best = named + [door for door in open_doors if not poor_fit(door) and door not in named][: SCREEN_DOORS - len(named)]
+        door_weights = [float(SCREEN_DOORS * NAMED_WEIGHT if door in named else SCREEN_DOORS - position) for position, door in enumerate(best)]
+        topic_weight, context_weight = TOPIC_WEIGHT, float(SCREEN_DOORS * NAMED_WEIGHT)
+    for door, door_weight in zip(best, door_weights):
         for topic in door.situation:
-            weight[topic] = weight.get(topic, 0) + door_weight * TOPIC_WEIGHT.get(topic, 1.0)
+            weight[topic] = weight.get(topic, 0) + door_weight * topic_weight.get(topic, 1.0)
             decides.setdefault(topic, []).append(door.name)
     for topic in context_topics(profile):
         # A student's university support, or patient data, changes the route whatever the doors say.
-        weight[topic] = weight.get(topic, 0) + SCREEN_DOORS * NAMED_WEIGHT
+        weight[topic] = weight.get(topic, 0) + context_weight
         decides.setdefault(topic, [])
     order = sorted(weight, key=lambda topic: (-weight[topic], SITUATION_ORDER.index(topic)))
     basics = basic_question(best, lang)
@@ -886,7 +904,7 @@ def screen(doors: list[Door], profile: dict, lang: str) -> list[dict]:
             "why": i18n.screen_why(topic, lang),
             "decides": decides[topic],
         }
-        for topic in order[: SCREEN_MAX - len(items)]
+        for topic in order[: (CHOSEN_SCREEN_MAX if chosen else SCREEN_MAX) - len(items)]
     ]
     return items
 
@@ -1055,12 +1073,48 @@ def run(
         "lang": lang,
         "warnings": warnings,
         "stale": [door.id for door in ranked if door.stale],
-        "screen": screen(ranked, profile, lang),
+        "screen": screen(ranked, profile, lang, chosen=door_id is not None),
         "routes": routes(ranked, profile, lang),
         "unlocks": unlocks,
         "doors": [asdict(door) for door in shown],
         "more": [summary(door) for door in rest],
     }
+
+
+def fold(text: str) -> str:
+    """Lower case without accents, so "Rannís Fræ" and "rannis frae" meet."""
+    text = text.lower().replace("ø", "o").replace("æ", "ae").replace("ð", "d").replace("þ", "th")
+    return "".join(char for char in unicodedata.normalize("NFKD", text) if not unicodedata.combining(char))
+
+
+def find_programs(programs: list[dict], words: str) -> list[dict]:
+    """Records whose id or name holds every word, else any word, best first, at most FIND_MAX.
+
+    The founder names a program in their own words ("Innobooster", "Vinnovas
+    startup-bidrag", "oppstartstilskudd"); the skill needs its id for --door.
+    """
+    terms = [term for term in re.split(r"[\s,/-]+", fold(words)) if term]
+    scored: list[tuple[int, int, dict]] = []
+    for index, program in enumerate(programs):
+        if not isinstance(program, dict):
+            continue
+        haystack = fold(f"{program.get('id', '')} {program.get('name', '')}")
+        hits = sum(term in haystack for term in terms)
+        if hits:
+            scored.append((-hits, index, program))
+    scored.sort(key=lambda item: (item[0], item[1]))
+    if scored and terms and -scored[0][0] == len(terms):
+        scored = [item for item in scored if -item[0] == len(terms)]
+    return [
+        {
+            "id": program.get("id"),
+            "name": program.get("name"),
+            "country": program.get("country"),
+            "kind": program.get("kind"),
+            "availability": program.get("availability", "unknown"),
+        }
+        for _, _, program in scored[:FIND_MAX]
+    ]
 
 
 def load_programs(path: Path) -> list[dict]:
@@ -1084,8 +1138,18 @@ def main(argv: list[str] | None = None, stdin: TextIO | None = None) -> int:
     parser.add_argument("--top", type=int, default=DEFAULT_TOP, help=f"doors returned in full, the rest under 'more' (default {DEFAULT_TOP}, 0 for all)")
     parser.add_argument("--programs", type=Path, default=PROGRAMS_PATH, help="path to programs.json")
     parser.add_argument("--today", type=date.fromisoformat, default=None, help="override today's date, YYYY-MM-DD")
-    parser.add_argument("--door", default=None, help="return this one program in full, with its application block, for helping the founder apply")
+    parser.add_argument("--door", default=None, help="return this one program in full, with its application block and the questions that decide it")
+    parser.add_argument("--find", default=None, help="list the programs whose id or name holds these words, to get the id for --door; reads no profile")
     args = parser.parse_args(argv)
+    if args.find is not None:
+        try:
+            found = find_programs(load_programs(args.programs), args.find)
+        except ValueError as exc:
+            print(str(exc), file=sys.stderr)
+            return 2
+        json.dump(found, sys.stdout, ensure_ascii=False, indent=2)
+        sys.stdout.write("\n")
+        return 0
     source = stdin if stdin is not None else sys.stdin
     try:
         raw = json.load(source)

@@ -1155,3 +1155,47 @@ def test_door_flag_returns_a_blocked_door_and_a_screen() -> None:
     assert out["doors"][0]["status"] == "blocked"
     assert [item["topic"] for item in out["screen"]] == ["affiliation"]
     assert out["screen"][0]["decides"] == []
+
+
+# --- one chosen program ----------------------------------------------------------
+
+
+def test_chosen_door_asks_its_own_gates_before_context_and_keeps_timing() -> None:
+    gates = [
+        {"field": "work_started", "op": "eq", "value": False},
+        {"field": "lost_half_capital", "op": "eq", "value": False},
+        {"field": "prior_grants", "op": "excludes", "value": ["x-grant"]},
+    ]
+    program = situated("chosen", "Chosen", gates)
+    out = match.run({"country": "SE", "legal_form": "none", "sector": ["health"]}, [program], TODAY, door_id="chosen")
+    topics = [item["topic"] for item in out["screen"]]
+    # Timing and finances are not demoted for the program the founder means to apply to.
+    assert topics == ["grants", "finances", "timing", "affiliation"]
+    assert all(item["decides"] == ["Chosen"] for item in out["screen"][:3])
+
+
+def test_chosen_door_is_screened_even_when_closed() -> None:
+    program = situated("closed-door", "Closed door", [{"field": "owner_company_share", "op": "lt", "value": 25}], availability="closed")
+    plain = match.run(QUIET, [program], TODAY)["screen"]
+    assert plain == []
+    chosen = match.run(QUIET, [program], TODAY, door_id="closed-door")["screen"]
+    assert [item["topic"] for item in chosen] == ["ownership"]
+
+
+def test_find_matches_every_word_without_accents() -> None:
+    programs = [
+        {"id": "rannis-frae", "name": "Rannís Fræ seed grant", "country": "IS", "kind": "grant", "availability": "open"},
+        {"id": "rannis-sproti", "name": "Rannís Sproti", "country": "IS", "kind": "grant"},
+        {"id": "innovasjon-norge-oppstartstilskudd-1", "name": "Oppstartstilskudd 1", "country": "NO", "kind": "grant"},
+    ]
+    assert [found["id"] for found in match.find_programs(programs, "Rannis frae")] == ["rannis-frae"]
+    assert [found["id"] for found in match.find_programs(programs, "rannís")] == ["rannis-frae", "rannis-sproti"]
+    assert match.find_programs(programs, "rannis tempo")[0]["id"] == "rannis-frae"
+    assert match.find_programs(programs, "tempo") == []
+    assert match.find_programs(programs, "Rannís Sproti")[0]["availability"] == "unknown"
+
+
+def test_cli_find_reads_no_profile(capsys: pytest.CaptureFixture[str]) -> None:
+    assert match.main(["--programs", str(FIXTURE_PATH), "--find", "compute"], stdin=io.StringIO("")) == 0
+    found = json.loads(capsys.readouterr().out)
+    assert [item["id"] for item in found] == ["test-eu-compute"]
