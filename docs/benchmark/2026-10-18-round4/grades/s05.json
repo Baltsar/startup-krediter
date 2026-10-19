@@ -1,0 +1,59 @@
+{
+ "qid": "s05",
+ "programs": {
+  "A": "Innovasjon Norge Oppstartstilskudd 1",
+  "B": "Innovasjon Norge Oppstartstilskudd 2"
+ },
+ "stoppers_total": {
+  "A": 16,
+  "B": 18
+ },
+ "stoppers_stated": {
+  "A": 15,
+  "B": 14
+ },
+ "factual_errors": {
+  "A": [],
+  "B": []
+ },
+ "untraceable": {
+  "A": [],
+  "B": []
+ },
+ "best_first_pick": "B",
+ "missed_programs": {
+  "A_missed": [
+   "SkatteFUNN (Forskningsradet)",
+   "Tilskudd til innovasjonskontrakter (Innovasjon Norge)"
+  ],
+  "B_missed": []
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 184,
+  "B": 484
+ },
+ "verdict": "B",
+ "incomplete": false
+}

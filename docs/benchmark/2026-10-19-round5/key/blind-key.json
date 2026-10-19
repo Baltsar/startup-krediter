@@ -1,0 +1,65 @@
+{
+ "note": "A and B per question; seeded per question id with random.Random(\"202610195-<qid>\")",
+ "key": {
+  "r01": {
+   "A": "with",
+   "B": "without"
+  },
+  "r02": {
+   "A": "without",
+   "B": "with"
+  },
+  "r03": {
+   "A": "without",
+   "B": "with"
+  },
+  "r04": {
+   "A": "with",
+   "B": "without"
+  },
+  "r05": {
+   "A": "without",
+   "B": "with"
+  },
+  "r06": {
+   "A": "with",
+   "B": "without"
+  },
+  "r07": {
+   "A": "with",
+   "B": "without"
+  },
+  "r08": {
+   "A": "with",
+   "B": "without"
+  },
+  "r09": {
+   "A": "without",
+   "B": "with"
+  },
+  "r10": {
+   "A": "with",
+   "B": "without"
+  },
+  "r11": {
+   "A": "without",
+   "B": "with"
+  },
+  "r12": {
+   "A": "without",
+   "B": "with"
+  },
+  "r13": {
+   "A": "with",
+   "B": "without"
+  },
+  "r14": {
+   "A": "without",
+   "B": "with"
+  },
+  "r15": {
+   "A": "with",
+   "B": "without"
+  }
+ }
+}

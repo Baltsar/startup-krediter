@@ -1,0 +1,67 @@
+{
+ "qid": "r14",
+ "programs": {
+  "A": "Jordbruksverket EIP - stöd för att genomföra ett innovationsprojekt (with EIP gruppbildning as step 1)",
+  "B": "Jordbruksverket EIP - stöd för att bilda en innovationsgrupp"
+ },
+ "stoppers_total": {
+  "A": 18,
+  "B": 11
+ },
+ "stoppers_stated": {
+  "A": 6,
+  "B": 11
+ },
+ "factual_errors": {
+  "A": [
+   "Originality presented as weighing heaviest at 300 of 1000 points for the project application; that is the group-formation criteria (2026). For the innovation project, originality is 150 points and 'Identifiera behovet' (170) weighs most"
+  ],
+  "B": []
+ },
+ "untraceable": {
+  "A": [
+   "Project application round in March 2027 (only 2026 rounds are published)"
+  ],
+  "B": [
+   "Innovationssupporten is free and bound by confidentiality (tystnadsplikt): not stated on Landsbygdsnätverket or Jordbruksverket pages"
+  ]
+ },
+ "best_first_pick": "tie",
+ "missed_programs": {
+  "A_missed": [
+   "Almi Innovationslån",
+   "Almi Verifieringsmedel"
+  ],
+  "B_missed": [
+   "Investeringsstöd för ökad konkurrenskraft - ny teknik (Länsstyrelsen Jämtland)"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 596,
+  "B": 206
+ },
+ "verdict": "A",
+ "incomplete": false
+}

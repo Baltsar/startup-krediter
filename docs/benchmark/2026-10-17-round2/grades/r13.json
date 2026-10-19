@@ -1,0 +1,76 @@
+{
+ "qid": "r13",
+ "programs": {
+  "A": "No single program; multi-program plan (export control first, Sigma2 Olivia/AI Factory for GPU, EIC Accelerator, EDF, NATO DIANA, LINC, SkatteFUNN)",
+  "B": "Sigma2 KI-fabrikken (Norwegian AI Factory) / national HPC allocation"
+ },
+ "stoppers_total": {
+  "A": 8,
+  "B": 8
+ },
+ "stoppers_stated": {
+  "A": 3,
+  "B": 6
+ },
+ "factual_errors": {
+  "A": [],
+  "B": []
+ },
+ "untraceable": {
+  "A": [
+   "NATO DIANA 2027 call closed 3 July 2026, 2028 call ~June 2027, EUR 100k, NATO-national ownership rule (diana.nato.int blocked by Cloudflare, could not verify)",
+   "EIC STEP Defence lower bound EUR 10M (official page says up to EUR 30M)",
+   "Brave-Norway EUR 20M (only a Ukrainian government source cited)",
+   "Sweden ~EUR 800M air and drone defence (Euronews, not official)",
+   "EDF SME calls EUR 4M / EUR 6M and late-September 2026 deadline (not checked on official page)"
+  ],
+  "B": [
+   "Login to metacenter.no with Feide or OpenIdP",
+   "SkatteFUNN 19%, NOK 25M cap and 1 September date (not checked on official page)",
+   "EuroHPC Playground civilian-only restriction"
+  ]
+ },
+ "best_first_pick": "A",
+ "missed_programs": {
+  "A_missed": [
+   "EuroHPC Playground",
+   "Norrsken Evolve"
+  ],
+  "B_missed": [
+   "NATO DIANA",
+   "European Defence Fund / EUDIS SME calls",
+   "EIC STEP Defence",
+   "LINC (Innovasjon Norge/FFI/NADIC)",
+   "Brave-Norway",
+   "Vinnova civil-military calls"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 823,
+  "B": 261
+ },
+ "verdict": "A",
+ "incomplete": false
+}

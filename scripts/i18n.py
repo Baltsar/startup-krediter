@@ -117,12 +117,152 @@ CONFIRMATIONS: dict[str, dict[str, tuple[str, str]]] = {
         "no": ("en løsning for å overvåke havmiljøet i Østersjøen", "Er løsningen deres laget for å overvåke havmiljøet i Østersjøen, slik utfordringen ber om?"),
         "da": ("en løsning til overvågning af Østersøens havmiljø", "Er jeres løsning til overvågning af Østersøens havmiljø, som udfordringen efterspørger?"),
     },
+    "aws_paid_plan": {
+        "en": ("AWS account on a paid plan (free plans are not eligible)", "Is your AWS account on a paid plan, or still on the free plan?"),
+        "sv": ("AWS-konto på en betald plan (gratisplaner godkänns inte)", "Ligger ert AWS-konto på en betald plan, eller fortfarande på gratisplanen?"),
+        "fi": ("AWS-tili maksullisella sopimuksella (ilmaiset eivät kelpaa)", "Onko AWS-tilinne maksullisella sopimuksella vai vielä ilmaisella?"),
+        "no": ("AWS-konto på en betalt plan (gratisplaner godkjennes ikke)", "Er AWS-kontoen deres på en betalt plan, eller fortsatt på gratisplanen?"),
+        "da": ("AWS-konto på en betalt plan (gratisplaner godkendes ikke)", "Er jeres AWS-konto på en betalt plan, eller stadig på gratisplanen?"),
+    },
     "new_to_aws_activate": {
         "en": ("new to AWS Activate credits, or asking for more than you received before", "Has the company received AWS Activate credits before, and if so, how much?"),
         "sv": ("ny i AWS Activate, eller ber om mer än ni fått tidigare", "Har bolaget fått AWS Activate-krediter tidigare, och i så fall hur mycket?"),
         "fi": ("uusi AWS Activate -hyvitysten hakija, tai pyytää enemmän kuin aiemmin", "Onko yhtiö saanut AWS Activate -hyvityksiä aiemmin, ja jos on, kuinka paljon?"),
         "no": ("ny i AWS Activate, eller ber om mer enn dere har fått før", "Har selskapet fått AWS Activate-kreditter før, og i så fall hvor mye?"),
         "da": ("ny i AWS Activate, eller beder om mere end I har fået før", "Har virksomheden fået AWS Activate-kreditter før, og i så fald hvor meget?"),
+    },
+    "eip_competence_mix": {
+        "en": ("at least two organisations covering two of: an entrepreneur in primary production or agri-food, a researcher, an adviser", "Can you bring together at least two organisations that between them have two of these: an entrepreneur in primary production or the agriculture and food sector, a researcher in the field, an adviser in the field?"),
+        "sv": ("minst två organisationer med två av: företagare i primärproduktion eller jordbruk och livsmedel, forskare, rådgivare", "Kan ni samla minst två organisationer som tillsammans har två av de här: företagare inom primärproduktionen eller jordbruks- och livsmedelssektorn, forskare inom området, rådgivare inom området?"),
+        "fi": ("vähintään kaksi organisaatiota, joilla on kaksi näistä: alkutuotannon tai maatalous- ja elintarvikealan yrittäjä, tutkija, neuvoja", "Saatteko koolle vähintään kaksi organisaatiota, joilla on yhdessä kaksi näistä: alkutuotannon tai maatalous- ja elintarvikealan yrittäjä, alan tutkija, alan neuvoja?"),
+        "no": ("minst to organisasjoner med to av: næringsdrivende i primærproduksjon eller landbruk og mat, forsker, rådgiver", "Kan dere samle minst to organisasjoner som til sammen har to av disse: næringsdrivende i primærproduksjonen eller landbruks- og matsektoren, forsker på området, rådgiver på området?"),
+        "da": ("mindst to organisationer med to af: erhvervsdrivende i primærproduktion eller landbrug og fødevarer, forsker, rådgiver", "Kan I samle mindst to organisationer, der tilsammen har to af disse: erhvervsdrivende i primærproduktionen eller landbrugs- og fødevaresektoren, forsker på området, rådgiver på området?"),
+    },
+    "se_rd_staff_on_payroll": {
+        "en": ("someone on the payroll, with Swedish employer contributions, who spends at least half their actual working time and 15 hours a month on R&D", "Founders count only if the company pays them a salary: does the company pay salary, with Swedish employer contributions, to someone who works directly on research or development at least half their actual working time and at least 15 hours a month?"),
+        "sv": ("någon på lönelistan, med svenska arbetsgivaravgifter, som lägger minst halva sin faktiska arbetstid och 15 timmar i månaden på FoU", "Grundare räknas bara om bolaget betalar dem lön: betalar bolaget lön, med svenska arbetsgivaravgifter, till någon som arbetar direkt med forskning eller utveckling minst halva sin faktiska arbetstid och minst 15 timmar i månaden?"),
+        "fi": ("palkkalistalla oleva henkilö, jonka palkasta maksetaan Ruotsin työnantajamaksut ja joka tekee T&K-työtä vähintään puolet todellisesta työajastaan ja 15 tuntia kuukaudessa", "Perustajat lasketaan mukaan vain, jos yhtiö maksaa heille palkkaa: maksaako yhtiö palkkaa, josta maksetaan Ruotsin työnantajamaksut, henkilölle, joka tekee suoraan tutkimus- tai kehitystyötä vähintään puolet todellisesta työajastaan ja vähintään 15 tuntia kuukaudessa?"),
+        "no": ("noen på lønningslisten, med svensk arbeidsgiveravgift, som bruker minst halvparten av sin faktiske arbeidstid og 15 timer i måneden på FoU", "Gründere teller bare hvis selskapet betaler dem lønn: betaler selskapet lønn, med svensk arbeidsgiveravgift, til noen som jobber direkte med forskning eller utvikling minst halvparten av sin faktiske arbeidstid og minst 15 timer i måneden?"),
+        "da": ("en på lønningslisten, med svenske arbejdsgiverafgifter, der bruger mindst halvdelen af sin faktiske arbejdstid og 15 timer om måneden på F&U", "Stiftere tæller kun med, hvis virksomheden betaler dem løn: betaler virksomheden løn, med svenske arbejdsgiverafgifter, til en person, der arbejder direkte med forskning eller udvikling mindst halvdelen af sin faktiske arbejdstid og mindst 15 timer om måneden?"),
+    },
+    "eur_200k_raised_or_revenue": {
+        "en": ("at least EUR 200 000 raised, or yearly revenue over EUR 200 000", "Has the company raised at least EUR 200 000 in total, from investors or non-dilutive sources such as grants, or does it have yearly revenue over EUR 200 000?"),
+        "sv": ("minst 200 000 EUR i insamlat kapital, eller årsomsättning över 200 000 EUR", "Har bolaget tagit in minst 200 000 EUR totalt, från investerare eller som bidrag och annan icke-utspädande finansiering, eller har det en årsomsättning över 200 000 EUR?"),
+        "fi": ("vähintään 200 000 EUR kerättyä rahoitusta tai yli 200 000 EUR vuosiliikevaihto", "Onko yhtiö kerännyt yhteensä vähintään 200 000 EUR sijoittajilta tai laimentamattomana rahoituksena, kuten avustuksina, tai onko sen vuosiliikevaihto yli 200 000 EUR?"),
+        "no": ("minst 200 000 EUR hentet, eller årlig omsetning over 200 000 EUR", "Har selskapet hentet minst 200 000 EUR totalt, fra investorer eller som tilskudd og annen ikke-utvannende finansiering, eller har det en årlig omsetning over 200 000 EUR?"),
+        "da": ("mindst 200.000 EUR rejst, eller årlig omsætning over 200.000 EUR", "Har virksomheden rejst mindst 200.000 EUR i alt, fra investorer eller som tilskud og anden ikke-udvandende finansiering, eller har den en årlig omsætning over 200.000 EUR?"),
+    },
+    "group_within_sme_limits": {
+        "en": ("the group's combined figures within SME limits", "No public body owns 25% or more, and with the owner group's figures added as the EU SME rules require, are you still under 250 staff and EUR 50M turnover or EUR 43M balance sheet?"),
+        "sv": ("koncernens samlade siffror inom SME-gränserna", "Äger ingen offentlig aktör 25 % eller mer, och med ägarkoncernens siffror inräknade enligt EU:s SME-regler, är ni fortfarande under 250 anställda och 50 MEUR i omsättning eller 43 MEUR i balansomslutning?"),
+        "fi": ("konsernin yhteenlasketut luvut pk-rajoissa", "Jos mikään julkinen toimija ei omista 25 % tai enemmän, jäättekö omistajakonsernin luvut mukaan lukien EU:n pk-sääntöjen mukaan alle 250 henkilön ja 50 MEUR:n liikevaihdon tai 43 MEUR:n taseen?"),
+        "no": ("konsernets samlede tall innenfor SMB-grensene", "Eier ingen offentlig aktør 25 % eller mer, og med eierkonsernets tall regnet med etter EUs SMB-regler, er dere fortsatt under 250 ansatte og 50 MEUR i omsetning eller 43 MEUR i balanse?"),
+        "da": ("koncernens samlede tal inden for SMV-grænserne", "Ejer ingen offentlig aktør 25 % eller mere, og med ejerkoncernens tal medregnet efter EU's SMV-regler, er I stadig under 250 ansatte og 50 MEUR i omsætning eller 43 MEUR i balance?"),
+    },
+    "group_within_small_enterprise_limits": {
+        "en": ("the group's combined figures within EU small-enterprise limits", "With the owner group's figures added as the EU rules require, are you still under 50 staff and EUR 10M turnover or balance sheet?"),
+        "sv": ("koncernens samlade siffror inom EU:s gränser för små företag", "Med ägarkoncernens siffror inräknade enligt EU:s regler, är ni fortfarande under 50 anställda och 10 MEUR i omsättning eller balansomslutning?"),
+        "fi": ("konsernin yhteenlasketut luvut EU:n pienyritysrajoissa", "Kun omistajakonsernin luvut lasketaan mukaan EU:n sääntöjen mukaan, jäättekö alle 50 henkilön ja 10 MEUR:n liikevaihdon tai taseen?"),
+        "no": ("konsernets samlede tall innenfor EUs grenser for små foretak", "Med eierkonsernets tall regnet med etter EUs regler, er dere fortsatt under 50 ansatte og 10 MEUR i omsetning eller balanse?"),
+        "da": ("koncernens samlede tal inden for EU's grænser for små virksomheder", "Med ejerkoncernens tal medregnet efter EU's regler, er I stadig under 50 ansatte og 10 MEUR i omsætning eller balance?"),
+    },
+    "group_unlisted_within_10msek": {
+        "en": ("the whole group unlisted, with revenue or balance sheet at most 10 MSEK", "Is the whole group unlisted, with net revenue or balance sheet total of at most 10 MSEK?"),
+        "sv": ("hela koncernen onoterad, med omsättning eller balansomslutning högst 10 MSEK", "Är hela koncernen onoterad, med nettoomsättning eller balansomslutning på högst 10 MSEK?"),
+        "fi": ("koko konserni listaamaton, liikevaihto tai tase enintään 10 MSEK", "Onko koko konserni listaamaton, ja onko sen liikevaihto tai tase enintään 10 MSEK?"),
+        "no": ("hele konsernet unotert, med omsetning eller balanse høyst 10 MSEK", "Er hele konsernet unotert, med omsetning eller balanse på høyst 10 MSEK?"),
+        "da": ("hele koncernen unoteret, med omsætning eller balance højst 10 MSEK", "Er hele koncernen unoteret, med omsætning eller balance på højst 10 MSEK?"),
+    },
+    "owners_all_natural_persons": {
+        "en": ("every shareholder a private person", "Are all shareholders private persons, with no holding company, fund or university among them?"),
+        "sv": ("alla aktieägare är privatpersoner", "Är alla aktieägare privatpersoner, utan holdingbolag, fond eller universitet bland dem?"),
+        "fi": ("kaikki osakkaat yksityishenkilöitä", "Ovatko kaikki osakkaat yksityishenkilöitä, ilman holdingyhtiötä, rahastoa tai yliopistoa?"),
+        "no": ("alle aksjonærer er privatpersoner", "Er alle aksjonærene privatpersoner, uten holdingselskap, fond eller universitet blant dem?"),
+        "da": ("alle aktionærer er privatpersoner", "Er alle aktionærer privatpersoner, uden holdingselskab, fond eller universitet blandt dem?"),
+    },
+    "equity_majority_eu_efta_uk": {
+        "en": ("at least half the equity held in the EU, EFTA or the UK", "Is at least half of the company owned by owners in the EU, EFTA or the UK?"),
+        "sv": ("minst hälften av ägandet inom EU, EFTA eller Storbritannien", "Ägs minst hälften av bolaget av ägare i EU, EFTA eller Storbritannien?"),
+        "fi": ("vähintään puolet omistuksesta EU:ssa, EFTA-maissa tai Britanniassa", "Omistavatko EU:n, EFTA-maiden tai Britannian omistajat vähintään puolet yhtiöstä?"),
+        "no": ("minst halvparten av eierskapet i EU, EFTA eller Storbritannia", "Eies minst halvparten av selskapet av eiere i EU, EFTA eller Storbritannia?"),
+        "da": ("mindst halvdelen af ejerskabet i EU, EFTA eller Storbritannien", "Ejes mindst halvdelen af virksomheden af ejere i EU, EFTA eller Storbritannien?"),
+    },
+    "fulltime_team_member": {
+        "en": ("at least one team member full-time in the company", "Does at least one person on the team work full-time in the company, with no duties elsewhere?"),
+        "sv": ("minst en i teamet på heltid i bolaget", "Arbetar minst en person i teamet heltid i bolaget, utan uppdrag på annat håll?"),
+        "fi": ("vähintään yksi tiimiläinen kokoaikaisesti yrityksessä", "Työskenteleekö vähintään yksi tiimin jäsen kokoaikaisesti yrityksessä ilman muita tehtäviä?"),
+        "no": ("minst én i teamet på heltid i selskapet", "Jobber minst én person i teamet heltid i selskapet, uten oppgaver andre steder?"),
+        "da": ("mindst én i teamet på fuld tid i virksomheden", "Arbejder mindst én person i teamet fuld tid i virksomheden, uden opgaver andre steder?"),
+    },
+    "project_lead_employed": {
+        "en": ("the project lead employed by the company", "Will the project lead be employed by the company, with an employment contract and salary?"),
+        "sv": ("projektledaren anställd i bolaget", "Kommer projektledaren att vara anställd i bolaget, med anställningsavtal och lön?"),
+        "fi": ("projektipäällikkö työsuhteessa yritykseen", "Onko projektipäällikkö työsuhteessa yritykseen, työsopimuksella ja palkalla?"),
+        "no": ("prosjektlederen ansatt i selskapet", "Blir prosjektlederen ansatt i selskapet, med arbeidskontrakt og lønn?"),
+        "da": ("projektlederen ansat i virksomheden", "Bliver projektlederen ansat i virksomheden, med ansættelseskontrakt og løn?"),
+    },
+    "no_earlier_bf_funding_same_solution": {
+        "en": ("no earlier Business Finland funding for the same solution", "Has Business Finland funded this same solution before, through Sprint, Tempo, R&D, YIC, DTA or ESA BIC, for you or another company?"),
+        "sv": ("ingen tidigare finansiering från Business Finland för samma lösning", "Har Business Finland finansierat just den här lösningen förut, via Sprint, Tempo, FoU, YIC, DTA eller ESA BIC, hos er eller ett annat bolag?"),
+        "fi": ("ei aiempaa Business Finlandin rahoitusta samalle ratkaisulle", "Onko Business Finland rahoittanut juuri tätä ratkaisua aiemmin Sprintin, Tempon, T&K-rahoituksen, YIC:n, DTA:n tai ESA BIC:n kautta, teille tai toiselle yritykselle?"),
+        "no": ("ingen tidligere finansiering fra Business Finland for samme løsning", "Har Business Finland finansiert akkurat denne løsningen før, via Sprint, Tempo, FoU, YIC, DTA eller ESA BIC, hos dere eller et annet selskap?"),
+        "da": ("ingen tidligere finansiering fra Business Finland til samme løsning", "Har Business Finland finansieret præcis denne løsning før, via Sprint, Tempo, FoU, YIC, DTA eller ESA BIC, hos jer eller en anden virksomhed?"),
+    },
+    "research_west_sweden_university": {
+        "en": ("the idea builds on research at a university in western Sweden", "Does the idea build on research done at a university in western Sweden, such as Chalmers or the University of Gothenburg?"),
+        "sv": ("idén bygger på forskning vid ett lärosäte i västra Sverige", "Bygger idén på forskning vid ett lärosäte i västra Sverige, till exempel Chalmers eller Göteborgs universitet?"),
+        "fi": ("idea perustuu tutkimukseen länsiruotsalaisessa yliopistossa", "Perustuuko idea tutkimukseen, joka on tehty Länsi-Ruotsin yliopistossa, kuten Chalmersissa tai Göteborgin yliopistossa?"),
+        "no": ("ideen bygger på forskning ved et universitet i Vest-Sverige", "Bygger ideen på forskning ved et universitet i Vest-Sverige, for eksempel Chalmers eller Göteborgs universitet?"),
+        "da": ("idéen bygger på forskning ved et universitet i Vestsverige", "Bygger idéen på forskning ved et universitet i Vestsverige, for eksempel Chalmers eller Göteborgs universitet?"),
+    },
+    "eic_running_grant_only_applying_blended": {
+        "en": ("a running EIC grant-only project, now applying for blended finance or investment only", "Is your running EIC project grant only, and are you now applying for blended finance or investment only?"),
+        "sv": ("ett pågående EIC-projekt med enbart bidrag, och nu söker ni blandad finansiering eller enbart investering", "Är ert pågående EIC-projekt ett rent bidrag, och söker ni nu blandad finansiering eller enbart investering?"),
+        "fi": ("käynnissä oleva pelkän avustuksen EIC-hanke, ja nyt haette yhdistelmärahoitusta tai pelkkää sijoitusta", "Onko käynnissä oleva EIC-hankkeenne pelkkä avustus, ja haetteko nyt yhdistelmärahoitusta tai pelkkää sijoitusta?"),
+        "no": ("et løpende EIC-prosjekt med bare tilskudd, og nå søker dere blandet finansiering eller bare investering", "Er det løpende EIC-prosjektet deres bare tilskudd, og søker dere nå blandet finansiering eller bare investering?"),
+        "da": ("et igangværende EIC-projekt med kun tilskud, og nu søger I blandet finansiering eller kun investering", "Er jeres igangværende EIC-projekt kun tilskud, og søger I nu blandet finansiering eller kun investering?"),
+    },
+    "no_third_country_control": {
+        "en": ("not controlled from a country outside the EU and Norway", "Is the company free of control by any country or company outside the EU and Norway, or has your government approved guarantees?"),
+        "sv": ("inte kontrollerat från ett land utanför EU och Norge", "Är bolaget fritt från kontroll av något land eller bolag utanför EU och Norge, eller har regeringen godkänt garantier?"),
+        "fi": ("ei määräysvaltaa EU:n ja Norjan ulkopuolelta", "Onko yritys vapaa EU:n ja Norjan ulkopuolisen maan tai yrityksen määräysvallasta, tai onko hallitus hyväksynyt takuut?"),
+        "no": ("ikke kontrollert fra et land utenfor EU og Norge", "Er selskapet fritt for kontroll fra land eller selskaper utenfor EU og Norge, eller har regjeringen godkjent garantier?"),
+        "da": ("ikke kontrolleret fra et land uden for EU og Norge", "Er virksomheden fri for kontrol fra lande eller virksomheder uden for EU og Norge, eller har regeringen godkendt garantier?"),
+    },
+    "business_not_yet_fulltime": {
+        "en": ("the business not yet run full-time", "Have you not yet started running the business full-time, by selling, marketing or registering for VAT or as an employer?"),
+        "sv": ("verksamheten inte startad på heltid än", "Har du ännu inte börjat driva verksamheten på heltid, genom försäljning, marknadsföring eller registrering för moms eller som arbetsgivare?"),
+        "fi": ("yritystoimintaa ei vielä aloitettu päätoimisesti", "Oletko vielä aloittamatta päätoimista yritystoimintaa, eli myyntiä, markkinointia tai rekisteröitymistä arvonlisäverovelvolliseksi tai työnantajaksi?"),
+        "no": ("virksomheten ikke startet på heltid ennå", "Har du ennå ikke begynt å drive virksomheten på heltid, gjennom salg, markedsføring eller registrering for mva eller som arbeidsgiver?"),
+        "da": ("virksomheden ikke startet på fuld tid endnu", "Er du endnu ikke begyndt at drive virksomheden på fuld tid, gennem salg, markedsføring eller registrering for moms eller som arbejdsgiver?"),
+    },
+    "owner_is_founders_own_holding": {
+        "en": ("the owning company is the founders' own holding company", "Is the company that owns half or more of yours a holding company owned by the founders themselves?"),
+        "sv": ("ägarbolaget är grundarnas eget holdingbolag", "Är bolaget som äger hälften eller mer av ert ett holdingbolag som grundarna själva äger?"),
+        "fi": ("omistava yhtiö on perustajien oma holdingyhtiö", "Onko vähintään puolet yrityksestänne omistava yhtiö perustajien itse omistama holdingyhtiö?"),
+        "no": ("eierselskapet er gründernes eget holdingselskap", "Er selskapet som eier halvparten eller mer av deres, et holdingselskap gründerne selv eier?"),
+        "da": ("ejerselskabet er stifternes eget holdingselskab", "Er selskabet, der ejer halvdelen eller mere af jeres, et holdingselskab, som stifterne selv ejer?"),
+    },
+    "separate_from_owner_operations": {
+        "en": ("the business clearly separate from the owning company's operations", "Is your business clearly separate from the operations of the company that owns 25% or more, with a different idea and its own chair or CEO?"),
+        "sv": ("verksamheten tydligt skild från ägarbolagets drift", "Är er verksamhet tydligt skild från driften i bolaget som äger 25 % eller mer, med en annan idé och egen ordförande eller vd?"),
+        "fi": ("liiketoiminta selvästi erillään omistajayhtiön toiminnasta", "Onko liiketoimintanne selvästi erillään vähintään 25 % omistavan yhtiön toiminnasta, eri idealla ja omalla hallituksen puheenjohtajalla tai toimitusjohtajalla?"),
+        "no": ("virksomheten tydelig adskilt fra eierselskapets drift", "Er virksomheten deres tydelig adskilt fra driften i selskapet som eier 25 % eller mer, med en annen idé og egen styreleder eller daglig leder?"),
+        "da": ("virksomheden tydeligt adskilt fra ejerselskabets drift", "Er jeres virksomhed tydeligt adskilt fra driften i selskabet, der ejer 25 % eller mere, med en anden idé og egen formand eller direktør?"),
+    },
+    "each_founder_owns_12_5_percent": {
+        "en": ("each applying founder owns at least 12.5%", "Will each founder in the programme own at least 12.5% of the company at the start?"),
+        "sv": ("varje sökande grundare äger minst 12,5 %", "Kommer varje grundare i programmet att äga minst 12,5 % av bolaget vid start?"),
+        "fi": ("jokainen hakeva perustaja omistaa vähintään 12,5 %", "Omistaako jokainen ohjelmaan osallistuva perustaja vähintään 12,5 % yrityksestä ohjelman alkaessa?"),
+        "no": ("hver søkende gründer eier minst 12,5 %", "Vil hver gründer i programmet eie minst 12,5 % av selskapet ved start?"),
+        "da": ("hver ansøgende stifter ejer mindst 12,5 %", "Vil hver stifter i programmet eje mindst 12,5 % af virksomheden ved start?"),
+    },
+    "independent_investor_commits": {
+        "en": ("an independent private investor puts in money alongside the loan", "Does an independent private investor, such as a business angel, put money into the company alongside the loan?"),
+        "sv": ("en oberoende privat investerare skjuter till pengar vid sidan av lånet", "Skjuter en oberoende privat investerare, till exempel en affärsängel, till pengar i bolaget vid sidan av lånet?"),
+        "fi": ("riippumaton yksityinen sijoittaja sijoittaa lainan rinnalla", "Sijoittaako riippumaton yksityinen sijoittaja, esimerkiksi bisnesenkeli, yritykseen rahaa lainan rinnalla?"),
+        "no": ("en uavhengig privat investor skyter inn penger ved siden av lånet", "Skyter en uavhengig privat investor, for eksempel en engleinvestor, inn penger i selskapet ved siden av lånet?"),
+        "da": ("en uafhængig privat investor skyder penge ind ved siden af lånet", "Skyder en uafhængig privat investor, fx en business angel, penge ind i virksomheden ved siden af lånet?"),
     },
     "need_owner": {
         "en": ("an established need owner committed to the project", "Do you have an established company or organisation committed as need owner in the project?"),
@@ -131,6 +271,147 @@ CONFIRMATIONS: dict[str, dict[str, tuple[str, str]]] = {
         "no": ("en etablert behovseier som har forpliktet seg til prosjektet", "Har dere et etablert selskap eller en organisasjon som har forpliktet seg som behovseier i prosjektet?"),
         "da": ("en etableret behovsejer, der har forpligtet sig til projektet", "Har I en etableret virksomhed eller organisation, der har forpligtet sig som behovsejer i projektet?"),
     },
+}
+
+# Grant keys a rule can name in prior_grants or active_grants: program ids from the data,
+# or a short key for a grant the data does not list. The name is the funder's own, in every language.
+GRANT_NAMES: dict[str, str] = {
+    "vinnova-innovativa-startups-2025": "Vinnova Innovativa startups 2025",
+    "eureka-innowwide-2022": "Eureka Innowwide 2022",
+    "eureka-innowwide-2023": "Eureka Innowwide 2023",
+    "eureka-innowwide-2024": "Eureka Innowwide 2024",
+    "eureka-innowwide-2025": "Eureka Innowwide 2025",
+    "business-finland-sprint": "Business Finland Sprint",
+    "business-finland-tempo": "Business Finland Tempo",
+    "business-finland-rd-funding": "Business Finland R&D funding",
+    "business-finland-yic": "Business Finland Young Innovative Companies",
+    "business-finland-deep-tech-accelerator": "Business Finland Deep Tech Accelerator",
+    "business-finland-growth-engine-startup": "Business Finland Growth Engine startup funding",
+    "esa-bic": "ESA BIC",
+    "eic-accelerator": "EIC Accelerator",
+    "eic-accelerator-pilot": "EIC Accelerator Pilot",
+    "sme-instrument": "SME Instrument",
+    "innovationsfonden-innofounder": "InnoFounder",
+    "rannis-frae": "Rannís Fræ",
+    "rannis-sproti": "Rannís Sproti",
+    "rannis-voxtur": "Rannís Vöxtur",
+    "rannis-hagnyt-rannsoknarverkefni": "Rannís Hagnýt rannsóknarverkefni",
+}
+
+AFFILIATION_NAMES: dict[str, dict[str, str]] = {
+    "en": {"student": "a university student", "researcher": "a university researcher", "staff": "university staff", "none": "no university link"},
+    "sv": {"student": "student vid ett lärosäte", "researcher": "forskare vid ett lärosäte", "staff": "anställd vid ett lärosäte", "none": "ingen koppling till ett lärosäte"},
+    "fi": {"student": "korkeakouluopiskelija", "researcher": "yliopiston tutkija", "staff": "yliopiston henkilökuntaa", "none": "ei yliopistokytköstä"},
+    "no": {"student": "student ved et universitet eller en høyskole", "researcher": "forsker ved et universitet", "staff": "ansatt ved et universitet", "none": "ingen tilknytning til et universitet"},
+    "da": {"student": "studerende ved et universitet", "researcher": "forsker ved et universitet", "staff": "ansat ved et universitet", "none": "ingen tilknytning til et universitet"},
+}
+
+PERSONAL_DATA_NAMES: dict[str, dict[str, str]] = {
+    "en": {"none": "no data about people", "anonymous": "anonymous, nobody can re-identify", "pseudonymised": "pseudonymised, the source can re-identify", "identifiable": "identifiable personal data"},
+    "sv": {"none": "inga personuppgifter", "anonymous": "anonyma, ingen kan återidentifiera", "pseudonymised": "pseudonymiserade, källan kan återidentifiera", "identifiable": "identifierbara personuppgifter"},
+    "fi": {"none": "ei henkilötietoja", "anonymous": "anonyymit, kukaan ei voi tunnistaa", "pseudonymised": "pseudonymisoidut, lähde voi tunnistaa", "identifiable": "tunnistettavia henkilötietoja"},
+    "no": {"none": "ingen personopplysninger", "anonymous": "anonyme, ingen kan reidentifisere", "pseudonymised": "pseudonymiserte, kilden kan reidentifisere", "identifiable": "identifiserbare personopplysninger"},
+    "da": {"none": "ingen personoplysninger", "anonymous": "anonyme, ingen kan genidentificere", "pseudonymised": "pseudonymiserede, kilden kan genidentificere", "identifiable": "identificerbare personoplysninger"},
+}
+
+# One question per situation topic for the first answer, and why it matters, in at most twelve words.
+SCREEN_QUESTIONS: dict[str, dict[str, str]] = {
+    "en": {
+        "grants": "Which public grants or loans has the company had, and are any still running?",
+        "work": "Will you work full-time in the company, or keep a job elsewhere?",
+        "timing": "Has the project already started, and is the product already sold?",
+    },
+    "sv": {
+        "grants": "Vilka offentliga bidrag eller lån har bolaget haft, och pågår något fortfarande?",
+        "work": "Kommer du att jobba heltid i bolaget, eller ha kvar ett jobb vid sidan av?",
+        "timing": "Har projektet redan börjat, och säljs produkten redan?",
+    },
+    "fi": {
+        "grants": "Mitä julkisia avustuksia tai lainoja yrityksellä on ollut, ja onko jokin vielä käynnissä?",
+        "work": "Teetkö yritystä kokoaikaisesti, vai jatkatko työssä muualla?",
+        "timing": "Onko hanke jo alkanut, ja myydäänkö tuotetta jo?",
+    },
+    "no": {
+        "grants": "Hvilke offentlige tilskudd eller lån har selskapet hatt, og løper noen fortsatt?",
+        "work": "Skal du jobbe heltid i selskapet, eller beholde en jobb ved siden av?",
+        "timing": "Har prosjektet allerede startet, og selges produktet allerede?",
+    },
+    "da": {
+        "grants": "Hvilke offentlige tilskud eller lån har virksomheden haft, og løber nogen stadig?",
+        "work": "Skal du arbejde fuld tid i virksomheden, eller beholde et job ved siden af?",
+        "timing": "Er projektet allerede i gang, og sælges produktet allerede?",
+    },
+}
+# Topics with one field reuse that field's question.
+SCREEN_FIELD: dict[str, str] = {
+    "ownership": "owner_company_share", "affiliation": "affiliation", "data": "personal_data",
+    "finances": "lost_half_capital", "staff": "paid_staff",
+}
+
+SCREEN_WHY: dict[str, dict[str, str]] = {
+    "en": {
+        "basics": "Most of these programs depend on it.",
+        "ownership": "25% or more owned by another company can end SME status.",
+        "grants": "Earlier grants can close a program or use up the state-aid room.",
+        "work": "Start-up allowances and founder grants often require full-time work.",
+        "affiliation": "Universities run free startup support, and their IP rules may apply.",
+        "data": "Data the source can re-link is personal data under GDPR.",
+        "finances": "Over three years old with half the capital lost: most state aid closes.",
+        "timing": "Many grants pay only for work after you apply, some only before launch.",
+        "staff": "Some reliefs and grants count only people on your own payroll.",
+    },
+    "sv": {
+        "basics": "De flesta av programmen hänger på det.",
+        "ownership": "Äger ett annat bolag 25 % eller mer kan SME-statusen falla.",
+        "grants": "Tidigare stöd kan stänga ett program eller ta upp utrymmet för statsstöd.",
+        "work": "Starta eget-stöd och grundarbidrag kräver ofta att du jobbar heltid.",
+        "affiliation": "Lärosäten har gratis startup-stöd, och deras regler om rättigheter kan gälla.",
+        "data": "Data som källan kan koppla tillbaka är personuppgifter enligt GDPR.",
+        "finances": "Äldre än tre år och halva kapitalet förbrukat: de flesta statliga stöd stängs.",
+        "timing": "Många bidrag betalar bara arbete efter ansökan, vissa bara före lansering.",
+        "staff": "Vissa avdrag och bidrag räknar bara personer på er egen lönelista.",
+    },
+    "fi": {
+        "basics": "Useimmat näistä ohjelmista riippuvat tästä.",
+        "ownership": "Jos toinen yritys omistaa vähintään 25 %, pk-yritysasema voi kaatua.",
+        "grants": "Aiempi tuki voi sulkea ohjelman tai käyttää valtiontukikaton.",
+        "work": "Starttiraha ja perustajarahoitus edellyttävät usein päätoimisuutta.",
+        "affiliation": "Korkeakouluilla on maksutonta startup-tukea, ja niiden IPR-säännöt voivat koskea teitä.",
+        "data": "Lähteen yhdistettävissä oleva aineisto on GDPR:n mukaan henkilötietoa.",
+        "finances": "Yli kolme vuotta vanha ja puolet pääomasta menetetty: useimmat valtiontuet sulkeutuvat.",
+        "timing": "Moni avustus kattaa vain hakemuksen jälkeisen työn, osa vain ennen markkinoille tuloa.",
+        "staff": "Osa vähennyksistä ja avustuksista koskee vain omalla palkkalistalla olevia.",
+    },
+    "no": {
+        "basics": "De fleste av disse programmene avhenger av dette.",
+        "ownership": "Eier et annet selskap 25 % eller mer, kan SMB-statusen falle.",
+        "grants": "Tidligere støtte kan stenge et program eller bruke opp rommet for statsstøtte.",
+        "work": "Oppstartsstøtte og gründerstipend krever ofte at du jobber heltid.",
+        "affiliation": "Universiteter har gratis gründerstøtte, og reglene deres om rettigheter kan gjelde.",
+        "data": "Data kilden kan koble tilbake, er personopplysninger etter GDPR.",
+        "finances": "Over tre år gammelt og halve kapitalen tapt: det meste av statsstøtte stenger.",
+        "timing": "Mange tilskudd dekker bare arbeid etter søknaden, noen bare før lansering.",
+        "staff": "Noen fradrag og tilskudd teller bare folk på egen lønningsliste.",
+    },
+    "da": {
+        "basics": "De fleste af disse programmer afhænger af det.",
+        "ownership": "Ejer en anden virksomhed 25 % eller mere, kan SMV-status falde bort.",
+        "grants": "Tidligere støtte kan lukke et program eller bruge rummet til statsstøtte op.",
+        "work": "Iværksætterstøtte og stipendier kræver ofte, at du arbejder fuld tid.",
+        "affiliation": "Universiteter har gratis iværksætterstøtte, og deres regler om rettigheder kan gælde.",
+        "data": "Data, som kilden kan koble tilbage, er personoplysninger efter GDPR.",
+        "finances": "Over tre år gammelt og halvdelen af kapitalen tabt: de fleste former for statsstøtte lukker.",
+        "timing": "Mange tilskud dækker kun arbejde efter ansøgningen, nogle kun før lancering.",
+        "staff": "Nogle fradrag og tilskud tæller kun folk på jeres egen lønliste.",
+    },
+}
+
+ROUTE_NAMES: dict[str, dict[str, str]] = {
+    "en": {"grant": "Grants", "tax": "Tax relief", "loan": "Loans", "compute": "Compute", "credits": "Cloud and AI credits", "equity": "Equity investment", "support": "Support programs"},
+    "sv": {"grant": "Bidrag", "tax": "Skattelättnad", "loan": "Lån", "compute": "Beräkningskraft", "credits": "Moln- och AI-krediter", "equity": "Ägarkapital", "support": "Stödprogram"},
+    "fi": {"grant": "Avustukset", "tax": "Verohelpotus", "loan": "Lainat", "compute": "Laskentateho", "credits": "Pilvi- ja tekoälykrediitit", "equity": "Pääomasijoitus", "support": "Tukiohjelmat"},
+    "no": {"grant": "Tilskudd", "tax": "Skattefradrag", "loan": "Lån", "compute": "Regnekraft", "credits": "Sky- og KI-kreditter", "equity": "Egenkapital", "support": "Støtteprogrammer"},
+    "da": {"grant": "Tilskud", "tax": "Skattefradrag", "loan": "Lån", "compute": "Regnekraft", "credits": "Cloud- og AI-kreditter", "equity": "Egenkapital", "support": "Støtteprogrammer"},
 }
 
 # Label templates keyed by language, then field, then op. {n} is a number,
@@ -160,6 +441,18 @@ LABELS: dict[str, dict[str, dict[str, str]]] = {
         "has_developer": {"true": "a developer on the team", "false": "no developer on the team"},
         "workload_defined": {"true": "workload defined: code, one system, GPU hours", "false": "workload not defined"},
         "profit_distributed": {"true": "dividend paid last year", "false": "no dividend last year"},
+        "owner_company_share": {"lte": "another company owns at most {n}%", "lt": "another company owns under {n}%", "gt": "another company owns over {n}%", "gte": "another company owns at least {n}%"},
+        "paid_staff": {"lt": "fewer than {n} paid staff", "lte": "at most {n} paid staff", "gt": "more than {n} paid staff", "gte": "at least {n} paid staff", "eq": "{n} paid staff"},
+        "de_minimis_eur": {"lt": "de minimis aid in 3 years under {n} EUR", "lte": "de minimis aid in 3 years at most {n} EUR"},
+        "fulltime_in_company": {"true": "founder works full-time in the company", "false": "founder not full-time in the company"},
+        "founder_employed_elsewhere": {"true": "founder has a full-time job elsewhere", "false": "no full-time job outside the company"},
+        "lost_half_capital": {"true": "more than half the share capital lost", "false": "not lost more than half the share capital"},
+        "work_started": {"true": "project work already started", "false": "project not started before applying"},
+        "on_market": {"true": "product already on the market", "false": "product not yet on the market"},
+        "prior_grants": {"excludes": "no earlier {list}", "contains": "earlier {list}"},
+        "active_grants": {"excludes": "no running {list}", "contains": "a running {list}"},
+        "affiliation": {"eq": "{list}", "in": "{list}", "neq": "not {list}", "not_in": "not {list}"},
+        "personal_data": {"eq": "data: {list}", "in": "data: {list}", "neq": "data not {list}", "not_in": "data not {list}"},
     },
     "sv": {
         "country": {"eq": "i {country}", "neq": "inte i {country}", "in": "i {list}", "not_in": "inte i {list}"},
@@ -168,8 +461,8 @@ LABELS: dict[str, dict[str, dict[str, str]]] = {
         "confirmed": {"contains": "{confirmation}"},
         "age_years": {"lt": "yngre än {n} år", "lte": "högst {n} år", "gt": "äldre än {n} år", "gte": "minst {n} år", "eq": "{n} år"},
         "employees": {"lt": "färre än {n} anställda", "lte": "högst {n} anställda", "gt": "fler än {n} anställda", "gte": "minst {n} anställda", "eq": "{n} anställda"},
-        "revenue_msek": {"lt": "omsättning under {n} mkr", "lte": "omsättning högst {n} mkr", "gt": "omsättning över {n} mkr", "gte": "omsättning minst {n} mkr"},
-        "balance_msek": {"lt": "balansomslutning under {n} mkr", "lte": "balansomslutning högst {n} mkr", "gt": "balansomslutning över {n} mkr", "gte": "balansomslutning minst {n} mkr"},
+        "revenue_msek": {"lt": "omsättning under {n} MSEK", "lte": "omsättning högst {n} MSEK", "gt": "omsättning över {n} MSEK", "gte": "omsättning minst {n} MSEK"},
+        "balance_msek": {"lt": "balansomslutning under {n} MSEK", "lte": "balansomslutning högst {n} MSEK", "gt": "balansomslutning över {n} MSEK", "gte": "balansomslutning minst {n} MSEK"},
         "revenue_meur": {"lt": "omsättning under {n} MEUR", "lte": "omsättning högst {n} MEUR", "gt": "omsättning över {n} MEUR", "gte": "omsättning minst {n} MEUR"},
         "balance_meur": {"lt": "balansomslutning under {n} MEUR", "lte": "balansomslutning högst {n} MEUR", "gt": "balansomslutning över {n} MEUR", "gte": "balansomslutning minst {n} MEUR"},
         "funding_raised_usd": {"lt": "tagit in under {money}", "lte": "tagit in högst {money}", "gt": "tagit in över {money}", "gte": "tagit in minst {money}"},
@@ -184,6 +477,18 @@ LABELS: dict[str, dict[str, dict[str, str]]] = {
         "has_developer": {"true": "en utvecklare i teamet", "false": "ingen utvecklare i teamet"},
         "workload_defined": {"true": "arbetslast definierad: kod, ett system, GPU-timmar", "false": "arbetslast inte definierad"},
         "profit_distributed": {"true": "vinstutdelning förra året", "false": "ingen vinstutdelning förra året"},
+        "owner_company_share": {"lte": "annat bolag äger högst {n} %", "lt": "annat bolag äger under {n} %", "gt": "annat bolag äger över {n} %", "gte": "annat bolag äger minst {n} %"},
+        "paid_staff": {"lt": "färre än {n} avlönade", "lte": "högst {n} avlönade", "gt": "fler än {n} avlönade", "gte": "minst {n} avlönade", "eq": "{n} avlönade"},
+        "de_minimis_eur": {"lt": "stöd av mindre betydelse på 3 år under {n} EUR", "lte": "stöd av mindre betydelse på 3 år högst {n} EUR"},
+        "fulltime_in_company": {"true": "grundaren jobbar heltid i bolaget", "false": "grundaren jobbar inte heltid i bolaget"},
+        "founder_employed_elsewhere": {"true": "grundaren har heltidsjobb på annat håll", "false": "inget heltidsjobb utanför bolaget"},
+        "lost_half_capital": {"true": "mer än halva aktiekapitalet förbrukat", "false": "inte mer än halva aktiekapitalet förbrukat"},
+        "work_started": {"true": "projektarbetet har redan börjat", "false": "projektet inte påbörjat före ansökan"},
+        "on_market": {"true": "produkten redan på marknaden", "false": "produkten inte på marknaden än"},
+        "prior_grants": {"excludes": "inget tidigare {list}", "contains": "tidigare {list}"},
+        "active_grants": {"excludes": "inget pågående {list}", "contains": "ett pågående {list}"},
+        "affiliation": {"eq": "{list}", "in": "{list}", "neq": "inte {list}", "not_in": "inte {list}"},
+        "personal_data": {"eq": "data: {list}", "in": "data: {list}", "neq": "data inte {list}", "not_in": "data inte {list}"},
     },
     "fi": {
         "country": {"eq": "{country_in}", "neq": "ei {country_in}", "in": "maa: {list}", "not_in": "ei maa: {list}"},
@@ -208,6 +513,18 @@ LABELS: dict[str, dict[str, dict[str, str]]] = {
         "has_developer": {"true": "kehittäjä tiimissä", "false": "ei kehittäjää tiimissä"},
         "workload_defined": {"true": "työkuorma määritelty: koodi, yksi järjestelmä, GPU-tunnit", "false": "työkuormaa ei ole määritelty"},
         "profit_distributed": {"true": "osinkoa jaettu viime vuonna", "false": "ei osinkoa viime vuonna"},
+        "owner_company_share": {"lte": "toinen yritys omistaa enintään {n} %", "lt": "toinen yritys omistaa alle {n} %", "gt": "toinen yritys omistaa yli {n} %", "gte": "toinen yritys omistaa vähintään {n} %"},
+        "paid_staff": {"lt": "alle {n} palkattua", "lte": "enintään {n} palkattua", "gt": "yli {n} palkattua", "gte": "vähintään {n} palkattua", "eq": "{n} palkattua"},
+        "de_minimis_eur": {"lt": "de minimis -tukea 3 vuodessa alle {n} EUR", "lte": "de minimis -tukea 3 vuodessa enintään {n} EUR"},
+        "fulltime_in_company": {"true": "perustaja työskentelee yrityksessä kokoaikaisesti", "false": "perustaja ei työskentele yrityksessä kokoaikaisesti"},
+        "founder_employed_elsewhere": {"true": "perustajalla kokoaikatyö muualla", "false": "ei kokoaikatyötä yrityksen ulkopuolella"},
+        "lost_half_capital": {"true": "yli puolet osakepääomasta menetetty", "false": "ei menetetty yli puolta osakepääomasta"},
+        "work_started": {"true": "hankkeen työ jo aloitettu", "false": "hanketta ei aloitettu ennen hakemusta"},
+        "on_market": {"true": "tuote jo markkinoilla", "false": "tuote ei vielä markkinoilla"},
+        "prior_grants": {"excludes": "ei aiempaa rahoitusta: {list}", "contains": "aiempi rahoitus: {list}"},
+        "active_grants": {"excludes": "ei käynnissä olevaa rahoitusta: {list}", "contains": "käynnissä oleva rahoitus: {list}"},
+        "affiliation": {"eq": "{list}", "in": "{list}", "neq": "ei {list}", "not_in": "ei {list}"},
+        "personal_data": {"eq": "aineisto: {list}", "in": "aineisto: {list}", "neq": "aineisto ei {list}", "not_in": "aineisto ei {list}"},
     },
     "no": {
         "country": {"eq": "i {country}", "neq": "ikke i {country}", "in": "i {list}", "not_in": "ikke i {list}"},
@@ -232,6 +549,18 @@ LABELS: dict[str, dict[str, dict[str, str]]] = {
         "has_developer": {"true": "en utvikler i teamet", "false": "ingen utvikler i teamet"},
         "workload_defined": {"true": "arbeidslast definert: kode, ett system, GPU-timer", "false": "arbeidslast ikke definert"},
         "profit_distributed": {"true": "utbytte utbetalt i fjor", "false": "ikke noe utbytte i fjor"},
+        "owner_company_share": {"lte": "et annet selskap eier høyst {n} %", "lt": "et annet selskap eier under {n} %", "gt": "et annet selskap eier over {n} %", "gte": "et annet selskap eier minst {n} %"},
+        "paid_staff": {"lt": "færre enn {n} lønnede", "lte": "høyst {n} lønnede", "gt": "flere enn {n} lønnede", "gte": "minst {n} lønnede", "eq": "{n} lønnede"},
+        "de_minimis_eur": {"lt": "bagatellmessig støtte på 3 år under {n} EUR", "lte": "bagatellmessig støtte på 3 år høyst {n} EUR"},
+        "fulltime_in_company": {"true": "gründeren jobber heltid i selskapet", "false": "gründeren jobber ikke heltid i selskapet"},
+        "founder_employed_elsewhere": {"true": "gründeren har heltidsjobb et annet sted", "false": "ingen heltidsjobb utenfor selskapet"},
+        "lost_half_capital": {"true": "mer enn halve aksjekapitalen tapt", "false": "ikke tapt mer enn halve aksjekapitalen"},
+        "work_started": {"true": "prosjektarbeidet har allerede startet", "false": "prosjektet ikke startet før søknaden"},
+        "on_market": {"true": "produktet allerede på markedet", "false": "produktet ikke på markedet ennå"},
+        "prior_grants": {"excludes": "ikke tidligere {list}", "contains": "tidligere {list}"},
+        "active_grants": {"excludes": "ikke løpende {list}", "contains": "et løpende {list}"},
+        "affiliation": {"eq": "{list}", "in": "{list}", "neq": "ikke {list}", "not_in": "ikke {list}"},
+        "personal_data": {"eq": "data: {list}", "in": "data: {list}", "neq": "data ikke {list}", "not_in": "data ikke {list}"},
     },
     "da": {
         "country": {"eq": "i {country}", "neq": "ikke i {country}", "in": "i {list}", "not_in": "ikke i {list}"},
@@ -256,6 +585,18 @@ LABELS: dict[str, dict[str, dict[str, str]]] = {
         "has_developer": {"true": "en udvikler på holdet", "false": "ingen udvikler på holdet"},
         "workload_defined": {"true": "arbejdsbyrde defineret: kode, ét system, GPU-timer", "false": "arbejdsbyrde ikke defineret"},
         "profit_distributed": {"true": "udbytte udbetalt sidste år", "false": "intet udbytte sidste år"},
+        "owner_company_share": {"lte": "en anden virksomhed ejer højst {n} %", "lt": "en anden virksomhed ejer under {n} %", "gt": "en anden virksomhed ejer over {n} %", "gte": "en anden virksomhed ejer mindst {n} %"},
+        "paid_staff": {"lt": "færre end {n} lønnede", "lte": "højst {n} lønnede", "gt": "flere end {n} lønnede", "gte": "mindst {n} lønnede", "eq": "{n} lønnede"},
+        "de_minimis_eur": {"lt": "de minimis-støtte på 3 år under {n} EUR", "lte": "de minimis-støtte på 3 år højst {n} EUR"},
+        "fulltime_in_company": {"true": "stifteren arbejder fuld tid i virksomheden", "false": "stifteren arbejder ikke fuld tid i virksomheden"},
+        "founder_employed_elsewhere": {"true": "stifteren har fuldtidsjob et andet sted", "false": "intet fuldtidsjob uden for virksomheden"},
+        "lost_half_capital": {"true": "mere end halvdelen af selskabskapitalen tabt", "false": "ikke tabt mere end halvdelen af selskabskapitalen"},
+        "work_started": {"true": "projektarbejdet er allerede i gang", "false": "projektet ikke startet før ansøgningen"},
+        "on_market": {"true": "produktet allerede på markedet", "false": "produktet ikke på markedet endnu"},
+        "prior_grants": {"excludes": "ikke tidligere {list}", "contains": "tidligere {list}"},
+        "active_grants": {"excludes": "ikke igangværende {list}", "contains": "et igangværende {list}"},
+        "affiliation": {"eq": "{list}", "in": "{list}", "neq": "ikke {list}", "not_in": "ikke {list}"},
+        "personal_data": {"eq": "data: {list}", "in": "data: {list}", "neq": "data ikke {list}", "not_in": "data ikke {list}"},
     },
 }
 
@@ -285,6 +626,18 @@ QUESTIONS: dict[str, dict[str, str]] = {
         "has_developer": "Does the team include at least one developer?",
         "workload_defined": "Can you name the code, the single system and the number of GPU hours?",
         "profit_distributed": "Did the company pay a dividend last fiscal year?",
+        "owner_company_share": "Apart from venture funds, angels or universities holding 50% or less, does another company, group or public body own 25% or more of yours, and how much?",
+        "paid_staff": "How many people does the company pay a salary to?",
+        "de_minimis_eur": "How much de minimis aid has the company received in the last three years, in EUR?",
+        "fulltime_in_company": "Will you work full-time in the company once the funded work starts?",
+        "founder_employed_elsewhere": "Will you keep a full-time job outside the company while you build it?",
+        "lost_half_capital": "Has the company lost more than half of its share capital through accumulated losses?",
+        "work_started": "Has the project you would apply for, not the company's earlier work, already started?",
+        "on_market": "Is the product already sold to customers?",
+        "prior_grants": "Which public grants or loans has the company received before, if any?",
+        "active_grants": "Is any public grant or project still running for the company, and from which funder?",
+        "affiliation": "Are you a student, researcher or employee at a university right now?",
+        "personal_data": "Can anyone, the data source included, link a record in your data back to a person?",
     },
     "sv": {
         "country": "I vilket land är bolaget registrerat, eller var ska det registreras?",
@@ -293,8 +646,8 @@ QUESTIONS: dict[str, dict[str, str]] = {
         "legal_form": "Vilken bolagsform: aktiebolag eller annat bolag, enskild firma, ideell förening, universitet, offentlig sektor, eller inget bolag än?",
         "age_years": "Hur gammalt är bolaget, i år?",
         "employees": "Hur många anställda?",
-        "revenue_msek": "Nettoomsättning senaste räkenskapsåret, i mkr?",
-        "balance_msek": "Balansomslutning, i mkr?",
+        "revenue_msek": "Nettoomsättning senaste räkenskapsåret, i MSEK?",
+        "balance_msek": "Balansomslutning, i MSEK?",
         "revenue_meur": "Omsättning senaste räkenskapsåret, i MEUR?",
         "balance_meur": "Balansomslutning, i MEUR?",
         "funding_raised_usd": "Hur mycket kapital har bolaget tagit in, i USD?",
@@ -309,6 +662,18 @@ QUESTIONS: dict[str, dict[str, str]] = {
         "has_developer": "Finns minst en utvecklare i teamet?",
         "workload_defined": "Kan ni namnge koden, det enda systemet och antalet GPU-timmar?",
         "profit_distributed": "Gjorde bolaget vinstutdelning senaste räkenskapsåret?",
+        "owner_company_share": "Bortsett från riskkapitalfonder, affärsänglar eller lärosäten med högst 50 %, äger något annat bolag, en koncern eller en offentlig aktör 25 % eller mer av ert, och hur mycket?",
+        "paid_staff": "Hur många personer betalar bolaget lön till?",
+        "de_minimis_eur": "Hur mycket stöd av mindre betydelse (de minimis) har bolaget fått de senaste tre åren, i euro?",
+        "fulltime_in_company": "Kommer du att jobba heltid i bolaget när det finansierade arbetet startar?",
+        "founder_employed_elsewhere": "Kommer du att ha kvar ett heltidsjobb utanför bolaget medan du bygger det?",
+        "lost_half_capital": "Har bolaget förbrukat mer än hälften av aktiekapitalet genom ackumulerade förluster?",
+        "work_started": "Har projektet ni skulle söka för redan börjat, alltså inte bolagets tidigare arbete?",
+        "on_market": "Säljs produkten redan till kunder?",
+        "prior_grants": "Vilka offentliga bidrag eller lån har bolaget fått tidigare, om några?",
+        "active_grants": "Har bolaget något offentligt bidrag eller projekt som fortfarande pågår, och från vilken finansiär?",
+        "affiliation": "Är du student, forskare eller anställd vid ett universitet eller en högskola just nu?",
+        "personal_data": "Kan någon, källan inräknad, koppla en post i era data till en person?",
     },
     "fi": {
         "country": "Missä maassa yhtiö on rekisteröity, tai mihin se rekisteröidään?",
@@ -333,6 +698,18 @@ QUESTIONS: dict[str, dict[str, str]] = {
         "has_developer": "Onko tiimissä vähintään yksi kehittäjä?",
         "workload_defined": "Osaatteko nimetä koodin, yhden järjestelmän ja GPU-tuntien määrän?",
         "profit_distributed": "Jakoiko yhtiö osinkoa viime tilikaudella?",
+        "owner_company_share": "Pääomarahastoja, enkelisijoittajia ja yliopistoja (enintään 50 %) lukuun ottamatta, omistaako toinen yritys, konserni tai julkinen toimija vähintään 25 % yrityksestänne, ja kuinka paljon?",
+        "paid_staff": "Kuinka monelle henkilölle yritys maksaa palkkaa?",
+        "de_minimis_eur": "Kuinka paljon de minimis -tukea yritys on saanut viimeisen kolmen vuoden aikana, euroina?",
+        "fulltime_in_company": "Työskenteletkö yrityksessä kokoaikaisesti, kun rahoitettu työ alkaa?",
+        "founder_employed_elsewhere": "Jatkatko kokoaikatyössä yrityksen ulkopuolella, kun rakennat yritystä?",
+        "lost_half_capital": "Onko yhtiö menettänyt kertyneillä tappioilla yli puolet osakepääomastaan?",
+        "work_started": "Onko hanke, jolle haette rahoitusta, jo alkanut, yrityksen aiempaa työtä lukuun ottamatta?",
+        "on_market": "Myydäänkö tuotetta jo asiakkaille?",
+        "prior_grants": "Mitä julkisia avustuksia tai lainoja yritys on saanut aiemmin, jos mitään?",
+        "active_grants": "Onko yrityksellä vielä käynnissä julkista avustusta tai hanketta, ja miltä rahoittajalta?",
+        "affiliation": "Oletko tällä hetkellä opiskelija, tutkija tai työntekijä yliopistossa tai korkeakoulussa?",
+        "personal_data": "Voiko kukaan, tietolähde mukaan lukien, yhdistää aineistonne tietueen henkilöön?",
     },
     "no": {
         "country": "I hvilket land er selskapet registrert, eller hvor skal det registreres?",
@@ -357,6 +734,18 @@ QUESTIONS: dict[str, dict[str, str]] = {
         "has_developer": "Er det minst én utvikler i teamet?",
         "workload_defined": "Kan dere navngi koden, det ene systemet og antall GPU-timer?",
         "profit_distributed": "Betalte selskapet utbytte siste regnskapsår?",
+        "owner_company_share": "Bortsett fra venturefond, engleinvestorer eller universiteter med høyst 50 %, eier et annet selskap, et konsern eller en offentlig aktør 25 % eller mer av deres, og hvor mye?",
+        "paid_staff": "Hvor mange personer betaler selskapet lønn til?",
+        "de_minimis_eur": "Hvor mye bagatellmessig støtte (de minimis) har selskapet fått de siste tre årene, i euro?",
+        "fulltime_in_company": "Skal du jobbe heltid i selskapet når det finansierte arbeidet starter?",
+        "founder_employed_elsewhere": "Skal du beholde en heltidsjobb utenfor selskapet mens du bygger det?",
+        "lost_half_capital": "Har selskapet tapt mer enn halvparten av aksjekapitalen gjennom akkumulerte tap?",
+        "work_started": "Har prosjektet dere vil søke for allerede startet, altså ikke selskapets tidligere arbeid?",
+        "on_market": "Selges produktet allerede til kunder?",
+        "prior_grants": "Hvilke offentlige tilskudd eller lån har selskapet fått tidligere, om noen?",
+        "active_grants": "Har selskapet et offentlig tilskudd eller prosjekt som fortsatt løper, og fra hvilken finansiør?",
+        "affiliation": "Er du student, forsker eller ansatt ved et universitet eller en høyskole nå?",
+        "personal_data": "Kan noen, kilden medregnet, koble en post i dataene deres til en person?",
     },
     "da": {
         "country": "I hvilket land er selskabet registreret, eller hvor skal det registreres?",
@@ -381,6 +770,18 @@ QUESTIONS: dict[str, dict[str, str]] = {
         "has_developer": "Er der mindst én udvikler på holdet?",
         "workload_defined": "Kan I navngive koden, det ene system og antallet af GPU-timer?",
         "profit_distributed": "Udbetalte selskabet udbytte sidste regnskabsår?",
+        "owner_company_share": "Bortset fra venturefonde, business angels eller universiteter med højst 50 %, ejer en anden virksomhed, en koncern eller en offentlig aktør 25 % eller mere af jeres, og hvor meget?",
+        "paid_staff": "Hvor mange personer betaler virksomheden løn til?",
+        "de_minimis_eur": "Hvor meget de minimis-støtte har virksomheden modtaget de seneste tre år, i euro?",
+        "fulltime_in_company": "Skal du arbejde fuld tid i virksomheden, når det finansierede arbejde starter?",
+        "founder_employed_elsewhere": "Beholder du et fuldtidsjob uden for virksomheden, mens du bygger den?",
+        "lost_half_capital": "Har selskabet tabt mere end halvdelen af selskabskapitalen gennem akkumulerede underskud?",
+        "work_started": "Er projektet, I vil søge til, allerede gået i gang, altså ikke virksomhedens tidligere arbejde?",
+        "on_market": "Sælges produktet allerede til kunder?",
+        "prior_grants": "Hvilke offentlige tilskud eller lån har virksomheden fået før, hvis nogen?",
+        "active_grants": "Har virksomheden et offentligt tilskud eller projekt, der stadig løber, og fra hvilken bevillingsgiver?",
+        "affiliation": "Er du studerende, forsker eller ansat ved et universitet lige nu?",
+        "personal_data": "Kan nogen, kilden medregnet, koble en post i jeres data til en person?",
     },
 }
 
@@ -492,6 +893,12 @@ def value_name(field: str, value: object, lang: str) -> str:
         return VENDOR_NAMES.get(str(value), str(value))
     if field == "funding_raised_usd":
         return f"{format_number(value)} USD"
+    if field in ("prior_grants", "active_grants"):
+        return GRANT_NAMES.get(str(value), str(value))
+    if field == "affiliation":
+        return AFFILIATION_NAMES[lang].get(str(value), str(value))
+    if field == "personal_data":
+        return PERSONAL_DATA_NAMES[lang].get(str(value), str(value))
     return format_number(value)
 
 
@@ -544,6 +951,22 @@ def rule_question(rule: dict, lang: str) -> str:
 
 def group_label(members: list[dict], lang: str) -> str:
     return PHRASES[lang]["group_sep"].join(rule_label(member, lang) for member in members)
+
+
+def screen_question(topic: str, lang: str) -> str:
+    """The one question the first answer asks about a situation topic."""
+    if topic in SCREEN_FIELD:
+        field = SCREEN_FIELD[topic]
+        return QUESTIONS[lang].get(field) or QUESTIONS[DEFAULT_LANG][field]
+    return SCREEN_QUESTIONS[lang].get(topic) or SCREEN_QUESTIONS[DEFAULT_LANG][topic]
+
+
+def screen_why(topic: str, lang: str) -> str:
+    return SCREEN_WHY[lang].get(topic) or SCREEN_WHY[DEFAULT_LANG][topic]
+
+
+def route_name(route: str, lang: str) -> str:
+    return ROUTE_NAMES[lang].get(route) or ROUTE_NAMES[DEFAULT_LANG].get(route, route)
 
 
 def phrase(key: str, lang: str, **fill: object) -> str:

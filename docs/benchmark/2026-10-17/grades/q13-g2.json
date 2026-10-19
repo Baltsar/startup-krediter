@@ -1,0 +1,13 @@
+{"qid":"q13",
+ "programs":{"A":"Aneo-bidraget / SMN-Bidraget via Spark* NTNU","B":"Spark* NTNU / Aneo-bidraget (plus NTNU Discovery, Gruva, Innovasjon Norge oppstartstilskudd 1)"},
+ "stoppers_total":{"A":13,"B":13},
+ "stoppers_stated":{"A":12,"B":2},
+ "factual_errors":{"A":[],"B":["Innovasjon Norge oppstartstilskudd 1 described as for companies under three years; official page says under five years"]},
+ "untraceable":{"A":["Accelerace pre-seed: DKK 1M convertible loan and DKK 250,000 fee (official site unreadable, certificate expired)","Eurostars 'stengt nå' (no official status found)"],"B":["NTNU Discovery: three student teams got NOK 300,000 each (LinkedIn source only; NTNU Discovery page 404)","AS registration fee about NOK 5,700 (not found on brreg.no)"]},
+ "best_first_pick":"tie",
+ "missed_programs":{"A_missed":["Venture Cup","NTNU Discovery","Gruva","StartupTRD / Startup Weekend pitch competitions"],"B_missed":[]},
+ "absolute":{"A":{"A1":"pass","A2":"pass","A3":"pass","A4":"n/a","A5":"n/a","A6":"n/a","A7":"pass","A8":"n/a"},
+             "B":{"A1":"pass","A2":"pass","A3":"pass","A4":"n/a","A5":"n/a","A6":"n/a","A7":"pass","A8":"n/a"}},
+ "turn1_words":{"A":206,"B":595},
+ "verdict":"A",
+ "incomplete":false}

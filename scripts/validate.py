@@ -22,7 +22,8 @@ from collections.abc import Callable
 from datetime import date
 from pathlib import Path
 
-from match import BOOLEAN_FIELDS, LIST_FIELDS, NUMERIC_FIELDS
+from i18n import GRANT_NAMES
+from match import BOOLEAN_FIELDS, ENUM_FIELDS, GRANT_FIELDS, LIST_FIELDS, NUMERIC_FIELDS
 
 ROOT = Path(__file__).resolve().parent.parent
 SCHEMA_PATH = ROOT / "data" / "schema.json"
@@ -116,6 +117,21 @@ def check_rule_compatibility(rule: dict, path: str) -> list[str]:
         return []
     if op in LIST_VALUE_OPS and not isinstance(value, list):
         return [f"{path}: op '{op}' needs a list value, got {type(value).__name__}"]
+    if op == "excludes":
+        if field not in CONTAINS_FIELDS:
+            return [f"{path}: op 'excludes' needs a list field ({', '.join(sorted(CONTAINS_FIELDS))}), got '{field}'"]
+        if not isinstance(value, list) or not value:
+            return [f"{path}: op 'excludes' needs a non-empty list value, got {value!r}"]
+    if field in GRANT_FIELDS:
+        # A key with no name would show the founder a raw id, and a typo would never match.
+        unnamed = [item for item in (value if isinstance(value, list) else [value]) if item not in GRANT_NAMES]
+        if unnamed:
+            return [f"{path}: grant key(s) {unnamed} have no entry in i18n.GRANT_NAMES"]
+    if field in ENUM_FIELDS:
+        allowed = set(ENUM_FIELDS[field].values())
+        wrong = [item for item in (value if isinstance(value, list) else [value]) if item not in allowed]
+        if wrong:
+            return [f"{path}: {field} value(s) {wrong} are not one of {sorted(allowed)}"]
     if op == "contains":
         if field not in CONTAINS_FIELDS:
             return [f"{path}: op 'contains' needs a list field ({', '.join(sorted(CONTAINS_FIELDS))}), got '{field}'"]

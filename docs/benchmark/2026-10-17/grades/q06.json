@@ -1,0 +1,13 @@
+{"qid":"q06",
+ "programs":{"A":"Sweden AI Factory (Mimer) + EuroHPC AI Factories Playground/Fast Lane + Vinnova Innovative Startups 2026","B":"EuroHPC AI Factories Playground (plus Sweden AI Factory support and Runpod Startup Program)"},
+ "stoppers_total":{"A":23,"B":14},
+ "stoppers_stated":{"A":7,"B":4},
+ "factual_errors":{"A":["EuroHPC Playground and Fast Lane described as 'temporarily closed' (turns 1 and 2); official call pages and the access-calls list show Status: Open, permanent deadline model","AWS Activate Portfolio 'up to about $100k'; official AWS page says up to $200,000","Sweden AI Factory system 'being installed during 2026'; official FAQ says expected up and running by early 2027 (one About page block still says 2026)","Vinnova eligibility 'fewer than 10 employees'; call text says a maximum of 10 FTE (minor)"],"B":[]},
+ "untraceable":{"A":["Sweden AI Factory access given as de minimis state aid counting toward the EU cap: not found on swedenaifactory.se (FAQ says everything is at no cost)","Vinnova Innovative Startups money 'does not go to compute': not stated on the call page (eligible costs include consultancy/licensing and other direct costs)"],"B":["'11 things the application asks for, 3 unclear points' and similar counts: internal tallies, not traceable to official pages"]},
+ "best_first_pick":"B",
+ "missed_programs":{"A_missed":["Runpod Startup Program (Starter Tier USD 1,000)"],"B_missed":["Vinnova Innovative Startups 2026","EuroHPC AI Factories Fast Lane","Google for Startups Cloud / AWS Activate Founders / Microsoft for Startups"]},
+ "absolute":{"A":{"A1":"pass","A2":"fail","A3":"pass","A4":"pass","A5":"n/a","A6":"n/a","A7":"pass","A8":"n/a"},
+             "B":{"A1":"pass","A2":"pass","A3":"pass","A4":"pass","A5":"n/a","A6":"n/a","A7":"pass","A8":"n/a"}},
+ "turn1_words":{"A":452,"B":52},
+ "verdict":"B",
+ "incomplete":false}

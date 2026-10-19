@@ -1,0 +1,68 @@
+{
+ "qid": "s04",
+ "programs": {
+  "A": "Innobooster (de minimis track), with GUDP as the second detailed door",
+  "B": "Innobooster (de minimis track)"
+ },
+ "stoppers_total": {
+  "A": 16,
+  "B": 16
+ },
+ "stoppers_stated": {
+  "A": 11,
+  "B": 16
+ },
+ "factual_errors": {
+  "A": [],
+  "B": []
+ },
+ "untraceable": {
+  "A": [
+   "H100 rental cost 65,000-130,000 DKK for 5,000 hours (USD 2-4/hour), from a third-party price article and not on any official page",
+   "Startups admitted to a Gefion pilot phase in 2024, from a DI news item and not on dcai.dk"
+  ],
+  "B": [
+   "EuroHPC Playground gives 5,000 GPU hours: the Playground page, the access-calls overview, the FAQ and the Terms of Reference show no hour figure"
+  ]
+ },
+ "best_first_pick": "A",
+ "missed_programs": {
+  "A_missed": [
+   "EIFO Matchlån",
+   "Eurostars (Call 12, deadline 4 March 2027)"
+  ],
+  "B_missed": [
+   "GUDP (Fødevarestyrelsen), granted under GBER/ABER so outside the de minimis ceiling",
+   "EuroHPC Fast Lane",
+   "Erhvervsforsker"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 919,
+  "B": 195
+ },
+ "verdict": "A",
+ "incomplete": false
+}

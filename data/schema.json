@@ -86,11 +86,93 @@
           "enum": ["none", "repay", "equity", "fee"],
           "description": "What taking the money costs the founder: none (grant, free compute, credits), repay (loan or guarantee), equity (investment for ownership), fee (the program charges the founder). Ranking puts none first and fee last."
         },
+        "stages": {
+          "type": "array",
+          "items": {"type": "string", "enum": ["idea", "pre_seed", "seed", "series_a", "later"]},
+          "description": "Stages the program realistically serves. Not an eligibility rule: a founder outside these stages can still apply, but the door ranks after doors that fit their stage. A profile with no company and no stage counts as idea."
+        },
+        "sectors": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Only for calls tied to a topic (a marine challenge, a semiconductor pilot line). Such a door ranks after general doors and stays out of the full answer unless the founder's sector matches."
+        },
+        "application": {"$ref": "#/$defs/application"},
+        "route": {
+          "type": "string",
+          "enum": ["grant", "tax", "loan", "compute", "credits", "equity", "support"],
+          "description": "The route on the founder's map when kind and founder_cost do not say it: tax for a deduction claimed in a tax or payroll return rather than applied for."
+        },
         "group": {
           "type": "string",
           "pattern": "^[a-z0-9-]+$",
           "description": "Doors in the same group with the same status and open questions collapse into one answer with the siblings listed, so three EuroHPC tiers read as one choice."
         }
+      }
+    },
+    "application": {
+      "type": "object",
+      "required": ["portal", "sources", "verified"],
+      "additionalProperties": false,
+      "description": "What the application itself asks for, read from the program's guide, templates and form. Used when the skill helps the founder write and fill the application (SKILL.md Stage C).",
+      "properties": {
+        "portal": {"type": "string", "pattern": "^(https?://|mailto:)"},
+        "login": {"type": "string"},
+        "languages": {"type": "array", "items": {"type": "string", "pattern": "^[a-z]{2}$"}},
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["title"],
+            "additionalProperties": false,
+            "properties": {"title": {"type": "string", "minLength": 1}, "asks": {"type": "string"}, "limit": {"type": "string"}}
+          }
+        },
+        "criteria": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "additionalProperties": false,
+            "properties": {"name": {"type": "string", "minLength": 1}, "weight": {"type": "string"}, "scale": {"type": "string"}, "what_scores_high": {"type": "string"}}
+          }
+        },
+        "budget": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "template": {"type": "string"},
+            "funding_rate": {"type": "string"},
+            "categories": {"type": "array", "items": {"type": "string"}},
+            "rules": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+        "attachments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "additionalProperties": false,
+            "properties": {"name": {"type": "string", "minLength": 1}, "required": {"type": "boolean"}, "template": {"type": "string"}, "limit": {"type": "string"}}
+          }
+        },
+        "declarations": {"type": "array", "items": {"type": "string"}},
+        "submit_action": {"type": "string"},
+        "agent_path": {"type": "string", "description": "An official route the program offers for an AI agent to prepare the application, and how the founder completes it."},
+        "ai_disclosure": {"type": "string", "description": "What the program says about AI tools in applications: allowed, must be disclosed, or forbidden."},
+        "draft_save": {"type": "string"},
+        "form_readable_without_login": {"type": "boolean"},
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["url"],
+            "additionalProperties": false,
+            "properties": {"url": {"type": "string", "pattern": "^https?://"}, "what": {"type": "string"}}
+          }
+        },
+        "unclear": {"type": "array", "items": {"type": "string"}},
+        "verified": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"}
       }
     },
     "amount": {
@@ -122,10 +204,13 @@
             "revenue_msek", "balance_msek", "revenue_meur", "balance_meur", "funding_raised_usd",
             "stage", "vc_backed", "vc_partner", "stack", "sector", "confirmed",
             "has_vat", "has_employment", "has_work_email", "has_website",
-            "has_developer", "workload_defined", "profit_distributed"
+            "has_developer", "workload_defined", "profit_distributed",
+            "owner_company_share", "prior_grants", "active_grants", "de_minimis_eur",
+            "founder_employed_elsewhere", "fulltime_in_company", "paid_staff", "affiliation",
+            "personal_data", "lost_half_capital", "work_started", "on_market"
           ]
         },
-        "op": {"enum": ["eq", "neq", "in", "not_in", "lte", "gte", "lt", "gt", "contains"]},
+        "op": {"enum": ["eq", "neq", "in", "not_in", "lte", "gte", "lt", "gt", "contains", "excludes"]},
         "value": {}
       }
     },

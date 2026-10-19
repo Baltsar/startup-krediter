@@ -1,0 +1,65 @@
+{
+ "qid": "s12",
+ "programs": {
+  "A": "Enova - Pilotering av banebrytende klimateknologi (Innovasjon Norge Tilskudd til miljoteknologi as supplement)",
+  "B": "Enova - Pilotering av banebrytende klimateknologi"
+ },
+ "stoppers_total": {
+  "A": 19,
+  "B": 19
+ },
+ "stoppers_stated": {
+  "A": 5,
+  "B": 19
+ },
+ "factual_errors": {
+  "A": [],
+  "B": []
+ },
+ "untraceable": {
+  "A": [
+   "Emilsen Fisk got 45 % Enova support for two plants in 2025 (attributed to Alotta/press; press gives 45 % only for the first plant)",
+   "Alotta raised NOK 63.5 million (press)",
+   "Alotta plant covered over 90 % of Emilsen Fisk's energy need, about 57 % renewable share at Mowi Chile (company/press figures)"
+  ],
+  "B": []
+ },
+ "best_first_pick": "tie",
+ "missed_programs": {
+  "A_missed": [
+   "EIC Accelerator"
+  ],
+  "B_missed": [
+   "Enova Klima- og energisatsinger i industrien, theme Fornybar energiproduksjon til forflater (customer-side investment route)",
+   "Forskningsradet Innovasjonsprosjekt i naeringslivet: Energi og transport 2026"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 727,
+  "B": 201
+ },
+ "verdict": "A",
+ "incomplete": false
+}

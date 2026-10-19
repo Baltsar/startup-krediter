@@ -1,0 +1,13 @@
+{"qid":"q07",
+ "programs":{"A":"Investeraravdrag (Skatteverket)","B":"Investeraravdrag (Skatteverket)"},
+ "stoppers_total":{"A":17,"B":17},
+ "stoppers_stated":{"A":9,"B":13},
+ "factual_errors":{"A":["Small-company size cap stated as turnover or balance sheet at most EUR 10 million; Skatteverket 'Villkor och aterforing' says at most SEK 80 million (nettoomsattning eller balansomslutning hogst 80 miljoner kronor)"],"B":[]},
+ "untraceable":{"A":[],"B":[]},
+ "best_first_pick":"B",
+ "missed_programs":{"A_missed":[],"B_missed":[]},
+ "absolute":{"A":{"A1":"pass","A2":"fail","A3":"pass","A4":"n/a","A5":"pass","A6":"n/a","A7":"pass","A8":"pass"},
+             "B":{"A1":"pass","A2":"pass","A3":"pass","A4":"n/a","A5":"pass","A6":"n/a","A7":"pass","A8":"pass"}},
+ "turn1_words":{"A":452,"B":568},
+ "verdict":"B",
+ "incomplete":false}

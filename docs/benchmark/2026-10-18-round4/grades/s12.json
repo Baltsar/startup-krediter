@@ -1,0 +1,58 @@
+{
+ "qid": "s12",
+ "programs": {
+  "A": "Vinnova Innovativa Startups 2026 (dnr 2025-04831), plus the Vinnova e-service application process",
+  "B": "Vinnova Innovativa Startups 2026 (dnr 2025-04831), plus the Vinnova e-service application process"
+ },
+ "stoppers_total": {
+  "A": 20,
+  "B": 20
+ },
+ "stoppers_stated": {
+  "A": 9,
+  "B": 6
+ },
+ "factual_errors": {
+  "A": [],
+  "B": []
+ },
+ "untraceable": {
+  "A": [],
+  "B": []
+ },
+ "best_first_pick": "A",
+ "missed_programs": {
+  "A_missed": [],
+  "B_missed": [
+   "Impact innovation: Utbildningssamverkan för en konkurrenskraftig och resilient tillverkningsindustri med nettonoll utsläpp av växthusgaser (Vinnova dnr 2026-01893), the only Vinnova call closing 19 Oct 2026 14:00"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "pass",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "pass",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 359,
+  "B": 402
+ },
+ "verdict": "A",
+ "incomplete": false
+}

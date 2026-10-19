@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Match a founder profile against data/programs.json. Standard library only.
 
-    python3 scripts/match.py [--all] [--live] [--top N] [--programs PATH] [--today YYYY-MM-DD] < profile.json
+    python3 scripts/match.py [--all] [--live] [--top N] [--door ID] [--programs PATH] [--today YYYY-MM-DD] < profile.json
+    python3 scripts/match.py --find "words in the program name"
 
 A door is eligible when every rule is met, blocked when any rule failed, and
 unknown otherwise. A field that is absent from the profile is unknown, never
@@ -26,6 +27,7 @@ import json
 import math
 import re
 import sys
+import unicodedata
 from collections.abc import Callable
 from dataclasses import asdict, dataclass, field as dc_field
 from datetime import date, datetime, timezone
@@ -39,6 +41,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PROGRAMS_PATH = ROOT / "data" / "programs.json"
 STALE_DAYS = 90
 DEFAULT_TOP = 3
+FIND_MAX = 8
 
 EU_MEMBERS = {
     "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE",
@@ -51,10 +54,97 @@ EU_ASSOCIATED = EU_MEMBERS | {
     "GE", "AM", "IL", "TN", "FO", "NZ",
 }
 
-NUMERIC_FIELDS = {"age_years", "employees", "revenue_msek", "balance_msek", "revenue_meur", "balance_meur", "funding_raised_usd"}
-INTEGER_FIELDS = {"employees"}
-BOOLEAN_FIELDS = {"vc_backed", "has_vat", "has_employment", "has_work_email", "has_website", "has_developer", "workload_defined", "profit_distributed"}
-LIST_FIELDS = {"stack", "sector", "vc_partner", "need", "confirmed"}
+NUMERIC_FIELDS = {
+    "age_years", "employees", "revenue_msek", "balance_msek", "revenue_meur", "balance_meur", "funding_raised_usd", "need_eur",
+    "owner_company_share", "paid_staff", "de_minimis_eur",
+}
+INTEGER_FIELDS = {"employees", "paid_staff"}
+BOOLEAN_FIELDS = {
+    "vc_backed", "has_vat", "has_employment", "has_work_email", "has_website", "has_developer", "workload_defined", "profit_distributed",
+    "fulltime_in_company", "founder_employed_elsewhere", "lost_half_capital", "work_started", "on_market",
+}
+GRANT_FIELDS = {"prior_grants", "active_grants"}
+# Program ids or funder prefixes ("vinnova", "rannis") the founder named; hyphenated like grant keys.
+KEY_FIELDS = GRANT_FIELDS | {"named"}
+LIST_FIELDS = {"stack", "sector", "vc_partner", "need", "confirmed", "denied"} | KEY_FIELDS
+# Words a founder uses for "none" when asked which grants they hold: an empty list, which is an answer.
+NO_GRANT_WORDS = {"none", "no", "nej", "inga", "ingen", "ei", "nei", "ingen_tidligere", "-"}
+# Fields with a fixed set of values, keyed by the words founders use for them.
+ENUM_FIELDS: dict[str, dict[str, str]] = {
+    "affiliation": {
+        "student": "student", "studerande": "student", "studerende": "student", "opiskelija": "student", "student_at_university": "student",
+        "researcher": "researcher", "forskare": "researcher", "forsker": "researcher", "tutkija": "researcher",
+        "postdoc": "researcher", "phd": "researcher", "doktorand": "researcher", "phd_student": "researcher",
+        "staff": "staff", "university_staff": "staff", "none": "none", "ingen": "none", "no": "none", "nej": "none",
+    },
+    # "Anonymised" is deliberately missing: it is what founders call data the source can
+    # still re-link (round 3, s15). Only the answer to the screen question sets this field.
+    "personal_data": {
+        "none": "none", "no": "none", "ingen": "none", "no_personal_data": "none",
+        "anonymous": "anonymous", "truly_anonymous": "anonymous", "irreversibly_anonymous": "anonymous",
+        "pseudonymised": "pseudonymised", "pseudonymized": "pseudonymised", "pseudonymiserad": "pseudonymised", "coded": "pseudonymised",
+        "identifiable": "identifiable", "personal": "identifiable", "personal_data": "identifiable",
+    },
+}
+CLAIMED_ANONYMOUS = {"anonymised", "anonymized", "anonymiserad", "anonymiseret", "anonymisert", "anonymisoitu"}
+# Facts about the founder's own situation, grouped into the topics the first answer asks
+# about. Each round-3 loss turned on one of them, and no search for programs reveals
+# them: who owns the company, which grants it holds, whether the founder works
+# elsewhere, studies, or trains on data that is really anonymous.
+SITUATION_TOPICS: dict[str, tuple[str, ...]] = {
+    "ownership": ("owner_company_share",),
+    "grants": ("prior_grants", "active_grants", "de_minimis_eur"),
+    "work": ("founder_employed_elsewhere", "fulltime_in_company"),
+    "affiliation": ("affiliation",),
+    "data": ("personal_data",),
+    "finances": ("lost_half_capital",),
+    "timing": ("work_started", "on_market"),
+    "staff": ("paid_staff",),
+}
+# Ties in the screen go to the trap that cost most in round 3.
+SITUATION_ORDER = tuple(SITUATION_TOPICS)
+FIELD_TOPIC: dict[str, str] = {field: topic for topic, fields in SITUATION_TOPICS.items() for field in fields}
+# Confirmations that follow up a situation answer: a firm more than 25% owned by another
+# company can still be an SME if the group's figures are within the limits.
+CONFIRMATION_TOPIC: dict[str, str] = {
+    "group_within_sme_limits": "ownership", "group_within_small_enterprise_limits": "ownership",
+    "group_unlisted_within_10msek": "ownership", "owners_all_natural_persons": "ownership",
+    "owner_is_founders_own_holding": "ownership", "separate_from_owner_operations": "ownership",
+    "each_founder_owns_12_5_percent": "ownership", "equity_majority_eu_efta_uk": "ownership",
+    "eic_running_grant_only_applying_blended": "grants", "no_earlier_bf_funding_same_solution": "grants",
+    "business_not_yet_fulltime": "work", "fulltime_team_member": "work", "project_lead_employed": "staff",
+}
+SITUATION_FIELDS = set(FIELD_TOPIC)
+SCREEN_MAX = 3
+# One chosen program has no route map competing for the founder's attention, and every
+# gate on it is final for that application, so its first answer may ask one more.
+CHOSEN_SCREEN_MAX = 4
+SCREEN_DOORS = 8
+# Routes the first answer maps before going deep on one door. A record may set its own
+# route (tax relief is paid as a grant-like deduction, not applied for as one).
+ROUTES = ("grant", "tax", "loan", "compute", "credits", "equity", "support")
+KIND_ROUTE: dict[str, str] = {
+    "grant": "grant", "loan": "loan", "compute": "compute", "cloud_credit": "credits", "ai_api_credit": "credits",
+    "perks": "credits", "accelerator": "support",
+}
+ROUTE_DOORS = 3
+# The order routes appear in: the founder's needs in the order they gave them, the money
+# routes from what the founder keeps to what it costs. Ordering by the best door's rank put
+# a payroll-tax deduction first for a webshop with no payroll, and the founder picks the
+# first door listed.
+NEED_ROUTES: dict[str, tuple[str, ...]] = {
+    "money": ("grant", "tax", "loan", "equity"), "compute": ("compute",), "credits": ("credits",), "support": ("support",),
+}
+# A project can usually be defined to start after the application, so "already started"
+# closes fewer doors than it gates; it should not crowd out ownership or grants held.
+# Losing half the share capital closes doors too, but it is a formality the application checks,
+# not a fact about the founder that changes which route to take.
+TOPIC_WEIGHT: dict[str, float] = {"timing": 0.5, "finances": 0.5}
+# A door the founder named weighs as two best doors: "can we get Innobooster?" should screen
+# for Innobooster's traps before anything else.
+NAMED_WEIGHT = 2
+# Basic company facts the first answer may need before any trap: one slot at most.
+BASIC_FIELDS = ("legal_form", "age_years")
 COUNTRY_FIELDS = {"country", "residence_country"}
 TRUE_WORDS = {"true", "yes", "ja", "y", "1", "kyllä", "joo"}
 FALSE_WORDS = {"false", "no", "nej", "n", "0", "nei", "ei"}
@@ -75,7 +165,19 @@ SECTOR_ALIASES = {
     "deep_tech": "deeptech", "ml": "ai", "ai_ml": "ai", "ki": "ai", "tekoäly": "ai", "cleantech": "climate",
     "climatetech": "climate", "climate_tech": "climate", "klimat": "climate", "klima": "climate", "ilmasto": "climate",
     "healthtech": "health", "medtech": "health", "life_science": "health", "lifescience": "health", "hälsa": "health",
+    "healthcare": "health", "medical": "health", "medicine": "health", "radiology": "health", "medical_imaging": "health",
+    "diagnostics": "health", "digital_health": "health", "e_health": "health", "vård": "health", "sjukvård": "health",
+    "medicin": "health", "terveysteknologia": "health", "sundhedsteknologi": "health", "helseteknologi": "health",
     "helse": "health", "sundhed": "health", "terveys": "health", "energi": "energy", "energia": "energy", "fin_tech": "fintech",
+    "logistics": "transport", "logistik": "transport", "logistikk": "transport", "logistiikka": "transport",
+    "trucking": "transport", "road_transport": "transport", "mobility": "transport", "chips": "semiconductors",
+    "semiconductor": "semiconductors", "halvledare": "semiconductors", "ocean": "marine", "maritime": "marine",
+    "hav": "marine", "aquaculture": "marine", "havbruk": "marine", "fiskeoppdrett": "marine",
+    "agritech": "agriculture", "agtech": "agriculture", "agri": "agriculture", "farming": "agriculture",
+    "jordbruk": "agriculture", "lantbruk": "agriculture", "trädgård": "agriculture", "rennäring": "agriculture",
+    "landbruk": "agriculture", "landbrug": "agriculture", "maatalous": "agriculture",
+    "defense": "defence", "försvar": "defence", "forsvar": "defence", "puolustus": "defence", "military": "defence",
+    "dual_use": "defence",
 }
 NEED_ALIASES = {
     "gpu": "compute", "hpc": "compute", "gpu_hours": "compute", "gpu_timmar": "compute", "gpu_timer": "compute",
@@ -103,6 +205,8 @@ LEGAL_FORM_ALIASES = {
     "academic": "academia", "institute": "academia",
     "public_sector": "public", "offentlig": "public", "municipality": "public", "kommun": "public", "kommune": "public",
     "kunta": "public",
+    "ekonomisk_förening": "company", "cooperative": "company", "kooperativ": "company", "osuuskunta": "company",
+    "andelslag": "company", "samvirkelag": "company", "andelsselskab": "company",
     "enskild_firma": "sole_trader", "sole": "sole_trader", "enk": "sole_trader", "enkeltpersonforetak": "sole_trader",
     "toiminimi": "sole_trader", "enkeltmandsvirksomhed": "sole_trader",
     "individual": "none", "person": "none", "no_company": "none", "inget_bolag": "none", "ei_yhtiötä": "none",
@@ -147,7 +251,14 @@ class Door:
     home_country: str | None = None
     foreign: bool = False
     founder_cost: str = "none"
+    stage_mismatch: bool = False
+    topic_mismatch: bool = False
+    topic_match: bool = False
+    undersized: bool = False
     also: list[dict] = dc_field(default_factory=list)
+    situation: list[str] = dc_field(default_factory=list)
+    route: str = "grant"
+    application: dict | None = None
     live: dict | None = None
     glyph: str = ""
 
@@ -248,6 +359,10 @@ def normalize_profile(raw: dict) -> tuple[dict, list[str]]:
                     warnings.append(f"need {item!r} is not money, compute, credits or support, ignored")
             if words:
                 profile[key] = list(dict.fromkeys(words))
+        elif key in KEY_FIELDS:
+            # Grant keys are program ids, which use hyphens; slug() would turn them into underscores.
+            keys = [re.sub(r"[\s_]+", "-", item.lower()) for item in split_list(value)]
+            profile[key] = list(dict.fromkeys(grant for grant in keys if slug(grant) not in NO_GRANT_WORDS))
         elif key in LIST_FIELDS:
             words = [slug(item) for item in split_list(value)]
             if key == "stack":
@@ -273,6 +388,19 @@ def normalize_profile(raw: dict) -> tuple[dict, list[str]]:
                 profile[key] = word
             else:
                 warnings.append(f"stage {value!r} is not idea, pre_seed, seed, series_a or later, treated as unknown")
+        elif key in ENUM_FIELDS:
+            enum_value = ENUM_FIELDS[key].get(slug(value))
+            if key == "personal_data" and slug(value) in CLAIMED_ANONYMOUS:
+                profile["personal_data_claim"] = slug(value)
+                warnings.append(
+                    "personal_data 'anonymised' is the founder's word, not a fact: ask whether anyone, the data source "
+                    "included, can link a record to a person, then record anonymous, pseudonymised or identifiable"
+                )
+                continue
+            if enum_value is None:
+                warnings.append(f"{key} {value!r} is not one of {sorted(set(ENUM_FIELDS[key].values()))}, treated as unknown")
+            else:
+                profile[key] = enum_value
         elif key == "lang":
             profile[key] = i18n.pick_lang(value)
         else:
@@ -293,6 +421,9 @@ def compare(op: str, actual: object, expected: object) -> bool:
         return isinstance(expected, list) and actual not in expected
     if op == "contains":
         return isinstance(actual, list) and expected in actual
+    if op == "excludes":
+        # A list the founder gave, possibly empty, holding none of the values: "no earlier Sprint or Tempo".
+        return isinstance(actual, list) and isinstance(expected, list) and not set(actual) & set(expected)
     if not isinstance(actual, (int, float)) or not isinstance(expected, (int, float)):
         return False
     if op == "lte":
@@ -321,8 +452,16 @@ def evaluate_rule(rule: dict, profile: dict, lang: str = i18n.DEFAULT_LANG) -> R
             return RuleResult("failed", label, None)
         question = next((result.question for result in results if result.status == "unknown"), None)
         return RuleResult("unknown", label, question)
-    actual = profile.get(rule["field"])
     label = i18n.rule_label(rule, lang)
+    if rule["field"] == "confirmed" and rule["op"] == "contains":
+        # A founder confirms a requirement in words or says no to it. Not mentioning
+        # it is neither: confirming one key must not fail every other confirmation.
+        if rule["value"] in (profile.get("denied") or []):
+            return RuleResult("failed", label, None, "confirmed")
+        if rule["value"] in (profile.get("confirmed") or []):
+            return RuleResult("met", label, None, "confirmed")
+        return RuleResult("unknown", label, i18n.rule_question(rule, lang), "confirmed")
+    actual = profile.get(rule["field"])
     if actual is None:
         return RuleResult("unknown", label, i18n.rule_question(rule, lang), rule["field"])
     status = "met" if compare(rule["op"], actual, rule["value"]) else "failed"
@@ -364,6 +503,31 @@ def rule_fields(gate: dict) -> set[str]:
     return {member["field"] for member in members}
 
 
+def member_topic(member: dict, profile: dict) -> str | None:
+    """The situation topic of one rule the profile leaves open, or None."""
+    field = member["field"]
+    if field == "confirmed":
+        key = member["value"]
+        answered = key in (profile.get("confirmed") or []) or key in (profile.get("denied") or [])
+        return None if answered else CONFIRMATION_TOPIC.get(key)
+    return FIELD_TOPIC.get(field) if profile.get(field) is None else None
+
+
+def gate_topic(gate: dict, profile: dict) -> str | None:
+    """The situation topic that keeps an open gate open, if any: the first member the founder's situation answers."""
+    members = gate.get("any", [gate])
+    return next((topic for topic in (member_topic(member, profile) for member in members) if topic), None)
+
+
+def program_route(program: dict) -> str:
+    """The route a door belongs to on the map: the record's own, else derived from kind and what it costs the founder."""
+    if program.get("route"):
+        return str(program["route"])
+    if program.get("founder_cost") == "equity":
+        return "equity"
+    return KIND_ROUTE.get(program["kind"], "support")
+
+
 def evaluate(program: dict, profile: dict, today: date, lang: str) -> Door:
     results = [evaluate_rule(rule, profile, lang) for rule in program["eligibility"]]
     if program["country"] != "global" and not profile_countries(profile) and not mentions_country(program):
@@ -371,9 +535,16 @@ def evaluate(program: dict, profile: dict, today: date, lang: str) -> Door:
         # country at all it must still ask rather than read as eligible.
         country_rule = {"field": "country", "op": "eq", "value": program["country"]}
         results.insert(0, RuleResult("unknown", i18n.rule_label(country_rule, lang), i18n.rule_question(country_rule, lang), "country"))
+    topics: list[str | None] = [gate_topic(rule, profile) for rule in program["eligibility"]]
+    if len(results) > len(topics):
+        topics.insert(0, None)
     met = [result.label for result in results if result.status == "met"]
     failed = [result.label for result in results if result.status == "failed"]
-    unknown = [{"label": result.label, "question": result.question} for result in results if result.status == "unknown"]
+    unknown = [
+        {"label": result.label, "question": result.question, "situation": topic, "field": result.field}
+        for result, topic in zip(results, topics)
+        if result.status == "unknown"
+    ]
     status = "blocked" if failed else "eligible" if not unknown else "unknown"
     verified = date.fromisoformat(program["last_verified"])
     apply_requirements = list(program.get("apply_requirements") or [])
@@ -403,7 +574,14 @@ def evaluate(program: dict, profile: dict, today: date, lang: str) -> Door:
         group=program.get("group"),
         home_country=program.get("home_country"),
         founder_cost=str(program.get("founder_cost", "none")),
+        stage_mismatch=stage_mismatch(program, profile),
+        topic_mismatch=topic_mismatch(program, profile),
+        topic_match=bool(set(program.get("sectors") or []) & set(profile.get("sector") or [])),
+        undersized=undersized(program, profile),
+        situation=list(dict.fromkeys(item["situation"] for item in unknown if item["situation"])),
+        route=program_route(program),
         foreign=bool(program.get("home_country")) and bool(profile_countries(profile)) and program.get("home_country") not in profile_countries(profile),
+        application=program.get("application"),
     )
 
 
@@ -413,7 +591,9 @@ def render_glyph(door: Door, lang: str) -> str:
     lines += [f"●  {label}" for label in door.met]
     lines += [f"×  {label}" for label in door.failed]
     lines += [f"○  {item['label']}" for item in door.unknown]
-    first_question = next((item["question"] for item in door.unknown if item.get("question")), None)
+    # The screen asks the situation questions for all doors at once; the door's own line asks the rest first.
+    asked = sorted(door.unknown, key=lambda item: bool(item.get("situation")))
+    first_question = next((item["question"] for item in asked if item.get("question")), None)
     if first_question:
         lines.append(f"?  {first_question}")
     lines.append(f"→  {door.amount['text']}")
@@ -438,13 +618,107 @@ def render_glyph(door: Door, lang: str) -> str:
 COST_RANK: dict[str, int] = {"none": 0, "repay": 1, "equity": 2, "fee": 3}
 
 
+def founder_stage(profile: dict) -> str | None:
+    """The founder's stage, or idea when they have no company and gave no stage."""
+    stage = profile.get("stage")
+    if stage in STAGES:
+        return str(stage)
+    if profile.get("legal_form") == "none":
+        return "idea"
+    return None
+
+
+def stage_mismatch(program: dict, profile: dict) -> bool:
+    """True when the program lists the stages it serves and the founder's known stage is not one of them.
+
+    An EU scale-up grant is formally open to two people with an idea, but
+    leading their answer with it sends them to the wrong door.
+    """
+    stages = program.get("stages")
+    stage = founder_stage(profile)
+    return bool(stages) and stage is not None and stage not in stages
+
+
+def topic_mismatch(program: dict, profile: dict) -> bool:
+    """True for a call tied to sectors the founder has not said they work in.
+
+    A Vinnova challenge on Baltic marine monitoring is open to any Swedish
+    company, but it should not lead an answer to a logistics founder, or to a
+    founder whose sector is unknown.
+    """
+    sectors = program.get("sectors")
+    if not sectors:
+        return False
+    return not set(sectors) & set(profile.get("sector") or [])
+
+
+# Rough EUR value of one unit of each currency in the data. Used only to order
+# doors by how much of the founder's stated need they can pay, never shown.
+EUR_PER_UNIT: dict[str, float] = {"EUR": 1.0, "SEK": 0.09, "NOK": 0.085, "DKK": 0.134, "ISK": 0.0072, "USD": 0.92}
+UNDERSIZED_SHARE = 0.2
+
+
+def undersized(program: dict, profile: dict) -> bool:
+    """True when the founder named how much they need and the door's maximum is under a fifth of it.
+
+    Farmers who need 1.5 MSEK should hear about the project grant before the
+    120 000 SEK grant for forming the group, even though both fit.
+    """
+    need = profile.get("need_eur")
+    amount = program.get("amount") or {}
+    rate = EUR_PER_UNIT.get(str(amount.get("currency")))
+    if not need or rate is None or not isinstance(amount.get("max"), (int, float)):
+        return False
+    return amount["max"] * rate < UNDERSIZED_SHARE * need
+
+
+def poor_fit(door: Door) -> bool:
+    """Doors that stay out of the full answer and go to `more`: closed, run from another country, wrong stage, wrong sector, or charging a fee."""
+    return (
+        door.availability == "closed"
+        or door.foreign
+        or door.stage_mismatch
+        or door.topic_mismatch
+        or door.founder_cost == "fee"
+    )
+
+
+def core_open(door: Door) -> int:
+    """Open questions that are not about the founder's situation."""
+    return sum(1 for item in door.unknown if not item.get("situation"))
+
+
+def core_status(door: Door) -> str:
+    """The status as if every situation question were answered in the door's favour.
+
+    The screen asks those questions for every door at once. Ranking on them
+    would sink a carefully gated record below one nobody has researched yet.
+    """
+    if door.status == "blocked":
+        return "blocked"
+    return "unknown" if core_open(door) else "eligible"
+
+
 def rank(doors: list[Door]) -> list[Door]:
-    """Open doors first: eligible, then unknown with the fewest open questions, then blocked. Doors run from another country than the founder's come after domestic ones, closed doors last. Ties keep data-file order.
+    """Open doors first: eligible, then unknown with the fewest open questions, then blocked. Doors run from another country than the founder's come after domestic ones, doors that pay a small fraction of the stated need after doors that can pay it, a call tied to the founder's own sector before general calls, closed doors last. Ties keep data-file order.
 
     A Swedish call that admits foreign startups is technically open to a Finnish
     founder, but leading a Finnish answer with it buries the Finnish doors.
     """
-    return sorted(doors, key=lambda door: (door.availability == "closed", door.foreign, COST_RANK.get(door.founder_cost, 0), RANK[door.status], len(door.unknown)))
+    return sorted(
+        doors,
+        key=lambda door: (
+            door.availability == "closed",
+            door.foreign,
+            door.stage_mismatch or door.topic_mismatch,
+            door.undersized,
+            not door.topic_match,
+            COST_RANK.get(door.founder_cost, 0),
+            door.availability != "open",
+            RANK[core_status(door)],
+            core_open(door),
+        ),
+    )
 
 
 def collapse_groups(doors: list[Door]) -> list[Door]:
@@ -545,10 +819,12 @@ def pick_top(doors: list[Door], needs: list[str] | None, top: int) -> tuple[list
     """
     if top <= 0:
         return doors, []
+    good = [door for door in doors if not poor_fit(door)]
+    poor = [door for door in doors if poor_fit(door)]
     if not needs or len(needs) < 2:
-        return doors[:top], doors[top:]
+        return good[:top], good[top:] + poor
     shown: list[Door] = []
-    remaining = list(doors)
+    remaining = list(good)
     while len(shown) < top and remaining:
         progressed = False
         for need in needs:
@@ -562,8 +838,144 @@ def pick_top(doors: list[Door], needs: list[str] | None, top: int) -> tuple[list
                 break
         if not progressed:
             shown.append(remaining.pop(0))
-    return shown, remaining
+    return shown, remaining + poor
 
+
+def context_topics(profile: dict) -> list[str]:
+    """Situation topics worth asking even when no door in the data gates on them.
+
+    A student's university runs its own startup support and may own part of the
+    idea; trained-on patient data is personal data unless nobody, the hospital
+    included, can link it back. Neither shows up as a failed rule anywhere.
+    """
+    topics: list[str] = []
+    if profile.get("affiliation") is None and (
+        profile.get("legal_form") in (None, "none") or founder_stage(profile) in ("idea", "pre_seed")
+    ):
+        topics.append("affiliation")
+    if profile.get("personal_data") is None and ("health" in (profile.get("sector") or []) or profile.get("personal_data_claim")):
+        topics.append("data")
+    return topics
+
+
+def screen(doors: list[Door], profile: dict, lang: str, chosen: bool = False) -> list[dict]:
+    """The founder-situation questions for the first answer, at most SCREEN_MAX (CHOSEN_SCREEN_MAX for one chosen program).
+
+    A topic weighs more the more of the best doors it decides and the higher
+    those doors rank. A door the founder named, and a context topic, weigh as
+    two best doors. One slot goes first to a basic fact the best doors need.
+    Asking these before going deep on any door is what the plain assistant did
+    in round 3 and the skill did not.
+
+    chosen: the founder picked this one program (`--door`). Its own gates come
+    first and weigh the same whatever their topic, even when the program is
+    closed or a poor fit: a work-started or finance gate is as final as an
+    ownership gate for the program they mean to apply to (round 4, s15). The
+    context topics follow them.
+    """
+    weight: dict[str, float] = {}
+    decides: dict[str, list[str]] = {}
+    open_doors = [door for door in doors if door.status != "blocked"]
+    best: list[Door] = open_doors
+    door_weights: list[float] = [1.0] * len(open_doors)
+    topic_weight: dict[str, float] = {}
+    context_weight = 0.5
+    if not chosen:
+        named = [door for door in open_doors if is_named(door, profile)]
+        best = named + [door for door in open_doors if not poor_fit(door) and door not in named][: SCREEN_DOORS - len(named)]
+        door_weights = [float(SCREEN_DOORS * NAMED_WEIGHT if door in named else SCREEN_DOORS - position) for position, door in enumerate(best)]
+        topic_weight, context_weight = TOPIC_WEIGHT, float(SCREEN_DOORS * NAMED_WEIGHT)
+    for door, door_weight in zip(best, door_weights):
+        for topic in door.situation:
+            weight[topic] = weight.get(topic, 0) + door_weight * topic_weight.get(topic, 1.0)
+            decides.setdefault(topic, []).append(door.name)
+    for topic in context_topics(profile):
+        # A student's university support, or patient data, changes the route whatever the doors say.
+        weight[topic] = weight.get(topic, 0) + context_weight
+        decides.setdefault(topic, [])
+    grant_doors = [door.name for door in best if door.route in ("grant", "loan")]
+    if chosen and grant_doors and "grants" not in weight and all(profile.get(field) is None for field in SITUATION_TOPICS["grants"]):
+        # A chosen grant is asked about earlier grants even when its record has no such rule:
+        # funders cap repeat grants and de minimis room in conditions the data may not hold.
+        # In round 4 (s05) the skill gave a grant in full to a company that already had it.
+        weight["grants"] = context_weight
+        decides["grants"] = grant_doors
+    order = sorted(weight, key=lambda topic: (-weight[topic], SITUATION_ORDER.index(topic)))
+    basics = basic_question(best, lang)
+    items = [basics] if basics else []
+    items += [
+        {
+            "topic": topic,
+            "fields": [field for field in SITUATION_TOPICS[topic] if profile.get(field) is None],
+            "question": i18n.screen_question(topic, lang),
+            "why": i18n.screen_why(topic, lang),
+            "decides": decides[topic],
+        }
+        for topic in order[: (CHOSEN_SCREEN_MAX if chosen else SCREEN_MAX) - len(items)]
+    ]
+    return items
+
+
+def is_named(door: Door, profile: dict) -> bool:
+    """True when the founder named this program, by its id or by the funder's prefix ("vinnova", "rannis")."""
+    return any(door.id == key or door.id.startswith(f"{key}-") for key in profile.get("named") or [])
+
+
+def basic_question(best: list[Door], lang: str) -> dict | None:
+    """The best door's open basic fact (legal form, then company age), with the doors it decides.
+
+    Without it a webshop owner who never said whether it is an AS or an ENK
+    gets three questions about ownership and grants and none about the form
+    that decides the grant.
+    """
+    for field in BASIC_FIELDS:
+        deciding = [door for door in best if any(item.get("field") == field for item in door.unknown)]
+        if deciding:
+            item = next(item for item in deciding[0].unknown if item.get("field") == field)
+            return {
+                "topic": "basics",
+                "fields": [field],
+                "question": item["question"],
+                "why": i18n.screen_why("basics", lang),
+                "decides": [door.name for door in deciding],
+            }
+    return None
+
+
+def route_order(profile: dict) -> list[str]:
+    """Routes for the founder's needs first, in the order they gave them, then the rest."""
+    order: list[str] = []
+    for need in profile.get("need") or []:
+        order.extend(NEED_ROUTES.get(need, ()))
+    return list(dict.fromkeys([*order, *ROUTES]))
+
+
+def routes(doors: list[Door], profile: dict, lang: str) -> list[dict]:
+    """The realistic routes, each with its best doors in rank order, the routes in `route_order`.
+
+    The founder chooses a route with the traps in view before any door gets a
+    full checklist. Closed, foreign, wrong-stage and blocked doors are not routes.
+    """
+    found: dict[str, list[Door]] = {}
+    # A program the founder named leads its route, so the line they read first answers their question.
+    for door in sorted(doors, key=lambda door: not is_named(door, profile)):
+        if poor_fit(door) or door.status == "blocked":
+            continue
+        found.setdefault(door.route, []).append(door)
+    order = route_order(profile)
+    ranked = sorted(found.items(), key=lambda item: order.index(item[0]) if item[0] in order else len(order))
+    return [
+        {
+            "route": route,
+            "label": i18n.route_name(route, lang),
+            "count": len(members),
+            "doors": [
+                {"id": door.id, "name": door.name, "status": door.status, "amount": door.amount["text"]}
+                for door in members[:ROUTE_DOORS]
+            ],
+        }
+        for route, members in ranked
+    ]
 
 
 class MalformedRecord(ValueError):
@@ -584,9 +996,10 @@ def build_door(
     include_all: bool,
     live_fetch: Callable[[str], dict | None] | None,
     lang: str,
+    picked: bool = False,
 ) -> Door | None:
-    """The door for one record, or None when the record is irrelevant to the profile or blocked and hidden."""
-    if not is_relevant(program, profile):
+    """The door for one record, or None when the record is irrelevant to the profile or blocked and hidden. A picked door is always returned."""
+    if not picked and not is_relevant(program, profile):
         return None
     door = evaluate(program, profile, today, lang)
     if door.status == "blocked" and not include_all:
@@ -605,12 +1018,17 @@ def summary(door: Door) -> dict:
         "id": door.id,
         "name": door.name,
         "kind": door.kind,
+        "route": door.route,
         "status": door.status,
         "availability": door.availability,
         "amount": door.amount["text"],
         "open_questions": len(door.unknown),
         "foreign": door.foreign,
         "founder_cost": door.founder_cost,
+        "stage_mismatch": door.stage_mismatch,
+        "topic_mismatch": door.topic_mismatch,
+        "undersized": door.undersized,
+        "poor_fit": poor_fit(door),
         "status_url": door.status_url,
     }
 
@@ -622,14 +1040,29 @@ def run(
     include_all: bool = False,
     live_fetch: Callable[[str], dict | None] | None = None,
     top: int = DEFAULT_TOP,
+    door_id: str | None = None,
 ) -> dict:
-    """Raises MalformedRecord when a record lacks a field or holds a value the rules cannot read. top=0 returns every door in full."""
+    """Raises MalformedRecord when a record lacks a field or holds a value the rules cannot read. top=0 returns every door in full.
+
+    door_id returns that one program in full, blocked or not and whatever the
+    founder asked for, with its application block: the founder has picked it
+    and wants help applying, so relevance filters no longer apply.
+    """
+    if door_id is not None:
+        chosen = [program for program in programs if isinstance(program, dict) and program.get("id") == door_id]
+        if not chosen:
+            known = sorted(str(program.get("id")) for program in programs if isinstance(program, dict))
+            close = [ident for ident in known if door_id.split("-")[0] in ident][:8]
+            raise ValueError(f"no program with id {door_id!r}" + (f"; did you mean one of: {', '.join(close)}" if close else ""))
+        programs = chosen
+        raw_profile = {key: value for key, value in raw_profile.items() if key != "need"}
+        include_all, top = True, 0
     profile, warnings = normalize_profile(raw_profile)
     lang = profile.get("lang", i18n.DEFAULT_LANG)
     doors: list[Door] = []
     for index, program in enumerate(programs):
         try:
-            door = build_door(program, profile, today, include_all, live_fetch, lang)
+            door = build_door(program, profile, today, include_all, live_fetch, lang, picked=door_id is not None)
         except (KeyError, TypeError, ValueError) as exc:
             raise MalformedRecord(describe_malformed(program, index, exc)) from exc
         if door is not None:
@@ -647,10 +1080,48 @@ def run(
         "lang": lang,
         "warnings": warnings,
         "stale": [door.id for door in ranked if door.stale],
+        "screen": screen(ranked, profile, lang, chosen=door_id is not None),
+        "routes": routes(ranked, profile, lang),
         "unlocks": unlocks,
         "doors": [asdict(door) for door in shown],
         "more": [summary(door) for door in rest],
     }
+
+
+def fold(text: str) -> str:
+    """Lower case without accents, so "Rannís Fræ" and "rannis frae" meet."""
+    text = text.lower().replace("ø", "o").replace("æ", "ae").replace("ð", "d").replace("þ", "th")
+    return "".join(char for char in unicodedata.normalize("NFKD", text) if not unicodedata.combining(char))
+
+
+def find_programs(programs: list[dict], words: str) -> list[dict]:
+    """Records whose id or name holds every word, else any word, best first, at most FIND_MAX.
+
+    The founder names a program in their own words ("Innobooster", "Vinnovas
+    startup-bidrag", "oppstartstilskudd"); the skill needs its id for --door.
+    """
+    terms = [term for term in re.split(r"[\s,/-]+", fold(words)) if term]
+    scored: list[tuple[int, int, dict]] = []
+    for index, program in enumerate(programs):
+        if not isinstance(program, dict):
+            continue
+        haystack = fold(f"{program.get('id', '')} {program.get('name', '')}")
+        hits = sum(term in haystack for term in terms)
+        if hits:
+            scored.append((-hits, index, program))
+    scored.sort(key=lambda item: (item[0], item[1]))
+    if scored and terms and -scored[0][0] == len(terms):
+        scored = [item for item in scored if -item[0] == len(terms)]
+    return [
+        {
+            "id": program.get("id"),
+            "name": program.get("name"),
+            "country": program.get("country"),
+            "kind": program.get("kind"),
+            "availability": program.get("availability", "unknown"),
+        }
+        for _, _, program in scored[:FIND_MAX]
+    ]
 
 
 def load_programs(path: Path) -> list[dict]:
@@ -674,7 +1145,18 @@ def main(argv: list[str] | None = None, stdin: TextIO | None = None) -> int:
     parser.add_argument("--top", type=int, default=DEFAULT_TOP, help=f"doors returned in full, the rest under 'more' (default {DEFAULT_TOP}, 0 for all)")
     parser.add_argument("--programs", type=Path, default=PROGRAMS_PATH, help="path to programs.json")
     parser.add_argument("--today", type=date.fromisoformat, default=None, help="override today's date, YYYY-MM-DD")
+    parser.add_argument("--door", default=None, help="return this one program in full, with its application block and the questions that decide it")
+    parser.add_argument("--find", default=None, help="list the programs whose id or name holds these words, to get the id for --door; reads no profile")
     args = parser.parse_args(argv)
+    if args.find is not None:
+        try:
+            found = find_programs(load_programs(args.programs), args.find)
+        except ValueError as exc:
+            print(str(exc), file=sys.stderr)
+            return 2
+        json.dump(found, sys.stdout, ensure_ascii=False, indent=2)
+        sys.stdout.write("\n")
+        return 0
     source = stdin if stdin is not None else sys.stdin
     try:
         raw = json.load(source)
@@ -695,7 +1177,7 @@ def main(argv: list[str] | None = None, stdin: TextIO | None = None) -> int:
         live_fetch = fetch_round
     try:
         programs = load_programs(args.programs)
-        result = run(raw, programs, args.today or date.today(), include_all=args.all, live_fetch=live_fetch, top=args.top)
+        result = run(raw, programs, args.today or date.today(), include_all=args.all, live_fetch=live_fetch, top=args.top, door_id=args.door)
     except ValueError as exc:  # unreadable file, wrong shape, or a MalformedRecord: one line, no traceback
         print(str(exc), file=sys.stderr)
         return 2

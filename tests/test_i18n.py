@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 
-import pytest
-
 import i18n
+import match
+import pytest
 
 FIELDS = set(i18n.LABELS["en"])
 
@@ -93,3 +93,32 @@ def test_confirmation_rule_reads_as_the_stated_requirement() -> None:
     assert i18n.rule_question(rule, "sv") == "Är någon av er student, forskare eller anställd på KTH just nu?"
     unknown = {"field": "confirmed", "op": "contains", "value": "mystery_key"}
     assert i18n.rule_label(unknown, "en") == "mystery_key"
+
+
+# --- situation screen and routes ----------------------------------------------
+
+
+SITUATION_FIELDS = [field for fields in match.SITUATION_TOPICS.values() for field in fields]
+
+
+@pytest.mark.parametrize("lang", i18n.LANGS)
+def test_every_language_covers_situation_fields_screen_and_routes(lang: str) -> None:
+    for field in SITUATION_FIELDS:
+        assert i18n.LABELS[lang][field], (lang, field)
+        question = i18n.QUESTIONS[lang][field]
+        assert question.endswith("?"), (lang, field, question)
+    for topic in match.SITUATION_TOPICS:
+        assert i18n.SCREEN_WHY[lang][topic], (lang, topic)
+        screen_question = i18n.screen_question(topic, lang)
+        assert screen_question.endswith("?"), (lang, topic, screen_question)
+    for route in match.ROUTES:
+        assert i18n.ROUTE_NAMES[lang][route], (lang, route)
+
+
+def test_excludes_rule_label_uses_the_grant_name(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setitem(i18n.GRANT_NAMES, "business-finland-tempo", "Business Finland Tempo")
+    rule = {"field": "prior_grants", "op": "excludes", "value": ["business-finland-tempo"]}
+    assert i18n.rule_label(rule, "en") == "no earlier Business Finland Tempo"
+    swedish = i18n.rule_label(rule, "sv")
+    assert "Business Finland Tempo" in swedish
+    assert "business-finland-tempo" not in swedish

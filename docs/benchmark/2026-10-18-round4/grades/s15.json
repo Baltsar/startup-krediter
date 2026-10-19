@@ -1,0 +1,72 @@
+{
+ "qid": "s15",
+ "programs": {
+  "A": "Business Finland Energy aid (diagnosed as likely blocked by the August 2026 binding order) + Business Finland Research, development and piloting loan",
+  "B": "Business Finland Energy aid (energiatuki)"
+ },
+ "stoppers_total": {
+  "A": 31,
+  "B": 17
+ },
+ "stoppers_stated": {
+  "A": 11,
+  "B": 16
+ },
+ "factual_errors": {
+  "A": [
+   "Sprint: says the company must be under 5 years old; official Sprint page says it is open to small companies of all ages, with companies 5+ years required to pursue a significant change of direction",
+   "Energy aid: 'Business Finland bedomer projektet som helhet', do not seek energy aid for remaining parts of the pilot (hedged as own judgment); official energy aid instructions explicitly allow applying for a limited new-technology/energy-efficiency sub-package of an investment already underway if that sub-package has not been launched and has no costs",
+   "Innovation Fund SME call: 'inget av detta ar officiellt publicerat annu'; the official EC IF26 SME call page publishes the EUR 2.5-20M capex range, EUR 200M budget and indicative Dec 2026 / end-March 2027 / end-Sept 2027 dates (A's figures themselves are correct)"
+  ],
+  "B": [
+   "Energy aid checklist marks 'farre an 250 anstallda' as a criterion; official page says energy aid is available to companies of all sizes (250 only decides the 40% vs 30% cap)"
+  ]
+ },
+ "untraceable": {
+  "A": [
+   "Finnvera decision 'oftast veckor' / 'inom nagra veckor' (Finnvera FAQ only says decisions follow the project's timetable; 3 working days applies only to Start/SME Guarantee)",
+   "Business Finland processing 'ett par-tre manader' (flagged by A as its own estimate)",
+   "EIC Accelerator '6-9 manader fran start till besked' (A's synthesis; component timings are official)",
+   "Innovation Fund earlier calls covered 'upp till 60 %' (not on official IF pages fetched)",
+   "Large energy demonstration projects: over 5 MEUR, 2026 application period closed 5.8 (official valtioneuvosto.fi and tem.fi pages returned 403, could not be read)",
+   "160 MW electric boilers at Vasklot (company press release, not a program page)"
+  ],
+  "B": []
+ },
+ "best_first_pick": "A",
+ "missed_programs": {
+  "A_missed": [],
+  "B_missed": [
+   "EU Innovation Fund IF26 SME call (capex EUR 2.5-20M, fits the 3.5 MEUR pilot)",
+   "Finnvera Climate and Environmental Loan (EUR 150k-2M, unsecured)"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 787,
+  "B": 200
+ },
+ "verdict": "A",
+ "incomplete": false
+}

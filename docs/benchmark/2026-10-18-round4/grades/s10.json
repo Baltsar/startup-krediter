@@ -1,0 +1,56 @@
+{
+ "qid": "s10",
+ "programs": {
+  "A": "Almi Företagslån (via a holding company), framed as a fallback after bodelning; Vinnova grant conditions explained as a constraint",
+  "B": "Almi Företagslån (via a holding company), detailed as an application checklist; Vinnova grant conditions explained as a constraint"
+ },
+ "stoppers_total": {
+  "A": 14,
+  "B": 14
+ },
+ "stoppers_stated": {
+  "A": 4,
+  "B": 12
+ },
+ "factual_errors": {
+  "A": [],
+  "B": []
+ },
+ "untraceable": {
+  "A": [],
+  "B": []
+ },
+ "best_first_pick": "A",
+ "missed_programs": {
+  "A_missed": [],
+  "B_missed": []
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "pass"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "pass"
+  }
+ },
+ "turn1_words": {
+  "A": 578,
+  "B": 180
+ },
+ "verdict": "A",
+ "incomplete": false
+}

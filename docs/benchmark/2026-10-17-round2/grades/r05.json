@@ -1,0 +1,63 @@
+{
+ "qid": "r05",
+ "programs": {
+  "A": "Tækniþróunarsjóður Sproti (plus Fræ/Þróunarfræ as a step before it)",
+  "B": "Tækniþróunarsjóður Sproti"
+ },
+ "stoppers_total": {
+  "A": 15,
+  "B": 15
+ },
+ "stoppers_stated": {
+  "A": 4,
+  "B": 12
+ },
+ "factual_errors": {
+  "A": [
+   "Þróunarfræ described as a pilot grant for collaboration that could fit a collaboration with fish farms or research partners; the official Fræ/Þróunarfræ rules limit it to development-cooperation projects that benefit developing countries on the OECD DAC list",
+   "Phone hours given as 'virka daga kl. 10-12'; official pages say Monday to Thursday 10-12"
+  ],
+  "B": []
+ },
+ "untraceable": {
+  "A": [],
+  "B": [
+   "Matvælasjóður deadline 4 March 2026 (no official Matvælasjóður page could be found on island.is)"
+  ]
+ },
+ "best_first_pick": "tie",
+ "missed_programs": {
+  "A_missed": [
+   "Matvælasjóður"
+  ],
+  "B_missed": []
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "fail",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 373,
+  "B": 206
+ },
+ "verdict": "B",
+ "incomplete": false
+}

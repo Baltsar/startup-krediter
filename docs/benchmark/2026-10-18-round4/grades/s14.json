@@ -1,0 +1,64 @@
+{
+ "qid": "s14",
+ "programs": {
+  "A": "Innovasjon Norge Oppstartstilskudd 1 and 2 (detailed most), plus EuroHPC AI Factories Fast Lane/Playground via Sigma2 KI-fabrikken and SkatteFUNN",
+  "B": "EuroHPC AI Factories Playground/Fast Lane via Sigma2 KI-fabrikken, Innovasjon Norge Oppstartstilskudd 1 and 2, SkatteFUNN (one line each, plus gating questions)"
+ },
+ "stoppers_total": {
+  "A": 20,
+  "B": 20
+ },
+ "stoppers_stated": {
+  "A": 14,
+  "B": 8
+ },
+ "factual_errors": {
+  "A": [
+   "Minor: says SkatteFUNN and Oppstartstilskudd 2 both need 'an auditor or authorised accountant' to approve costs; the SkatteFUNN 2026 call says 'Revisor må ha godkjent prosjektregnskapet', so for SkatteFUNN an auditor is required (the accountant option applies only to Oppstartstilskudd 2)"
+  ],
+  "B": []
+ },
+ "untraceable": {
+  "A": [
+   "Turn 1: 'One EuroHPC page says [Playground] is temporarily closed' - no official page says this today; the Playground call page, the AI Factories access-calls page and the access portal all show Open"
+  ],
+  "B": []
+ },
+ "best_first_pick": "A",
+ "missed_programs": {
+  "A_missed": [],
+  "B_missed": [
+   "Google for Startups Cloud Program",
+   "AWS Activate",
+   "Microsoft for Startups"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "pass",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "pass",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 619,
+  "B": 157
+ },
+ "verdict": "A",
+ "incomplete": false
+}

@@ -1,0 +1,95 @@
+{
+ "note": "Chosen programs with a record in the frozen data (04cecd5), found by match.py --find and the program's official name, recorded before grading.",
+ "questions": {
+  "r01": {
+   "in_data": true,
+   "record": "skatteverket-forskningsavdrag",
+   "record_name": "Forskningsavdrag (Swedish R&D reduction of employer contributions; lowers payroll tax, no payout)",
+   "note": ""
+  },
+  "r02": {
+   "in_data": true,
+   "record": "vinnova-innovativa-startups",
+   "record_name": "Vinnova Innovativa Startups 2026",
+   "note": ""
+  },
+  "r03": {
+   "in_data": true,
+   "record": "naiss-allocations",
+   "record_name": "NAISS allocations (Small, Medium, Large)",
+   "note": "named SNIC, which NAISS replaced"
+  },
+  "r04": {
+   "in_data": true,
+   "record": "almi-innovationslan",
+   "record_name": "Almi Innovationslån",
+   "note": ""
+  },
+  "r05": {
+   "in_data": true,
+   "record": "eic-accelerator",
+   "record_name": "EIC Accelerator",
+   "note": ""
+  },
+  "r06": {
+   "in_data": true,
+   "record": "business-finland-sprint",
+   "record_name": "Business Finland Sprint Grant",
+   "note": "named Tempo, which Sprint replaced"
+  },
+  "r07": {
+   "in_data": true,
+   "record": "starttiraha",
+   "record_name": "Starttiraha (Finnish start-up grant)",
+   "note": ""
+  },
+  "r08": {
+   "in_data": true,
+   "record": "lumi-ai-factory-finland",
+   "record_name": "LUMI AI Factory (Finnish national track)",
+   "note": ""
+  },
+  "r09": {
+   "in_data": true,
+   "record": "forskningsradet-skattefunn",
+   "record_name": "SkatteFUNN (Norwegian R&D tax incentive, paid out in cash to companies without taxable profit)",
+   "note": ""
+  },
+  "r10": {
+   "in_data": true,
+   "record": "innovasjon-norge-oppstartstilskudd-1",
+   "record_name": "Innovasjon Norge Startup grant 1 (Oppstartstilskudd 1)",
+   "note": "named etablerertilskudd; Oppstartstilskudd 1 and 2 replaced it"
+  },
+  "r11": {
+   "in_data": true,
+   "record": "aws-activate",
+   "record_name": "AWS Activate Credits",
+   "note": ""
+  },
+  "r12": {
+   "in_data": true,
+   "record": "innovationsfonden-innobooster",
+   "record_name": "Innobooster (Innovationsfonden / Danmarks Innovationsfond)",
+   "note": ""
+  },
+  "r13": {
+   "in_data": true,
+   "record": "innovationsfonden-innofounder",
+   "record_name": "Innovationsfonden InnoFounder",
+   "note": "named InnoFounder Graduate, a track of InnoFounder"
+  },
+  "r14": {
+   "in_data": true,
+   "record": "eurostars",
+   "record_name": "Eurostars",
+   "note": ""
+  },
+  "r15": {
+   "in_data": false,
+   "record": null,
+   "record_name": null,
+   "note": "Rannís Sproti has no record; only Fræ is in the data"
+  }
+ }
+}

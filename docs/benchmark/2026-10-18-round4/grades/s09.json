@@ -1,0 +1,58 @@
+{
+ "qid": "s09",
+ "programs": {
+  "A": "EIC Accelerator (Open, grant only / blended finance)",
+  "B": "Innobooster (Danmarks Innovationsfond), via a Danish ApS, de minimis track under DKK 1 million"
+ },
+ "stoppers_total": {
+  "A": 15,
+  "B": 19
+ },
+ "stoppers_stated": {
+  "A": 14,
+  "B": 12
+ },
+ "factual_errors": {
+  "A": [],
+  "B": []
+ },
+ "untraceable": {
+  "A": [],
+  "B": []
+ },
+ "best_first_pick": "B",
+ "missed_programs": {
+  "A_missed": [],
+  "B_missed": [
+   "EIC Accelerator"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 193,
+  "B": 870
+ },
+ "verdict": "B",
+ "incomplete": false
+}

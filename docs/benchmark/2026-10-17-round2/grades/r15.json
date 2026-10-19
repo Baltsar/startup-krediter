@@ -1,0 +1,72 @@
+{
+ "qid": "r15",
+ "programs": {
+  "A": "Vinnova Innovativa Startups 2026 (plus general incorporate-in-Sweden advice)",
+  "B": "Almi Verifieringsmedel"
+ },
+ "stoppers_total": {
+  "A": 25,
+  "B": 25
+ },
+ "stoppers_stated": {
+  "A": 5,
+  "B": 11
+ },
+ "factual_errors": {
+  "A": [
+   "Presents Anthropic's startup program as having an open public application (~$1,000 credits); claude.com/programs/startups says the cohort is full and no new applications are accepted",
+   "Says Almi verification funding wants a Swedish company; Almi's Verifieringsmedel page says private persons with personnummer, Swedish bank account and intent to start a Swedish company can get up to 25,000 SEK",
+   "Vinnova employee limit given as 'fewer than 10'; the call says at most 10 (hogst 10) employees"
+  ],
+  "B": []
+ },
+ "untraceable": {
+  "A": [
+   "Anthropic public-application credits of about $1,000",
+   "Anthropic terms requiring institutional equity funding and founding within 4 years",
+   "OpenAI credits mostly via partners/accelerators (openai.com/startups blocked, could not verify)"
+  ],
+  "B": [
+   "OpenAI gives credits only through partner VCs (openai.com/startups blocked, could not verify)"
+  ]
+ },
+ "best_first_pick": "B",
+ "missed_programs": {
+  "A_missed": [
+   "Almi Verifieringsmedel as private person (named only vaguely and wrongly as needing a company)",
+   "NVIDIA Inception",
+   "Almi Innovationslan"
+  ],
+  "B_missed": [
+   "KTH Innovation / STING / SUP46 / Norrsken / Antler as Activate Provider route to larger credits"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "fail",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "pass"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "pass"
+  }
+ },
+ "turn1_words": {
+  "A": 693,
+  "B": 225
+ },
+ "verdict": "B",
+ "incomplete": false
+}

@@ -1,0 +1,13 @@
+{"qid":"q01",
+ "programs":{"A":"Anthropic Claude for Startups (first in ranked plan) + AWS Activate Founders","B":"AWS Activate Founders"},
+ "stoppers_total":{"A":13,"B":11},
+ "stoppers_stated":{"A":7,"B":11},
+ "factual_errors":{"A":["Claude for Startups presented as open for direct application without VC ('Sok den har forst'); claude.com/programs/startups says the cohort is full and no new applications are accepted"],"B":[]},
+ "untraceable":{"A":["Claude for Startups 1 000-5 000 USD","Microsoft for Startups 1 000 -> 5 000 USD after verification (official page only says up to 150 000 USD)","Google for Startups Start tier ~2 000 USD (official page now shows AI Studio access for pre-funded, credits only Pre-Seed to Series A)","EuroHPC Playground 'temporarily closed during platform migration'","Ramp ~2 500 USD OpenAI credits (hedged)"],"B":["OpenAI startup program requires an investor (openai.com/startups unreadable)","Sweden AI Factory 'no own GPU hours yet' (mimer-ai.eu lists Playground 5 000 GPU hours with Apply)","Activate Portfolio requires a round in the last 12 months"]},
+ "best_first_pick":"B",
+ "missed_programs":{"A_missed":["NVIDIA Inception","Sweden AI Factory (Mimer) support"],"B_missed":["Vinnova Innovativa startups 2026 (open 12 Oct 2026 - 12 Jan 2027, up to 500 000 SEK)","Microsoft for Startups (Azure OpenAI)"]},
+ "absolute":{"A":{"A1":"pass","A2":"fail","A3":"pass","A4":"n/a","A5":"n/a","A6":"n/a","A7":"pass","A8":"n/a"},
+             "B":{"A1":"pass","A2":"pass","A3":"pass","A4":"n/a","A5":"n/a","A6":"n/a","A7":"pass","A8":"n/a"}},
+ "turn1_words":{"A":545,"B":174},
+ "verdict":"B",
+ "incomplete":false}

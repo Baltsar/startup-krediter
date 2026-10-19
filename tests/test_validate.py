@@ -7,6 +7,8 @@ import json
 from datetime import date
 from pathlib import Path
 
+import i18n
+import pytest
 import validate
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -180,3 +182,64 @@ def test_compatibility_is_checked_inside_groups() -> None:
     bad["programs"][0]["eligibility"][3]["any"][0] = rule("revenue_msek", "lte", "ten")
     found = errors(bad)
     assert any("any[0]" in e and "'lte'" in e for e in found)
+
+
+def test_application_block_is_validated() -> None:
+    good = copy.deepcopy(FIXTURE)
+    good["programs"][0]["application"] = {"portal": "https://example.org/apply", "sources": [{"url": "https://example.org/guide", "what": "guide"}], "verified": "2026-10-15", "criteria": [{"name": "Potential", "weight": "40 %"}]}
+    assert errors(good) == []
+    bad = copy.deepcopy(good)
+    bad["programs"][0]["application"]["criteria"] = [{"weight": "40 %"}]
+    assert any("name" in e for e in errors(bad))
+    bad2 = copy.deepcopy(good)
+    del bad2["programs"][0]["application"]["sources"]
+    assert any("sources" in e for e in errors(bad2))
+
+
+# --- situation rules and route ------------------------------------------------
+
+
+def test_excludes_needs_a_list_field_and_a_non_empty_list() -> None:
+    found = errors(with_rule(rule("age_years", "excludes", ["x-grant"])))
+    assert any("excludes" in line and "list field" in line for line in found)
+    empty = errors(with_rule(rule("prior_grants", "excludes", [])))
+    assert any("excludes" in line and "non-empty" in line for line in empty)
+    scalar = errors(with_rule(rule("stack", "excludes", "aws")))
+    assert any("excludes" in line and "non-empty" in line for line in scalar)
+
+
+def test_grant_keys_must_be_in_grant_names(monkeypatch: pytest.MonkeyPatch) -> None:
+    missing = errors(with_rule(rule("prior_grants", "excludes", ["x-grant"])))
+    assert any("x-grant" in line and "GRANT_NAMES" in line for line in missing)
+    active = errors(with_rule(rule("active_grants", "contains", "x-grant")))
+    assert any("x-grant" in line and "GRANT_NAMES" in line for line in active)
+    monkeypatch.setitem(i18n.GRANT_NAMES, "x-grant", "X Grant")
+    assert errors(with_rule(rule("prior_grants", "excludes", ["x-grant"]))) == []
+    assert errors(with_rule(rule("active_grants", "contains", "x-grant"))) == []
+
+
+def test_affiliation_and_personal_data_values_must_be_enum_values() -> None:
+    assert any("alumni" in line for line in errors(with_rule(rule("affiliation", "eq", "alumni"))))
+    assert any("alumni" in line for line in errors(with_rule(rule("affiliation", "in", ["student", "alumni"]))))
+    assert errors(with_rule(rule("affiliation", "eq", "student"))) == []
+    assert any("anonymised" in line for line in errors(with_rule(rule("personal_data", "eq", "anonymised"))))
+    assert errors(with_rule(rule("personal_data", "in", ["anonymous", "pseudonymised"]))) == []
+
+
+@pytest.mark.parametrize("route_name", ["grant", "tax", "loan", "compute", "credits", "equity", "support"])
+def test_schema_accepts_route(route_name: str) -> None:
+    good = copy.deepcopy(FIXTURE)
+    good["programs"][0]["route"] = route_name
+    assert errors(good) == []
+
+
+def test_schema_rejects_an_unknown_route() -> None:
+    bad = copy.deepcopy(FIXTURE)
+    bad["programs"][0]["route"] = "mystery"
+    assert any("route" in line and "mystery" in line for line in errors(bad))
+
+
+def test_schema_accepts_the_excludes_op() -> None:
+    good = copy.deepcopy(FIXTURE)
+    good["programs"][0]["eligibility"][0] = rule("stack", "excludes", ["aws"])
+    assert errors(good) == []

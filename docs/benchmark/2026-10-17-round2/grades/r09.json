@@ -1,0 +1,56 @@
+{
+ "qid": "r09",
+ "programs": {
+  "A": "Business Finland Research to Business (R2B), call 2/2026",
+  "B": "Business Finland Research to Business (R2B)"
+ },
+ "stoppers_total": {
+  "A": 16,
+  "B": 16
+ },
+ "stoppers_stated": {
+  "A": 15,
+  "B": 7
+ },
+ "factual_errors": {
+  "A": [],
+  "B": []
+ },
+ "untraceable": {
+  "A": [],
+  "B": []
+ },
+ "best_first_pick": "A",
+ "missed_programs": {
+  "A_missed": [],
+  "B_missed": []
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "pass",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "pass",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 131,
+  "B": 347
+ },
+ "verdict": "A",
+ "incomplete": false
+}

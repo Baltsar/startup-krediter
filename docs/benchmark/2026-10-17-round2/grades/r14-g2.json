@@ -1,0 +1,66 @@
+{
+ "qid": "r14",
+ "programs": {
+  "A": "Jordbruksverket EIP stöd för att genomföra ett innovationsprojekt (with EIP gruppbildningsstöd as step 1)",
+  "B": "Jordbruksverket EIP stöd för att bilda en innovationsgrupp"
+ },
+ "stoppers_total": {
+  "A": 15,
+  "B": 11
+ },
+ "stoppers_stated": {
+  "A": 6,
+  "B": 11
+ },
+ "factual_errors": {
+  "A": [
+   "Turn 1: 'Eget arbete ... 340 kr/timme. Där kommer svågerns timmar in' - eget arbete only covers owners of enskild firma/HB/KB; an employed, unpaid IT consultant does not qualify (corrected by A itself in turn 2)",
+   "Turn 1, in the project section: 'Originalitet väger tyngst och ger 300 av 1 000 poäng' - true for the group-formation criteria, but the 2026 project criteria give originality 150 points and 'Identifiera behovet' (170) weighs most"
+  ],
+  "B": []
+ },
+ "untraceable": {
+  "A": [
+   "Project application round in 'mars 2027' - the official page lists only 2026 rounds"
+  ],
+  "B": []
+ },
+ "best_first_pick": "tie",
+ "missed_programs": {
+  "A_missed": [
+   "Almi Verifieringsmedel",
+   "Almi Innovationslån"
+  ],
+  "B_missed": [
+   "Investeringsstöd för ökad konkurrenskraft - ny teknik (Länsstyrelsen Jämtland, round 1 Oct-30 Nov 2026)"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "fail",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 596,
+  "B": 206
+ },
+ "verdict": "A",
+ "incomplete": false
+}

@@ -1,0 +1,62 @@
+{
+ "qid": "s07",
+ "programs": {
+  "A": "Sweden AI Factory (Mimer) as route to EuroHPC AI Factories Playground Access",
+  "B": "Sweden AI Factory (Mimer) / EuroHPC AI Factories Playground Access (Vinnova Innovative Startups 2026 a close second)"
+ },
+ "stoppers_total": {
+  "A": 19,
+  "B": 19
+ },
+ "stoppers_stated": {
+  "A": 7,
+  "B": 2
+ },
+ "factual_errors": {
+  "A": [],
+  "B": []
+ },
+ "untraceable": {
+  "A": [],
+  "B": [
+   "'$1,000 buys very roughly 150-500 hours on one data-centre GPU' (estimate, no official source)",
+   "LoRA timings (5,000 examples in 25 min, 50,000 in under 4 h on one A100) from a third-party write-up, not an official page"
+  ]
+ },
+ "best_first_pick": "tie",
+ "missed_programs": {
+  "A_missed": [
+   "Microsoft for Startups (Azure credits, USD 1,000 + 4,000 without investor)",
+   "FoU-avdrag (R&D deduction on employer contributions)"
+  ],
+  "B_missed": []
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 196,
+  "B": 885
+ },
+ "verdict": "tie",
+ "incomplete": false
+}

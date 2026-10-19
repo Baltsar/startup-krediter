@@ -1,0 +1,13 @@
+{"qid":"q08",
+ "programs":{"A":"Vinnova FFI ASP - Accelerated Startup Partnership (autumn 2026)","B":"Danmarks Innovationsfond Innobooster (EIFO loans as second track)"},
+ "stoppers_total":{"A":18,"B":15},
+ "stoppers_stated":{"A":17,"B":8},
+ "factual_errors":{"A":["Innobooster given as '200 000 kr till 5 Mkr' in a Swedish reply next to SEK figures; official range is DKK 200,000 to 5 million"],"B":[]},
+ "untraceable":{"A":["Accelerace: 1 MDKK convertible loan plus 250,000 DKK fee (official site unreadable, expired certificate, no terms on page)","InnoFounder and Fast Track Malmo stated closed (not verified on official pages)"],"B":[]},
+ "best_first_pick":"B",
+ "missed_programs":{"A_missed":["EIFO loans (Vaekstlaan, Matchlaan, Vaekstkaution) - founder wants a soft loan","Eurostars"],"B_missed":["Vinnova FFI ASP (accepts foreign start-ups, road-transport fit; B said Vinnova was probably not possible)"]},
+ "absolute":{"A":{"A1":"pass","A2":"fail","A3":"pass","A4":"n/a","A5":"n/a","A6":"n/a","A7":"pass","A8":"n/a"},
+             "B":{"A1":"pass","A2":"pass","A3":"pass","A4":"n/a","A5":"n/a","A6":"n/a","A7":"pass","A8":"n/a"}},
+ "turn1_words":{"A":186,"B":341},
+ "verdict":"B",
+ "incomplete":false}

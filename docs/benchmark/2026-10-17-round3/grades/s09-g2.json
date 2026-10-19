@@ -1,0 +1,65 @@
+{
+ "qid": "s09",
+ "programs": {
+  "A": "Business Finland Sprint grant (turn 2 lead; R&D loan as the follow-on)",
+  "B": "Business Finland Research, development and piloting funding (R&D loan)"
+ },
+ "stoppers_total": {
+  "A": 18,
+  "B": 14
+ },
+ "stoppers_stated": {
+  "A": 8,
+  "B": 13
+ },
+ "factual_errors": {
+  "A": [
+   "Creative Europe MEDIA video games call closing 2 Feb 2027: says a commercially released game 'since 2022' is required (labelled '2025 rules'); the CREA-MEDIA-2027-DEVVGIM call document requires commercial distribution between 01/01/2024 and the deadline",
+   "'Funding is paid after you report costs (apart from the loan advance)' while recommending Sprint; the Sprint call pays 70% in advance to companies under 5 years old"
+  ],
+  "B": []
+ },
+ "untraceable": {
+  "A": [
+   "Free LUMI capacity worth about EUR 20-80k inside a Business Finland project (official BF computing grant: for LUMI costs above EUR 15,000, up to EUR 100,000)",
+   "Nebius AI Lift up to USD 150k (no official Nebius page found with this figure)"
+  ],
+  "B": []
+ },
+ "best_first_pick": "A",
+ "missed_programs": {
+  "A_missed": [],
+  "B_missed": [
+   "Business Finland creative industries R&D funding (35% grant for SMEs, EUR 9M/yr, next call expected later in 2026)",
+   "Business Finland LUMI computing grant inside a funded R&D project"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "fail",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 1002,
+  "B": 196
+ },
+ "verdict": "A",
+ "incomplete": false
+}

@@ -1,0 +1,72 @@
+{
+ "qid": "s08",
+ "programs": {
+  "A": "Tækniþróunarsjóður Fræ (Rannís), plus EuroHPC AI Factories Playground for GPU hours",
+  "B": "Uppbyggingarsjóður Norðurlands eystra (SSNE), plus R&D skattfrádráttur renewal and Tækniþróunarsjóður Sproti/Vöxtur via the successor Nýsköpunarsjóður"
+ },
+ "stoppers_total": {
+  "A": 16,
+  "B": 15
+ },
+ "stoppers_stated": {
+  "A": 15,
+  "B": 10
+ },
+ "factual_errors": {
+  "A": [],
+  "B": [
+   "Þróunarfræ described as possibly fitting a formal cooperation with the Icelandic fish plants; Fræ/Þróunarfræ rules v3 §1.1 limit Þróunarfræ to development-cooperation projects for DAC-list developing countries",
+   "R&D tax extension window: says those confirmed after 1 April 2025 could apply for 2026 until 1 Oct 2026; Rannís notice of 26 March 2026 concerns 2025 applications approved after 1 April 2026"
+  ]
+ },
+ "untraceable": {
+  "A": [
+   "de minimis 'at most 286 000 EUR over 3 years' (derived room: 300 000 EUR cap minus Fræ 2 m.kr.; not stated on any official page)"
+  ],
+  "B": [
+   "GPU need of 'tens to a few hundred GPU hours' (labelled as own estimate; not from any official page)"
+  ]
+ },
+ "best_first_pick": "B",
+ "missed_programs": {
+  "A_missed": [
+   "Uppbyggingarsjóður Norðurlands eystra (SSNE), open until 21 Oct 2026 14:00",
+   "Nýsköpunarsjóður (replaces Tækniþróunarsjóður from 1 Jan 2027, lög nr. 54/2026)",
+   "EuroHPC AI Factories Fast Lane",
+   "AIFA-ICE (Icelandic AI Factory Antenna to LUMI)",
+   "Tækniþróunarsjóður Markaður"
+  ],
+  "B_missed": [
+   "EIC Accelerator",
+   "Eureka Innowwide"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "fail",
+   "A3": "fail",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 197,
+  "B": 691
+ },
+ "verdict": "B",
+ "incomplete": false
+}

@@ -1,0 +1,13 @@
+{"qid":"q13",
+ "programs":{"A":"Aneo-bidraget / SMN-Bidraget via Spark* NTNU","B":"Spark* NTNU with Aneo-bidraget (plus AS/Lanekassen advice)"},
+ "stoppers_total":{"A":13,"B":13},
+ "stoppers_stated":{"A":12,"B":1},
+ "factual_errors":{"A":["Eurostars said to be closed now; eurekanetwork.org lists Eurostars Call 12 as open, deadline 4 March 2027"],"B":["Innovasjon Norge oppstartstilskudd 1 said to be for companies under three years; official page says under five years","AS registration fee said to be about 5,700 kr; brreg.no lists NOK 6,825 digital / 7,912 paper"]},
+ "untraceable":{"A":[],"B":["NTNU Discovery: three student teams got 300,000 kr each (source is a LinkedIn profile)","Innovasjon Norge national funds 'kraftig kuttet' and stricter co-financing cited from a consultancy page (the official oppstartstilskudd 2 page does mention a 60% cut)"]},
+ "best_first_pick":"tie",
+ "missed_programs":{"A_missed":["NTNU Discovery","Venture Cup","Gruva"],"B_missed":[]},
+ "absolute":{"A":{"A1":"pass","A2":"fail","A3":"pass","A4":"n/a","A5":"n/a","A6":"n/a","A7":"pass","A8":"n/a"},
+             "B":{"A1":"pass","A2":"fail","A3":"pass","A4":"n/a","A5":"n/a","A6":"n/a","A7":"pass","A8":"n/a"}},
+ "turn1_words":{"A":206,"B":595},
+ "verdict":"A",
+ "incomplete":false}

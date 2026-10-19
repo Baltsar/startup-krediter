@@ -1,0 +1,70 @@
+{
+ "qid": "s02",
+ "programs": {
+  "A": "EuroHPC AI Factories Playground and Fast Lane (AI for Industrial Innovation), reached through LUMI AI Factory / Sigma2 KI-fabrikken",
+  "B": "EuroHPC AI Factories Playground and Fast Lane (AI for Industrial Innovation)"
+ },
+ "stoppers_total": {
+  "A": 12,
+  "B": 12
+ },
+ "stoppers_stated": {
+  "A": 6,
+  "B": 5
+ },
+ "factual_errors": {
+  "A": [
+   "Claude for Open Source: 'stated path is 5k stars and its window may have closed'. The official page lists other criteria with no star threshold (500+ dependent repos, 200k monthly downloads, 20+ external contributors, etc.) and says 'Apply now'.",
+   "EuroHPC 'moving to a new platform, some pages say temporarily closed'. The migration happened in September 2025. The Playground and Fast Lane pages show Status Open today, and calls EHPC-AIF-2026PG/FL are open from 21 Jan to 31 Dec 2026.",
+   "'The $100k-350k tiers at AWS, Google and Microsoft all need an investor or accelerator referral'. Microsoft Learn says startups that apply without a referral code can grow to up to $150,000 through verification and usage."
+  ],
+  "B": []
+ },
+ "untraceable": {
+  "A": [
+   "Microsoft for Startups unfunded credits 'about $1k-5k'. The official pages state $1,000 starter credits, then up to $150k over time. No $5k figure appears."
+  ],
+  "B": []
+ },
+ "best_first_pick": "tie",
+ "missed_programs": {
+  "A_missed": [
+   "NVIDIA Inception"
+  ],
+  "B_missed": [
+   "SkatteFUNN",
+   "Innovasjon Norge Oppstartstilskudd 1",
+   "Sigma2 commercial (category C) GPU access to LUMI/Olivia",
+   "TPU Research Cloud",
+   "Microsoft for Startups"
+  ]
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "fail",
+   "A3": "fail",
+   "A4": "pass",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "pass",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 560,
+  "B": 43
+ },
+ "verdict": "A",
+ "incomplete": false
+}

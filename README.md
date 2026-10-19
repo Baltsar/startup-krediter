@@ -1,70 +1,78 @@
 # startup-krediter
 
-**Ask your AI assistant which grants, GPU hours and startup credits your company can get. Get the doors that fit, everything each one will ask of you, and the next step.**
+**You have picked a grant, a GPU program or a credits program. Before you open the form, ask your AI assistant whether you can apply, what the application will ask of you, and when. Then let it write the application with you.**
 
 For founders in Sweden, Finland, Norway, Denmark and Iceland. Answers in Swedish, Finnish, Norwegian, Danish or English.
 
 An open-source skill for AI assistants, by [OpenSverige](https://opensverige.se). Tested with Claude Code; it also installs into Cursor and Codex.
 
+> **Status, 19 October 2026: not released, and we want your feedback.** We tested the skill in five pre-registered rounds against the same AI model with web search and no skill, with blind graders checking both against the programs' own pages. It did not pass any of them. In the latest round, on a program the founder had already chosen, the skill named more of what stops an application (89% against 77%) with fewer factual errors (5 against 8) and a shorter answer. It won only 9 of 15 questions, because the plain model asked about the founder's own situation more often. The full report, every conversation and the grades are in [docs/benchmark/2026-10-19-round5](docs/benchmark/2026-10-19-round5/README.md). Tell us what you think in an [issue](https://github.com/Baltsar/startup-krediter/issues/new): what would make this worth using, and what you would test differently.
+
 ---
 
 ## Why this exists
 
-There is real money for early startups in the Nordics: grants, soft loans, free time on EU supercomputers, and tens of thousands of dollars in cloud and AI credits. Finding the part that fits you is the hard part.
+There is real money for early startups in the Nordics: grants, soft loans, free time on EU supercomputers, and cloud and AI credits. Once you know which program you want, the hard part is everything between deciding and submitting.
 
-- **Every program speaks its own language.** Vinnova, Almi, EuroHPC, Business Finland and AWS all describe eligibility differently, on different sites.
 - **The rule that rules you out is buried.** It sits on a conditions page, in a PDF, or in the form itself.
-- **Old advice looks current.** Rounds close, cohorts fill, amounts change. The blog post you found does not say so.
-- **You do not know the names.** You need GPU time, and the door is called "EuroHPC AI Factories Playground Access".
-- **The surprises come late.** You decide you qualify, start the application, and then meet the BankID login, the co-financing rule, the partner you needed first, or the deadline that passed.
+- **Your own situation decides more than your company facts.** Another company owning 25 %, a grant you already had, a full-time job you keep, work you already started: each can close a program that looks open.
+- **Old advice looks current.** Rounds close, programs are renamed, amounts change. The blog post you found does not say so.
+- **The surprises come late.** You decide you qualify, start the application, and then meet the login you cannot use, the co-financing rule, the attachment you do not have, or the deadline that passed.
 
-This skill does that reading for you, before you open a single form.
+This skill does that reading for you, for the program you chose, before you open the form.
+
+## What it does not do
+
+It does not pick the program for you. In four tests against the same AI model without the skill, the model searching the web on its own found the better program more often. The skill was more accurate about the rules of the program in front of it. So use your assistant, or any search, to choose; use the skill once you have chosen. If you ask it to choose, it searches broadly like a careful assistant would and asks which program to go through.
 
 ## What you get
 
-You describe your company in plain words, the way you would to a friend:
+Name the program and describe your company in plain words:
 
-> we're pre-seed (just closed a 400k USD angel round, no VC), 3 people, Swedish AB, building an AI agent product on Vercel + Supabase + Anthropic. which credits can we actually get?
+> We're applying to Vinnova's Innovativa startups in January. Swedish AB, two years old, four people. What do we need to have ready?
 
-**The first answer is short.** A verdict, the one question that decides it, and the three doors that fit, one line each. Every line says how many requirements are waiting, so nothing looks simpler than it is:
+**One answer with the whole picture.** Whether it fits on what you have said, the questions that decide it, the status rule by rule, everything the application will ask of you, what the page leaves unclear, and the next step:
 
-> AWS Activate fits you best on what we know. What decides it is your angel round: the Founders tier is for self-funded startups, and the bigger Portfolio tier needs an Org ID from an Activate Provider.
+> Innovativa startups fits you on what we know. Four things decide it:
 >
-> How old is the company, in years?
->
-> ◐ AWS Activate Credits: Founders tier starts at 1 000 USD, and select startups may get up to 5 000 USD. Portfolio tier goes up to 200 000 USD with a provider Org ID. Decides: whether one of your angels is an Activate Provider. 9 requirements in the application, 3 unclear points.
-> ◐ NVIDIA Inception: free membership with cloud credits from NVIDIA and partners, amounts not published. 8 requirements, 5 unclear points.
-> ● Claude Startups (Anthropic): partner credits worth up to 45 000 USD. Closed right now because the cohort is full. 4 requirements, 3 unclear points.
->
-> AWS credits can pay for Claude, but only when you call it through Amazon Bedrock, not Anthropic's own API.
-
-**Pick a door and you get all of it.** The status block, everything the application will ask of you, what the page leaves unclear and whom to ask, and the next step:
+> 1. Does another company, a group or a public body own 25 % or more of yours? Then SME status can end.
+> 2. Which public grants or loans has the company had, and is any still running?
+> 3. Has the company lost more than half its share capital?
+> 4. How many people does the company pay a salary to?
 
 ```
-◐  AWS Activate Credits
-●  uses AWS, or uses Anthropic
-●  stage: idea, pre-seed, seed or series A
-○  at most 10 years old
-○  new to AWS Activate credits, or asking for more than you received before
-?  How old is the company, in years?
+◐  Vinnova Innovativa Startups 2026
+●  in Sweden
+●  a company
+●  at most 10 years old
+●  at most 10 employees
+○  revenue at most 10 MSEK, or balance sheet at most 10 MSEK
+○  no dividend last year
+○  the project lead employed by the company
+○  not lost more than half the share capital
+?  Net revenue last fiscal year, in MSEK?
+→  Up to 500 000 SEK
 ```
 
 `●` you meet it · `○` not known yet · `×` this rules you out · `?` the question that matters next
 
 > **Before you apply**
-> - The Founders tier is for bootstrapped or self-funded startups. With outside funding, ask your angels whether any of them is an Activate Provider, and if so apply on the Portfolio tier.
-> - For the Portfolio tier, the provider must answer AWS's verification email. If they don't, the application is declined.
-> - AWS may ask you to verify your identity with an ID document. Saying no means rejection.
-> - An application cannot be edited after you submit it.
+> - The project lead must be employed by the company, and an unpaid founder's time is not an eligible cost.
+> - Name a signatory and a project lead in the form; the grant is paid only to a bankgiro or plusgiro in the company's name.
+> - Mark the application complete before 12 January 2027 at 14:00, according to the page today. An application not marked complete is not registered.
 >
 > **Unclear**
-> - Whether an angel-funded startup whose angels are not Activate Providers can still use the Founders tier. The credits page says self-funded, but the FAQ says the program is open to funded startups. Ask AWS Activate through the contact page.
+> - Whether starting a salary for a founder who has been unpaid counts as an unexplained salary increase. Ask startups@vinnova.se before you budget it.
 
-*Shortened from real answers the skill gave on 16 October 2026. The full checklist had eleven items.*
+*Shortened from the skill's output on 19 October 2026. The full checklist has twelve items.*
 
-Answer the question and the status updates. No forms, no starting over.
+When a program is closed to you, it says so first, with the rule and the page, and does not hand you a checklist for something you cannot get.
+
+**Then the application.** Say "help us apply" and it drafts the application section by section in the form's own order and limits, puts your budget in the program's template with its funding rate and excluded costs, reviews the draft the way an assessor would, and fills the online form after you have logged in. It stops before the submit button. It never invents a customer, a number or a letter of intent; it marks the gap for you to fill.
 
 ## How it compares
+
+*These are the first, informal results, from 16 October 2026 on an earlier version. The five pre-registered rounds that followed are in [docs/benchmark](docs/benchmark/); none of them passed.*
 
 We asked six founder questions to the same AI model twice: with the skill, and with web search but no skill. Graders who did not know which answer was which checked both against the programs' own pages.
 
@@ -85,16 +93,15 @@ The search engine column describes what a search engine does; nothing in it was 
 ## How it works
 
 - **It reads the live page before it quotes anything.** Deadlines, amounts and "is it open" come from the program's own site that day, not from memory. When a page cannot be read, it says so and gives you the link.
-- **It carries each program's own conditions.** Every program has a checklist read from its application and conditions pages: logins, attachments, co-financing, partners, what you must report afterwards.
+- **It carries each program's own conditions.** 73 programs have a checklist read from their application and conditions pages: logins, attachments, co-financing, partners, what you must report afterwards. For a program outside that list it reads the official pages and builds the same checklist from them, citing each page.
+- **It asks about your situation, not just your company.** Ownership, grants already held, full-time work, work already started, lost share capital: the questions that close a program the company facts leave open.
 - **It says what it does not know.** When a page leaves out the amount or two pages disagree, you hear it, with the address to ask.
-- **It asks instead of guessing.** Country, legal form and headcount close more doors than anything else, so it asks for them rather than assume.
-- **It tells you what would open more doors.** No company yet? It names the programs a registered company would unlock. Living in Copenhagen with a Swedish AB? You see both countries.
-- **It never applies for you.** The account, the signature and the submit button stay with you.
+- **It never applies for you.** The login, the declarations and the submit button stay with you.
 - **No scores, no promises.** Vinnova draws lots between equally strong applications. EuroHPC is first come, first served. You get the process, not a made-up percentage.
 
 ## What it covers
 
-64 programs, each read from its own pages on 15 or 16 October 2026.
+73 programs, each read from its own pages between 15 and 18 October 2026.
 
 | You need | Programs include |
 |---|---|
@@ -108,7 +115,7 @@ Coverage is deepest in Sweden. Here is the honest count by where a program is ru
 
 | Sweden | EU-wide | Global vendors | Finland | Norway | Denmark | Iceland |
 |---|---|---|---|---|---|---|
-| 25 | 12 | 14 | 6 | 4 | 2 | 1 |
+| 29 | 14 | 14 | 7 | 5 | 3 | 1 |
 
 Founders in every Nordic country can use the EU-wide and global programs. The national lists for Finland, Norway, Denmark and Iceland are thin, and [adding a program](#add-a-program) is the most useful contribution you can make.
 
@@ -130,10 +137,10 @@ The script links the folder into each assistant it finds on your machine. Keep t
 
 **2. Ask your assistant**, in any of the five languages:
 
-- "Har vi en chans på gratis GPU? Svenskt AB, två år, fyra personer."
-- "Olemme suomalainen Oy, pre-seed, rakennamme OpenAI:n päälle. Mitä krediittejä voimme saada?"
-- "Hvilke tilskudd kan et norsk AS under tre år søke?"
-- "Two founders, no company yet, a climate idea. Is there any money for us?"
+- "Vi vill söka EuroHPC Playground för gratis GPU. Svenskt AB, två år, fyra personer. Vad krävs?"
+- "Haemme Business Finlandin rahoitusta, mitä hakemukseen tarvitaan? Suomalainen Oy, pre-seed."
+- "Kan vi søke Oppstartstilskudd 1? Norsk AS, ett år gammelt."
+- "Help us apply for AWS Activate credits. Swedish AB, angel-funded, building on Bedrock."
 
 Or type `/startup-krediter`.
 
@@ -141,7 +148,7 @@ Or type `/startup-krediter`.
 
 ## Good to know
 
-- This is not financial or legal advice. It points you at doors and reads their rules. The program decides.
+- This is not financial or legal advice. It reads the rules of the program you chose. The program decides.
 - The data was correct on the date shown for each program. Rules change, so the skill checks the live page, and you should read it too before you apply.
 - Some sites block automated readers. When that happens the skill says so instead of guessing.
 
@@ -166,14 +173,15 @@ Only facts that appear on the program's own pages go into a record. If a page do
 <summary>How the pieces fit</summary>
 
 - `SKILL.md` tells the assistant how to build a profile from the chat, when to read the live page, and how to answer.
-- `scripts/match.py` takes a company profile as JSON and returns the doors ranked: fits first, then fewest open questions, then ruled out. Standard library only, no packages.
+- `scripts/match.py` finds a program by name (`--find`) and checks one program against a company profile (`--door`): every rule met, open or failed, the questions that decide it, and the checklist. Standard library only, no packages.
 - `scripts/vinnova_api.py` reads the current Vinnova round from Vinnova's open data API.
 - `references/*.md` hold the longer notes per area.
 - Records older than 90 days are flagged so the assistant re-reads the page.
 
 ```bash
-echo '{"country":"SE","legal_form":"company","age_years":2,"employees":4,"need":["compute"],"lang":"en"}' \
-  | python3 scripts/match.py --live
+python3 scripts/match.py --find "innovativa startups"
+echo '{"country":"SE","legal_form":"company","age_years":2,"employees":4,"lang":"en"}' \
+  | python3 scripts/match.py --door vinnova-innovativa-startups --live
 ```
 
 </details>

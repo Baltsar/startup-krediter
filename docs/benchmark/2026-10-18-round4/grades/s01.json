@@ -1,0 +1,64 @@
+{
+ "qid": "s01",
+ "programs": {
+  "A": "KK-stiftelsen Forskningsprojekt 26",
+  "B": "Forskningsavdraget (FoU-avdrag), with KK-stiftelsen Forskningsprojekt 26 almost as detailed"
+ },
+ "stoppers_total": {
+  "A": 24,
+  "B": 24
+ },
+ "stoppers_stated": {
+  "A": 16,
+  "B": 18
+ },
+ "factual_errors": {
+  "A": [
+   "Minor overstatement: 'Varje bolag behöver svenskt organisationsnummer' - KK's co-financier criteria let foreign companies co-finance Forskningsprojekt up to 25% of total co-financing (harmless in A's two-company scenario, where the second company must carry at least 30%)"
+  ],
+  "B": [
+   "FFI: 'senast med deadline 18 mars 2026' - the latest FFI Transport- och mobilitetslösningar round (hösten 2026) closed 15 September 2026",
+   "GPU (turn 2): AI-factory compute is free only for SMEs/startups, 'Andra företag hänvisas till betald användning... Räkna med att betala', and free Mimer/EuroHPC time 'gäller troligen inte er' - contradicted by the Sweden AI Factory FAQ (large companies can use the resources free in any call if they publish some results) and the EuroHPC AIF Terms of Reference (commercial companies eligible, access free of charge); LUMI's AI-factory page does say pay-per-use for non-SMEs, so official sources conflict"
+  ]
+ },
+ "untraceable": {
+  "A": [],
+  "B": []
+ },
+ "best_first_pick": "tie",
+ "missed_programs": {
+  "A_missed": [
+   "NAISS (free academic compute that JU researchers can apply for)",
+   "FFI Transport- och mobilitetslösningar (Vinnova road-transport R&I calls; none open now, latest closed 15 Sep 2026)"
+  ],
+  "B_missed": []
+ },
+ "absolute": {
+  "A": {
+   "A1": "pass",
+   "A2": "pass",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "n/a",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  },
+  "B": {
+   "A1": "pass",
+   "A2": "fail",
+   "A3": "pass",
+   "A4": "n/a",
+   "A5": "pass",
+   "A6": "n/a",
+   "A7": "pass",
+   "A8": "n/a"
+  }
+ },
+ "turn1_words": {
+  "A": 187,
+  "B": 776
+ },
+ "verdict": "tie",
+ "incomplete": false
+}
