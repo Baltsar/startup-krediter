@@ -94,7 +94,7 @@ again costs trust.
 | `has_vat`, `has_employment`, `has_work_email`, `has_website`, `has_developer`, `workload_defined`, `profit_distributed` | bool | EuroHPC and vendor gates |
 | `confirmed` | list of keys | requirements the founder confirms in words; the keys are those in `CONFIRMATIONS` in `scripts/i18n.py`: `aws_paid_plan`, `baltic_marine_monitoring`, `business_not_yet_fulltime`, `consortium_partner`, `dk_financial_foundation`, `each_founder_owns_12_5_percent`, `eic_running_grant_only_applying_blended`, `eip_competence_mix`, `equity_majority_eu_efta_uk`, `eur_200k_raised_or_revenue`, `fulltime_team_member`, `group_unlisted_within_10msek`, `group_within_small_enterprise_limits`, `group_within_sme_limits`, `hpc_experience`, `independent_investor_commits`, `kth_affiliation`, `need_owner`, `new_to_aws_activate`, `no_earlier_bf_funding_same_solution`, `no_third_country_control`, `owner_is_founders_own_holding`, `owners_all_natural_persons`, `project_lead_employed`, `region_skane`, `region_vgr`, `research_background`, `research_west_sweden_university`, `se_rd_staff_on_payroll`, `separate_from_owner_operations` |
 | `denied` | list of keys | the same keys when the founder says no ("vi har ingen partner"). A key in neither list stays an open question |
-| `lang` | `sv`, `en`, `fi`, `no`, `da` | the founder's language; labels and questions come back in it |
+| `lang` | `sv`, `en`, `fi`, `no`, `da` | the founder's language; labels and questions come back in it. For a founder writing in Icelandic, use `en`, answer in Icelandic, and translate the status block's lines, keeping the symbols |
 
 The founder's own situation decides more applications than any company fact,
 and no program page reveals it. Set these only from what the founder says; the
@@ -205,7 +205,7 @@ for it at once, in this order:
    tio år), its `why` included. Leave out a question the chat already answers.
 3. **Status**: the `glyph` in a code block, verbatim except that the `→` lines
    are translated into the founder's language (amounts are English in the
-   data). `●` met, `×` failed, `○` unknown, `?` the next question, `→` amount,
+   data), and every line for an Icelandic founder. `●` met, `×` failed, `○` unknown, `?` the next question, `→` amount,
    siblings, live closing date, closed or stale note.
 4. **Before you apply**: every item in `apply_requirements`, plus what the
    conditions page adds (Step 4), one line each and at most 15 words,
@@ -254,11 +254,17 @@ answer in full so they can prepare.
 
 Put every answer into the profile and rerun with `--door`. Lead with what
 changed: one sentence per answer that settled something ("Inga tidigare
-bidrag: den punkten är klar."). If the program is now closed to them, answer
-as the section above says. If it is still open, list the `○` lines still open
-and anything the answers added to the checklist, then offer to write the
-application. Do not repeat the full checklist; one `○` that became `●` is the
-whole update. When the founder confirms something a `confirmed` key covers
+bidrag: den punkten är klar."). If the program is now closed to them, say so
+first, with the rule. Then, when the same funder's own pages name the next
+step of the same kind (Oppstartstilskudd 2 after Oppstartstilskudd 1, Sprint
+after Tempo), run `--door` on it and give its first answer in full: the
+founder came for this funder's help, and the conversation may end here. When
+the funder names no such step, or the question was about tax or equity,
+answer as the section above says.
+
+If the program is still open, list the `○` lines still open and anything the
+answers added to the checklist, then offer to write the application. Do not
+repeat the full checklist; one `○` that became `●` is the whole update. When the founder confirms something a `confirmed` key covers
 ("ja, vi är KTH-studenter"), add the key and rerun.
 
 ### Stage C: when the founder wants help applying
