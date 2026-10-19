@@ -3,57 +3,55 @@
   "evals": [
     {
       "id": 0,
-      "name": "se-ab-gpu-hours",
-      "prompt": "Hej! Vi är ett svenskt AB i Göteborg, startade för 1,5 år sedan, fyra personer varav tre anställda, ingen VC. Vi tränar en egen modell för syntetisk röst och behöver ungefär 2000 GPU-timmar på H100 de närmaste månaderna. Finns det någon chans att få gratis GPU-tid någonstans, eller måste vi betala? Vi har momsnummer och egen domän.",
-      "expected_output": "Answer in Swedish that separates compute (GPU hours) from credits, names EuroHPC Playground / Sweden AI Factory as the public GPU door with the real gates (employment, VAT, work email, defined workload), says what the live page shows today, gives the exact next step and link without clicking anything, asks one missing question at most, and makes no promise or percentage.",
+      "name": "se-ab-eurohpc-playground",
+      "prompt": "Hej! Vi är ett svenskt AB i Göteborg, startade för 1,5 år sedan, fyra personer varav tre anställda, ingen VC. Vi tränar en egen modell för syntetisk röst och behöver ungefär 2000 GPU-timmar på H100 de närmaste månaderna. Vi tänkte söka EuroHPC Playground för gratis GPU-tid. Kan vi det, och vad behöver vi ha klart? Vi har momsnummer och egen domän.",
+      "expected_output": "Answer in Swedish about EuroHPC Playground only: a verdict with the gates the founder has not confirmed (project lead employed until three months after the allocation, a defined workload on one system), whether 2 000 H100 hours fit, the status block, the full checklist of what the application asks, what the live page shows today, the exact next step and link, and no promise or percentage.",
       "files": [],
       "expectations": [
         "The answer is written in Swedish.",
-        "The answer separates free GPU or HPC hours (compute) from vendor cloud or API credits and says they are different doors.",
-        "The answer names EuroHPC Playground, or the Sweden AI Factory route into the EuroHPC AI Factory calls, as the route to free GPU hours for a Swedish company.",
-        "The answer states at least one concrete gate of the public GPU door that the founder has not confirmed (project lead employed until at least three months after the allocation ends, or a defined workload: code, one system, number of hours) and asks about it.",
-        "The answer addresses whether roughly 2 000 H100 hours fits the door, for example by stating the Playground cap of 5 000 GPU hours for 1 to 3 months on one system.",
+        "The answer is about EuroHPC Playground (or the AI Factory calls it belongs to) and does not list other GPU or credit programs the founder did not ask about.",
+        "The answer states at least one concrete gate the founder has not confirmed (project lead employed until at least three months after the allocation ends, or a defined workload: code, one system, number of hours) and asks about it.",
+        "The answer addresses whether roughly 2 000 H100 hours fits, for example by stating the Playground cap of 5 000 GPU hours for 1 to 3 months on one system.",
+        "The answer lists what the application asks before the founder opens it: a portal account with an own-domain email, the VAT number, an English form, one system, and the technical readiness of the code.",
         "The answer gives the exact next step with a link (access.eurohpc-ju.europa.eu or the AI factory page) and says the founder creates the account and submits themselves.",
         "The answer says what the live status page shows today, or says the page could not be read; every date or amount is attributed to a page.",
         "The answer contains no percentage chance, no promise of approval and no phrase like 'ni kommer att få'.",
-        "The answer asks at most two follow-up questions."
+        "The answer asks at most four questions."
       ]
     },
     {
       "id": 1,
-      "name": "fi-oy-public-money",
-      "prompt": "We're a Helsinki-based Oy, founded March 2025, two co-founders working full time, no revenue yet, building a B2B SaaS for construction logistics. We've put in about 60k EUR of our own money and have no outside investors. What public funding can we realistically apply for in Finland right now, and what do we need to have in place before applying?",
-      "expected_output": "Answer in English that leads with Business Finland Sprint Grant (75 percent, 75 000 to 100 000 EUR, continuous since 1 September 2026) and R&D funding, states the Sprint gates (Oy with business ID, under 50 employees, team of two in Finland, 50 000 EUR equity on the balance sheet, less than five years, no earlier BF funding), mentions the Deep Tech Accelerator is closed, says what the pages show today, gives the exact next step (My Business Finland, expert meeting, e-service) and does not recommend Swedish or Norwegian doors.",
+      "name": "fi-oy-sprint",
+      "prompt": "We're a Helsinki-based Oy, founded March 2025, two co-founders working full time, no revenue yet, building a B2B SaaS for construction logistics. We've put in about 60k EUR of our own money and have no outside investors. We want to apply for Business Finland's Sprint grant. Can we, and what do we need to have in place before applying?",
+      "expected_output": "Answer in English about the Business Finland Sprint Grant (75 percent, 75 000 to 100 000 EUR, continuous since 1 September 2026): its gates (Oy with business ID, under 50 employees, team of two in Finland, 50 000 EUR equity on the balance sheet, less than five years, no earlier BF funding) with the ones not yet known asked, the full checklist, what the pages show today, and the exact next step (My Business Finland, expert meeting, e-service).",
       "files": [],
       "expectations": [
         "The answer is written in English.",
-        "The answer names Business Finland Sprint Grant first among public doors and states its amount as 75 percent of eligible costs, 75 000 to 100 000 EUR, or attributes the amount to the page.",
+        "The answer states the Sprint amount as 75 percent of eligible costs, 75 000 to 100 000 EUR, or attributes the amount to the page.",
         "The answer names the Sprint gate of at least 50 000 EUR of equity financing on the balance sheet and relates it to the founders' 60 000 EUR of own money (met, or asks whether it is booked as equity).",
         "The answer names the committed team of at least two people in Finland and the Finnish limited company with a business ID as gates.",
-        "The answer does not present the Business Finland Deep Tech Accelerator 2026 call as open (it says closed, or omits it).",
+        "The answer asks whether the company has had earlier Business Finland or other public funding, since earlier Sprint, Tempo or BF R&D funding closes Sprint.",
         "The answer gives the application path: register in My Business Finland, book a meeting with a Business Finland expert, then submit in the funding e-service, and says the founder submits.",
-        "The answer mentions Business Finland research, development and piloting funding (loan for development projects) as a further door, or explains why it is not relevant yet.",
+        "The answer says costs count only from the submission of the application.",
         "The answer does not recommend Swedish, Norwegian, Danish or Icelandic national programs.",
         "The answer contains no probability, percentage chance or promise of approval.",
-        "The answer says what the Sprint status page shows today (Ongoing, continuous call from 1 September 2026) or says it could not read the page."
+        "The answer says what the Sprint status page shows today (continuous call from 1 September 2026) or says it could not read the page."
       ]
     },
     {
       "id": 2,
-      "name": "credits-stack-pre-seed",
-      "prompt": "we're pre-seed (just closed a 400k USD angel round, no VC), 3 people, Swedish AB, building an AI agent product on Vercel + Supabase + Anthropic API + a bit of Modal for batch jobs. which startup credit programs can we actually get into? we don't want to waste time applying to stuff that needs a VC intro",
-      "expected_output": "Answer that matches credits to the stated stack only (Vercel for Startups, Supabase reference-only, Claude Startups closed on 2026-10-15, Modal requires VC funding so it is blocked), says plainly which doors need a VC or partner intro and which do not, names amounts only as the pages state them, gives the next step and link per door, and does not list every cloud vendor.",
+      "name": "se-ab-modal-credits-closed",
+      "prompt": "we're pre-seed (just closed a 400k USD angel round, no VC), 3 people, Swedish AB, building an AI agent product on Vercel + Supabase + Anthropic API + a bit of Modal for batch jobs. we want to apply for Modal's startup credits. can we get them, or does it need a VC intro?",
+      "expected_output": "Answer that says first that Modal for Startups requires VC funding (from a partner-network VC, or over 1 MUSD from any VC), so an angel-only round does not qualify, with the page it comes from; gives no checklist for it; says in at most two lines what would change it; and does not turn into a list of other vendors the founder did not ask about.",
       "files": [],
       "expectations": [
-        "The answer covers every vendor in the stated stack that has a credit program (Vercel, Anthropic/Claude, Modal) and says Supabase has no public startup credit program it could verify.",
-        "The answer says Modal for Startups requires VC funding (from a partner-network VC, or over 1 MUSD from any VC) and is therefore not open to an angel-only round.",
-        "The answer states the current status of Claude for Startups / Anthropic credits from the live page (closed when last verified, or whatever the page says today) instead of assuming it is open.",
-        "For each door it recommends, the answer says whether a VC or partner introduction is required.",
-        "The answer does not recommend cloud vendors outside the stated stack (AWS Activate, Google Cloud, Microsoft for Startups, Cloudflare, MongoDB, Neon); at most it mentions in one line that they exist for other stacks.",
-        "The answer gives the next step and link for each door it recommends and says the founder clicks apply.",
+        "The first sentence or two says Modal for Startups is not open to this founder now, because it requires VC funding (from a partner-network VC, or over 1 MUSD from any VC).",
+        "The rule is attributed to Modal's page, read today, or the answer says the page could not be read.",
+        "The answer gives no full application checklist for Modal.",
+        "The answer says what would change it (a qualifying VC round) in at most two lines.",
+        "The answer does not list other credit programs the founder did not ask about; at most one line offers to check another program.",
         "Every dollar or credit amount in the answer is attributed to a program page or marked as not published; no invented figures.",
-        "The answer contains no percentage chance or promise of acceptance.",
-        "The answer asks at most two clarifying questions."
+        "The answer contains no percentage chance or promise of acceptance."
       ]
     }
   ]
