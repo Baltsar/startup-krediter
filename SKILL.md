@@ -197,27 +197,33 @@ for it at once, in this order:
 1. **Verdict**, one or two sentences: it fits on what we know, it does not, or
    it depends on the questions below. Correct a wrong premise first
    ("FoU-avdraget sänker arbetsgivaravgiften på löner, det betalar inte ut
-   pengar"). Name the call if the founder named only the funder.
+   pengar"). Name the call if the founder named only the funder. When the
+   founder asked something more (how much, when, apply now or later), answer
+   each in one sentence here; the details belong in the checklist.
 2. **What decides it**: the `screen` questions, numbered, in its order. Each in
    at most 20 words in the founder's language, keeping its facts (25 %, 50 %,
-   tio år), then its `why` in a few words. Leave out a question the chat
-   already answers.
+   tio år), its `why` included. Leave out a question the chat already answers.
 3. **Status**: the `glyph` in a code block, verbatim except that the `→` lines
    are translated into the founder's language (amounts are English in the
    data). `●` met, `×` failed, `○` unknown, `?` the next question, `→` amount,
    siblings, live closing date, closed or stale note.
-4. **Before you apply**: every item in `apply_requirements`, short and
-   translated, plus what the conditions page adds (Step 4). Merge two items
-   that say the same thing; drop nothing else and add no padding. The deadline
-   and how the money is paid are in this list, each with where it comes from
-   ("enligt sidan i dag: klarmarkera senast 12 januari 2027 kl 14:00").
-5. **Unclear**: one line per item: what is unclear, and whom to ask.
-6. **Next step**: from `next_step`, the link, and one line offering to write
-   the application with them.
+4. **Before you apply**: every item in `apply_requirements`, plus what the
+   conditions page adds (Step 4), one line each and at most 15 words,
+   translated. Merge items that say the same thing, and leave out what the
+   verdict, the questions or the glyph already said; drop nothing else. The
+   deadline and how the money is paid are in this list, each with where it
+   comes from ("klarmarkera senast 12 januari 2027 kl 14:00, enligt sidan i
+   dag").
+5. **Unclear**: one line per item, at most 15 words: what is unclear, and whom
+   to ask.
+6. **Next step**: one sentence from `next_step`, the program's link (one
+   link), and one line offering to write the application with them.
 
-No other programs in the first answer, except as the next section says. Keep
-sentences short; never shorten the checklist or the glyph. Aim for under 400
-words.
+No other programs in the first answer, except as the next section says. The
+founder reads this on a phone: keep every line to one fact, never shorten the
+glyph, and keep the whole answer under 450 words. A long checklist is fine;
+long items are not. The detail behind an item (the exact rule, the paragraph
+it comes from) is for the founder's follow-up question.
 
 If the founder asked for help applying rather than whether they can, go to
 Stage C instead.
