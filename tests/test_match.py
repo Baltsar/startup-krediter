@@ -1179,7 +1179,7 @@ def test_chosen_door_is_screened_even_when_closed() -> None:
     plain = match.run(QUIET, [program], TODAY)["screen"]
     assert plain == []
     chosen = match.run(QUIET, [program], TODAY, door_id="closed-door")["screen"]
-    assert [item["topic"] for item in chosen] == ["ownership"]
+    assert [item["topic"] for item in chosen] == ["ownership", "grants"]
 
 
 def test_find_matches_every_word_without_accents() -> None:
@@ -1199,3 +1199,15 @@ def test_cli_find_reads_no_profile(capsys: pytest.CaptureFixture[str]) -> None:
     assert match.main(["--programs", str(FIXTURE_PATH), "--find", "compute"], stdin=io.StringIO("")) == 0
     found = json.loads(capsys.readouterr().out)
     assert [item["id"] for item in found] == ["test-eu-compute"]
+
+
+def test_chosen_grant_asks_about_earlier_grants_even_without_a_rule() -> None:
+    grant = situated("plain-grant", "Plain grant", [{"field": "owner_company_share", "op": "lt", "value": 25}])
+    topics = [item["topic"] for item in match.run(QUIET, [grant], TODAY, door_id="plain-grant")["screen"]]
+    assert topics == ["ownership", "grants"]
+    answered = match.run(dict(QUIET, prior_grants="inga"), [grant], TODAY, door_id="plain-grant")["screen"]
+    assert [item["topic"] for item in answered] == ["ownership"]
+    credit = situated("plain-credit", "Plain credit", [], kind="cloud_credit")
+    assert match.run(QUIET, [credit], TODAY, door_id="plain-credit")["screen"] == []
+    # Only the chosen program gets the extra question; the map of many doors does not.
+    assert [item["topic"] for item in match.run(QUIET, [grant], TODAY)["screen"]] == ["ownership"]

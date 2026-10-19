@@ -893,6 +893,13 @@ def screen(doors: list[Door], profile: dict, lang: str, chosen: bool = False) ->
         # A student's university support, or patient data, changes the route whatever the doors say.
         weight[topic] = weight.get(topic, 0) + context_weight
         decides.setdefault(topic, [])
+    grant_doors = [door.name for door in best if door.route in ("grant", "loan")]
+    if chosen and grant_doors and "grants" not in weight and all(profile.get(field) is None for field in SITUATION_TOPICS["grants"]):
+        # A chosen grant is asked about earlier grants even when its record has no such rule:
+        # funders cap repeat grants and de minimis room in conditions the data may not hold.
+        # In round 4 (s05) the skill gave a grant in full to a company that already had it.
+        weight["grants"] = context_weight
+        decides["grants"] = grant_doors
     order = sorted(weight, key=lambda topic: (-weight[topic], SITUATION_ORDER.index(topic)))
     basics = basic_question(best, lang)
     items = [basics] if basics else []
