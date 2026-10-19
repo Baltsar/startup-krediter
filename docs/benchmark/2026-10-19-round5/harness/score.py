@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Score a litmus round against the bars pre-registered in plan.md.
 
-    python3 score.py <round-dir>
+    python3 score.py <dir>
 
-Reads questions.json, grades/blind-key.json, grades/<qid>.json (first grader),
-grades/<qid>-g2.json (second grader, where there is one) and the conversations.
+<dir> is the work directory, or the round's folder in docs/ once everything is copied
+there. Reads questions.json, key/blind-key.json, grades/<qid>.json (first grader),
+grades/<qid>-g2.json (second grader, where there is one) and conversations/.
 Prints each bar with its value and pass or fail, then the per-question table.
 
 Rules, as the plan states them:
@@ -117,7 +118,7 @@ def main(argv: list[str]) -> int:
         return 2
     root = Path(argv[1])
     questions = load(root / "questions.json")
-    key = load(root / "grades" / "blind-key.json")["key"]
+    key = load(root / "key" / "blind-key.json")["key"]
     rows = [row(root, item, key[item["id"]]) for item in questions]
     incomplete = [item["id"] for item in questions if load(root / "grades" / f"{item['id']}.json").get("incomplete")]
 

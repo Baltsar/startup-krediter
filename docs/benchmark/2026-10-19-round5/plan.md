@@ -11,7 +11,8 @@ Round 4 failed on choosing the program (`../2026-10-18-round4/README.md`,
 "Causes"). Four rounds showed the same split: the skill states a program's
 stoppers more accurately than a plain AI, and the plain AI, searching freely,
 picks the better program. Gustaf chose to reposition the skill rather than
-rebuild Stage A. Commits `1522a74`, `0b80aee`, `5bc52f7`, `5d76af4` and `8231557`:
+rebuild Stage A. Commits `1522a74`, `0b80aee`, `5bc52f7`, `5d76af4`,
+`8231557` and `04cecd5`:
 
 - **The claim.** The skill helps a founder who has already chosen a program:
   can we apply and what decides it, what will the application ask of us, the
@@ -30,6 +31,11 @@ rebuild Stage A. Commits `1522a74`, `0b80aee`, `5bc52f7`, `5d76af4` and `8231557
   it and the next step the funder's own pages point to. The answer stays on the
   kind of question asked: a tax question is answered as tax (round 4, s06 A8).
 - **Turn 2** reruns the matcher with the answers and leads with what changed.
+  When the answers close the chosen program and the same funder's own pages
+  name the next step of the same kind (Oppstartstilskudd 2 after 1, Sprint
+  after Tempo), turn 2 gives that step's first answer in full; a tax or equity
+  question still stays on its own kind. This is the move the plain AI won s05
+  with in round 4.
 - **A program not in the data** gets the same answer shape, built from the
   official pages read that day, with the questions that close most state-aid
   grants (ownership, earlier grants and de minimis, work started, lost share
@@ -65,13 +71,16 @@ Two fixes came from the dry run:
   founder's extra questions one sentence each, one link), and the reruns came
   to 465 and 427 words with every stopper kept (`8231557`).
 
-The median of the four checklist cases, with the reruns, is 414 words.
+The median of the four checklist cases, with the reruns, is 414 words. s05 and
+s09 were not rerun: their counts are from before the length limits, and s05's
+from before the earlier-grants question.
 
 ## What is tested
 
-- **Skill version:** commit `8231557`, copied without `docs/` and `evals/`
+- **Skill version:** commit `04cecd5`, copied without `docs/` and `evals/`
   into a work directory outside the repository before the questions are
-  written.
+  written. `04cecd5` adds the turn-2 next-step rule and the Icelandic status
+  block to the dry-run version; neither was dry-run.
 - **Questions:** 15 new questions written by a new agent with no access to this
   repository, the data, the skill or earlier questions, from
   `question-writer-brief.md` verbatim: 9 "checklist" questions and 6 "apply"
@@ -90,9 +99,17 @@ The median of the four checklist cases, with the reruns, is 414 words.
   `harness/turns.py` renders every prompt from these files and assembles the
   conversations. No browser and no login in either arm.
 - **Grading:** one blind grader per question (`grader-brief.md`), fetching
-  official pages itself. A and B are assigned by `harness/blind.py`, seeded per
-  question with `random.Random("202610195-<qid>")`. `harness/score.py` computes
-  every bar.
+  official pages itself. `harness/blind.py` assigns A and B, seeded per
+  question with `random.Random("202610195-<qid>")`, and writes each question's
+  grading folder in the work directory: `A.md`, `B.md` and `case.md` (hidden
+  profile and trap), nothing else. The key goes to a separate folder no grader
+  is pointed at. A grader reads only its own folder. The questions, the
+  conversations, the key and the grades are copied into this folder only
+  after the last grade is in. `harness/score.py` computes every bar.
+- **Icelandic:** the skill has no Icelandic labels. For a founder writing in
+  Icelandic it runs the matcher in English, answers in Icelandic and
+  translates the status block, keeping the symbols. That is expected, not a
+  deviation (round 4 logged it as one in s08).
 
 ## Absolute checks
 
@@ -110,7 +127,7 @@ All five must hold.
 
 | Bar | Threshold | Change from round 4, and why |
 |---|---|---|
-| C1. Stoppers stated for the chosen program | The skill's share at least 20 points above the plain AI's in total, and lower on no more than 2 of 15 questions | Same threshold. The grader now builds one stopper list per question, for the chosen program, and counts both conversations against it. When the hidden profile rules the founder out, the list also holds that rule and the stoppers of the next step the funder points to. In round 4 the two columns could cover different programs. |
+| C1. Stoppers stated for the chosen program | The skill's share at least 20 points above the plain AI's in total, and lower on no more than 2 of 15 questions | Same threshold. The grader now builds one stopper list per question, for the chosen program, and counts both conversations against it. When the hidden profile rules the founder out, the list also holds that rule and the stoppers of the next step the funder points to. The skill gives that step's checklist in turn 2 when the answers close the program, so this list is one it can meet. In round 4 the two columns could cover different programs. |
 | C2. Recommendation on the chosen program worse than the plain AI's | No more than 3 of 15 | Was "first recommendation" among programs. Now the recommendation about the chosen program: apply now, prepare for the next round, do not apply, or go to the next step the funder points to. |
 | C3. Grader's overall verdict | The skill wins or ties in at least 11 of 15 | Same threshold. Drafting for a program the hidden profile rules out counts against that conversation. |
 | C4. Median turn-1 length on the 9 checklist questions | At most 450 words | Was 220 words for a map with questions; the first answer is now the full checklist. 450 is the limit SKILL.md sets; the dry-run median is 414 and its longest case 465. Round 4's plain AI median was 691. Counted by `score.py`: tokens with a letter or digit, status block included. |
