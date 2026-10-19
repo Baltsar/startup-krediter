@@ -6,6 +6,8 @@ For founders in Sweden, Finland, Norway, Denmark and Iceland. Answers in Swedish
 
 An open-source skill for AI assistants, by [OpenSverige](https://opensverige.se). Tested with Claude Code; it also installs into Cursor and Codex.
 
+> **Status, 19 October 2026: not released, and we want your feedback.** We tested the skill in five pre-registered rounds against the same AI model with web search and no skill, with blind graders checking both against the programs' own pages. It did not pass any of them. In the latest round, on a program the founder had already chosen, the skill named more of what stops an application (89% against 77%) with fewer factual errors (5 against 8) and a shorter answer. It won only 9 of 15 questions, because the plain model asked about the founder's own situation more often. The full report, every conversation and the grades are in [docs/benchmark/2026-10-19-round5](docs/benchmark/2026-10-19-round5/README.md). Tell us what you think in an [issue](https://github.com/Baltsar/startup-krediter/issues/new): what would make this worth using, and what you would test differently.
+
 ---
 
 ## Why this exists
@@ -69,6 +71,8 @@ When a program is closed to you, it says so first, with the rule and the page, a
 **Then the application.** Say "help us apply" and it drafts the application section by section in the form's own order and limits, puts your budget in the program's template with its funding rate and excluded costs, reviews the draft the way an assessor would, and fills the online form after you have logged in. It stops before the submit button. It never invents a customer, a number or a letter of intent; it marks the gap for you to fill.
 
 ## How it compares
+
+*These are the first, informal results, from 16 October 2026 on an earlier version. The five pre-registered rounds that followed are in [docs/benchmark](docs/benchmark/); none of them passed.*
 
 We asked six founder questions to the same AI model twice: with the skill, and with web search but no skill. Graders who did not know which answer was which checked both against the programs' own pages.
 
