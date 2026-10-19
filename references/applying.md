@@ -14,15 +14,17 @@ on ("behåll inloggningen själv, ni loggar in och jag tar det därifrån"). The
 get to work. A founder who asked for help and gets a checklist back has been
 refused, whatever the checklist says.
 
-Before you write, check two things in one line each: that the door fits on
-what you know (run the matcher with `--door <id>` if the founder named a
-program), and that a round is open or when the next opens. If the round is
-closed, say so and offer to prepare the application now so it is ready when
-the round opens. If the door does not fit, say why in one sentence and offer
-the better door; do not draft an application the program will reject.
+Before you write, check two things in one line each: that the program fits
+on what you know (run the matcher with `--door <id>` and ask its `screen`
+questions with the request for material when the chat has not answered them),
+and that a round is open or when the next opens. If the round is closed, say
+so and offer to prepare the application now so it is ready when the round
+opens. If the program does not fit, say why in one sentence, name the next
+step the funder's own pages point to if there is one, and do not draft an
+application the program will reject.
 
-Skip the one web search of Step 3 when the founder has already picked a
-program; they asked for help with that one.
+For a program not in the data, take the sections, limits, criteria and budget
+rules from its official application guide and templates, read today.
 
 For a credits program or any short form without a budget or scoring (AWS,
 Google, NVIDIA): skip C3, and make C4 a pass/fail check of each requirement,
@@ -30,7 +32,7 @@ since the reviewer approves or declines rather than scores.
 
 ## C1. Material
 
-The door's `application` block (from `match.py --door <id>`)
+The program's `application` block (from `match.py --door <id>`)
 lists the form's sections, limits, criteria, budget rules and attachments. If
 it is missing or older than the round, read the program's application guide
 and templates now. Then ask for what you need in one message: the pitch deck,
@@ -152,7 +154,7 @@ with the field names, so pasting takes minutes.
 
 Say the deadline (from the page today), when the decision
 comes, and what the founder should keep ready (a credit check, a call from an
-adviser, a pitch). Then ask whether to prepare the next door.
+adviser, a pitch).
 
 ## Worked example
 
